@@ -63,7 +63,7 @@
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hM5-Kh-TAT">
                                                 <rect key="frame" x="447" y="7" width="15" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="HideMenu.png">
+                                                <state key="normal" image="ShowMenu.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
@@ -86,6 +86,6 @@
     </scenes>
     <resources>
         <image name="ConfigConnection.png" width="24" height="24"/>
-        <image name="HideMenu.png" width="15" height="22"/>
+        <image name="ShowMenu.png" width="15" height="22"/>
     </resources>
 </document>
