@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
@@ -9,8 +9,8 @@
             <objects>
                 <viewController id="l8A-Mb-vf8" customClass="ContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lnB-vE-O7I"/>
-                        <viewControllerLayoutGuide type="bottom" id="BxM-Os-mBP"/>
+                        <viewControllerLayoutGuide type="top" id="gc0-Tr-9q4"/>
+                        <viewControllerLayoutGuide type="bottom" id="tLi-n1-032"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ex4-JV-8sr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -27,20 +27,20 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="_displayVC" destination="vId-ub-NnX" id="K8m-tO-EuF"/>
+                        <outlet property="displayVC" destination="vId-ub-NnX" id="kU5-Yy-BeG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5K-hr-1aG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="727" y="112"/>
+            <point key="canvasLocation" x="626" y="-69"/>
         </scene>
         <!--Display View Controller-->
         <scene sceneID="urH-18-cJO">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="v87-Ye-quc" customClass="DisplayViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Vya-rj-nsw"/>
-                        <viewControllerLayoutGuide type="bottom" id="jgp-nk-gKL"/>
+                        <viewControllerLayoutGuide type="top" id="4hP-9p-pWH"/>
+                        <viewControllerLayoutGuide type="bottom" id="VPX-X1-T0F"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="3cw-oW-z6B">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -75,10 +75,13 @@
                         <color key="backgroundColor" red="1" green="0.9038304465" blue="0.68321979669999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="displayNavBar" destination="PI7-wW-2OI" id="Fwm-x1-bJz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAQ-iN-Low" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1451" y="112"/>
+            <point key="canvasLocation" x="1882.5" y="-68.661971830985905"/>
         </scene>
     </scenes>
     <resources>

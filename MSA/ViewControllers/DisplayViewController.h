@@ -10,6 +10,7 @@
 
 @interface DisplayViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UINavigationBar *displayNavBar;
 
 @end
 

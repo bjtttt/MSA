@@ -13,9 +13,12 @@
 
 @end
 
+#define VIEWCONTROLLER_DEFAULT_CORNER_RADIUS 3.0f
+#define VIEWCONTROLLER_DEFAULT_BORDER_WIDTH 1.0f
+
 @implementation ContainerViewController
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
@@ -23,26 +26,54 @@
     self.shareSettings.menuTapped=NO;
     self.shareSettings.connectTapped=NO;
     
-    [self layoutVC:[self getVCLayoutType] animated:YES];
+    //self.view.autoresizesSubviews = YES;
+    
+    //UIViewAutoresizing autoResizing = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleHeight;
+    //UIViewAutoresizing autoResizing = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    
+    //self.displayVC.contentMode = UIViewContentModeScaleToFill;
+    //self.displayVC.autoresizingMask = autoResizing;
+    //self.displayVC.autoresizesSubviews = YES;
+    //self.displayVC.clipsToBounds = YES;
+    
+    //self.displayVC.translatesAutoresizingMaskIntoConstraints = YES;
+    
+    self.displayVC.layer.borderWidth = VIEWCONTROLLER_DEFAULT_BORDER_WIDTH;
+    self.displayVC.layer.borderColor = [[UIColor blackColor] CGColor];
+    self.displayVC.layer.cornerRadius = VIEWCONTROLLER_DEFAULT_CORNER_RADIUS;
+
+    //[self layoutVC:[self getVCLayoutType] animated:YES];
 }
 
--(void)viewDidAppear:(BOOL)animated{
+-(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuTapped) name:@"menuTapped" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectTapped) name:@"connectTapped" object:nil];
 }
 
-- (void)didReceiveMemoryWarning {
+-(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (BOOL) prefersStatusBarHidden {
+-(void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    //[self layoutVC:[self getVCLayoutType] animated:YES];
+}
+
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    [self layoutVC:[self getVCLayoutType] animated:NO];
+}
+
+-(BOOL)prefersStatusBarHidden {
     return YES;
 }
 
--(void)menuTapped{
+- (void)menuTapped {
     [self layoutVC:[self getVCLayoutType] animated:YES];
     
     self.shareSettings.menuTapped=!self.shareSettings.menuTapped;
@@ -71,21 +102,21 @@
     self.shareSettings.connectTapped=!self.shareSettings.connectTapped;
     
     /*
-     if(self.shareSettings.profileTapped){
-     [UIView animateWithDuration:0.3 animations:^{
-     self.MainVC.frame = CGRectMake(0, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
+    if(self.shareSettings.profileTapped){
+    [UIView animateWithDuration:0.3 animations:^{
+    self.MainVC.frame = CGRectMake(0, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
+    
+    self.ProfileVC.frame = CGRectMake(260, self.ProfileVC.frame.origin.y, self.ProfileVC.frame.size.width, self.ProfileVC.frame.size.height);
+    }];
+    } else{
+    [UIView animateWithDuration:0.3 animations:^{
+    self.MainVC.frame = CGRectMake(-260, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
      
-     self.ProfileVC.frame = CGRectMake(260, self.ProfileVC.frame.origin.y, self.ProfileVC.frame.size.width, self.ProfileVC.frame.size.height);
-     }];
-     } else{
-     [UIView animateWithDuration:0.3 animations:^{
-     self.MainVC.frame = CGRectMake(-260, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
-     
-     self.ProfileVC.frame = CGRectMake(0, self.ProfileVC.frame.origin.y, self.ProfileVC.frame.size.width, self.ProfileVC.frame.size.height);
-     }];
-     }
-     self.shareSettings.profileTapped=!self.shareSettings.profileTapped;
-     */
+    self.ProfileVC.frame = CGRectMake(0, self.ProfileVC.frame.origin.y, self.ProfileVC.frame.size.width, self.ProfileVC.frame.size.height);
+    }];
+    }
+    self.shareSettings.profileTapped=!self.shareSettings.profileTapped;
+    */
 }
 
 - (void)layoutVC:(VCLayoutType)layoutType animated:(BOOL)animated
@@ -97,14 +128,16 @@
         default:
         case VC_MENU:
             layoutBlock = ^(void){
-                //float width = self.view.frame.size.width;
-                //float height = self.view.frame.size.height;
-                // The following codes for are DEBUG
-                float width = self.displayVC.frame.size.width;
-                float height = self.displayVC.frame.size.height;
-                width = self.view.frame.size.width;
-                height = self.view.frame.size.height;
-                self.displayVC.frame = CGRectMake(0, 0, width, height);
+                self.displayVC.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+                NSLog(@"DisplayVC Frame: %f, %f, %f, %f\nContainerVC Frame: %f, %f, %f, %f",
+                      self.displayVC.frame.origin.x,
+                      self.displayVC.frame.origin.y,
+                      self.displayVC.frame.size.width,
+                      self.displayVC.frame.size.height,
+                      self.view.frame.origin.x,
+                      self.view.frame.origin.y,
+                      self.view.frame.size.width,
+                      self.view.frame.size.height);
             };
             completionBlock = ^(BOOL finished){
             };
@@ -114,10 +147,6 @@
         //case VC_CONNECT:
         //    break;
     }
-    
-    // The following codes for are DEBUG
-    float width = self.displayVC.frame.size.width;
-    float height = self.displayVC.frame.size.height;
 
     if (animated)
     {
@@ -132,10 +161,6 @@
         layoutBlock();
         completionBlock(YES);
     }
-
-    // The following codes for are DEBUG
-    width = self.displayVC.frame.size.width;
-    height = self.displayVC.frame.size.height;
 
     /*
     UIViewController *keyVC = [self.viewControllers objectAtIndex:0];
