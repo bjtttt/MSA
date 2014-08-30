@@ -65,9 +65,9 @@
                                                 </state>
                                             </button>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="zWy-XC-4TW">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hM5-Kh-TAT">
-                                                <rect key="frame" x="447" y="7" width="15" height="22"/>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="0n2-29-UCc">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="scI-JW-wqy">
+                                                <rect key="frame" x="451" y="7" width="24" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="ShowMenu.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -153,6 +153,6 @@
     </scenes>
     <resources>
         <image name="ConfigConnection.png" width="24" height="24"/>
-        <image name="ShowMenu.png" width="15" height="22"/>
+        <image name="ShowMenu.png" width="24" height="24"/>
     </resources>
 </document>
