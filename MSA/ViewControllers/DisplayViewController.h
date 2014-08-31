@@ -13,5 +13,9 @@
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *displayNavBar;
 
+@property (strong, nonatomic) ShareSettings * shareSettings;
+
+- (IBAction)showHideMenu:(id)sender;
+
 @end
 

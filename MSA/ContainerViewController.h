@@ -11,7 +11,9 @@
 
 @interface ContainerViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIView *displayVC;
+@property (weak, nonatomic) IBOutlet UIView *displayView;
+@property (weak, nonatomic) IBOutlet UIView *menuView;
+
 @property (strong, nonatomic) ShareSettings * shareSettings;
 
 //- (void)layoutVC:(VCLayoutType)layoutType animated:(BOOL)animated;

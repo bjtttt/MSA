@@ -23,6 +23,9 @@ typedef enum msaLayout {
 @property (nonatomic) BOOL barTapped;
 @property (nonatomic) BOOL msgTapped;
 
+@property (nonatomic) MSALayout curMSALayout;
+@property (nonatomic) MSALayout prevMSALayout;
+
 + (id)sharedSettings;
 
 @end

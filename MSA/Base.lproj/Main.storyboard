@@ -19,7 +19,13 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vId-ub-NnX" userLabel="Display View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
-                                    <segue destination="v87-Ye-quc" kind="embed" id="7ZB-as-M9n"/>
+                                    <segue destination="v87-Ye-quc" kind="embed" id="No0-yg-X4F"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X7O-d3-lWv" userLabel="Menu View">
+                                <rect key="frame" x="308" y="0.0" width="292" height="600"/>
+                                <connections>
+                                    <segue destination="KBe-JF-W5u" kind="embed" id="TRa-Z9-tUB"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1o-46-yJv" userLabel="MXA Container View">
@@ -30,7 +36,8 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="displayVC" destination="vId-ub-NnX" id="kU5-Yy-BeG"/>
+                        <outlet property="displayView" destination="vId-ub-NnX" id="ujP-uw-bQ7"/>
+                        <outlet property="menuView" destination="X7O-d3-lWv" id="nZW-Oe-RbW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5K-hr-1aG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -53,8 +60,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="KeySight - Spectrum Analyzer" id="9KY-of-6GH">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="GiH-ao-s6d">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cDu-ka-75F">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="GiH-ao-s6d" userLabel="Connect Bar Button Item">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cDu-ka-75F" userLabel="Connet Button">
                                                 <rect key="frame" x="20" y="7" width="24" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="ConfigConnection.png">
@@ -62,13 +69,16 @@
                                                 </state>
                                             </button>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="0n2-29-UCc">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="scI-JW-wqy">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="0n2-29-UCc" userLabel="Menu Bar Button Item">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="scI-JW-wqy" userLabel="Menu Button">
                                                 <rect key="frame" x="451" y="7" width="24" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="ShowMenu.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="showHideMenu:" destination="v87-Ye-quc" eventType="touchUpInside" id="zX5-B3-emn"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -86,12 +96,12 @@
             </objects>
             <point key="canvasLocation" x="1454" y="-1397"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="WYE-Uf-dIq">
             <objects>
-                <tableViewController id="RxH-CM-leY" sceneMemberID="viewController">
+                <tableViewController id="RxH-CM-leY" userLabel="Menu View Controller" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZV3-SH-ke6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="292" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -107,11 +117,11 @@
                             <outlet property="delegate" destination="RxH-CM-leY" id="Q5h-WB-xaA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="rGl-Pa-tfI"/>
+                    <navigationItem key="navigationItem" title="Menu" id="rGl-Pa-tfI"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSb-cv-IZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2270" y="-599"/>
+            <point key="canvasLocation" x="1794" y="-629"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eUU-Wb-oBC">
@@ -127,7 +137,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8Y-Se-70U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1454" y="-599"/>
+            <point key="canvasLocation" x="1300" y="-629"/>
         </scene>
     </scenes>
     <resources>

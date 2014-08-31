@@ -58,4 +58,8 @@
           self.displayNavBar.frame.size.height);
 }
 
+- (IBAction)showHideMenu:(id)sender {
+    self.shareSettings.menuTapped=!self.shareSettings.menuTapped;
+}
+
 @end

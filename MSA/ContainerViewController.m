@@ -8,6 +8,7 @@
 
 #import "ShareSettings.h"
 #import "ContainerViewController.h"
+#import "DisplayViewController.h"
 
 @interface ContainerViewController ()
 
@@ -15,6 +16,7 @@
 
 #define VIEWCONTROLLER_DEFAULT_CORNER_RADIUS 3.0f
 #define VIEWCONTROLLER_DEFAULT_BORDER_WIDTH 1.0f
+#define MXA_MENU_VIEWCONTROLLER_WIDTH 240.0f
 
 @implementation ContainerViewController
 
@@ -26,6 +28,8 @@
     self.shareSettings.menuTapped=NO;
     self.shareSettings.barTapped=NO;
     self.shareSettings.msgTapped=NO;
+    self.shareSettings.curMSALayout=MSA_DISP;
+    self.shareSettings.prevMSALayout=MSA_DISP;
     
     //self.view.autoresizesSubviews = YES;
     
@@ -39,9 +43,13 @@
     
     //self.displayVC.translatesAutoresizingMaskIntoConstraints = YES;
     
-    self.displayVC.layer.borderWidth = VIEWCONTROLLER_DEFAULT_BORDER_WIDTH;
-    self.displayVC.layer.borderColor = [[UIColor blackColor] CGColor];
-    self.displayVC.layer.cornerRadius = VIEWCONTROLLER_DEFAULT_CORNER_RADIUS;
+    self.displayView.layer.borderWidth = VIEWCONTROLLER_DEFAULT_BORDER_WIDTH;
+    self.displayView.layer.borderColor = [[UIColor blackColor] CGColor];
+    self.displayView.layer.cornerRadius = VIEWCONTROLLER_DEFAULT_CORNER_RADIUS;
+
+    self.menuView.layer.borderWidth = VIEWCONTROLLER_DEFAULT_BORDER_WIDTH;
+    self.menuView.layer.borderColor = [[UIColor blackColor] CGColor];
+    self.menuView.layer.cornerRadius = VIEWCONTROLLER_DEFAULT_CORNER_RADIUS;
 
     //[self layoutVC:[self getVCLayoutType] animated:YES];
 }
@@ -148,29 +156,148 @@
 {
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
-    
+
+    self.shareSettings.prevMSALayout=self.shareSettings.curMSALayout;
+    self.shareSettings.curMSALayout=layoutType;
+
     switch (layoutType) {
         default:
         case MSA_DISP:
-            layoutBlock = ^(void){
-                self.displayVC.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-                NSLog(@"DisplayVC Frame: %f, %f, %f, %f\nContainerVC Frame: %f, %f, %f, %f",
-                      self.displayVC.frame.origin.x,
-                      self.displayVC.frame.origin.y,
-                      self.displayVC.frame.size.width,
-                      self.displayVC.frame.size.height,
-                      self.view.frame.origin.x,
-                      self.view.frame.origin.y,
-                      self.view.frame.size.width,
-                      self.view.frame.size.height);
-            };
-            completionBlock = ^(BOOL finished){
-            };
+            {
+                layoutBlock = ^(void){
+                    switch (self.shareSettings.prevMSALayout) {
+                        //default:
+                        case MSA_DISP:
+                        case MSA_MENU:
+                            {
+                                self.menuView.frame = CGRectMake(self.view.frame.size.width, 0,
+                                                               MXA_MENU_VIEWCONTROLLER_WIDTH, self.view.frame.size.height);
+                                self.displayView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+                            }
+                            break;
+                        case MSA_DISP_FULL:
+                            {
+                                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
+                                         self.shareSettings.curMSALayout,
+                                         self.shareSettings.prevMSALayout);
+                            }
+                           break;
+                        case MSA_MENU_FULL:
+                            {
+                                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
+                                         self.shareSettings.curMSALayout,
+                                         self.shareSettings.prevMSALayout);
+                            }
+                            break;
+                        case MSA_MSG:
+                            {
+                                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
+                                         self.shareSettings.curMSALayout,
+                                         self.shareSettings.prevMSALayout);
+                            }
+                            break;
+                        default:
+                            {
+                                NSAssert(false, @"Error : Current layout is %u while previous layout is %u",
+                                         self.shareSettings.curMSALayout,
+                                         self.shareSettings.prevMSALayout);
+                            }
+                            break;
+                    }
+                
+                    NSLog(@"ContainerVC Frame: %f, %f, %f, %f\nDisplayVC Frame: %f, %f, %f, %f\nMenuVC Frame: %f, %f, %f, %f",
+                          self.view.frame.origin.x,
+                          self.view.frame.origin.y,
+                          self.view.frame.size.width,
+                          self.view.frame.size.height,
+                          self.displayView.frame.origin.x,
+                          self.displayView.frame.origin.y,
+                          self.displayView.frame.size.width,
+                          self.displayView.frame.size.height,
+                          self.menuView.frame.origin.x,
+                          self.menuView.frame.origin.y,
+                          self.menuView.frame.size.width,
+                          self.menuView.frame.size.height);
+                };
+                completionBlock = ^(BOOL finished){
+                };
+            }
             break;
-        //case VC_DISPLAY:
-        //    break;
-        //case VC_CONNECT:
-        //    break;
+        case MSA_DISP_FULL:
+            {
+                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
+                         self.shareSettings.curMSALayout,
+                         self.shareSettings.prevMSALayout);
+            }
+            break;
+        case MSA_MENU:
+            {
+                layoutBlock = ^(void){
+                    switch (self.shareSettings.prevMSALayout) {
+                        case MSA_MENU:
+                        case MSA_DISP:
+                            {
+                                self.menuView.frame = CGRectMake(self.view.frame.size.width-MXA_MENU_VIEWCONTROLLER_WIDTH, 0,
+                                                               MXA_MENU_VIEWCONTROLLER_WIDTH, self.view.frame.size.height);
+                                self.displayView.frame = CGRectMake(0, 0,
+                                                                  self.view.frame.size.width-MXA_MENU_VIEWCONTROLLER_WIDTH, self.view.frame.size.height);
+                            }
+                            break;
+                        case MSA_DISP_FULL:
+                            {
+                                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
+                                         self.shareSettings.curMSALayout,
+                                         self.shareSettings.prevMSALayout);
+                            }
+                            break;
+                        case MSA_MENU_FULL:
+                            {
+                                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
+                                         self.shareSettings.curMSALayout,
+                                         self.shareSettings.prevMSALayout);
+                            }
+                            break;
+                        case MSA_MSG:
+                            {
+                                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
+                                         self.shareSettings.curMSALayout,
+                                         self.shareSettings.prevMSALayout);
+                            }
+                            break;
+                        default:
+                            {
+                                NSAssert(false, @"Error : Current layout is %u while previous layout is %u",
+                                         self.shareSettings.curMSALayout,
+                                         self.shareSettings.prevMSALayout);
+                            }
+                            break;
+                    }
+                    
+                    NSLog(@"ContainerVC Frame: %f, %f, %f, %f\nDisplayVC Frame: %f, %f, %f, %f\nMenuVC Frame: %f, %f, %f, %f",
+                          self.view.frame.origin.x,
+                          self.view.frame.origin.y,
+                          self.view.frame.size.width,
+                          self.view.frame.size.height,
+                          self.displayView.frame.origin.x,
+                          self.displayView.frame.origin.y,
+                          self.displayView.frame.size.width,
+                          self.displayView.frame.size.height,
+                          self.menuView.frame.origin.x,
+                          self.menuView.frame.origin.y,
+                          self.menuView.frame.size.width,
+                          self.menuView.frame.size.height);
+                };
+                completionBlock = ^(BOOL finished){
+                };
+            }
+            break;
+        case MSA_MENU_FULL:
+            {
+                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
+                         self.shareSettings.curMSALayout,
+                         self.shareSettings.prevMSALayout);
+            }
+            break;
     }
 
     if (animated)
