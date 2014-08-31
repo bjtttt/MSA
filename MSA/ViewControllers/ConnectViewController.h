@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShareSettings.h"
 
 @interface ConnectViewController : UIViewController
 

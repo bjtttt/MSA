@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
-        <!--Container View Controller-->
+        <!--MXA Container View Controller-->
         <scene sceneID="yQP-Rg-Hzj">
             <objects>
-                <viewController id="l8A-Mb-vf8" customClass="ContainerViewController" sceneMemberID="viewController">
+                <viewController id="l8A-Mb-vf8" userLabel="MXA Container View Controller" customClass="ContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gc0-Tr-9q4"/>
                         <viewControllerLayoutGuide type="bottom" id="tLi-n1-032"/>
@@ -22,11 +22,8 @@
                                     <segue destination="v87-Ye-quc" kind="embed" id="7ZB-as-M9n"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1o-46-yJv">
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1o-46-yJv" userLabel="MXA Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <connections>
-                                    <segue destination="DXG-Sr-QLz" kind="embed" id="O90-5d-ezo"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.86463173449999997" green="1" blue="0.81992671039999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -114,7 +111,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSb-cv-IZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2274" y="-703"/>
+            <point key="canvasLocation" x="2270" y="-599"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eUU-Wb-oBC">
@@ -130,25 +127,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H8Y-Se-70U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1454" y="-703"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="srb-uI-0UN">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="DXG-Sr-QLz" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fYF-26-nqk"/>
-                        <viewControllerLayoutGuide type="bottom" id="UTS-Pj-iD5"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="m2W-es-EJs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WQj-vB-ct1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
+            <point key="canvasLocation" x="1454" y="-599"/>
         </scene>
     </scenes>
     <resources>

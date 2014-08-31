@@ -7,12 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef enum vcLayoutType {
-    VC_DISPLAY,
-    VC_MENU,
-    VC_CONNECT
-} VCLayoutType;
+#import "ShareSettings.h"
 
 @interface ContainerViewController : UIViewController
 

@@ -24,7 +24,8 @@
     
     self.shareSettings = [ShareSettings sharedSettings];
     self.shareSettings.menuTapped=NO;
-    self.shareSettings.connectTapped=NO;
+    self.shareSettings.barTapped=NO;
+    self.shareSettings.msgTapped=NO;
     
     //self.view.autoresizesSubviews = YES;
     
@@ -49,7 +50,8 @@
     [super viewDidAppear:animated];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuTapped) name:@"menuTapped" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectTapped) name:@"connectTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barTapped) name:@"barTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgTapped) name:@"msgTapped" object:nil];
 }
 
 -(void)didReceiveMemoryWarning {
@@ -66,7 +68,7 @@
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    [self layoutVC:[self getVCLayoutType] animated:NO];
+    [self layoutVC:[self getMSALayout] animated:NO];
 }
 
 -(BOOL)prefersStatusBarHidden {
@@ -74,7 +76,7 @@
 }
 
 - (void)menuTapped {
-    [self layoutVC:[self getVCLayoutType] animated:YES];
+    [self layoutVC:[self getMSALayout] animated:YES];
     
     self.shareSettings.menuTapped=!self.shareSettings.menuTapped;
     
@@ -96,37 +98,60 @@
     */
 }
 
--(void)connectTapped{
-    [self layoutVC:[self getVCLayoutType] animated:YES];
+-(void)barTapped{
+    [self layoutVC:[self getMSALayout] animated:YES];
     
-    self.shareSettings.connectTapped=!self.shareSettings.connectTapped;
+    self.shareSettings.barTapped=!self.shareSettings.barTapped;
     
     /*
-    if(self.shareSettings.profileTapped){
-    [UIView animateWithDuration:0.3 animations:^{
-    self.MainVC.frame = CGRectMake(0, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
-    
-    self.ProfileVC.frame = CGRectMake(260, self.ProfileVC.frame.origin.y, self.ProfileVC.frame.size.width, self.ProfileVC.frame.size.height);
-    }];
-    } else{
-    [UIView animateWithDuration:0.3 animations:^{
-    self.MainVC.frame = CGRectMake(-260, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
+     if(self.shareSettings.profileTapped){
+     [UIView animateWithDuration:0.3 animations:^{
+     self.MainVC.frame = CGRectMake(0, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
      
-    self.ProfileVC.frame = CGRectMake(0, self.ProfileVC.frame.origin.y, self.ProfileVC.frame.size.width, self.ProfileVC.frame.size.height);
-    }];
-    }
-    self.shareSettings.profileTapped=!self.shareSettings.profileTapped;
-    */
+     self.ProfileVC.frame = CGRectMake(260, self.ProfileVC.frame.origin.y, self.ProfileVC.frame.size.width, self.ProfileVC.frame.size.height);
+     }];
+     } else{
+     [UIView animateWithDuration:0.3 animations:^{
+     self.MainVC.frame = CGRectMake(-260, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
+     
+     self.ProfileVC.frame = CGRectMake(0, self.ProfileVC.frame.origin.y, self.ProfileVC.frame.size.width, self.ProfileVC.frame.size.height);
+     }];
+     }
+     self.shareSettings.profileTapped=!self.shareSettings.profileTapped;
+     */
 }
 
-- (void)layoutVC:(VCLayoutType)layoutType animated:(BOOL)animated
+-(void)msgTapped{
+    [self layoutVC:[self getMSALayout] animated:YES];
+    
+    self.shareSettings.msgTapped=!self.shareSettings.msgTapped;
+    
+    /*
+     if(self.shareSettings.profileTapped){
+     [UIView animateWithDuration:0.3 animations:^{
+     self.MainVC.frame = CGRectMake(0, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
+     
+     self.ProfileVC.frame = CGRectMake(260, self.ProfileVC.frame.origin.y, self.ProfileVC.frame.size.width, self.ProfileVC.frame.size.height);
+     }];
+     } else{
+     [UIView animateWithDuration:0.3 animations:^{
+     self.MainVC.frame = CGRectMake(-260, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
+     
+     self.ProfileVC.frame = CGRectMake(0, self.ProfileVC.frame.origin.y, self.ProfileVC.frame.size.width, self.ProfileVC.frame.size.height);
+     }];
+     }
+     self.shareSettings.profileTapped=!self.shareSettings.profileTapped;
+     */
+}
+
+- (void)layoutVC:(MSALayout)layoutType animated:(BOOL)animated
 {
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
     
     switch (layoutType) {
         default:
-        case VC_MENU:
+        case MSA_DISP:
             layoutBlock = ^(void){
                 self.displayVC.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
                 NSLog(@"DisplayVC Frame: %f, %f, %f, %f\nContainerVC Frame: %f, %f, %f, %f",
@@ -222,12 +247,17 @@
     */
 }
 
--(VCLayoutType)getVCLayoutType {
-    if(self.shareSettings.connectTapped==YES)
-        return VC_CONNECT;
-    if(self.shareSettings.menuTapped==YES)
-        return VC_DISPLAY;
-    return VC_MENU;
+-(MSALayout)getMSALayout {
+    if(self.shareSettings.msgTapped==YES)
+        return MSA_MSG;
+    if(self.shareSettings.menuTapped==YES && self.shareSettings.barTapped==YES)
+        return MSA_MENU_FULL;
+    if(self.shareSettings.menuTapped==YES && self.shareSettings.barTapped==NO)
+        return MSA_MENU;
+    if(self.shareSettings.menuTapped==NO && self.shareSettings.barTapped==YES)
+        return MSA_DISP_FULL;
+    //if(self.shareSettings.menuTapped==NO && self.shareSettings.barTapped==NO)
+    return MSA_DISP;
 }
 
 @end

@@ -8,10 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum msaLayout {
+    MSA_DISP,
+    MSA_DISP_FULL,
+    MSA_MENU,
+    MSA_MENU_FULL,
+    MSA_MSG
+} MSALayout;
+
 @interface ShareSettings : NSObject
 
-@property (nonatomic) BOOL connectTapped;
+//@property (nonatomic) BOOL connectTapped;
 @property (nonatomic) BOOL menuTapped;
+@property (nonatomic) BOOL barTapped;
+@property (nonatomic) BOOL msgTapped;
 
 + (id)sharedSettings;
 
