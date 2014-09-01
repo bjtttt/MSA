@@ -12,6 +12,7 @@
 @interface DisplayViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *displayNavBar;
+@property (weak, nonatomic) IBOutlet UIButton *showHideMenuButton;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 

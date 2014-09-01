@@ -24,11 +24,17 @@
 
     //self.displayNavBar.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
  
-    //NSLog(@"viewDidLoad\nDisplayVC NavBar Frame: %f, %f, %f, %f",
-    //      self.displayNavBar.frame.origin.x,
-    //      self.displayNavBar.frame.origin.y,
-    //      self.displayNavBar.frame.size.width,
-    //      self.displayNavBar.frame.size.height);
+    /*
+    NSLog(@"Display viewDidLoad\nDisplayVC Frame :  %f, %f, %f, %f\nDisplayVC NavBar Frame: %f, %f, %f, %f",
+          self.view.frame.origin.x,
+          self.view.frame.origin.y,
+          self.view.frame.size.width,
+          self.view.frame.size.height,
+          self.displayNavBar.frame.origin.x,
+          self.displayNavBar.frame.origin.y,
+          self.displayNavBar.frame.size.width,
+          self.displayNavBar.frame.size.height);
+    */
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,11 +49,25 @@
 -(void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
+    //self.displayNavBar.frame = CGRectMake(0, 0, self.view.frame.size.width, self.displayNavBar.frame.size.height);
+
     //NSLog(@"viewWillLayoutSubviews\nDisplayVC NavBar Frame: %f, %f, %f, %f",
     //      self.displayNavBar.frame.origin.x,
     //      self.displayNavBar.frame.origin.y,
     //      self.displayNavBar.frame.size.width,
     //      self.displayNavBar.frame.size.height);
+    
+    /*
+    NSLog(@"Display viewWillLayoutSubviews\nDisplayVC Frame :  %f, %f, %f, %f\nDisplayVC NavBar Frame: %f, %f, %f, %f",
+          self.view.frame.origin.x,
+          self.view.frame.origin.y,
+          self.view.frame.size.width,
+          self.view.frame.size.height,
+          self.displayNavBar.frame.origin.x,
+          self.displayNavBar.frame.origin.y,
+          self.displayNavBar.frame.size.width,
+          self.displayNavBar.frame.size.height);
+    */
 }
 
 -(void)viewDidLayoutSubviews {
@@ -55,15 +75,26 @@
     
     self.displayNavBar.frame = CGRectMake(0, 0, self.view.frame.size.width, self.displayNavBar.frame.size.height);
     
-    NSLog(@"viewDidLayoutSubviews\nDisplayVC NavigationBar Frame: %f, %f, %f, %f",
+    /*
+    NSLog(@"Display viewDidLayoutSubviews\nDisplayVC Frame :  %f, %f, %f, %f\nDisplayVC NavBar Frame: %f, %f, %f, %f",
+          self.view.frame.origin.x,
+          self.view.frame.origin.y,
+          self.view.frame.size.width,
+          self.view.frame.size.height,
           self.displayNavBar.frame.origin.x,
           self.displayNavBar.frame.origin.y,
           self.displayNavBar.frame.size.width,
           self.displayNavBar.frame.size.height);
+    */
 }
 
 - (IBAction)showHideMenu:(id)sender {
     self.shareSettings.menuTapped=!self.shareSettings.menuTapped;
+    if(self.shareSettings.menuTapped)
+        [self.showHideMenuButton setImage:[UIImage imageNamed:@"HideMenu.png"] forState:UIControlStateNormal];
+    else
+        [self.showHideMenuButton setImage:[UIImage imageNamed:@"ShowMenu.png"] forState:UIControlStateNormal];
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"menuTapped" object:nil];
 }
 

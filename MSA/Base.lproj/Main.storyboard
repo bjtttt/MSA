@@ -90,6 +90,7 @@
                     <toolbarItems/>
                     <connections>
                         <outlet property="displayNavBar" destination="PI7-wW-2OI" id="Fwm-x1-bJz"/>
+                        <outlet property="showHideMenuButton" destination="scI-JW-wqy" id="FTX-pV-hKy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAQ-iN-Low" userLabel="First Responder" sceneMemberID="firstResponder"/>

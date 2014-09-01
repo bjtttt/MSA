@@ -43,14 +43,14 @@
     
     //self.displayVC.translatesAutoresizingMaskIntoConstraints = YES;
     
-    self.displayView.layer.borderWidth = VIEWCONTROLLER_DEFAULT_BORDER_WIDTH;
-    self.displayView.layer.borderColor = [[UIColor blackColor] CGColor];
-    self.displayView.layer.cornerRadius = VIEWCONTROLLER_DEFAULT_CORNER_RADIUS;
+    //self.displayView.layer.borderWidth = VIEWCONTROLLER_DEFAULT_BORDER_WIDTH;
+    //self.displayView.layer.borderColor = [[UIColor blackColor] CGColor];
+    //self.displayView.layer.cornerRadius = VIEWCONTROLLER_DEFAULT_CORNER_RADIUS;
     self.displayVC.shareSettings = self.shareSettings;
 
-    self.menuView.layer.borderWidth = VIEWCONTROLLER_DEFAULT_BORDER_WIDTH;
-    self.menuView.layer.borderColor = [[UIColor blackColor] CGColor];
-    self.menuView.layer.cornerRadius = VIEWCONTROLLER_DEFAULT_CORNER_RADIUS;
+    //self.menuView.layer.borderWidth = VIEWCONTROLLER_DEFAULT_BORDER_WIDTH;
+    //self.menuView.layer.borderColor = [[UIColor blackColor] CGColor];
+    //self.menuView.layer.cornerRadius = VIEWCONTROLLER_DEFAULT_CORNER_RADIUS;
 
     //[self layoutVC:[self getVCLayoutType] animated:YES];
 }
@@ -74,7 +74,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"embedSegueToDisplayVC"])
     {
-        self.displayVC = segue.destinationViewController;
+        self.displayVC = (DisplayViewController *)segue.destinationViewController;
         //self.displayVC.shareSettings = self.shareSettings;
         //NSLog(@"DisplayVC shareSettings : %@", self.displayVC.shareSettings);
     }
@@ -88,13 +88,13 @@
 -(void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
-    //[self layoutVC:[self getVCLayoutType] animated:YES];
+    //[self layoutVC:[self getMSALayout] animated:YES];
 }
 
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    [self layoutVC:[self getMSALayout] animated:NO];
+    [self layoutVC:[self getMSALayout] animated:YES];
 }
 
 -(BOOL)prefersStatusBarHidden {
@@ -103,71 +103,14 @@
 
 - (void)menuTapped {
     [self layoutVC:[self getMSALayout] animated:YES];
-    
-    //self.shareSettings.menuTapped=!self.shareSettings.menuTapped;
-    
-    /*
-    if(self.shareSettings.menuTapped){
-        [UIView animateWithDuration:0.3 animations:^{
-            self.MainVC.frame = CGRectMake(0, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
-            
-            self.MenuVC.frame = CGRectMake(-260, self.MenuVC.frame.origin.y, self.MenuVC.frame.size.width, self.MenuVC.frame.size.height);
-        }];
-    } else{
-        [UIView animateWithDuration:0.3 animations:^{
-            self.MainVC.frame = CGRectMake(260, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
-            
-            self.MenuVC.frame = CGRectMake(0, self.MenuVC.frame.origin.y, self.MenuVC.frame.size.width, self.MenuVC.frame.size.height);
-        }];
-    }
-    self.shareSettings.menuTapped=!self.shareSettings.menuTapped;
-    */
 }
 
 -(void)barTapped{
     [self layoutVC:[self getMSALayout] animated:YES];
-    
-    //self.shareSettings.barTapped=!self.shareSettings.barTapped;
-    
-    /*
-     if(self.shareSettings.profileTapped){
-     [UIView animateWithDuration:0.3 animations:^{
-     self.MainVC.frame = CGRectMake(0, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
-     
-     self.ProfileVC.frame = CGRectMake(260, self.ProfileVC.frame.origin.y, self.ProfileVC.frame.size.width, self.ProfileVC.frame.size.height);
-     }];
-     } else{
-     [UIView animateWithDuration:0.3 animations:^{
-     self.MainVC.frame = CGRectMake(-260, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
-     
-     self.ProfileVC.frame = CGRectMake(0, self.ProfileVC.frame.origin.y, self.ProfileVC.frame.size.width, self.ProfileVC.frame.size.height);
-     }];
-     }
-     self.shareSettings.profileTapped=!self.shareSettings.profileTapped;
-     */
 }
 
 -(void)msgTapped{
     [self layoutVC:[self getMSALayout] animated:YES];
-    
-    //self.shareSettings.msgTapped=!self.shareSettings.msgTapped;
-    
-    /*
-     if(self.shareSettings.profileTapped){
-     [UIView animateWithDuration:0.3 animations:^{
-     self.MainVC.frame = CGRectMake(0, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
-     
-     self.ProfileVC.frame = CGRectMake(260, self.ProfileVC.frame.origin.y, self.ProfileVC.frame.size.width, self.ProfileVC.frame.size.height);
-     }];
-     } else{
-     [UIView animateWithDuration:0.3 animations:^{
-     self.MainVC.frame = CGRectMake(-260, self.MainVC.frame.origin.y, self.MainVC.frame.size.width, self.MainVC.frame.size.height);
-     
-     self.ProfileVC.frame = CGRectMake(0, self.ProfileVC.frame.origin.y, self.ProfileVC.frame.size.width, self.ProfileVC.frame.size.height);
-     }];
-     }
-     self.shareSettings.profileTapped=!self.shareSettings.profileTapped;
-     */
 }
 
 - (void)layoutVC:(MSALayout)layoutType animated:(BOOL)animated
@@ -177,8 +120,24 @@
 
     self.shareSettings.prevMSALayout=self.shareSettings.curMSALayout;
     self.shareSettings.curMSALayout=layoutType;
-    NSLog(@"Previous layout : %u\nCurrent layout : %u",
+    /*
+    NSLog(@"\nPrevious layout : %u\nCurrent layout : %u",
           self.shareSettings.prevMSALayout, self.shareSettings.curMSALayout);
+
+    NSLog(@"\nContainerVC Frame: %f, %f, %f, %f\nBefore Layout\nDisplayVC Frame: %f, %f, %f, %f\nMenuVC Frame: %f, %f, %f, %f",
+          self.view.frame.origin.x,
+          self.view.frame.origin.y,
+          self.view.frame.size.width,
+          self.view.frame.size.height,
+          self.displayView.frame.origin.x,
+          self.displayView.frame.origin.y,
+          self.displayView.frame.size.width,
+          self.displayView.frame.size.height,
+          self.menuView.frame.origin.x,
+          self.menuView.frame.origin.y,
+          self.menuView.frame.size.width,
+          self.menuView.frame.size.height);
+    */
 
     switch (layoutType) {
         default:
@@ -225,7 +184,8 @@
                             break;
                     }
                 
-                    NSLog(@"ContainerVC Frame: %f, %f, %f, %f\nDisplayVC Frame: %f, %f, %f, %f\nMenuVC Frame: %f, %f, %f, %f",
+                    /*
+                    NSLog(@"\nAfter Layout\nContainerVC Frame: %f, %f, %f, %f\nDisplayVC Frame: %f, %f, %f, %f\nMenuVC Frame: %f, %f, %f, %f",
                           self.view.frame.origin.x,
                           self.view.frame.origin.y,
                           self.view.frame.size.width,
@@ -238,6 +198,7 @@
                           self.menuView.frame.origin.y,
                           self.menuView.frame.size.width,
                           self.menuView.frame.size.height);
+                    */
                 };
                 completionBlock = ^(BOOL finished){
                 };
@@ -260,7 +221,7 @@
                                 self.menuView.frame = CGRectMake(self.view.frame.size.width-MXA_MENU_VIEWCONTROLLER_WIDTH, 0,
                                                                MXA_MENU_VIEWCONTROLLER_WIDTH, self.view.frame.size.height);
                                 self.displayView.frame = CGRectMake(0, 0,
-                                                                  self.view.frame.size.width-MXA_MENU_VIEWCONTROLLER_WIDTH, self.view.frame.size.height);
+                                                                    self.view.frame.size.width-MXA_MENU_VIEWCONTROLLER_WIDTH, self.view.frame.size.height);
                             }
                             break;
                         case MSA_DISP_FULL:
@@ -293,11 +254,8 @@
                             break;
                     }
                     
-                    NSLog(@"ContainerVC Frame: %f, %f, %f, %f\nDisplayVC Frame: %f, %f, %f, %f\nMenuVC Frame: %f, %f, %f, %f",
-                          self.view.frame.origin.x,
-                          self.view.frame.origin.y,
-                          self.view.frame.size.width,
-                          self.view.frame.size.height,
+                    /*
+                    NSLog(@"\nAfter Layout\nDisplayVC Frame: %f, %f, %f, %f\nMenuVC Frame: %f, %f, %f, %f",
                           self.displayView.frame.origin.x,
                           self.displayView.frame.origin.y,
                           self.displayView.frame.size.width,
@@ -306,6 +264,7 @@
                           self.menuView.frame.origin.y,
                           self.menuView.frame.size.width,
                           self.menuView.frame.size.height);
+                    */
                 };
                 completionBlock = ^(BOOL finished){
                 };
@@ -323,8 +282,8 @@
     if (animated)
     {
         [UIView animateWithDuration:0.25
-                              delay:0
-                            options:UIViewAnimationOptionLayoutSubviews
+                              //delay:0
+                            //options:UIViewAnimationOptionLayoutSubviews
                          animations:layoutBlock
                          completion:completionBlock];
     }
