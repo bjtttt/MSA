@@ -73,9 +73,9 @@
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    self.displayNavBar.frame = CGRectMake(0, 0, self.view.frame.size.width, self.displayNavBar.frame.size.height);
-    self.displayToolBar.frame = CGRectMake(0, self.view.frame.size.height-self.displayToolBar.frame.size.height,
-                                           self.view.frame.size.width, self.displayToolBar.frame.size.height);
+    self.displayTopNavBar.frame = CGRectMake(0, 0, self.view.frame.size.width, self.displayTopNavBar.frame.size.height);
+    self.displayBottomNavBar.frame = CGRectMake(0, self.view.frame.size.height-self.displayBottomNavBar.frame.size.height,
+                                           self.view.frame.size.width, self.displayBottomNavBar.frame.size.height);
     
     /*
     NSLog(@"Display viewDidLayoutSubviews\nDisplayVC Frame :  %f, %f, %f, %f\nDisplayVC NavBar Frame: %f, %f, %f, %f",

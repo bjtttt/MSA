@@ -120,24 +120,6 @@
 
     self.shareSettings.prevMSALayout=self.shareSettings.curMSALayout;
     self.shareSettings.curMSALayout=layoutType;
-    /*
-    NSLog(@"\nPrevious layout : %u\nCurrent layout : %u",
-          self.shareSettings.prevMSALayout, self.shareSettings.curMSALayout);
-
-    NSLog(@"\nContainerVC Frame: %f, %f, %f, %f\nBefore Layout\nDisplayVC Frame: %f, %f, %f, %f\nMenuVC Frame: %f, %f, %f, %f",
-          self.view.frame.origin.x,
-          self.view.frame.origin.y,
-          self.view.frame.size.width,
-          self.view.frame.size.height,
-          self.displayView.frame.origin.x,
-          self.displayView.frame.origin.y,
-          self.displayView.frame.size.width,
-          self.displayView.frame.size.height,
-          self.menuView.frame.origin.x,
-          self.menuView.frame.origin.y,
-          self.menuView.frame.size.width,
-          self.menuView.frame.size.height);
-    */
 
     switch (layoutType) {
         case MSA_DISP:
@@ -145,12 +127,23 @@
                 layoutBlock = ^(void){
                     switch (self.shareSettings.prevMSALayout) {
                         case MSA_DISP:
+                            // Startup State
                         case MSA_MENU:
+                            {
+                                self.menuView.frame = CGRectMake(self.view.frame.size.width, 0,
+                                                                 MXA_MENU_VIEWCONTROLLER_WIDTH, self.view.frame.size.height);
+                                self.displayView.frame = CGRectMake(0, 0,
+                                                                    self.view.frame.size.width, self.view.frame.size.height);
+                                self.msgView.frame = CGRectMake(0, self.view.frame.size.height,
+                                                                self.view.frame.size.width, self.view.frame.size.height);
+                            }
+                            break;
                         case MSA_MSG:
                             {
                                 self.menuView.frame = CGRectMake(self.view.frame.size.width, 0,
-                                                               MXA_MENU_VIEWCONTROLLER_WIDTH, self.view.frame.size.height);
-                                self.displayView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+                                                               self.menuView.frame.size.width, self.menuView.frame.size.height);
+                                self.displayView.frame = CGRectMake(0, 0,
+                                                                    self.view.frame.size.width, self.view.frame.size.height);
                                 self.msgView.frame = CGRectMake(0, self.view.frame.size.height,
                                                                 self.view.frame.size.width, self.view.frame.size.height);
                             }
@@ -194,13 +187,28 @@
                 layoutBlock = ^(void){
                     switch (self.shareSettings.prevMSALayout) {
                         case MSA_MENU:
+                            {
+                                NSAssert(false, @"Error : Current layout is %u while previous layout is %u",
+                                         self.shareSettings.curMSALayout,
+                                         self.shareSettings.prevMSALayout);
+                            }
+                            break;
                         case MSA_DISP:
+                            {
+                                self.menuView.frame = CGRectMake(self.view.frame.size.width-MXA_MENU_VIEWCONTROLLER_WIDTH, 0,
+                                                                 MXA_MENU_VIEWCONTROLLER_WIDTH, self.view.frame.size.height);
+                                self.displayView.frame = CGRectMake(0, 0,
+                                                                    self.view.frame.size.width-MXA_MENU_VIEWCONTROLLER_WIDTH, self.view.frame.size.height);
+                                self.msgView.frame = CGRectMake(0, self.view.frame.size.height,
+                                                                self.view.frame.size.width, self.view.frame.size.height);
+                            }
+                            break;
                         case MSA_MSG:
                             {
                                 self.menuView.frame = CGRectMake(self.view.frame.size.width-MXA_MENU_VIEWCONTROLLER_WIDTH, 0,
-                                                               MXA_MENU_VIEWCONTROLLER_WIDTH, self.view.frame.size.height);
+                                                               self.menuView.frame.size.width, self.menuView.frame.size.height);
                                 self.displayView.frame = CGRectMake(0, 0,
-                                                                    self.view.frame.size.width-MXA_MENU_VIEWCONTROLLER_WIDTH, self.view.frame.size.height);
+                                                                    self.displayView.frame.size.width, self.displayView.frame.size.height);
                                 self.msgView.frame = CGRectMake(0, self.view.frame.size.height,
                                                                 self.view.frame.size.width, self.view.frame.size.height);
                             }
@@ -243,17 +251,23 @@
             {
                 layoutBlock = ^(void){
                     switch (self.shareSettings.prevMSALayout) {
+                        case MSA_MSG:
+                            {
+                                NSAssert(false, @"Error : Current layout is %u while previous layout is %u",
+                                         self.shareSettings.curMSALayout,
+                                         self.shareSettings.prevMSALayout);
+                            }
+                            break;
                         case MSA_MENU:
                         case MSA_DISP:
-                        case MSA_MSG:
-                        {
-                            self.menuView.frame = CGRectMake(self.view.frame.size.width-MXA_MENU_VIEWCONTROLLER_WIDTH, 0,
-                                                             MXA_MENU_VIEWCONTROLLER_WIDTH, self.view.frame.size.height);
-                            self.displayView.frame = CGRectMake(0, 0,
-                                                                self.view.frame.size.width-MXA_MENU_VIEWCONTROLLER_WIDTH, self.view.frame.size.height);
-                            self.msgView.frame = CGRectMake(0, self.view.frame.size.height,
-                                                            self.view.frame.size.width, self.view.frame.size.height);
-                        }
+                            {
+                                self.menuView.frame = CGRectMake(self.view.frame.size.width, 0,
+                                                                 self.menuView.frame.size.width, self.menuView.frame.size.height);
+                                self.displayView.frame = CGRectMake(-self.displayView.frame.size.width, 0,
+                                                                    self.displayView.frame.size.width, self.displayView.frame.size.height);
+                                self.msgView.frame = CGRectMake(0, 0,
+                                                                self.view.frame.size.width, self.view.frame.size.height);
+                            }
                             break;
                         case MSA_DISP_FULL:
                         {

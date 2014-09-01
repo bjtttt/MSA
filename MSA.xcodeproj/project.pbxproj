@@ -18,13 +18,15 @@
 		9A9C671A19AD6C81007D3248 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A9C671819AD6C81007D3248 /* Main.storyboard */; };
 		9A9C671C19AD6C81007D3248 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9C671B19AD6C81007D3248 /* Images.xcassets */; };
 		9A9C672819AD6C81007D3248 /* MSATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C672719AD6C81007D3248 /* MSATests.m */; };
-		9A9C673919AD7093007D3248 /* ConfigConnection.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9C673819AD7093007D3248 /* ConfigConnection.png */; };
+		9A9C673919AD7093007D3248 /* Connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9C673819AD7093007D3248 /* Connect.png */; };
 		9AAE0EB719B46621004D9146 /* Message.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AAE0EB619B46621004D9146 /* Message.png */; };
 		9AAE0EBA19B466EF004D9146 /* MsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE0EB919B466EF004D9146 /* MsgViewController.m */; };
 		9AC5448A19B1F65F00A7F334 /* HideMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448819B1F65F00A7F334 /* HideMenu.png */; };
 		9AC5448B19B1F65F00A7F334 /* ShowMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448919B1F65F00A7F334 /* ShowMenu.png */; };
 		9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448C19B1F73500A7F334 /* HideBar.png */; };
 		9AC5448F19B1F74300A7F334 /* ShowBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448E19B1F74300A7F334 /* ShowBar.png */; };
+		9AE0968F19B49DEA005AC54C /* Return.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AE0968E19B49DEA005AC54C /* Return.png */; };
+		9AE0969119B4A5D3005AC54C /* Config.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AE0969019B4A5D3005AC54C /* Config.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +61,7 @@
 		9A9C672119AD6C81007D3248 /* MSATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9C672619AD6C81007D3248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9C672719AD6C81007D3248 /* MSATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSATests.m; sourceTree = "<group>"; };
-		9A9C673819AD7093007D3248 /* ConfigConnection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ConfigConnection.png; path = Images/24/ConfigConnection.png; sourceTree = "<group>"; };
+		9A9C673819AD7093007D3248 /* Connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Connect.png; path = Images/24/Connect.png; sourceTree = "<group>"; };
 		9AAE0EB619B46621004D9146 /* Message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Message.png; path = Images/24/Message.png; sourceTree = "<group>"; };
 		9AAE0EB819B466EF004D9146 /* MsgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgViewController.h; path = ViewControllers/MsgViewController.h; sourceTree = "<group>"; };
 		9AAE0EB919B466EF004D9146 /* MsgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgViewController.m; path = ViewControllers/MsgViewController.m; sourceTree = "<group>"; };
@@ -67,6 +69,8 @@
 		9AC5448919B1F65F00A7F334 /* ShowMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShowMenu.png; path = Images/24/ShowMenu.png; sourceTree = "<group>"; };
 		9AC5448C19B1F73500A7F334 /* HideBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideBar.png; path = Images/24/HideBar.png; sourceTree = "<group>"; };
 		9AC5448E19B1F74300A7F334 /* ShowBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShowBar.png; path = Images/24/ShowBar.png; sourceTree = "<group>"; };
+		9AE0968E19B49DEA005AC54C /* Return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Return.png; path = Images/24/Return.png; sourceTree = "<group>"; };
+		9AE0969019B4A5D3005AC54C /* Config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Config.png; path = Images/24/Config.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,12 +188,14 @@
 		9A9C673319AD7081007D3248 /* 24 */ = {
 			isa = PBXGroup;
 			children = (
+				9AE0969019B4A5D3005AC54C /* Config.png */,
+				9AE0968E19B49DEA005AC54C /* Return.png */,
 				9AAE0EB619B46621004D9146 /* Message.png */,
 				9AC5448E19B1F74300A7F334 /* ShowBar.png */,
 				9AC5448C19B1F73500A7F334 /* HideBar.png */,
 				9AC5448819B1F65F00A7F334 /* HideMenu.png */,
 				9AC5448919B1F65F00A7F334 /* ShowMenu.png */,
-				9A9C673819AD7093007D3248 /* ConfigConnection.png */,
+				9A9C673819AD7093007D3248 /* Connect.png */,
 			);
 			name = 24;
 			sourceTree = "<group>";
@@ -276,12 +282,14 @@
 			files = (
 				9A9C671A19AD6C81007D3248 /* Main.storyboard in Resources */,
 				9AC5448F19B1F74300A7F334 /* ShowBar.png in Resources */,
-				9A9C673919AD7093007D3248 /* ConfigConnection.png in Resources */,
+				9A9C673919AD7093007D3248 /* Connect.png in Resources */,
+				9AE0969119B4A5D3005AC54C /* Config.png in Resources */,
 				9AAE0EB719B46621004D9146 /* Message.png in Resources */,
 				9AC5448A19B1F65F00A7F334 /* HideMenu.png in Resources */,
 				9A9C671C19AD6C81007D3248 /* Images.xcassets in Resources */,
 				9AC5448B19B1F65F00A7F334 /* ShowMenu.png in Resources */,
 				9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */,
+				9AE0968F19B49DEA005AC54C /* Return.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
