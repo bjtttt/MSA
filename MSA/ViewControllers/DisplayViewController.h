@@ -13,10 +13,13 @@
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *displayNavBar;
 @property (weak, nonatomic) IBOutlet UIButton *showHideMenuButton;
+@property (weak, nonatomic) IBOutlet UIToolbar *displayToolBar;
+@property (weak, nonatomic) IBOutlet UIButton *showHideMsgButton;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 
 - (IBAction)showHideMenu:(id)sender;
+- (IBAction)showHideMsg:(id)sender;
 
 @end
 

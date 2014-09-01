@@ -19,6 +19,8 @@
 		9A9C671C19AD6C81007D3248 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9C671B19AD6C81007D3248 /* Images.xcassets */; };
 		9A9C672819AD6C81007D3248 /* MSATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C672719AD6C81007D3248 /* MSATests.m */; };
 		9A9C673919AD7093007D3248 /* ConfigConnection.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9C673819AD7093007D3248 /* ConfigConnection.png */; };
+		9AAE0EB719B46621004D9146 /* Message.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AAE0EB619B46621004D9146 /* Message.png */; };
+		9AAE0EBA19B466EF004D9146 /* MsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE0EB919B466EF004D9146 /* MsgViewController.m */; };
 		9AC5448A19B1F65F00A7F334 /* HideMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448819B1F65F00A7F334 /* HideMenu.png */; };
 		9AC5448B19B1F65F00A7F334 /* ShowMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448919B1F65F00A7F334 /* ShowMenu.png */; };
 		9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448C19B1F73500A7F334 /* HideBar.png */; };
@@ -58,6 +60,9 @@
 		9A9C672619AD6C81007D3248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9C672719AD6C81007D3248 /* MSATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSATests.m; sourceTree = "<group>"; };
 		9A9C673819AD7093007D3248 /* ConfigConnection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ConfigConnection.png; path = Images/24/ConfigConnection.png; sourceTree = "<group>"; };
+		9AAE0EB619B46621004D9146 /* Message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Message.png; path = Images/24/Message.png; sourceTree = "<group>"; };
+		9AAE0EB819B466EF004D9146 /* MsgViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgViewController.h; path = ViewControllers/MsgViewController.h; sourceTree = "<group>"; };
+		9AAE0EB919B466EF004D9146 /* MsgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgViewController.m; path = ViewControllers/MsgViewController.m; sourceTree = "<group>"; };
 		9AC5448819B1F65F00A7F334 /* HideMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideMenu.png; path = Images/24/HideMenu.png; sourceTree = "<group>"; };
 		9AC5448919B1F65F00A7F334 /* ShowMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShowMenu.png; path = Images/24/ShowMenu.png; sourceTree = "<group>"; };
 		9AC5448C19B1F73500A7F334 /* HideBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideBar.png; path = Images/24/HideBar.png; sourceTree = "<group>"; };
@@ -85,6 +90,8 @@
 		9A953EDA19AD8436005467A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9AAE0EB819B466EF004D9146 /* MsgViewController.h */,
+				9AAE0EB919B466EF004D9146 /* MsgViewController.m */,
 				9A953EDB19AD84E7005467A1 /* ConnectViewController.h */,
 				9A953EDC19AD84E7005467A1 /* ConnectViewController.m */,
 				9A953EDD19AD84E7005467A1 /* DisplayViewController.h */,
@@ -177,6 +184,7 @@
 		9A9C673319AD7081007D3248 /* 24 */ = {
 			isa = PBXGroup;
 			children = (
+				9AAE0EB619B46621004D9146 /* Message.png */,
 				9AC5448E19B1F74300A7F334 /* ShowBar.png */,
 				9AC5448C19B1F73500A7F334 /* HideBar.png */,
 				9AC5448819B1F65F00A7F334 /* HideMenu.png */,
@@ -269,6 +277,7 @@
 				9A9C671A19AD6C81007D3248 /* Main.storyboard in Resources */,
 				9AC5448F19B1F74300A7F334 /* ShowBar.png in Resources */,
 				9A9C673919AD7093007D3248 /* ConfigConnection.png in Resources */,
+				9AAE0EB719B46621004D9146 /* Message.png in Resources */,
 				9AC5448A19B1F65F00A7F334 /* HideMenu.png in Resources */,
 				9A9C671C19AD6C81007D3248 /* Images.xcassets in Resources */,
 				9AC5448B19B1F65F00A7F334 /* ShowMenu.png in Resources */,
@@ -296,6 +305,7 @@
 				9A953EE619AD84E7005467A1 /* MenuViewController.m in Sources */,
 				9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */,
 				9A9C671719AD6C81007D3248 /* ContainerViewController.m in Sources */,
+				9AAE0EBA19B466EF004D9146 /* MsgViewController.m in Sources */,
 				9A953EE919ADCBB6005467A1 /* ShareSettings.m in Sources */,
 				9A9C670E19AD6C81007D3248 /* main.m in Sources */,
 			);

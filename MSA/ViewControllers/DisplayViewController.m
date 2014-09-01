@@ -74,6 +74,8 @@
     [super viewDidLayoutSubviews];
     
     self.displayNavBar.frame = CGRectMake(0, 0, self.view.frame.size.width, self.displayNavBar.frame.size.height);
+    self.displayToolBar.frame = CGRectMake(0, self.view.frame.size.height-self.displayToolBar.frame.size.height,
+                                           self.view.frame.size.width, self.displayToolBar.frame.size.height);
     
     /*
     NSLog(@"Display viewDidLayoutSubviews\nDisplayVC Frame :  %f, %f, %f, %f\nDisplayVC NavBar Frame: %f, %f, %f, %f",
@@ -96,6 +98,12 @@
         [self.showHideMenuButton setImage:[UIImage imageNamed:@"ShowMenu.png"] forState:UIControlStateNormal];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"menuTapped" object:nil];
+}
+
+- (IBAction)showHideMsg:(id)sender {
+    self.shareSettings.msgTapped=!self.shareSettings.msgTapped;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"msgTapped" object:nil];
 }
 
 @end

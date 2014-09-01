@@ -52,6 +52,8 @@
     //self.menuView.layer.borderColor = [[UIColor blackColor] CGColor];
     //self.menuView.layer.cornerRadius = VIEWCONTROLLER_DEFAULT_CORNER_RADIUS;
 
+    self.msgVC.shareSettings = self.shareSettings;
+
     //[self layoutVC:[self getVCLayoutType] animated:YES];
 }
 
@@ -73,11 +75,9 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"embedSegueToDisplayVC"])
-    {
         self.displayVC = (DisplayViewController *)segue.destinationViewController;
-        //self.displayVC.shareSettings = self.shareSettings;
-        //NSLog(@"DisplayVC shareSettings : %@", self.displayVC.shareSettings);
-    }
+    if([segue.identifier isEqualToString:@"embedSegueToMsgVC"])
+        self.msgVC = (MsgViewController *)segue.destinationViewController;
 }
 
 -(void)didReceiveMemoryWarning {
@@ -292,65 +292,6 @@
         layoutBlock();
         completionBlock(YES);
     }
-
-    /*
-    UIViewController *keyVC = [self.viewControllers objectAtIndex:0];
-    UIViewController *displayVC = [self.viewControllers objectAtIndex:1];
-    
-    CGRect viewBounds = self.view.bounds;
-    CGFloat keyWidth = self.usingCustomKeyWidth ? self.keyWidth : MOSAVIEWCONTROLLER_DEFAULT_KEY_WIDTH;
-    
-    if (!notCollapsed)
-    {
-        layoutBlock = ^(void){
-            CGRect keyFrame = CGRectMake(viewBounds.size.width, 0, keyWidth+1.0, viewBounds.size.height);
-            CGRect displayFrame = CGRectMake(0, 0, viewBounds.size.width, viewBounds.size.height);
-            
-            keyVC.view.frame = keyFrame;
-            displayVC.view.frame = displayFrame;
-        };
-        
-        completionBlock = ^(BOOL finished){
-            [keyVC.view removeFromSuperview];
-        };
-    }
-    else
-    {
-        if (keyVC.view.superview != self.view)
-        {
-            [self.view addSubview:keyVC.view];
-        }
-        //masterVC.view.frame = CGRectMake(-RZSPLITVIEWCONTROLLER_DEFAULT_MASTER_WIDTH, 0, RZSPLITVIEWCONTROLLER_DEFAULT_MASTER_WIDTH+1.0, viewBounds.size.height);
-        
-        keyVC.view.frame = CGRectMake(viewBounds.size.width, 0, keyWidth+1.0, viewBounds.size.height);
-        
-        layoutBlock = ^(void){
-            CGRect keyFrame = CGRectMake(viewBounds.size.width-keyWidth, 0, keyWidth+1.0, viewBounds.size.height);
-            CGRect displayFrame = CGRectMake(0, 0, viewBounds.size.width - keyWidth, viewBounds.size.height);
-            
-            keyVC.view.frame = keyFrame;
-            displayVC.view.frame = displayFrame;
-        };
-        
-        completionBlock = ^(BOOL finished){
-            
-        };
-    }
-    
-    if (animated)
-    {
-        [UIView animateWithDuration:0.25
-                              delay:0
-                            options:UIViewAnimationOptionLayoutSubviews
-                         animations:layoutBlock
-                         completion:completionBlock];
-    }
-    else
-    {
-        layoutBlock();
-        completionBlock(YES);
-    }
-    */
 }
 
 -(MSALayout)getMSALayout {
