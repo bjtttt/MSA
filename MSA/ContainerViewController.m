@@ -46,6 +46,7 @@
     self.displayView.layer.borderWidth = VIEWCONTROLLER_DEFAULT_BORDER_WIDTH;
     self.displayView.layer.borderColor = [[UIColor blackColor] CGColor];
     self.displayView.layer.cornerRadius = VIEWCONTROLLER_DEFAULT_CORNER_RADIUS;
+    self.displayVC.shareSettings = self.shareSettings;
 
     self.menuView.layer.borderWidth = VIEWCONTROLLER_DEFAULT_BORDER_WIDTH;
     self.menuView.layer.borderColor = [[UIColor blackColor] CGColor];
@@ -60,6 +61,23 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuTapped) name:@"menuTapped" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barTapped) name:@"barTapped" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(msgTapped) name:@"msgTapped" object:nil];
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"menuTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"msgTapped" object:nil];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"embedSegueToDisplayVC"])
+    {
+        self.displayVC = segue.destinationViewController;
+        //self.displayVC.shareSettings = self.shareSettings;
+        //NSLog(@"DisplayVC shareSettings : %@", self.displayVC.shareSettings);
+    }
 }
 
 -(void)didReceiveMemoryWarning {
@@ -86,7 +104,7 @@
 - (void)menuTapped {
     [self layoutVC:[self getMSALayout] animated:YES];
     
-    self.shareSettings.menuTapped=!self.shareSettings.menuTapped;
+    //self.shareSettings.menuTapped=!self.shareSettings.menuTapped;
     
     /*
     if(self.shareSettings.menuTapped){
@@ -109,7 +127,7 @@
 -(void)barTapped{
     [self layoutVC:[self getMSALayout] animated:YES];
     
-    self.shareSettings.barTapped=!self.shareSettings.barTapped;
+    //self.shareSettings.barTapped=!self.shareSettings.barTapped;
     
     /*
      if(self.shareSettings.profileTapped){
@@ -132,7 +150,7 @@
 -(void)msgTapped{
     [self layoutVC:[self getMSALayout] animated:YES];
     
-    self.shareSettings.msgTapped=!self.shareSettings.msgTapped;
+    //self.shareSettings.msgTapped=!self.shareSettings.msgTapped;
     
     /*
      if(self.shareSettings.profileTapped){
@@ -159,6 +177,8 @@
 
     self.shareSettings.prevMSALayout=self.shareSettings.curMSALayout;
     self.shareSettings.curMSALayout=layoutType;
+    NSLog(@"Previous layout : %u\nCurrent layout : %u",
+          self.shareSettings.prevMSALayout, self.shareSettings.curMSALayout);
 
     switch (layoutType) {
         default:

@@ -13,7 +13,11 @@
 @end
 
 @implementation DisplayViewController
-            
+
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    [super prepareForSegue:segue sender:sender];
+//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -60,6 +64,7 @@
 
 - (IBAction)showHideMenu:(id)sender {
     self.shareSettings.menuTapped=!self.shareSettings.menuTapped;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"menuTapped" object:nil];
 }
 
 @end
