@@ -65,4 +65,8 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"menuTapped" object:nil];
 }
 
+- (IBAction)exitToHere:(UIStoryboardSegue *)sender {
+    // Nothing to do here
+}
+
 @end

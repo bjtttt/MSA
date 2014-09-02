@@ -6,17 +6,26 @@
 //  Copyright (c) 2014年 KeySight. All rights reserved.
 //
 
-#import "MenuViewController.h"
+#import "MenuTabBarController.h"
 
-@interface MenuViewController ()
+@interface MenuTabBarController ()
 
 @end
 
-@implementation MenuViewController
+@implementation MenuTabBarController
             
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    //self.tabBar.frame=CGRectMake(0, self.tabBar.frame.origin.y,self.tabBar.frame.size.width,self.tabBar.frame.size.height);
 }
 
 - (void)didReceiveMemoryWarning {

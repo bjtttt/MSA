@@ -21,6 +21,7 @@
 @property (nonatomic) double frameHeight;
 
 - (IBAction)hideMsg:(id)sender;
+- (IBAction)exitToHere:(UIStoryboardSegue *)sender;
 
 @end
 

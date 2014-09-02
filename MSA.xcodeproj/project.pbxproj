@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EDC19AD84E7005467A1 /* ConnectViewController.m */; };
 		9A953EE419AD84E7005467A1 /* DisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EDE19AD84E7005467A1 /* DisplayViewController.m */; };
-		9A953EE619AD84E7005467A1 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EE219AD84E7005467A1 /* MenuViewController.m */; };
+		9A953EE619AD84E7005467A1 /* MenuTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EE219AD84E7005467A1 /* MenuTabBarController.m */; };
 		9A953EE919ADCBB6005467A1 /* ShareSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EE819ADCBB6005467A1 /* ShareSettings.m */; };
 		9A9C670E19AD6C81007D3248 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C670D19AD6C81007D3248 /* main.m */; };
 		9A9C671119AD6C81007D3248 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C671019AD6C81007D3248 /* AppDelegate.m */; };
@@ -44,8 +44,8 @@
 		9A953EDC19AD84E7005467A1 /* ConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectViewController.m; path = ViewControllers/ConnectViewController.m; sourceTree = "<group>"; };
 		9A953EDD19AD84E7005467A1 /* DisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayViewController.h; path = ViewControllers/DisplayViewController.h; sourceTree = "<group>"; };
 		9A953EDE19AD84E7005467A1 /* DisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayViewController.m; path = ViewControllers/DisplayViewController.m; sourceTree = "<group>"; };
-		9A953EE119AD84E7005467A1 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = ViewControllers/MenuViewController.h; sourceTree = "<group>"; };
-		9A953EE219AD84E7005467A1 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = ViewControllers/MenuViewController.m; sourceTree = "<group>"; };
+		9A953EE119AD84E7005467A1 /* MenuTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTabBarController.h; path = ViewControllers/MenuTabBarController.h; sourceTree = "<group>"; };
+		9A953EE219AD84E7005467A1 /* MenuTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTabBarController.m; path = ViewControllers/MenuTabBarController.m; sourceTree = "<group>"; };
 		9A953EE719ADCB99005467A1 /* ShareSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShareSettings.h; path = ViewControllers/ShareSettings.h; sourceTree = "<group>"; };
 		9A953EE819ADCBB6005467A1 /* ShareSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareSettings.m; path = ViewControllers/ShareSettings.m; sourceTree = "<group>"; };
 		9A9C670819AD6C81007D3248 /* MSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,8 +100,8 @@
 				9A953EDC19AD84E7005467A1 /* ConnectViewController.m */,
 				9A953EDD19AD84E7005467A1 /* DisplayViewController.h */,
 				9A953EDE19AD84E7005467A1 /* DisplayViewController.m */,
-				9A953EE119AD84E7005467A1 /* MenuViewController.h */,
-				9A953EE219AD84E7005467A1 /* MenuViewController.m */,
+				9A953EE119AD84E7005467A1 /* MenuTabBarController.h */,
+				9A953EE219AD84E7005467A1 /* MenuTabBarController.m */,
 				9A9C671519AD6C81007D3248 /* ContainerViewController.h */,
 				9A9C671619AD6C81007D3248 /* ContainerViewController.m */,
 				9A953EE719ADCB99005467A1 /* ShareSettings.h */,
@@ -310,7 +310,7 @@
 				9A9C671419AD6C81007D3248 /* MSA.xcdatamodeld in Sources */,
 				9A953EE419AD84E7005467A1 /* DisplayViewController.m in Sources */,
 				9A9C671119AD6C81007D3248 /* AppDelegate.m in Sources */,
-				9A953EE619AD84E7005467A1 /* MenuViewController.m in Sources */,
+				9A953EE619AD84E7005467A1 /* MenuTabBarController.m in Sources */,
 				9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */,
 				9A9C671719AD6C81007D3248 /* ContainerViewController.m in Sources */,
 				9AAE0EBA19B466EF004D9146 /* MsgViewController.m in Sources */,

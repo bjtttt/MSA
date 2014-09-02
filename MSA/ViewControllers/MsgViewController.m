@@ -45,7 +45,12 @@
 }
 
 - (IBAction)hideMsg:(id)sender {
-    [self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
+    //[self.view.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)exitToHere:(UIStoryboardSegue *)sender {
+    // Nothing to do here
 }
 
 @end

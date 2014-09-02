@@ -29,6 +29,7 @@
 @property (nonatomic) double frameHeight;
 
 - (IBAction)showHideMenu:(id)sender;
+- (IBAction)exitToHere:(UIStoryboardSegue *)sender;
 
 @end
 
