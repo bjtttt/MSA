@@ -15,6 +15,11 @@ typedef enum msaLayout {
     MSA_MENU_FULL
 } MSALayout;
 
+#define CORNER_RADIUS 3.0f
+#define BORDER_WIDTH 1.0f
+#define VC_MARGIN 1.0f
+#define MENU_WIDTH 200.0f
+
 @interface ShareSettings : NSObject
 
 @property (nonatomic) BOOL menuTapped;

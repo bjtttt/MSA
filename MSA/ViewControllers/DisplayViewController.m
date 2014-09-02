@@ -23,20 +23,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.msgVC.shareSettings = self.shareSettings;
-
-    //self.displayNavBar.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
- 
-    /*
-    NSLog(@"Display viewDidLoad\nDisplayVC Frame :  %f, %f, %f, %f\nDisplayVC NavBar Frame: %f, %f, %f, %f",
-          self.view.frame.origin.x,
-          self.view.frame.origin.y,
-          self.view.frame.size.width,
-          self.view.frame.size.height,
-          self.displayNavBar.frame.origin.x,
-          self.displayNavBar.frame.origin.y,
-          self.displayNavBar.frame.size.width,
-          self.displayNavBar.frame.size.height);
-    */
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -56,45 +42,17 @@
 -(void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
-    //self.displayNavBar.frame = CGRectMake(0, 0, self.view.frame.size.width, self.displayNavBar.frame.size.height);
-
-    //NSLog(@"viewWillLayoutSubviews\nDisplayVC NavBar Frame: %f, %f, %f, %f",
-    //      self.displayNavBar.frame.origin.x,
-    //      self.displayNavBar.frame.origin.y,
-    //      self.displayNavBar.frame.size.width,
-    //      self.displayNavBar.frame.size.height);
-    
-    /*
-    NSLog(@"Display viewWillLayoutSubviews\nDisplayVC Frame :  %f, %f, %f, %f\nDisplayVC NavBar Frame: %f, %f, %f, %f",
-          self.view.frame.origin.x,
-          self.view.frame.origin.y,
-          self.view.frame.size.width,
-          self.view.frame.size.height,
-          self.displayNavBar.frame.origin.x,
-          self.displayNavBar.frame.origin.y,
-          self.displayNavBar.frame.size.width,
-          self.displayNavBar.frame.size.height);
-    */
+    self.navBarHeight=self.displayNavBar.frame.size.height;
+    self.toolBarHeight=self.displayToolBar.frame.size.height;
+    self.frameWidth=self.view.frame.size.width;
+    self.frameHeight=self.view.frame.size.height;
 }
 
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    self.displayNavBar.frame = CGRectMake(0, 0, self.view.frame.size.width, self.displayNavBar.frame.size.height);
-    self.displayToolBar.frame = CGRectMake(0, self.view.frame.size.height-self.displayToolBar.frame.size.height,
-                                           self.view.frame.size.width, self.displayToolBar.frame.size.height);
-    
-    /*
-    NSLog(@"Display viewDidLayoutSubviews\nDisplayVC Frame :  %f, %f, %f, %f\nDisplayVC NavBar Frame: %f, %f, %f, %f",
-          self.view.frame.origin.x,
-          self.view.frame.origin.y,
-          self.view.frame.size.width,
-          self.view.frame.size.height,
-          self.displayNavBar.frame.origin.x,
-          self.displayNavBar.frame.origin.y,
-          self.displayNavBar.frame.size.width,
-          self.displayNavBar.frame.size.height);
-    */
+    self.displayNavBar.frame = CGRectMake(0, 0, self.frameWidth, self.navBarHeight);
+    self.displayToolBar.frame = CGRectMake(0, self.frameHeight-self.toolBarHeight, self.frameWidth, self.toolBarHeight);
 }
 
 - (IBAction)showHideMenu:(id)sender {

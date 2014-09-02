@@ -14,10 +14,6 @@
 
 @end
 
-#define VIEWCONTROLLER_DEFAULT_CORNER_RADIUS 3.0f
-#define VIEWCONTROLLER_DEFAULT_BORDER_WIDTH 1.0f
-#define MENU_WIDTH 200.0f
-
 @implementation ContainerViewController
 
 -(void)viewDidLoad {
@@ -171,12 +167,6 @@
                 layoutBlock = ^(void){
                     switch (self.shareSettings.prevMSALayout) {
                         case MSA_MENU:
-                            {
-                                NSAssert(false, @"Error : Current layout is %u while previous layout is %u",
-                                         self.shareSettings.curMSALayout,
-                                         self.shareSettings.prevMSALayout);
-                            }
-                            break;
                         case MSA_DISP:
                             {
                                 self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);

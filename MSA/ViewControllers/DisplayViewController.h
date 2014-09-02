@@ -23,6 +23,11 @@
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 
+@property (nonatomic) double navBarHeight;
+@property (nonatomic) double toolBarHeight;
+@property (nonatomic) double frameWidth;
+@property (nonatomic) double frameHeight;
+
 - (IBAction)showHideMenu:(id)sender;
 
 @end

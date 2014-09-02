@@ -11,7 +11,14 @@
 
 @interface MsgViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UINavigationBar *msgNavBar;
+@property (weak, nonatomic) IBOutlet UIView *msgVC;
+
 @property (strong, nonatomic) ShareSettings * shareSettings;
+
+@property (nonatomic) double navBarHeight;
+@property (nonatomic) double frameWidth;
+@property (nonatomic) double frameHeight;
 
 - (IBAction)hideMsg:(id)sender;
 

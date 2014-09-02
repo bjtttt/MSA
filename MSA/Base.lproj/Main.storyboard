@@ -28,12 +28,6 @@
                                     <segue destination="ZR4-fo-RoL" kind="embed" id="vdb-dp-F73"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I1o-46-yJv" userLabel="MXA Container View">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XiC-bz-RP8" userLabel="Message View">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -41,7 +35,6 @@
                     <connections>
                         <outlet property="displayView" destination="vId-ub-NnX" id="ujP-uw-bQ7"/>
                         <outlet property="menuView" destination="X7O-d3-lWv" id="nZW-Oe-RbW"/>
-                        <outlet property="msgView" destination="XiC-bz-RP8" id="sHJ-dp-jRL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5K-hr-1aG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,7 +89,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <segue destination="TkG-PD-HCe" kind="presentation" identifier="presentSegueToMsgVC" id="g1X-ad-qa7"/>
+                                                <segue destination="TkG-PD-HCe" kind="show" identifier="presentSegueToMsgVC" id="g1X-ad-qa7"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -326,13 +319,14 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="hideMsg:" destination="TkG-PD-HCe" eventType="touchUpInside" id="A5B-Hp-feF"/>
+                                                    <segue destination="l8A-Mb-vf8" kind="show" id="qgS-En-KL6"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IwU-Sq-xdk">
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IwU-Sq-xdk" userLabel="Msg Container View">
                                 <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                                 <connections>
                                     <segue destination="BLC-Ou-gPf" kind="embed" id="haY-tr-Mur"/>
@@ -341,6 +335,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="msgNavBar" destination="Eca-lu-ltG" id="4dT-ER-PDh"/>
+                        <outlet property="msgVC" destination="IwU-Sq-xdk" id="7L5-Nd-uuE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d51-s1-5vD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
