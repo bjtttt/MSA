@@ -125,7 +125,7 @@
                             {
                                 self.menuView.frame = CGRectMake(self.frameWidth, 0, MENU_WIDTH, self.frameHeight);
                                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
-                                self.msgView.frame = CGRectMake(0, self.frameHeight, self.frameWidth, self.frameHeight);
+                                //self.msgView.frame = CGRectMake(0, self.frameHeight, self.frameWidth, self.frameHeight);
                             }
                             break;
                         case MSA_DISP_FULL:
@@ -171,7 +171,7 @@
                             {
                                 self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
                                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth-MENU_WIDTH, self.frameHeight);
-                                self.msgView.frame = CGRectMake(0, self.frameHeight, self.frameWidth, self.frameHeight);
+                                //self.msgView.frame = CGRectMake(0, self.frameHeight, self.frameWidth, self.frameHeight);
                             }
                             break;
                         case MSA_DISP_FULL:

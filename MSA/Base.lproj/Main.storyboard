@@ -88,9 +88,6 @@
                                             <state key="normal" image="Message.png">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
-                                            <connections>
-                                                <segue destination="TkG-PD-HCe" kind="show" identifier="presentSegueToMsgVC" id="g1X-ad-qa7"/>
-                                            </connections>
                                         </button>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="eun-ez-ocL"/>
@@ -319,7 +316,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="hideMsg:" destination="TkG-PD-HCe" eventType="touchUpInside" id="A5B-Hp-feF"/>
-                                                    <segue destination="l8A-Mb-vf8" kind="show" id="qgS-En-KL6"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
