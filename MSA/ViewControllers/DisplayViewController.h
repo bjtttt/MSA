@@ -8,20 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
+#import "MsgViewController.h"
 
 @interface DisplayViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UINavigationBar *displayTopNavBar;
+@property (weak, nonatomic) IBOutlet MsgViewController *msgVC;
+
+@property (weak, nonatomic) IBOutlet UINavigationBar *displayNavBar;
 @property (weak, nonatomic) IBOutlet UIButton *showConnectButton;
 @property (weak, nonatomic) IBOutlet UIButton *showConfigButton;
-@property (weak, nonatomic) IBOutlet UINavigationBar *displayBottomNavBar;
+@property (weak, nonatomic) IBOutlet UIToolbar *displayToolBar;
 @property (weak, nonatomic) IBOutlet UIButton *showMsgButton;
 @property (weak, nonatomic) IBOutlet UIButton *showHideMenuButton;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 
 - (IBAction)showHideMenu:(id)sender;
-- (IBAction)showHideMsg:(id)sender;
 
 @end
 

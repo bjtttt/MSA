@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
@@ -33,9 +33,6 @@
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XiC-bz-RP8" userLabel="Message View">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <connections>
-                                    <segue destination="TkG-PD-HCe" kind="embed" id="wqx-7N-anL"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -88,48 +85,47 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AC9-Ia-aBE">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybd-le-ga9">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <navigationItem id="Tw9-Rh-Wf1">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="m3T-DD-hky">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BEC-Ny-b6K" userLabel="Msg Button">
-                                                <rect key="frame" x="16" y="7" width="24" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Message.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showHideMsg:" destination="v87-Ye-quc" eventType="touchUpInside" id="zuQ-VT-LAZ"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="cTY-b5-xgz">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eiq-bk-zuy" userLabel="Menu Button">
-                                                <rect key="frame" x="451" y="7" width="24" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="ShowMenu.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="showHideMenu:" destination="v87-Ye-quc" eventType="touchUpInside" id="Tgb-p1-sYk"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <barButtonItem style="plain" id="0xs-Nt-qpr">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1yH-oA-9ta" userLabel="Msg Button">
+                                            <rect key="frame" x="16" y="7" width="24" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="Message.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="TkG-PD-HCe" kind="presentation" identifier="presentSegueToMsgVC" id="g1X-ad-qa7"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eun-ez-ocL"/>
+                                    <barButtonItem style="plain" id="MHj-IF-1Tu">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OqV-j5-b0U" userLabel="Show Hide Menu Button">
+                                            <rect key="frame" x="538" y="7" width="24" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="ShowMenu.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="showHideMenu:" destination="v87-Ye-quc" eventType="touchUpInside" id="goV-nk-CwK"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
                                 </items>
-                            </navigationBar>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.9038304465" blue="0.68321979669999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
                     <connections>
-                        <outlet property="displayBottomNavBar" destination="AC9-Ia-aBE" id="bcG-Ua-3MT"/>
-                        <outlet property="displayTopNavBar" destination="PI7-wW-2OI" id="sPD-8l-rOJ"/>
+                        <outlet property="displayNavBar" destination="PI7-wW-2OI" id="5Og-dy-hHb"/>
+                        <outlet property="displayToolBar" destination="ybd-le-ga9" id="Qns-8e-WAI"/>
                         <outlet property="showConfigButton" destination="17t-fS-KsZ" id="NEZ-KC-dUQ"/>
                         <outlet property="showConnectButton" destination="cDu-ka-75F" id="4sB-Sg-su9"/>
-                        <outlet property="showHideMenuButton" destination="eiq-bk-zuy" id="5M2-u0-V2W"/>
-                        <outlet property="showMsgButton" destination="BEC-Ny-b6K" id="OAd-fC-crx"/>
+                        <outlet property="showHideMenuButton" destination="OqV-j5-b0U" id="stC-0r-ZjC"/>
+                        <outlet property="showMsgButton" destination="1yH-oA-9ta" id="xg2-PA-I7d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAQ-iN-Low" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -305,10 +301,10 @@
             </objects>
             <point key="canvasLocation" x="2508" y="-522"/>
         </scene>
-        <!--View Controller-->
+        <!--Msg View Controller-->
         <scene sceneID="iOR-iK-HA7">
             <objects>
-                <viewController id="TkG-PD-HCe" sceneMemberID="viewController">
+                <viewController id="TkG-PD-HCe" userLabel="Msg View Controller" customClass="MsgViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PPQ-jq-vqY"/>
                         <viewControllerLayoutGuide type="bottom" id="ctV-4R-8P5"/>
@@ -320,14 +316,17 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eca-lu-ltG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="4dq-N4-X1j">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="X1Q-0I-4W2">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="D6A-ZD-1QS">
-                                                <rect key="frame" x="16" y="7" width="24" height="24"/>
+                                    <navigationItem title="KeySight - Spectrum Analyzer" id="4dq-N4-X1j">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="4vJ-yW-AXv">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ofU-Wh-bHk" userLabel="OK Button">
+                                                <rect key="frame" x="451" y="7" width="24" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="Return.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="hideMsg:" destination="TkG-PD-HCe" eventType="touchUpInside" id="A5B-Hp-feF"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>

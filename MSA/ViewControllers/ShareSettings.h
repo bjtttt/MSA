@@ -12,16 +12,13 @@ typedef enum msaLayout {
     MSA_DISP,
     MSA_DISP_FULL,
     MSA_MENU,
-    MSA_MENU_FULL,
-    MSA_MSG
+    MSA_MENU_FULL
 } MSALayout;
 
 @interface ShareSettings : NSObject
 
-//@property (nonatomic) BOOL connectTapped;
 @property (nonatomic) BOOL menuTapped;
 @property (nonatomic) BOOL barTapped;
-@property (nonatomic) BOOL msgTapped;
 
 @property (nonatomic) MSALayout curMSALayout;
 @property (nonatomic) MSALayout prevMSALayout;

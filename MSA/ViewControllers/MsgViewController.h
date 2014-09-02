@@ -13,5 +13,7 @@
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 
+- (IBAction)hideMsg:(id)sender;
+
 @end
 

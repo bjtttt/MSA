@@ -24,6 +24,9 @@
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 
+@property (nonatomic) double frameWidth;
+@property (nonatomic) double frameHeight;
+
 //- (void)layoutVC:(VCLayoutType)layoutType animated:(BOOL)animated;
 
 @end

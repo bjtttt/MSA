@@ -28,4 +28,7 @@
     return YES;
 }
 
+- (IBAction)hideMsg:(id)sender {
+}
+
 @end

@@ -21,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.msgVC.shareSettings = self.shareSettings;
 
     //self.displayNavBar.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
  
@@ -35,6 +37,11 @@
           self.displayNavBar.frame.size.width,
           self.displayNavBar.frame.size.height);
     */
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"presentSegueToMsgVC"])
+        self.msgVC = (MsgViewController *)segue.destinationViewController;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,9 +80,9 @@
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    self.displayTopNavBar.frame = CGRectMake(0, 0, self.view.frame.size.width, self.displayTopNavBar.frame.size.height);
-    self.displayBottomNavBar.frame = CGRectMake(0, self.view.frame.size.height-self.displayBottomNavBar.frame.size.height,
-                                           self.view.frame.size.width, self.displayBottomNavBar.frame.size.height);
+    self.displayNavBar.frame = CGRectMake(0, 0, self.view.frame.size.width, self.displayNavBar.frame.size.height);
+    self.displayToolBar.frame = CGRectMake(0, self.view.frame.size.height-self.displayToolBar.frame.size.height,
+                                           self.view.frame.size.width, self.displayToolBar.frame.size.height);
     
     /*
     NSLog(@"Display viewDidLayoutSubviews\nDisplayVC Frame :  %f, %f, %f, %f\nDisplayVC NavBar Frame: %f, %f, %f, %f",
@@ -98,12 +105,6 @@
         [self.showHideMenuButton setImage:[UIImage imageNamed:@"ShowMenu.png"] forState:UIControlStateNormal];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"menuTapped" object:nil];
-}
-
-- (IBAction)showHideMsg:(id)sender {
-    self.shareSettings.msgTapped=!self.shareSettings.msgTapped;
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"msgTapped" object:nil];
 }
 
 @end
