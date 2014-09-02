@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A5FDA7F19B5FB9A00B3C300 /* Misc.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5FDA7E19B5FB9A00B3C300 /* Misc.png */; };
 		9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EDC19AD84E7005467A1 /* ConnectViewController.m */; };
 		9A953EE419AD84E7005467A1 /* DisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EDE19AD84E7005467A1 /* DisplayViewController.m */; };
 		9A953EE619AD84E7005467A1 /* MenuTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EE219AD84E7005467A1 /* MenuTabBarController.m */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A5FDA7E19B5FB9A00B3C300 /* Misc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Misc.png; path = Images/32/Misc.png; sourceTree = "<group>"; };
 		9A953EDB19AD84E7005467A1 /* ConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectViewController.h; path = ViewControllers/ConnectViewController.h; sourceTree = "<group>"; };
 		9A953EDC19AD84E7005467A1 /* ConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectViewController.m; path = ViewControllers/ConnectViewController.m; sourceTree = "<group>"; };
 		9A953EDD19AD84E7005467A1 /* DisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayViewController.h; path = ViewControllers/DisplayViewController.h; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A5FDA7D19B5FB9200B3C300 /* 32 */ = {
+			isa = PBXGroup;
+			children = (
+				9A5FDA7E19B5FB9A00B3C300 /* Misc.png */,
+			);
+			name = 32;
+			sourceTree = "<group>";
+		};
 		9A953EDA19AD8436005467A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +182,7 @@
 		9A9C673119AD7078007D3248 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9A5FDA7D19B5FB9200B3C300 /* 32 */,
 				9A9C673319AD7081007D3248 /* 24 */,
 				9A9C673219AD707D007D3248 /* 22 */,
 			);
@@ -290,6 +301,7 @@
 				9AC5448B19B1F65F00A7F334 /* ShowMenu.png in Resources */,
 				9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */,
 				9AE0968F19B49DEA005AC54C /* Return.png in Resources */,
+				9A5FDA7F19B5FB9A00B3C300 /* Misc.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
