@@ -9,18 +9,21 @@
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 #import "DisplayViewController.h"
-#import "MenuTabBarController.h"
+#import "MenuViewController.h"
 #import "MsgViewController.h"
+#import "SystemViewController.h"
 
 @interface ContainerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *displayView;
 @property (weak, nonatomic) IBOutlet UIView *menuView;
 @property (weak, nonatomic) IBOutlet UIView *msgView;
+@property (weak, nonatomic) IBOutlet UIView *systemView;
 
 @property (weak, nonatomic) IBOutlet DisplayViewController *displayVC;
-@property (weak, nonatomic) IBOutlet MenuTabBarController *menuVC;
+@property (weak, nonatomic) IBOutlet MenuViewController *menuVC;
 @property (weak, nonatomic) IBOutlet MsgViewController *msgVC;
+@property (weak, nonatomic) IBOutlet SystemViewController *systemVC;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 

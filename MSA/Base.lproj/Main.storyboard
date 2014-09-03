@@ -101,36 +101,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybd-le-ga9">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" id="0xs-Nt-qpr">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1yH-oA-9ta" userLabel="Msg Button">
-                                            <rect key="frame" x="16" y="7" width="24" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="MsgEmpty.png">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <segue destination="TkG-PD-HCe" kind="presentation" id="elN-vo-CAg"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eun-ez-ocL"/>
-                                    <barButtonItem style="plain" id="MHj-IF-1Tu">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OqV-j5-b0U" userLabel="Show Hide Menu Button">
-                                            <rect key="frame" x="538" y="7" width="24" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="ShowMenu.png">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="showHideMenu:" destination="v87-Ye-quc" eventType="touchUpInside" id="goV-nk-CwK"/>
-                                            </connections>
-                                        </button>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PI7-wW-2OI">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
@@ -151,11 +121,44 @@
                                                 <state key="normal" image="System.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="yVy-dA-8Lh" kind="presentation" id="Ryk-9S-JQ2"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ybd-le-ga9">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="0xs-Nt-qpr" userLabel="Msg Bar Button Item">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1yH-oA-9ta" userLabel="Msg Button">
+                                            <rect key="frame" x="16" y="7" width="24" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="MsgEmpty.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="Hoe-Ft-qc2" kind="presentation" id="RaJ-hp-yyf"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eun-ez-ocL"/>
+                                    <barButtonItem style="plain" id="MHj-IF-1Tu" userLabel="Show Hide Menu Bar Button Item">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OqV-j5-b0U" userLabel="Show Hide Menu Button">
+                                            <rect key="frame" x="538" y="7" width="24" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="ShowMenu.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="showHideMenu:" destination="v87-Ye-quc" eventType="touchUpInside" id="goV-nk-CwK"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.9038304465" blue="0.68321979669999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -171,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAQ-iN-Low" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770" y="-943"/>
+            <point key="canvasLocation" x="1010" y="-541"/>
         </scene>
         <!--Hard Menu-->
         <scene sceneID="goc-eb-fcS">
@@ -192,10 +195,10 @@
             </objects>
             <point key="canvasLocation" x="-70" y="1639"/>
         </scene>
-        <!--View Controller-->
+        <!--Msg Detail View Controller-->
         <scene sceneID="Ff8-2h-x66">
             <objects>
-                <viewController id="wSt-o1-Rfq" sceneMemberID="viewController">
+                <viewController id="wSt-o1-Rfq" userLabel="Msg Detail View Controller" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wVL-wV-DfA"/>
                         <viewControllerLayoutGuide type="bottom" id="ViU-4B-7QW"/>
@@ -203,12 +206,30 @@
                     <view key="view" contentMode="scaleToFill" id="x4F-s0-BOU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CgE-Gn-KJg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="1TB-YV-7zt">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="CtT-Cr-lN9">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="t8X-NA-Hkm">
+                                                <rect key="frame" x="451" y="7" width="32" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="Return.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2K1-NF-4Ud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2508" y="226"/>
+            <point key="canvasLocation" x="2614" y="713"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="lfD-GC-lnn">
@@ -235,7 +256,33 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBi-UR-FX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3378" y="-522"/>
+            <point key="canvasLocation" x="3457" y="-29"/>
+        </scene>
+        <!--Msg View Controller-->
+        <scene sceneID="HeJ-Qn-4Ip">
+            <objects>
+                <viewController id="Hoe-Ft-qc2" userLabel="Msg View Controller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dop-m3-8Bs"/>
+                        <viewControllerLayoutGuide type="bottom" id="X9I-g1-2SS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hAM-vD-PJf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZJ-Nt-liL" userLabel="Msg Container View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="BLC-Ou-gPf" kind="embed" id="sHo-Qc-E3Y"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8K-ID-fGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1010" y="328"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PZh-W0-Zqj">
@@ -251,61 +298,112 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFw-0U-LM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2508" y="-522"/>
+            <point key="canvasLocation" x="2638" y="-29"/>
         </scene>
-        <!--Msg View Controller-->
-        <scene sceneID="iOR-iK-HA7">
+        <!--System View Controller-->
+        <scene sceneID="DIB-C4-fJI">
             <objects>
-                <viewController id="TkG-PD-HCe" userLabel="Msg View Controller" customClass="MsgViewController" sceneMemberID="viewController">
+                <viewController id="yVy-dA-8Lh" userLabel="System View Controller" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PPQ-jq-vqY"/>
-                        <viewControllerLayoutGuide type="bottom" id="ctV-4R-8P5"/>
+                        <viewControllerLayoutGuide type="top" id="Mzi-hX-rxh"/>
+                        <viewControllerLayoutGuide type="bottom" id="n3l-Le-RgJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lCS-i0-4uC">
+                    <view key="view" contentMode="scaleToFill" id="e9A-eu-vIc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eca-lu-ltG">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="KeySight - Spectrum Analyzer" id="4dq-N4-X1j">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="4vJ-yW-AXv">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ofU-Wh-bHk" userLabel="OK Button">
-                                                <rect key="frame" x="451" y="7" width="24" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Return.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="hideMsg:" destination="TkG-PD-HCe" eventType="touchUpInside" id="lYg-5o-af8"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IwU-Sq-xdk" userLabel="Msg Container View">
-                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ui7-9B-3vm" userLabel="System Container View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
-                                    <segue destination="BLC-Ou-gPf" kind="embed" id="haY-tr-Mur"/>
+                                    <segue destination="ekM-sg-wqf" kind="presentation" id="cdo-fp-uxf"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="msgNavBar" destination="Eca-lu-ltG" id="4dT-ER-PDh"/>
-                        <outlet property="msgVC" destination="IwU-Sq-xdk" id="7L5-Nd-uuE"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d51-s1-5vD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70v-D6-DqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="770" y="-165"/>
+            <point key="canvasLocation" x="1828" y="-1183"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cvS-Ro-goV">
+            <objects>
+                <viewController id="LwD-tt-eAI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E6C-IH-trT"/>
+                        <viewControllerLayoutGuide type="bottom" id="c0E-AT-FHI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Sp-i3-svg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nre-9z-4lM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3457" y="-762"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="EMu-WC-12a">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="vX1-ce-Dzc" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ck6-uG-len">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e3Z-0T-k4a">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e3Z-0T-k4a" id="dLq-Dp-y1d">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vX1-ce-Dzc" id="Hge-0Q-H0X"/>
+                            <outlet property="delegate" destination="vX1-ce-Dzc" id="QF7-IB-FwW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="2q8-J9-pdb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffV-DT-cNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4308" y="-1590"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PjD-u4-cAd">
+            <objects>
+                <navigationController id="66U-mV-Keg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1so-PA-yU9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vX1-ce-Dzc" kind="relationship" relationship="rootViewController" id="9Df-Zf-Evp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g48-ef-Ll0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3457" y="-1590"/>
         </scene>
         <!--Split View Controller-->
+        <scene sceneID="gzF-Vz-9AI">
+            <objects>
+                <splitViewController id="ekM-sg-wqf" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="66U-mV-Keg" kind="relationship" relationship="masterViewController" id="Afe-Ns-kYl"/>
+                        <segue destination="LwD-tt-eAI" kind="relationship" relationship="detailViewController" id="5zo-2D-JXs"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gmp-PE-fl9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2638" y="-1183"/>
+        </scene>
+        <!--Msg Split View Controller-->
         <scene sceneID="iOb-XH-U9h">
             <objects>
-                <splitViewController id="BLC-Ou-gPf" sceneMemberID="viewController">
+                <splitViewController id="BLC-Ou-gPf" userLabel="Msg Split View Controller" sceneMemberID="viewController">
                     <connections>
                         <segue destination="JF8-pC-3ON" kind="relationship" relationship="masterViewController" id="7IU-ER-p4c"/>
                         <segue destination="wSt-o1-Rfq" kind="relationship" relationship="detailViewController" id="ewt-1f-BRZ"/>
@@ -313,7 +411,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3A7-ut-CB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1690" y="-165"/>
+            <point key="canvasLocation" x="1828" y="328"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xF4-Qi-kyi">
@@ -358,7 +456,7 @@
         <image name="Connect.png" width="32" height="32"/>
         <image name="MsgEmpty.png" width="32" height="32"/>
         <image name="Preset.png" width="32" height="32"/>
-        <image name="Return.png" width="24" height="24"/>
+        <image name="Return.png" width="32" height="32"/>
         <image name="ShowMenu.png" width="32" height="32"/>
         <image name="System.png" width="48" height="48"/>
     </resources>

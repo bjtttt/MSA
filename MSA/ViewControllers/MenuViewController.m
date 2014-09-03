@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 KeySight. All rights reserved.
 //
 
-#import "MenuTabBarController.h"
+#import "MenuViewController.h"
 
-@interface MenuTabBarController ()
+@interface MenuViewController ()
 
 @end
 
-@implementation MenuTabBarController
+@implementation MenuViewController
             
 - (void)viewDidLoad {
     [super viewDidLoad];
