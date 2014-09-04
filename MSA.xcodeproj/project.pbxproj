@@ -13,7 +13,6 @@
 		9A659BDD19B6BC1800C30CE2 /* HideMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BDC19B6BC1800C30CE2 /* HideMenu.png */; };
 		9A659BDF19B6BC2000C30CE2 /* ShowMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BDE19B6BC2000C30CE2 /* ShowMenu.png */; };
 		9A659BE119B6BCE300C30CE2 /* Connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BE019B6BCE300C30CE2 /* Connect.png */; };
-		9A659BE819B6D5E000C30CE2 /* Return.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BE719B6D5E000C30CE2 /* Return.png */; };
 		9A659BEB19B6DE9A00C30CE2 /* SystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A659BEA19B6DE9A00C30CE2 /* SystemViewController.m */; };
 		9A659BED19B7008500C30CE2 /* System.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BEC19B7008500C30CE2 /* System.png */; };
 		9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EDC19AD84E7005467A1 /* ConnectViewController.m */; };
@@ -30,6 +29,7 @@
 		9AAE0EBA19B466EF004D9146 /* MsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE0EB919B466EF004D9146 /* MsgViewController.m */; };
 		9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448C19B1F73500A7F334 /* HideBar.png */; };
 		9AC5448F19B1F74300A7F334 /* ShowBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448E19B1F74300A7F334 /* ShowBar.png */; };
+		9AF7001119B81FE5000A69A5 /* Return.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF7001019B81FE5000A69A5 /* Return.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,6 @@
 		9A659BDC19B6BC1800C30CE2 /* HideMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideMenu.png; path = Images/32/HideMenu.png; sourceTree = "<group>"; };
 		9A659BDE19B6BC2000C30CE2 /* ShowMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShowMenu.png; path = Images/32/ShowMenu.png; sourceTree = "<group>"; };
 		9A659BE019B6BCE300C30CE2 /* Connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Connect.png; path = Images/32/Connect.png; sourceTree = "<group>"; };
-		9A659BE719B6D5E000C30CE2 /* Return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Return.png; path = Images/32/Return.png; sourceTree = "<group>"; };
 		9A659BE919B6DE9A00C30CE2 /* SystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemViewController.h; path = ViewControllers/SystemViewController.h; sourceTree = "<group>"; };
 		9A659BEA19B6DE9A00C30CE2 /* SystemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemViewController.m; path = ViewControllers/SystemViewController.m; sourceTree = "<group>"; };
 		9A659BEC19B7008500C30CE2 /* System.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = System.png; path = Images/32/System.png; sourceTree = "<group>"; };
@@ -78,6 +77,7 @@
 		9AAE0EB919B466EF004D9146 /* MsgViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgViewController.m; path = ViewControllers/MsgViewController.m; sourceTree = "<group>"; };
 		9AC5448C19B1F73500A7F334 /* HideBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideBar.png; path = Images/24/HideBar.png; sourceTree = "<group>"; };
 		9AC5448E19B1F74300A7F334 /* ShowBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShowBar.png; path = Images/24/ShowBar.png; sourceTree = "<group>"; };
+		9AF7001019B81FE5000A69A5 /* Return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Return.png; path = Images/24/Return.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				9A659BEC19B7008500C30CE2 /* System.png */,
-				9A659BE719B6D5E000C30CE2 /* Return.png */,
 				9A659BE019B6BCE300C30CE2 /* Connect.png */,
 				9A659BDE19B6BC2000C30CE2 /* ShowMenu.png */,
 				9A659BDC19B6BC1800C30CE2 /* HideMenu.png */,
@@ -123,10 +122,8 @@
 		9A953EDA19AD8436005467A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9A659BE919B6DE9A00C30CE2 /* SystemViewController.h */,
-				9A659BEA19B6DE9A00C30CE2 /* SystemViewController.m */,
-				9AAE0EB819B466EF004D9146 /* MsgViewController.h */,
-				9AAE0EB919B466EF004D9146 /* MsgViewController.m */,
+				9AF7001519B83C60000A69A5 /* System */,
+				9AF7001419B83C37000A69A5 /* Msg */,
 				9A953EDB19AD84E7005467A1 /* ConnectViewController.h */,
 				9A953EDC19AD84E7005467A1 /* ConnectViewController.m */,
 				9A953EDD19AD84E7005467A1 /* DisplayViewController.h */,
@@ -135,8 +132,6 @@
 				9A953EE219AD84E7005467A1 /* MenuViewController.m */,
 				9A9C671519AD6C81007D3248 /* ContainerViewController.h */,
 				9A9C671619AD6C81007D3248 /* ContainerViewController.m */,
-				9A953EE719ADCB99005467A1 /* ShareSettings.h */,
-				9A953EE819ADCBB6005467A1 /* ShareSettings.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -162,6 +157,7 @@
 		9A9C670A19AD6C81007D3248 /* MSA */ = {
 			isa = PBXGroup;
 			children = (
+				9AF7001219B82CAE000A69A5 /* Data */,
 				9A953EDA19AD8436005467A1 /* ViewControllers */,
 				9A9C673119AD7078007D3248 /* Images */,
 				9A9C670F19AD6C81007D3248 /* AppDelegate.h */,
@@ -221,10 +217,46 @@
 		9A9C673319AD7081007D3248 /* 24 */ = {
 			isa = PBXGroup;
 			children = (
+				9AF7001019B81FE5000A69A5 /* Return.png */,
 				9AC5448E19B1F74300A7F334 /* ShowBar.png */,
 				9AC5448C19B1F73500A7F334 /* HideBar.png */,
 			);
 			name = 24;
+			sourceTree = "<group>";
+		};
+		9AF7001219B82CAE000A69A5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9AF7001319B82CC1000A69A5 /* Msg */,
+				9A953EE719ADCB99005467A1 /* ShareSettings.h */,
+				9A953EE819ADCBB6005467A1 /* ShareSettings.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		9AF7001319B82CC1000A69A5 /* Msg */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Msg;
+			sourceTree = "<group>";
+		};
+		9AF7001419B83C37000A69A5 /* Msg */ = {
+			isa = PBXGroup;
+			children = (
+				9AAE0EB819B466EF004D9146 /* MsgViewController.h */,
+				9AAE0EB919B466EF004D9146 /* MsgViewController.m */,
+			);
+			name = Msg;
+			sourceTree = "<group>";
+		};
+		9AF7001519B83C60000A69A5 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				9A659BE919B6DE9A00C30CE2 /* SystemViewController.h */,
+				9A659BEA19B6DE9A00C30CE2 /* SystemViewController.m */,
+			);
+			name = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,7 +344,7 @@
 				9A659BDB19B6B91900C30CE2 /* MsgNew.png in Resources */,
 				9AC5448F19B1F74300A7F334 /* ShowBar.png in Resources */,
 				9A659BE119B6BCE300C30CE2 /* Connect.png in Resources */,
-				9A659BE819B6D5E000C30CE2 /* Return.png in Resources */,
+				9AF7001119B81FE5000A69A5 /* Return.png in Resources */,
 				9A659BED19B7008500C30CE2 /* System.png in Resources */,
 				9A9C671C19AD6C81007D3248 /* Images.xcassets in Resources */,
 				9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */,

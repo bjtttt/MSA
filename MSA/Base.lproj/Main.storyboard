@@ -206,24 +206,6 @@
                     <view key="view" contentMode="scaleToFill" id="x4F-s0-BOU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CgE-Gn-KJg">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="1TB-YV-7zt">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="CtT-Cr-lN9">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="t8X-NA-Hkm">
-                                                <rect key="frame" x="451" y="7" width="32" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Return.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -231,10 +213,10 @@
             </objects>
             <point key="canvasLocation" x="2614" y="713"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Msg Master Root View Controller-->
         <scene sceneID="lfD-GC-lnn">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="45Z-IA-3DD" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="45Z-IA-3DD" userLabel="Msg Master Root View Controller" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="thm-VQ-4fd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -252,7 +234,7 @@
                             <outlet property="delegate" destination="45Z-IA-3DD" id="2Tv-P9-tn2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="KdJ-TW-Lzo"/>
+                    <navigationItem key="navigationItem" title="Status" id="Bez-VA-d7o" userLabel="Status Title"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBi-UR-FX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,7 +243,7 @@
         <!--Msg View Controller-->
         <scene sceneID="HeJ-Qn-4Ip">
             <objects>
-                <viewController id="Hoe-Ft-qc2" userLabel="Msg View Controller" sceneMemberID="viewController">
+                <viewController id="Hoe-Ft-qc2" userLabel="Msg View Controller" customClass="MsgViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dop-m3-8Bs"/>
                         <viewControllerLayoutGuide type="bottom" id="X9I-g1-2SS"/>
@@ -270,24 +252,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AZJ-Nt-liL" userLabel="Msg Container View">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ACv-By-6QN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Message" id="qfV-8R-mj1" userLabel="Msg Title">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="RCe-cP-0fL">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aKn-du-KXw" userLabel="Return Button">
+                                                <rect key="frame" x="451" y="7" width="32" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="Return.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="hideMsg:" destination="Hoe-Ft-qc2" eventType="touchUpInside" id="Jrz-SM-bVS"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8hr-CO-XRg" userLabel="Msg Container View">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                                 <connections>
-                                    <segue destination="BLC-Ou-gPf" kind="embed" id="sHo-Qc-E3Y"/>
+                                    <segue destination="BLC-Ou-gPf" kind="embed" id="0nE-8p-occ"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="msgNavBar" destination="ACv-By-6QN" id="Aiu-AV-qaD"/>
+                        <outlet property="msgVC" destination="8hr-CO-XRg" id="fGw-8F-Vlz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8K-ID-fGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1010" y="328"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Msg Master Navigation Controller-->
         <scene sceneID="PZh-W0-Zqj">
             <objects>
-                <navigationController id="JF8-pC-3ON" sceneMemberID="viewController">
+                <navigationController id="JF8-pC-3ON" userLabel="Msg Master Navigation Controller" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DAt-3K-Xjp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -298,7 +303,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kFw-0U-LM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2638" y="-29"/>
+            <point key="canvasLocation" x="2614" y="-29"/>
         </scene>
         <!--System View Controller-->
         <scene sceneID="DIB-C4-fJI">
@@ -456,8 +461,8 @@
         <image name="Connect.png" width="32" height="32"/>
         <image name="MsgEmpty.png" width="32" height="32"/>
         <image name="Preset.png" width="32" height="32"/>
-        <image name="Return.png" width="32" height="32"/>
+        <image name="Return.png" width="24" height="24"/>
         <image name="ShowMenu.png" width="32" height="32"/>
-        <image name="System.png" width="48" height="48"/>
+        <image name="System.png" width="32" height="32"/>
     </resources>
 </document>
