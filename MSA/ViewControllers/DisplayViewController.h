@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
-#import "MsgViewController.h"
+#import "MsgContainerViewController.h"
 
 @interface DisplayViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet MsgViewController *msgVC;
+@property (weak, nonatomic) IBOutlet MsgContainerViewController *msgCVC;
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *displayNavBar;
 @property (weak, nonatomic) IBOutlet UIButton *showConnectButton;

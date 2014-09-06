@@ -1,5 +1,5 @@
 //
-//  MsgViewController.m
+//  MsgContainerViewController.m
 //  MSA
 //
 //  Created by GUO Zhitao on 14-8-26.
@@ -7,13 +7,13 @@
 //
 
 #import "ShareSettings.h"
-#import "MsgViewController.h"
+#import "MsgContainerViewController.h"
 
-@interface MsgViewController ()
+@interface MsgContainerViewController ()
 
 @end
 
-@implementation MsgViewController
+@implementation MsgContainerViewController
             
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,7 +32,7 @@
     [super viewDidLayoutSubviews];
     
     self.msgNavBar.frame = CGRectMake(0, 0, self.frameWidth, self.navBarHeight);
-    self.msgVC.frame = CGRectMake(0, self.navBarHeight+VC_MARGIN, self.frameWidth, self.frameHeight-self.navBarHeight-VC_MARGIN);
+    self.msgV.frame = CGRectMake(0, self.navBarHeight+VC_MARGIN, self.frameWidth, self.frameHeight-self.navBarHeight-VC_MARGIN);
 }
 
 - (void)didReceiveMemoryWarning {

@@ -22,12 +22,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.msgVC.shareSettings = self.shareSettings;
+    //self.msgCVC.shareSettings = self.shareSettings;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"presentSegueToMsgVC"])
-        self.msgVC = (MsgViewController *)segue.destinationViewController;
+    if([segue.identifier isEqualToString:@"presentSegueToMsgCVC"])
+    {
+        self.msgCVC = (MsgContainerViewController *)segue.destinationViewController;
+        self.msgCVC.shareSettings = self.shareSettings;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

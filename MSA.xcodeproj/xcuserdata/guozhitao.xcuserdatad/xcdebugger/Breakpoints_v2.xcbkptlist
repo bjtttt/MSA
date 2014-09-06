@@ -9,7 +9,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MSA/ViewControllers/MsgViewController.m"
+            filePath = "MSA/ViewControllers/MsgContainerViewController.m"
             timestampString = "431350886.71035"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

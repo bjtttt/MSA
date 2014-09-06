@@ -140,7 +140,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <segue destination="Hoe-Ft-qc2" kind="presentation" id="RaJ-hp-yyf"/>
+                                                <segue destination="Hoe-Ft-qc2" kind="presentation" identifier="presentSegueToMsgCVC" id="kb9-1B-I9L"/>
                                             </connections>
                                         </button>
                                     </barButtonItem>
@@ -176,10 +176,10 @@
             </objects>
             <point key="canvasLocation" x="1010" y="-541"/>
         </scene>
-        <!--Msg Detail View Controller-->
+        <!--Msg Detail Container View Controller-->
         <scene sceneID="Ff8-2h-x66">
             <objects>
-                <viewController id="wSt-o1-Rfq" userLabel="Msg Detail View Controller" sceneMemberID="viewController">
+                <viewController id="wSt-o1-Rfq" userLabel="Msg Detail Container View Controller" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wVL-wV-DfA"/>
                         <viewControllerLayoutGuide type="bottom" id="ViU-4B-7QW"/>
@@ -187,6 +187,14 @@
                     <view key="view" contentMode="scaleToFill" id="x4F-s0-BOU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CRn-L5-bJ3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="h9g-jz-Frh" kind="embed" id="rsz-hT-bOq"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -221,10 +229,53 @@
             </objects>
             <point key="canvasLocation" x="3457" y="-29"/>
         </scene>
-        <!--Msg View Controller-->
+        <!--Msg Details Root View Controller-->
+        <scene sceneID="Ywh-tA-YsF">
+            <objects>
+                <tableViewController id="zOQ-89-Wsd" userLabel="Msg Details Root View Controller" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Xn6-Im-XXe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wP7-2d-EeC">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wP7-2d-EeC" id="7cx-31-ghu">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zOQ-89-Wsd" id="JJ0-Q8-Fjo"/>
+                            <outlet property="delegate" destination="zOQ-89-Wsd" id="pdv-LY-YdD"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="6Et-Cp-m8E"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kLR-At-e7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4277" y="713"/>
+        </scene>
+        <!--Msg Details Navigation Controller-->
+        <scene sceneID="559-3Y-Tpa">
+            <objects>
+                <navigationController id="h9g-jz-Frh" userLabel="Msg Details Navigation Controller" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NhG-eX-nE7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zOQ-89-Wsd" kind="relationship" relationship="rootViewController" id="f7f-Qi-XGs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bsI-SX-Cfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3457" y="713"/>
+        </scene>
+        <!--Msg Container View Controller-->
         <scene sceneID="HeJ-Qn-4Ip">
             <objects>
-                <viewController id="Hoe-Ft-qc2" userLabel="Msg View Controller" customClass="MsgViewController" sceneMemberID="viewController">
+                <viewController id="Hoe-Ft-qc2" userLabel="Msg Container View Controller" customClass="MsgContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dop-m3-8Bs"/>
                         <viewControllerLayoutGuide type="bottom" id="X9I-g1-2SS"/>
@@ -263,7 +314,7 @@
                     </view>
                     <connections>
                         <outlet property="msgNavBar" destination="ACv-By-6QN" id="Aiu-AV-qaD"/>
-                        <outlet property="msgVC" destination="8hr-CO-XRg" id="fGw-8F-Vlz"/>
+                        <outlet property="msgV" destination="8hr-CO-XRg" id="aMI-e2-iM6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8K-ID-fGs" userLabel="First Responder" sceneMemberID="firstResponder"/>

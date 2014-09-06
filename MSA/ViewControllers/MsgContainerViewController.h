@@ -1,5 +1,5 @@
 //
-//  MsgViewController.h
+//  MsgContainerViewController.h
 //  MSA
 //
 //  Created by GUO Zhitao on 14-8-26.
@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 
-@interface MsgViewController : UIViewController
+@interface MsgContainerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *msgNavBar;
-@property (weak, nonatomic) IBOutlet UIView *msgVC;
+@property (weak, nonatomic) IBOutlet UIView *msgV;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 
