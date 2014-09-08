@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MsgDetailNavigationViewController.h"
+#import "MsgDetailContainerViewController.h"
 
 @class MsgMasterNavigationViewController;
 
 @interface MsgMasterNavigationViewController : UITableViewController
 
-@property (strong, nonatomic) MsgDetailNavigationViewController *msgDetaillVC;
+@property (strong, nonatomic) MsgDetailContainerViewController *msgDetaillCVC;
 @property (copy, nonatomic) NSArray *statuses;
 
 @end

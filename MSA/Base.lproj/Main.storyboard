@@ -203,31 +203,31 @@
             </objects>
             <point key="canvasLocation" x="3457" y="-29"/>
         </scene>
-        <!--Msg Details Root View Controller-->
-        <scene sceneID="Ywh-tA-YsF">
+        <!--Msg Detail Container View Controller-->
+        <scene sceneID="hxb-9t-LRb">
             <objects>
-                <tableViewController id="zOQ-89-Wsd" userLabel="Msg Details Root View Controller" customClass="MsgDetailNavigationViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Root View Controller" id="6Et-Cp-m8E"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kLR-At-e7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="D9H-nf-Zwp" userLabel="Msg Detail Container View Controller" customClass="MsgDetailContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8qG-tN-yd2"/>
+                        <viewControllerLayoutGuide type="bottom" id="ozF-MJ-yL3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WgO-Yx-ngv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ne-FH-GMe">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="QbP-H5-3RO"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mms-Ss-ALg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3465" y="713"/>
-        </scene>
-        <!--Msg Details Navigation Controller-->
-        <scene sceneID="559-3Y-Tpa">
-            <objects>
-                <navigationController id="h9g-jz-Frh" userLabel="Msg Details Navigation Controller" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NhG-eX-nE7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="zOQ-89-Wsd" kind="relationship" relationship="rootViewController" id="f7f-Qi-XGs"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bsI-SX-Cfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2614" y="713"/>
+            <point key="canvasLocation" x="2614" y="696"/>
         </scene>
         <!--Msg Container View Controller-->
         <scene sceneID="HeJ-Qn-4Ip">
@@ -451,7 +451,7 @@
                 <splitViewController id="BLC-Ou-gPf" userLabel="Msg Split View Controller" sceneMemberID="viewController">
                     <connections>
                         <segue destination="JF8-pC-3ON" kind="relationship" relationship="masterViewController" id="7IU-ER-p4c"/>
-                        <segue destination="h9g-jz-Frh" kind="relationship" relationship="detailViewController" id="a4I-Kj-388"/>
+                        <segue destination="D9H-nf-Zwp" kind="relationship" relationship="detailViewController" id="ogh-vK-eZ4"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3A7-ut-CB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
