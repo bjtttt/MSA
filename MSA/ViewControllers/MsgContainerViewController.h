@@ -14,6 +14,9 @@
 @property (weak, nonatomic) IBOutlet UINavigationBar *msgNavBar;
 @property (weak, nonatomic) IBOutlet UIView *msgV;
 
+@property (weak, nonatomic) IBOutlet UISplitViewController *msgSplitVC;
+@property (weak, nonatomic) IBOutlet UINavigationController *msgMasterNavVC;
+
 @property (strong, nonatomic) ShareSettings * shareSettings;
 
 @property (nonatomic) double navBarHeight;

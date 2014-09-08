@@ -20,6 +20,15 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"embedSegueToMsgSplitVC"])
+    {
+        self.msgSplitVC = (UISplitViewController *)segue.destinationViewController;
+        self.msgMasterNavVC=[self.msgSplitVC.viewControllers lastObject];
+        self.msgSplitVC.delegate=(id)self.msgMasterNavVC.topViewController;
+    }
+}
+
 -(void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
 

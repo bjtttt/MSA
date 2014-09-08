@@ -15,6 +15,8 @@
 		9A659BE119B6BCE300C30CE2 /* Connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BE019B6BCE300C30CE2 /* Connect.png */; };
 		9A659BEB19B6DE9A00C30CE2 /* SystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A659BEA19B6DE9A00C30CE2 /* SystemViewController.m */; };
 		9A659BED19B7008500C30CE2 /* System.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BEC19B7008500C30CE2 /* System.png */; };
+		9A7422A519BDD2E400A251ED /* MsgDetailNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7422A419BDD2E400A251ED /* MsgDetailNavigationViewController.m */; };
+		9A7422A719BDDBC900A251ED /* MSAList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A7422A619BDDBC900A251ED /* MSAList.plist */; };
 		9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EDC19AD84E7005467A1 /* ConnectViewController.m */; };
 		9A953EE419AD84E7005467A1 /* DisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EDE19AD84E7005467A1 /* DisplayViewController.m */; };
 		9A953EE619AD84E7005467A1 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EE219AD84E7005467A1 /* MenuViewController.m */; };
@@ -29,6 +31,7 @@
 		9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE0EB919B466EF004D9146 /* MsgContainerViewController.m */; };
 		9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448C19B1F73500A7F334 /* HideBar.png */; };
 		9AC5448F19B1F74300A7F334 /* ShowBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448E19B1F74300A7F334 /* ShowBar.png */; };
+		9ACA2EB919BD4651005542B5 /* MsgMasterNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA2EB819BD4651005542B5 /* MsgMasterNavigationViewController.m */; };
 		9AF7001119B81FE5000A69A5 /* Return.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF7001019B81FE5000A69A5 /* Return.png */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,9 @@
 		9A659BE919B6DE9A00C30CE2 /* SystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemViewController.h; path = ViewControllers/SystemViewController.h; sourceTree = "<group>"; };
 		9A659BEA19B6DE9A00C30CE2 /* SystemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemViewController.m; path = ViewControllers/SystemViewController.m; sourceTree = "<group>"; };
 		9A659BEC19B7008500C30CE2 /* System.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = System.png; path = Images/32/System.png; sourceTree = "<group>"; };
+		9A7422A319BDD2E400A251ED /* MsgDetailNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgDetailNavigationViewController.h; path = ViewControllers/Msg/MsgDetailNavigationViewController.h; sourceTree = "<group>"; };
+		9A7422A419BDD2E400A251ED /* MsgDetailNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgDetailNavigationViewController.m; path = ViewControllers/Msg/MsgDetailNavigationViewController.m; sourceTree = "<group>"; };
+		9A7422A619BDDBC900A251ED /* MSAList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MSAList.plist; path = ViewControllers/MSAList.plist; sourceTree = "<group>"; };
 		9A953EDB19AD84E7005467A1 /* ConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectViewController.h; path = ViewControllers/ConnectViewController.h; sourceTree = "<group>"; };
 		9A953EDC19AD84E7005467A1 /* ConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectViewController.m; path = ViewControllers/ConnectViewController.m; sourceTree = "<group>"; };
 		9A953EDD19AD84E7005467A1 /* DisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayViewController.h; path = ViewControllers/DisplayViewController.h; sourceTree = "<group>"; };
@@ -77,6 +83,8 @@
 		9AAE0EB919B466EF004D9146 /* MsgContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgContainerViewController.m; path = ViewControllers/MsgContainerViewController.m; sourceTree = "<group>"; };
 		9AC5448C19B1F73500A7F334 /* HideBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideBar.png; path = Images/24/HideBar.png; sourceTree = "<group>"; };
 		9AC5448E19B1F74300A7F334 /* ShowBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShowBar.png; path = Images/24/ShowBar.png; sourceTree = "<group>"; };
+		9ACA2EB819BD4651005542B5 /* MsgMasterNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgMasterNavigationViewController.m; path = ViewControllers/Msg/MsgMasterNavigationViewController.m; sourceTree = "<group>"; };
+		9ACA2EBA19BD468E005542B5 /* MsgMasterNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MsgMasterNavigationViewController.h; path = ViewControllers/Msg/MsgMasterNavigationViewController.h; sourceTree = "<group>"; };
 		9AF7001019B81FE5000A69A5 /* Return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Return.png; path = Images/24/Return.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +130,7 @@
 		9A953EDA19AD8436005467A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9A9C671819AD6C81007D3248 /* Main.storyboard */,
 				9AF7001519B83C60000A69A5 /* System */,
 				9AF7001419B83C37000A69A5 /* Msg */,
 				9A953EDB19AD84E7005467A1 /* ConnectViewController.h */,
@@ -162,7 +171,6 @@
 				9A9C673119AD7078007D3248 /* Images */,
 				9A9C670F19AD6C81007D3248 /* AppDelegate.h */,
 				9A9C671019AD6C81007D3248 /* AppDelegate.m */,
-				9A9C671819AD6C81007D3248 /* Main.storyboard */,
 				9A9C671B19AD6C81007D3248 /* Images.xcassets */,
 				9A9C671219AD6C81007D3248 /* MSA.xcdatamodeld */,
 				9A9C670B19AD6C81007D3248 /* Supporting Files */,
@@ -230,6 +238,7 @@
 				9AF7001319B82CC1000A69A5 /* Msg */,
 				9A953EE719ADCB99005467A1 /* ShareSettings.h */,
 				9A953EE819ADCBB6005467A1 /* ShareSettings.m */,
+				9A7422A619BDDBC900A251ED /* MSAList.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -244,8 +253,12 @@
 		9AF7001419B83C37000A69A5 /* Msg */ = {
 			isa = PBXGroup;
 			children = (
+				9A7422A319BDD2E400A251ED /* MsgDetailNavigationViewController.h */,
+				9A7422A419BDD2E400A251ED /* MsgDetailNavigationViewController.m */,
 				9AAE0EB819B466EF004D9146 /* MsgContainerViewController.h */,
 				9AAE0EB919B466EF004D9146 /* MsgContainerViewController.m */,
+				9ACA2EB819BD4651005542B5 /* MsgMasterNavigationViewController.m */,
+				9ACA2EBA19BD468E005542B5 /* MsgMasterNavigationViewController.h */,
 			);
 			name = Msg;
 			sourceTree = "<group>";
@@ -349,6 +362,7 @@
 				9A9C671C19AD6C81007D3248 /* Images.xcassets in Resources */,
 				9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */,
 				9A659BDF19B6BC2000C30CE2 /* ShowMenu.png in Resources */,
+				9A7422A719BDDBC900A251ED /* MSAList.plist in Resources */,
 				9A5FDA7F19B5FB9A00B3C300 /* Preset.png in Resources */,
 				9A659BDD19B6BC1800C30CE2 /* HideMenu.png in Resources */,
 			);
@@ -371,7 +385,9 @@
 				9A9C671419AD6C81007D3248 /* MSA.xcdatamodeld in Sources */,
 				9A953EE419AD84E7005467A1 /* DisplayViewController.m in Sources */,
 				9A9C671119AD6C81007D3248 /* AppDelegate.m in Sources */,
+				9A7422A519BDD2E400A251ED /* MsgDetailNavigationViewController.m in Sources */,
 				9A953EE619AD84E7005467A1 /* MenuViewController.m in Sources */,
+				9ACA2EB919BD4651005542B5 /* MsgMasterNavigationViewController.m in Sources */,
 				9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */,
 				9A9C671719AD6C81007D3248 /* ContainerViewController.m in Sources */,
 				9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */,
