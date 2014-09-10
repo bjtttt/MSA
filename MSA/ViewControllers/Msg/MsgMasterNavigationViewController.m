@@ -26,7 +26,7 @@ static NSString *msgMasterCellTableId = @"msgMasterTVC";
     self.statuses = [msaInfo objectForKey:@"statuses"];
 
     self.tableView.tableFooterView=[[UIView alloc] initWithFrame:CGRectZero];
-    self.msgDetaillCVC=(MsgDetailContainerViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    //self.msgDetaillCVC=(MsgDetailContainerViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
 /*
