@@ -1,5 +1,5 @@
 //
-//  MsgDetailTableViewController.m
+//  MsgDetailNavigationViewController.m
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.
@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MsgDetailTableViewController.h"
+#import "MsgDetailNavigationViewController.h"
 
-@interface MsgDetailTableViewController()
+@interface MsgDetailNavigationViewController()
 
 @end
 
-@implementation MsgDetailTableViewController
+@implementation MsgDetailNavigationViewController
 
 -(void)viewDidLoad{
     [super viewDidLoad];

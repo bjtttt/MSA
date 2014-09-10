@@ -7,19 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MsgDetailTableViewController.h"
+#import "MsgDetailNavigationViewController.h"
 #import "ShareSettings.h"
 
 @class MsgDetailContainerViewController;
 
 @interface MsgDetailContainerViewController: UIViewController <UISplitViewControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UINavigationBar *msgNavBar;
 @property (weak, nonatomic) IBOutlet UIView *msgV;
+@property (weak, nonatomic) IBOutlet UIToolbar *msgTBar;
 
-@property (weak, nonatomic) IBOutlet MsgDetailTableViewController *msgDetailTVC;
+@property (weak, nonatomic) IBOutlet MsgDetailNavigationViewController *msgDetailNVC;
 
-@property (nonatomic) double navBarHeight;
+@property (nonatomic) double tbarHeight;
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
 

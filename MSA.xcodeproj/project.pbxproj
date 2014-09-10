@@ -28,7 +28,10 @@
 		9A9C671A19AD6C81007D3248 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A9C671819AD6C81007D3248 /* Main.storyboard */; };
 		9A9C671C19AD6C81007D3248 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9C671B19AD6C81007D3248 /* Images.xcassets */; };
 		9A9C672819AD6C81007D3248 /* MSATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C672719AD6C81007D3248 /* MSATests.m */; };
-		9A9FFE7E19C0430800F76D38 /* MsgDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FFE7D19C0430800F76D38 /* MsgDetailTableViewController.m */; };
+		9A9FFE7E19C0430800F76D38 /* MsgDetailNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FFE7D19C0430800F76D38 /* MsgDetailNavigationViewController.m */; };
+		9A9FFE8819C04FAB00F76D38 /* MsgError.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9FFE8519C04FAB00F76D38 /* MsgError.png */; };
+		9A9FFE8919C04FAB00F76D38 /* MsgInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9FFE8619C04FAB00F76D38 /* MsgInfo.png */; };
+		9A9FFE8A19C04FAB00F76D38 /* MsgWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9FFE8719C04FAB00F76D38 /* MsgWarning.png */; };
 		9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE0EB919B466EF004D9146 /* MsgContainerViewController.m */; };
 		9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448C19B1F73500A7F334 /* HideBar.png */; };
 		9AC5448F19B1F74300A7F334 /* ShowBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448E19B1F74300A7F334 /* ShowBar.png */; };
@@ -80,8 +83,11 @@
 		9A9C672119AD6C81007D3248 /* MSATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9C672619AD6C81007D3248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9C672719AD6C81007D3248 /* MSATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSATests.m; sourceTree = "<group>"; };
-		9A9FFE7C19C0430800F76D38 /* MsgDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgDetailTableViewController.h; path = ViewControllers/Msg/MsgDetailTableViewController.h; sourceTree = "<group>"; };
-		9A9FFE7D19C0430800F76D38 /* MsgDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgDetailTableViewController.m; path = ViewControllers/Msg/MsgDetailTableViewController.m; sourceTree = "<group>"; };
+		9A9FFE7C19C0430800F76D38 /* MsgDetailNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgDetailNavigationViewController.h; path = ViewControllers/Msg/MsgDetailNavigationViewController.h; sourceTree = "<group>"; };
+		9A9FFE7D19C0430800F76D38 /* MsgDetailNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgDetailNavigationViewController.m; path = ViewControllers/Msg/MsgDetailNavigationViewController.m; sourceTree = "<group>"; };
+		9A9FFE8519C04FAB00F76D38 /* MsgError.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MsgError.png; path = Images/24/MsgError.png; sourceTree = "<group>"; };
+		9A9FFE8619C04FAB00F76D38 /* MsgInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MsgInfo.png; path = Images/24/MsgInfo.png; sourceTree = "<group>"; };
+		9A9FFE8719C04FAB00F76D38 /* MsgWarning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MsgWarning.png; path = Images/24/MsgWarning.png; sourceTree = "<group>"; };
 		9AAE0EB819B466EF004D9146 /* MsgContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgContainerViewController.h; path = ViewControllers/MsgContainerViewController.h; sourceTree = "<group>"; };
 		9AAE0EB919B466EF004D9146 /* MsgContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgContainerViewController.m; path = ViewControllers/MsgContainerViewController.m; sourceTree = "<group>"; };
 		9AC5448C19B1F73500A7F334 /* HideBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideBar.png; path = Images/24/HideBar.png; sourceTree = "<group>"; };
@@ -228,6 +234,9 @@
 		9A9C673319AD7081007D3248 /* 24 */ = {
 			isa = PBXGroup;
 			children = (
+				9A9FFE8519C04FAB00F76D38 /* MsgError.png */,
+				9A9FFE8619C04FAB00F76D38 /* MsgInfo.png */,
+				9A9FFE8719C04FAB00F76D38 /* MsgWarning.png */,
 				9AF7001019B81FE5000A69A5 /* Return.png */,
 				9AC5448E19B1F74300A7F334 /* ShowBar.png */,
 				9AC5448C19B1F73500A7F334 /* HideBar.png */,
@@ -256,8 +265,8 @@
 		9AF7001419B83C37000A69A5 /* Msg */ = {
 			isa = PBXGroup;
 			children = (
-				9A9FFE7C19C0430800F76D38 /* MsgDetailTableViewController.h */,
-				9A9FFE7D19C0430800F76D38 /* MsgDetailTableViewController.m */,
+				9A9FFE7C19C0430800F76D38 /* MsgDetailNavigationViewController.h */,
+				9A9FFE7D19C0430800F76D38 /* MsgDetailNavigationViewController.m */,
 				9A7422A319BDD2E400A251ED /* MsgDetailContainerViewController.h */,
 				9A7422A419BDD2E400A251ED /* MsgDetailContainerViewController.m */,
 				9AAE0EB819B466EF004D9146 /* MsgContainerViewController.h */,
@@ -357,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A9FFE8819C04FAB00F76D38 /* MsgError.png in Resources */,
 				9A9C671A19AD6C81007D3248 /* Main.storyboard in Resources */,
 				9A659BDA19B6B91900C30CE2 /* MsgEmpty.png in Resources */,
 				9A659BDB19B6B91900C30CE2 /* MsgNew.png in Resources */,
@@ -368,7 +378,9 @@
 				9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */,
 				9A659BDF19B6BC2000C30CE2 /* ShowMenu.png in Resources */,
 				9A7422A719BDDBC900A251ED /* MSAList.plist in Resources */,
+				9A9FFE8919C04FAB00F76D38 /* MsgInfo.png in Resources */,
 				9A5FDA7F19B5FB9A00B3C300 /* Preset.png in Resources */,
+				9A9FFE8A19C04FAB00F76D38 /* MsgWarning.png in Resources */,
 				9A659BDD19B6BC1800C30CE2 /* HideMenu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,7 +409,7 @@
 				9A9C671719AD6C81007D3248 /* ContainerViewController.m in Sources */,
 				9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */,
 				9A953EE919ADCBB6005467A1 /* ShareSettings.m in Sources */,
-				9A9FFE7E19C0430800F76D38 /* MsgDetailTableViewController.m in Sources */,
+				9A9FFE7E19C0430800F76D38 /* MsgDetailNavigationViewController.m in Sources */,
 				9A9C670E19AD6C81007D3248 /* main.m in Sources */,
 				9A659BEB19B6DE9A00C30CE2 /* SystemViewController.m in Sources */,
 			);
