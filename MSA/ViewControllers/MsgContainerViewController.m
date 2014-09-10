@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.msgMasterNavVC=[self.msgSplitVC.viewControllers lastObject];
+    //self.msgMasterNavVC=[self.msgSplitVC.viewControllers lastObject];
     //self.msgSplitVC.delegate=(id)self.msgMasterNavVC.topViewController;
 }
 

@@ -15,6 +15,12 @@ typedef enum msaLayout {
     MSA_MENU_FULL
 } MSALayout;
 
+typedef enum msgType {
+    MSG_CURRENT_CONDITIONS,
+    MSG_HISTORY,
+    MSG_SETTINGS
+}MSGType;
+
 #define CORNER_RADIUS 3.0f
 #define BORDER_WIDTH 1.0f
 #define VC_MARGIN 1.0f

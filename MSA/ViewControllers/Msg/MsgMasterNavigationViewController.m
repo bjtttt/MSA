@@ -63,6 +63,8 @@ static NSString *msgMasterCellTableId = @"msgMasterTVC";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSString *messageType = self.statuses[indexPath.row];
+    self.msgDetaillCVC.navigationController.navigationItem.title=messageType;
 }
 
 @end

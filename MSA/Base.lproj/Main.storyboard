@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
@@ -269,10 +269,32 @@
                                 <items>
                                     <barButtonItem style="plain" id="otd-RE-WRf">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0Sp-Vu-MCm">
-                                            <rect key="frame" x="16" y="6" width="114" height="32"/>
+                                            <rect key="frame" x="16" y="6" width="103" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <state key="normal" title="Information" image="msgInfo.png">
+                                            <state key="normal" title="Information" image="MsgInfo.png">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="BtB-Uy-1HD">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Fm9-JN-Q0n">
+                                            <rect key="frame" x="138" y="10" width="81" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <state key="normal" title="Warning" image="MsgWarning.png">
+                                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="jbu-TM-9N7">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8zY-Al-GZs">
+                                            <rect key="frame" x="220" y="10" width="63" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <state key="normal" title="Error" image="MsgError.png">
                                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -511,7 +533,7 @@
         <!--Msg Split View Controller-->
         <scene sceneID="iOb-XH-U9h">
             <objects>
-                <splitViewController id="BLC-Ou-gPf" userLabel="Msg Split View Controller" sceneMemberID="viewController">
+                <splitViewController id="BLC-Ou-gPf" userLabel="Msg Split View Controller" customClass="MsgSplitViewController" sceneMemberID="viewController">
                     <connections>
                         <segue destination="JF8-pC-3ON" kind="relationship" relationship="masterViewController" id="7IU-ER-p4c"/>
                         <segue destination="D9H-nf-Zwp" kind="relationship" relationship="detailViewController" id="ogh-vK-eZ4"/>
@@ -620,10 +642,12 @@
     <resources>
         <image name="Connect.png" width="32" height="32"/>
         <image name="MsgEmpty.png" width="32" height="32"/>
+        <image name="MsgError.png" width="24" height="24"/>
+        <image name="MsgInfo.png" width="24" height="24"/>
+        <image name="MsgWarning.png" width="24" height="24"/>
         <image name="Preset.png" width="32" height="32"/>
         <image name="Return.png" width="24" height="24"/>
         <image name="ShowMenu.png" width="32" height="32"/>
         <image name="System.png" width="32" height="32"/>
-        <image name="msgInfo.png" width="32" height="32"/>
     </resources>
 </document>

@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIView *msgV;
 
 @property (weak, nonatomic) IBOutlet UISplitViewController *msgSplitVC;
-@property (weak, nonatomic) IBOutlet UINavigationController *msgMasterNavVC;
+//@property (weak, nonatomic) IBOutlet UINavigationController *msgMasterNavVC;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 

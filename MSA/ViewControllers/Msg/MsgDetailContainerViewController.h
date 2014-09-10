@@ -23,4 +23,6 @@
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
 
+@property (nonatomic) MSGType messageType;
+
 @end
