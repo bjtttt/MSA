@@ -224,7 +224,7 @@
                             <outlet property="delegate" destination="AAJ-p3-lDV" id="0gX-C2-E6f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Rlv-RT-HQg"/>
+                    <navigationItem key="navigationItem" title="Current Conditions" id="Rlv-RT-HQg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2r-Lq-kwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,7 +261,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UcQ-eD-b3W">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <connections>
-                                    <segue destination="rwL-zE-pQO" kind="embed" id="z3b-NY-xy8"/>
+                                    <segue destination="rwL-zE-pQO" kind="embed" identifier="embedSegueToMsgDetailNVC" id="z3b-NY-xy8"/>
                                 </connections>
                             </containerView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jXI-cN-RyR">

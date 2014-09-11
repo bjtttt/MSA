@@ -26,4 +26,6 @@
 
 @property (nonatomic) MSGType messageType;
 
+@property (weak, nonatomic) ShareSettings *shareSettings;
+
 @end

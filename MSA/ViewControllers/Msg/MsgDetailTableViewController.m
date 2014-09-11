@@ -18,7 +18,15 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"MSAList" ofType:@"plist"];
+    NSDictionary *msaInfo = [NSDictionary dictionaryWithContentsOfFile:path];
+    self.statuses = [msaInfo objectForKey:@"statuses"];
+
     self.tableView.tableFooterView=[[UIView alloc] initWithFrame:CGRectZero];
+}
+
+-(void) setCurrentStatus:(MSGType)currentStatus{
+    self.title = self.statuses[currentStatus];
 }
 
 #pragma mark - Split view

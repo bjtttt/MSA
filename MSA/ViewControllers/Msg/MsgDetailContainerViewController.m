@@ -21,9 +21,10 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"embedSegueToMsgDetailVC"])
+    if([segue.identifier isEqualToString:@"embedSegueToMsgDetailNVC"])
     {
         self.msgDetailNVC = (MsgDetailNavigationViewController *)segue.destinationViewController;
+        self.msgDetailNVC.shareSettings = self.shareSettings;
         self.msgDetailNVC.msgDetailCVC = self;
     }
 }

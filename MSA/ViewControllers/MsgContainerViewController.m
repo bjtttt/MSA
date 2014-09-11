@@ -20,7 +20,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //self.msgMasterNavVC=[self.msgSplitVC.viewControllers lastObject];
     //self.msgSplitVC.delegate=(id)self.msgMasterNavVC.topViewController;
 }
 
@@ -29,6 +28,7 @@
     {
         self.msgSplitVC = (MsgSplitViewController *)segue.destinationViewController;
         self.msgSplitVC.msgCVC = self;
+        self.msgSplitVC.shareSettings = self.shareSettings;
     }
 }
 

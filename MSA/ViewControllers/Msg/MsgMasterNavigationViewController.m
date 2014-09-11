@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MsgMasterNavigationViewController.h"
+#import "MsgMasterTableViewController.h"
 
 @interface MsgMasterNavigationViewController()
 
@@ -17,6 +18,10 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+
+    self.msgMasterTVC = [self.viewControllers firstObject];
+    self.msgMasterTVC.shareSettings = self.shareSettings;
+    self.msgMasterTVC.msgMasterNVC = self;
 }
 
 @end

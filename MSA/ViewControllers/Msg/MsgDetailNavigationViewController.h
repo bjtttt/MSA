@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#include "ShareSettings.h"
 
 @class MsgDetailTableViewController;
 @class MsgDetailContainerViewController;
@@ -15,5 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet MsgDetailContainerViewController *msgDetailCVC;
 @property (weak, nonatomic) IBOutlet MsgDetailTableViewController *msgDetailTVC;
+
+@property (weak, nonatomic) ShareSettings *shareSettings;
 
 @end

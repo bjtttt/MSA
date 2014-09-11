@@ -21,11 +21,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.msgMasterNVC=[self.viewControllers firstObject];
-    self.msgDetailCVC=[self.viewControllers lastObject];
+    self.msgMasterNVC = [self.viewControllers firstObject];
+    self.msgDetailCVC = [self.viewControllers lastObject];
     
-    //self.msgMasterNVC.msgDetailCVC=self.msgDetailCVC;
-    //self.msgDetailCVC.msgSplitVC=self;
+    self.msgMasterNVC.msgSplitVC = self;
+    self.msgMasterNVC.shareSettings = self.shareSettings;
+    
+    self.msgDetailCVC.msgSplitVC = self;
+    self.msgDetailCVC.shareSettings = self.shareSettings;
 }
 
 -(void)viewWillLayoutSubviews {

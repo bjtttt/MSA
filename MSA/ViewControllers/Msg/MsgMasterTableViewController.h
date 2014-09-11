@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#include "ShareSettings.h"
 
 @class MsgMasterNavigationViewController;
 
@@ -15,5 +16,7 @@
 @property (weak, nonatomic) MsgMasterNavigationViewController *msgMasterNVC;
 
 @property (copy, nonatomic) NSArray *statuses;
+
+@property (weak, nonatomic) ShareSettings *shareSettings;
 
 @end

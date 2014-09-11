@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "MsgMasterTableViewController.h"
+#import "MsgMasterNavigationViewController.h"
+#import "MsgSplitViewController.h"
 #import "MsgDetailContainerViewController.h"
-
-//@class MsgDetailContainerViewController;
+#import "MsgDetailNavigationViewController.h"
+#import "MsgDetailTableViewController.h"
 
 @interface MsgMasterTableViewController() {
     //NSMutableArray *_objects;
@@ -30,6 +32,14 @@ static NSString *msgMasterCellTableId = @"msgMasterTVC";
 
     self.tableView.tableFooterView=[[UIView alloc] initWithFrame:CGRectZero];
     //self.msgDetaillCVC=(MsgDetailContainerViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionBottom];
+    
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    self.msgMasterNVC.msgSplitVC.msgDetailCVC.msgDetailNVC.msgDetailTVC.currentStatus = MSG_CURRENT_CONDITIONS;
 }
 
 /*
@@ -66,8 +76,8 @@ static NSString *msgMasterCellTableId = @"msgMasterTVC";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *messageType = self.statuses[indexPath.row];
-    //self.msgDetailCVC.navigationController.navigationItem.title=messageType;
+    //NSString *messageType = self.statuses[indexPath.row];
+    self.msgMasterNVC.msgSplitVC.msgDetailCVC.msgDetailNVC.msgDetailTVC.currentStatus = (MSGType)indexPath.row;
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#include "ShareSettings.h"
 
 @class MsgSplitViewController;
 @class MsgMasterTableViewController;
@@ -15,5 +16,7 @@
 
 @property (weak, nonatomic) MsgSplitViewController *msgSplitVC;
 @property (weak, nonatomic) MsgMasterTableViewController *msgMasterTVC;
+
+@property (weak, nonatomic) ShareSettings *shareSettings;
 
 @end
