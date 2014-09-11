@@ -8,6 +8,7 @@
 
 #import "ShareSettings.h"
 #import "SystemContainerViewController.h"
+#import "SystemSplitViewController.h"
 
 @interface SystemContainerViewController ()
 
@@ -18,6 +19,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"embedSegueToSystemSplitVC"])
+    {
+        self.systSplitVC = (SystemSplitViewController *)segue.destinationViewController;
+        self.systSplitVC.systCVC = self;
+        self.systSplitVC.shareSettings = self.shareSettings;
+    }
 }
 
 -(void)viewWillLayoutSubviews {
