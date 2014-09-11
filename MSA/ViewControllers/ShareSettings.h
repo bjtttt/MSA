@@ -24,6 +24,20 @@ typedef enum msgType {
     MSG_SETTINGS
 }MSGType;
 
+typedef enum systType {
+    SYST_SYSTEM,
+    SYST_IO_CONFIG,
+    SYST_USER_INTERFACE,
+    SYST_POWER_ON,
+    SYST_RESTORE_DEF,
+    SYST_ALIGN,
+    SYST_LIC,
+    SYST_SECURITY,
+    SYST_DIAG,
+    SYST_SERVICE,
+    SYST_LANG
+}SYSTType;
+
 #define CORNER_RADIUS 3.0f
 #define BORDER_WIDTH 1.0f
 #define VC_MARGIN 1.0f

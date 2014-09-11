@@ -1,5 +1,5 @@
 //
-//  MsgViewController.m
+//  SystemViewController.m
 //  MSA
 //
 //  Created by GUO Zhitao on 14-8-26.
@@ -23,7 +23,7 @@
 -(void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
 
-    self.navBarHeight=self.msgNavBar.frame.size.height;
+    self.navBarHeight=self.systNavBar.frame.size.height;
     self.frameWidth=self.view.frame.size.width;
     self.frameHeight=self.view.frame.size.height;
 }
@@ -31,8 +31,8 @@
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    self.msgNavBar.frame = CGRectMake(0, 0, self.frameWidth, self.navBarHeight);
-    self.msgVC.frame = CGRectMake(0, self.navBarHeight+VC_MARGIN, self.frameWidth, self.frameHeight-self.navBarHeight-VC_MARGIN);
+    self.systNavBar.frame = CGRectMake(0, 0, self.frameWidth, self.navBarHeight);
+    self.systVC.frame = CGRectMake(0, self.navBarHeight+VC_MARGIN, self.frameWidth, self.frameHeight-self.navBarHeight-VC_MARGIN);
 }
 
 - (void)didReceiveMemoryWarning {

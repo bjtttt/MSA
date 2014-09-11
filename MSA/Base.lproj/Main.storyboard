@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
@@ -122,7 +122,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="yVy-dA-8Lh" kind="presentation" id="Ryk-9S-JQ2"/>
+                                                    <segue destination="yVy-dA-8Lh" kind="presentation" identifier="presentSegueToSystemCVC" id="kiL-aY-Bom"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -166,10 +166,10 @@
                     <connections>
                         <outlet property="displayNavBar" destination="PI7-wW-2OI" id="5Og-dy-hHb"/>
                         <outlet property="displayToolBar" destination="ybd-le-ga9" id="Qns-8e-WAI"/>
-                        <outlet property="showConfigButton" destination="17t-fS-KsZ" id="NEZ-KC-dUQ"/>
                         <outlet property="showConnectButton" destination="cDu-ka-75F" id="4sB-Sg-su9"/>
                         <outlet property="showHideMenuButton" destination="OqV-j5-b0U" id="stC-0r-ZjC"/>
                         <outlet property="showMsgButton" destination="1yH-oA-9ta" id="xg2-PA-I7d"/>
+                        <outlet property="showSystemButton" destination="17t-fS-KsZ" id="cg5-bP-rqb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAQ-iN-Low" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -402,6 +402,9 @@
                                                 <state key="normal" image="Return.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="hideMsg:" destination="yVy-dA-8Lh" eventType="touchUpInside" id="fQn-fC-r3e"/>
+                                                </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
@@ -416,6 +419,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="systNavBar" destination="Bte-kj-n7i" id="9i6-Se-Zd7"/>
+                        <outlet property="systVC" destination="e9A-eu-vIc" id="PoL-Qr-Ker"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70v-D6-DqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -424,7 +431,7 @@
         <!--System Details Container View Controller-->
         <scene sceneID="cvS-Ro-goV">
             <objects>
-                <viewController id="LwD-tt-eAI" userLabel="System Details Container View Controller" sceneMemberID="viewController">
+                <viewController id="LwD-tt-eAI" userLabel="System Details Container View Controller" customClass="SystemDetailContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="E6C-IH-trT"/>
                         <viewControllerLayoutGuide type="bottom" id="c0E-AT-FHI"/>
@@ -436,12 +443,15 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RH0-zU-zpf">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <connections>
-                                    <segue destination="M4V-Qm-Kku" kind="embed" id="ycy-z4-2FG"/>
+                                    <segue destination="M4V-Qm-Kku" kind="embed" identifier="embedSegueToSystemDetailNVC" id="ycy-z4-2FG"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="msgV" destination="RH0-zU-zpf" id="wbi-cM-lzh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nre-9z-4lM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -450,13 +460,13 @@
         <!--System Settings Root View Controller-->
         <scene sceneID="EMu-WC-12a">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="vX1-ce-Dzc" userLabel="System Settings Root View Controller" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="vX1-ce-Dzc" userLabel="System Settings Root View Controller" customClass="SystemMasterTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ck6-uG-len">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e3Z-0T-k4a">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="systMasterTVC" id="e3Z-0T-k4a">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e3Z-0T-k4a" id="dLq-Dp-y1d">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -520,7 +530,7 @@
         <!--System Settings Navigation Controller-->
         <scene sceneID="PjD-u4-cAd">
             <objects>
-                <navigationController id="66U-mV-Keg" userLabel="System Settings Navigation Controller" sceneMemberID="viewController">
+                <navigationController id="66U-mV-Keg" userLabel="System Settings Navigation Controller" customClass="MsgMasterNavigationViewController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1so-PA-yU9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -536,7 +546,7 @@
         <!--System Split View Controller-->
         <scene sceneID="gzF-Vz-9AI">
             <objects>
-                <splitViewController id="ekM-sg-wqf" userLabel="System Split View Controller" sceneMemberID="viewController">
+                <splitViewController id="ekM-sg-wqf" userLabel="System Split View Controller" customClass="SystemSplitViewController" sceneMemberID="viewController">
                     <connections>
                         <segue destination="66U-mV-Keg" kind="relationship" relationship="masterViewController" id="Afe-Ns-kYl"/>
                         <segue destination="LwD-tt-eAI" kind="relationship" relationship="detailViewController" id="5zo-2D-JXs"/>

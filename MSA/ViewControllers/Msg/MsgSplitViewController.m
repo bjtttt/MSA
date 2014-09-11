@@ -11,9 +11,9 @@
 #import "MsgMasterNavigationViewController.h"
 #import "MsgDetailContainerViewController.h"
 
-//@interface MsgSplitViewController ()
-//
-//@end
+@interface MsgSplitViewController ()
+
+@end
 
 @implementation MsgSplitViewController
 

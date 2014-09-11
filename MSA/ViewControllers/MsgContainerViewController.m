@@ -10,9 +10,9 @@
 #import "MsgContainerViewController.h"
 #import "MsgSplitViewController.h"
 
-//@interface MsgContainerViewController ()
-//
-//@end
+@interface MsgContainerViewController ()
+
+@end
 
 @implementation MsgContainerViewController
             

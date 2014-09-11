@@ -31,6 +31,11 @@
         self.msgCVC = (MsgContainerViewController *)segue.destinationViewController;
         self.msgCVC.shareSettings = self.shareSettings;
     }
+    if([segue.identifier isEqualToString:@"presentSegueToSystemCVC"])
+    {
+        self.systCVC = (SystemContainerViewController *)segue.destinationViewController;
+        self.systCVC.shareSettings = self.shareSettings;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,5 +1,5 @@
 //
-//  MsgDetailContainerViewController.h
+//  SystemDetailContainerViewController.h
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.
@@ -9,22 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 
-@class MsgSplitViewController;
-@class MsgDetailNavigationViewController;
+@class SystemSplitViewController;
+@class SystemDetailNavigationViewController;
 
-@interface MsgDetailContainerViewController: UIViewController <UISplitViewControllerDelegate>
+@interface SystemDetailContainerViewController: UIViewController <UISplitViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *msgV;
-@property (weak, nonatomic) IBOutlet UIToolbar *msgTBar;
 
-@property (weak, nonatomic) IBOutlet MsgDetailNavigationViewController *msgDetailNVC;
-@property (weak, nonatomic) IBOutlet MsgSplitViewController *msgSplitVC;
+@property (weak, nonatomic) IBOutlet SystemDetailNavigationViewController *systDetailNVC;
+@property (weak, nonatomic) IBOutlet SystemSplitViewController *systSplitVC;
 
-@property (nonatomic) double tbarHeight;
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
 
-@property (nonatomic) MSGType messageType;
+@property (nonatomic) SYSTType systemType;
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
 

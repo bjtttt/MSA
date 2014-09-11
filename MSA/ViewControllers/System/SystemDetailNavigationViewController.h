@@ -1,5 +1,5 @@
 //
-//  MsgDetailNavigationViewController.h
+//  SystemDetailNavigationViewController.h
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.
@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 #include "ShareSettings.h"
 
-@class MsgDetailTableViewController;
-@class MsgDetailContainerViewController;
+@class SystemDetailTableViewController;
+@class SystemDetailContainerViewController;
 
-@interface MsgDetailNavigationViewController : UINavigationController
+@interface SystemDetailNavigationViewController : UINavigationController
 
-@property (weak, nonatomic) IBOutlet MsgDetailContainerViewController *msgDetailCVC;
-@property (weak, nonatomic) IBOutlet MsgDetailTableViewController *msgDetailTVC;
+@property (weak, nonatomic) IBOutlet SystemDetailContainerViewController *systDetailCVC;
+@property (weak, nonatomic) IBOutlet SystemDetailTableViewController *systDetailTVC;
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
 

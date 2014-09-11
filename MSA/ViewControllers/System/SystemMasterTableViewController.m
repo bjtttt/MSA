@@ -7,28 +7,28 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MsgMasterTableViewController.h"
-#import "MsgMasterNavigationViewController.h"
-#import "MsgSplitViewController.h"
-#import "MsgDetailContainerViewController.h"
-#import "MsgDetailNavigationViewController.h"
-#import "MsgDetailTableViewController.h"
+#import "SystemMasterTableViewController.h"
+#import "SystemMasterNavigationViewController.h"
+#import "SystemSplitViewController.h"
+#import "SystemDetailContainerViewController.h"
+#import "SystemDetailNavigationViewController.h"
+#import "SystemDetailTableViewController.h"
 
-@interface MsgMasterTableViewController() {
+@interface SystemMasterTableViewController() {
     //NSMutableArray *_objects;
 }
 @end
 
-@implementation MsgMasterTableViewController
+@implementation SystemMasterTableViewController
 
-static NSString *msgMasterCellTableId = @"msgMasterTVC";
+static NSString *systMasterCellTableId = @"systMasterTVC";
 
 -(void)viewDidLoad{
     [super viewDidLoad];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"MSAList" ofType:@"plist"];
     NSDictionary *msaInfo = [NSDictionary dictionaryWithContentsOfFile:path];
-    self.statuses = [msaInfo objectForKey:@"statuses"];
+    self.systems = [msaInfo objectForKey:@"systems"];
 
     self.tableView.tableFooterView=[[UIView alloc] initWithFrame:CGRectZero];
     //self.msgDetaillCVC=(MsgDetailContainerViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
@@ -39,7 +39,7 @@ static NSString *msgMasterCellTableId = @"msgMasterTVC";
 }
 
 -(void) viewWillAppear:(BOOL)animated{
-    self.msgMasterNVC.msgSplitVC.msgDetailCVC.msgDetailNVC.msgDetailTVC.currentStatus = MSG_CURRENT_CONDITIONS;
+    self.systMasterNVC.systSplitVC.systDetailCVC.systDetailNVC.systDetailTVC.currentSystem = SYST_SYSTEM;
 }
 
 /*
@@ -63,13 +63,13 @@ static NSString *msgMasterCellTableId = @"msgMasterTVC";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.statuses count];
+    return [self.systems count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:msgMasterCellTableId forIndexPath:indexPath];
-    NSString *status = self.statuses[indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:systMasterCellTableId forIndexPath:indexPath];
+    NSString *status = self.systems[indexPath.row];
     cell.textLabel.text = status;
     return cell;
 }
@@ -77,7 +77,7 @@ static NSString *msgMasterCellTableId = @"msgMasterTVC";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //NSString *messageType = self.statuses[indexPath.row];
-    self.msgMasterNVC.msgSplitVC.msgDetailCVC.msgDetailNVC.msgDetailTVC.currentStatus = (MSGType)indexPath.row;
+    self.systMasterNVC.systSplitVC.systDetailCVC.systDetailNVC.systDetailTVC.currentSystem = (SYSTType)indexPath.row;
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  MsgDetailContainerViewController.m
+//  SystemDetailContainerViewController.m
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.
@@ -7,32 +7,31 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MsgDetailContainerViewController.h"
-#import "MsgDetailNavigationViewController.h"
+#import "SystemDetailContainerViewController.h"
+#import "SystemDetailNavigationViewController.h"
 
-@interface MsgDetailContainerViewController()
+@interface SystemDetailContainerViewController()
 
 @end
 
-@implementation MsgDetailContainerViewController
+@implementation SystemDetailContainerViewController
 
 -(void)viewDidLoad{
     [super viewDidLoad];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"embedSegueToMsgDetailNVC"])
+    if([segue.identifier isEqualToString:@"embedSegueToSystemDetailNVC"])
     {
-        self.msgDetailNVC = (MsgDetailNavigationViewController *)segue.destinationViewController;
-        self.msgDetailNVC.shareSettings = self.shareSettings;
-        self.msgDetailNVC.msgDetailCVC = self;
+        self.systDetailNVC = (SystemDetailNavigationViewController *)segue.destinationViewController;
+        self.systDetailNVC.shareSettings = self.shareSettings;
+        self.systDetailNVC.systDetailCVC = self;
     }
 }
 
 -(void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
-    self.tbarHeight=self.msgTBar.frame.size.height;
     self.frameWidth=self.view.frame.size.width;
     self.frameHeight=self.view.frame.size.height;
 }
@@ -40,8 +39,7 @@
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    self.msgV.frame = CGRectMake(0, VC_MARGIN, self.frameWidth, self.frameHeight-self.tbarHeight-VC_MARGIN);
-    self.msgTBar.frame = CGRectMake(0, self.frameHeight-self.tbarHeight+VC_MARGIN, self.frameWidth, self.tbarHeight);
+    self.msgV.frame = CGRectMake(0, VC_MARGIN, self.frameWidth, self.frameHeight-VC_MARGIN);
 }
 
 #pragma mark - Split view

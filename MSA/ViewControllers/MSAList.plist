@@ -8,7 +8,7 @@
 		<string>History</string>
 		<string>Settings</string>
 	</array>
-	<key>system</key>
+	<key>systems</key>
 	<array>
 		<string>System</string>
 		<string>I/O Config</string>

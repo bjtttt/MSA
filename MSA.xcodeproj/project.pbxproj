@@ -353,8 +353,8 @@
 		9AF7001519B83C60000A69A5 /* System */ = {
 			isa = PBXGroup;
 			children = (
-				9A726F5619C19FAF00CDF55D /* Detail */,
 				9A726F5519C19FA800CDF55D /* Master */,
+				9A726F5619C19FAF00CDF55D /* Detail */,
 				9A659BE919B6DE9A00C30CE2 /* SystemContainerViewController.h */,
 				9A659BEA19B6DE9A00C30CE2 /* SystemContainerViewController.m */,
 				9A726F6619C19FEE00CDF55D /* SystemSplitViewController.h */,

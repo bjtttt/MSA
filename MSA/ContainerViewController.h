@@ -11,7 +11,7 @@
 #import "DisplayViewController.h"
 #import "MenuViewController.h"
 #import "MsgContainerViewController.h"
-#import "SystemViewController.h"
+#import "SystemContainerViewController.h"
 
 @interface ContainerViewController : UIViewController
 
@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet DisplayViewController *displayVC;
 @property (weak, nonatomic) IBOutlet MenuViewController *menuVC;
 @property (weak, nonatomic) IBOutlet MsgContainerViewController *msgCVC;
-@property (weak, nonatomic) IBOutlet SystemViewController *systemVC;
+@property (weak, nonatomic) IBOutlet SystemContainerViewController *systemCVC;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 

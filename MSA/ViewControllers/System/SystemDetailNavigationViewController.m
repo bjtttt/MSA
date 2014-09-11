@@ -1,5 +1,5 @@
 //
-//  MsgDetailNavigationViewController.m
+//  SystemDetailNavigationViewController.m
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.
@@ -7,21 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MsgDetailNavigationViewController.h"
-#import "MsgDetailTableViewController.h"
+#import "SystemDetailNavigationViewController.h"
+#import "SystemDetailTableViewController.h"
 
-@interface MsgDetailNavigationViewController()
+@interface SystemDetailNavigationViewController()
 
 @end
 
-@implementation MsgDetailNavigationViewController
+@implementation SystemDetailNavigationViewController
 
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    self.msgDetailTVC = [self.viewControllers firstObject];
-    self.msgDetailTVC.shareSettings = self.shareSettings;
-    self.msgDetailTVC.msgDetailNVC = self;
+    self.systDetailTVC = [self.viewControllers firstObject];
+    self.systDetailTVC.shareSettings = self.shareSettings;
+    self.systDetailTVC.systDetailNVC = self;
 }
 
 #pragma mark - Split view

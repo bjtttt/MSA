@@ -9,14 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 #import "MsgContainerViewController.h"
+#import "SystemContainerViewController.h"
 
 @interface DisplayViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet MsgContainerViewController *msgCVC;
+@property (weak, nonatomic) IBOutlet SystemContainerViewController *systCVC;
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *displayNavBar;
 @property (weak, nonatomic) IBOutlet UIButton *showConnectButton;
-@property (weak, nonatomic) IBOutlet UIButton *showConfigButton;
+@property (weak, nonatomic) IBOutlet UIButton *showSystemButton;
 @property (weak, nonatomic) IBOutlet UIToolbar *displayToolBar;
 @property (weak, nonatomic) IBOutlet UIButton *showMsgButton;
 @property (weak, nonatomic) IBOutlet UIButton *showHideMenuButton;

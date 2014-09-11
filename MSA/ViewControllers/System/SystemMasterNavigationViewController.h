@@ -1,5 +1,5 @@
 //
-//  MsgMasterNavigationViewController.h
+//  SystemMasterNavigationViewController.h
 //  MSA
 //
 //  Created by GUO Zhitao on 14-9-11.
@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 #include "ShareSettings.h"
 
-@class MsgSplitViewController;
-@class MsgMasterTableViewController;
+@class SystemSplitViewController;
+@class SystemMasterTableViewController;
 
-@interface MsgMasterNavigationViewController : UINavigationController
+@interface SystemMasterNavigationViewController : UINavigationController
 
-@property (weak, nonatomic) MsgSplitViewController *msgSplitVC;
-@property (weak, nonatomic) MsgMasterTableViewController *msgMasterTVC;
+@property (weak, nonatomic) SystemSplitViewController *systSplitVC;
+@property (weak, nonatomic) SystemMasterTableViewController *systMasterTVC;
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
 

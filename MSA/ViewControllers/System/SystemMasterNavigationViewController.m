@@ -1,5 +1,5 @@
 //
-//  MsgMasterNavigationViewController.m
+//  SystemMasterNavigationViewController.m
 //  MSA
 //
 //  Created by GUO Zhitao on 14-9-11.
@@ -7,21 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MsgMasterNavigationViewController.h"
-#import "MsgMasterTableViewController.h"
+#import "SystemMasterNavigationViewController.h"
+#import "SystemMasterTableViewController.h"
 
-@interface MsgMasterNavigationViewController()
+@interface SystemMasterNavigationViewController()
 
 @end
 
-@implementation MsgMasterNavigationViewController
+@implementation SystemMasterNavigationViewController
 
 -(void)viewDidLoad{
     [super viewDidLoad];
 
-    self.msgMasterTVC = [self.viewControllers firstObject];
-    self.msgMasterTVC.shareSettings = self.shareSettings;
-    self.msgMasterTVC.msgMasterNVC = self;
+    self.systMasterTVC = [self.viewControllers firstObject];
+    self.systMasterTVC.shareSettings = self.shareSettings;
+    self.systMasterTVC.systMasterNVC = self;
 }
 
 @end

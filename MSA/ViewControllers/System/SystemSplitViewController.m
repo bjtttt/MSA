@@ -1,5 +1,5 @@
 //
-//  MsgSplitViewController.m
+//  SystemSplitViewController.m
 //  MSA
 //
 //  Created by guozhitao on 9/10/14.
@@ -7,28 +7,28 @@
 //
 
 #import "ShareSettings.h"
-#import "MsgSplitViewController.h"
-#import "MsgMasterNavigationViewController.h"
-#import "MsgDetailContainerViewController.h"
+#import "SystemSplitViewController.h"
+#import "SystemMasterNavigationViewController.h"
+#import "SystemDetailContainerViewController.h"
 
-//@interface MsgSplitViewController ()
-//
-//@end
+@interface SystemSplitViewController ()
 
-@implementation MsgSplitViewController
+@end
+
+@implementation SystemSplitViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.msgMasterNVC = [self.viewControllers firstObject];
-    self.msgDetailCVC = [self.viewControllers lastObject];
+    self.systMasterNVC = [self.viewControllers firstObject];
+    self.systDetailCVC = [self.viewControllers lastObject];
     
-    self.msgMasterNVC.msgSplitVC = self;
-    self.msgMasterNVC.shareSettings = self.shareSettings;
+    self.systMasterNVC.systSplitVC = self;
+    self.systMasterNVC.shareSettings = self.shareSettings;
     
-    self.msgDetailCVC.msgSplitVC = self;
-    self.msgDetailCVC.shareSettings = self.shareSettings;
+    self.systDetailCVC.systSplitVC = self;
+    self.systDetailCVC.shareSettings = self.shareSettings;
 }
 
 -(void)viewWillLayoutSubviews {
