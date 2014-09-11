@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "MsgDetailNavigationViewController.h"
 
-@interface MsgDetailNavigationViewController()
-
-@end
+//@interface MsgDetailNavigationViewController()
+//
+//@end
 
 @implementation MsgDetailNavigationViewController
 

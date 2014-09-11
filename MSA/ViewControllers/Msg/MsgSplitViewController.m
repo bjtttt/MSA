@@ -9,9 +9,9 @@
 #import "ShareSettings.h"
 #import "MsgSplitViewController.h"
 
-@interface MsgSplitViewController ()
-
-@end
+//@interface MsgSplitViewController ()
+//
+//@end
 
 @implementation MsgSplitViewController
 
@@ -20,11 +20,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.msgMasterNVC=[self.viewControllers lastObject];
-    self.msgDetaillCVC=[self.viewControllers firstObject];
-    
-    self.msgMasterNVC.msgDetaillCVC=self.msgDetaillCVC;
+    self.msgDetailCVC=[self.viewControllers firstObject];
 }
-
-
 
 @end

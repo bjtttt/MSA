@@ -6,10 +6,15 @@
 //  Copyright (c) 2014 KeySight. All rights reserved.
 //
 
+#ifndef MSG_DETAIL_NAVIGATION_VIEW_CONTROLLER
+#define MSG_DETAIL_NAVIGATION_VIEW_CONTROLLER
+
 #import <UIKit/UIKit.h>
 
-@class MsgDetailNavigationViewController;
+//@class MsgDetailNavigationViewController;
 
-@interface MsgDetailNavigationViewController: UITableViewController
+@interface MsgDetailNavigationViewController : UITableViewController
 
 @end
+
+#endif

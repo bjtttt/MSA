@@ -6,14 +6,19 @@
 //  Copyright (c) 2014 KeySight. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "MsgDetailContainerViewController.h"
+#ifndef MSG_MASTER_NAVIGATION_VIEW_CONTROLLER
+#define MSG_MASTER_NAVIGATION_VIEW_CONTROLLER
 
-@class MsgMasterNavigationViewController;
+#import <UIKit/UIKit.h>
+//#import "MsgDetailContainerViewController.h"
+
+@class MsgDetailContainerViewController;
 
 @interface MsgMasterNavigationViewController : UITableViewController
 
-@property (strong, nonatomic) MsgDetailContainerViewController *msgDetaillCVC;
+@property (strong, nonatomic) MsgDetailContainerViewController *msgDetailCVC;
 @property (copy, nonatomic) NSArray *statuses;
 
 @end
+
+#endif

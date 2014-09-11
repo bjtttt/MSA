@@ -268,16 +268,16 @@
 		9AF7001419B83C37000A69A5 /* Msg */ = {
 			isa = PBXGroup;
 			children = (
-				9A9FFE7C19C0430800F76D38 /* MsgDetailNavigationViewController.h */,
-				9A9FFE7D19C0430800F76D38 /* MsgDetailNavigationViewController.m */,
-				9A7422A319BDD2E400A251ED /* MsgDetailContainerViewController.h */,
-				9A7422A419BDD2E400A251ED /* MsgDetailContainerViewController.m */,
 				9AAE0EB819B466EF004D9146 /* MsgContainerViewController.h */,
 				9AAE0EB919B466EF004D9146 /* MsgContainerViewController.m */,
-				9ACA2EB819BD4651005542B5 /* MsgMasterNavigationViewController.m */,
-				9ACA2EBA19BD468E005542B5 /* MsgMasterNavigationViewController.h */,
-				9A90589819C08EFD00B0B6AB /* MsgSplitViewController.m */,
 				9A90589A19C08F1000B0B6AB /* MsgSplitViewController.h */,
+				9A90589819C08EFD00B0B6AB /* MsgSplitViewController.m */,
+				9ACA2EBA19BD468E005542B5 /* MsgMasterNavigationViewController.h */,
+				9ACA2EB819BD4651005542B5 /* MsgMasterNavigationViewController.m */,
+				9A7422A319BDD2E400A251ED /* MsgDetailContainerViewController.h */,
+				9A7422A419BDD2E400A251ED /* MsgDetailContainerViewController.m */,
+				9A9FFE7C19C0430800F76D38 /* MsgDetailNavigationViewController.h */,
+				9A9FFE7D19C0430800F76D38 /* MsgDetailNavigationViewController.m */,
 			);
 			name = Msg;
 			sourceTree = "<group>";

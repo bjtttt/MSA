@@ -9,9 +9,9 @@
 #import "ShareSettings.h"
 #import "MsgContainerViewController.h"
 
-@interface MsgContainerViewController ()
-
-@end
+//@interface MsgContainerViewController ()
+//
+//@end
 
 @implementation MsgContainerViewController
             
@@ -26,7 +26,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"embedSegueToMsgSplitVC"])
     {
-        self.msgSplitVC = (UISplitViewController *)segue.destinationViewController;
+        self.msgSplitVC = (MsgSplitViewController *)segue.destinationViewController;
     }
 }
 

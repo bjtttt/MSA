@@ -6,15 +6,24 @@
 //  Copyright (c) 2014 KeySight. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "MsgMasterNavigationViewController.h"
-#import "MsgDetailContainerViewController.h"
+#ifndef MSG_SPLIT_VIEW_CONTROLLER
+#define MSG_SPLIT_VIEW_CONTROLLER
 
-@class MsgSplitViewController;
+#import <UIKit/UIKit.h>
+#import "ShareSettings.h"
+//#import "MsgMasterNavigationViewController.h"
+//#import "MsgDetailContainerViewController.h"
+
+@class MsgMasterNavigationViewController;
+@class MsgDetailContainerViewController;
 
 @interface MsgSplitViewController : UISplitViewController
 
 @property (strong, nonatomic) MsgMasterNavigationViewController *msgMasterNVC;
-@property (strong, nonatomic) MsgDetailContainerViewController *msgDetaillCVC;
+@property (strong, nonatomic) MsgDetailContainerViewController *msgDetailCVC;
+
+@property (strong, nonatomic) ShareSettings *shareSettings;
 
 @end
+
+#endif

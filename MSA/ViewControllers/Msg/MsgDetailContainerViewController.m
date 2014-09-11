@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "MsgDetailContainerViewController.h"
 
-@interface MsgDetailContainerViewController()
-
-@end
+//@interface MsgDetailContainerViewController()
+//
+//@end
 
 @implementation MsgDetailContainerViewController
 

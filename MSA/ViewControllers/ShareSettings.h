@@ -6,6 +6,9 @@
 //  Copyright (c) 2014年 KeySight. All rights reserved.
 //
 
+#ifndef SHARE_SETTINGS
+#define SHARE_SETTINGS
+
 #import <Foundation/Foundation.h>
 
 typedef enum msaLayout {
@@ -37,3 +40,5 @@ typedef enum msgType {
 + (id)sharedSettings;
 
 @end
+
+#endif
