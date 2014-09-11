@@ -2,23 +2,18 @@
 //  MsgMasterNavigationViewController.h
 //  MSA
 //
-//  Created by guozhitao on 9/8/14.
-//  Copyright (c) 2014 KeySight. All rights reserved.
+//  Created by GUO Zhitao on 14-9-11.
+//  Copyright (c) 2014年 KeySight. All rights reserved.
 //
 
-#ifndef MSG_MASTER_NAVIGATION_VIEW_CONTROLLER
-#define MSG_MASTER_NAVIGATION_VIEW_CONTROLLER
-
 #import <UIKit/UIKit.h>
-//#import "MsgDetailContainerViewController.h"
 
-@class MsgDetailContainerViewController;
+@class MsgSplitViewController;
+@class MsgMasterTableViewController;
 
-@interface MsgMasterNavigationViewController : UITableViewController
+@interface MsgMasterNavigationViewController : UINavigationController
 
-@property (strong, nonatomic) MsgDetailContainerViewController *msgDetailCVC;
-@property (copy, nonatomic) NSArray *statuses;
+@property (weak, nonatomic) MsgSplitViewController *msgSplitVC;
+@property (weak, nonatomic) MsgMasterTableViewController *msgMasterTVC;
 
 @end
-
-#endif

@@ -7,16 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MsgDetailNavigationViewController.h"
+#import "MsgDetailTableViewController.h"
 
-@interface MsgDetailNavigationViewController()
+@interface MsgDetailTableViewController()
 
 @end
 
-@implementation MsgDetailNavigationViewController
+@implementation MsgDetailTableViewController
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    
+    self.tableView.tableFooterView=[[UIView alloc] initWithFrame:CGRectZero];
 }
 
 #pragma mark - Split view

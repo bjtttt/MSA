@@ -8,6 +8,7 @@
 
 #import "ShareSettings.h"
 #import "MsgContainerViewController.h"
+#import "MsgSplitViewController.h"
 
 //@interface MsgContainerViewController ()
 //
@@ -27,6 +28,7 @@
     if([segue.identifier isEqualToString:@"embedSegueToMsgSplitVC"])
     {
         self.msgSplitVC = (MsgSplitViewController *)segue.destinationViewController;
+        self.msgSplitVC.msgCVC = self;
     }
 }
 

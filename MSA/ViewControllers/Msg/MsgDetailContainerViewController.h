@@ -6,13 +6,8 @@
 //  Copyright (c) 2014 KeySight. All rights reserved.
 //
 
-#ifndef MSG_DETAIL_CONTAINER_VIEW_CONTROLLER
-#define MSG_DETAIL_CONTAINER_VIEW_CONTROLLER
-
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
-//#import "MsgSplitViewController.h"
-//#import "MsgDetailNavigationViewController.h"
 
 @class MsgSplitViewController;
 @class MsgDetailNavigationViewController;
@@ -32,5 +27,3 @@
 @property (nonatomic) MSGType messageType;
 
 @end
-
-#endif

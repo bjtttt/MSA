@@ -6,15 +6,14 @@
 //  Copyright (c) 2014 KeySight. All rights reserved.
 //
 
-#ifndef MSG_DETAIL_NAVIGATION_VIEW_CONTROLLER
-#define MSG_DETAIL_NAVIGATION_VIEW_CONTROLLER
-
 #import <UIKit/UIKit.h>
 
-//@class MsgDetailNavigationViewController;
+@class MsgDetailTableViewController;
+@class MsgDetailContainerViewController;
 
-@interface MsgDetailNavigationViewController : UITableViewController
+@interface MsgDetailNavigationViewController : UINavigationController
+
+@property (weak, nonatomic) IBOutlet MsgDetailContainerViewController *msgDetailCVC;
+@property (weak, nonatomic) IBOutlet MsgDetailTableViewController *msgDetailTVC;
 
 @end
-
-#endif

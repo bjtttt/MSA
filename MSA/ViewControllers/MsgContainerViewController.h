@@ -6,9 +6,6 @@
 //  Copyright (c) 2014年 KeySight. All rights reserved.
 //
 
-#ifndef MSG_CONTAINER_VIEW_CONTROLLER
-#define MSG_CONTAINER_VIEW_CONTROLLER
-
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 //#import "MsgSplitViewController.h"
@@ -32,6 +29,3 @@
 - (IBAction)exitToHere:(UIStoryboardSegue *)sender;
 
 @end
-
-#endif
-

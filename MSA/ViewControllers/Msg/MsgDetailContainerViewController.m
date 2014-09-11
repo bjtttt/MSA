@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "MsgDetailContainerViewController.h"
+#import "MsgDetailNavigationViewController.h"
 
-//@interface MsgDetailContainerViewController()
-//
-//@end
+@interface MsgDetailContainerViewController()
+
+@end
 
 @implementation MsgDetailContainerViewController
 
@@ -23,6 +24,7 @@
     if([segue.identifier isEqualToString:@"embedSegueToMsgDetailVC"])
     {
         self.msgDetailNVC = (MsgDetailNavigationViewController *)segue.destinationViewController;
+        self.msgDetailNVC.msgDetailCVC = self;
     }
 }
 
