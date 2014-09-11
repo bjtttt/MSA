@@ -457,10 +457,10 @@
             </objects>
             <point key="canvasLocation" x="3457" y="-762"/>
         </scene>
-        <!--System Settings Root View Controller-->
+        <!--System Master Root View Controller-->
         <scene sceneID="EMu-WC-12a">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="vX1-ce-Dzc" userLabel="System Settings Root View Controller" customClass="SystemMasterTableViewController" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="vX1-ce-Dzc" userLabel="System Master Root View Controller" customClass="SystemMasterTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ck6-uG-len">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -527,10 +527,10 @@
             </objects>
             <point key="canvasLocation" x="4308" y="-762"/>
         </scene>
-        <!--System Settings Navigation Controller-->
+        <!--System Master Navigation Controller-->
         <scene sceneID="PjD-u4-cAd">
             <objects>
-                <navigationController id="66U-mV-Keg" userLabel="System Settings Navigation Controller" customClass="MsgMasterNavigationViewController" sceneMemberID="viewController">
+                <navigationController id="66U-mV-Keg" userLabel="System Master Navigation Controller" customClass="SystemMasterNavigationViewController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1so-PA-yU9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
