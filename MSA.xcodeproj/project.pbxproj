@@ -13,10 +13,16 @@
 		9A659BDD19B6BC1800C30CE2 /* HideMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BDC19B6BC1800C30CE2 /* HideMenu.png */; };
 		9A659BDF19B6BC2000C30CE2 /* ShowMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BDE19B6BC2000C30CE2 /* ShowMenu.png */; };
 		9A659BE119B6BCE300C30CE2 /* Connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BE019B6BCE300C30CE2 /* Connect.png */; };
-		9A659BEB19B6DE9A00C30CE2 /* SystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A659BEA19B6DE9A00C30CE2 /* SystemViewController.m */; };
+		9A659BEB19B6DE9A00C30CE2 /* SystemContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A659BEA19B6DE9A00C30CE2 /* SystemContainerViewController.m */; };
 		9A659BED19B7008500C30CE2 /* System.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BEC19B7008500C30CE2 /* System.png */; };
 		9A726F4E19C1880000CDF55D /* MsgMasterNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F4D19C1880000CDF55D /* MsgMasterNavigationViewController.m */; };
 		9A726F5219C188C200CDF55D /* MsgDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F5119C188C200CDF55D /* MsgDetailTableViewController.m */; };
+		9A726F5B19C19FC000CDF55D /* SystemMasterNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F5819C19FC000CDF55D /* SystemMasterNavigationViewController.m */; };
+		9A726F5C19C19FC000CDF55D /* SystemMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F5A19C19FC000CDF55D /* SystemMasterTableViewController.m */; };
+		9A726F6319C19FDE00CDF55D /* SystemDetailContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F5E19C19FDE00CDF55D /* SystemDetailContainerViewController.m */; };
+		9A726F6419C19FDE00CDF55D /* SystemDetailNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F6019C19FDE00CDF55D /* SystemDetailNavigationViewController.m */; };
+		9A726F6519C19FDE00CDF55D /* SystemDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F6219C19FDE00CDF55D /* SystemDetailTableViewController.m */; };
+		9A726F6819C19FEE00CDF55D /* SystemSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F6719C19FEE00CDF55D /* SystemSplitViewController.m */; };
 		9A7422A519BDD2E400A251ED /* MsgDetailContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7422A419BDD2E400A251ED /* MsgDetailContainerViewController.m */; };
 		9A7422A719BDDBC900A251ED /* MSAList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A7422A619BDDBC900A251ED /* MSAList.plist */; };
 		9A90589919C08EFD00B0B6AB /* MsgSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A90589819C08EFD00B0B6AB /* MsgSplitViewController.m */; };
@@ -59,13 +65,25 @@
 		9A659BDC19B6BC1800C30CE2 /* HideMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideMenu.png; path = Images/32/HideMenu.png; sourceTree = "<group>"; };
 		9A659BDE19B6BC2000C30CE2 /* ShowMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShowMenu.png; path = Images/32/ShowMenu.png; sourceTree = "<group>"; };
 		9A659BE019B6BCE300C30CE2 /* Connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Connect.png; path = Images/32/Connect.png; sourceTree = "<group>"; };
-		9A659BE919B6DE9A00C30CE2 /* SystemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemViewController.h; path = ViewControllers/SystemViewController.h; sourceTree = "<group>"; };
-		9A659BEA19B6DE9A00C30CE2 /* SystemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemViewController.m; path = ViewControllers/SystemViewController.m; sourceTree = "<group>"; };
+		9A659BE919B6DE9A00C30CE2 /* SystemContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemContainerViewController.h; path = ViewControllers/SystemContainerViewController.h; sourceTree = "<group>"; };
+		9A659BEA19B6DE9A00C30CE2 /* SystemContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemContainerViewController.m; path = ViewControllers/SystemContainerViewController.m; sourceTree = "<group>"; };
 		9A659BEC19B7008500C30CE2 /* System.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = System.png; path = Images/32/System.png; sourceTree = "<group>"; };
 		9A726F4D19C1880000CDF55D /* MsgMasterNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgMasterNavigationViewController.m; path = ViewControllers/Msg/MsgMasterNavigationViewController.m; sourceTree = "<group>"; };
 		9A726F4F19C1881C00CDF55D /* MsgMasterNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MsgMasterNavigationViewController.h; path = ViewControllers/Msg/MsgMasterNavigationViewController.h; sourceTree = "<group>"; };
 		9A726F5019C188C200CDF55D /* MsgDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgDetailTableViewController.h; path = ViewControllers/Msg/MsgDetailTableViewController.h; sourceTree = "<group>"; };
 		9A726F5119C188C200CDF55D /* MsgDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgDetailTableViewController.m; path = ViewControllers/Msg/MsgDetailTableViewController.m; sourceTree = "<group>"; };
+		9A726F5719C19FC000CDF55D /* SystemMasterNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemMasterNavigationViewController.h; path = ViewControllers/System/SystemMasterNavigationViewController.h; sourceTree = "<group>"; };
+		9A726F5819C19FC000CDF55D /* SystemMasterNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemMasterNavigationViewController.m; path = ViewControllers/System/SystemMasterNavigationViewController.m; sourceTree = "<group>"; };
+		9A726F5919C19FC000CDF55D /* SystemMasterTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemMasterTableViewController.h; path = ViewControllers/System/SystemMasterTableViewController.h; sourceTree = "<group>"; };
+		9A726F5A19C19FC000CDF55D /* SystemMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemMasterTableViewController.m; path = ViewControllers/System/SystemMasterTableViewController.m; sourceTree = "<group>"; };
+		9A726F5D19C19FDE00CDF55D /* SystemDetailContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemDetailContainerViewController.h; path = ViewControllers/System/SystemDetailContainerViewController.h; sourceTree = "<group>"; };
+		9A726F5E19C19FDE00CDF55D /* SystemDetailContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemDetailContainerViewController.m; path = ViewControllers/System/SystemDetailContainerViewController.m; sourceTree = "<group>"; };
+		9A726F5F19C19FDE00CDF55D /* SystemDetailNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemDetailNavigationViewController.h; path = ViewControllers/System/SystemDetailNavigationViewController.h; sourceTree = "<group>"; };
+		9A726F6019C19FDE00CDF55D /* SystemDetailNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemDetailNavigationViewController.m; path = ViewControllers/System/SystemDetailNavigationViewController.m; sourceTree = "<group>"; };
+		9A726F6119C19FDE00CDF55D /* SystemDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemDetailTableViewController.h; path = ViewControllers/System/SystemDetailTableViewController.h; sourceTree = "<group>"; };
+		9A726F6219C19FDE00CDF55D /* SystemDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemDetailTableViewController.m; path = ViewControllers/System/SystemDetailTableViewController.m; sourceTree = "<group>"; };
+		9A726F6619C19FEE00CDF55D /* SystemSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemSplitViewController.h; path = ViewControllers/System/SystemSplitViewController.h; sourceTree = "<group>"; };
+		9A726F6719C19FEE00CDF55D /* SystemSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemSplitViewController.m; path = ViewControllers/System/SystemSplitViewController.m; sourceTree = "<group>"; };
 		9A7422A319BDD2E400A251ED /* MsgDetailContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgDetailContainerViewController.h; path = ViewControllers/Msg/MsgDetailContainerViewController.h; sourceTree = "<group>"; };
 		9A7422A419BDD2E400A251ED /* MsgDetailContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgDetailContainerViewController.m; path = ViewControllers/Msg/MsgDetailContainerViewController.m; sourceTree = "<group>"; };
 		9A7422A619BDDBC900A251ED /* MSAList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MSAList.plist; path = ViewControllers/MSAList.plist; sourceTree = "<group>"; };
@@ -165,6 +183,30 @@
 				9A9FFE7D19C0430800F76D38 /* MsgDetailNavigationViewController.m */,
 				9A726F5019C188C200CDF55D /* MsgDetailTableViewController.h */,
 				9A726F5119C188C200CDF55D /* MsgDetailTableViewController.m */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		9A726F5519C19FA800CDF55D /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				9A726F5719C19FC000CDF55D /* SystemMasterNavigationViewController.h */,
+				9A726F5819C19FC000CDF55D /* SystemMasterNavigationViewController.m */,
+				9A726F5919C19FC000CDF55D /* SystemMasterTableViewController.h */,
+				9A726F5A19C19FC000CDF55D /* SystemMasterTableViewController.m */,
+			);
+			name = Master;
+			sourceTree = "<group>";
+		};
+		9A726F5619C19FAF00CDF55D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9A726F5D19C19FDE00CDF55D /* SystemDetailContainerViewController.h */,
+				9A726F5E19C19FDE00CDF55D /* SystemDetailContainerViewController.m */,
+				9A726F5F19C19FDE00CDF55D /* SystemDetailNavigationViewController.h */,
+				9A726F6019C19FDE00CDF55D /* SystemDetailNavigationViewController.m */,
+				9A726F6119C19FDE00CDF55D /* SystemDetailTableViewController.h */,
+				9A726F6219C19FDE00CDF55D /* SystemDetailTableViewController.m */,
 			);
 			name = Detail;
 			sourceTree = "<group>";
@@ -311,8 +353,12 @@
 		9AF7001519B83C60000A69A5 /* System */ = {
 			isa = PBXGroup;
 			children = (
-				9A659BE919B6DE9A00C30CE2 /* SystemViewController.h */,
-				9A659BEA19B6DE9A00C30CE2 /* SystemViewController.m */,
+				9A726F5619C19FAF00CDF55D /* Detail */,
+				9A726F5519C19FA800CDF55D /* Master */,
+				9A659BE919B6DE9A00C30CE2 /* SystemContainerViewController.h */,
+				9A659BEA19B6DE9A00C30CE2 /* SystemContainerViewController.m */,
+				9A726F6619C19FEE00CDF55D /* SystemSplitViewController.h */,
+				9A726F6719C19FEE00CDF55D /* SystemSplitViewController.m */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -430,22 +476,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A726F5B19C19FC000CDF55D /* SystemMasterNavigationViewController.m in Sources */,
 				9A9C671419AD6C81007D3248 /* MSA.xcdatamodeld in Sources */,
 				9A726F4E19C1880000CDF55D /* MsgMasterNavigationViewController.m in Sources */,
+				9A726F6519C19FDE00CDF55D /* SystemDetailTableViewController.m in Sources */,
 				9A953EE419AD84E7005467A1 /* DisplayViewController.m in Sources */,
+				9A726F6419C19FDE00CDF55D /* SystemDetailNavigationViewController.m in Sources */,
 				9A9C671119AD6C81007D3248 /* AppDelegate.m in Sources */,
 				9A7422A519BDD2E400A251ED /* MsgDetailContainerViewController.m in Sources */,
 				9A953EE619AD84E7005467A1 /* MenuViewController.m in Sources */,
 				9ACA2EB919BD4651005542B5 /* MsgMasterTableViewController.m in Sources */,
 				9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */,
+				9A726F6319C19FDE00CDF55D /* SystemDetailContainerViewController.m in Sources */,
 				9A90589919C08EFD00B0B6AB /* MsgSplitViewController.m in Sources */,
 				9A9C671719AD6C81007D3248 /* ContainerViewController.m in Sources */,
 				9A726F5219C188C200CDF55D /* MsgDetailTableViewController.m in Sources */,
 				9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */,
+				9A726F6819C19FEE00CDF55D /* SystemSplitViewController.m in Sources */,
 				9A953EE919ADCBB6005467A1 /* ShareSettings.m in Sources */,
+				9A726F5C19C19FC000CDF55D /* SystemMasterTableViewController.m in Sources */,
 				9A9FFE7E19C0430800F76D38 /* MsgDetailNavigationViewController.m in Sources */,
 				9A9C670E19AD6C81007D3248 /* main.m in Sources */,
-				9A659BEB19B6DE9A00C30CE2 /* SystemViewController.m in Sources */,
+				9A659BEB19B6DE9A00C30CE2 /* SystemContainerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  MsgViewController.h
+//  SystemContainerViewController.h
 //  MSA
 //
 //  Created by GUO Zhitao on 14-8-26.
@@ -9,10 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 
-@interface SystemViewController : UIViewController
+@class SystemSplitViewController;
 
-@property (weak, nonatomic) IBOutlet UINavigationBar *msgNavBar;
-@property (weak, nonatomic) IBOutlet UIView *msgVC;
+@interface SystemContainerViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UINavigationBar *systNavBar;
+@property (weak, nonatomic) IBOutlet UIView *systVC;
+
+@property (weak, nonatomic) IBOutlet SystemSplitViewController *systSplitVC;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 

@@ -7,13 +7,13 @@
 //
 
 #import "ShareSettings.h"
-#import "SystemViewController.h"
+#import "SystemContainerViewController.h"
 
-@interface SystemViewController ()
+@interface SystemContainerViewController ()
 
 @end
 
-@implementation SystemViewController
+@implementation SystemContainerViewController
             
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -8,5 +8,19 @@
 		<string>History</string>
 		<string>Settings</string>
 	</array>
+	<key>system</key>
+	<array>
+		<string>System</string>
+		<string>I/O Config</string>
+		<string>User Interface</string>
+		<string>Power On</string>
+		<string>Restore Defaults</string>
+		<string>Alignments</string>
+		<string>Licensing ...</string>
+		<string>Security</string>
+		<string>Diagnostics</string>
+		<string>Service</string>
+		<string>Language</string>
+	</array>
 </dict>
 </plist>

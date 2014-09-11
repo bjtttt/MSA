@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
-//#import "MsgSplitViewController.h"
 
 @class MsgSplitViewController;
 

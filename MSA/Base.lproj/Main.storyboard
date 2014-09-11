@@ -382,7 +382,7 @@
         <!--System Container View Controller-->
         <scene sceneID="DIB-C4-fJI">
             <objects>
-                <viewController id="yVy-dA-8Lh" userLabel="System Container View Controller" sceneMemberID="viewController">
+                <viewController id="yVy-dA-8Lh" userLabel="System Container View Controller" customClass="SystemContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Mzi-hX-rxh"/>
                         <viewControllerLayoutGuide type="bottom" id="n3l-Le-RgJ"/>
@@ -391,8 +391,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bte-kj-n7i">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="System" id="i1k-Mm-EIq">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="CVm-ON-yZN">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JgT-KG-iVY">
+                                                <rect key="frame" x="451" y="7" width="24" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="Return.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ui7-9B-3vm" userLabel="System Container View">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                                 <connections>
                                     <segue destination="ekM-sg-wqf" kind="presentation" id="cdo-fp-uxf"/>
                                 </connections>
