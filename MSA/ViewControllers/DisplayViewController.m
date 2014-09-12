@@ -26,8 +26,11 @@
     
     //self.msgCVC.shareSettings = self.shareSettings;
     
-    //self.settingsV.layer.borderWidth = BORDER_WIDTH;
-    //self.settingsV.layer.borderColor = [[UIColor blackColor] CGColor];
+    self.settingsV.layer.borderWidth = NORMAL_BORDER_WIDTH;
+    self.settingsV.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    
+    self.tracesV.layer.borderWidth = HEAVY_BORDER_WIDTH;
+    self.tracesV.layer.borderColor = [[UIColor grayColor] CGColor];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

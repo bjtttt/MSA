@@ -39,7 +39,8 @@ typedef enum systType {
 }SYSTType;
 
 #define CORNER_RADIUS 3.0f
-#define BORDER_WIDTH 1.0f
+#define NORMAL_BORDER_WIDTH 1.0f
+#define HEAVY_BORDER_WIDTH 3.0f
 #define VC_MARGIN 1.0f
 #define MENU_WIDTH 200.0f
 
