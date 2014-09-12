@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet MsgContainerViewController *msgCVC;
 @property (weak, nonatomic) IBOutlet SystemContainerViewController *systCVC;
 
+@property (weak, nonatomic) IBOutlet UIView *settingsV;
+@property (weak, nonatomic) IBOutlet UIView *tracesV;
+
 @property (weak, nonatomic) IBOutlet UINavigationBar *displayNavBar;
 @property (weak, nonatomic) IBOutlet UIButton *showConnectButton;
 @property (weak, nonatomic) IBOutlet UIButton *showSystemButton;
@@ -27,6 +30,7 @@
 
 @property (nonatomic) double navBarHeight;
 @property (nonatomic) double toolBarHeight;
+@property (nonatomic) double settingsHeight;
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
 

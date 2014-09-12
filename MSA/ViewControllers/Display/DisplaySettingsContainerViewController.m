@@ -1,24 +1,22 @@
 //
-//  ContainerViewController.m
+//  DisplaySettingsContainerViewController.m
 //  MSA
 //
 //  Created by GUO Zhitao on 14-8-26.
 //  Copyright (c) 2014年 KeySight. All rights reserved.
 //
 
-#import "MenuViewController.h"
+#import <QuartzCore/QuartzCore.h>
+#import "DisplaySettingsContainerViewController.h"
 
-@interface MenuViewController ()
+@interface DisplaySettingsContainerViewController ()
 
 @end
 
-@implementation MenuViewController
+@implementation DisplaySettingsContainerViewController
             
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //self.view.layer.borderWidth = BORDER_WIDTH;
-    //self.view.layer.borderColor = [[UIColor blackColor] CGColor];
 }
 
 -(void)viewWillLayoutSubviews{
