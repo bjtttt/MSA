@@ -8,7 +8,7 @@
 
 #import "ShareSettings.h"
 #import "ContainerViewController.h"
-#import "DisplayViewController.h"
+#import "DisplayContainerViewController.h"
 
 @interface ContainerViewController ()
 
@@ -45,7 +45,7 @@
     //self.displayView.layer.borderWidth = VIEWCONTROLLER_DEFAULT_BORDER_WIDTH;
     //self.displayView.layer.borderColor = [[UIColor blackColor] CGColor];
     //self.displayView.layer.cornerRadius = VIEWCONTROLLER_DEFAULT_CORNER_RADIUS;
-    self.displayVC.shareSettings = self.shareSettings;
+    self.displayCVC.shareSettings = self.shareSettings;
 
     //self.menuView.layer.borderWidth = VIEWCONTROLLER_DEFAULT_BORDER_WIDTH;
     //self.menuView.layer.borderColor = [[UIColor blackColor] CGColor];
@@ -72,7 +72,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"embedSegueToDisplayVC"])
-        self.displayVC = (DisplayViewController *)segue.destinationViewController;
+        self.displayCVC = (DisplayContainerViewController *)segue.destinationViewController;
 }
 
 -(void)didReceiveMemoryWarning {

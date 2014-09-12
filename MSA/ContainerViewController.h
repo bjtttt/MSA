@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
-#import "DisplayViewController.h"
-#import "MenuViewController.h"
+#import "DisplayContainerViewController.h"
+#import "MenuContainerViewController.h"
 #import "MsgContainerViewController.h"
 #import "SystemContainerViewController.h"
 
@@ -20,8 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIView *msgView;
 @property (weak, nonatomic) IBOutlet UIView *systemView;
 
-@property (weak, nonatomic) IBOutlet DisplayViewController *displayVC;
-@property (weak, nonatomic) IBOutlet MenuViewController *menuVC;
+@property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
+@property (weak, nonatomic) IBOutlet MenuContainerViewController *menuCVC;
 @property (weak, nonatomic) IBOutlet MsgContainerViewController *msgCVC;
 @property (weak, nonatomic) IBOutlet SystemContainerViewController *systemCVC;
 

@@ -1,5 +1,5 @@
 //
-//  DisplayViewController.h
+//  DisplayContainerViewController.h
 //  MSA
 //
 //  Created by GUO Zhitao on 14-8-26.
@@ -11,7 +11,7 @@
 #import "MsgContainerViewController.h"
 #import "SystemContainerViewController.h"
 
-@interface DisplayViewController : UIViewController
+@interface DisplayContainerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet MsgContainerViewController *msgCVC;
 @property (weak, nonatomic) IBOutlet SystemContainerViewController *systCVC;

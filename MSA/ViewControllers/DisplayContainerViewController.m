@@ -1,5 +1,5 @@
 //
-//  DisplayViewController.m
+//  DisplayContainerViewController.m
 //  MSA
 //
 //  Created by GUO Zhitao on 14-8-26.
@@ -7,14 +7,13 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "DisplayViewController.h"
-#import "DisplayViewController.h"
+#import "DisplayContainerViewController.h"
 
-@interface DisplayViewController ()
+@interface DisplayContainerViewController ()
 
 @end
 
-@implementation DisplayViewController
+@implementation DisplayContainerViewController
 
 //-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 //    [super prepareForSegue:segue sender:sender];
