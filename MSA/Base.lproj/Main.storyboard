@@ -422,7 +422,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bte-kj-n7i">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <items>
-                                    <navigationItem title="System" id="i1k-Mm-EIq">
+                                    <navigationItem title="System Settings" id="i1k-Mm-EIq">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="CVm-ON-yZN">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JgT-KG-iVY">
                                                 <rect key="frame" x="451" y="7" width="24" height="24"/>

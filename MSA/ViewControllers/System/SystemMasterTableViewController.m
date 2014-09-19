@@ -40,6 +40,10 @@ static NSString *systMasterCellTableId = @"systMasterTVC";
 
 -(void) viewWillAppear:(BOOL)animated{
     self.systMasterNVC.systSplitVC.systDetailCVC.systDetailNVC.systDetailTVC.currentSystem = SYST_SYSTEM;
+
+    //[self.tableView.tableHeaderView removeFromSuperview];
+    //self.tableView.tableHeaderView=nil;
+    //[self.tableView reloadData];
 }
 
 /*
@@ -79,5 +83,10 @@ static NSString *systMasterCellTableId = @"systMasterTVC";
     //NSString *messageType = self.statuses[indexPath.row];
     self.systMasterNVC.systSplitVC.systDetailCVC.systDetailNVC.systDetailTVC.currentSystem = (SYSTType)indexPath.row;
 }
+
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+//{
+//    return 0.0;
+//}
 
 @end
