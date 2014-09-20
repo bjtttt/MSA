@@ -1,5 +1,5 @@
 //
-//  SystemDetailNavigationViewController.m
+//  SystemDetailTableViewController.m
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.
@@ -23,6 +23,8 @@
     self.systems = [msaInfo objectForKey:@"systems"];
 
     self.tableView.tableFooterView=[[UIView alloc] initWithFrame:CGRectZero];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 -(void) setCurrentStatus:(MSGType)currentSystem{

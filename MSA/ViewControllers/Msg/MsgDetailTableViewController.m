@@ -1,5 +1,5 @@
 //
-//  MsgDetailNavigationViewController.m
+//  MsgDetailTableViewController.m
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.
@@ -23,6 +23,8 @@
     self.statuses = [msaInfo objectForKey:@"statuses"];
 
     self.tableView.tableFooterView=[[UIView alloc] initWithFrame:CGRectZero];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 -(void) setCurrentStatus:(MSGType)currentStatus{

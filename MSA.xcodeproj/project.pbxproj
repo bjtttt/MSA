@@ -25,6 +25,9 @@
 		9A726F6819C19FEE00CDF55D /* SystemSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F6719C19FEE00CDF55D /* SystemSplitViewController.m */; };
 		9A7422A519BDD2E400A251ED /* MsgDetailContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7422A419BDD2E400A251ED /* MsgDetailContainerViewController.m */; };
 		9A7422A719BDDBC900A251ED /* MSAList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A7422A619BDDBC900A251ED /* MSAList.plist */; };
+		9A79537519CD35BE009984A6 /* MeasureContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79537219CD35BE009984A6 /* MeasureContainerViewController.m */; };
+		9A79537619CD35BE009984A6 /* MeasureNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79537419CD35BE009984A6 /* MeasureNavigationViewController.m */; };
+		9A79537919CD3902009984A6 /* MeasureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79537819CD3902009984A6 /* MeasureTableViewController.m */; };
 		9A90589919C08EFD00B0B6AB /* MsgSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A90589819C08EFD00B0B6AB /* MsgSplitViewController.m */; };
 		9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EDC19AD84E7005467A1 /* ConnectViewController.m */; };
 		9A953EE419AD84E7005467A1 /* DisplayContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EDE19AD84E7005467A1 /* DisplayContainerViewController.m */; };
@@ -89,6 +92,12 @@
 		9A7422A319BDD2E400A251ED /* MsgDetailContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgDetailContainerViewController.h; path = ViewControllers/Msg/MsgDetailContainerViewController.h; sourceTree = "<group>"; };
 		9A7422A419BDD2E400A251ED /* MsgDetailContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgDetailContainerViewController.m; path = ViewControllers/Msg/MsgDetailContainerViewController.m; sourceTree = "<group>"; };
 		9A7422A619BDDBC900A251ED /* MSAList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MSAList.plist; path = ViewControllers/MSAList.plist; sourceTree = "<group>"; };
+		9A79537119CD35BE009984A6 /* MeasureContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeasureContainerViewController.h; path = ViewControllers/Measure/MeasureContainerViewController.h; sourceTree = "<group>"; };
+		9A79537219CD35BE009984A6 /* MeasureContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasureContainerViewController.m; path = ViewControllers/Measure/MeasureContainerViewController.m; sourceTree = "<group>"; };
+		9A79537319CD35BE009984A6 /* MeasureNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeasureNavigationViewController.h; path = ViewControllers/Measure/MeasureNavigationViewController.h; sourceTree = "<group>"; };
+		9A79537419CD35BE009984A6 /* MeasureNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasureNavigationViewController.m; path = ViewControllers/Measure/MeasureNavigationViewController.m; sourceTree = "<group>"; };
+		9A79537719CD3902009984A6 /* MeasureTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeasureTableViewController.h; path = ViewControllers/Measure/MeasureTableViewController.h; sourceTree = "<group>"; };
+		9A79537819CD3902009984A6 /* MeasureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasureTableViewController.m; path = ViewControllers/Measure/MeasureTableViewController.m; sourceTree = "<group>"; };
 		9A90589819C08EFD00B0B6AB /* MsgSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgSplitViewController.m; path = ViewControllers/Msg/MsgSplitViewController.m; sourceTree = "<group>"; };
 		9A90589A19C08F1000B0B6AB /* MsgSplitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MsgSplitViewController.h; path = ViewControllers/Msg/MsgSplitViewController.h; sourceTree = "<group>"; };
 		9A953EDB19AD84E7005467A1 /* ConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectViewController.h; path = ViewControllers/ConnectViewController.h; sourceTree = "<group>"; };
@@ -226,10 +235,24 @@
 			name = Detail;
 			sourceTree = "<group>";
 		};
+		9A79537019CD2A91009984A6 /* Measure */ = {
+			isa = PBXGroup;
+			children = (
+				9A79537719CD3902009984A6 /* MeasureTableViewController.h */,
+				9A79537819CD3902009984A6 /* MeasureTableViewController.m */,
+				9A79537119CD35BE009984A6 /* MeasureContainerViewController.h */,
+				9A79537219CD35BE009984A6 /* MeasureContainerViewController.m */,
+				9A79537319CD35BE009984A6 /* MeasureNavigationViewController.h */,
+				9A79537419CD35BE009984A6 /* MeasureNavigationViewController.m */,
+			);
+			name = Measure;
+			sourceTree = "<group>";
+		};
 		9A953EDA19AD8436005467A1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				9A9C671819AD6C81007D3248 /* Main.storyboard */,
+				9A79537019CD2A91009984A6 /* Measure */,
 				9A39BD9519C2CB380097A7C3 /* Menu */,
 				9AE0AFB619C2B4E8008544AC /* Display */,
 				9AF7001519B83C60000A69A5 /* System */,
@@ -514,6 +537,7 @@
 				9AE0AFB919C2B55C008544AC /* DisplaySettingsContainerViewController.m in Sources */,
 				9A953EE619AD84E7005467A1 /* MenuContainerViewController.m in Sources */,
 				9ACA2EB919BD4651005542B5 /* MsgMasterTableViewController.m in Sources */,
+				9A79537919CD3902009984A6 /* MeasureTableViewController.m in Sources */,
 				9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */,
 				9A726F6319C19FDE00CDF55D /* SystemDetailContainerViewController.m in Sources */,
 				9A90589919C08EFD00B0B6AB /* MsgSplitViewController.m in Sources */,
@@ -526,6 +550,8 @@
 				9A9FFE7E19C0430800F76D38 /* MsgDetailNavigationViewController.m in Sources */,
 				9A9C670E19AD6C81007D3248 /* main.m in Sources */,
 				9A659BEB19B6DE9A00C30CE2 /* SystemContainerViewController.m in Sources */,
+				9A79537519CD35BE009984A6 /* MeasureContainerViewController.m in Sources */,
+				9A79537619CD35BE009984A6 /* MeasureNavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

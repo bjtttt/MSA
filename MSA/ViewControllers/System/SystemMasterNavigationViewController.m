@@ -22,6 +22,8 @@
     self.systMasterTVC = [self.viewControllers firstObject];
     self.systMasterTVC.shareSettings = self.shareSettings;
     self.systMasterTVC.systMasterNVC = self;
+    
+    //[self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 @end

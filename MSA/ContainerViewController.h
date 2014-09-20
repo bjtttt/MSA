@@ -17,6 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *displayView;
 @property (weak, nonatomic) IBOutlet UIView *menuView;
+@property (weak, nonatomic) IBOutlet UIView *measureView;
 @property (weak, nonatomic) IBOutlet UIView *msgView;
 @property (weak, nonatomic) IBOutlet UIView *systemView;
 

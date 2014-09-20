@@ -1,5 +1,5 @@
 //
-//  SystemDetailNavigationViewController.h
+//  SystemDetailTableViewController.h
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.

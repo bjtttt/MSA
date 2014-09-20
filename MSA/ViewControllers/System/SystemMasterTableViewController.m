@@ -36,6 +36,7 @@ static NSString *systMasterCellTableId = @"systMasterTVC";
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionBottom];
     
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 -(void) viewWillAppear:(BOOL)animated{
