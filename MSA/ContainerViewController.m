@@ -119,8 +119,10 @@
             {
                 layoutBlock = ^(void){
                     switch (self.shareSettings.prevMSALayout) {
+                        default:
                         case MSA_DISP:
                             // Startup State
+                            break;
                         case MSA_MENU:
                             {
                                 self.menuView.frame = CGRectMake(self.frameWidth, 0, MENU_WIDTH, self.frameHeight);
@@ -142,13 +144,6 @@
                                          self.shareSettings.prevMSALayout);
                             }
                             break;
-                        default:
-                            {
-                                NSAssert(false, @"Error : Current layout is %u while previous layout is %u",
-                                         self.shareSettings.curMSALayout,
-                                         self.shareSettings.prevMSALayout);
-                            }
-                            break;
                     }
                 };
                 completionBlock = ^(BOOL finished){
@@ -166,7 +161,9 @@
             {
                 layoutBlock = ^(void){
                     switch (self.shareSettings.prevMSALayout) {
+                        default:
                         case MSA_MENU:
+                            break;
                         case MSA_DISP:
                             {
                                 self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
@@ -184,13 +181,6 @@
                         case MSA_MENU_FULL:
                             {
                                 NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
-                                         self.shareSettings.curMSALayout,
-                                         self.shareSettings.prevMSALayout);
-                            }
-                            break;
-                        default:
-                            {
-                                NSAssert(false, @"Error : Current layout is %u while previous layout is %u",
                                          self.shareSettings.curMSALayout,
                                          self.shareSettings.prevMSALayout);
                             }
