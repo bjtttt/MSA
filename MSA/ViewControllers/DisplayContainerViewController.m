@@ -8,6 +8,8 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "DisplayContainerViewController.h"
+#import "MSAFormSheetController.h"
+//#import "MSACustomFormSheetController.h"
 
 @interface DisplayContainerViewController ()
 
@@ -86,6 +88,16 @@
 
 - (IBAction)exitToHere:(UIStoryboardSegue *)sender {
     // Nothing to do here
+}
+
+- (IBAction)transitionFromTop:(id)sender
+{
+    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"nav"];
+    
+    // present form sheet with view controller
+    [self presentFormSheetWithViewController:vc animated:YES completionHandler:^(MSAFormSheetController *formSheetController) {
+        //do sth
+    }];
 }
 
 @end

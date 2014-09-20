@@ -122,7 +122,7 @@
                         default:
                         case MSA_DISP:
                             // Startup State
-                            break;
+                            //break;
                         case MSA_MENU:
                             {
                                 self.menuView.frame = CGRectMake(self.frameWidth, 0, MENU_WIDTH, self.frameHeight);

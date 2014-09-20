@@ -36,6 +36,7 @@
 
 - (IBAction)showHideMenu:(id)sender;
 - (IBAction)exitToHere:(UIStoryboardSegue *)sender;
+- (IBAction)transitionFromTop:(id)sender;
 
 @end
 
