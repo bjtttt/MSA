@@ -9,17 +9,25 @@
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 
+@class PresetMenuContainerViewController;
+@class SoftMenuContainerViewController;
+
 @interface MenuContainerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *presetMenuV;
 @property (weak, nonatomic) IBOutlet UIView *softMenuV;
 @property (weak, nonatomic) IBOutlet UINavigationBar *menuNavBar;
 
+@property (weak, nonatomic) IBOutlet PresetMenuContainerViewController *presetMenuCVC;
+@property (weak, nonatomic) IBOutlet SoftMenuContainerViewController *softMenuCVC;
+
 - (IBAction)showPresetMenu:(id)sender;
 
 @property (nonatomic) double navBarHeight;
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
+
+@property (weak, nonatomic) ShareSettings *shareSettings;
 
 @end
 

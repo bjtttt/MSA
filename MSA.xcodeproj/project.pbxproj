@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A1C929419CECC9B00074EA6 /* PresetMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C929319CECC9B00074EA6 /* PresetMenuTableViewController.m */; };
+		9A1C929B19CED2B400074EA6 /* SoftMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C929619CED2B400074EA6 /* SoftMenuContainerViewController.m */; };
+		9A1C929C19CED2B400074EA6 /* SoftMenuNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C929819CED2B400074EA6 /* SoftMenuNavigationViewController.m */; };
+		9A1C929D19CED2B400074EA6 /* SoftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C929A19CED2B400074EA6 /* SoftMenuTableViewController.m */; };
+		9A1C92A019CED75300074EA6 /* PresetMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C929F19CED75300074EA6 /* PresetMenuContainerViewController.m */; };
 		9A5FDA7F19B5FB9A00B3C300 /* Preset.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5FDA7E19B5FB9A00B3C300 /* Preset.png */; };
 		9A659BDA19B6B91900C30CE2 /* MsgEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BD819B6B91900C30CE2 /* MsgEmpty.png */; };
 		9A659BDB19B6B91900C30CE2 /* MsgNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BD919B6B91900C30CE2 /* MsgNew.png */; };
@@ -70,6 +75,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A1C929219CECC9B00074EA6 /* PresetMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PresetMenuTableViewController.h; path = ViewControllers/Menu/PresetMenuTableViewController.h; sourceTree = "<group>"; };
+		9A1C929319CECC9B00074EA6 /* PresetMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresetMenuTableViewController.m; path = ViewControllers/Menu/PresetMenuTableViewController.m; sourceTree = "<group>"; };
+		9A1C929519CED2B400074EA6 /* SoftMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuContainerViewController.h; path = ViewControllers/Menu/SoftMenuContainerViewController.h; sourceTree = "<group>"; };
+		9A1C929619CED2B400074EA6 /* SoftMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuContainerViewController.m; path = ViewControllers/Menu/SoftMenuContainerViewController.m; sourceTree = "<group>"; };
+		9A1C929719CED2B400074EA6 /* SoftMenuNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuNavigationViewController.h; path = ViewControllers/Menu/SoftMenuNavigationViewController.h; sourceTree = "<group>"; };
+		9A1C929819CED2B400074EA6 /* SoftMenuNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuNavigationViewController.m; path = ViewControllers/Menu/SoftMenuNavigationViewController.m; sourceTree = "<group>"; };
+		9A1C929919CED2B400074EA6 /* SoftMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuTableViewController.h; path = ViewControllers/Menu/SoftMenuTableViewController.h; sourceTree = "<group>"; };
+		9A1C929A19CED2B400074EA6 /* SoftMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuTableViewController.m; path = ViewControllers/Menu/SoftMenuTableViewController.m; sourceTree = "<group>"; };
+		9A1C929E19CED75300074EA6 /* PresetMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PresetMenuContainerViewController.h; path = ViewControllers/Menu/PresetMenuContainerViewController.h; sourceTree = "<group>"; };
+		9A1C929F19CED75300074EA6 /* PresetMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresetMenuContainerViewController.m; path = ViewControllers/Menu/PresetMenuContainerViewController.m; sourceTree = "<group>"; };
 		9A5FDA7E19B5FB9A00B3C300 /* Preset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Preset.png; path = Images/32/Preset.png; sourceTree = "<group>"; };
 		9A659BD819B6B91900C30CE2 /* MsgEmpty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MsgEmpty.png; path = Images/32/MsgEmpty.png; sourceTree = "<group>"; };
 		9A659BD919B6B91900C30CE2 /* MsgNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MsgNew.png; path = Images/32/MsgNew.png; sourceTree = "<group>"; };
@@ -175,9 +190,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A1C92A119CED75600074EA6 /* Preset */ = {
+			isa = PBXGroup;
+			children = (
+				9A1C929E19CED75300074EA6 /* PresetMenuContainerViewController.h */,
+				9A1C929F19CED75300074EA6 /* PresetMenuContainerViewController.m */,
+				9A1C929219CECC9B00074EA6 /* PresetMenuTableViewController.h */,
+				9A1C929319CECC9B00074EA6 /* PresetMenuTableViewController.m */,
+			);
+			name = Preset;
+			sourceTree = "<group>";
+		};
+		9A1C92A219CED75C00074EA6 /* Soft */ = {
+			isa = PBXGroup;
+			children = (
+				9A1C929519CED2B400074EA6 /* SoftMenuContainerViewController.h */,
+				9A1C929619CED2B400074EA6 /* SoftMenuContainerViewController.m */,
+				9A1C929719CED2B400074EA6 /* SoftMenuNavigationViewController.h */,
+				9A1C929819CED2B400074EA6 /* SoftMenuNavigationViewController.m */,
+				9A1C929919CED2B400074EA6 /* SoftMenuTableViewController.h */,
+				9A1C929A19CED2B400074EA6 /* SoftMenuTableViewController.m */,
+			);
+			name = Soft;
+			sourceTree = "<group>";
+		};
 		9A39BD9519C2CB380097A7C3 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				9A1C92A219CED75C00074EA6 /* Soft */,
+				9A1C92A119CED75600074EA6 /* Preset */,
 				9A953EE119AD84E7005467A1 /* MenuContainerViewController.h */,
 				9A953EE219AD84E7005467A1 /* MenuContainerViewController.m */,
 			);
@@ -588,7 +629,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A726F5B19C19FC000CDF55D /* SystemMasterNavigationViewController.m in Sources */,
+				9A1C929C19CED2B400074EA6 /* SoftMenuNavigationViewController.m in Sources */,
+				9A1C92A019CED75300074EA6 /* PresetMenuContainerViewController.m in Sources */,
 				9A9C671419AD6C81007D3248 /* MSA.xcdatamodeld in Sources */,
+				9A1C929B19CED2B400074EA6 /* SoftMenuContainerViewController.m in Sources */,
 				9A79538619CDA322009984A6 /* MSAFormSheetBackgroundWindow.m in Sources */,
 				9A79538819CDA322009984A6 /* UIImage+Additional.m in Sources */,
 				9A726F4E19C1880000CDF55D /* MsgMasterNavigationViewController.m in Sources */,
@@ -602,9 +646,11 @@
 				9A953EE619AD84E7005467A1 /* MenuContainerViewController.m in Sources */,
 				9ACA2EB919BD4651005542B5 /* MsgMasterTableViewController.m in Sources */,
 				9A79537919CD3902009984A6 /* MeasureTableViewController.m in Sources */,
+				9A1C929D19CED2B400074EA6 /* SoftMenuTableViewController.m in Sources */,
 				9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */,
 				9A79538719CDA322009984A6 /* MSAFormSheetSegue.m in Sources */,
 				9A726F6319C19FDE00CDF55D /* SystemDetailContainerViewController.m in Sources */,
+				9A1C929419CECC9B00074EA6 /* PresetMenuTableViewController.m in Sources */,
 				9A90589919C08EFD00B0B6AB /* MsgSplitViewController.m in Sources */,
 				9A9C671719AD6C81007D3248 /* ContainerViewController.m in Sources */,
 				9A726F5219C188C200CDF55D /* MsgDetailTableViewController.m in Sources */,

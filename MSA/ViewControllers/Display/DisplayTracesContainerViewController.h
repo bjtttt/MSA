@@ -11,6 +11,7 @@
 
 @interface DisplayTracesContainerViewController : UIViewController
 
+@property (strong, nonatomic) ShareSettings * shareSettings;
 
 @end
 

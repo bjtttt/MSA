@@ -11,6 +11,7 @@
 
 @interface DisplaySettingsContainerViewController : UIViewController
 
+@property (strong, nonatomic) ShareSettings * shareSettings;
 
 @end
 

@@ -7,6 +7,8 @@
 //
 
 #import "MenuContainerViewController.h"
+#import "PresetMenuContainerViewController.h"
+#import "SoftMenuContainerViewController.h"
 
 @interface MenuContainerViewController ()
 
@@ -19,6 +21,21 @@
     
     //self.view.layer.borderWidth = BORDER_WIDTH;
     //self.view.layer.borderColor = [[UIColor blackColor] CGColor];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"embedSegueToPresetMenuCVC"])
+    {
+        self.presetMenuCVC = (PresetMenuContainerViewController *)segue.destinationViewController;
+        self.presetMenuCVC.shareSettings = self.shareSettings;
+        self.presetMenuCVC.menuCVC = self;
+    }
+    if([segue.identifier isEqualToString:@"embedSegueToSoftMenuCVC"])
+    {
+        self.softMenuCVC = (SoftMenuContainerViewController *)segue.destinationViewController;
+        self.softMenuCVC.shareSettings = self.shareSettings;
+        self.softMenuCVC.menuCVC = self;
+    }
 }
 
 -(void)viewWillLayoutSubviews {
