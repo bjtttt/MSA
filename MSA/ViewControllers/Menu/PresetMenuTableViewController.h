@@ -16,8 +16,8 @@
 @property (weak, nonatomic) IBOutlet PresetMenuContainerViewController *presetMenuCVC;
 
 @property (copy, nonatomic) NSArray *preset;
-@property (copy, nonatomic) NSArray *presetUser;
-@property (copy, nonatomic) NSArray *presetAllModes;
+//@property (copy, nonatomic) NSArray *presetUser;
+//@property (copy, nonatomic) NSArray *presetAllModes;
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
 
