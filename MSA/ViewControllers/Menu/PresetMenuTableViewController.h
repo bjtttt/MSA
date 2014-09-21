@@ -19,6 +19,9 @@
 //@property (copy, nonatomic) NSArray *presetUser;
 //@property (copy, nonatomic) NSArray *presetAllModes;
 
+@property (nonatomic) double frameWidth;
+@property (nonatomic) double frameHeight;
+
 @property (weak, nonatomic) ShareSettings *shareSettings;
 
 @end

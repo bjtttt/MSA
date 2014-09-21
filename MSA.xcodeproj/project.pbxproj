@@ -193,6 +193,7 @@
 		9A1C92A119CED75600074EA6 /* Preset */ = {
 			isa = PBXGroup;
 			children = (
+				9A1C92A319CF06D600074EA6 /* CellStyle */,
 				9A1C929E19CED75300074EA6 /* PresetMenuContainerViewController.h */,
 				9A1C929F19CED75300074EA6 /* PresetMenuContainerViewController.m */,
 				9A1C929219CECC9B00074EA6 /* PresetMenuTableViewController.h */,
@@ -212,6 +213,13 @@
 				9A1C929A19CED2B400074EA6 /* SoftMenuTableViewController.m */,
 			);
 			name = Soft;
+			sourceTree = "<group>";
+		};
+		9A1C92A319CF06D600074EA6 /* CellStyle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CellStyle;
 			sourceTree = "<group>";
 		};
 		9A39BD9519C2CB380097A7C3 /* Menu */ = {

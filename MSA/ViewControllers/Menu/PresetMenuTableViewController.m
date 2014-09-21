@@ -35,6 +35,13 @@ static NSString *presetMenuCellTableId = @"presetMenuTVC";
 //    self.title = self.systems[currentSystem];
 //}
 
+-(void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    self.frameWidth=self.view.frame.size.width;
+    self.frameHeight=self.view.frame.size.height;
+}
+
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -64,12 +71,36 @@ static NSString *presetMenuCellTableId = @"presetMenuTVC";
     //self.systMasterNVC.systSplitVC.systDetailCVC.systDetailNVC.systDetailTVC.currentSystem = (SYSTType)indexPath.row;
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+//{
+//    if(section == 0)
+//        return @"";
+//    else
+//        return @"";
+//}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     if(section == 0)
-        return @"";
+        return CGFLOAT_MIN;
     else
-        return @" ";
+        return tableView.sectionHeaderHeight;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if(section == 0)
+    {
+        UIView *uiv = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frameWidth, 0)];
+        return uiv;
+    }
+    
+    return nil;
 }
 
 @end
