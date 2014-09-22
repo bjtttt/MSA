@@ -23,11 +23,11 @@
     self.frameWidth = self.view.frame.size.width;
     self.frameHeight = self.view.frame.size.height;
     
-    self.shareSettings = [ShareSettings sharedSettings];
-    self.shareSettings.menuTapped=NO;
-    self.shareSettings.barTapped=NO;
-    self.shareSettings.curMSALayout=MSA_DISP;
-    self.shareSettings.prevMSALayout=MSA_DISP;
+    //self.shareSettings = [ShareSettings sharedSettings];
+    //self.shareSettings.menuTapped=NO;
+    //self.shareSettings.barTapped=NO;
+    //self.shareSettings.curMSALayout=MSA_DISP;
+    //self.shareSettings.prevMSALayout=MSA_DISP;
     //self.shareSettings.prevPrevMSALayout=MSA_DISP;
     
     //self.view.autoresizesSubviews = YES;
@@ -45,7 +45,7 @@
     //self.displayView.layer.borderWidth = VIEWCONTROLLER_DEFAULT_BORDER_WIDTH;
     //self.displayView.layer.borderColor = [[UIColor blackColor] CGColor];
     //self.displayView.layer.cornerRadius = VIEWCONTROLLER_DEFAULT_CORNER_RADIUS;
-    self.displayCVC.shareSettings = self.shareSettings;
+    //self.displayCVC.shareSettings = self.shareSettings;
 
     //self.menuView.layer.borderWidth = VIEWCONTROLLER_DEFAULT_BORDER_WIDTH;
     //self.menuView.layer.borderColor = [[UIColor blackColor] CGColor];
@@ -54,6 +54,20 @@
     //self.msgVC.shareSettings = self.shareSettings;
 
     //[self layoutVC:[self getVCLayoutType] animated:YES];
+}
+
+-(void) loadView {
+    [super loadView];
+
+    self.shareSettings = [ShareSettings sharedSettings];
+    self.shareSettings.menuTapped=NO;
+    self.shareSettings.barTapped=NO;
+    self.shareSettings.curMSALayout=MSA_DISP;
+    self.shareSettings.prevMSALayout=MSA_DISP;
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    //[self layoutVC:[self getMSALayout] animated:NO];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -72,7 +86,11 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"embedSegueToDisplayVC"])
+    {
         self.displayCVC = (DisplayContainerViewController *)segue.destinationViewController;
+        self.displayCVC.shareSettings = self.shareSettings;
+        self.displayCVC.mainCVC = self;
+    }
 }
 
 -(void)didReceiveMemoryWarning {
@@ -82,11 +100,14 @@
 
 -(void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
+
+    //[self layoutVC:[self getMSALayout] animated:NO];
 }
 
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
+    //[self.menuView setHidden:YES];
     [self layoutVC:[self getMSALayout] animated:NO];
 }
 
@@ -95,6 +116,9 @@
 }
 
 - (void)menuTapped {
+    //[self.menuView setHidden:NO];
+    
+    //[self.menuCVC showHidePresetMenu:YES];
     [self layoutVC:[self getMSALayout] animated:YES];
 }
 

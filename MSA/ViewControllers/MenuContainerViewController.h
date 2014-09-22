@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet SoftMenuContainerViewController *softMenuCVC;
 
 - (IBAction)showPresetMenu:(id)sender;
+- (void)showHidePresetMenu:(BOOL)showPresetMenu;
 
 @property (nonatomic) double navBarHeight;
 @property (nonatomic) double frameWidth;

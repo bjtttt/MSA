@@ -11,10 +11,13 @@
 #import "MsgContainerViewController.h"
 #import "SystemContainerViewController.h"
 
+@class ContainerViewController;
+
 @interface DisplayContainerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet MsgContainerViewController *msgCVC;
 @property (weak, nonatomic) IBOutlet SystemContainerViewController *systCVC;
+@property (weak, nonatomic) IBOutlet ContainerViewController *mainCVC;
 
 @property (weak, nonatomic) IBOutlet UIView *settingsV;
 @property (weak, nonatomic) IBOutlet UIView *tracesV;

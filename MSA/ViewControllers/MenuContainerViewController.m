@@ -44,6 +44,8 @@
     self.navBarHeight=self.menuNavBar.frame.size.height;
     self.frameWidth=self.view.frame.size.width;
     self.frameHeight=self.view.frame.size.height;
+    
+    [self showHidePresetMenu:NO];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -62,12 +64,30 @@
 }
 
 - (IBAction)showPresetMenu:(id)sender {
+    [self showHidePresetMenu:YES];
+}
+
+- (void)showHidePresetMenu:(BOOL)showPresetMenu {
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
     
     layoutBlock = ^(void){
-        self.presetMenuV.frame = CGRectMake(0, self.navBarHeight, self.frameWidth, self.frameHeight-self.navBarHeight);
-        self.softMenuV.frame = CGRectMake(0, self.frameWidth, self.frameWidth, self.frameHeight-self.navBarHeight);
+        NSLog(@"Before Layout\nSoft Menu View :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f\nPreset Menu View :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f",
+              self.softMenuV.frame.origin.x, self.softMenuV.frame.origin.y, self.softMenuV.frame.size.width, self.softMenuV.frame.size.height, self.presetMenuV.frame.origin.x, self.presetMenuV.frame.origin.y, self.presetMenuV.frame.size.width, self.presetMenuV.frame.size.height);
+
+        if(showPresetMenu == NO)
+        {
+            self.softMenuV.frame = CGRectMake(0, self.navBarHeight, self.frameWidth, self.frameHeight-self.navBarHeight);
+            self.presetMenuV.frame = CGRectMake(self.frameWidth, self.navBarHeight, self.frameWidth, self.frameHeight);
+        }
+        else
+        {
+            self.softMenuV.frame = CGRectMake(self.frameWidth, self.navBarHeight, self.frameWidth, self.frameHeight-self.navBarHeight);
+            self.presetMenuV.frame = CGRectMake(0, self.navBarHeight, self.frameWidth, self.frameHeight);
+        }
+        
+        NSLog(@"After Layout\nSoft Menu View :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f\nPreset Menu View :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f",
+              self.softMenuV.frame.origin.x, self.softMenuV.frame.origin.y, self.softMenuV.frame.size.width, self.softMenuV.frame.size.height, self.presetMenuV.frame.origin.x, self.presetMenuV.frame.origin.y, self.presetMenuV.frame.size.width, self.presetMenuV.frame.size.height);
     };
     completionBlock = ^(BOOL finished){
     };
