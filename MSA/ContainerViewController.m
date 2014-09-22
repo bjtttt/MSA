@@ -64,6 +64,10 @@
     self.shareSettings.barTapped=NO;
     self.shareSettings.curMSALayout=MSA_DISP;
     self.shareSettings.prevMSALayout=MSA_DISP;
+
+    [self.menuView setHidden:YES];
+    //[self.menuCVC showHidePresetMenu:YES];
+    //[self layoutVC:[self getMSALayout] animated:NO];
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -101,13 +105,14 @@
 -(void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
 
+    //[self.menuCVC showHidePresetMenu:YES];
     //[self layoutVC:[self getMSALayout] animated:NO];
 }
 
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    //[self.menuView setHidden:YES];
+    //[self.menuView setHidden:NO];
     [self layoutVC:[self getMSALayout] animated:NO];
 }
 
@@ -116,7 +121,7 @@
 }
 
 - (void)menuTapped {
-    //[self.menuView setHidden:NO];
+    [self.menuView setHidden:NO];
     
     //[self.menuCVC showHidePresetMenu:YES];
     [self layoutVC:[self getMSALayout] animated:YES];

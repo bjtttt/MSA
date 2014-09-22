@@ -38,6 +38,10 @@
     }
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [self showHidePresetMenu:NO];
+}
+
 -(void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
@@ -45,7 +49,9 @@
     self.frameWidth=self.view.frame.size.width;
     self.frameHeight=self.view.frame.size.height;
     
-    [self showHidePresetMenu:NO];
+    NSLog(@"Frame :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f",
+          self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+    //[self showHidePresetMenu:NO];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -71,19 +77,22 @@
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
     
+    NSLog(@"Frame :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f",
+          self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+
     layoutBlock = ^(void){
         NSLog(@"Before Layout\nSoft Menu View :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f\nPreset Menu View :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f",
               self.softMenuV.frame.origin.x, self.softMenuV.frame.origin.y, self.softMenuV.frame.size.width, self.softMenuV.frame.size.height, self.presetMenuV.frame.origin.x, self.presetMenuV.frame.origin.y, self.presetMenuV.frame.size.width, self.presetMenuV.frame.size.height);
 
-        if(showPresetMenu == NO)
-        {
-            self.softMenuV.frame = CGRectMake(0, self.navBarHeight, self.frameWidth, self.frameHeight-self.navBarHeight);
-            self.presetMenuV.frame = CGRectMake(self.frameWidth, self.navBarHeight, self.frameWidth, self.frameHeight);
-        }
-        else
+        if(showPresetMenu == YES)
         {
             self.softMenuV.frame = CGRectMake(self.frameWidth, self.navBarHeight, self.frameWidth, self.frameHeight-self.navBarHeight);
             self.presetMenuV.frame = CGRectMake(0, self.navBarHeight, self.frameWidth, self.frameHeight);
+        }
+        else
+        {
+            self.softMenuV.frame = CGRectMake(0, self.navBarHeight, self.frameWidth, self.frameHeight-self.navBarHeight);
+            self.presetMenuV.frame = CGRectMake(self.frameWidth, self.navBarHeight, self.frameWidth, self.frameHeight);
         }
         
         NSLog(@"After Layout\nSoft Menu View :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f\nPreset Menu View :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f",
