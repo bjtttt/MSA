@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "PresetMenuTableViewController.h"
+#import "PresetMenuWhiteGreenTableViewCell.h"
+#import "PresetMenuGreenWhiteTableViewCell.h"
+#import "PresetMenuDarkGrayGreen2LinesTableViewCell.h"
+#import "PresetMenuDarkGrayWhiteTableViewCell.h"
 
 @interface PresetMenuTableViewController()
 
@@ -16,6 +20,10 @@
 @implementation PresetMenuTableViewController
 
 static NSString *presetMenuCellTableId = @"presetMenuTVC";
+static NSString *presetMenuCellTable_Green_White_Id = @"presetMenuTVC_Green_White";
+static NSString *presetMenuCellTable_DarkGray_Green_2Lines_Id = @"presetMenuTVC_DarkGray_Green_2Lines";
+static NSString *presetMenuCellTable_DarkGray_White_Id = @"presetMenuTVC_DarkGray_White";
+static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Green";
 
 -(void)viewDidLoad{
     [super viewDidLoad];
@@ -57,11 +65,58 @@ static NSString *presetMenuCellTableId = @"presetMenuTVC";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:presetMenuCellTableId forIndexPath:indexPath];
-    
     NSUInteger section = [indexPath section];
     NSUInteger row = [indexPath row];
-    cell.textLabel.text = self.preset[section][row];
+    NSString *string = self.preset[section][row];
+
+    UITableViewCell *cell;
+    
+    //NSUInteger section = [indexPath section];
+    //NSUInteger row = [indexPath row];
+    
+    switch(section)
+    {
+        default:
+        case 0:
+            switch(row)
+            {
+                default:
+                case 0:
+                    cell = [tableView dequeueReusableCellWithIdentifier:presetMenuCellTable_Green_White_Id forIndexPath:indexPath];
+                    ((PresetMenuGreenWhiteTableViewCell *)cell).content.text = string;
+                    //[((PresetMenuGreenWhiteTableViewCell *)cell).content sizeToFit];
+                    break;
+                case 1:
+                case 2:
+                    cell = [tableView dequeueReusableCellWithIdentifier:presetMenuCellTable_DarkGray_Green_2Lines_Id forIndexPath:indexPath];
+                    NSArray * stringArray = [string componentsSeparatedByString:@"\\n"];
+                    ((PresetMenuDarkGrayGreen2LinesTableViewCell *)cell).content1.text = stringArray[0];
+                    ((PresetMenuDarkGrayGreen2LinesTableViewCell *)cell).content2.text = stringArray[1];
+                    break;
+            }
+            break;
+        case 1:
+            switch(row)
+            {
+                default:
+                case 0:
+                    cell = [tableView dequeueReusableCellWithIdentifier:presetMenuCellTable_White_Green_Id forIndexPath:indexPath];
+                    ((PresetMenuWhiteGreenTableViewCell *)cell).content.text = string;
+                    break;
+                case 1:
+                    cell = [tableView dequeueReusableCellWithIdentifier:presetMenuCellTable_DarkGray_White_Id forIndexPath:indexPath];
+                    ((PresetMenuDarkGrayWhiteTableViewCell *)cell).content.text = string;
+                   break;
+            }
+            break;
+        case 2:
+            cell = [tableView dequeueReusableCellWithIdentifier:presetMenuCellTable_DarkGray_Green_2Lines_Id forIndexPath:indexPath];
+            NSArray * stringArray = [string componentsSeparatedByString:@"\\n"];
+            ((PresetMenuDarkGrayGreen2LinesTableViewCell *)cell).content1.text = stringArray[0];
+            ((PresetMenuDarkGrayGreen2LinesTableViewCell *)cell).content2.text = stringArray[1];
+            break;
+    }
+
     return cell;
 }
 
@@ -81,7 +136,7 @@ static NSString *presetMenuCellTableId = @"presetMenuTVC";
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    return 44;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

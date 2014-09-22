@@ -12,6 +12,10 @@
 		9A1C929C19CED2B400074EA6 /* SoftMenuNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C929819CED2B400074EA6 /* SoftMenuNavigationViewController.m */; };
 		9A1C929D19CED2B400074EA6 /* SoftMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C929A19CED2B400074EA6 /* SoftMenuTableViewController.m */; };
 		9A1C92A019CED75300074EA6 /* PresetMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C929F19CED75300074EA6 /* PresetMenuContainerViewController.m */; };
+		9A345F4419D0051C00507A5A /* PresetMenuGreenWhiteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A345F4319D0051C00507A5A /* PresetMenuGreenWhiteTableViewCell.m */; };
+		9A345F4719D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A345F4619D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m */; };
+		9A345F4A19D00BC500507A5A /* PresetMenuDarkGrayWhiteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A345F4919D00BC500507A5A /* PresetMenuDarkGrayWhiteTableViewCell.m */; };
+		9A345F4E19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A345F4D19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.m */; };
 		9A5FDA7F19B5FB9A00B3C300 /* Preset.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5FDA7E19B5FB9A00B3C300 /* Preset.png */; };
 		9A659BDA19B6B91900C30CE2 /* MsgEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BD819B6B91900C30CE2 /* MsgEmpty.png */; };
 		9A659BDB19B6B91900C30CE2 /* MsgNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BD919B6B91900C30CE2 /* MsgNew.png */; };
@@ -85,6 +89,14 @@
 		9A1C929A19CED2B400074EA6 /* SoftMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuTableViewController.m; path = ViewControllers/Menu/SoftMenuTableViewController.m; sourceTree = "<group>"; };
 		9A1C929E19CED75300074EA6 /* PresetMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PresetMenuContainerViewController.h; path = ViewControllers/Menu/PresetMenuContainerViewController.h; sourceTree = "<group>"; };
 		9A1C929F19CED75300074EA6 /* PresetMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresetMenuContainerViewController.m; path = ViewControllers/Menu/PresetMenuContainerViewController.m; sourceTree = "<group>"; };
+		9A345F4319D0051C00507A5A /* PresetMenuGreenWhiteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresetMenuGreenWhiteTableViewCell.m; path = ViewControllers/Menu/Preset/CellStyle/PresetMenuGreenWhiteTableViewCell.m; sourceTree = "<group>"; };
+		9A345F4519D0053E00507A5A /* PresetMenuGreenWhiteTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PresetMenuGreenWhiteTableViewCell.h; path = ViewControllers/Menu/Preset/CellStyle/PresetMenuGreenWhiteTableViewCell.h; sourceTree = "<group>"; };
+		9A345F4619D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresetMenuDarkGrayGreen2LinesTableViewCell.m; path = ViewControllers/Menu/Preset/CellStyle/PresetMenuDarkGrayGreen2LinesTableViewCell.m; sourceTree = "<group>"; };
+		9A345F4819D00ADE00507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PresetMenuDarkGrayGreen2LinesTableViewCell.h; path = ViewControllers/Menu/Preset/CellStyle/PresetMenuDarkGrayGreen2LinesTableViewCell.h; sourceTree = "<group>"; };
+		9A345F4919D00BC500507A5A /* PresetMenuDarkGrayWhiteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresetMenuDarkGrayWhiteTableViewCell.m; path = ViewControllers/Menu/Preset/CellStyle/PresetMenuDarkGrayWhiteTableViewCell.m; sourceTree = "<group>"; };
+		9A345F4B19D00BDA00507A5A /* PresetMenuDarkGrayWhiteTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PresetMenuDarkGrayWhiteTableViewCell.h; path = ViewControllers/Menu/Preset/CellStyle/PresetMenuDarkGrayWhiteTableViewCell.h; sourceTree = "<group>"; };
+		9A345F4C19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PresetMenuWhiteGreenTableViewCell.h; path = ViewControllers/Menu/Preset/CellStyle/PresetMenuWhiteGreenTableViewCell.h; sourceTree = "<group>"; };
+		9A345F4D19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresetMenuWhiteGreenTableViewCell.m; path = ViewControllers/Menu/Preset/CellStyle/PresetMenuWhiteGreenTableViewCell.m; sourceTree = "<group>"; };
 		9A5FDA7E19B5FB9A00B3C300 /* Preset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Preset.png; path = Images/32/Preset.png; sourceTree = "<group>"; };
 		9A659BD819B6B91900C30CE2 /* MsgEmpty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MsgEmpty.png; path = Images/32/MsgEmpty.png; sourceTree = "<group>"; };
 		9A659BD919B6B91900C30CE2 /* MsgNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MsgNew.png; path = Images/32/MsgNew.png; sourceTree = "<group>"; };
@@ -218,6 +230,14 @@
 		9A1C92A319CF06D600074EA6 /* CellStyle */ = {
 			isa = PBXGroup;
 			children = (
+				9A345F4C19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.h */,
+				9A345F4D19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.m */,
+				9A345F4519D0053E00507A5A /* PresetMenuGreenWhiteTableViewCell.h */,
+				9A345F4319D0051C00507A5A /* PresetMenuGreenWhiteTableViewCell.m */,
+				9A345F4819D00ADE00507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.h */,
+				9A345F4619D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m */,
+				9A345F4B19D00BDA00507A5A /* PresetMenuDarkGrayWhiteTableViewCell.h */,
+				9A345F4919D00BC500507A5A /* PresetMenuDarkGrayWhiteTableViewCell.m */,
 			);
 			name = CellStyle;
 			sourceTree = "<group>";
@@ -657,7 +677,9 @@
 				9A1C929D19CED2B400074EA6 /* SoftMenuTableViewController.m in Sources */,
 				9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */,
 				9A79538719CDA322009984A6 /* MSAFormSheetSegue.m in Sources */,
+				9A345F4719D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m in Sources */,
 				9A726F6319C19FDE00CDF55D /* SystemDetailContainerViewController.m in Sources */,
+				9A345F4E19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.m in Sources */,
 				9A1C929419CECC9B00074EA6 /* PresetMenuTableViewController.m in Sources */,
 				9A90589919C08EFD00B0B6AB /* MsgSplitViewController.m in Sources */,
 				9A9C671719AD6C81007D3248 /* ContainerViewController.m in Sources */,
@@ -667,8 +689,10 @@
 				9A79538F19CDA38E009984A6 /* NSInvocation+Copy.m in Sources */,
 				9A953EE919ADCBB6005467A1 /* ShareSettings.m in Sources */,
 				9A726F5C19C19FC000CDF55D /* SystemMasterTableViewController.m in Sources */,
+				9A345F4419D0051C00507A5A /* PresetMenuGreenWhiteTableViewCell.m in Sources */,
 				9A9FFE7E19C0430800F76D38 /* MsgDetailNavigationViewController.m in Sources */,
 				9A9C670E19AD6C81007D3248 /* main.m in Sources */,
+				9A345F4A19D00BC500507A5A /* PresetMenuDarkGrayWhiteTableViewCell.m in Sources */,
 				9A79538E19CDA38E009984A6 /* MSAAppearance.m in Sources */,
 				9A659BEB19B6DE9A00C30CE2 /* SystemContainerViewController.m in Sources */,
 				9A79537D19CDA213009984A6 /* MSAFormSheetController.m in Sources */,

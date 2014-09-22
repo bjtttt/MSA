@@ -6,16 +6,16 @@
 	<array>
 		<array>
 			<string>Mode Preset</string>
-			<string>Restore Mode Defaults</string>
-			<string>Input/Output Preset</string>
+			<string>Restore Mode\nDefaults</string>
+			<string>Input/Output\nPreset</string>
 		</array>
 		<array>
 			<string>User Preset</string>
 			<string>Save User Preset</string>
 		</array>
 		<array>
-			<string>Mode Preset All Modes</string>
-			<string>User Preset All Modes</string>
+			<string>Mode Preset\nAll Modes</string>
+			<string>User Preset\nAll Modes</string>
 		</array>
 	</array>
 	<key>statuses</key>
