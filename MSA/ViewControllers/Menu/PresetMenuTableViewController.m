@@ -34,7 +34,8 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
     //self.presetUser = [msaInfo objectForKey:@"preset"][1];
     //self.presetAllModes = [msaInfo objectForKey:@"preset"][2];
 
-    self.tableView.tableFooterView=[[UIView alloc] initWithFrame:CGRectZero];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     //[self.navigationController setNavigationBarHidden:YES animated:YES];
 }
@@ -117,6 +118,10 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
             break;
     }
 
+    cell.contentView.layer.cornerRadius = 10.0;
+    cell.contentView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
+    cell.contentView.layer.borderWidth = 1.0;
+    
     return cell;
 }
 
