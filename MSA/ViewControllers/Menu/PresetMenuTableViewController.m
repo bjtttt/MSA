@@ -40,6 +40,9 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     //[self.navigationController setNavigationBarHidden:YES animated:YES];
+    
+    NSLog(@"\nPresetMenu Table View Controller - viewDidLoad:\nx = %f\ny = %f\nwidth = %f\nheight = %f",
+          self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
 }
 
 //-(void) setCurrentStatus:(MSGType)currentSystem{
@@ -53,6 +56,15 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
     
     //self.frameWidth=self.view.frame.size.width;
     //self.frameHeight=self.view.frame.size.height;
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.frameWidth, self.frameHeight);
+    
+    NSLog(@"\nPresetMenu Table View Controller - viewDidAppear:\nx = %f\ny = %f\nwidth = %f\nheight = %f",
+          self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
 }
 
 #pragma mark - Table View

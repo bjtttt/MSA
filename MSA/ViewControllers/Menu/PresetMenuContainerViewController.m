@@ -21,6 +21,9 @@
     NSLog(@"PresetMenuContainerViewController - viewDidLoad");
 
     [super viewDidLoad];
+
+    NSLog(@"\nPresetMenu Container View Controller:\nx = %f\ny = %f\nwidth = %f\nheight = %f",
+          self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -31,6 +34,8 @@
         self.presetMenuTVC = (PresetMenuTableViewController *)segue.destinationViewController;
         self.presetMenuTVC.shareSettings = self.shareSettings;
         self.presetMenuTVC.presetMenuCVC = self;
+        
+        //self.presetMenuTVC.view.frame = CGRectMake(0, NAVBAR_HEIGHT, self.frameWidth, self.frameHeight-NAVBAR_HEIGHT);
         
         self.presetMenuTVC.frameWidth = self.frameWidth;
         self.presetMenuTVC.frameHeight = self.frameHeight;

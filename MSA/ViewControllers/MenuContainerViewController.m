@@ -67,7 +67,7 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    //[self showHidePresetMenu:NO];
+    [self showHidePresetMenu:NO animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,10 +81,10 @@
 
 - (IBAction)showPresetMenu:(id)sender {
     //[self.presetMenuV setHidden:NO];
-    [self showHidePresetMenu:YES];
+    [self showHidePresetMenu:YES animated:YES];
 }
 
-- (void)showHidePresetMenu:(BOOL)showPresetMenu {
+- (void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated {
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
 
@@ -103,11 +103,24 @@
     completionBlock = ^(BOOL finished){
     };
     
-    [UIView animateWithDuration:0.25
-                     //delay:0
-                     //options:UIViewAnimationOptionLayoutSubviews
-                     animations:layoutBlock
-                     completion:completionBlock];
+    if(animated)
+    {
+        [UIView animateWithDuration:0.25
+                        //delay:0
+                        //options:UIViewAnimationOptionLayoutSubviews
+                         animations:layoutBlock
+                         completion:completionBlock];
+    }
+    else
+    {
+        layoutBlock();
+        completionBlock(YES);
+        
+    }
+    
+    NSLog(@"\nSoftMenu View :\nx = %f\ny = %f\nwidth = %f\nheight = %f\nPresetMenu View :\nx = %f\ny = %f\nwidth = %f\nheight = %f",
+          self.softMenuV.frame.origin.x, self.softMenuV.frame.origin.y, self.softMenuV.frame.size.width, self.softMenuV.frame.size.height,
+          self.presetMenuV.frame.origin.x, self.presetMenuV.frame.origin.y, self.presetMenuV.frame.size.width, self.presetMenuV.frame.size.height);
 }
 
 @end
