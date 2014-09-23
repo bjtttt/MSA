@@ -42,8 +42,10 @@ typedef enum systType {
 #define NORMAL_BORDER_WIDTH 1.0f
 #define HEAVY_BORDER_WIDTH 3.0f
 #define VC_MARGIN 1.0f
-#define MENU_WIDTH 200.0f
+#define MENU_WIDTH 180.0f
 #define NAVBAR_HEIGHT 44.0f
+
+#define DEBUG_OUTPUT YES
 
 @interface ShareSettings : NSObject
 
@@ -53,7 +55,7 @@ typedef enum systType {
 @property (nonatomic) MSALayout curMSALayout;
 @property (nonatomic) MSALayout prevMSALayout;
 
-+ (id)sharedSettings;
++(id)sharedSettings;
 
 @end
 

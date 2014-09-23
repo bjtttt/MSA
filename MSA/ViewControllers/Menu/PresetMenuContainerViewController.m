@@ -18,38 +18,37 @@
 @implementation PresetMenuContainerViewController
 
 -(void)viewDidLoad{
-    [super viewDidLoad];
+    NSLog(@"PresetMenuContainerViewController - viewDidLoad");
 
-    self.frameWidth=self.view.frame.size.width;
-    self.frameHeight=self.view.frame.size.height;
-    
-    NSLog(@"\nPresetMenuContainerViewController :\nframeWidth = %f,\nframeHeight = %f\nx = %f,\ny = %f",
-          self.frameWidth, self.frameHeight, self.view.frame.origin.x, self.view.frame.origin.y);
+    [super viewDidLoad];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"PresetMenuContainerViewController - prepareForSegue");
+
     if([segue.identifier isEqualToString:@"embedSegueToPresetMenuTVC"])
     {
         self.presetMenuTVC = (PresetMenuTableViewController *)segue.destinationViewController;
         self.presetMenuTVC.shareSettings = self.shareSettings;
         self.presetMenuTVC.presetMenuCVC = self;
+        
+        self.presetMenuTVC.frameWidth = self.frameWidth;
+        self.presetMenuTVC.frameHeight = self.frameHeight;
     }
 }
 
 -(void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    
-    self.frameWidth=self.view.frame.size.width;
-    self.frameHeight=self.view.frame.size.height;
+    NSLog(@"PresetMenuContainerViewController - viewWillLayoutSubviews");
 
-    NSLog(@"\nPresetMenuContainerViewController :\nframeWidth = %f,\nframeHeight = %f\nx = %f,\ny = %f",
-          self.frameWidth, self.frameHeight, self.view.frame.origin.x, self.view.frame.origin.y);
+    [super viewWillLayoutSubviews];
 }
 
 -(void)viewDidLayoutSubviews {
+    NSLog(@"PresetMenuContainerViewController - viewDidLayoutSubviews");
+
     [super viewDidLayoutSubviews];
     
-    self.presetMenuV.frame = CGRectMake(0, VC_MARGIN, self.frameWidth, self.frameHeight-VC_MARGIN);
+    //self.presetMenuV.frame = CGRectMake(0, VC_MARGIN, self.frameWidth, self.frameHeight-VC_MARGIN);
 }
 
 #pragma mark - Split view

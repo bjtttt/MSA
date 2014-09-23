@@ -26,6 +26,8 @@ static NSString *presetMenuCellTable_DarkGray_White_Id = @"presetMenuTVC_DarkGra
 static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Green";
 
 -(void)viewDidLoad{
+    NSLog(@"PresetMenuTableViewController - viewDidLoad");
+
     [super viewDidLoad];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"MSAList" ofType:@"plist"];
@@ -45,10 +47,12 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
 //}
 
 -(void)viewWillLayoutSubviews {
+    NSLog(@"PresetMenuTableViewController - viewWillLayoutSubviews");
+
     [super viewWillLayoutSubviews];
     
-    self.frameWidth=self.view.frame.size.width;
-    self.frameHeight=self.view.frame.size.height;
+    //self.frameWidth=self.view.frame.size.width;
+    //self.frameHeight=self.view.frame.size.height;
 }
 
 #pragma mark - Table View

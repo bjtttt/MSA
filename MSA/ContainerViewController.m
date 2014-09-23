@@ -58,6 +58,8 @@
 }
 
 -(void) loadView {
+    NSLog(@"ContainerViewController - loadView");
+    
     [super loadView];
     
     self.frameWidth = self.view.frame.size.width;
@@ -79,6 +81,8 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
+    NSLog(@"ContainerViewController - viewDidAppear");
+
     [super viewDidAppear:animated];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuTapped) name:@"menuTapped" object:nil];
@@ -86,6 +90,8 @@
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
+    NSLog(@"ContainerViewController - viewDidDisappear");
+
     [super viewDidDisappear:animated];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"menuTapped" object:nil];
@@ -93,7 +99,8 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    //NSString *id = segue.identifier;
+    NSLog(@"ContainerViewController - prepareForSegue");
+
     if([segue.identifier isEqualToString:@"embedSegueToDisplayVC"])
     {
         self.displayCVC = (DisplayContainerViewController *)segue.destinationViewController;
@@ -109,7 +116,7 @@
         self.menuCVC.shareSettings = self.shareSettings;
         self.menuCVC.mainCVC = self;
         
-        self.menuCVC.frameWidth = self.frameWidth;
+        self.menuCVC.frameWidth = MENU_WIDTH;
         self.menuCVC.frameHeight = self.frameHeight;
     }
 }

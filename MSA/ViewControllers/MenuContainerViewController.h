@@ -26,7 +26,7 @@
 - (IBAction)showPresetMenu:(id)sender;
 - (void)showHidePresetMenu:(BOOL)showPresetMenu;
 
-@property (nonatomic) double navBarHeight;
+//@property (nonatomic) double navBarHeight;
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
 

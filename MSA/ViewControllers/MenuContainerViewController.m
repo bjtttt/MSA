@@ -17,61 +17,57 @@
 @implementation MenuContainerViewController
 
 -(void)loadView {
-    self.navBarHeight = NAVBAR_HEIGHT;
+    [super loadView];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //self.view.layer.borderWidth = BORDER_WIDTH;
-    //self.view.layer.borderColor = [[UIColor blackColor] CGColor];
-    
-    //self.navBarHeight=self.menuNavBar.frame.size.height;
-    //self.frameWidth=self.view.frame.size.width;
-    //self.frameHeight=self.view.frame.size.height;
-
-    //NSLog(@"\nMenuContainerViewController :\nnavBarHeight = %f,\nframeWidth = %f,\nframeHeight = %f\nx = %f,\ny = %f",
-    //      self.navBarHeight, self.frameWidth, self.frameHeight, self.view.frame.origin.x, self.view.frame.origin.y);
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"MenuContainerViewController - prepareForSegue");
+
     if([segue.identifier isEqualToString:@"embedSegueToPresetMenuCVC"])
     {
         self.presetMenuCVC = (PresetMenuContainerViewController *)segue.destinationViewController;
         self.presetMenuCVC.shareSettings = self.shareSettings;
         self.presetMenuCVC.menuCVC = self;
+        
+        self.presetMenuCVC.frameHeight = self.frameHeight - NAVBAR_HEIGHT;
+        self.presetMenuCVC.frameWidth = self.frameWidth;
     }
     if([segue.identifier isEqualToString:@"embedSegueToSoftMenuCVC"])
     {
         self.softMenuCVC = (SoftMenuContainerViewController *)segue.destinationViewController;
         self.softMenuCVC.shareSettings = self.shareSettings;
         self.softMenuCVC.menuCVC = self;
+        
+        self.presetMenuCVC.frameHeight = self.frameHeight - NAVBAR_HEIGHT;
+        self.presetMenuCVC.frameWidth = self.frameWidth;
     }
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    //[self showHidePresetMenu:NO];
+}
+
 -(void)viewDidAppear:(BOOL)animated {
-    [self showHidePresetMenu:NO];
+    [super viewDidAppear:animated];
+    
+    //[self showHidePresetMenu:NO];
+    //[self.presetMenuV setHidden:YES];
 }
 
 -(void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    
-    self.navBarHeight=self.menuNavBar.frame.size.height;
-    self.frameWidth=self.view.frame.size.width;
-    self.frameHeight=self.view.frame.size.height;
-    
-    NSLog(@"\nMenuContainerViewController :\nnavBarHeight = %f,\nframeWidth = %f,\nframeHeight = %f\nx = %f,\ny = %f",
-          self.navBarHeight, self.frameWidth, self.frameHeight, self.view.frame.origin.x, self.view.frame.origin.y);
-    
-    //NSLog(@"Frame :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f",
-    //      self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
-    //[self showHidePresetMenu:NO];
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    //self.tabBar.frame=CGRectMake(0, self.tabBar.frame.origin.y,self.tabBar.frame.size.width,self.tabBar.frame.size.height);
+    //[self showHidePresetMenu:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,33 +80,25 @@
 }
 
 - (IBAction)showPresetMenu:(id)sender {
+    //[self.presetMenuV setHidden:NO];
     [self showHidePresetMenu:YES];
 }
 
 - (void)showHidePresetMenu:(BOOL)showPresetMenu {
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
-    
-    //NSLog(@"Frame :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f",
-    //      self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
 
     layoutBlock = ^(void){
-        //NSLog(@"Before Layout\nSoft Menu View :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f\nPreset Menu View :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f",
-        //      self.softMenuV.frame.origin.x, self.softMenuV.frame.origin.y, self.softMenuV.frame.size.width, self.softMenuV.frame.size.height, self.presetMenuV.frame.origin.x, self.presetMenuV.frame.origin.y, self.presetMenuV.frame.size.width, self.presetMenuV.frame.size.height);
-
         if(showPresetMenu == YES)
         {
-            self.softMenuV.frame = CGRectMake(self.frameWidth, self.navBarHeight, self.frameWidth, self.frameHeight-self.navBarHeight);
-            self.presetMenuV.frame = CGRectMake(0, self.navBarHeight, self.frameWidth, self.frameHeight);
+            self.softMenuV.frame = CGRectMake(self.frameWidth, NAVBAR_HEIGHT, self.frameWidth, self.frameHeight-NAVBAR_HEIGHT);
+            self.presetMenuV.frame = CGRectMake(0, NAVBAR_HEIGHT, self.frameWidth, self.frameHeight-NAVBAR_HEIGHT);
         }
         else
         {
-            self.softMenuV.frame = CGRectMake(0, self.navBarHeight, self.frameWidth, self.frameHeight-self.navBarHeight);
-            self.presetMenuV.frame = CGRectMake(self.frameWidth, self.navBarHeight, self.frameWidth, self.frameHeight);
+            self.softMenuV.frame = CGRectMake(0, NAVBAR_HEIGHT, self.frameWidth, self.frameHeight-NAVBAR_HEIGHT);
+            self.presetMenuV.frame = CGRectMake(self.frameWidth, NAVBAR_HEIGHT, self.frameWidth, self.frameHeight-NAVBAR_HEIGHT);
         }
-        
-        //NSLog(@"After Layout\nSoft Menu View :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f\nPreset Menu View :\nx = %f,\ny = %f,\nwidth = %f,\nheight = %f",
-        //      self.softMenuV.frame.origin.x, self.softMenuV.frame.origin.y, self.softMenuV.frame.size.width, self.softMenuV.frame.size.height, self.presetMenuV.frame.origin.x, self.presetMenuV.frame.origin.y, self.presetMenuV.frame.size.width, self.presetMenuV.frame.size.height);
     };
     completionBlock = ^(BOOL finished){
     };

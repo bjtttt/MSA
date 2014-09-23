@@ -17,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet SoftMenuContainerViewController *softMenuCVC;
 @property (weak, nonatomic) IBOutlet SoftMenuTableViewController *softMenuTVC;
 
+@property (nonatomic) double frameWidth;
+@property (nonatomic) double frameHeight;
+
 @property (weak, nonatomic) ShareSettings *shareSettings;
 
 @end

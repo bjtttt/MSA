@@ -24,9 +24,9 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X7O-d3-lWv" userLabel="Menu View">
-                                <rect key="frame" x="400" y="0.0" width="200" height="600"/>
+                                <rect key="frame" x="420" y="0.0" width="180" height="600"/>
                                 <connections>
-                                    <segue destination="mRs-zk-5eL" kind="embed" id="Myk-9C-kep"/>
+                                    <segue destination="mRs-zk-5eL" kind="embed" identifier="embedSegueToMenuVC" id="Myk-9C-kep"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -51,11 +51,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Vh9-Iw-cO3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="W7O-wD-0R7">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBu-G0-MKp">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="GJc-Nb-gGQ">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="R5d-gu-nno" userLabel="Preset Bar Button Item">
@@ -74,13 +74,13 @@
                                 </items>
                             </navigationBar>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VEf-4y-LoC" userLabel="Soft Menu Container View">
-                                <rect key="frame" x="0.0" y="44" width="200" height="556"/>
+                                <rect key="frame" x="0.0" y="44" width="180" height="556"/>
                                 <connections>
                                     <segue destination="hHG-jj-huI" kind="embed" identifier="embedSegueToSoftMenuCVC" id="iSV-JH-xJF"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5CF-ca-Iu9" userLabel="Preset Menu Container View">
-                                <rect key="frame" x="0.0" y="44" width="200" height="556"/>
+                                <rect key="frame" x="0.0" y="44" width="180" height="556"/>
                                 <connections>
                                     <segue destination="mqg-EE-rHP" kind="embed" identifier="embedSegueToPresetMenuCVC" id="TpH-k8-Byl"/>
                                 </connections>
@@ -349,11 +349,11 @@
                         <viewControllerLayoutGuide type="bottom" id="QsH-f0-5T3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6hv-KC-9Ir">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="556"/>
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1QS-zf-o7S">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="556"/>
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="556"/>
                                 <connections>
                                     <segue destination="cSY-67-Rdl" kind="embed" identifier="embedSegueToPresetMenuTVC" id="Shg-rL-gwc"/>
                                 </connections>
@@ -367,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUL-ew-kcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="534"/>
+            <point key="canvasLocation" x="229" y="540"/>
         </scene>
         <!--Msg Container View Controller-->
         <scene sceneID="HeJ-Qn-4Ip">
@@ -629,7 +629,7 @@
             <objects>
                 <tableViewController id="uMn-gu-dDJ" userLabel="Soft Menu Root View Controller" customClass="SoftMenuTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PGJ-2i-Rre">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="556"/>
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -649,14 +649,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLr-uJ-jSW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="1204"/>
+            <point key="canvasLocation" x="800" y="1198"/>
         </scene>
         <!--Preset Menu Table View Controller-->
         <scene sceneID="HEX-g1-hHc">
             <objects>
                 <tableViewController id="cSY-67-Rdl" userLabel="Preset Menu Table View Controller" customClass="PresetMenuTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="BUT-CG-9TM">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="556"/>
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
@@ -769,7 +769,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iyw-pX-MEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556" y="534"/>
+            <point key="canvasLocation" x="510" y="540"/>
         </scene>
         <!--Soft Menu Navigation Controller-->
         <scene sceneID="zuM-jm-Ohd">
@@ -785,7 +785,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlo-Lz-4t1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556" y="1204"/>
+            <point key="canvasLocation" x="510" y="1198"/>
         </scene>
         <!--Soft Menu Container View Controller-->
         <scene sceneID="xF4-Qi-kyi">
@@ -796,11 +796,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ihI-Ea-r6B"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hWu-fB-OVi">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="556"/>
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="556"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="31a-ND-88A">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="556"/>
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="556"/>
                                 <connections>
                                     <segue destination="AKd-yl-2jq" kind="embed" identifier="embedSegueToSoftMenuNVC" id="fCW-qp-Qpu"/>
                                 </connections>
@@ -815,7 +815,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3D-XQ-gax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="1204"/>
+            <point key="canvasLocation" x="229" y="1198"/>
         </scene>
         <!--Display Settings Container View Controller-->
         <scene sceneID="2If-02-SXC">
