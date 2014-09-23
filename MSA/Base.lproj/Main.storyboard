@@ -29,6 +29,12 @@
                                     <segue destination="mRs-zk-5eL" kind="embed" identifier="embedSegueToMenuVC" id="Myk-9C-kep"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shz-m0-FnC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="600"/>
+                                <connections>
+                                    <segue destination="0Ri-6U-ohF" kind="embed" id="mJC-fN-rpf"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -171,14 +177,14 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ewP-be-Wb1">
-                                <rect key="frame" x="0.0" y="44" width="600" height="132"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ewP-be-Wb1" userLabel="Measure Bar Container View">
+                                <rect key="frame" x="0.0" y="44" width="600" height="200"/>
                                 <connections>
                                     <segue destination="5z9-dO-1lJ" kind="embed" id="lBT-pt-NLn"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="maI-nf-qEV">
-                                <rect key="frame" x="0.0" y="176" width="600" height="380"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="maI-nf-qEV" userLabel="Display Container View">
+                                <rect key="frame" x="0.0" y="244" width="600" height="312"/>
                                 <connections>
                                     <segue destination="cTa-34-Ygg" kind="embed" id="t9T-Kf-a3m"/>
                                 </connections>
@@ -826,7 +832,7 @@
                         <viewControllerLayoutGuide type="bottom" id="iOV-XJ-Xly"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ACa-0D-Mkz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="132"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -845,7 +851,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Jgr-dZ-nkw"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bKp-wX-mDa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="380"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="312"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -854,6 +860,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yo-cH-Uzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1828" y="-509"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="r6i-tz-FcO">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0Ri-6U-ohF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zn4-OB-ArB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wep-yi-Apb"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ydg-uX-QEA">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q5l-JR-Fks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480" y="-1315"/>
         </scene>
     </scenes>
     <resources>
