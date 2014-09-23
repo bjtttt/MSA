@@ -24,11 +24,13 @@
 @property (weak, nonatomic) IBOutlet ContainerViewController *mainCVC;
 
 - (IBAction)showPresetMenu:(id)sender;
-- (void)showHidePresetMenu:(BOOL)showPresetMenu;
+- (void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated;
 
 //@property (nonatomic) double navBarHeight;
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
+
+@property (nonatomic) BOOL presetViewVisible;
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
 
