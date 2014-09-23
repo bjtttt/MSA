@@ -11,6 +11,7 @@
 
 @class PresetMenuContainerViewController;
 @class SoftMenuContainerViewController;
+@class ContainerViewController;
 
 @interface MenuContainerViewController : UIViewController
 
@@ -20,6 +21,7 @@
 
 @property (weak, nonatomic) IBOutlet PresetMenuContainerViewController *presetMenuCVC;
 @property (weak, nonatomic) IBOutlet SoftMenuContainerViewController *softMenuCVC;
+@property (weak, nonatomic) IBOutlet ContainerViewController *mainCVC;
 
 - (IBAction)showPresetMenu:(id)sender;
 - (void)showHidePresetMenu:(BOOL)showPresetMenu;

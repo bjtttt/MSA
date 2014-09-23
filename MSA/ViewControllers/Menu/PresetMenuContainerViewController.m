@@ -19,6 +19,12 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+
+    self.frameWidth=self.view.frame.size.width;
+    self.frameHeight=self.view.frame.size.height;
+    
+    NSLog(@"\nPresetMenuContainerViewController :\nframeWidth = %f,\nframeHeight = %f\nx = %f,\ny = %f",
+          self.frameWidth, self.frameHeight, self.view.frame.origin.x, self.view.frame.origin.y);
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -35,6 +41,9 @@
     
     self.frameWidth=self.view.frame.size.width;
     self.frameHeight=self.view.frame.size.height;
+
+    NSLog(@"\nPresetMenuContainerViewController :\nframeWidth = %f,\nframeHeight = %f\nx = %f,\ny = %f",
+          self.frameWidth, self.frameHeight, self.view.frame.origin.x, self.view.frame.origin.y);
 }
 
 -(void)viewDidLayoutSubviews {

@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
-#import "DisplayContainerViewController.h"
-#import "MenuContainerViewController.h"
-#import "MsgContainerViewController.h"
-#import "SystemContainerViewController.h"
+
+@class DisplayContainerViewController;
+@class MenuContainerViewController;
+@class MsgContainerViewController;
+@class SystemContainerViewController;
+@class MeasureContainerViewController;
 
 @interface ContainerViewController : UIViewController
 
@@ -25,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet MenuContainerViewController *menuCVC;
 @property (weak, nonatomic) IBOutlet MsgContainerViewController *msgCVC;
 @property (weak, nonatomic) IBOutlet SystemContainerViewController *systemCVC;
+@property (weak, nonatomic) IBOutlet MeasureContainerViewController *measureCVC;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 

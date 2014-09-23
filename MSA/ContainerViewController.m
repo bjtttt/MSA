@@ -9,6 +9,7 @@
 #import "ShareSettings.h"
 #import "ContainerViewController.h"
 #import "DisplayContainerViewController.h"
+#import "MenuContainerViewController.h"
 
 @interface ContainerViewController ()
 
@@ -58,6 +59,9 @@
 
 -(void) loadView {
     [super loadView];
+    
+    self.frameWidth = self.view.frame.size.width;
+    self.frameHeight = self.view.frame.size.height;
 
     self.shareSettings = [ShareSettings sharedSettings];
     self.shareSettings.menuTapped=NO;
@@ -65,7 +69,7 @@
     self.shareSettings.curMSALayout=MSA_DISP;
     self.shareSettings.prevMSALayout=MSA_DISP;
 
-    [self.menuView setHidden:YES];
+    //[self.menuView setHidden:YES];
     //[self.menuCVC showHidePresetMenu:YES];
     //[self layoutVC:[self getMSALayout] animated:NO];
 }
@@ -89,11 +93,24 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    //NSString *id = segue.identifier;
     if([segue.identifier isEqualToString:@"embedSegueToDisplayVC"])
     {
         self.displayCVC = (DisplayContainerViewController *)segue.destinationViewController;
         self.displayCVC.shareSettings = self.shareSettings;
         self.displayCVC.mainCVC = self;
+        
+        self.displayCVC.frameWidth = self.frameWidth;
+        self.displayCVC.frameHeight = self.frameHeight;
+    }
+    if([segue.identifier isEqualToString:@"embedSegueToMenuVC"])
+    {
+        self.menuCVC = (MenuContainerViewController *)segue.destinationViewController;
+        self.menuCVC.shareSettings = self.shareSettings;
+        self.menuCVC.mainCVC = self;
+        
+        self.menuCVC.frameWidth = self.frameWidth;
+        self.menuCVC.frameHeight = self.frameHeight;
     }
 }
 
@@ -121,7 +138,7 @@
 }
 
 - (void)menuTapped {
-    [self.menuView setHidden:NO];
+    //[self.menuView setHidden:NO];
     
     //[self.menuCVC showHidePresetMenu:YES];
     [self layoutVC:[self getMSALayout] animated:YES];
@@ -146,6 +163,9 @@
     switch (layoutType) {
         case MSA_DISP:
             {
+                self.displayCVC.frameWidth = self.frameWidth;
+                self.displayCVC.frameHeight = self.frameHeight;
+
                 layoutBlock = ^(void){
                     switch (self.shareSettings.prevMSALayout) {
                         default:
@@ -156,7 +176,6 @@
                             {
                                 self.menuView.frame = CGRectMake(self.frameWidth, 0, MENU_WIDTH, self.frameHeight);
                                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
-                                //self.msgView.frame = CGRectMake(0, self.frameHeight, self.frameWidth, self.frameHeight);
                             }
                             break;
                         case MSA_DISP_FULL:
@@ -188,16 +207,17 @@
             break;
         case MSA_MENU:
             {
+                self.displayCVC.frameWidth = self.frameWidth - MENU_WIDTH;
+                self.displayCVC.frameHeight = self.frameHeight;
+
                 layoutBlock = ^(void){
                     switch (self.shareSettings.prevMSALayout) {
                         default:
                         case MSA_MENU:
-                            break;
                         case MSA_DISP:
                             {
                                 self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
                                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth-MENU_WIDTH, self.frameHeight);
-                                //self.msgView.frame = CGRectMake(0, self.frameHeight, self.frameWidth, self.frameHeight);
                             }
                             break;
                         case MSA_DISP_FULL:

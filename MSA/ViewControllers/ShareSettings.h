@@ -43,6 +43,7 @@ typedef enum systType {
 #define HEAVY_BORDER_WIDTH 3.0f
 #define VC_MARGIN 1.0f
 #define MENU_WIDTH 200.0f
+#define NAVBAR_HEIGHT 44.0f
 
 @interface ShareSettings : NSObject
 
