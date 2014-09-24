@@ -90,10 +90,23 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"menuTapped" object:nil];
 }
 
+- (IBAction)showMeasureView:(id)sender {
+    //self.shareSettings.measureTapped=!self.shareSettings.measureTapped;
+    //[[NSNotificationCenter defaultCenter] postNotificationName:@"measureTapped" object:nil];
+    
+    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"nav"];
+    
+    // present form sheet with view controller
+    [self presentFormSheetWithViewController:vc animated:YES completionHandler:^(MSAFormSheetController *formSheetController) {
+        //do sth
+    }];
+}
+
 - (IBAction)exitToHere:(UIStoryboardSegue *)sender {
     // Nothing to do here
 }
 
+/*
 - (IBAction)transitionFromTop:(id)sender
 {
     UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"nav"];
@@ -103,6 +116,7 @@
         //do sth
     }];
 }
+*/
 
 - (IBAction)showSystemView:(id)sender {
     [self hidePresetMenu];

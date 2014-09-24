@@ -38,8 +38,9 @@
 @property (nonatomic) double frameHeight;
 
 - (IBAction)showHideMenu:(id)sender;
+- (IBAction)showMeasureView:(id)sender;
 - (IBAction)exitToHere:(UIStoryboardSegue *)sender;
-- (IBAction)transitionFromTop:(id)sender;
+//- (IBAction)transitionFromTop:(id)sender;
 
 - (IBAction)showSystemView:(id)sender;
 - (IBAction)showMsgView:(id)sender;

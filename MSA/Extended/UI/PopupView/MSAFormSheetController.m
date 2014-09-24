@@ -16,9 +16,9 @@ NSString *const MSAFormSheetWillPresentNotification = @"MSAFormSheetWillPresentN
 NSString *const MSAFormSheetWillDismissNotification = @"MSAFormSheetWillDismissNotification";
 
 CGFloat const MSAFormSheetControllerDefaultPortraitTopInset = 66.0;
-CGFloat const MSAFormSheetControllerDefaultLandscapeTopInset = 6.0;
-CGFloat const MSAFormSheetControllerDefaultWidth = 284.0;
-CGFloat const MSAFormSheetControllerDefaultHeight = 284.0;
+CGFloat const MSAFormSheetControllerDefaultLandscapeTopInset = 50.0;
+CGFloat const MSAFormSheetControllerDefaultWidth = 640.0;
+CGFloat const MSAFormSheetControllerDefaultHeight = 640.0;
 
 CGFloat const MSAFormSheetControllerDefaultAnimationDuration = 0.3;
 CGFloat const MSAFormSheetControllerDefaultTransitionBounceDuration = 0.4;
@@ -244,6 +244,10 @@ static BOOL instanceOfFormSheetAnimating = 0;
 }
 
 #pragma mark - Setters
+
+-(BOOL)prefersStatusBarHidden {
+    return YES;
+}
 
 - (void)setPresentingViewController:(UIViewController *)presentingViewController
 {

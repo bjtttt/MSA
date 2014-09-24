@@ -23,16 +23,6 @@
                                     <segue destination="v87-Ye-quc" kind="embed" identifier="embedSegueToDisplayVC" id="No0-yg-X4F"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shz-m0-FnC">
-                                <rect key="frame" x="0.0" y="0.0" width="180" height="600"/>
-                                <connections>
-                                    <segue destination="0Ri-6U-ohF" kind="embed" identifier="embedSegueToMeasureVC" id="mJC-fN-rpf"/>
-                                </connections>
-                            </containerView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n52-ci-Zbx" userLabel="Opacity View">
-                                <rect key="frame" x="150" y="138" width="300" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X7O-d3-lWv" userLabel="Menu View">
                                 <rect key="frame" x="450" y="0.0" width="150" height="600"/>
                                 <connections>
@@ -45,7 +35,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="displayView" destination="vId-ub-NnX" id="ujP-uw-bQ7"/>
-                        <outlet property="measureView" destination="shz-m0-FnC" id="Mn1-Md-SDi"/>
                         <outlet property="menuView" destination="X7O-d3-lWv" id="nZW-Oe-RbW"/>
                     </connections>
                 </viewController>
@@ -142,7 +131,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="transitionFromTop:" destination="v87-Ye-quc" eventType="touchUpInside" id="xnT-VZ-X2d"/>
+                                                    <action selector="showMeasureView:" destination="v87-Ye-quc" eventType="touchUpInside" id="YLq-P1-r3f"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -890,29 +879,29 @@
         <!--Measure Container View Controller-->
         <scene sceneID="r6i-tz-FcO">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0Ri-6U-ohF" customClass="MeasureContainerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nav" automaticallyAdjustsScrollViewInsets="NO" id="0Ri-6U-ohF" customClass="MeasureContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zn4-OB-ArB"/>
                         <viewControllerLayoutGuide type="bottom" id="Wep-yi-Apb"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ydg-uX-QEA">
-                        <rect key="frame" x="0.0" y="0.0" width="180" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sVE-90-MCS" userLabel="Add Instrument Container View">
-                                <rect key="frame" x="0.0" y="44" width="180" height="75"/>
+                                <rect key="frame" x="0.0" y="44" width="200" height="75"/>
                                 <connections>
                                     <segue destination="1Ik-9d-BHF" kind="embed" identifier="embedSegueToAddInstrumentCVC" id="Uxl-jl-Nza"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66b-Uj-eb4" userLabel="Measure Select Container View">
-                                <rect key="frame" x="0.0" y="163" width="180" height="393"/>
+                                <rect key="frame" x="0.0" y="163" width="200" height="393"/>
                                 <connections>
                                     <segue destination="5DT-1P-vyV" kind="embed" identifier="embedSegueToMeasureSelectNVC" id="v3t-i6-Rhc"/>
                                 </connections>
                             </containerView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRW-Zq-Ecl" userLabel="Add Instrument Navigation Bar">
-                                <rect key="frame" x="0.0" y="0.0" width="180" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
                                 <items>
                                     <navigationItem title="Instrument" id="6zb-1u-Bbn">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="dnS-2x-7Lf">
@@ -931,7 +920,7 @@
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGU-BS-DIn">
-                                <rect key="frame" x="0.0" y="556" width="180" height="44"/>
+                                <rect key="frame" x="0.0" y="556" width="200" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" id="YSA-VP-liv">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1b3-jK-cI6" userLabel="Cancel Button">
@@ -945,7 +934,7 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
-                                    <barButtonItem width="90" style="plain" systemItem="fixedSpace" id="Mkg-Pt-xGU"/>
+                                    <barButtonItem width="110" style="plain" systemItem="fixedSpace" id="Mkg-Pt-xGU"/>
                                     <barButtonItem style="plain" id="Tsc-Bq-MZC">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bnV-4V-1EG" userLabel="OK Button">
                                             <rect key="frame" x="50" y="7" width="24" height="24"/>
@@ -961,7 +950,7 @@
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b80-Yy-vpY" userLabel="Measure Select Navigation Bar">
-                                <rect key="frame" x="0.0" y="119" width="180" height="44"/>
+                                <rect key="frame" x="0.0" y="119" width="200" height="44"/>
                                 <items>
                                     <navigationItem title="Measurement" id="hys-jF-eC3"/>
                                 </items>
@@ -994,20 +983,20 @@
                         <viewControllerLayoutGuide type="bottom" id="xzf-l9-Hwd"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LmR-mp-Ful">
-                        <rect key="frame" x="0.0" y="0.0" width="180" height="75"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="75"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(NA)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOc-4e-0EI">
+                                <rect key="frame" x="0.0" y="8" width="200" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Tf-PY-LfN">
-                                <rect key="frame" x="123" y="38" width="51" height="31"/>
+                                <rect key="frame" x="135" y="37" width="51" height="31"/>
                                 <connections>
                                     <action selector="instrumentOnOffChanged:" destination="1Ik-9d-BHF" eventType="valueChanged" id="9g1-No-4F4"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(NA)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOc-4e-0EI">
-                                <rect key="frame" x="0.0" y="8" width="180" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1019,14 +1008,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFb-ae-Dmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24" y="-1793"/>
+            <point key="canvasLocation" x="44" y="-1790.5"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="WwA-Qn-xpY">
             <objects>
                 <tableViewController id="Nzh-gx-GUl" customClass="MeasureSelectTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ysx-W7-l0P">
-                        <rect key="frame" x="0.0" y="0.0" width="180" height="393"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1046,7 +1035,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myO-H1-O8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308" y="-1367.5"/>
+            <point key="canvasLocation" x="335" y="-1367.5"/>
         </scene>
         <!--Measure Select Navigation View Controller-->
         <scene sceneID="wGP-3X-A8l">
@@ -1062,7 +1051,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwe-iJ-Mm3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24" y="-1367.5"/>
+            <point key="canvasLocation" x="44" y="-1367.5"/>
         </scene>
     </scenes>
     <resources>

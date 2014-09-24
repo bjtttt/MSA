@@ -11,6 +11,7 @@
 #import "DisplayContainerViewController.h"
 #import "MenuContainerViewController.h"
 #import "MeasureContainerViewController.h"
+#import "MSAFormSheetBackgroundWindow.h"
 
 @interface ContainerViewController ()
 
@@ -68,6 +69,7 @@
 
     self.shareSettings = [ShareSettings sharedSettings];
     self.shareSettings.menuTapped=NO;
+    self.shareSettings.measureTapped=NO;
     //self.shareSettings.barTapped=NO;
     self.shareSettings.menuDisplayed=NO;
     self.shareSettings.measureDisplayed=NO;
@@ -76,6 +78,7 @@
     //[self.menuView setHidden:YES];
     //[self.menuCVC showHidePresetMenu:YES];
     //[self layoutVC:[self getMSALayout] animated:NO];
+    
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -88,7 +91,7 @@
     [super viewDidAppear:animated];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuTapped) name:@"menuTapped" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barTapped) name:@"barTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(measureTapped) name:@"measureTapped" object:nil];
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
@@ -97,6 +100,7 @@
     [super viewDidDisappear:animated];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"menuTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"measureTapped" object:nil];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -120,6 +124,7 @@
         self.menuCVC.frameWidth = MENU_WIDTH;
         self.menuCVC.frameHeight = self.frameHeight;
     }
+    // embedSegueToMeasureVC is deleted!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     if([segue.identifier isEqualToString:@"embedSegueToMeasureVC"])
     {
         self.measureCVC = (MeasureContainerViewController *)segue.destinationViewController;
@@ -155,12 +160,12 @@
 }
 
 - (void)menuTapped {
-    //[self.menuView setHidden:NO];
-    
-    //[self.menuCVC showHidePresetMenu:YES]
-    
     self.shareSettings.menuDisplayed = !self.shareSettings.menuDisplayed;
-    
+    [self layoutVC:YES];
+}
+
+- (void)measureTapped {
+    self.shareSettings.measureDisplayed = !self.shareSettings.measureDisplayed;
     [self layoutVC:YES];
 }
 
@@ -177,12 +182,35 @@
     {
         if(self.shareSettings.menuDisplayed == YES)
         {
-            
+            self.displayCVC.frameWidth = self.frameWidth;
+            self.displayCVC.frameHeight = self.frameHeight;
+
+            layoutBlock = ^(void)
+            {
+                self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
+                self.displayView.frame = CGRectMake(0, 0, self.frameWidth-MENU_WIDTH, self.frameHeight);
+                self.measureView.frame = CGRectMake(0, 0, MEAS_WIDTH, self.frameHeight);
+            };
+            completionBlock = ^(BOOL finished){
+            };
         }
         else
         {
+            self.displayCVC.frameWidth = self.frameWidth - MENU_WIDTH;
+            self.displayCVC.frameHeight = self.frameHeight;
             
+            layoutBlock = ^(void)
+            {
+                self.menuView.frame = CGRectMake(self.frameWidth+VC_MARGIN, 0, MENU_WIDTH, self.frameHeight);
+                self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
+                self.measureView.frame = CGRectMake(0, 0, MEAS_WIDTH, self.frameHeight);
+            };
+            completionBlock = ^(BOOL finished){
+            };
         }
+        
+        layoutBlock();
+        completionBlock(YES);
     }
     else
     {
@@ -193,7 +221,7 @@
 
             layoutBlock = ^(void)
             {
-                self.measureView.frame = CGRectMake(-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
+                //self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, 0, MEAS_WIDTH, self.frameHeight);
                 self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth-MENU_WIDTH, self.frameHeight);
             };
@@ -207,41 +235,28 @@
 
             layoutBlock = ^(void)
             {
-                self.measureView.frame = CGRectMake(-MENU_WIDTH-VC_MARGIN, 0, MENU_WIDTH, self.frameHeight);
+                //self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, 0, MEAS_WIDTH, self.frameHeight);
                 self.menuView.frame = CGRectMake(self.frameWidth+VC_MARGIN, 0, MENU_WIDTH, self.frameHeight);
                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
             };
             completionBlock = ^(BOOL finished){
             };
         }
-    }
-
-    if (animated)
-    {
-        [UIView animateWithDuration:0.25
-                              //delay:0
-                            //options:UIViewAnimationOptionLayoutSubviews
-                         animations:layoutBlock
-                         completion:completionBlock];
-    }
-    else
-    {
-        layoutBlock();
-        completionBlock(YES);
+        
+        if (animated)
+        {
+            [UIView animateWithDuration:0.25
+             //delay:0
+             //options:UIViewAnimationOptionLayoutSubviews
+                             animations:layoutBlock
+                             completion:completionBlock];
+        }
+        else
+        {
+            layoutBlock();
+            completionBlock(YES);
+        }
     }
 }
-
-/*
--(MSALayout)getMSALayout {
-    if(self.shareSettings.menuTapped==YES && self.shareSettings.barTapped==YES)
-        return MSA_MENU_FULL;
-    if(self.shareSettings.menuTapped==YES && self.shareSettings.barTapped==NO)
-        return MSA_MENU;
-    if(self.shareSettings.menuTapped==NO && self.shareSettings.barTapped==YES)
-        return MSA_DISP_FULL;
-    //if(self.shareSettings.menuTapped==NO && self.shareSettings.barTapped==NO)
-    return MSA_DISP;
-}
-*/
 
 @end
