@@ -68,9 +68,10 @@
 
     self.shareSettings = [ShareSettings sharedSettings];
     self.shareSettings.menuTapped=NO;
-    self.shareSettings.barTapped=NO;
-    self.shareSettings.curMSALayout=MSA_DISP;
-    self.shareSettings.prevMSALayout=MSA_DISP;
+    //self.shareSettings.barTapped=NO;
+    self.shareSettings.menuDisplayed=NO;
+    self.shareSettings.measureDisplayed=NO;
+    //self.shareSettings.prevprevMSALayout=MSA_DISP;
 
     //[self.menuView setHidden:YES];
     //[self.menuCVC showHidePresetMenu:YES];
@@ -96,7 +97,6 @@
     [super viewDidDisappear:animated];
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"menuTapped" object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barTapped" object:nil];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -147,7 +147,7 @@
     [super viewDidLayoutSubviews];
     
     //[self.menuView setHidden:NO];
-    [self layoutVC:[self getMSALayout] animated:NO];
+    [self layoutVC:NO];
 }
 
 -(BOOL)prefersStatusBarHidden {
@@ -158,26 +158,22 @@
     //[self.menuView setHidden:NO];
     
     //[self.menuCVC showHidePresetMenu:YES];
-    [self layoutVC:[self getMSALayout] animated:YES];
+    self.shareSettings.menuDisplayed = !self.shareSettings.menuDisplayed;
+    
+    [self layoutVC:YES];
 }
 
--(void)barTapped{
-    [self layoutVC:[self getMSALayout] animated:YES];
-}
-
--(void)msgTapped{
-    [self layoutVC:[self getMSALayout] animated:YES];
-}
-
-- (void)layoutVC:(MSALayout)layoutType animated:(BOOL)animated
+- (void)layoutVC:(BOOL)animated
 {
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
 
-    self.shareSettings.prevMSALayout=self.shareSettings.curMSALayout;
-    self.shareSettings.curMSALayout=layoutType;
+    //self.shareSettings.prevprevMSALayout=self.shareSettings.prevMSALayout;
+    //self.shareSettings.prevMSALayout=self.shareSettings.curMSALayout;
+    //self.shareSettings.curMSALayout=layoutType;
 
     switch (layoutType) {
+        default:
         case MSA_DISP:
             {
                 self.displayCVC.frameWidth = self.frameWidth;
@@ -191,35 +187,22 @@
                             //break;
                         case MSA_MENU:
                             {
+                                self.measureView.frame = CGRectMake(-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
                                 self.menuView.frame = CGRectMake(self.frameWidth, 0, MENU_WIDTH, self.frameHeight);
                                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
                             }
                             break;
-                        case MSA_DISP_FULL:
+                        case MSA_MEAS:
                             {
-                                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
-                                         self.shareSettings.curMSALayout,
-                                         self.shareSettings.prevMSALayout);
-                            }
-                           break;
-                        case MSA_MENU_FULL:
-                            {
-                                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
-                                         self.shareSettings.curMSALayout,
-                                         self.shareSettings.prevMSALayout);
+                                self.measureView.frame = CGRectMake(-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
+                                self.menuView.frame = CGRectMake(self.frameWidth, 0, MENU_WIDTH, self.frameHeight);
+                                self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
                             }
                             break;
                     }
                 };
                 completionBlock = ^(BOOL finished){
                 };
-            }
-            break;
-        case MSA_DISP_FULL:
-            {
-                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
-                         self.shareSettings.curMSALayout,
-                         self.shareSettings.prevMSALayout);
             }
             break;
         case MSA_MENU:
@@ -237,38 +220,23 @@
                                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth-MENU_WIDTH, self.frameHeight);
                             }
                             break;
-                        case MSA_DISP_FULL:
-                            {
-                                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
-                                         self.shareSettings.curMSALayout,
-                                         self.shareSettings.prevMSALayout);
-                            }
-                            break;
-                        case MSA_MENU_FULL:
-                            {
-                                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
-                                         self.shareSettings.curMSALayout,
-                                         self.shareSettings.prevMSALayout);
-                            }
-                            break;
                     }
                 };
                 completionBlock = ^(BOOL finished){
                 };
             }
             break;
-        case MSA_MENU_FULL:
+        case MSA_MEAS:
             {
-                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
-                         self.shareSettings.curMSALayout,
-                         self.shareSettings.prevMSALayout);
-            }
-            break;
-        default:
-            {
-                NSAssert(false, @"Not Implemented : Current layout is %u while previous layout is %u",
-                         self.shareSettings.curMSALayout,
-                         self.shareSettings.prevMSALayout);
+                switch (self.shareSettings.prevMSALayout)
+                {
+                    default:
+                    case MSA_MEAS:
+                        break;
+                    
+                }
+                [self.displayView setUserInteractionEnabled:NO];
+                [self.menuView setUserInteractionEnabled:NO];
             }
             break;
     }
@@ -288,6 +256,7 @@
     }
 }
 
+/*
 -(MSALayout)getMSALayout {
     if(self.shareSettings.menuTapped==YES && self.shareSettings.barTapped==YES)
         return MSA_MENU_FULL;
@@ -298,5 +267,6 @@
     //if(self.shareSettings.menuTapped==NO && self.shareSettings.barTapped==NO)
     return MSA_DISP;
 }
+*/
 
 @end

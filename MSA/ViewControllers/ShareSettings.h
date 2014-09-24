@@ -11,14 +11,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum msaLayout {
-    MSA_DISP,
-    MSA_DISP_FULL,
-    MSA_MENU,
-    MSA_MENU_FULL,
-    MSA_MEAS,
-    MSA_MEAS_FULL
-} MSALayout;
+//typedef enum msaLayout {
+//    MSA_DISP,
+//    MSA_MENU,
+//    MSA_MEAS,
+//} MSALayout;
 
 typedef enum msgType {
     MSG_CURRENT_CONDITIONS,
@@ -45,6 +42,7 @@ typedef enum systType {
 #define HEAVY_BORDER_WIDTH 3.0f
 #define VC_MARGIN 1.0f
 #define MENU_WIDTH 180.0f
+#define MEASBAR_HEIGHT 60.0f
 #define NAVBAR_HEIGHT 44.0f
 #define ADDINSTRUMENT_HEIGHT 75.0f
 
@@ -53,10 +51,13 @@ typedef enum systType {
 @interface ShareSettings : NSObject
 
 @property (nonatomic) BOOL menuTapped;
-@property (nonatomic) BOOL barTapped;
 
-@property (nonatomic) MSALayout curMSALayout;
-@property (nonatomic) MSALayout prevMSALayout;
+//@property (nonatomic) MSALayout curMSALayout;
+//@property (nonatomic) MSALayout prevMSALayout;
+//@property (nonatomic) MSALayout prevprevMSALayout;
+
+@property (nonatomic) BOOL menuDisplayed;
+@property (nonatomic) BOOL measureDisplayed;
 
 +(id)sharedSettings;
 
