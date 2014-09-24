@@ -124,7 +124,6 @@
         self.menuCVC.frameWidth = MENU_WIDTH;
         self.menuCVC.frameHeight = self.frameHeight;
     }
-    // embedSegueToMeasureVC is deleted!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     if([segue.identifier isEqualToString:@"embedSegueToMeasureVC"])
     {
         self.measureCVC = (MeasureContainerViewController *)segue.destinationViewController;
@@ -221,7 +220,7 @@
 
             layoutBlock = ^(void)
             {
-                //self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, 0, MEAS_WIDTH, self.frameHeight);
+                self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, 0, MEAS_WIDTH, self.frameHeight);
                 self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth-MENU_WIDTH, self.frameHeight);
             };
@@ -235,7 +234,7 @@
 
             layoutBlock = ^(void)
             {
-                //self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, 0, MEAS_WIDTH, self.frameHeight);
+                self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, 0, MEAS_WIDTH, self.frameHeight);
                 self.menuView.frame = CGRectMake(self.frameWidth+VC_MARGIN, 0, MENU_WIDTH, self.frameHeight);
                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
             };

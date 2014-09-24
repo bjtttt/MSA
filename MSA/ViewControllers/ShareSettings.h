@@ -42,7 +42,7 @@ typedef enum systType {
 #define HEAVY_BORDER_WIDTH 3.0f
 #define VC_MARGIN 1.0f
 #define MENU_WIDTH 150.0f
-#define MEAS_WIDTH 200.0f
+#define MEAS_WIDTH 300.0f
 #define MEASBAR_HEIGHT 60.0f
 #define NAVBAR_HEIGHT 44.0f
 #define ADDINSTRUMENT_HEIGHT 75.0f

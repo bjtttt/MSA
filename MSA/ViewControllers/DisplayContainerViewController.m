@@ -91,15 +91,17 @@
 }
 
 - (IBAction)showMeasureView:(id)sender {
-    //self.shareSettings.measureTapped=!self.shareSettings.measureTapped;
-    //[[NSNotificationCenter defaultCenter] postNotificationName:@"measureTapped" object:nil];
+    self.shareSettings.measureTapped=!self.shareSettings.measureTapped;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"measureTapped" object:nil];
     
+    /*
     UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"nav"];
     
     // present form sheet with view controller
     [self presentFormSheetWithViewController:vc animated:YES completionHandler:^(MSAFormSheetController *formSheetController) {
         //do sth
     }];
+    */
 }
 
 - (IBAction)exitToHere:(UIStoryboardSegue *)sender {
