@@ -15,7 +15,9 @@ typedef enum msaLayout {
     MSA_DISP,
     MSA_DISP_FULL,
     MSA_MENU,
-    MSA_MENU_FULL
+    MSA_MENU_FULL,
+    MSA_MEAS,
+    MSA_MEAS_FULL
 } MSALayout;
 
 typedef enum msgType {

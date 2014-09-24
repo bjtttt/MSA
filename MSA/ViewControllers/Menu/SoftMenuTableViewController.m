@@ -22,7 +22,8 @@
     //NSDictionary *msaInfo = [NSDictionary dictionaryWithContentsOfFile:path];
     //self.systems = [msaInfo objectForKey:@"systems"];
 
-    self.tableView.tableFooterView=[[UIView alloc] initWithFrame:CGRectZero];
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     //[self.navigationController setNavigationBarHidden:YES animated:YES];
 }

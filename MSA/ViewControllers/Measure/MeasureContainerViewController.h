@@ -9,14 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 
-@class MeasureNavigationViewController;
+@class AddInstrumentContainerViewController;
+@class MeasureSelectContainerViewController;
 
 @interface MeasureContainerViewController: UIViewController
 
-@property (weak, nonatomic) IBOutlet UINavigationBar *measureNavBar;
-@property (weak, nonatomic) IBOutlet UIView *measureV;
+@property (weak, nonatomic) IBOutlet UINavigationBar *addInstrumentNavBar;
+@property (weak, nonatomic) IBOutlet UIView *addInstrumentV;
+@property (weak, nonatomic) IBOutlet UINavigationBar *measureSelectNavBar;
+@property (weak, nonatomic) IBOutlet UIView *measureSelectV;
+@property (weak, nonatomic) IBOutlet UIToolbar *measureToolBar;
 
-@property (weak, nonatomic) IBOutlet MeasureNavigationViewController *measureNVC;
+@property (weak, nonatomic) IBOutlet AddInstrumentContainerViewController *addInstrumentCVC;
+@property (weak, nonatomic) IBOutlet MeasureSelectContainerViewController *measureSelectCVC;
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;

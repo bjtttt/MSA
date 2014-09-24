@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
@@ -17,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vId-ub-NnX" userLabel="Display View">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <connections>
-                                    <segue destination="v87-Ye-quc" kind="embed" identifier="embedSegueToDisplayVC" id="No0-yg-X4F"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X7O-d3-lWv" userLabel="Menu View">
                                 <rect key="frame" x="420" y="0.0" width="180" height="600"/>
                                 <connections>
@@ -30,9 +24,15 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shz-m0-FnC">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="600"/>
                                 <connections>
                                     <segue destination="0Ri-6U-ohF" kind="embed" id="mJC-fN-rpf"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vId-ub-NnX" userLabel="Display View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="v87-Ye-quc" kind="embed" identifier="embedSegueToDisplayVC" id="No0-yg-X4F"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -63,7 +63,16 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBu-G0-MKp">
                                 <rect key="frame" x="0.0" y="0.0" width="180" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="GJc-Nb-gGQ">
+                                    <navigationItem title="Menu" id="GJc-Nb-gGQ">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="jHr-ZD-8fg">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lDL-mh-QHo">
+                                                <rect key="frame" x="16" y="7" width="24" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="ReturnRoot.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="R5d-gu-nno" userLabel="Preset Bar Button Item">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U7Z-Zw-dOg" userLabel="Preset Button">
                                                 <rect key="frame" x="212" y="7" width="32" height="32"/>
@@ -861,34 +870,170 @@
             </objects>
             <point key="canvasLocation" x="1828" y="-509"/>
         </scene>
-        <!--View Controller-->
+        <!--Measure Container View Controller-->
         <scene sceneID="r6i-tz-FcO">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0Ri-6U-ohF" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0Ri-6U-ohF" customClass="MeasureContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zn4-OB-ArB"/>
                         <viewControllerLayoutGuide type="bottom" id="Wep-yi-Apb"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ydg-uX-QEA">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sVE-90-MCS">
+                                <rect key="frame" x="0.0" y="44" width="180" height="75"/>
+                                <connections>
+                                    <segue destination="1Ik-9d-BHF" kind="embed" id="Uxl-jl-Nza"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66b-Uj-eb4">
+                                <rect key="frame" x="0.0" y="163" width="180" height="393"/>
+                                <connections>
+                                    <segue destination="5DT-1P-vyV" kind="embed" id="v3t-i6-Rhc"/>
+                                </connections>
+                            </containerView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b80-Yy-vpY">
+                                <rect key="frame" x="0.0" y="119" width="180" height="44"/>
+                                <items>
+                                    <navigationItem title="Measurement" id="hys-jF-eC3"/>
+                                </items>
+                            </navigationBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRW-Zq-Ecl">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="44"/>
+                                <items>
+                                    <navigationItem title="Instrument" id="6zb-1u-Bbn">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="dnS-2x-7Lf">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mxl-25-udW">
+                                                <rect key="frame" x="124" y="7" width="32" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="AddInstrument.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGU-BS-DIn">
+                                <rect key="frame" x="0.0" y="556" width="180" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="YSA-VP-liv">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1b3-jK-cI6" userLabel="Cancel Button">
+                                            <rect key="frame" x="16" y="7" width="24" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="Cancel.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem width="90" style="plain" systemItem="fixedSpace" id="Mkg-Pt-xGU"/>
+                                    <barButtonItem style="plain" id="Tsc-Bq-MZC">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bnV-4V-1EG" userLabel="OK Button">
+                                            <rect key="frame" x="50" y="7" width="24" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="OK.png">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5l-JR-Fks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="480" y="-1315"/>
+            <point key="canvasLocation" x="-270" y="-1367"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="suB-w6-O1x">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="1Ik-9d-BHF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Lm-1k-vOS"/>
+                        <viewControllerLayoutGuide type="bottom" id="xzf-l9-Hwd"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LmR-mp-Ful">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="75"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(NA)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOc-4e-0EI">
+                                <rect key="frame" x="0.0" y="8" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Tf-PY-LfN">
+                                <rect key="frame" x="123" y="38" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFb-ae-Dmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24" y="-1793"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="WwA-Qn-xpY">
+            <objects>
+                <tableViewController id="Nzh-gx-GUl" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ysx-W7-l0P">
+                        <rect key="frame" x="0.0" y="0.0" width="180" height="393"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Zz2-Q4-T6Z">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zz2-Q4-T6Z" id="2Rc-mf-AlX">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Nzh-gx-GUl" id="Mae-Wh-frX"/>
+                            <outlet property="delegate" destination="Nzh-gx-GUl" id="LEU-eb-jeN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="zdM-fw-GwK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="myO-H1-O8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="308" y="-1367.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wGP-3X-A8l">
+            <objects>
+                <navigationController id="5DT-1P-vyV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IFI-at-BmM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Nzh-gx-GUl" kind="relationship" relationship="rootViewController" id="Crj-fS-4Qf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uwe-iJ-Mm3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24" y="-1367.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="AddInstrument.png" width="32" height="32"/>
+        <image name="Cancel.png" width="24" height="24"/>
         <image name="Connect.png" width="32" height="32"/>
         <image name="MsgEmpty.png" width="32" height="32"/>
         <image name="MsgError.png" width="24" height="24"/>
         <image name="MsgInfo.png" width="24" height="24"/>
         <image name="MsgWarning.png" width="24" height="24"/>
+        <image name="OK.png" width="24" height="24"/>
         <image name="Preset.png" width="32" height="32"/>
         <image name="Return.png" width="24" height="24"/>
+        <image name="ReturnRoot.png" width="20" height="20"/>
         <image name="ShowMenu.png" width="32" height="32"/>
         <image name="System.png" width="32" height="32"/>
     </resources>
