@@ -10,6 +10,7 @@
 #import "ContainerViewController.h"
 #import "DisplayContainerViewController.h"
 #import "MenuContainerViewController.h"
+#import "MeasureContainerViewController.h"
 
 @interface ContainerViewController ()
 
@@ -118,6 +119,15 @@
         
         self.menuCVC.frameWidth = MENU_WIDTH;
         self.menuCVC.frameHeight = self.frameHeight;
+    }
+    if([segue.identifier isEqualToString:@"embedSegueToMeasureVC"])
+    {
+        self.measureCVC = (MeasureContainerViewController *)segue.destinationViewController;
+        self.measureCVC.shareSettings = self.shareSettings;
+        self.measureCVC.mainCVC = self;
+        
+        self.measureCVC.frameWidth = MENU_WIDTH;
+        self.measureCVC.frameHeight = self.frameHeight;
     }
 }
 

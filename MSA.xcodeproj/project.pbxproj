@@ -11,6 +11,7 @@
 		9A19791219D278AD008E87E1 /* AddInstrument.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A19791119D278AD008E87E1 /* AddInstrument.png */; };
 		9A19795019D28DDA008E87E1 /* Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A19794E19D28DDA008E87E1 /* Cancel.png */; };
 		9A19795119D28DDA008E87E1 /* OK.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A19794F19D28DDA008E87E1 /* OK.png */; };
+		9A19795619D2A547008E87E1 /* AddInstrumentContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A19795319D2A547008E87E1 /* AddInstrumentContainerViewController.m */; };
 		9A1C929419CECC9B00074EA6 /* PresetMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C929319CECC9B00074EA6 /* PresetMenuTableViewController.m */; };
 		9A1C929B19CED2B400074EA6 /* SoftMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C929619CED2B400074EA6 /* SoftMenuContainerViewController.m */; };
 		9A1C929C19CED2B400074EA6 /* SoftMenuNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C929819CED2B400074EA6 /* SoftMenuNavigationViewController.m */; };
@@ -87,6 +88,8 @@
 		9A19791119D278AD008E87E1 /* AddInstrument.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AddInstrument.png; path = Images/32/AddInstrument.png; sourceTree = "<group>"; };
 		9A19794E19D28DDA008E87E1 /* Cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cancel.png; path = Images/24/Cancel.png; sourceTree = "<group>"; };
 		9A19794F19D28DDA008E87E1 /* OK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OK.png; path = Images/24/OK.png; sourceTree = "<group>"; };
+		9A19795219D2A547008E87E1 /* AddInstrumentContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddInstrumentContainerViewController.h; path = ViewControllers/Measure/AddInstrumentContainerViewController.h; sourceTree = "<group>"; };
+		9A19795319D2A547008E87E1 /* AddInstrumentContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddInstrumentContainerViewController.m; path = ViewControllers/Measure/AddInstrumentContainerViewController.m; sourceTree = "<group>"; };
 		9A1C929219CECC9B00074EA6 /* PresetMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PresetMenuTableViewController.h; path = ViewControllers/Menu/PresetMenuTableViewController.h; sourceTree = "<group>"; };
 		9A1C929319CECC9B00074EA6 /* PresetMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresetMenuTableViewController.m; path = ViewControllers/Menu/PresetMenuTableViewController.m; sourceTree = "<group>"; };
 		9A1C929519CED2B400074EA6 /* SoftMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuContainerViewController.h; path = ViewControllers/Menu/SoftMenuContainerViewController.h; sourceTree = "<group>"; };
@@ -218,6 +221,26 @@
 			name = 20;
 			sourceTree = "<group>";
 		};
+		9A19795819D2A553008E87E1 /* AddInstrument */ = {
+			isa = PBXGroup;
+			children = (
+				9A19795219D2A547008E87E1 /* AddInstrumentContainerViewController.h */,
+				9A19795319D2A547008E87E1 /* AddInstrumentContainerViewController.m */,
+			);
+			name = AddInstrument;
+			sourceTree = "<group>";
+		};
+		9A19795919D2A561008E87E1 /* MeasureSelect */ = {
+			isa = PBXGroup;
+			children = (
+				9A79537719CD3902009984A6 /* MeasureSelectTableViewController.h */,
+				9A79537819CD3902009984A6 /* MeasureSelectTableViewController.m */,
+				9A79537319CD35BE009984A6 /* MeasureSelectNavigationViewController.h */,
+				9A79537419CD35BE009984A6 /* MeasureSelectNavigationViewController.m */,
+			);
+			name = MeasureSelect;
+			sourceTree = "<group>";
+		};
 		9A1C92A119CED75600074EA6 /* Preset */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,12 +365,10 @@
 		9A79537019CD2A91009984A6 /* Measure */ = {
 			isa = PBXGroup;
 			children = (
+				9A19795819D2A553008E87E1 /* AddInstrument */,
+				9A19795919D2A561008E87E1 /* MeasureSelect */,
 				9A79537119CD35BE009984A6 /* MeasureContainerViewController.h */,
 				9A79537219CD35BE009984A6 /* MeasureContainerViewController.m */,
-				9A79537719CD3902009984A6 /* MeasureSelectTableViewController.h */,
-				9A79537819CD3902009984A6 /* MeasureSelectTableViewController.m */,
-				9A79537319CD35BE009984A6 /* MeasureSelectNavigationViewController.h */,
-				9A79537419CD35BE009984A6 /* MeasureSelectNavigationViewController.m */,
 			);
 			name = Measure;
 			sourceTree = "<group>";
@@ -680,6 +701,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A19795619D2A547008E87E1 /* AddInstrumentContainerViewController.m in Sources */,
 				9A726F5B19C19FC000CDF55D /* SystemMasterNavigationViewController.m in Sources */,
 				9A1C929C19CED2B400074EA6 /* SoftMenuNavigationViewController.m in Sources */,
 				9A1C92A019CED75300074EA6 /* PresetMenuContainerViewController.m in Sources */,

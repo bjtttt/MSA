@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "MeasureContainerViewController.h"
-#import "MeasureNavigationViewController.h"
+#import "AddInstrumentContainerViewController.h"
+#import "MeasureSelectNavigationViewController.h"
 
 @interface MeasureContainerViewController()
 
@@ -21,27 +22,43 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([segue.identifier isEqualToString:@"embedSegueToMeasureNVC"])
+    if([segue.identifier isEqualToString:@"embedSegueToAddInstrumentCVC"])
     {
-        self.measureNVC = (MeasureNavigationViewController *)segue.destinationViewController;
-        self.measureNVC.shareSettings = self.shareSettings;
-        self.measureNVC.measureCVC = self;
+        self.addInstrumentCVC = (AddInstrumentContainerViewController *)segue.destinationViewController;
+        self.addInstrumentCVC.shareSettings = self.shareSettings;
+        self.addInstrumentCVC.measureCVC = self;
+        
+        self.addInstrumentCVC.frameWidth = self.frameWidth;
+        self.addInstrumentCVC.frameHeight = ADDINSTRUMENT_HEIGHT;
+    }
+    if([segue.identifier isEqualToString:@"embedSegueToMeasureSelectNVC"])
+    {
+        self.measureSelectNVC = (MeasureSelectNavigationViewController *)segue.destinationViewController;
+        self.measureSelectNVC.shareSettings = self.shareSettings;
+        self.measureSelectNVC.measureCVC = self;
+        
+        self.measureSelectNVC.frameWidth = self.frameWidth;
+        self.measureSelectNVC.frameHeight = self.frameHeight-ADDINSTRUMENT_HEIGHT-NAVBAR_HEIGHT*3;
     }
 }
 
 -(void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    
-    self.frameWidth=self.view.frame.size.width;
-    self.frameHeight=self.view.frame.size.height;
 }
 
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    self.measureV.frame = CGRectMake(0, VC_MARGIN, self.frameWidth, self.frameHeight-VC_MARGIN);
+    //self.measureV.frame = CGRectMake(0, VC_MARGIN, self.frameWidth, self.frameHeight-VC_MARGIN);
 }
 
 #pragma mark - Split view
 
+- (IBAction)addInstrument:(id)sender {
+}
+- (IBAction)okMeasure:(id)sender {
+}
+
+- (IBAction)cancelMeasure:(id)sender {
+}
 @end

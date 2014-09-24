@@ -1,5 +1,5 @@
 //
-//  MeasureTableViewController.h
+//  MeasureSelectTableViewController.h
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.
@@ -9,13 +9,16 @@
 #import <UIKit/UIKit.h>
 #include "ShareSettings.h"
 
-@class MeasureNavigationViewController;
+@class MeasureSelectNavigationViewController;
 
-@interface MeasureTableViewController : UITableViewController
+@interface MeasureSelectTableViewController : UITableViewController
 
-@property (weak, nonatomic) IBOutlet MeasureNavigationViewController *measureNVC;
+@property (weak, nonatomic) IBOutlet MeasureSelectNavigationViewController *measureSelectNVC;
 
 @property (copy, nonatomic) NSArray *systems;
+
+@property (nonatomic) double frameWidth;
+@property (nonatomic) double frameHeight;
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
 

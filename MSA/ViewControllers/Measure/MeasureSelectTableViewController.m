@@ -1,5 +1,5 @@
 //
-//  MeasureTableViewController.m
+//  MeasureSelectTableViewController.m
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.
@@ -7,13 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MeasureTableViewController.h"
+#import "MeasureSelectTableViewController.h"
+#import "MeasureSelectNavigationViewController.h"
 
-@interface MeasureTableViewController()
+@interface MeasureSelectTableViewController()
 
 @end
 
-@implementation MeasureTableViewController
+@implementation MeasureSelectTableViewController
 
 -(void)viewDidLoad{
     [super viewDidLoad];

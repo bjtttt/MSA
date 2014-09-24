@@ -46,6 +46,7 @@ typedef enum systType {
 #define VC_MARGIN 1.0f
 #define MENU_WIDTH 180.0f
 #define NAVBAR_HEIGHT 44.0f
+#define ADDINSTRUMENT_HEIGHT 75.0f
 
 #define DEBUG_OUTPUT YES
 

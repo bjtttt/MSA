@@ -1,5 +1,5 @@
 //
-//  MeasureNavigationViewController.m
+//  MeasureSelectNavigationViewController.m
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.
@@ -7,21 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MeasureNavigationViewController.h"
-#import "MeasureTableViewController.h"
+#import "MeasureSelectNavigationViewController.h"
+#import "MeasureContainerViewController.h"
+#import "MeasureSelectTableViewController.h"
 
-@interface MeasureNavigationViewController()
+@interface MeasureSelectNavigationViewController()
 
 @end
 
-@implementation MeasureNavigationViewController
+@implementation MeasureSelectNavigationViewController
 
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    self.measureTVC = [self.viewControllers firstObject];
-    self.measureTVC.shareSettings = self.shareSettings;
-    self.measureTVC.measureNVC = self;
+    self.measureSelectTVC = [self.viewControllers firstObject];
+    self.measureSelectTVC.shareSettings = self.shareSettings;
+    self.measureSelectTVC.measureSelectNVC = self;
+    
+    self.measureSelectTVC.frameWidth = self.frameWidth;
+    self.measureSelectTVC.frameHeight = self.frameHeight;
 }
 
 #pragma mark - Split view

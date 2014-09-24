@@ -1,5 +1,5 @@
 //
-//  MeasureSelectNavigationViewController.h
+//  AddInstrumentContainerViewController.h
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.
@@ -7,19 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-#include "ShareSettings.h"
+#import "ShareSettings.h"
 
-@class MeasureSelectTableViewController;
 @class MeasureContainerViewController;
 
-@interface MeasureSelectNavigationViewController : UINavigationController
+@interface AddInstrumentContainerViewController: UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *instrumentAddress;
+@property (weak, nonatomic) IBOutlet UISwitch *instrumentOnOff;
 
 @property (weak, nonatomic) IBOutlet MeasureContainerViewController *measureCVC;
-@property (weak, nonatomic) IBOutlet MeasureSelectTableViewController *measureSelectTVC;
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
+
+- (IBAction)instrumentOnOffChanged:(id)sender;
 
 @end
