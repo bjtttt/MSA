@@ -19,7 +19,7 @@
 -(void)loadView {
     [super loadView];
     
-    self.presetViewVisible = NO;
+    self.presetViewVisible = YES;
 }
 
 - (void)viewDidLoad {
@@ -60,6 +60,12 @@
     
     //[self showHidePresetMenu:NO];
     //[self.presetMenuV setHidden:YES];
+    
+    //if(self.presetViewVisible == YES)
+    //{
+    //    self.presetViewVisible = NO;
+    //    [self showHidePresetMenu:self.presetViewVisible animated:YES];
+    //}
 }
 
 -(void)viewWillLayoutSubviews {
@@ -84,8 +90,6 @@
 
 - (IBAction)showPresetMenu:(id)sender {
     self.presetViewVisible = !self.presetViewVisible;
-    
-    //[self.presetMenuV setHidden:NO];
     [self showHidePresetMenu:self.presetViewVisible animated:YES];
 }
 

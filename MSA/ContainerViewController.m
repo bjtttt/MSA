@@ -157,7 +157,8 @@
 - (void)menuTapped {
     //[self.menuView setHidden:NO];
     
-    //[self.menuCVC showHidePresetMenu:YES];
+    //[self.menuCVC showHidePresetMenu:YES]
+    
     self.shareSettings.menuDisplayed = !self.shareSettings.menuDisplayed;
     
     [self layoutVC:YES];
@@ -171,74 +172,48 @@
     //self.shareSettings.prevprevMSALayout=self.shareSettings.prevMSALayout;
     //self.shareSettings.prevMSALayout=self.shareSettings.curMSALayout;
     //self.shareSettings.curMSALayout=layoutType;
+    
+    if(self.shareSettings.measureDisplayed == YES)
+    {
+        if(self.shareSettings.menuDisplayed == YES)
+        {
+            
+        }
+        else
+        {
+            
+        }
+    }
+    else
+    {
+        if(self.shareSettings.menuDisplayed == YES)
+        {
+            self.displayCVC.frameWidth = self.frameWidth;
+            self.displayCVC.frameHeight = self.frameHeight;
 
-    switch (layoutType) {
-        default:
-        case MSA_DISP:
+            layoutBlock = ^(void)
             {
-                self.displayCVC.frameWidth = self.frameWidth;
-                self.displayCVC.frameHeight = self.frameHeight;
+                self.measureView.frame = CGRectMake(-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
+                self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
+                self.displayView.frame = CGRectMake(0, 0, self.frameWidth-MENU_WIDTH, self.frameHeight);
+            };
+            completionBlock = ^(BOOL finished){
+            };
+        }
+        else
+        {
+            self.displayCVC.frameWidth = self.frameWidth - MENU_WIDTH;
+            self.displayCVC.frameHeight = self.frameHeight;
 
-                layoutBlock = ^(void){
-                    switch (self.shareSettings.prevMSALayout) {
-                        default:
-                        case MSA_DISP:
-                            // Startup State
-                            //break;
-                        case MSA_MENU:
-                            {
-                                self.measureView.frame = CGRectMake(-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
-                                self.menuView.frame = CGRectMake(self.frameWidth, 0, MENU_WIDTH, self.frameHeight);
-                                self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
-                            }
-                            break;
-                        case MSA_MEAS:
-                            {
-                                self.measureView.frame = CGRectMake(-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
-                                self.menuView.frame = CGRectMake(self.frameWidth, 0, MENU_WIDTH, self.frameHeight);
-                                self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
-                            }
-                            break;
-                    }
-                };
-                completionBlock = ^(BOOL finished){
-                };
-            }
-            break;
-        case MSA_MENU:
+            layoutBlock = ^(void)
             {
-                self.displayCVC.frameWidth = self.frameWidth - MENU_WIDTH;
-                self.displayCVC.frameHeight = self.frameHeight;
-
-                layoutBlock = ^(void){
-                    switch (self.shareSettings.prevMSALayout) {
-                        default:
-                        case MSA_MENU:
-                        case MSA_DISP:
-                            {
-                                self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
-                                self.displayView.frame = CGRectMake(0, 0, self.frameWidth-MENU_WIDTH, self.frameHeight);
-                            }
-                            break;
-                    }
-                };
-                completionBlock = ^(BOOL finished){
-                };
-            }
-            break;
-        case MSA_MEAS:
-            {
-                switch (self.shareSettings.prevMSALayout)
-                {
-                    default:
-                    case MSA_MEAS:
-                        break;
-                    
-                }
-                [self.displayView setUserInteractionEnabled:NO];
-                [self.menuView setUserInteractionEnabled:NO];
-            }
-            break;
+                self.measureView.frame = CGRectMake(-MENU_WIDTH-VC_MARGIN, 0, MENU_WIDTH, self.frameHeight);
+                self.menuView.frame = CGRectMake(self.frameWidth+VC_MARGIN, 0, MENU_WIDTH, self.frameHeight);
+                self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
+            };
+            completionBlock = ^(BOOL finished){
+            };
+        }
     }
 
     if (animated)

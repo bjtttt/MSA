@@ -41,5 +41,8 @@
 - (IBAction)exitToHere:(UIStoryboardSegue *)sender;
 - (IBAction)transitionFromTop:(id)sender;
 
+- (IBAction)showSystemView:(id)sender;
+- (IBAction)showMsgView:(id)sender;
+
 @end
 

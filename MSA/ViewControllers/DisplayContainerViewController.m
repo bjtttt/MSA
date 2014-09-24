@@ -9,6 +9,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "DisplayContainerViewController.h"
 #import "MSAFormSheetController.h"
+#import "ContainerViewController.h"
+#import "MenuContainerViewController.h"
 //#import "MSACustomFormSheetController.h"
 
 @interface DisplayContainerViewController ()
@@ -77,6 +79,8 @@
 }
 
 - (IBAction)showHideMenu:(id)sender {
+    [self hidePresetMenu];
+
     self.shareSettings.menuTapped=!self.shareSettings.menuTapped;
     if(self.shareSettings.menuTapped)
         [self.showHideMenuButton setImage:[UIImage imageNamed:@"HideMenu.png"] forState:UIControlStateNormal];
@@ -98,6 +102,20 @@
     [self presentFormSheetWithViewController:vc animated:YES completionHandler:^(MSAFormSheetController *formSheetController) {
         //do sth
     }];
+}
+
+- (IBAction)showSystemView:(id)sender {
+    [self hidePresetMenu];
+}
+
+- (IBAction)showMsgView:(id)sender {
+    [self hidePresetMenu];
+}
+
+-(void)hidePresetMenu
+{
+    self.mainCVC.menuCVC.presetViewVisible = NO;
+    [self.mainCVC.menuCVC showHidePresetMenu:self.mainCVC.menuCVC.presetViewVisible animated:YES];
 }
 
 @end
