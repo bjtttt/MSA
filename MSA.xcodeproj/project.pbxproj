@@ -26,7 +26,6 @@
 		9A659BDB19B6B91900C30CE2 /* MsgNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BD919B6B91900C30CE2 /* MsgNew.png */; };
 		9A659BDD19B6BC1800C30CE2 /* HideMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BDC19B6BC1800C30CE2 /* HideMenu.png */; };
 		9A659BDF19B6BC2000C30CE2 /* ShowMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BDE19B6BC2000C30CE2 /* ShowMenu.png */; };
-		9A659BE119B6BCE300C30CE2 /* Connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BE019B6BCE300C30CE2 /* Connect.png */; };
 		9A659BEB19B6DE9A00C30CE2 /* SystemContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A659BEA19B6DE9A00C30CE2 /* SystemContainerViewController.m */; };
 		9A659BED19B7008500C30CE2 /* System.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BEC19B7008500C30CE2 /* System.png */; };
 		9A726F4E19C1880000CDF55D /* MsgMasterNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F4D19C1880000CDF55D /* MsgMasterNavigationViewController.m */; };
@@ -59,9 +58,12 @@
 		9A9FFE8919C04FAB00F76D38 /* MsgInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9FFE8619C04FAB00F76D38 /* MsgInfo.png */; };
 		9A9FFE8A19C04FAB00F76D38 /* MsgWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9FFE8719C04FAB00F76D38 /* MsgWarning.png */; };
 		9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE0EB919B466EF004D9146 /* MsgContainerViewController.m */; };
+		9AB67C1A19D43103004B664A /* Connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB67C1919D43103004B664A /* Connect.png */; };
 		9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448C19B1F73500A7F334 /* HideBar.png */; };
 		9AC5448F19B1F74300A7F334 /* ShowBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448E19B1F74300A7F334 /* ShowBar.png */; };
 		9ACA2EB919BD4651005542B5 /* MsgMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA2EB819BD4651005542B5 /* MsgMasterTableViewController.m */; };
+		9ACB212619D44A4E0022EB5F /* MeasureSelect2ndTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACB212519D44A4E0022EB5F /* MeasureSelect2ndTableViewController.m */; };
+		9ACB212819D44E080022EB5F /* TDSCDMA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ACB212719D44E080022EB5F /* TDSCDMA.plist */; };
 		9AE0AFB919C2B55C008544AC /* DisplaySettingsContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0AFB819C2B55C008544AC /* DisplaySettingsContainerViewController.m */; };
 		9AE0AFBC19C2B626008544AC /* DisplayTracesContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0AFBB19C2B626008544AC /* DisplayTracesContainerViewController.m */; };
 		9AF7001119B81FE5000A69A5 /* Return.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF7001019B81FE5000A69A5 /* Return.png */; };
@@ -107,7 +109,6 @@
 		9A659BD919B6B91900C30CE2 /* MsgNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MsgNew.png; path = Images/32/MsgNew.png; sourceTree = "<group>"; };
 		9A659BDC19B6BC1800C30CE2 /* HideMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideMenu.png; path = Images/32/HideMenu.png; sourceTree = "<group>"; };
 		9A659BDE19B6BC2000C30CE2 /* ShowMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShowMenu.png; path = Images/32/ShowMenu.png; sourceTree = "<group>"; };
-		9A659BE019B6BCE300C30CE2 /* Connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Connect.png; path = Images/32/Connect.png; sourceTree = "<group>"; };
 		9A659BE919B6DE9A00C30CE2 /* SystemContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemContainerViewController.h; path = ViewControllers/SystemContainerViewController.h; sourceTree = "<group>"; };
 		9A659BEA19B6DE9A00C30CE2 /* SystemContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemContainerViewController.m; path = ViewControllers/SystemContainerViewController.m; sourceTree = "<group>"; };
 		9A659BEC19B7008500C30CE2 /* System.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = System.png; path = Images/32/System.png; sourceTree = "<group>"; };
@@ -166,10 +167,14 @@
 		9A9FFE8719C04FAB00F76D38 /* MsgWarning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MsgWarning.png; path = Images/24/MsgWarning.png; sourceTree = "<group>"; };
 		9AAE0EB819B466EF004D9146 /* MsgContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgContainerViewController.h; path = ViewControllers/MsgContainerViewController.h; sourceTree = "<group>"; };
 		9AAE0EB919B466EF004D9146 /* MsgContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgContainerViewController.m; path = ViewControllers/MsgContainerViewController.m; sourceTree = "<group>"; };
+		9AB67C1919D43103004B664A /* Connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Connect.png; path = Images/24/Connect.png; sourceTree = "<group>"; };
 		9AC5448C19B1F73500A7F334 /* HideBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideBar.png; path = Images/24/HideBar.png; sourceTree = "<group>"; };
 		9AC5448E19B1F74300A7F334 /* ShowBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShowBar.png; path = Images/24/ShowBar.png; sourceTree = "<group>"; };
 		9ACA2EB819BD4651005542B5 /* MsgMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgMasterTableViewController.m; path = ViewControllers/Msg/MsgMasterTableViewController.m; sourceTree = "<group>"; };
 		9ACA2EBA19BD468E005542B5 /* MsgMasterTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MsgMasterTableViewController.h; path = ViewControllers/Msg/MsgMasterTableViewController.h; sourceTree = "<group>"; };
+		9ACB212419D44A4E0022EB5F /* MeasureSelect2ndTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeasureSelect2ndTableViewController.h; path = ViewControllers/Measure/MeasureSelect2ndTableViewController.h; sourceTree = "<group>"; };
+		9ACB212519D44A4E0022EB5F /* MeasureSelect2ndTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasureSelect2ndTableViewController.m; path = ViewControllers/Measure/MeasureSelect2ndTableViewController.m; sourceTree = "<group>"; };
+		9ACB212719D44E080022EB5F /* TDSCDMA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TDSCDMA.plist; path = Mode/TDSCDMA.plist; sourceTree = "<group>"; };
 		9AE0AFB719C2B55C008544AC /* DisplaySettingsContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplaySettingsContainerViewController.h; path = ViewControllers/Display/DisplaySettingsContainerViewController.h; sourceTree = "<group>"; };
 		9AE0AFB819C2B55C008544AC /* DisplaySettingsContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplaySettingsContainerViewController.m; path = ViewControllers/Display/DisplaySettingsContainerViewController.m; sourceTree = "<group>"; };
 		9AE0AFBA19C2B626008544AC /* DisplayTracesContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayTracesContainerViewController.h; path = ViewControllers/Display/DisplayTracesContainerViewController.h; sourceTree = "<group>"; };
@@ -215,6 +220,8 @@
 		9A19795919D2A561008E87E1 /* MeasureSelect */ = {
 			isa = PBXGroup;
 			children = (
+				9ACB212419D44A4E0022EB5F /* MeasureSelect2ndTableViewController.h */,
+				9ACB212519D44A4E0022EB5F /* MeasureSelect2ndTableViewController.m */,
 				9A79537719CD3902009984A6 /* MeasureSelectTableViewController.h */,
 				9A79537819CD3902009984A6 /* MeasureSelectTableViewController.m */,
 				9A79537319CD35BE009984A6 /* MeasureSelectNavigationViewController.h */,
@@ -279,7 +286,6 @@
 			children = (
 				9A19791119D278AD008E87E1 /* AddInstrument.png */,
 				9A659BEC19B7008500C30CE2 /* System.png */,
-				9A659BE019B6BCE300C30CE2 /* Connect.png */,
 				9A659BDE19B6BC2000C30CE2 /* ShowMenu.png */,
 				9A659BDC19B6BC1800C30CE2 /* HideMenu.png */,
 				9A659BD819B6B91900C30CE2 /* MsgEmpty.png */,
@@ -469,6 +475,7 @@
 		9A9C673319AD7081007D3248 /* 24 */ = {
 			isa = PBXGroup;
 			children = (
+				9AB67C1919D43103004B664A /* Connect.png */,
 				9A19794E19D28DDA008E87E1 /* Cancel.png */,
 				9A19794F19D28DDA008E87E1 /* OK.png */,
 				9A9FFE8519C04FAB00F76D38 /* MsgError.png */,
@@ -479,6 +486,15 @@
 				9AC5448C19B1F73500A7F334 /* HideBar.png */,
 			);
 			name = 24;
+			sourceTree = "<group>";
+		};
+		9ACB212919D44F330022EB5F /* ModeList */ = {
+			isa = PBXGroup;
+			children = (
+				9A7422A619BDDBC900A251ED /* MSAList.plist */,
+				9ACB212719D44E080022EB5F /* TDSCDMA.plist */,
+			);
+			name = ModeList;
 			sourceTree = "<group>";
 		};
 		9AE0AFB619C2B4E8008544AC /* Display */ = {
@@ -497,10 +513,10 @@
 		9AF7001219B82CAE000A69A5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				9ACB212919D44F330022EB5F /* ModeList */,
 				9AF7001319B82CC1000A69A5 /* Msg */,
 				9A953EE719ADCB99005467A1 /* ShareSettings.h */,
 				9A953EE819ADCBB6005467A1 /* ShareSettings.m */,
-				9A7422A619BDDBC900A251ED /* MSAList.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -624,17 +640,18 @@
 				9A659BDA19B6B91900C30CE2 /* MsgEmpty.png in Resources */,
 				9A659BDB19B6B91900C30CE2 /* MsgNew.png in Resources */,
 				9AC5448F19B1F74300A7F334 /* ShowBar.png in Resources */,
-				9A659BE119B6BCE300C30CE2 /* Connect.png in Resources */,
 				9A19795019D28DDA008E87E1 /* Cancel.png in Resources */,
 				9AF7001119B81FE5000A69A5 /* Return.png in Resources */,
 				9A659BED19B7008500C30CE2 /* System.png in Resources */,
 				9A9C671C19AD6C81007D3248 /* Images.xcassets in Resources */,
 				9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */,
 				9A19791019D270EE008E87E1 /* ReturnRoot.png in Resources */,
+				9AB67C1A19D43103004B664A /* Connect.png in Resources */,
 				9A659BDF19B6BC2000C30CE2 /* ShowMenu.png in Resources */,
 				9A7422A719BDDBC900A251ED /* MSAList.plist in Resources */,
 				9A19795119D28DDA008E87E1 /* OK.png in Resources */,
 				9A9FFE8919C04FAB00F76D38 /* MsgInfo.png in Resources */,
+				9ACB212819D44E080022EB5F /* TDSCDMA.plist in Resources */,
 				9A5FDA7F19B5FB9A00B3C300 /* Preset.png in Resources */,
 				9A9FFE8A19C04FAB00F76D38 /* MsgWarning.png in Resources */,
 				9A659BDD19B6BC1800C30CE2 /* HideMenu.png in Resources */,
@@ -658,6 +675,7 @@
 				9A19795619D2A547008E87E1 /* AddInstrumentContainerViewController.m in Sources */,
 				9A726F5B19C19FC000CDF55D /* SystemMasterNavigationViewController.m in Sources */,
 				9A1C929C19CED2B400074EA6 /* SoftMenuNavigationViewController.m in Sources */,
+				9ACB212619D44A4E0022EB5F /* MeasureSelect2ndTableViewController.m in Sources */,
 				9A1C92A019CED75300074EA6 /* PresetMenuContainerViewController.m in Sources */,
 				9A9C671419AD6C81007D3248 /* MSA.xcdatamodeld in Sources */,
 				9A1C929B19CED2B400074EA6 /* SoftMenuContainerViewController.m in Sources */,

@@ -19,7 +19,6 @@
 
 @implementation PresetMenuTableViewController
 
-static NSString *presetMenuCellTableId = @"presetMenuTVC";
 static NSString *presetMenuCellTable_Green_White_Id = @"presetMenuTVC_Green_White";
 static NSString *presetMenuCellTable_DarkGray_Green_2Lines_Id = @"presetMenuTVC_DarkGray_Green_2Lines";
 static NSString *presetMenuCellTable_DarkGray_White_Id = @"presetMenuTVC_DarkGray_White";

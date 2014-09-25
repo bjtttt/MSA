@@ -22,4 +22,8 @@
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
 
+@property (strong, nonatomic) NSDictionary *dictModeData;
+@property (strong, nonatomic) NSDictionary *dictMeasureData;
+@property (strong, nonatomic) NSArray *listMeasureData;
+
 @end

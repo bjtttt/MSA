@@ -40,6 +40,7 @@
         NSString *instrumentTrimmed = [instrument stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
         if(instrumentTrimmed.length < 1)
         {
+            // This assignment won't trig this event again.
             self.instrumentOnOff.on = NO;
 
             UIAlertView *alertView = [[UIAlertView alloc]
