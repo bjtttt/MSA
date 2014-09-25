@@ -204,7 +204,10 @@
             self.displayCVC.frameHeight = self.frameHeight;
             [self.displayView setUserInteractionEnabled:NO];
             [self.menuView setUserInteractionEnabled:NO];
-
+            
+            self.menuCVC.presetViewVisible = NO;
+            [self.menuCVC showHidePresetMenu:NO animated:YES];
+            
             layoutBlock = ^(void)
             {
                 self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);

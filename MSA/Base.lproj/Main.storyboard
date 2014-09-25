@@ -904,22 +904,21 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRW-Zq-Ecl" userLabel="Add Instrument Navigation Bar">
                                 <rect key="frame" x="0.0" y="0.0" width="350" height="44"/>
                                 <items>
-                                    <navigationItem title="Connect Instrument" id="6zb-1u-Bbn">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="dnS-2x-7Lf">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mxl-25-udW">
-                                                <rect key="frame" x="124" y="7" width="32" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="AddInstrument.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="addInstrument:" destination="0Ri-6U-ohF" eventType="touchUpInside" id="oUb-Dd-uEC"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Connect Instrument" id="6zb-1u-Bbn"/>
                                 </items>
                             </navigationBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b80-Yy-vpY" userLabel="Measure Select Navigation Bar">
+                                <rect key="frame" x="0.0" y="119" width="350" height="44"/>
+                                <items>
+                                    <navigationItem title="Measurement" id="hys-jF-eC3"/>
+                                </items>
+                            </navigationBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66b-Uj-eb4" userLabel="Measure Select Container View">
+                                <rect key="frame" x="0.0" y="163" width="350" height="393"/>
+                                <connections>
+                                    <segue destination="5DT-1P-vyV" kind="embed" identifier="embedSegueToMeasureSelectNVC" id="v3t-i6-Rhc"/>
+                                </connections>
+                            </containerView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGU-BS-DIn">
                                 <rect key="frame" x="0.0" y="556" width="350" height="44"/>
                                 <items>
@@ -935,7 +934,7 @@
                                             </connections>
                                         </button>
                                     </barButtonItem>
-                                    <barButtonItem width="261" style="plain" systemItem="fixedSpace" id="Mkg-Pt-xGU"/>
+                                    <barButtonItem width="252" style="plain" systemItem="fixedSpace" id="Mkg-Pt-xGU"/>
                                     <barButtonItem style="plain" id="Tsc-Bq-MZC">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bnV-4V-1EG" userLabel="OK Button">
                                             <rect key="frame" x="50" y="7" width="24" height="24"/>
@@ -950,24 +949,11 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b80-Yy-vpY" userLabel="Measure Select Navigation Bar">
-                                <rect key="frame" x="0.0" y="119" width="350" height="44"/>
-                                <items>
-                                    <navigationItem title="Measurement" id="hys-jF-eC3"/>
-                                </items>
-                            </navigationBar>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66b-Uj-eb4" userLabel="Measure Select Container View">
-                                <rect key="frame" x="0.0" y="163" width="350" height="393"/>
-                                <connections>
-                                    <segue destination="5DT-1P-vyV" kind="embed" identifier="embedSegueToMeasureSelectNVC" id="v3t-i6-Rhc"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                     <connections>
-                        <outlet property="addInstrumentButton" destination="mxl-25-udW" id="0HN-lF-zlF"/>
                         <outlet property="addInstrumentNavBar" destination="gRW-Zq-Ecl" id="B3R-6z-b4g"/>
                         <outlet property="addInstrumentV" destination="sVE-90-MCS" id="J7E-W1-fcP"/>
                         <outlet property="cancelButton" destination="1b3-jK-cI6" id="kfj-UV-4SL"/>
@@ -994,18 +980,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Tf-PY-LfN">
-                                <rect key="frame" x="285" y="44" width="51" height="31"/>
+                                <rect key="frame" x="296" y="38" width="51" height="31"/>
                                 <connections>
                                     <action selector="instrumentOnOffChanged:" destination="1Ik-9d-BHF" eventType="valueChanged" id="9g1-No-4F4"/>
                                 </connections>
                             </switch>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="(No Instrument)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nVX-6W-tpZ">
-                                <rect key="frame" x="5" y="6" width="340" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Instrument hostname or IP address" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nVX-6W-tpZ">
+                                <rect key="frame" x="5" y="5" width="340" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Disconnected." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRR-lV-6CB">
-                                <rect key="frame" x="5" y="49" width="272" height="21"/>
+                                <rect key="frame" x="11" y="43" width="272" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1069,7 +1055,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AddInstrument.png" width="32" height="32"/>
         <image name="Cancel.png" width="24" height="24"/>
         <image name="Connect.png" width="32" height="32"/>
         <image name="MsgEmpty.png" width="32" height="32"/>
