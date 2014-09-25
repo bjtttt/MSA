@@ -37,12 +37,21 @@ typedef enum systType {
     SYST_LANG
 }SYSTType;
 
-#define CORNER_RADIUS 3.0f
+typedef enum instrumentStatus {
+    INST_DISC,
+    INST_INCONN,
+    INST_CONN,
+    INST_INDISC
+}InstrumentStatus;
+
+#define NORMAL_CORNER_RADIUS 5.0f
+#define HEAVY_CORNER_RADIUS 10.0f
 #define NORMAL_BORDER_WIDTH 1.0f
-#define HEAVY_BORDER_WIDTH 3.0f
+#define HEAVY_BORDER_WIDTH 2.0f
 #define VC_MARGIN 1.0f
 #define MENU_WIDTH 150.0f
-#define MEAS_WIDTH 300.0f
+#define MEAS_WIDTH 350.0f
+#define MEAS_HEIGHT 600.0f
 #define MEASBAR_HEIGHT 60.0f
 #define NAVBAR_HEIGHT 44.0f
 #define ADDINSTRUMENT_HEIGHT 75.0f
@@ -54,12 +63,11 @@ typedef enum systType {
 @property (nonatomic) BOOL menuTapped;
 @property (nonatomic) BOOL measureTapped;
 
-//@property (nonatomic) MSALayout curMSALayout;
-//@property (nonatomic) MSALayout prevMSALayout;
-//@property (nonatomic) MSALayout prevprevMSALayout;
-
 @property (nonatomic) BOOL menuDisplayed;
 @property (nonatomic) BOOL measureDisplayed;
+
+@property (nonatomic) InstrumentStatus currentInstrumentStatus;
+@property (nonatomic) NSMutableString *currentInstrument;
 
 +(id)sharedSettings;
 

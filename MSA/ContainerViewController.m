@@ -11,7 +11,7 @@
 #import "DisplayContainerViewController.h"
 #import "MenuContainerViewController.h"
 #import "MeasureContainerViewController.h"
-#import "MSAFormSheetBackgroundWindow.h"
+//#import "MSAFormSheetBackgroundWindow.h"
 
 @interface ContainerViewController ()
 
@@ -26,6 +26,22 @@
     self.frameWidth = self.view.frame.size.width;
     self.frameHeight = self.view.frame.size.height;
     
+    // Border Radius
+    [self.measureView.layer setCornerRadius:HEAVY_CORNER_RADIUS];
+    [self.measureView.layer setMasksToBounds:YES];
+    //[self.measureView setClipsToBounds:YES];
+    
+    // Border
+    [self.measureView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self.measureView.layer setBorderWidth:HEAVY_BORDER_WIDTH];
+    
+    // Border Shadow
+    [self.measureView.layer setShadowColor:[UIColor blackColor].CGColor];
+    [self.measureView.layer setShadowOpacity:1.0];
+    [self.measureView.layer setShadowRadius:HEAVY_CORNER_RADIUS];
+    [self.measureView.layer setShadowOffset:CGSizeMake(1.0, 1.0)];
+    [self.measureView.layer setShadowPath:[[UIBezierPath bezierPathWithRect:self.measureView.layer.bounds] CGPath]];
+
     //self.shareSettings = [ShareSettings sharedSettings];
     //self.shareSettings.menuTapped=NO;
     //self.shareSettings.barTapped=NO;
@@ -74,6 +90,9 @@
     self.shareSettings.menuDisplayed=NO;
     self.shareSettings.measureDisplayed=NO;
     //self.shareSettings.prevprevMSALayout=MSA_DISP;
+
+    self.shareSettings.currentInstrument = [[NSMutableString alloc] initWithString:@""];
+    self.shareSettings.currentInstrumentStatus = INST_DISC;
 
     //[self.menuView setHidden:YES];
     //[self.menuCVC showHidePresetMenu:YES];
@@ -183,12 +202,14 @@
         {
             self.displayCVC.frameWidth = self.frameWidth;
             self.displayCVC.frameHeight = self.frameHeight;
+            [self.displayView setUserInteractionEnabled:NO];
+            [self.menuView setUserInteractionEnabled:NO];
 
             layoutBlock = ^(void)
             {
                 self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth-MENU_WIDTH, self.frameHeight);
-                self.measureView.frame = CGRectMake(0, 0, MEAS_WIDTH, self.frameHeight);
+                self.measureView.frame = CGRectMake((self.frameWidth-MEAS_WIDTH)/2, (self.frameHeight-MEAS_HEIGHT)/2, MEAS_WIDTH, MEAS_HEIGHT);
             };
             completionBlock = ^(BOOL finished){
             };
@@ -197,19 +218,20 @@
         {
             self.displayCVC.frameWidth = self.frameWidth - MENU_WIDTH;
             self.displayCVC.frameHeight = self.frameHeight;
+            [self.displayView setUserInteractionEnabled:NO];
             
             layoutBlock = ^(void)
             {
                 self.menuView.frame = CGRectMake(self.frameWidth+VC_MARGIN, 0, MENU_WIDTH, self.frameHeight);
                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
-                self.measureView.frame = CGRectMake(0, 0, MEAS_WIDTH, self.frameHeight);
+                self.measureView.frame = CGRectMake((self.frameWidth-MEAS_WIDTH)/2, (self.frameHeight-MEAS_HEIGHT)/2, MEAS_WIDTH, MEAS_HEIGHT);
             };
             completionBlock = ^(BOOL finished){
             };
         }
         
-        layoutBlock();
-        completionBlock(YES);
+        //layoutBlock();
+        //completionBlock(YES);
     }
     else
     {
@@ -217,10 +239,12 @@
         {
             self.displayCVC.frameWidth = self.frameWidth;
             self.displayCVC.frameHeight = self.frameHeight;
+            [self.displayView setUserInteractionEnabled:YES];
+            [self.menuView setUserInteractionEnabled:YES];
 
             layoutBlock = ^(void)
             {
-                self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, 0, MEAS_WIDTH, self.frameHeight);
+                self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, (self.frameHeight-MEAS_HEIGHT)/2, MEAS_WIDTH, MEAS_HEIGHT);
                 self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth-MENU_WIDTH, self.frameHeight);
             };
@@ -231,30 +255,31 @@
         {
             self.displayCVC.frameWidth = self.frameWidth - MENU_WIDTH;
             self.displayCVC.frameHeight = self.frameHeight;
+            [self.displayView setUserInteractionEnabled:YES];
 
             layoutBlock = ^(void)
             {
-                self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, 0, MEAS_WIDTH, self.frameHeight);
+                self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, (self.frameHeight-MEAS_HEIGHT)/2, MEAS_WIDTH, MEAS_HEIGHT);
                 self.menuView.frame = CGRectMake(self.frameWidth+VC_MARGIN, 0, MENU_WIDTH, self.frameHeight);
                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
             };
             completionBlock = ^(BOOL finished){
             };
         }
-        
-        if (animated)
-        {
-            [UIView animateWithDuration:0.25
-             //delay:0
-             //options:UIViewAnimationOptionLayoutSubviews
-                             animations:layoutBlock
-                             completion:completionBlock];
-        }
-        else
-        {
-            layoutBlock();
-            completionBlock(YES);
-        }
+    }
+    
+    if (animated)
+    {
+        [UIView animateWithDuration:0.25
+         //delay:0
+         //options:UIViewAnimationOptionLayoutSubviews
+                         animations:layoutBlock
+                         completion:completionBlock];
+    }
+    else
+    {
+        layoutBlock();
+        completionBlock(YES);
     }
 }
 

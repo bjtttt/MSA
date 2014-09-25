@@ -8,7 +8,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "DisplayContainerViewController.h"
-#import "MSAFormSheetController.h"
+//#import "MSAFormSheetController.h"
 #import "ContainerViewController.h"
 #import "MenuContainerViewController.h"
 //#import "MSACustomFormSheetController.h"
@@ -91,6 +91,8 @@
 }
 
 - (IBAction)showMeasureView:(id)sender {
+    //UIImage *screen = [self imageByRenderingView];
+    
     self.shareSettings.measureTapped=!self.shareSettings.measureTapped;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"measureTapped" object:nil];
     
@@ -133,5 +135,28 @@
     self.mainCVC.menuCVC.presetViewVisible = NO;
     [self.mainCVC.menuCVC showHidePresetMenu:self.mainCVC.menuCVC.presetViewVisible animated:YES];
 }
+
+/*
+-(UIImage *)imageByRenderingViewOpaque:(BOOL)yesOrNo
+{
+    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, yesOrNo, 0);
+    if([self.view respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)])
+    {
+        [self.view drawViewHierarchyInRect:self.view.bounds afterScreenUpdates:NO];
+    }
+    else
+    {
+        [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    }
+    UIImage *resultingImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return resultingImage;
+}
+
+-(UIImage *)imageByRenderingView
+{
+    return [self imageByRenderingViewOpaque:NO];
+}
+*/
 
 @end

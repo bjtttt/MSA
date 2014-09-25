@@ -102,6 +102,7 @@
         {
             self.softMenuV.frame = CGRectMake(self.frameWidth, NAVBAR_HEIGHT, self.frameWidth, self.frameHeight-NAVBAR_HEIGHT);
             self.presetMenuV.frame = CGRectMake(0, NAVBAR_HEIGHT, self.frameWidth, self.frameHeight-NAVBAR_HEIGHT);
+            //[self.presetMenuV setAlpha:0.1];
         }
         else
         {

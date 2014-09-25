@@ -42,12 +42,6 @@
 		9A79537519CD35BE009984A6 /* MeasureContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79537219CD35BE009984A6 /* MeasureContainerViewController.m */; };
 		9A79537619CD35BE009984A6 /* MeasureSelectNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79537419CD35BE009984A6 /* MeasureSelectNavigationViewController.m */; };
 		9A79537919CD3902009984A6 /* MeasureSelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79537819CD3902009984A6 /* MeasureSelectTableViewController.m */; };
-		9A79537D19CDA213009984A6 /* MSAFormSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79537C19CDA213009984A6 /* MSAFormSheetController.m */; };
-		9A79538619CDA322009984A6 /* MSAFormSheetBackgroundWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79538119CDA322009984A6 /* MSAFormSheetBackgroundWindow.m */; };
-		9A79538719CDA322009984A6 /* MSAFormSheetSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79538319CDA322009984A6 /* MSAFormSheetSegue.m */; };
-		9A79538819CDA322009984A6 /* UIImage+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79538519CDA322009984A6 /* UIImage+Additional.m */; };
-		9A79538E19CDA38E009984A6 /* MSAAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79538B19CDA38E009984A6 /* MSAAppearance.m */; };
-		9A79538F19CDA38E009984A6 /* NSInvocation+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79538D19CDA38E009984A6 /* NSInvocation+Copy.m */; };
 		9A90589919C08EFD00B0B6AB /* MsgSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A90589819C08EFD00B0B6AB /* MsgSplitViewController.m */; };
 		9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EDC19AD84E7005467A1 /* ConnectViewController.m */; };
 		9A953EE419AD84E7005467A1 /* DisplayContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EDE19AD84E7005467A1 /* DisplayContainerViewController.m */; };
@@ -142,18 +136,6 @@
 		9A79537419CD35BE009984A6 /* MeasureSelectNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasureSelectNavigationViewController.m; path = ViewControllers/Measure/MeasureSelectNavigationViewController.m; sourceTree = "<group>"; };
 		9A79537719CD3902009984A6 /* MeasureSelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeasureSelectTableViewController.h; path = ViewControllers/Measure/MeasureSelectTableViewController.h; sourceTree = "<group>"; };
 		9A79537819CD3902009984A6 /* MeasureSelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasureSelectTableViewController.m; path = ViewControllers/Measure/MeasureSelectTableViewController.m; sourceTree = "<group>"; };
-		9A79537C19CDA213009984A6 /* MSAFormSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSAFormSheetController.m; path = Extended/UI/PopupView/MSAFormSheetController.m; sourceTree = "<group>"; };
-		9A79537F19CDA246009984A6 /* MSAFormSheetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MSAFormSheetController.h; path = Extended/UI/PopupView/MSAFormSheetController.h; sourceTree = "<group>"; };
-		9A79538019CDA322009984A6 /* MSAFormSheetBackgroundWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSAFormSheetBackgroundWindow.h; path = Extended/UI/PopupView/MSAFormSheetBackgroundWindow.h; sourceTree = "<group>"; };
-		9A79538119CDA322009984A6 /* MSAFormSheetBackgroundWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSAFormSheetBackgroundWindow.m; path = Extended/UI/PopupView/MSAFormSheetBackgroundWindow.m; sourceTree = "<group>"; };
-		9A79538219CDA322009984A6 /* MSAFormSheetSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSAFormSheetSegue.h; path = Extended/UI/PopupView/MSAFormSheetSegue.h; sourceTree = "<group>"; };
-		9A79538319CDA322009984A6 /* MSAFormSheetSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSAFormSheetSegue.m; path = Extended/UI/PopupView/MSAFormSheetSegue.m; sourceTree = "<group>"; };
-		9A79538419CDA322009984A6 /* UIImage+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Additional.h"; path = "Extended/UI/PopupView/UIImage+Additional.h"; sourceTree = "<group>"; };
-		9A79538519CDA322009984A6 /* UIImage+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Additional.m"; path = "Extended/UI/PopupView/UIImage+Additional.m"; sourceTree = "<group>"; };
-		9A79538A19CDA38E009984A6 /* MSAAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSAAppearance.h; path = Extended/UI/PopupView/Additional/MSAAppearance.h; sourceTree = "<group>"; };
-		9A79538B19CDA38E009984A6 /* MSAAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSAAppearance.m; path = Extended/UI/PopupView/Additional/MSAAppearance.m; sourceTree = "<group>"; };
-		9A79538C19CDA38E009984A6 /* NSInvocation+Copy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+Copy.h"; path = "Extended/UI/PopupView/Additional/NSInvocation+Copy.h"; sourceTree = "<group>"; };
-		9A79538D19CDA38E009984A6 /* NSInvocation+Copy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+Copy.m"; path = "Extended/UI/PopupView/Additional/NSInvocation+Copy.m"; sourceTree = "<group>"; };
 		9A90589819C08EFD00B0B6AB /* MsgSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgSplitViewController.m; path = ViewControllers/Msg/MsgSplitViewController.m; sourceTree = "<group>"; };
 		9A90589A19C08F1000B0B6AB /* MsgSplitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MsgSplitViewController.h; path = ViewControllers/Msg/MsgSplitViewController.h; sourceTree = "<group>"; };
 		9A953EDB19AD84E7005467A1 /* ConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectViewController.h; path = ViewControllers/ConnectViewController.h; sourceTree = "<group>"; };
@@ -384,36 +366,8 @@
 		9A79537B19CDA1AD009984A6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9A79537E19CDA217009984A6 /* PopupView */,
 			);
 			name = UI;
-			sourceTree = "<group>";
-		};
-		9A79537E19CDA217009984A6 /* PopupView */ = {
-			isa = PBXGroup;
-			children = (
-				9A79538919CDA37C009984A6 /* Additional */,
-				9A79538019CDA322009984A6 /* MSAFormSheetBackgroundWindow.h */,
-				9A79538119CDA322009984A6 /* MSAFormSheetBackgroundWindow.m */,
-				9A79538219CDA322009984A6 /* MSAFormSheetSegue.h */,
-				9A79538319CDA322009984A6 /* MSAFormSheetSegue.m */,
-				9A79538419CDA322009984A6 /* UIImage+Additional.h */,
-				9A79538519CDA322009984A6 /* UIImage+Additional.m */,
-				9A79537C19CDA213009984A6 /* MSAFormSheetController.m */,
-				9A79537F19CDA246009984A6 /* MSAFormSheetController.h */,
-			);
-			name = PopupView;
-			sourceTree = "<group>";
-		};
-		9A79538919CDA37C009984A6 /* Additional */ = {
-			isa = PBXGroup;
-			children = (
-				9A79538A19CDA38E009984A6 /* MSAAppearance.h */,
-				9A79538B19CDA38E009984A6 /* MSAAppearance.m */,
-				9A79538C19CDA38E009984A6 /* NSInvocation+Copy.h */,
-				9A79538D19CDA38E009984A6 /* NSInvocation+Copy.m */,
-			);
-			name = Additional;
 			sourceTree = "<group>";
 		};
 		9A953EDA19AD8436005467A1 /* ViewControllers */ = {
@@ -707,8 +661,6 @@
 				9A1C92A019CED75300074EA6 /* PresetMenuContainerViewController.m in Sources */,
 				9A9C671419AD6C81007D3248 /* MSA.xcdatamodeld in Sources */,
 				9A1C929B19CED2B400074EA6 /* SoftMenuContainerViewController.m in Sources */,
-				9A79538619CDA322009984A6 /* MSAFormSheetBackgroundWindow.m in Sources */,
-				9A79538819CDA322009984A6 /* UIImage+Additional.m in Sources */,
 				9A726F4E19C1880000CDF55D /* MsgMasterNavigationViewController.m in Sources */,
 				9AE0AFBC19C2B626008544AC /* DisplayTracesContainerViewController.m in Sources */,
 				9A726F6519C19FDE00CDF55D /* SystemDetailTableViewController.m in Sources */,
@@ -722,7 +674,6 @@
 				9A79537919CD3902009984A6 /* MeasureSelectTableViewController.m in Sources */,
 				9A1C929D19CED2B400074EA6 /* SoftMenuTableViewController.m in Sources */,
 				9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */,
-				9A79538719CDA322009984A6 /* MSAFormSheetSegue.m in Sources */,
 				9A345F4719D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m in Sources */,
 				9A726F6319C19FDE00CDF55D /* SystemDetailContainerViewController.m in Sources */,
 				9A345F4E19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.m in Sources */,
@@ -732,16 +683,13 @@
 				9A726F5219C188C200CDF55D /* MsgDetailTableViewController.m in Sources */,
 				9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */,
 				9A726F6819C19FEE00CDF55D /* SystemSplitViewController.m in Sources */,
-				9A79538F19CDA38E009984A6 /* NSInvocation+Copy.m in Sources */,
 				9A953EE919ADCBB6005467A1 /* ShareSettings.m in Sources */,
 				9A726F5C19C19FC000CDF55D /* SystemMasterTableViewController.m in Sources */,
 				9A345F4419D0051C00507A5A /* PresetMenuGreenWhiteTableViewCell.m in Sources */,
 				9A9FFE7E19C0430800F76D38 /* MsgDetailNavigationViewController.m in Sources */,
 				9A9C670E19AD6C81007D3248 /* main.m in Sources */,
 				9A345F4A19D00BC500507A5A /* PresetMenuDarkGrayWhiteTableViewCell.m in Sources */,
-				9A79538E19CDA38E009984A6 /* MSAAppearance.m in Sources */,
 				9A659BEB19B6DE9A00C30CE2 /* SystemContainerViewController.m in Sources */,
-				9A79537D19CDA213009984A6 /* MSAFormSheetController.m in Sources */,
 				9A79537519CD35BE009984A6 /* MeasureContainerViewController.m in Sources */,
 				9A79537619CD35BE009984A6 /* MeasureSelectNavigationViewController.m in Sources */,
 			);

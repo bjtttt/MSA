@@ -17,6 +17,9 @@
 
 -(void)viewDidLoad{
     [super viewDidLoad];
+    
+    self.instrumentOnOff.transform = CGAffineTransformMakeScale(0.75, 0.75);
+    self.instrumentOnOff.on = NO;
 }
 
 

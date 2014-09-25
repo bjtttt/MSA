@@ -13,7 +13,8 @@
 
 @interface AddInstrumentContainerViewController: UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *instrumentAddress;
+@property (weak, nonatomic) IBOutlet UITextField *instrumentAddress;
+@property (weak, nonatomic) IBOutlet UILabel *instrumentStatus;
 @property (weak, nonatomic) IBOutlet UISwitch *instrumentOnOff;
 
 @property (weak, nonatomic) IBOutlet MeasureContainerViewController *measureCVC;
