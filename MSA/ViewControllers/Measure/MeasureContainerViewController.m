@@ -66,4 +66,5 @@
     self.shareSettings.measureTapped = !self.shareSettings.measureTapped;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"measureTapped" object:nil];
 }
+
 @end

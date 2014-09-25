@@ -33,13 +33,30 @@
 
 #pragma mark - Split view
 
-- (IBAction)addInstrument:(id)sender {
-}
-- (IBAction)okMeasure:(id)sender {
+- (IBAction)instrumentOnOffChanged:(id)sender {
+    if(self.instrumentOnOff.on == YES)
+    {
+        NSString *instrument = self.instrumentAddress.text;
+        NSString *instrumentTrimmed = [instrument stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        if(instrumentTrimmed.length < 1)
+        {
+            self.instrumentOnOff.on = NO;
+
+            UIAlertView *alertView = [[UIAlertView alloc]
+                                      initWithTitle:@"Connect Error"
+                                      message:@"No instruement hostname or IP address!"
+                                      delegate:nil
+                                      cancelButtonTitle:@"OK"
+                                      otherButtonTitles:nil, nil];
+            [alertView show];
+        }
+        else
+        {
+        }
+    }
+    else
+    {
+    }
 }
 
-- (IBAction)cancelMeasure:(id)sender {
-}
-- (IBAction)instrumentOnOffChanged:(id)sender {
-}
 @end
