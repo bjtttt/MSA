@@ -903,6 +903,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="bar0V" destination="KKW-Yy-M8o" id="DEI-wL-jvB"/>
+                        <outlet property="bar1V" destination="arC-zI-02b" id="6mh-wO-N8q"/>
+                        <outlet property="bar2V" destination="Nyb-j1-WbM" id="mve-6f-Bws"/>
+                        <outlet property="bar3V" destination="Bnz-fr-Gfz" id="Eh0-Xf-GxT"/>
+                        <outlet property="bar4V" destination="xG5-RZ-PEu" id="Ehf-nk-iy9"/>
+                        <outlet property="bar5V" destination="4Z2-gk-mLG" id="xcM-uA-r0T"/>
+                        <outlet property="bar6V" destination="Q4C-s1-DXW" id="kvN-YX-uC8"/>
+                        <outlet property="bar7V" destination="hB4-j7-6Rc" id="M6R-JX-21A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRf-2X-HFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
