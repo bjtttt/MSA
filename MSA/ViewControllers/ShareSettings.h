@@ -69,7 +69,11 @@ typedef enum instrumentStatus {
 @property (nonatomic) InstrumentStatus currentInstrumentStatus;
 @property (nonatomic) NSMutableString *currentInstrument;
 
+@property (nonatomic) NSMutableArray *measureView;
+
 +(id)sharedSettings;
+
+- (void) initMeasureView;
 
 @end
 

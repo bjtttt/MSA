@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>measure</key>
+	<dict>
+		<key>Transmit Power</key>
+		<dict>
+			<key>Enabled</key>
+			<false/>
+			<key>Style</key>
+			<integer>0</integer>
+			<key>View</key>
+			<dict/>
+		</dict>
+		<key>ACP</key>
+		<dict>
+			<key>Enabled</key>
+			<false/>
+			<key>Style</key>
+			<integer>0</integer>
+			<key>View</key>
+			<dict/>
+		</dict>
+		<key>Power vs Time</key>
+		<dict>
+			<key>Enabled</key>
+			<false/>
+			<key>Style</key>
+			<integer>0</integer>
+			<key>View</key>
+			<dict/>
+		</dict>
+		<key>Spectrum\nEmission Mask</key>
+		<dict>
+			<key>Enabled</key>
+			<false/>
+			<key>Style</key>
+			<integer>3</integer>
+			<key>View</key>
+			<dict/>
+		</dict>
+		<key>Spurious\nEmissions</key>
+		<dict>
+			<key>Enabled</key>
+			<false/>
+			<key>Style</key>
+			<integer>3</integer>
+			<key>View</key>
+			<dict/>
+		</dict>
+		<key>Occupied BW</key>
+		<dict>
+			<key>Enabled</key>
+			<false/>
+			<key>Style</key>
+			<integer>0</integer>
+			<key>View</key>
+			<dict/>
+		</dict>
+		<key>Power Stat\nCCDF</key>
+		<dict>
+			<key>Enabled</key>
+			<false/>
+			<key>Style</key>
+			<integer>3</integer>
+			<key>View</key>
+			<dict/>
+		</dict>
+		<key>Code Domain</key>
+		<dict>
+			<key>Enabled</key>
+			<false/>
+			<key>Style</key>
+			<integer>0</integer>
+			<key>View</key>
+			<dict/>
+		</dict>
+		<key>Mod Accuracy\n(Composite EVM)</key>
+		<dict>
+			<key>Enabled</key>
+			<false/>
+			<key>Style</key>
+			<integer>1</integer>
+			<key>View</key>
+			<dict/>
+		</dict>
+		<key>IQ Waveform</key>
+		<dict>
+			<key>Enabled</key>
+			<false/>
+			<key>Style</key>
+			<integer>0</integer>
+			<key>View</key>
+			<dict>
+				<key>RF Envelop</key>
+				<dict>
+					<key>Enabled</key>
+					<false/>
+					<key>Style</key>
+					<integer>0</integer>
+				</dict>
+				<key>I/Q Waveform</key>
+				<dict>
+					<key>Enabled</key>
+					<false/>
+					<key>Style</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+		</dict>
+		<key>Monitor\nSpectrum</key>
+		<dict>
+			<key>Enabled</key>
+			<false/>
+			<key>Style</key>
+			<integer>3</integer>
+			<key>View</key>
+			<dict/>
+		</dict>
+	</dict>
+</dict>
+</plist>

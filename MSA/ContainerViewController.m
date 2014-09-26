@@ -93,6 +93,8 @@
 
     self.shareSettings.currentInstrument = [[NSMutableString alloc] initWithString:@""];
     self.shareSettings.currentInstrumentStatus = INST_DISC;
+    
+    [self.shareSettings initMeasureView];
 
     //[self.menuView setHidden:YES];
     //[self.menuCVC showHidePresetMenu:YES];

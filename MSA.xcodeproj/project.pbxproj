@@ -21,6 +21,8 @@
 		9A345F4719D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A345F4619D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m */; };
 		9A345F4A19D00BC500507A5A /* PresetMenuDarkGrayWhiteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A345F4919D00BC500507A5A /* PresetMenuDarkGrayWhiteTableViewCell.m */; };
 		9A345F4E19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A345F4D19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.m */; };
+		9A57E25D19D503BB00C58113 /* UIKeyMeasure.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A57E25C19D503BB00C58113 /* UIKeyMeasure.m */; };
+		9A57E26019D504B100C58113 /* UIKeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A57E25F19D504B100C58113 /* UIKeyView.m */; };
 		9A5FDA7F19B5FB9A00B3C300 /* Preset.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5FDA7E19B5FB9A00B3C300 /* Preset.png */; };
 		9A659BDA19B6B91900C30CE2 /* MsgEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BD819B6B91900C30CE2 /* MsgEmpty.png */; };
 		9A659BDB19B6B91900C30CE2 /* MsgNew.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BD919B6B91900C30CE2 /* MsgNew.png */; };
@@ -63,7 +65,7 @@
 		9AC5448F19B1F74300A7F334 /* ShowBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448E19B1F74300A7F334 /* ShowBar.png */; };
 		9ACA2EB919BD4651005542B5 /* MsgMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA2EB819BD4651005542B5 /* MsgMasterTableViewController.m */; };
 		9ACB212619D44A4E0022EB5F /* MeasureSelect2ndTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACB212519D44A4E0022EB5F /* MeasureSelect2ndTableViewController.m */; };
-		9ACB212819D44E080022EB5F /* TDSCDMA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ACB212719D44E080022EB5F /* TDSCDMA.plist */; };
+		9ACB212819D44E080022EB5F /* Mode.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9ACB212719D44E080022EB5F /* Mode.plist */; };
 		9AE0AFB919C2B55C008544AC /* DisplaySettingsContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0AFB819C2B55C008544AC /* DisplaySettingsContainerViewController.m */; };
 		9AE0AFBC19C2B626008544AC /* DisplayTracesContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0AFBB19C2B626008544AC /* DisplayTracesContainerViewController.m */; };
 		9AF7001119B81FE5000A69A5 /* Return.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF7001019B81FE5000A69A5 /* Return.png */; };
@@ -104,6 +106,10 @@
 		9A345F4B19D00BDA00507A5A /* PresetMenuDarkGrayWhiteTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PresetMenuDarkGrayWhiteTableViewCell.h; path = ViewControllers/Menu/Preset/CellStyle/PresetMenuDarkGrayWhiteTableViewCell.h; sourceTree = "<group>"; };
 		9A345F4C19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PresetMenuWhiteGreenTableViewCell.h; path = ViewControllers/Menu/Preset/CellStyle/PresetMenuWhiteGreenTableViewCell.h; sourceTree = "<group>"; };
 		9A345F4D19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresetMenuWhiteGreenTableViewCell.m; path = ViewControllers/Menu/Preset/CellStyle/PresetMenuWhiteGreenTableViewCell.m; sourceTree = "<group>"; };
+		9A57E25C19D503BB00C58113 /* UIKeyMeasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIKeyMeasure.m; path = UI/Key/MeasureView/UIKeyMeasure.m; sourceTree = "<group>"; };
+		9A57E25E19D5041C00C58113 /* UIKeyMeasure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIKeyMeasure.h; path = UI/Key/MeasureView/UIKeyMeasure.h; sourceTree = "<group>"; };
+		9A57E25F19D504B100C58113 /* UIKeyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIKeyView.m; path = UI/Key/MeasureView/UIKeyView.m; sourceTree = "<group>"; };
+		9A57E26119D504C500C58113 /* UIKeyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIKeyView.h; path = UI/Key/MeasureView/UIKeyView.h; sourceTree = "<group>"; };
 		9A5FDA7E19B5FB9A00B3C300 /* Preset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Preset.png; path = Images/32/Preset.png; sourceTree = "<group>"; };
 		9A659BD819B6B91900C30CE2 /* MsgEmpty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MsgEmpty.png; path = Images/32/MsgEmpty.png; sourceTree = "<group>"; };
 		9A659BD919B6B91900C30CE2 /* MsgNew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MsgNew.png; path = Images/32/MsgNew.png; sourceTree = "<group>"; };
@@ -174,7 +180,7 @@
 		9ACA2EBA19BD468E005542B5 /* MsgMasterTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MsgMasterTableViewController.h; path = ViewControllers/Msg/MsgMasterTableViewController.h; sourceTree = "<group>"; };
 		9ACB212419D44A4E0022EB5F /* MeasureSelect2ndTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeasureSelect2ndTableViewController.h; path = ViewControllers/Measure/MeasureSelect2ndTableViewController.h; sourceTree = "<group>"; };
 		9ACB212519D44A4E0022EB5F /* MeasureSelect2ndTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasureSelect2ndTableViewController.m; path = ViewControllers/Measure/MeasureSelect2ndTableViewController.m; sourceTree = "<group>"; };
-		9ACB212719D44E080022EB5F /* TDSCDMA.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TDSCDMA.plist; path = Mode/TDSCDMA.plist; sourceTree = "<group>"; };
+		9ACB212719D44E080022EB5F /* Mode.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Mode.plist; path = Mode/Mode.plist; sourceTree = "<group>"; };
 		9AE0AFB719C2B55C008544AC /* DisplaySettingsContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplaySettingsContainerViewController.h; path = ViewControllers/Display/DisplaySettingsContainerViewController.h; sourceTree = "<group>"; };
 		9AE0AFB819C2B55C008544AC /* DisplaySettingsContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplaySettingsContainerViewController.m; path = ViewControllers/Display/DisplaySettingsContainerViewController.m; sourceTree = "<group>"; };
 		9AE0AFBA19C2B626008544AC /* DisplayTracesContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayTracesContainerViewController.h; path = ViewControllers/Display/DisplayTracesContainerViewController.h; sourceTree = "<group>"; };
@@ -279,6 +285,33 @@
 				9A953EE219AD84E7005467A1 /* MenuContainerViewController.m */,
 			);
 			name = Menu;
+			sourceTree = "<group>";
+		};
+		9A57E25919D502EE00C58113 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9A57E25B19D5035400C58113 /* Key */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		9A57E25A19D5030700C58113 /* MeasureView */ = {
+			isa = PBXGroup;
+			children = (
+				9A57E25E19D5041C00C58113 /* UIKeyMeasure.h */,
+				9A57E25C19D503BB00C58113 /* UIKeyMeasure.m */,
+				9A57E26119D504C500C58113 /* UIKeyView.h */,
+				9A57E25F19D504B100C58113 /* UIKeyView.m */,
+			);
+			name = MeasureView;
+			sourceTree = "<group>";
+		};
+		9A57E25B19D5035400C58113 /* Key */ = {
+			isa = PBXGroup;
+			children = (
+				9A57E25A19D5030700C58113 /* MeasureView */,
+			);
+			name = Key;
 			sourceTree = "<group>";
 		};
 		9A5FDA7D19B5FB9200B3C300 /* 32 */ = {
@@ -492,7 +525,7 @@
 			isa = PBXGroup;
 			children = (
 				9A7422A619BDDBC900A251ED /* MSAList.plist */,
-				9ACB212719D44E080022EB5F /* TDSCDMA.plist */,
+				9ACB212719D44E080022EB5F /* Mode.plist */,
 			);
 			name = ModeList;
 			sourceTree = "<group>";
@@ -513,6 +546,7 @@
 		9AF7001219B82CAE000A69A5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				9A57E25919D502EE00C58113 /* UI */,
 				9ACB212919D44F330022EB5F /* ModeList */,
 				9AF7001319B82CC1000A69A5 /* Msg */,
 				9A953EE719ADCB99005467A1 /* ShareSettings.h */,
@@ -651,7 +685,7 @@
 				9A7422A719BDDBC900A251ED /* MSAList.plist in Resources */,
 				9A19795119D28DDA008E87E1 /* OK.png in Resources */,
 				9A9FFE8919C04FAB00F76D38 /* MsgInfo.png in Resources */,
-				9ACB212819D44E080022EB5F /* TDSCDMA.plist in Resources */,
+				9ACB212819D44E080022EB5F /* Mode.plist in Resources */,
 				9A5FDA7F19B5FB9A00B3C300 /* Preset.png in Resources */,
 				9A9FFE8A19C04FAB00F76D38 /* MsgWarning.png in Resources */,
 				9A659BDD19B6BC1800C30CE2 /* HideMenu.png in Resources */,
@@ -702,7 +736,9 @@
 				9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */,
 				9A726F6819C19FEE00CDF55D /* SystemSplitViewController.m in Sources */,
 				9A953EE919ADCBB6005467A1 /* ShareSettings.m in Sources */,
+				9A57E25D19D503BB00C58113 /* UIKeyMeasure.m in Sources */,
 				9A726F5C19C19FC000CDF55D /* SystemMasterTableViewController.m in Sources */,
+				9A57E26019D504B100C58113 /* UIKeyView.m in Sources */,
 				9A345F4419D0051C00507A5A /* PresetMenuGreenWhiteTableViewCell.m in Sources */,
 				9A9FFE7E19C0430800F76D38 /* MsgDetailNavigationViewController.m in Sources */,
 				9A9C670E19AD6C81007D3248 /* main.m in Sources */,

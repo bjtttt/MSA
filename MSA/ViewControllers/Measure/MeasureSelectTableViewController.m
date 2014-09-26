@@ -10,6 +10,8 @@
 #import "MeasureSelectTableViewController.h"
 #import "MeasureSelect2ndTableViewController.h"
 #import "MeasureSelectNavigationViewController.h"
+#import "UIKeyMeasure.h"
+#import "UIKeyView.h"
 
 @interface MeasureSelectTableViewController()
 
@@ -34,12 +36,12 @@ static NSString *measureSelectCellTable_MultiView_Id = @"measureSelectCellTable_
     //self.tableView.delegate = self;
     //self.tableView.dataSource = self;
     
-    NSBundle *bundle = [NSBundle mainBundle];
-    NSString *path = [bundle pathForResource:@"TDSCDMA" ofType:@"plist"];
+    //NSBundle *bundle = [NSBundle mainBundle];
+    //NSString *path = [bundle pathForResource:@"Mode" ofType:@"plist"];
     
-    self.dictModeData = [[NSDictionary alloc] initWithContentsOfFile:path];
-    self.dictMeasureData = [self.dictModeData objectForKey:@"measure"];
-    self.listMeasureData = [self.dictMeasureData allKeys];
+    //self.dictModeData = [[NSDictionary alloc] initWithContentsOfFile:path];
+    //self.dictMeasureData = [self.dictModeData objectForKey:@"measure"];
+    //self.listMeasureData = [self.dictMeasureData allKeys];
     
     self.title = @"Measurement";
 }
@@ -52,30 +54,31 @@ static NSString *measureSelectCellTable_MultiView_Id = @"measureSelectCellTable_
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.listMeasureData count];
+    return [self.shareSettings.measureView count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = [indexPath row];
-    switch(row)
+    UIKeyMeasure *meas = [self.shareSettings.measureView objectAtIndex:row];
+    NSMutableArray *views = meas.views;
+    int viewCount = [views count];
+    UITableViewCell *cell;
+    if(viewCount > 0)
     {
-        default:
-        case 0:
-            {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:measureSelectCellTable_SingleView_Id forIndexPath:indexPath];
-                cell.textLabel.text = [self.listMeasureData objectAtIndex:row];
-                return cell;
-            }
-            //break;
-        case 1:
-            {
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:measureSelectCellTable_MultiView_Id forIndexPath:indexPath];
-                cell.textLabel.text = [self.listMeasureData objectAtIndex:row];
-                return cell;
-            }
-            //break;
+        cell = [tableView dequeueReusableCellWithIdentifier:measureSelectCellTable_MultiView_Id forIndexPath:indexPath];
     }
+    else
+    {
+        cell = [tableView dequeueReusableCellWithIdentifier:measureSelectCellTable_SingleView_Id forIndexPath:indexPath];
+    }
+    if(meas.enabled == YES)
+        [cell.textLabel setTextColor:[UIColor blackColor]];
+    else
+        [cell.textLabel setTextColor:[UIColor lightGrayColor]];
+    [cell.textLabel setText:meas.name];
+    
+    return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
