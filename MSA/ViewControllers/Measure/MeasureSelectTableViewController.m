@@ -31,7 +31,7 @@ static NSString *measureSelectCellTable_MultiView_Id = @"measureSelectCellTable_
 
     self.tableView.tableFooterView=[[UIView alloc] initWithFrame:CGRectZero];
     
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    //[self.navigationController setNavigationBarHidden:YES animated:YES];
 
     //self.tableView.delegate = self;
     //self.tableView.dataSource = self;
@@ -43,7 +43,14 @@ static NSString *measureSelectCellTable_MultiView_Id = @"measureSelectCellTable_
     //self.dictMeasureData = [self.dictModeData objectForKey:@"measure"];
     //self.listMeasureData = [self.dictMeasureData allKeys];
     
-    self.title = @"Measurement";
+    //self.title = @"Measurement";
+    //self.navigationItem.title = @"Measurement";
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.navigationItem.title = @"Measurement";
 }
 
 //-(void) setCurrentStatus:(MSGType)currentSystem{
@@ -87,9 +94,13 @@ static NSString *measureSelectCellTable_MultiView_Id = @"measureSelectCellTable_
     {
         MeasureSelect2ndTableViewController *measureSelect2ndTVC = (MeasureSelect2ndTableViewController *)segue.destinationViewController;
         NSInteger selectedIndex = [[self.tableView indexPathForSelectedRow] row];
-        NSString *selectName = [self.listMeasureData objectAtIndex:selectedIndex];
-        measureSelect2ndTVC.listViewData = [self.dictMeasureData objectForKey:selectName];
-        measureSelect2ndTVC.title = selectName;
+        UIKeyMeasure *meas = [self.shareSettings.measureView objectAtIndex:selectedIndex];
+        measureSelect2ndTVC.views = meas.views;
+        self.navigationItem.title = meas.name;
+        //self.measureSelectNavBar.backBarButtonItem.title = meas.name;
+        //UINavigationController *nav = self.navigationController;
+        //measureSelect2ndTVC.title = @"Views";//meas.name;
+        measureSelect2ndTVC.shareSettings = self.shareSettings;
     }
 }
 

@@ -15,15 +15,11 @@
 
 @property (weak, nonatomic) IBOutlet MeasureSelectNavigationViewController *measureSelectNVC;
 
-@property (copy, nonatomic) NSArray *systems;
+@property (weak, nonatomic) IBOutlet UINavigationItem *measureSelectNavBar;
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
-
-@property (strong, nonatomic) NSDictionary *dictModeData;
-@property (strong, nonatomic) NSDictionary *dictMeasureData;
-@property (strong, nonatomic) NSArray *listMeasureData;
 
 @end

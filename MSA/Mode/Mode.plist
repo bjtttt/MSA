@@ -8,8 +8,6 @@
 		<dict>
 			<key>Enabled</key>
 			<false/>
-			<key>Style</key>
-			<integer>0</integer>
 			<key>View</key>
 			<dict/>
 		</dict>
@@ -17,8 +15,6 @@
 		<dict>
 			<key>Enabled</key>
 			<false/>
-			<key>Style</key>
-			<integer>0</integer>
 			<key>View</key>
 			<dict/>
 		</dict>
@@ -26,8 +22,6 @@
 		<dict>
 			<key>Enabled</key>
 			<false/>
-			<key>Style</key>
-			<integer>0</integer>
 			<key>View</key>
 			<dict/>
 		</dict>
@@ -35,8 +29,6 @@
 		<dict>
 			<key>Enabled</key>
 			<false/>
-			<key>Style</key>
-			<integer>3</integer>
 			<key>View</key>
 			<dict/>
 		</dict>
@@ -44,8 +36,6 @@
 		<dict>
 			<key>Enabled</key>
 			<false/>
-			<key>Style</key>
-			<integer>3</integer>
 			<key>View</key>
 			<dict/>
 		</dict>
@@ -53,8 +43,6 @@
 		<dict>
 			<key>Enabled</key>
 			<false/>
-			<key>Style</key>
-			<integer>0</integer>
 			<key>View</key>
 			<dict/>
 		</dict>
@@ -62,8 +50,6 @@
 		<dict>
 			<key>Enabled</key>
 			<false/>
-			<key>Style</key>
-			<integer>3</integer>
 			<key>View</key>
 			<dict/>
 		</dict>
@@ -71,8 +57,6 @@
 		<dict>
 			<key>Enabled</key>
 			<false/>
-			<key>Style</key>
-			<integer>0</integer>
 			<key>View</key>
 			<dict/>
 		</dict>
@@ -80,8 +64,6 @@
 		<dict>
 			<key>Enabled</key>
 			<false/>
-			<key>Style</key>
-			<integer>1</integer>
 			<key>View</key>
 			<dict/>
 		</dict>
@@ -89,23 +71,17 @@
 		<dict>
 			<key>Enabled</key>
 			<false/>
-			<key>Style</key>
-			<integer>0</integer>
 			<key>View</key>
 			<dict>
 				<key>RF Envelop</key>
 				<dict>
 					<key>Enabled</key>
 					<false/>
-					<key>Style</key>
-					<integer>0</integer>
 				</dict>
 				<key>I/Q Waveform</key>
 				<dict>
 					<key>Enabled</key>
 					<false/>
-					<key>Style</key>
-					<integer>0</integer>
 				</dict>
 			</dict>
 		</dict>
@@ -113,8 +89,6 @@
 		<dict>
 			<key>Enabled</key>
 			<false/>
-			<key>Style</key>
-			<integer>3</integer>
 			<key>View</key>
 			<dict/>
 		</dict>

@@ -678,7 +678,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="presetMenuTVC_Green_White" id="Icn-zf-ryS" customClass="PresetMenuGreenWhiteTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="presetMenuTVC_Green_White" id="Icn-zf-ryS" customClass="PresetMenuGreenWhiteTableViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Icn-zf-ryS" id="ZLh-UZ-dKg">
@@ -701,20 +701,20 @@
                                     <outlet property="content" destination="muX-WM-oIV" id="xuu-pw-abm"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="presetMenuTVC_DarkGray_Green_2Lines" id="bvu-jc-fym" customClass="PresetMenuDarkGrayGreen2LinesTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="presetMenuTVC_DarkGray_Green_2Lines" id="bvu-jc-fym" customClass="PresetMenuDarkGrayGreen2LinesTableViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bvu-jc-fym" id="eaC-Sr-PSX">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8r-EL-CX3">
-                                            <rect key="frame" x="0.0" y="2" width="150" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfC-O0-GlS">
+                                            <rect key="frame" x="0.0" y="22" width="150" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfC-O0-GlS">
-                                            <rect key="frame" x="0.0" y="22" width="150" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8r-EL-CX3">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -737,7 +737,7 @@
                                     <outlet property="content2" destination="mfC-O0-GlS" id="qkX-rh-m40"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="presetMenuTVC_DarkGray_White" id="xn7-af-I8Z" customClass="PresetMenuDarkGrayWhiteTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="presetMenuTVC_DarkGray_White" id="xn7-af-I8Z" customClass="PresetMenuDarkGrayWhiteTableViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xn7-af-I8Z" id="wPV-4W-frP">
@@ -760,7 +760,7 @@
                                     <outlet property="content" destination="Vfu-qh-1bw" id="MjQ-TS-LrY"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="presetMenuTVC_White_Green" id="y5u-QT-Dvv" customClass="PresetMenuWhiteGreenTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="presetMenuTVC_White_Green" id="y5u-QT-Dvv" customClass="PresetMenuWhiteGreenTableViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y5u-QT-Dvv" id="CoI-55-pad">
@@ -901,18 +901,6 @@
                                     <navigationItem title="Connect Instrument" id="6zb-1u-Bbn"/>
                                 </items>
                             </navigationBar>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b80-Yy-vpY" userLabel="Measure Select Navigation Bar">
-                                <rect key="frame" x="0.0" y="119" width="350" height="44"/>
-                                <items>
-                                    <navigationItem title="Measurement" id="hys-jF-eC3"/>
-                                </items>
-                            </navigationBar>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66b-Uj-eb4" userLabel="Measure Select Container View">
-                                <rect key="frame" x="0.0" y="163" width="350" height="393"/>
-                                <connections>
-                                    <segue destination="5DT-1P-vyV" kind="embed" identifier="embedSegueToMeasureSelectNVC" id="v3t-i6-Rhc"/>
-                                </connections>
-                            </containerView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGU-BS-DIn">
                                 <rect key="frame" x="0.0" y="556" width="350" height="44"/>
                                 <items>
@@ -943,6 +931,12 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66b-Uj-eb4" userLabel="Measure Select Container View">
+                                <rect key="frame" x="0.0" y="118" width="350" height="438"/>
+                                <connections>
+                                    <segue destination="5DT-1P-vyV" kind="embed" identifier="embedSegueToMeasureSelectNVC" id="v3t-i6-Rhc"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -951,7 +945,6 @@
                         <outlet property="addInstrumentNavBar" destination="gRW-Zq-Ecl" id="B3R-6z-b4g"/>
                         <outlet property="addInstrumentV" destination="sVE-90-MCS" id="J7E-W1-fcP"/>
                         <outlet property="cancelButton" destination="1b3-jK-cI6" id="kfj-UV-4SL"/>
-                        <outlet property="measureSelectNavBar" destination="b80-Yy-vpY" id="frj-lf-Avt"/>
                         <outlet property="measureSelectV" destination="66b-Uj-eb4" id="alV-Nk-YOr"/>
                         <outlet property="measureToolBar" destination="KGU-BS-DIn" id="6oa-co-i4M"/>
                         <outlet property="okButton" destination="bnV-4V-1EG" id="Vzj-9n-qPi"/>
@@ -1009,7 +1002,7 @@
             <objects>
                 <tableViewController id="Nzh-gx-GUl" customClass="MeasureSelectTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ysx-W7-l0P">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="393"/>
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="438"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1027,7 +1020,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="DvR-Bt-z8W" kind="show" identifier="showSegueToMeasureSelect2ndTVC" trigger="accessoryAction" id="RWK-H1-pJq"/>
+                                    <segue destination="DvR-Bt-z8W" kind="show" identifier="showSegueToMeasureSelect2ndTVC" id="PUf-aU-Gjo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1037,6 +1030,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="zdM-fw-GwK"/>
+                    <connections>
+                        <outlet property="measureSelectNavBar" destination="zdM-fw-GwK" id="sKL-5A-dm8"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="myO-H1-O8f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1047,11 +1043,11 @@
             <objects>
                 <tableViewController id="DvR-Bt-z8W" customClass="MeasureSelect2ndTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nfa-y7-E8r">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="393"/>
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="438"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="R9z-1P-c0g">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="measureSelectCell2ndTable" id="R9z-1P-c0g">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R9z-1P-c0g" id="xUL-C1-2uI">
                                     <autoresizingMask key="autoresizingMask"/>

@@ -9,12 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "MeasureSelectTableViewController.h"
 #import "MeasureSelect2ndTableViewController.h"
+#import "UIKeyView.h"
 
 @interface MeasureSelect2ndTableViewController()
 
 @end
 
 @implementation MeasureSelect2ndTableViewController
+
+static NSString *measureSelectCell2ndTable_Id = @"measureSelectCell2ndTable";
 
 -(void)viewDidLoad{
     [super viewDidLoad];
@@ -25,7 +28,7 @@
 
     self.tableView.tableFooterView=[[UIView alloc] initWithFrame:CGRectZero];
     
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    //[self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 //-(void) setCurrentStatus:(MSGType)currentSystem{
@@ -36,18 +39,21 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.listViewData count];
+    return [self.views count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {    
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
     NSInteger row = [indexPath row];
-    NSString *view = [self.listViewData objectAtIndex:row];
+    UIKeyView *view = [self.views objectAtIndex:row];
     
-    cell.textLabel.text = view;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:measureSelectCell2ndTable_Id forIndexPath:indexPath];
+    if(view.enabled == YES)
+        [cell.textLabel setTextColor:[UIColor blackColor]];
+    else
+        [cell.textLabel setTextColor:[UIColor lightGrayColor]];
+    
+    cell.textLabel.text = view.name;
     
     return cell;
 }

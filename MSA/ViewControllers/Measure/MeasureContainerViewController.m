@@ -38,7 +38,7 @@
         self.measureSelectNVC.measureCVC = self;
         
         self.measureSelectNVC.frameWidth = self.frameWidth;
-        self.measureSelectNVC.frameHeight = self.frameHeight-ADDINSTRUMENT_HEIGHT-NAVBAR_HEIGHT*3;
+        self.measureSelectNVC.frameHeight = self.frameHeight-ADDINSTRUMENT_HEIGHT-NAVBAR_HEIGHT*2;  // ToolBar and NavigationBar
     }
 }
 

@@ -17,7 +17,6 @@
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *addInstrumentNavBar;
 @property (weak, nonatomic) IBOutlet UIView *addInstrumentV;
-@property (weak, nonatomic) IBOutlet UINavigationBar *measureSelectNavBar;
 @property (weak, nonatomic) IBOutlet UIView *measureSelectV;
 @property (weak, nonatomic) IBOutlet UIToolbar *measureToolBar;
 

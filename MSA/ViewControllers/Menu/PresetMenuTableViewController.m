@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "PresetMenuTableViewController.h"
+#import "PresetMenuContainerViewController.h"
 #import "PresetMenuWhiteGreenTableViewCell.h"
 #import "PresetMenuGreenWhiteTableViewCell.h"
 #import "PresetMenuDarkGrayGreen2LinesTableViewCell.h"
 #import "PresetMenuDarkGrayWhiteTableViewCell.h"
+#import "MenuContainerViewController.h"
 
 @interface PresetMenuTableViewController()
 
@@ -142,6 +144,11 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    self.presetMenuCVC.menuCVC.presetViewVisible = !self.presetMenuCVC.menuCVC.presetViewVisible;
+    [self.presetMenuCVC.menuCVC showHidePresetMenu:self.presetMenuCVC.menuCVC.presetViewVisible animated:YES];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+
     //NSString *messageType = self.statuses[indexPath.row];
     //self.systMasterNVC.systSplitVC.systDetailCVC.systDetailNVC.systDetailTVC.currentSystem = (SYSTType)indexPath.row;
 }
