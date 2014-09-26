@@ -29,6 +29,9 @@
 @property (weak, nonatomic) IBOutlet SystemContainerViewController *systemCVC;
 @property (weak, nonatomic) IBOutlet MeasureContainerViewController *measureCVC;
 
+@property (weak, nonatomic) UIStoryboard *modeStoryboard;
+@property (weak, nonatomic) UIStoryboard *measBarStoryboard;
+
 @property (strong, nonatomic) ShareSettings * shareSettings;
 
 @property (nonatomic) double frameWidth;

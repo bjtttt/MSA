@@ -94,6 +94,9 @@
     self.shareSettings.currentInstrument = [[NSMutableString alloc] initWithString:@""];
     self.shareSettings.currentInstrumentStatus = INST_DISC;
     
+    self.shareSettings.modeStoryboard = self.modeStoryboard;
+    self.shareSettings.measBarStoryboard = self.measBarStoryboard;
+    
     [self.shareSettings initMeasureView];
 
     //[self.menuView setHidden:YES];

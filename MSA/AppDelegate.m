@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ContainerViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    ContainerViewController *mainVC = (ContainerViewController *)self.window.rootViewController;
+    UIStoryboard *modeStoryboard = [UIStoryboard storyboardWithName:@"Mode" bundle:[NSBundle mainBundle]];
+    mainVC.modeStoryboard = modeStoryboard;
+    UIStoryboard *measBarStoryboard = [UIStoryboard storyboardWithName:@"MeasureBar" bundle:[NSBundle mainBundle]];
+    mainVC.measBarStoryboard = measBarStoryboard;
+    
     return YES;
 }
 

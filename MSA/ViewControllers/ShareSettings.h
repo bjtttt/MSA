@@ -9,6 +9,7 @@
 #ifndef SHARE_SETTINGS
 #define SHARE_SETTINGS
 
+#import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
 //typedef enum msaLayout {
@@ -70,6 +71,9 @@ typedef enum instrumentStatus {
 @property (nonatomic) NSMutableString *currentInstrument;
 
 @property (nonatomic) NSMutableArray *measureView;
+
+@property (weak, nonatomic) UIStoryboard *modeStoryboard;
+@property (weak, nonatomic) UIStoryboard *measBarStoryboard;
 
 +(id)sharedSettings;
 
