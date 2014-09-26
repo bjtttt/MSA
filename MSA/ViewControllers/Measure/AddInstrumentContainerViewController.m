@@ -44,7 +44,7 @@
             self.instrumentOnOff.on = NO;
 
             UIAlertView *alertView = [[UIAlertView alloc]
-                                      initWithTitle:@"Connect Error"
+                                      initWithTitle:@"Connecting Instrument Error"
                                       message:@"No instruement hostname or IP address!"
                                       delegate:nil
                                       cancelButtonTitle:@"OK"

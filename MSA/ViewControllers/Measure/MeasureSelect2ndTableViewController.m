@@ -58,4 +58,23 @@ static NSString *measureSelectCell2ndTable_Id = @"measureSelectCell2ndTable";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger row = [indexPath row];
+    UIKeyView *view = [self.views objectAtIndex:row];
+    if(view.enabled == NO)
+    {
+        NSMutableString *msg = [[NSMutableString alloc] init];
+        [msg appendString:view.name];
+        [msg appendString:@" is not available!"];
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"View Selection Error"
+                                  message:(NSString *)msg
+                                  delegate:nil
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+}
+
 @end

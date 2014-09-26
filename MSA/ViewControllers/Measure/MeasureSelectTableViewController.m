@@ -88,6 +88,25 @@ static NSString *measureSelectCellTable_MultiView_Id = @"measureSelectCellTable_
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger row = [indexPath row];
+    UIKeyMeasure *meas = [self.shareSettings.measureView objectAtIndex:row];
+    if(meas.enabled == NO)
+    {
+        NSMutableString *msg = [[NSMutableString alloc] init];
+        [msg appendString:meas.name];
+        [msg appendString:@" is not available!"];
+        UIAlertView *alertView = [[UIAlertView alloc]
+                                  initWithTitle:@"Measurement Selection Error"
+                                  message:(NSString *)msg
+                                  delegate:nil
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([segue.identifier isEqualToString:@"showSegueToMeasureSelect2ndTVC"])
