@@ -92,14 +92,22 @@
     self.previousFrameWidth = self.frameWidth;
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    //[self setMeasureBarAccordingToFrame];
+}
+
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    //[self adjustMeasureBarWidth:NO];
+    //[self setMeasureBarAccordingToFrame];
 }
 
 -(void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
+    
+    //[self setMeasureBarAccordingToFrame];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -111,6 +119,8 @@
     
         self.previousFrameWidth = self.frameWidth;
     }
+    else
+        [self setMeasureBarAccordingToFrame];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -122,39 +132,36 @@
     return YES;
 }
 
+-(void)setMeasureBarAccordingToFrame {
+    CGFloat width = (self.frameWidth - MEASBAR_SINGLE_WIDTH) / 7.0;
+    [self setMeasureBar:width];
+}
+
+-(void)setMeasureBar:(CGFloat)barWidth {
+    self.bar0V.frame = CGRectMake(0, 0, barWidth, MEASBAR_HEIGHT);
+    self.bar1V.frame = CGRectMake(barWidth-VC_MARGIN, 0, barWidth, MEASBAR_HEIGHT);
+    self.bar2V.frame = CGRectMake(barWidth*2-VC_MARGIN*2, 0, barWidth, MEASBAR_HEIGHT);
+    self.bar3V.frame = CGRectMake(barWidth*3-VC_MARGIN*3, 0, barWidth, MEASBAR_HEIGHT);
+    self.bar4V.frame = CGRectMake(barWidth*4-VC_MARGIN*4, 0, barWidth, MEASBAR_HEIGHT);
+    self.bar5V.frame = CGRectMake(barWidth*5-VC_MARGIN*5, 0, barWidth, MEASBAR_HEIGHT);
+    self.bar6V.frame = CGRectMake(barWidth*6-VC_MARGIN*6, 0, barWidth, MEASBAR_HEIGHT);
+    if(self.frameWidth == self.displayCVC.mainCVC.frameWidth)
+        self.bar7V.frame = CGRectMake(barWidth*7-VC_MARGIN*7, 0, MEASBAR_SINGLE_WIDTH+VC_MARGIN*7, MEASBAR_HEIGHT);
+    else
+        self.bar7V.frame = CGRectMake(barWidth*7-VC_MARGIN*7, 0, MEASBAR_SINGLE_WIDTH+VC_MARGIN*6, MEASBAR_HEIGHT);
+}
+
 -(void)adjustMeasureBarWidth:(BOOL)animated {
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
     
-    CGFloat previosWidth = (self.previousFrameWidth - MEASBAR_SINGLE_WIDTH) / 7.0;
+    CGFloat width = (self.previousFrameWidth - MEASBAR_SINGLE_WIDTH) / 7.0;
+    [self setMeasureBar:width];
 
-    self.bar0V.frame = CGRectMake(0, 0, previosWidth, MEASBAR_HEIGHT);
-    self.bar1V.frame = CGRectMake(previosWidth-VC_MARGIN, 0, previosWidth, MEASBAR_HEIGHT);
-    self.bar2V.frame = CGRectMake(previosWidth*2-VC_MARGIN*2, 0, previosWidth, MEASBAR_HEIGHT);
-    self.bar3V.frame = CGRectMake(previosWidth*3-VC_MARGIN*3, 0, previosWidth, MEASBAR_HEIGHT);
-    self.bar4V.frame = CGRectMake(previosWidth*4-VC_MARGIN*4, 0, previosWidth, MEASBAR_HEIGHT);
-    self.bar5V.frame = CGRectMake(previosWidth*5-VC_MARGIN*5, 0, previosWidth, MEASBAR_HEIGHT);
-    self.bar6V.frame = CGRectMake(previosWidth*6-VC_MARGIN*6, 0, previosWidth, MEASBAR_HEIGHT);
-    if(self.frameWidth == self.displayCVC.mainCVC.frameWidth)
-        self.bar7V.frame = CGRectMake(previosWidth*7-VC_MARGIN*7, 0, MEASBAR_SINGLE_WIDTH+VC_MARGIN*7, MEASBAR_HEIGHT);
-    else
-        self.bar7V.frame = CGRectMake(previosWidth*7-VC_MARGIN*7, 0, MEASBAR_SINGLE_WIDTH+VC_MARGIN*6, MEASBAR_HEIGHT);
-
-    CGFloat width = (self.frameWidth - MEASBAR_SINGLE_WIDTH) / 7.0;
-    
     layoutBlock = ^(void)
     {
-        self.bar0V.frame = CGRectMake(0, 0, width, MEASBAR_HEIGHT);
-        self.bar1V.frame = CGRectMake(width-VC_MARGIN, 0, width, MEASBAR_HEIGHT);
-        self.bar2V.frame = CGRectMake(width*2-VC_MARGIN*2, 0, width, MEASBAR_HEIGHT);
-        self.bar3V.frame = CGRectMake(width*3-VC_MARGIN*3, 0, width, MEASBAR_HEIGHT);
-        self.bar4V.frame = CGRectMake(width*4-VC_MARGIN*4, 0, width, MEASBAR_HEIGHT);
-        self.bar5V.frame = CGRectMake(width*5-VC_MARGIN*5, 0, width, MEASBAR_HEIGHT);
-        self.bar6V.frame = CGRectMake(width*6-VC_MARGIN*6, 0, width, MEASBAR_HEIGHT);
-        if(self.frameWidth == self.displayCVC.mainCVC.frameWidth)
-            self.bar7V.frame = CGRectMake(width*7-VC_MARGIN*7, 0, MEASBAR_SINGLE_WIDTH+VC_MARGIN*7, MEASBAR_HEIGHT);
-        else
-            self.bar7V.frame = CGRectMake(width*7-VC_MARGIN*7, 0, MEASBAR_SINGLE_WIDTH+VC_MARGIN*6, MEASBAR_HEIGHT);
+        CGFloat width = (self.frameWidth - MEASBAR_SINGLE_WIDTH) / 7.0;
+        [self setMeasureBar:width];
     };
     completionBlock = ^(BOOL finished){
     };

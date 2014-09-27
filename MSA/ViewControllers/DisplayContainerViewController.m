@@ -145,10 +145,12 @@
 */
 
 - (IBAction)showSystemView:(id)sender {
+    //[self.mainCVC.displayCVC.barCVC setMeasureBarAccordingToFrame];
     [self hidePresetMenu];
 }
 
 - (IBAction)showMsgView:(id)sender {
+    //[self.mainCVC.displayCVC.barCVC setMeasureBarAccordingToFrame];
     [self hidePresetMenu];
 }
 

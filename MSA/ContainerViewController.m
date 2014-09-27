@@ -208,6 +208,7 @@
             self.displayCVC.frameWidth = self.frameWidth - MENU_WIDTH;
             self.displayCVC.frameHeight = self.frameHeight;
             self.displayCVC.barCVC.frameWidth = self.frameWidth - MENU_WIDTH;
+            //[self.displayCVC.barCVC setMeasureBarAccordingToFrame];
             [self.displayView setUserInteractionEnabled:NO];
             [self.menuView setUserInteractionEnabled:NO];
             
@@ -228,6 +229,7 @@
             self.displayCVC.frameWidth = self.frameWidth;
             self.displayCVC.frameHeight = self.frameHeight;
             self.displayCVC.barCVC.frameWidth = self.frameWidth;
+            //[self.displayCVC.barCVC setMeasureBarAccordingToFrame];
             [self.displayView setUserInteractionEnabled:NO];
             
             layoutBlock = ^(void)
