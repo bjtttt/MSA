@@ -19,13 +19,13 @@
 //} MSALayout;
 
 typedef enum msgType {
-    MSG_CURRENT_CONDITIONS,
+    MSG_CURRENT_CONDITIONS = 0,
     MSG_HISTORY,
     MSG_SETTINGS
 }MSGType;
 
 typedef enum systType {
-    SYST_SYSTEM,
+    SYST_SYSTEM = 0,
     SYST_IO_CONFIG,
     SYST_USER_INTERFACE,
     SYST_POWER_ON,
@@ -39,11 +39,20 @@ typedef enum systType {
 }SYSTType;
 
 typedef enum instrumentStatus {
-    INST_DISC,
+    INST_DISC = 0,
     INST_INCONN,
     INST_CONN,
     INST_INDISC
 }InstrumentStatus;
+
+typedef enum valueType {
+    VAL_INT = 0,
+    VAL_FLOAT,
+    VAL_DOUBLE,
+    VAL_BOOL,
+    VAL_ENUM,
+    VAL_STRING
+}ValueType;
 
 #define LIGHT_CORNER_RADIUS 3.0f
 #define NORMAL_CORNER_RADIUS 5.0f

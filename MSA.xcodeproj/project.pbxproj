@@ -61,6 +61,7 @@
 		9A9FFE8A19C04FAB00F76D38 /* MsgWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9FFE8719C04FAB00F76D38 /* MsgWarning.png */; };
 		9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE0EB919B466EF004D9146 /* MsgContainerViewController.m */; };
 		9AB67C1A19D43103004B664A /* Connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB67C1919D43103004B664A /* Connect.png */; };
+		9AC0BF6D19D6E1AA00C8D9F2 /* MeasureBarDataDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0BF6C19D6E1AA00C8D9F2 /* MeasureBarDataDefinition.m */; };
 		9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448C19B1F73500A7F334 /* HideBar.png */; };
 		9AC5448F19B1F74300A7F334 /* ShowBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448E19B1F74300A7F334 /* ShowBar.png */; };
 		9ACA2EB919BD4651005542B5 /* MsgMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACA2EB819BD4651005542B5 /* MsgMasterTableViewController.m */; };
@@ -184,6 +185,8 @@
 		9AAE0EB819B466EF004D9146 /* MsgContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgContainerViewController.h; path = ViewControllers/MsgContainerViewController.h; sourceTree = "<group>"; };
 		9AAE0EB919B466EF004D9146 /* MsgContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgContainerViewController.m; path = ViewControllers/MsgContainerViewController.m; sourceTree = "<group>"; };
 		9AB67C1919D43103004B664A /* Connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Connect.png; path = Images/24/Connect.png; sourceTree = "<group>"; };
+		9AC0BF6C19D6E1AA00C8D9F2 /* MeasureBarDataDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasureBarDataDefinition.m; path = Data/Definition/MeasureBarDataDefinition.m; sourceTree = "<group>"; };
+		9AC0BF6E19D6E1BD00C8D9F2 /* MeasureBarDataDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MeasureBarDataDefinition.h; path = Data/Definition/MeasureBarDataDefinition.h; sourceTree = "<group>"; };
 		9AC5448C19B1F73500A7F334 /* HideBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideBar.png; path = Images/24/HideBar.png; sourceTree = "<group>"; };
 		9AC5448E19B1F74300A7F334 /* ShowBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShowBar.png; path = Images/24/ShowBar.png; sourceTree = "<group>"; };
 		9ACA2EB819BD4651005542B5 /* MsgMasterTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgMasterTableViewController.m; path = ViewControllers/Msg/MsgMasterTableViewController.m; sourceTree = "<group>"; };
@@ -279,6 +282,7 @@
 		9A1C92A219CED75C00074EA6 /* Soft */ = {
 			isa = PBXGroup;
 			children = (
+				9AC0BF6F19D6E93500C8D9F2 /* CellStyle */,
 				9A1C929519CED2B400074EA6 /* SoftMenuContainerViewController.h */,
 				9A1C929619CED2B400074EA6 /* SoftMenuContainerViewController.m */,
 				9A1C929719CED2B400074EA6 /* SoftMenuNavigationViewController.h */,
@@ -550,6 +554,22 @@
 			name = 24;
 			sourceTree = "<group>";
 		};
+		9AC0BF6B19D6E14A00C8D9F2 /* Definition */ = {
+			isa = PBXGroup;
+			children = (
+				9AC0BF6C19D6E1AA00C8D9F2 /* MeasureBarDataDefinition.m */,
+				9AC0BF6E19D6E1BD00C8D9F2 /* MeasureBarDataDefinition.h */,
+			);
+			name = Definition;
+			sourceTree = "<group>";
+		};
+		9AC0BF6F19D6E93500C8D9F2 /* CellStyle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CellStyle;
+			sourceTree = "<group>";
+		};
 		9ACB212919D44F330022EB5F /* ModeList */ = {
 			isa = PBXGroup;
 			children = (
@@ -672,6 +692,7 @@
 		9AF7001219B82CAE000A69A5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				9AC0BF6B19D6E14A00C8D9F2 /* Definition */,
 				9A57E25919D502EE00C58113 /* UI */,
 				9ACB212919D44F330022EB5F /* ModeList */,
 				9AF7001319B82CC1000A69A5 /* Msg */,
@@ -881,6 +902,7 @@
 				9A345F4A19D00BC500507A5A /* PresetMenuDarkGrayWhiteTableViewCell.m in Sources */,
 				9A659BEB19B6DE9A00C30CE2 /* SystemContainerViewController.m in Sources */,
 				9A79537519CD35BE009984A6 /* MeasureContainerViewController.m in Sources */,
+				9AC0BF6D19D6E1AA00C8D9F2 /* MeasureBarDataDefinition.m in Sources */,
 				9A79537619CD35BE009984A6 /* MeasureSelectNavigationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

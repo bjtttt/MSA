@@ -40,6 +40,8 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    [self.tableView setBackgroundColor:[UIColor whiteColor]];
+    
     //[self.navigationController setNavigationBarHidden:YES animated:YES];
     
     NSLog(@"\nPresetMenu Table View Controller - viewDidLoad:\nx = %f\ny = %f\nwidth = %f\nheight = %f",

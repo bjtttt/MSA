@@ -25,6 +25,8 @@
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
+    [self.tableView setBackgroundColor:[UIColor whiteColor]];
+
     //[self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 

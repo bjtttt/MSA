@@ -93,5 +93,59 @@
 			<dict/>
 		</dict>
 	</dict>
+	<key>measureBar</key>
+	<array>
+		<dict>
+			<key>shortLabel</key>
+			<string>Input</string>
+			<key>label</key>
+			<string>Select Input</string>
+			<key>nameString</key>
+			<string>Input</string>
+			<key>valueType</key>
+			<integer>4</integer>
+			<key>value</key>
+			<string>0</string>
+			<key>unit</key>
+			<string></string>
+			<key>enumValueList</key>
+			<array>
+				<dict>
+					<key>value</key>
+					<integer>0</integer>
+					<key>shortLabel</key>
+					<string>RF</string>
+					<key>label</key>
+					<string>RF</string>
+				</dict>
+				<dict>
+					<key>value</key>
+					<integer>1</integer>
+					<key>shorLabel</key>
+					<string>EXT MIXER</string>
+					<key>label</key>
+					<string>External Mixer</string>
+				</dict>
+				<dict>
+					<key>value</key>
+					<integer>2</integer>
+					<key>shortLabel</key>
+					<string>I/Q</string>
+					<key>label</key>
+					<string>I/Q</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>label</key>
+			<string>Coupling</string>
+			<key>string</key>
+			<string>Coupling</string>
+			<key>type</key>
+			<integer>0</integer>
+			<key>value</key>
+			<string>DC</string>
+		</dict>
+	</array>
 </dict>
 </plist>

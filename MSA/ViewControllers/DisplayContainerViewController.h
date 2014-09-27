@@ -49,7 +49,7 @@
 - (IBAction)showSystemView:(id)sender;
 - (IBAction)showMsgView:(id)sender;
 
--(void)adjustMeasureBarWidth:(BOOL)animated;
+//-(void)adjustMeasureBarWidth:(BOOL)animated;
 
 @end
 
