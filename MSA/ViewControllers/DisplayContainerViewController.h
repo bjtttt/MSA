@@ -8,15 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
-#import "MsgContainerViewController.h"
-#import "SystemContainerViewController.h"
 
 @class ContainerViewController;
+@class DisplayTracesContainerViewController;
+@class DisplaySettingsContainerViewController;
+@class MsgContainerViewController;
+@class SystemContainerViewController;
 
 @interface DisplayContainerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet MsgContainerViewController *msgCVC;
 @property (weak, nonatomic) IBOutlet SystemContainerViewController *systCVC;
+@property (weak, nonatomic) IBOutlet DisplaySettingsContainerViewController *barCVC;
+@property (weak, nonatomic) IBOutlet DisplayTracesContainerViewController *traceCVC;
 @property (weak, nonatomic) IBOutlet ContainerViewController *mainCVC;
 
 @property (weak, nonatomic) IBOutlet UIView *settingsV;
@@ -44,6 +48,8 @@
 
 - (IBAction)showSystemView:(id)sender;
 - (IBAction)showMsgView:(id)sender;
+
+-(void)adjustMeasureBarWidth:(BOOL)animated;
 
 @end
 

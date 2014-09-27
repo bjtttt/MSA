@@ -10,12 +10,14 @@
 #import "ShareSettings.h"
 
 @class SystemSplitViewController;
+@class DisplayContainerViewController;
 
 @interface SystemContainerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *systNavBar;
 @property (weak, nonatomic) IBOutlet UIView *systVC;
 
+@property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
 @property (weak, nonatomic) IBOutlet SystemSplitViewController *systSplitVC;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;

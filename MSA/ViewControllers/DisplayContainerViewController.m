@@ -8,10 +8,12 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "DisplayContainerViewController.h"
-//#import "MSAFormSheetController.h"
+#import "DisplayTracesContainerViewController.h"
 #import "ContainerViewController.h"
 #import "MenuContainerViewController.h"
-//#import "MSACustomFormSheetController.h"
+#import "DisplaySettingsContainerViewController.h"
+#import "MsgContainerViewController.h"
+#import "SystemContainerViewController.h"
 
 @interface DisplayContainerViewController ()
 
@@ -34,6 +36,10 @@
     
     //self.tracesV.layer.borderWidth = HEAVY_BORDER_WIDTH;
     //self.tracesV.layer.borderColor = [[UIColor grayColor] CGColor];
+    
+    self.navBarHeight=NAVBAR_HEIGHT;
+    self.toolBarHeight=NAVBAR_HEIGHT;
+    self.settingsHeight=MEASBAR_HEIGHT;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -41,11 +47,33 @@
     {
         self.msgCVC = (MsgContainerViewController *)segue.destinationViewController;
         self.msgCVC.shareSettings = self.shareSettings;
+        self.msgCVC.displayCVC = self;
     }
     if([segue.identifier isEqualToString:@"presentSegueToSystemCVC"])
     {
         self.systCVC = (SystemContainerViewController *)segue.destinationViewController;
         self.systCVC.shareSettings = self.shareSettings;
+        self.systCVC.displayCVC = self;
+    }
+    if([segue.identifier isEqualToString:@"presentSegueToBarCVC"])
+    {
+        self.barCVC = (DisplaySettingsContainerViewController *)segue.destinationViewController;
+        self.barCVC.shareSettings = self.shareSettings;
+        self.barCVC.displayCVC = self;
+        
+        self.barCVC.frameWidth = self.frameWidth;
+        self.barCVC.frameHeight = MEASBAR_HEIGHT;
+        
+        //[self.barCVC adjustMeasureBarWidth:NO];
+    }
+    if([segue.identifier isEqualToString:@"presentSegueToTraceCVC"])
+    {
+        self.traceCVC = (DisplayTracesContainerViewController *)segue.destinationViewController;
+        self.traceCVC.shareSettings = self.shareSettings;
+        self.traceCVC.displayCVC = self;
+        
+        self.traceCVC.frameWidth = self.frameWidth;
+        self.traceCVC.frameHeight = self.frameHeight - MEASBAR_HEIGHT;
     }
 }
 
@@ -60,12 +88,6 @@
 
 -(void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    
-    self.navBarHeight=self.displayNavBar.frame.size.height;
-    self.toolBarHeight=self.displayToolBar.frame.size.height;
-    self.settingsHeight=self.settingsV.frame.size.height;
-    self.frameWidth=self.view.frame.size.width;
-    self.frameHeight=self.view.frame.size.height;
 }
 
 -(void)viewDidLayoutSubviews {

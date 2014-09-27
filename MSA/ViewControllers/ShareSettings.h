@@ -45,6 +45,7 @@ typedef enum instrumentStatus {
     INST_INDISC
 }InstrumentStatus;
 
+#define LIGHT_CORNER_RADIUS 3.0f
 #define NORMAL_CORNER_RADIUS 5.0f
 #define HEAVY_CORNER_RADIUS 10.0f
 #define NORMAL_BORDER_WIDTH 1.0f
@@ -53,7 +54,8 @@ typedef enum instrumentStatus {
 #define MENU_WIDTH 150.0f
 #define MEAS_WIDTH 350.0f
 #define MEAS_HEIGHT 600.0f
-#define MEASBAR_HEIGHT 60.0f
+#define MEASBAR_HEIGHT 120.0f
+#define MEASBAR_SINGLE_WIDTH 150.0f
 #define NAVBAR_HEIGHT 44.0f
 #define ADDINSTRUMENT_HEIGHT 75.0f
 

@@ -10,12 +10,14 @@
 #import "ShareSettings.h"
 
 @class MsgSplitViewController;
+@class DisplayContainerViewController;
 
 @interface MsgContainerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *msgNavBar;
 @property (weak, nonatomic) IBOutlet UIView *msgV;
 
+@property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
 @property (weak, nonatomic) IBOutlet MsgSplitViewController *msgSplitVC;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;

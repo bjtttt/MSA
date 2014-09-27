@@ -11,7 +11,7 @@
 #import "DisplayContainerViewController.h"
 #import "MenuContainerViewController.h"
 #import "MeasureContainerViewController.h"
-//#import "MSAFormSheetBackgroundWindow.h"
+#import "DisplaySettingsContainerViewController.h"
 
 @interface ContainerViewController ()
 
@@ -205,8 +205,9 @@
     {
         if(self.shareSettings.menuDisplayed == YES)
         {
-            self.displayCVC.frameWidth = self.frameWidth;
+            self.displayCVC.frameWidth = self.frameWidth - MENU_WIDTH;
             self.displayCVC.frameHeight = self.frameHeight;
+            self.displayCVC.barCVC.frameWidth = self.frameWidth - MENU_WIDTH;
             [self.displayView setUserInteractionEnabled:NO];
             [self.menuView setUserInteractionEnabled:NO];
             
@@ -224,8 +225,9 @@
         }
         else
         {
-            self.displayCVC.frameWidth = self.frameWidth - MENU_WIDTH;
+            self.displayCVC.frameWidth = self.frameWidth;
             self.displayCVC.frameHeight = self.frameHeight;
+            self.displayCVC.barCVC.frameWidth = self.frameWidth;
             [self.displayView setUserInteractionEnabled:NO];
             
             layoutBlock = ^(void)
@@ -245,8 +247,9 @@
     {
         if(self.shareSettings.menuDisplayed == YES)
         {
-            self.displayCVC.frameWidth = self.frameWidth;
+            self.displayCVC.frameWidth = self.frameWidth - MENU_WIDTH;
             self.displayCVC.frameHeight = self.frameHeight;
+            self.displayCVC.barCVC.frameWidth = self.frameWidth - MENU_WIDTH;
             [self.displayView setUserInteractionEnabled:YES];
             [self.menuView setUserInteractionEnabled:YES];
 
@@ -261,8 +264,9 @@
         }
         else
         {
-            self.displayCVC.frameWidth = self.frameWidth - MENU_WIDTH;
+            self.displayCVC.frameWidth = self.frameWidth;
             self.displayCVC.frameHeight = self.frameHeight;
+            self.displayCVC.barCVC.frameWidth = self.frameWidth;
             [self.displayView setUserInteractionEnabled:YES];
 
             layoutBlock = ^(void)

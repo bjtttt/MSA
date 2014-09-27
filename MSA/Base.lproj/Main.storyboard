@@ -190,15 +190,15 @@
                                 </items>
                             </toolbar>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ewP-be-Wb1" userLabel="Measure Bar Container View">
-                                <rect key="frame" x="0.0" y="44" width="600" height="150"/>
+                                <rect key="frame" x="0.0" y="44" width="600" height="120"/>
                                 <connections>
-                                    <segue destination="5z9-dO-1lJ" kind="embed" id="lBT-pt-NLn"/>
+                                    <segue destination="5z9-dO-1lJ" kind="embed" identifier="presentSegueToBarCVC" id="lBT-pt-NLn"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="maI-nf-qEV" userLabel="Display Container View">
-                                <rect key="frame" x="0.0" y="194" width="600" height="362"/>
+                                <rect key="frame" x="0.0" y="163" width="600" height="393"/>
                                 <connections>
-                                    <segue destination="cTa-34-Ygg" kind="embed" id="t9T-Kf-a3m"/>
+                                    <segue destination="cTa-34-Ygg" kind="embed" identifier="presentSegueToTraceCVC" id="t9T-Kf-a3m"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -848,61 +848,63 @@
                         <viewControllerLayoutGuide type="bottom" id="iOV-XJ-Xly"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ACa-0D-Mkz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KKW-Yy-M8o" userLabel="Measure Bar 0 Container View">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
                                 <connections>
                                     <segue destination="4KN-gf-rTD" kind="embed" id="vgO-cs-A6L"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arC-zI-02b" userLabel="Measure Bar 1 Container View">
-                                <rect key="frame" x="58" y="0.0" width="100" height="150"/>
+                                <rect key="frame" x="125" y="0.0" width="125" height="120"/>
                                 <connections>
                                     <segue destination="pd2-d9-gQT" kind="embed" id="LF3-1P-UWd"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nyb-j1-WbM" userLabel="Measure Bar 2 Container View">
-                                <rect key="frame" x="116" y="0.0" width="100" height="150"/>
+                                <rect key="frame" x="250" y="0.0" width="125" height="120"/>
                                 <connections>
                                     <segue destination="stm-nr-rAG" kind="embed" id="MpJ-Mr-JrQ"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bnz-fr-Gfz" userLabel="Measure Bar 3 Container View">
-                                <rect key="frame" x="174" y="0.0" width="100" height="150"/>
-                                <connections>
-                                    <segue destination="Z8j-Md-6yz" kind="embed" id="tb6-eS-lOX"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xG5-RZ-PEu" userLabel="Measure Bar 4 Container View">
-                                <rect key="frame" x="232" y="0.0" width="100" height="150"/>
+                                <rect key="frame" x="500" y="0.0" width="125" height="120"/>
                                 <connections>
                                     <segue destination="fZI-P6-mpq" kind="embed" id="z26-eB-6t6"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Z2-gk-mLG" userLabel="Measure Bar 5 Container View">
-                                <rect key="frame" x="290" y="0.0" width="100" height="150"/>
+                                <rect key="frame" x="625" y="0.0" width="125" height="120"/>
                                 <connections>
                                     <segue destination="cKA-dj-1z9" kind="embed" id="Pgv-D6-cgJ"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q4C-s1-DXW" userLabel="Measure Bar 6 Container View">
-                                <rect key="frame" x="348" y="0.0" width="100" height="150"/>
+                                <rect key="frame" x="750" y="0.0" width="125" height="120"/>
                                 <connections>
                                     <segue destination="y8j-Ej-uWk" kind="embed" id="H5o-mw-8wn"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hB4-j7-6Rc" userLabel="Measure Bar 7 Container View">
-                                <rect key="frame" x="405" y="0.0" width="100" height="150"/>
+                                <rect key="frame" x="874" y="0.0" width="150" height="120"/>
                                 <connections>
                                     <segue destination="FD7-Jg-lZQ" kind="embed" id="Yfi-AN-wBF"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bnz-fr-Gfz" userLabel="Measure Bar 3 Container View">
+                                <rect key="frame" x="375" y="0.0" width="125" height="120"/>
+                                <connections>
+                                    <segue destination="Z8j-Md-6yz" kind="embed" id="tb6-eS-lOX"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="120"/>
                     <connections>
                         <outlet property="bar0V" destination="KKW-Yy-M8o" id="DEI-wL-jvB"/>
                         <outlet property="bar1V" destination="arC-zI-02b" id="6mh-wO-N8q"/>
@@ -916,7 +918,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PRf-2X-HFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828" y="-1049"/>
+            <point key="canvasLocation" x="1753" y="-1043"/>
         </scene>
         <!--Display Traces Container View Controller-->
         <scene sceneID="X1j-fo-tAu">
@@ -927,7 +929,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Jgr-dZ-nkw"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bKp-wX-mDa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="362"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1145,7 +1147,7 @@
             <objects>
                 <tableViewController id="4KN-gf-rTD" userLabel="Bar 0 Table View Controller" customClass="Bar0TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ZBx-H2-Jj8">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1171,7 +1173,7 @@
             <objects>
                 <tableViewController id="pd2-d9-gQT" userLabel="Bar 1 Table View Controller" customClass="Bar1TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="1XR-45-pFe">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1197,7 +1199,7 @@
             <objects>
                 <tableViewController id="stm-nr-rAG" userLabel="Bar 2 Table View Controller" customClass="Bar2TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="A51-mw-cUW">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1223,7 +1225,7 @@
             <objects>
                 <tableViewController id="fZI-P6-mpq" userLabel="Bar 4 Table View Controller" customClass="Bar4TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="d22-M0-pgg">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1249,7 +1251,7 @@
             <objects>
                 <tableViewController id="cKA-dj-1z9" userLabel="Bar 5 Table View Controller" customClass="Bar5TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VLp-Nc-OPx">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1275,7 +1277,7 @@
             <objects>
                 <tableViewController id="FD7-Jg-lZQ" userLabel="Bar 7 Table View Controller" customClass="Bar7TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FVN-f1-KZ0">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1301,7 +1303,7 @@
             <objects>
                 <tableViewController id="Z8j-Md-6yz" userLabel="Bar 3 Table View Controller" customClass="Bar3TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MDM-Ai-sxN">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -1327,7 +1329,7 @@
             <objects>
                 <tableViewController id="y8j-Ej-uWk" userLabel="Bar 6 Table View Controller" customClass="Bar6TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="As8-qa-T2L">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>

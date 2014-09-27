@@ -9,7 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 
+@class DisplayContainerViewController;
+
 @interface DisplayTracesContainerViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
+
+@property (nonatomic) double frameWidth;
+@property (nonatomic) double frameHeight;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 
