@@ -15,6 +15,10 @@
 
 @property (weak, nonatomic) IBOutlet DisplaySettingsContainerViewController *displaySettingsCVC;
 
+@property (weak, nonatomic) IBOutlet UIImageView *singleContinousIV;
+
+@property (nonatomic) BOOL isContinouse;
+
 @property (weak, nonatomic) ShareSettings *shareSettings;
 
 @end

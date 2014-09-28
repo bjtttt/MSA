@@ -61,6 +61,9 @@
 		9A9FFE8A19C04FAB00F76D38 /* MsgWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9FFE8719C04FAB00F76D38 /* MsgWarning.png */; };
 		9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE0EB919B466EF004D9146 /* MsgContainerViewController.m */; };
 		9AB67C1A19D43103004B664A /* Connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB67C1919D43103004B664A /* Connect.png */; };
+		9ABEDCF219D83AF3004EB212 /* Continous.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ABEDCF119D83AF3004EB212 /* Continous.png */; };
+		9ABEDCF419D83E6D004EB212 /* Single.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ABEDCF319D83E6D004EB212 /* Single.png */; };
+		9ABEDCF819D840CC004EB212 /* Bar0SingleContinousTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ABEDCF719D840CC004EB212 /* Bar0SingleContinousTableViewCell.m */; };
 		9AC0BF6D19D6E1AA00C8D9F2 /* MeasureBarDataDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC0BF6C19D6E1AA00C8D9F2 /* MeasureBarDataDefinition.m */; };
 		9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448C19B1F73500A7F334 /* HideBar.png */; };
 		9AC5448F19B1F74300A7F334 /* ShowBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448E19B1F74300A7F334 /* ShowBar.png */; };
@@ -185,6 +188,10 @@
 		9AAE0EB819B466EF004D9146 /* MsgContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgContainerViewController.h; path = ViewControllers/MsgContainerViewController.h; sourceTree = "<group>"; };
 		9AAE0EB919B466EF004D9146 /* MsgContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgContainerViewController.m; path = ViewControllers/MsgContainerViewController.m; sourceTree = "<group>"; };
 		9AB67C1919D43103004B664A /* Connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Connect.png; path = Images/24/Connect.png; sourceTree = "<group>"; };
+		9ABEDCF119D83AF3004EB212 /* Continous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Continous.png; path = Images/32/Continous.png; sourceTree = "<group>"; };
+		9ABEDCF319D83E6D004EB212 /* Single.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Single.png; path = Images/32/Single.png; sourceTree = "<group>"; };
+		9ABEDCF619D840CC004EB212 /* Bar0SingleContinousTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bar0SingleContinousTableViewCell.h; path = ViewControllers/Bar/Bar0/CellStyle/Bar0SingleContinousTableViewCell.h; sourceTree = "<group>"; };
+		9ABEDCF719D840CC004EB212 /* Bar0SingleContinousTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bar0SingleContinousTableViewCell.m; path = ViewControllers/Bar/Bar0/CellStyle/Bar0SingleContinousTableViewCell.m; sourceTree = "<group>"; };
 		9AC0BF6C19D6E1AA00C8D9F2 /* MeasureBarDataDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasureBarDataDefinition.m; path = Data/Definition/MeasureBarDataDefinition.m; sourceTree = "<group>"; };
 		9AC0BF6E19D6E1BD00C8D9F2 /* MeasureBarDataDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MeasureBarDataDefinition.h; path = Data/Definition/MeasureBarDataDefinition.h; sourceTree = "<group>"; };
 		9AC5448C19B1F73500A7F334 /* HideBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HideBar.png; path = Images/24/HideBar.png; sourceTree = "<group>"; };
@@ -349,6 +356,8 @@
 		9A5FDA7D19B5FB9200B3C300 /* 32 */ = {
 			isa = PBXGroup;
 			children = (
+				9ABEDCF319D83E6D004EB212 /* Single.png */,
+				9ABEDCF119D83AF3004EB212 /* Continous.png */,
 				9A19791119D278AD008E87E1 /* AddInstrument.png */,
 				9A659BEC19B7008500C30CE2 /* System.png */,
 				9A659BDE19B6BC2000C30CE2 /* ShowMenu.png */,
@@ -554,6 +563,15 @@
 			name = 24;
 			sourceTree = "<group>";
 		};
+		9ABEDCF519D8406A004EB212 /* CellStyle */ = {
+			isa = PBXGroup;
+			children = (
+				9ABEDCF619D840CC004EB212 /* Bar0SingleContinousTableViewCell.h */,
+				9ABEDCF719D840CC004EB212 /* Bar0SingleContinousTableViewCell.m */,
+			);
+			name = CellStyle;
+			sourceTree = "<group>";
+		};
 		9AC0BF6B19D6E14A00C8D9F2 /* Definition */ = {
 			isa = PBXGroup;
 			children = (
@@ -620,6 +638,7 @@
 		9AE7CCDD19D5A6C5005EAF1C /* Bar0 */ = {
 			isa = PBXGroup;
 			children = (
+				9ABEDCF519D8406A004EB212 /* CellStyle */,
 				9AE7CCE519D5A87B005EAF1C /* Bar0TableViewController.h */,
 				9AE7CCE619D5A87B005EAF1C /* Bar0TableViewController.m */,
 			);
@@ -817,6 +836,7 @@
 			files = (
 				9AE7CCDB19D59CDB005EAF1C /* MeasureBar.storyboard in Resources */,
 				9A19791219D278AD008E87E1 /* AddInstrument.png in Resources */,
+				9ABEDCF219D83AF3004EB212 /* Continous.png in Resources */,
 				9A9FFE8819C04FAB00F76D38 /* MsgError.png in Resources */,
 				9A9C671A19AD6C81007D3248 /* Main.storyboard in Resources */,
 				9A659BDA19B6B91900C30CE2 /* MsgEmpty.png in Resources */,
@@ -826,6 +846,7 @@
 				9AF7001119B81FE5000A69A5 /* Return.png in Resources */,
 				9A659BED19B7008500C30CE2 /* System.png in Resources */,
 				9A9C671C19AD6C81007D3248 /* Images.xcassets in Resources */,
+				9ABEDCF419D83E6D004EB212 /* Single.png in Resources */,
 				9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */,
 				9AE7CCD719D5991E005EAF1C /* Mode.storyboard in Resources */,
 				9A19791019D270EE008E87E1 /* ReturnRoot.png in Resources */,
@@ -882,6 +903,7 @@
 				9A345F4719D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m in Sources */,
 				9A726F6319C19FDE00CDF55D /* SystemDetailContainerViewController.m in Sources */,
 				9AE7CCEA19D5A886005EAF1C /* Bar1TableViewController.m in Sources */,
+				9ABEDCF819D840CC004EB212 /* Bar0SingleContinousTableViewCell.m in Sources */,
 				9A345F4E19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.m in Sources */,
 				9AE7CCF919D5A8EA005EAF1C /* Bar6TableViewController.m in Sources */,
 				9AE7CCF619D5A8D1005EAF1C /* Bar5TableViewController.m in Sources */,

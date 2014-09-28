@@ -137,7 +137,7 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
             break;
     }
 
-    cell.contentView.layer.cornerRadius = 10.0;
+    //cell.contentView.layer.cornerRadius = 10.0;
     cell.contentView.layer.borderColor = [[UIColor lightGrayColor] CGColor];
     cell.contentView.layer.borderWidth = 1.0;
     

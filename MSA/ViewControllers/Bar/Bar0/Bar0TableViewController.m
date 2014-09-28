@@ -28,6 +28,10 @@
     //[self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
+-(void) setIsContinouse:(BOOL)isContinouse {
+    
+}
+
 //-(void) setCurrentStatus:(MSGType)currentSystem{
 //    self.title = self.systems[currentSystem];
 //}
