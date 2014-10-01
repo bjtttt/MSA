@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A006C2819DC09FC0009EA82 /* BarMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A006C2719DC09FC0009EA82 /* BarMenuTableViewController.m */; };
+		9A006C2C19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A006C2B19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.m */; };
+		9A006C3119DC3A220009EA82 /* SoftMenuBooleanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A006C2E19DC3A220009EA82 /* SoftMenuBooleanTableViewCell.m */; };
+		9A006C3219DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A006C3019DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m */; };
 		9A19791019D270EE008E87E1 /* ReturnRoot.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A19790F19D270EE008E87E1 /* ReturnRoot.png */; };
 		9A19791219D278AD008E87E1 /* AddInstrument.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A19791119D278AD008E87E1 /* AddInstrument.png */; };
 		9A19795019D28DDA008E87E1 /* Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A19794E19D28DDA008E87E1 /* Cancel.png */; };
@@ -96,6 +100,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A006C2619DC09FC0009EA82 /* BarMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarMenuTableViewController.h; path = ViewControllers/Bar/BarMenu/BarMenuTableViewController.h; sourceTree = "<group>"; };
+		9A006C2719DC09FC0009EA82 /* BarMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarMenuTableViewController.m; path = ViewControllers/Bar/BarMenu/BarMenuTableViewController.m; sourceTree = "<group>"; };
+		9A006C2A19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuNumericTableViewCell.h; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuNumericTableViewCell.h; sourceTree = "<group>"; };
+		9A006C2B19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuNumericTableViewCell.m; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuNumericTableViewCell.m; sourceTree = "<group>"; };
+		9A006C2D19DC3A220009EA82 /* SoftMenuBooleanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuBooleanTableViewCell.h; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuBooleanTableViewCell.h; sourceTree = "<group>"; };
+		9A006C2E19DC3A220009EA82 /* SoftMenuBooleanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuBooleanTableViewCell.m; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuBooleanTableViewCell.m; sourceTree = "<group>"; };
+		9A006C2F19DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuNumericBooleanTableViewCell.h; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuNumericBooleanTableViewCell.h; sourceTree = "<group>"; };
+		9A006C3019DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuNumericBooleanTableViewCell.m; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuNumericBooleanTableViewCell.m; sourceTree = "<group>"; };
 		9A19790F19D270EE008E87E1 /* ReturnRoot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ReturnRoot.png; path = Images/20/ReturnRoot.png; sourceTree = "<group>"; };
 		9A19791119D278AD008E87E1 /* AddInstrument.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AddInstrument.png; path = Images/32/AddInstrument.png; sourceTree = "<group>"; };
 		9A19794E19D28DDA008E87E1 /* Cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cancel.png; path = Images/24/Cancel.png; sourceTree = "<group>"; };
@@ -244,6 +256,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A006C2519DC09850009EA82 /* BarMenu */ = {
+			isa = PBXGroup;
+			children = (
+				9A006C2619DC09FC0009EA82 /* BarMenuTableViewController.h */,
+				9A006C2719DC09FC0009EA82 /* BarMenuTableViewController.m */,
+			);
+			name = BarMenu;
+			sourceTree = "<group>";
+		};
 		9A19790E19D270E5008E87E1 /* 20 */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,6 +605,12 @@
 		9AC0BF6F19D6E93500C8D9F2 /* CellStyle */ = {
 			isa = PBXGroup;
 			children = (
+				9A006C2D19DC3A220009EA82 /* SoftMenuBooleanTableViewCell.h */,
+				9A006C2E19DC3A220009EA82 /* SoftMenuBooleanTableViewCell.m */,
+				9A006C2F19DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.h */,
+				9A006C3019DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m */,
+				9A006C2A19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.h */,
+				9A006C2B19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.m */,
 			);
 			name = CellStyle;
 			sourceTree = "<group>";
@@ -623,6 +650,7 @@
 		9AE7CCDC19D5A6BB005EAF1C /* Bar */ = {
 			isa = PBXGroup;
 			children = (
+				9A006C2519DC09850009EA82 /* BarMenu */,
 				9AE7CCDD19D5A6C5005EAF1C /* Bar0 */,
 				9AE7CCDE19D5A6CC005EAF1C /* Bar1 */,
 				9AE7CCDF19D5A6D6005EAF1C /* Bar2 */,
@@ -877,6 +905,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A19795619D2A547008E87E1 /* AddInstrumentContainerViewController.m in Sources */,
+				9A006C3219DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m in Sources */,
 				9A726F5B19C19FC000CDF55D /* SystemMasterNavigationViewController.m in Sources */,
 				9A1C929C19CED2B400074EA6 /* SoftMenuNavigationViewController.m in Sources */,
 				9ACB212619D44A4E0022EB5F /* MeasureSelect2ndTableViewController.m in Sources */,
@@ -888,6 +917,7 @@
 				9AE0AFBC19C2B626008544AC /* DisplayTracesContainerViewController.m in Sources */,
 				9A726F6519C19FDE00CDF55D /* SystemDetailTableViewController.m in Sources */,
 				9A953EE419AD84E7005467A1 /* DisplayContainerViewController.m in Sources */,
+				9A006C3119DC3A220009EA82 /* SoftMenuBooleanTableViewCell.m in Sources */,
 				9A726F6419C19FDE00CDF55D /* SystemDetailNavigationViewController.m in Sources */,
 				9A9C671119AD6C81007D3248 /* AppDelegate.m in Sources */,
 				9A7422A519BDD2E400A251ED /* MsgDetailContainerViewController.m in Sources */,
@@ -896,9 +926,11 @@
 				9A953EE619AD84E7005467A1 /* MenuContainerViewController.m in Sources */,
 				9ACA2EB919BD4651005542B5 /* MsgMasterTableViewController.m in Sources */,
 				9A79537919CD3902009984A6 /* MeasureSelectTableViewController.m in Sources */,
+				9A006C2C19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.m in Sources */,
 				9AE7CCE719D5A87B005EAF1C /* Bar0TableViewController.m in Sources */,
 				9A1C929D19CED2B400074EA6 /* SoftMenuTableViewController.m in Sources */,
 				9A953EE319AD84E7005467A1 /* ConnectViewController.m in Sources */,
+				9A006C2819DC09FC0009EA82 /* BarMenuTableViewController.m in Sources */,
 				9AE7CCED19D5A8A4005EAF1C /* Bar2TableViewController.m in Sources */,
 				9A345F4719D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m in Sources */,
 				9A726F6319C19FDE00CDF55D /* SystemDetailContainerViewController.m in Sources */,

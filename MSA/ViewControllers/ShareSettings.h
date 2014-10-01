@@ -74,9 +74,12 @@ typedef enum valueType {
 
 @property (nonatomic) BOOL menuTapped;
 @property (nonatomic) BOOL measureTapped;
+@property (nonatomic) BOOL barTapped;
+@property (nonatomic) int barTappedIndex;
 
 @property (nonatomic) BOOL menuDisplayed;
 @property (nonatomic) BOOL measureDisplayed;
+@property (nonatomic) BOOL barDisplayed;
 
 @property (nonatomic) InstrumentStatus currentInstrumentStatus;
 @property (nonatomic) NSMutableString *currentInstrument;
