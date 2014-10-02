@@ -12,6 +12,8 @@
 #import "MenuContainerViewController.h"
 #import "MeasureContainerViewController.h"
 #import "DisplaySettingsContainerViewController.h"
+#import "BlurViewController.h"
+#import "BarMenuContainerViewController.h"
 
 @interface ContainerViewController ()
 
@@ -26,21 +28,30 @@
     self.frameWidth = self.view.frame.size.width;
     self.frameHeight = self.view.frame.size.height;
     
-    // Border Radius
+    // Measure View Border Radius
     [self.measureView.layer setCornerRadius:HEAVY_CORNER_RADIUS];
     [self.measureView.layer setMasksToBounds:YES];
     //[self.measureView setClipsToBounds:YES];
     
-    // Border
+    // Measure View Border
     [self.measureView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
     [self.measureView.layer setBorderWidth:HEAVY_BORDER_WIDTH];
     
-    // Border Shadow
+    // Measure View Border Shadow
     [self.measureView.layer setShadowColor:[UIColor blackColor].CGColor];
     [self.measureView.layer setShadowOpacity:1.0];
     [self.measureView.layer setShadowRadius:HEAVY_CORNER_RADIUS];
     [self.measureView.layer setShadowOffset:CGSizeMake(1.0, 1.0)];
     [self.measureView.layer setShadowPath:[[UIBezierPath bezierPathWithRect:self.measureView.layer.bounds] CGPath]];
+    
+    // Bar View Border Radius
+    [self.barView.layer setCornerRadius:HEAVY_CORNER_RADIUS];
+    [self.barView.layer setMasksToBounds:YES];
+    //[self.measureView setClipsToBounds:YES];
+    
+    // Bar View Border
+    [self.barView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self.barView.layer setBorderWidth:HEAVY_BORDER_WIDTH];
 
     //self.shareSettings = [ShareSettings sharedSettings];
     //self.shareSettings.menuTapped=NO;
@@ -157,6 +168,24 @@
         self.measureCVC.frameWidth = MENU_WIDTH;
         self.measureCVC.frameHeight = self.frameHeight;
     }
+    if([segue.identifier isEqualToString:@"embedSegueToBarMenuVC"])
+    {
+        self.barMenuCVC = (BarMenuContainerViewController *)segue.destinationViewController;
+        self.barMenuCVC.shareSettings = self.shareSettings;
+        self.barMenuCVC.mainCVC = self;
+        
+        self.barMenuCVC.frameWidth = MENU_WIDTH;
+        self.barMenuCVC.frameHeight = BAR_MENU_HEIGHT;
+    }
+    if([segue.identifier isEqualToString:@"embedSegueToBlurVC"])
+    {
+        self.blurVC = (BlurViewController *)segue.destinationViewController;
+        self.blurVC.shareSettings = self.shareSettings;
+        self.blurVC.mainCVC = self;
+        
+        self.blurVC.frameWidth = self.frameWidth;
+        self.blurVC.frameHeight = self.frameHeight;
+    }
 }
 
 -(void)didReceiveMemoryWarning {
@@ -203,6 +232,11 @@
     
     if(self.shareSettings.measureDisplayed == YES)
     {
+        self.barView.frame = CGRectMake(-MENU_WIDTH-VC_MARGIN, 0, MENU_WIDTH, 0);
+        self.blurView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
+        UIImage *img = [self.shareSettings screenShot:self saveInAlbum:NO];
+        UIImage *blurImg = [self.shareSettings blurryImage:img withBlurLevel:0.5];
+        
         if(self.shareSettings.menuDisplayed == YES)
         {
             self.displayCVC.frameWidth = self.frameWidth - MENU_WIDTH;
@@ -247,6 +281,9 @@
     }
     else
     {
+        self.barView.frame = CGRectMake(-MENU_WIDTH-VC_MARGIN, 0, MENU_WIDTH, 0);
+        self.blurView.frame = CGRectMake(-self.frameWidth-VC_MARGIN, 0, self.frameWidth, self.frameHeight);
+        
         if(self.shareSettings.menuDisplayed == YES)
         {
             self.displayCVC.frameWidth = self.frameWidth - MENU_WIDTH;

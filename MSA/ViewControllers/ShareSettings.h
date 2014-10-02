@@ -61,6 +61,7 @@ typedef enum valueType {
 #define HEAVY_BORDER_WIDTH 2.0f
 #define VC_MARGIN 1.0f
 #define MENU_WIDTH 150.0f
+#define BAR_MENU_HEIGHT 300.0f
 #define MEAS_WIDTH 350.0f
 #define MEAS_HEIGHT 600.0f
 #define MEASBAR_HEIGHT 120.0f
@@ -92,6 +93,8 @@ typedef enum valueType {
 +(id)sharedSettings;
 
 - (void) initMeasureView;
+-(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum;
+-(UIImage *)blurryImage:(UIImage *)image withBlurLevel:(CGFloat)blur;
 
 @end
 

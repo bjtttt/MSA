@@ -9,15 +9,11 @@
 #import <UIKit/UIKit.h>
 #include "ShareSettings.h"
 
-@class PresetMenuContainerViewController;
+@class BarMenuContainerViewController;
 
 @interface BarMenuTableViewController : UITableViewController
 
-@property (weak, nonatomic) IBOutlet PresetMenuContainerViewController *presetMenuCVC;
-
-@property (copy, nonatomic) NSArray *preset;
-//@property (copy, nonatomic) NSArray *presetUser;
-//@property (copy, nonatomic) NSArray *presetAllModes;
+@property (weak, nonatomic) IBOutlet BarMenuContainerViewController *barMenuCVC;
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;

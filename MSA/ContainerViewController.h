@@ -14,6 +14,8 @@
 @class MsgContainerViewController;
 @class SystemContainerViewController;
 @class MeasureContainerViewController;
+@class BlurViewController;
+@class BarMenuContainerViewController;
 
 @interface ContainerViewController : UIViewController
 
@@ -22,12 +24,16 @@
 @property (weak, nonatomic) IBOutlet UIView *measureView;
 @property (weak, nonatomic) IBOutlet UIView *msgView;
 @property (weak, nonatomic) IBOutlet UIView *systemView;
+@property (weak, nonatomic) IBOutlet UIView *blurView;
+@property (weak, nonatomic) IBOutlet UIView *barView;
 
 @property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
 @property (weak, nonatomic) IBOutlet MenuContainerViewController *menuCVC;
 @property (weak, nonatomic) IBOutlet MsgContainerViewController *msgCVC;
 @property (weak, nonatomic) IBOutlet SystemContainerViewController *systemCVC;
 @property (weak, nonatomic) IBOutlet MeasureContainerViewController *measureCVC;
+@property (weak, nonatomic) IBOutlet BlurViewController *blurVC;
+@property (weak, nonatomic) IBOutlet BarMenuContainerViewController *barMenuCVC;
 
 @property (weak, nonatomic) UIStoryboard *modeStoryboard;
 @property (weak, nonatomic) UIStoryboard *measBarStoryboard;

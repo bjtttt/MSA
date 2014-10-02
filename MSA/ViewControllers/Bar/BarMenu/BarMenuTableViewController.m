@@ -30,12 +30,6 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
     NSLog(@"PresetMenuTableViewController - viewDidLoad");
 
     [super viewDidLoad];
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"MSAList" ofType:@"plist"];
-    NSDictionary *msaInfo = [NSDictionary dictionaryWithContentsOfFile:path];
-    self.preset = [msaInfo objectForKey:@"preset"];//[0];
-    //self.presetUser = [msaInfo objectForKey:@"preset"][1];
-    //self.presetAllModes = [msaInfo objectForKey:@"preset"][2];
 
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -72,6 +66,7 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
 
 #pragma mark - Table View
 
+/*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return [self.preset count];
@@ -186,5 +181,6 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
     
     return nil;
 }
+*/
 
 @end
