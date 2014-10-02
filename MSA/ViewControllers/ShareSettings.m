@@ -29,12 +29,14 @@
 
 -(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum {
     UIGraphicsBeginImageContext(uiVC.view.bounds.size);
+    NSLog(@"Screen Image Width %f, Height %f", uiVC.view.bounds.size.width, uiVC.view.bounds.size.height);
+    
     [uiVC.view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     if(saveInAlbum == YES)
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil); //if you need to save
     
     return image;
 }
