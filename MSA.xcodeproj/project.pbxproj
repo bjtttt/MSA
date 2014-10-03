@@ -88,6 +88,7 @@
 		9ACCD84E19DEA16800A6ACD5 /* GPUImageTwoPassTextureSamplingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCD84D19DEA16800A6ACD5 /* GPUImageTwoPassTextureSamplingFilter.m */; };
 		9ACCD85119DEA17E00A6ACD5 /* GPUImageTwoPassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCD85019DEA17E00A6ACD5 /* GPUImageTwoPassFilter.m */; };
 		9ACCD85419DEA1A000A6ACD5 /* GPUImageLuminanceRangeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCD85319DEA1A000A6ACD5 /* GPUImageLuminanceRangeFilter.m */; };
+		9ACCD86219DEC29400A6ACD5 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCD86119DEC29400A6ACD5 /* UIView+Screenshot.m */; };
 		9AD4A4E619DD860B00FE1914 /* BlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4A4E519DD860B00FE1914 /* BlurViewController.m */; };
 		9AD4A4EA19DD8CAA00FE1914 /* BarMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4A4E919DD8CAA00FE1914 /* BarMenuContainerViewController.m */; };
 		9AE0AFB919C2B55C008544AC /* DisplaySettingsContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0AFB819C2B55C008544AC /* DisplaySettingsContainerViewController.m */; };
@@ -257,6 +258,8 @@
 		9ACCD85019DEA17E00A6ACD5 /* GPUImageTwoPassFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageTwoPassFilter.m; path = Extended/UI/Blur/GPUImageTwoPassFilter.m; sourceTree = "<group>"; };
 		9ACCD85219DEA1A000A6ACD5 /* GPUImageLuminanceRangeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageLuminanceRangeFilter.h; path = Extended/UI/Blur/GPUImageLuminanceRangeFilter.h; sourceTree = "<group>"; };
 		9ACCD85319DEA1A000A6ACD5 /* GPUImageLuminanceRangeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageLuminanceRangeFilter.m; path = Extended/UI/Blur/GPUImageLuminanceRangeFilter.m; sourceTree = "<group>"; };
+		9ACCD86019DEC29400A6ACD5 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Screenshot.h"; path = "Extended/UI/ScreenShot/UIView+Screenshot.h"; sourceTree = "<group>"; };
+		9ACCD86119DEC29400A6ACD5 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Screenshot.m"; path = "Extended/UI/ScreenShot/UIView+Screenshot.m"; sourceTree = "<group>"; };
 		9AD4A4E519DD860B00FE1914 /* BlurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlurViewController.m; path = ViewControllers/BlurViewController.m; sourceTree = "<group>"; };
 		9AD4A4E719DD862000FE1914 /* BlurViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BlurViewController.h; path = ViewControllers/BlurViewController.h; sourceTree = "<group>"; };
 		9AD4A4E819DD8CAA00FE1914 /* BarMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarMenuContainerViewController.h; path = ViewControllers/Bar/BarMenu/BarMenuContainerViewController.h; sourceTree = "<group>"; };
@@ -517,6 +520,7 @@
 		9A79537B19CDA1AD009984A6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9ACCD85C19DEB8EF00A6ACD5 /* ScreenShot */,
 				9ACCD82719DE9CD000A6ACD5 /* Blur */,
 			);
 			name = UI;
@@ -710,6 +714,15 @@
 				9ACCD82919DE9CE600A6ACD5 /* GPUImageiOSBlurFilter.m */,
 			);
 			name = Blur;
+			sourceTree = "<group>";
+		};
+		9ACCD85C19DEB8EF00A6ACD5 /* ScreenShot */ = {
+			isa = PBXGroup;
+			children = (
+				9ACCD86019DEC29400A6ACD5 /* UIView+Screenshot.h */,
+				9ACCD86119DEC29400A6ACD5 /* UIView+Screenshot.m */,
+			);
+			name = ScreenShot;
 			sourceTree = "<group>";
 		};
 		9AE0AFB619C2B4E8008544AC /* Display */ = {
@@ -1022,6 +1035,7 @@
 				9A006C2C19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.m in Sources */,
 				9AE7CCE719D5A87B005EAF1C /* Bar0TableViewController.m in Sources */,
 				9A1C929D19CED2B400074EA6 /* SoftMenuTableViewController.m in Sources */,
+				9ACCD86219DEC29400A6ACD5 /* UIView+Screenshot.m in Sources */,
 				9A006C2819DC09FC0009EA82 /* BarMenuTableViewController.m in Sources */,
 				9AE7CCED19D5A8A4005EAF1C /* Bar2TableViewController.m in Sources */,
 				9A345F4719D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m in Sources */,

@@ -44,7 +44,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pg0-Tj-Oce" userLabel="Bar Menu View">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
                                 <connections>
-                                    <segue destination="81q-Gj-I5K" kind="embed" identifier="embedSegueToBarMenuTVC" id="3Jk-UC-Gs3"/>
+                                    <segue destination="81q-Gj-I5K" kind="embed" identifier="embedSegueToBarMenuCVC" id="3Jk-UC-Gs3"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -55,6 +55,7 @@
                         <outlet property="barView" destination="Pg0-Tj-Oce" id="tgA-ev-Gl3"/>
                         <outlet property="blurView" destination="rMo-M9-Qwt" id="4b7-Nw-iTQ"/>
                         <outlet property="displayView" destination="vId-ub-NnX" id="ujP-uw-bQ7"/>
+                        <outlet property="mainView" destination="ex4-JV-8sr" id="dRC-bq-Vwv"/>
                         <outlet property="measureView" destination="shz-m0-FnC" id="Mn1-Md-SDi"/>
                         <outlet property="menuView" destination="X7O-d3-lWv" id="nZW-Oe-RbW"/>
                     </connections>
@@ -2246,11 +2247,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vWo-p9-jF6">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
+                                <rect key="frame" x="0.0" y="44" width="150" height="256"/>
                                 <connections>
                                     <segue destination="ENN-LG-RWc" kind="embed" identifier="embedSegueToBarMenuTVC" id="MYZ-Qe-rsg"/>
                                 </connections>
                             </containerView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ob-Om-gJf">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
+                                <items>
+                                    <navigationItem id="bTz-4Y-30m">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="34x-jf-CRf">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GNN-RE-DeU">
+                                                <rect key="frame" x="101" y="7" width="24" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="OK.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -2265,7 +2282,7 @@
             <objects>
                 <tableViewController id="ENN-LG-RWc" customClass="BarMenuTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Uof-Mc-zdG">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>

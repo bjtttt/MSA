@@ -27,6 +27,8 @@
 @property (weak, nonatomic) IBOutlet UIView *blurView;
 @property (weak, nonatomic) IBOutlet UIView *barView;
 
+@property (strong, nonatomic) IBOutlet UIView *mainView;
+
 @property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
 @property (weak, nonatomic) IBOutlet MenuContainerViewController *menuCVC;
 @property (weak, nonatomic) IBOutlet MsgContainerViewController *msgCVC;

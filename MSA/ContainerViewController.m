@@ -14,6 +14,7 @@
 #import "DisplaySettingsContainerViewController.h"
 #import "BlurViewController.h"
 #import "BarMenuContainerViewController.h"
+#import "UIView+Screenshot.h"
 
 @interface ContainerViewController ()
 
@@ -168,7 +169,7 @@
         self.measureCVC.frameWidth = MENU_WIDTH;
         self.measureCVC.frameHeight = self.frameHeight;
     }
-    if([segue.identifier isEqualToString:@"embedSegueToBarMenuVC"])
+    if([segue.identifier isEqualToString:@"embedSegueToBarMenuCVC"])
     {
         self.barMenuCVC = (BarMenuContainerViewController *)segue.destinationViewController;
         self.barMenuCVC.shareSettings = self.shareSettings;
@@ -229,14 +230,20 @@
     //self.shareSettings.prevprevMSALayout=self.shareSettings.prevMSALayout;
     //self.shareSettings.prevMSALayout=self.shareSettings.curMSALayout;
     //self.shareSettings.curMSALayout=layoutType;
-    
+
+    UIImage *img = nil;
+    UIImage *blurImg = nil;
+
     if(self.shareSettings.measureDisplayed == YES)
     {
         self.barView.frame = CGRectMake(-MENU_WIDTH-VC_MARGIN, 0, MENU_WIDTH, 0);
-        self.blurView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
-        UIImage *img = [self.shareSettings screenShot:self saveInAlbum:NO];
-        UIImage *blurImg = [self.shareSettings blurryImage:img];
-        [self.blurVC.blurImage setImage:blurImg];
+        //self.blurView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
+        //UIImage *img = [self.view convertViewToImage];// [self.shareSettings screenShot:self saveInAlbum:NO];
+        //UIImage *blurImg = [self.shareSettings blurryImage:img];
+        //[self.blurVC.blurImage setImage:blurImg];
+        
+        img = [self.view convertViewToImage];// [self.shareSettings screenShot:self saveInAlbum:NO];
+        blurImg = [self.shareSettings blurryImage:img];
         
         if(self.shareSettings.menuDisplayed == YES)
         {
@@ -332,6 +339,12 @@
     {
         layoutBlock();
         completionBlock(YES);
+    }
+    
+    if(self.shareSettings.measureDisplayed == YES)
+    {
+        self.blurView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
+        [self.blurVC.blurImage setImage:blurImg];
     }
 }
 

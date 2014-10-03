@@ -33,7 +33,11 @@
 
     UIGraphicsBeginImageContext(uiVC.view.bounds.size);
     
-    [uiVC.view snapshotViewAfterScreenUpdates:YES];// drawViewHierarchyInRect:uiVC.view.bounds afterScreenUpdates:YES];
+    BOOL ret = [uiVC.view drawViewHierarchyInRect:uiVC.view.bounds afterScreenUpdates:YES];
+    //[uiVC.view snapshotViewAfterScreenUpdates:YES];
+    
+    if(ret == NO)
+        NSLog(@"Screen Snapshot fails.");
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -73,7 +77,11 @@
 
 -(UIImage *)blurryImage:(UIImage *)image {
     // Create filter.
-    self.blurFilter = [GPUImageiOSBlurFilter new];
+    if(self.blurFilter == nil)
+    {
+        self.blurFilter = [GPUImageiOSBlurFilter new];
+        self.blurFilter.blurRadiusInPixels = 0.1f;
+    }
     
     // Apply filter.
     UIImage *blurredImage = [self.blurFilter imageByFilteringImage:image];
