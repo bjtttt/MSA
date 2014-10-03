@@ -235,7 +235,8 @@
         self.barView.frame = CGRectMake(-MENU_WIDTH-VC_MARGIN, 0, MENU_WIDTH, 0);
         self.blurView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
         UIImage *img = [self.shareSettings screenShot:self saveInAlbum:NO];
-        UIImage *blurImg = [self.shareSettings blurryImage:img withBlurLevel:0.5];
+        UIImage *blurImg = [self.shareSettings blurryImage:img];
+        [self.blurVC.blurImage setImage:blurImg];
         
         if(self.shareSettings.menuDisplayed == YES)
         {
@@ -243,8 +244,8 @@
             self.displayCVC.frameHeight = self.frameHeight;
             self.displayCVC.barCVC.frameWidth = self.frameWidth - MENU_WIDTH;
             //[self.displayCVC.barCVC setMeasureBarAccordingToFrame];
-            [self.displayView setUserInteractionEnabled:NO];
-            [self.menuView setUserInteractionEnabled:NO];
+            //[self.displayView setUserInteractionEnabled:NO];
+            //[self.menuView setUserInteractionEnabled:NO];
             
             self.menuCVC.presetViewVisible = NO;
             [self.menuCVC showHidePresetMenu:NO animated:YES];
@@ -264,7 +265,7 @@
             self.displayCVC.frameHeight = self.frameHeight;
             self.displayCVC.barCVC.frameWidth = self.frameWidth;
             //[self.displayCVC.barCVC setMeasureBarAccordingToFrame];
-            [self.displayView setUserInteractionEnabled:NO];
+            //[self.displayView setUserInteractionEnabled:NO];
             
             layoutBlock = ^(void)
             {
@@ -289,8 +290,8 @@
             self.displayCVC.frameWidth = self.frameWidth - MENU_WIDTH;
             self.displayCVC.frameHeight = self.frameHeight;
             self.displayCVC.barCVC.frameWidth = self.frameWidth - MENU_WIDTH;
-            [self.displayView setUserInteractionEnabled:YES];
-            [self.menuView setUserInteractionEnabled:YES];
+            //[self.displayView setUserInteractionEnabled:YES];
+            //[self.menuView setUserInteractionEnabled:YES];
 
             layoutBlock = ^(void)
             {
@@ -306,7 +307,7 @@
             self.displayCVC.frameWidth = self.frameWidth;
             self.displayCVC.frameHeight = self.frameHeight;
             self.displayCVC.barCVC.frameWidth = self.frameWidth;
-            [self.displayView setUserInteractionEnabled:YES];
+            //[self.displayView setUserInteractionEnabled:YES];
 
             layoutBlock = ^(void)
             {

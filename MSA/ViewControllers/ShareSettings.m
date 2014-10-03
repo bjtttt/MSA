@@ -12,6 +12,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 #import <Accelerate/Accelerate.h>
+#import "GPUImageiOSBlurFilter.h"
 
 @implementation ShareSettings
 
@@ -28,12 +29,41 @@
 }
 
 -(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum {
+    NSLog(@"Screeen UIViewController View Bounds X %f, Y %f, Width %f, Height %f", uiVC.view.bounds.origin.x, uiVC.view.bounds.origin.y, uiVC.view.bounds.size.width, uiVC.view.bounds.size.height);
+
     UIGraphicsBeginImageContext(uiVC.view.bounds.size);
-    NSLog(@"Screen Image Width %f, Height %f", uiVC.view.bounds.size.width, uiVC.view.bounds.size.height);
+    
+    [uiVC.view snapshotViewAfterScreenUpdates:YES];// drawViewHierarchyInRect:uiVC.view.bounds afterScreenUpdates:YES];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    /*
+    UIGraphicsBeginImageContext(uiVC.view.bounds.size);
+    [uiVC.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    */
+    
+    /*
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)])
+        UIGraphicsBeginImageContextWithOptions(uiVC.view.window.bounds.size, NO, [UIScreen mainScreen].scale);
+    else
+        UIGraphicsBeginImageContext(uiVC.view.window.bounds.size);
+    [uiVC.view.window.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    */
+    
+    /*
+    UIGraphicsBeginImageContext(uiVC.view.bounds.size);
+    NSLog(@"Screen Image View Bounds X %f, Y %f, Width %f, Height %f", uiVC.view.bounds.origin.x, uiVC.view.bounds.origin.y, uiVC.view.bounds.size.width, uiVC.view.bounds.size.height);
+    NSLog(@"Screen Image View Layer Bounds Layer X %f, Y %f, Width %f, Height %f", uiVC.view.layer.bounds.origin.x, uiVC.view.layer.bounds.origin.y, uiVC.view.layer.bounds.size.width, uiVC.view.layer.bounds.size.height);
     
     [uiVC.view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    */
     
     if(saveInAlbum == YES)
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil); //if you need to save
@@ -41,7 +71,16 @@
     return image;
 }
 
--(UIImage *)blurryImage:(UIImage *)image withBlurLevel:(CGFloat)blur {
+-(UIImage *)blurryImage:(UIImage *)image {
+    // Create filter.
+    self.blurFilter = [GPUImageiOSBlurFilter new];
+    
+    // Apply filter.
+    UIImage *blurredImage = [self.blurFilter imageByFilteringImage:image];
+    
+    return blurredImage;
+
+    /*
     if ((blur < 0.1f) || (blur > 2.0f)) {
         blur = 0.5f;
     }
@@ -112,6 +151,7 @@
     CGImageRelease(imageRef);
     
     return returnImage;
+    */
 }
 
 - (void) initMeasureView

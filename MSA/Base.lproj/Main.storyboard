@@ -29,6 +29,12 @@
                                     <segue destination="mRs-zk-5eL" kind="embed" identifier="embedSegueToMenuVC" id="Myk-9C-kep"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMo-M9-Qwt" userLabel="Blur View">
+                                <rect key="frame" x="0.0" y="200" width="400" height="400"/>
+                                <connections>
+                                    <segue destination="Z0v-YZ-ZRy" kind="embed" identifier="embedSegueToBlurVC" id="YIe-Z6-lIM"/>
+                                </connections>
+                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shz-m0-FnC" userLabel="Measure View">
                                 <rect key="frame" x="0.0" y="0.0" width="350" height="600"/>
                                 <connections>
@@ -39,12 +45,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
                                 <connections>
                                     <segue destination="81q-Gj-I5K" kind="embed" identifier="embedSegueToBarMenuTVC" id="3Jk-UC-Gs3"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMo-M9-Qwt" userLabel="Blur View">
-                                <rect key="frame" x="0.0" y="315" width="300" height="300"/>
-                                <connections>
-                                    <segue destination="Z0v-YZ-ZRy" kind="embed" identifier="embedSegueToBlurVC" id="YIe-Z6-lIM"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LlK-8q-417" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-70" y="863"/>
+            <point key="canvasLocation" x="-60" y="860"/>
         </scene>
         <!--Display Container View Controller-->
         <scene sceneID="urH-18-cJO">
@@ -399,7 +399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUL-ew-kcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="195" y="540"/>
+            <point key="canvasLocation" x="203" y="540"/>
         </scene>
         <!--Msg Container View Controller-->
         <scene sceneID="HeJ-Qn-4Ip">
@@ -1208,7 +1208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3D-XQ-gax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="195" y="1198"/>
+            <point key="canvasLocation" x="203" y="1198"/>
         </scene>
         <!--Display Settings Container View Controller-->
         <scene sceneID="2If-02-SXC">
@@ -1300,7 +1300,7 @@
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bKp-wX-mDa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                 </viewController>
@@ -2258,7 +2258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1CX-vT-Z6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="195" y="-21"/>
+            <point key="canvasLocation" x="203" y="-21"/>
         </scene>
         <!--Bar Menu Table View Controller-->
         <scene sceneID="ZAt-G6-FhL">
@@ -2295,11 +2295,11 @@
                         <viewControllerLayoutGuide type="bottom" id="DQV-ZT-Kch"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="epr-SI-AbR">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n0l-Mh-ukg">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2307,12 +2307,11 @@
                     <toolbarItems/>
                     <connections>
                         <outlet property="blurImage" destination="n0l-Mh-ukg" id="4eQ-CM-9gQ"/>
-                        <outlet property="blurView" destination="epr-SI-AbR" id="UoQ-rd-RXi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7H-GW-v2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-389" y="-21"/>
+            <point key="canvasLocation" x="-387" y="29"/>
         </scene>
     </scenes>
     <resources>

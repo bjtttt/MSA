@@ -16,4 +16,10 @@
 
 @implementation BlurViewController
 
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    
+    self.blurImage.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
+}
+
 @end

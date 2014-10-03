@@ -71,6 +71,8 @@ typedef enum valueType {
 
 #define DEBUG_OUTPUT YES
 
+@class GPUImageiOSBlurFilter;
+
 @interface ShareSettings : NSObject
 
 @property (nonatomic) BOOL menuTapped;
@@ -90,11 +92,13 @@ typedef enum valueType {
 @property (weak, nonatomic) UIStoryboard *modeStoryboard;
 @property (weak, nonatomic) UIStoryboard *measBarStoryboard;
 
+@property (nonatomic) GPUImageiOSBlurFilter *blurFilter;
+
 +(id)sharedSettings;
 
 - (void) initMeasureView;
 -(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum;
--(UIImage *)blurryImage:(UIImage *)image withBlurLevel:(CGFloat)blur;
+-(UIImage *)blurryImage:(UIImage *)image;
 
 @end
 

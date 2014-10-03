@@ -20,7 +20,6 @@
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
 
-@property (weak, nonatomic) IBOutlet UIView *blurView;
 @property (weak, nonatomic) IBOutlet UIImageView *blurImage;
 
 @end
