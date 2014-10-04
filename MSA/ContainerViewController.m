@@ -263,6 +263,9 @@
         }
         self.barView.frame = CGRectMake(singleBarWidth*self.shareSettings.barTappedIndex, NAVBAR_HEIGHT+MEASBAR_HEIGHT, MENU_WIDTH, 0);
 
+        //img = [self.view convertViewToImage];// [self.shareSettings screenShot:self saveInAlbum:NO];
+        //blurImg = [self.shareSettings blurryImage:img];
+
         layoutBlock = ^(void)
         {
             self.barView.frame = CGRectMake(singleBarWidth*self.shareSettings.barTappedIndex, NAVBAR_HEIGHT+MEASBAR_HEIGHT, MENU_WIDTH, BAR_MENU_HEIGHT);
@@ -381,7 +384,7 @@
         completionBlock(YES);
     }
     
-    if(self.shareSettings.measureDisplayed == YES)
+    if(self.shareSettings.measureDisplayed == YES)// || self.shareSettings.barDisplayed == YES)
     {
         self.blurView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
         [self.blurVC.blurImage setImage:blurImg];

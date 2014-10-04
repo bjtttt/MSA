@@ -80,7 +80,9 @@
     if(self.blurFilter == nil)
     {
         self.blurFilter = [GPUImageiOSBlurFilter new];
-        self.blurFilter.blurRadiusInPixels = 0.1f;
+        self.blurFilter.blurRadiusInPixels = 1.0f;
+        self.blurFilter.saturation = 1.0f;
+        self.blurFilter.downsampling = 1.0f;
     }
     
     // Apply filter.
