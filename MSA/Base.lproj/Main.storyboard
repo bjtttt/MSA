@@ -1301,7 +1301,6 @@
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bKp-wX-mDa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                 </viewController>
@@ -1521,7 +1520,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="swE-dv-gSP" customClass="Bar0SingleContinousTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barMenuTVC_Single_Continous" id="swE-dv-gSP" userLabel="barMenuTVC_Single_Continous" customClass="Bar0SingleContinousTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="swE-dv-gSP" id="82K-qc-uBC">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -1531,8 +1530,11 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="singleContinousImgV" destination="ciI-RM-ldC" id="4r1-Qo-EEb"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mv6-RO-Er4">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barMenuTVC_One_Line" id="mv6-RO-Er4" userLabel="barMenuTVC_One_Line" customClass="Bar0OneLineTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mv6-RO-Er4" id="hr4-fn-kdX">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -1545,6 +1547,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="content" destination="4Ih-NE-nZ1" id="ADN-3o-0aD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

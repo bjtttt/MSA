@@ -1,5 +1,5 @@
 //
-//  Bar0SingleContinousTableViewCell.h
+//  Bar0OneLineTableViewCell.h
 //  MSA
 //
 //  Created by GUO Zhitao on 22/09/14.
@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 
-@interface Bar0SingleContinousTableViewCell : UITableViewCell
+@interface Bar0OneLineTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *content;
 
 @end

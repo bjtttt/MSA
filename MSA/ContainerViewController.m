@@ -7,6 +7,7 @@
 //
 
 #import "ShareSettings.h"
+#import "ParameterManager.h"
 #import "ContainerViewController.h"
 #import "DisplayContainerViewController.h"
 #import "MenuContainerViewController.h"
@@ -107,9 +108,12 @@
     self.shareSettings.currentInstrumentStatus = INST_DISC;
     
     self.shareSettings.modeStoryboard = self.modeStoryboard;
-    self.shareSettings.measBarStoryboard = self.measBarStoryboard;
+    //self.shareSettings.measBarStoryboard = self.measBarStoryboard;
     
     [self.shareSettings initMeasureView];
+    
+    self.parManager = [ParameterManager parameterManager];
+    [self.parManager registerParameterChangedEvent];
 
     //[self.menuView setHidden:YES];
     //[self.menuCVC showHidePresetMenu:YES];
@@ -128,6 +132,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuTapped) name:@"menuTapped" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(measureTapped) name:@"measureTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barTapped) name:@"barTapped" object:nil];
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
@@ -137,6 +142,7 @@
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"menuTapped" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"measureTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barTapped" object:nil];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -217,6 +223,11 @@
     [self layoutVC:YES];
 }
 
+-(void)barTapped {
+    self.shareSettings.barDisplayed = !self.shareSettings.barDisplayed;
+    [self layoutVC:YES];
+}
+
 - (void)measureTapped {
     self.shareSettings.measureDisplayed = !self.shareSettings.measureDisplayed;
     [self layoutVC:YES];
@@ -233,7 +244,12 @@
 
     UIImage *img = nil;
     UIImage *blurImg = nil;
-
+    
+    NSAssert(!(self.shareSettings.barDisplayed == YES && self.shareSettings.measureDisplayed == YES), @"ERROR : Bar PopupMenu and Measure Select are both YES!");
+    
+    if(self.shareSettings.barDisplayed == YES)
+    {
+    }
     if(self.shareSettings.measureDisplayed == YES)
     {
         self.barView.frame = CGRectMake(-MENU_WIDTH-VC_MARGIN, 0, MENU_WIDTH, 0);

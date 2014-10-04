@@ -32,6 +32,14 @@
 //    self.title = self.systems[currentSystem];
 //}
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    self.shareSettings.barTappedIndex = 4;
+    self.shareSettings.barTapped = !self.shareSettings.barTapped;
+}
+
 #pragma mark - Split view
 
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
+#import "ParameterManager.h"
 
 @class DisplayContainerViewController;
 @class MenuContainerViewController;
@@ -38,9 +39,10 @@
 @property (weak, nonatomic) IBOutlet BarMenuContainerViewController *barMenuCVC;
 
 @property (weak, nonatomic) UIStoryboard *modeStoryboard;
-@property (weak, nonatomic) UIStoryboard *measBarStoryboard;
+//@property (weak, nonatomic) UIStoryboard *measBarStoryboard;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
+@property (strong, nonatomic) ParameterManager * parManager;
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
