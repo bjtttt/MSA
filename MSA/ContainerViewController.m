@@ -328,7 +328,6 @@
             singleBarWidth = (self.frameWidth - MENU_WIDTH - MEASBAR_SINGLE_WIDTH) / 7.0;
         else
             singleBarWidth = (self.frameWidth - MEASBAR_SINGLE_WIDTH) / 7.0;
-        //self.barView.frame = CGRectMake(singleBarWidth*self.shareSettings.barTappedIndex, NAVBAR_HEIGHT+MEASBAR_HEIGHT, MENU_WIDTH, 0);
         self.blurView.frame = CGRectMake(-self.frameWidth-VC_MARGIN, 0, self.frameWidth, self.frameHeight);
         
         if(self.shareSettings.menuDisplayed == YES)
