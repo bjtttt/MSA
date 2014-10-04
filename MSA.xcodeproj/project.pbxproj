@@ -37,6 +37,7 @@
 		9A6A209E19DF78990011B98A /* Bar0SingleContinousTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A209D19DF78990011B98A /* Bar0SingleContinousTableViewCell.m */; };
 		9A6A20A119DF79170011B98A /* Bar0OneLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A20A019DF79170011B98A /* Bar0OneLineTableViewCell.m */; };
 		9A6A20A419DFE94E0011B98A /* ParameterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A20A319DFE94E0011B98A /* ParameterManager.m */; };
+		9A6A20A819DFF8DB0011B98A /* ParameterCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A20A719DFF8DB0011B98A /* ParameterCollection.m */; };
 		9A726F4E19C1880000CDF55D /* MsgMasterNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F4D19C1880000CDF55D /* MsgMasterNavigationViewController.m */; };
 		9A726F5219C188C200CDF55D /* MsgDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F5119C188C200CDF55D /* MsgDetailTableViewController.m */; };
 		9A726F5B19C19FC000CDF55D /* SystemMasterNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F5819C19FC000CDF55D /* SystemMasterNavigationViewController.m */; };
@@ -168,6 +169,8 @@
 		9A6A20A019DF79170011B98A /* Bar0OneLineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bar0OneLineTableViewCell.m; path = ViewControllers/Bar/CellStyle/Bar0OneLineTableViewCell.m; sourceTree = "<group>"; };
 		9A6A20A319DFE94E0011B98A /* ParameterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParameterManager.m; path = Data/Parameter/ParameterManager.m; sourceTree = "<group>"; };
 		9A6A20A519DFE9600011B98A /* ParameterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParameterManager.h; path = Data/Parameter/ParameterManager.h; sourceTree = "<group>"; };
+		9A6A20A719DFF8DB0011B98A /* ParameterCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParameterCollection.m; path = Data/Parameter/Mode/ParameterCollection.m; sourceTree = "<group>"; };
+		9A6A20A919DFF8F70011B98A /* ParameterCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParameterCollection.h; path = Data/Parameter/Mode/ParameterCollection.h; sourceTree = "<group>"; };
 		9A726F4D19C1880000CDF55D /* MsgMasterNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgMasterNavigationViewController.m; path = ViewControllers/Msg/MsgMasterNavigationViewController.m; sourceTree = "<group>"; };
 		9A726F4F19C1881C00CDF55D /* MsgMasterNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MsgMasterNavigationViewController.h; path = ViewControllers/Msg/MsgMasterNavigationViewController.h; sourceTree = "<group>"; };
 		9A726F5019C188C200CDF55D /* MsgDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgDetailTableViewController.h; path = ViewControllers/Msg/MsgDetailTableViewController.h; sourceTree = "<group>"; };
@@ -468,10 +471,20 @@
 		9A6A20A219DFE90C0011B98A /* Parameter */ = {
 			isa = PBXGroup;
 			children = (
+				9A6A20A619DFF8AA0011B98A /* Mode */,
 				9A6A20A519DFE9600011B98A /* ParameterManager.h */,
 				9A6A20A319DFE94E0011B98A /* ParameterManager.m */,
 			);
 			name = Parameter;
+			sourceTree = "<group>";
+		};
+		9A6A20A619DFF8AA0011B98A /* Mode */ = {
+			isa = PBXGroup;
+			children = (
+				9A6A20A719DFF8DB0011B98A /* ParameterCollection.m */,
+				9A6A20A919DFF8F70011B98A /* ParameterCollection.h */,
+			);
+			name = Mode;
 			sourceTree = "<group>";
 		};
 		9A726F5319C188D800CDF55D /* Master */ = {
@@ -1084,6 +1097,7 @@
 				9A9FFE7E19C0430800F76D38 /* MsgDetailNavigationViewController.m in Sources */,
 				9A9C670E19AD6C81007D3248 /* main.m in Sources */,
 				9ACCD85419DEA1A000A6ACD5 /* GPUImageLuminanceRangeFilter.m in Sources */,
+				9A6A20A819DFF8DB0011B98A /* ParameterCollection.m in Sources */,
 				9ACCD83F19DEA0A700A6ACD5 /* GPUImageFilter.m in Sources */,
 				9A345F4A19D00BC500507A5A /* PresetMenuDarkGrayWhiteTableViewCell.m in Sources */,
 				9A659BEB19B6DE9A00C30CE2 /* SystemContainerViewController.m in Sources */,

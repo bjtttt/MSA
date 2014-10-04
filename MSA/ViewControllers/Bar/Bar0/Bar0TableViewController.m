@@ -61,6 +61,8 @@ static NSString *barMenuTVC_One_Line_Id = @"barMenuTVC_One_Line";
     
     self.shareSettings.barTappedIndex = 0;
     self.shareSettings.barTapped = !self.shareSettings.barTapped;
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"barTapped" object:nil];
 }
 
 #pragma mark - Split view

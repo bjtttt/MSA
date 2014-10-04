@@ -56,4 +56,10 @@
 
 #pragma mark - Split view
 
+- (IBAction)cancelBarPopupMenu:(id)sender {
+    self.shareSettings.barTapped = !self.shareSettings.barTapped;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"barTapped" object:nil];
+}
+
 @end

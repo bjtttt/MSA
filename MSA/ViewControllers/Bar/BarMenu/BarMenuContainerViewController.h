@@ -15,7 +15,7 @@
 @interface BarMenuContainerViewController: UIViewController
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 
 @property (weak, nonatomic) IBOutlet BarMenuTableViewController *barMenuTVC;
 @property (weak, nonatomic) IBOutlet ContainerViewController *mainCVC;
@@ -24,5 +24,7 @@
 @property (nonatomic) double frameHeight;
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
+
+- (IBAction)cancelBarPopupMenu:(id)sender;
 
 @end

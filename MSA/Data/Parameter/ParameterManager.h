@@ -6,7 +6,11 @@
 //  Copyright (c) 2014 KeySight. All rights reserved.
 //
 
+@class ParameterCollection;
+
 @interface ParameterManager : NSObject
+
+@property (strong, nonatomic) ParameterCollection *parCol;
 
 + (id)parameterManager;
 
