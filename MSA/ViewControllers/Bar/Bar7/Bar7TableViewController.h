@@ -15,6 +15,9 @@
 
 @property (weak, nonatomic) IBOutlet DisplaySettingsContainerViewController *displaySettingsCVC;
 
+@property (nonatomic) double frameWidth;
+@property (nonatomic) double frameHeight;
+
 @property (weak, nonatomic) ShareSettings *shareSettings;
 
 @end

@@ -94,7 +94,7 @@
 		9ACCD86219DEC29400A6ACD5 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCD86119DEC29400A6ACD5 /* UIView+Screenshot.m */; };
 		9AD4A4E619DD860B00FE1914 /* BlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4A4E519DD860B00FE1914 /* BlurViewController.m */; };
 		9AD4A4EA19DD8CAA00FE1914 /* BarMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4A4E919DD8CAA00FE1914 /* BarMenuContainerViewController.m */; };
-		9AE0AFB919C2B55C008544AC /* DisplaySettingsContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0AFB819C2B55C008544AC /* DisplaySettingsContainerViewController.m */; };
+		9AE0AFB919C2B55C008544AC /* DisplayBarContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0AFB819C2B55C008544AC /* DisplayBarContainerViewController.m */; };
 		9AE0AFBC19C2B626008544AC /* DisplayTracesContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0AFBB19C2B626008544AC /* DisplayTracesContainerViewController.m */; };
 		9AE7CCD719D5991E005EAF1C /* Mode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7CCD519D5991E005EAF1C /* Mode.storyboard */; };
 		9AE7CCE719D5A87B005EAF1C /* Bar0TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7CCE619D5A87B005EAF1C /* Bar0TableViewController.m */; };
@@ -272,8 +272,8 @@
 		9AD4A4E719DD862000FE1914 /* BlurViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BlurViewController.h; path = ViewControllers/BlurViewController.h; sourceTree = "<group>"; };
 		9AD4A4E819DD8CAA00FE1914 /* BarMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarMenuContainerViewController.h; path = ViewControllers/Bar/BarMenu/BarMenuContainerViewController.h; sourceTree = "<group>"; };
 		9AD4A4E919DD8CAA00FE1914 /* BarMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarMenuContainerViewController.m; path = ViewControllers/Bar/BarMenu/BarMenuContainerViewController.m; sourceTree = "<group>"; };
-		9AE0AFB719C2B55C008544AC /* DisplaySettingsContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplaySettingsContainerViewController.h; path = ViewControllers/Display/DisplaySettingsContainerViewController.h; sourceTree = "<group>"; };
-		9AE0AFB819C2B55C008544AC /* DisplaySettingsContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplaySettingsContainerViewController.m; path = ViewControllers/Display/DisplaySettingsContainerViewController.m; sourceTree = "<group>"; };
+		9AE0AFB719C2B55C008544AC /* DisplayBarContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayBarContainerViewController.h; path = ViewControllers/Display/DisplayBarContainerViewController.h; sourceTree = "<group>"; };
+		9AE0AFB819C2B55C008544AC /* DisplayBarContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayBarContainerViewController.m; path = ViewControllers/Display/DisplayBarContainerViewController.m; sourceTree = "<group>"; };
 		9AE0AFBA19C2B626008544AC /* DisplayTracesContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayTracesContainerViewController.h; path = ViewControllers/Display/DisplayTracesContainerViewController.h; sourceTree = "<group>"; };
 		9AE0AFBB19C2B626008544AC /* DisplayTracesContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayTracesContainerViewController.m; path = ViewControllers/Display/DisplayTracesContainerViewController.m; sourceTree = "<group>"; };
 		9AE7CCD619D5991E005EAF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Mode.storyboard; sourceTree = "<group>"; };
@@ -758,8 +758,8 @@
 			children = (
 				9A953EDD19AD84E7005467A1 /* DisplayContainerViewController.h */,
 				9A953EDE19AD84E7005467A1 /* DisplayContainerViewController.m */,
-				9AE0AFB719C2B55C008544AC /* DisplaySettingsContainerViewController.h */,
-				9AE0AFB819C2B55C008544AC /* DisplaySettingsContainerViewController.m */,
+				9AE0AFB719C2B55C008544AC /* DisplayBarContainerViewController.h */,
+				9AE0AFB819C2B55C008544AC /* DisplayBarContainerViewController.m */,
 				9AE0AFBA19C2B626008544AC /* DisplayTracesContainerViewController.h */,
 				9AE0AFBB19C2B626008544AC /* DisplayTracesContainerViewController.m */,
 			);
@@ -1055,7 +1055,7 @@
 				9ACCD83919DEA07600A6ACD5 /* GPUImageFramebuffer.m in Sources */,
 				9A6A209E19DF78990011B98A /* Bar0SingleContinousTableViewCell.m in Sources */,
 				9ACCD84A19DEA14900A6ACD5 /* GPUImageGaussianBlurFilter.m in Sources */,
-				9AE0AFB919C2B55C008544AC /* DisplaySettingsContainerViewController.m in Sources */,
+				9AE0AFB919C2B55C008544AC /* DisplayBarContainerViewController.m in Sources */,
 				9AE7CCF019D5A8BA005EAF1C /* Bar3TableViewController.m in Sources */,
 				9A953EE619AD84E7005467A1 /* MenuContainerViewController.m in Sources */,
 				9ACA2EB919BD4651005542B5 /* MsgMasterTableViewController.m in Sources */,

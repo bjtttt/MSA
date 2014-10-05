@@ -104,8 +104,10 @@
 			<string>Input</string>
 			<key>valueType</key>
 			<integer>4</integer>
+			<key>valueString</key>
+			<string></string>
 			<key>value</key>
-			<string>0</string>
+			<integer>0</integer>
 			<key>unit</key>
 			<string></string>
 			<key>enumValueList</key>

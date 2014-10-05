@@ -12,7 +12,7 @@
 #import "DisplayContainerViewController.h"
 #import "MenuContainerViewController.h"
 #import "MeasureContainerViewController.h"
-#import "DisplaySettingsContainerViewController.h"
+#import "DisplayBarContainerViewController.h"
 #import "BlurViewController.h"
 #import "BarMenuContainerViewController.h"
 #import "UIView+Screenshot.h"

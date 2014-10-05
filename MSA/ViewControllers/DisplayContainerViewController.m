@@ -11,7 +11,7 @@
 #import "DisplayTracesContainerViewController.h"
 #import "ContainerViewController.h"
 #import "MenuContainerViewController.h"
-#import "DisplaySettingsContainerViewController.h"
+#import "DisplayBarContainerViewController.h"
 #import "MsgContainerViewController.h"
 #import "SystemContainerViewController.h"
 
@@ -57,7 +57,7 @@
     }
     if([segue.identifier isEqualToString:@"presentSegueToBarCVC"])
     {
-        self.barCVC = (DisplaySettingsContainerViewController *)segue.destinationViewController;
+        self.barCVC = (DisplayBarContainerViewController *)segue.destinationViewController;
         self.barCVC.shareSettings = self.shareSettings;
         self.barCVC.displayCVC = self;
         

@@ -1,5 +1,5 @@
 //
-//  DisplaySettingsContainerViewController.h
+//  DisplayBarContainerViewController.h
 //  MSA
 //
 //  Created by GUO Zhitao on 14-8-26.
@@ -10,8 +10,16 @@
 #import "ShareSettings.h"
 
 @class DisplayContainerViewController;
+@class Bar0TableViewController;
+@class Bar1TableViewController;
+@class Bar2TableViewController;
+@class Bar3TableViewController;
+@class Bar4TableViewController;
+@class Bar5TableViewController;
+@class Bar6TableViewController;
+@class Bar7TableViewController;
 
-@interface DisplaySettingsContainerViewController : UIViewController
+@interface DisplayBarContainerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
 
@@ -24,6 +32,15 @@
 @property (weak, nonatomic) IBOutlet UIView *bar6V;
 @property (weak, nonatomic) IBOutlet UIView *bar7V;
 
+@property (weak, nonatomic) IBOutlet Bar0TableViewController *bar0VC;
+@property (weak, nonatomic) IBOutlet Bar1TableViewController *bar1VC;
+@property (weak, nonatomic) IBOutlet Bar2TableViewController *bar2VC;
+@property (weak, nonatomic) IBOutlet Bar3TableViewController *bar3VC;
+@property (weak, nonatomic) IBOutlet Bar4TableViewController *bar4VC;
+@property (weak, nonatomic) IBOutlet Bar5TableViewController *bar5VC;
+@property (weak, nonatomic) IBOutlet Bar6TableViewController *bar6VC;
+@property (weak, nonatomic) IBOutlet Bar7TableViewController *bar7VC;
+
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
 
@@ -34,6 +51,7 @@
 -(void)setMeasureBarAccordingToFrame;
 -(void)setMeasureBar:(CGFloat)barWidth;
 -(void)adjustMeasureBarWidth:(BOOL)animated;
+-(void)setMeasureBar:(int)barCount showLast:(BOOL)showLast;
 
 @end
 

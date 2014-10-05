@@ -1,5 +1,5 @@
 //
-//  DisplaySettingsContainerViewController.m
+//  DisplayBarContainerViewController.m
 //  MSA
 //
 //  Created by GUO Zhitao on 14-8-26.
@@ -10,13 +10,21 @@
 #import "ShareSettings.h"
 #import "ContainerViewController.h"
 #import "DisplayContainerViewController.h"
-#import "DisplaySettingsContainerViewController.h"
+#import "DisplayBarContainerViewController.h"
+#import "Bar0TableViewController.h"
+#import "Bar1TableViewController.h"
+#import "Bar2TableViewController.h"
+#import "Bar3TableViewController.h"
+#import "Bar4TableViewController.h"
+#import "Bar5TableViewController.h"
+#import "Bar6TableViewController.h"
+#import "Bar7TableViewController.h"
 
-@interface DisplaySettingsContainerViewController ()
+@interface DisplayBarContainerViewController ()
 
 @end
 
-@implementation DisplaySettingsContainerViewController
+@implementation DisplayBarContainerViewController
             
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -139,16 +147,49 @@
 
 -(void)setMeasureBar:(CGFloat)barWidth {
     self.bar0V.frame = CGRectMake(0, 0, barWidth, MEASBAR_HEIGHT);
+    self.bar0VC.frameWidth = barWidth;
+    self.bar0VC.frameHeight = MEASBAR_HEIGHT;
     self.bar1V.frame = CGRectMake(barWidth-VC_MARGIN, 0, barWidth, MEASBAR_HEIGHT);
+    self.bar1VC.frameWidth = barWidth;
+    self.bar1VC.frameHeight = MEASBAR_HEIGHT;
     self.bar2V.frame = CGRectMake(barWidth*2-VC_MARGIN*2, 0, barWidth, MEASBAR_HEIGHT);
+    self.bar2VC.frameWidth = barWidth;
+    self.bar2VC.frameHeight = MEASBAR_HEIGHT;
     self.bar3V.frame = CGRectMake(barWidth*3-VC_MARGIN*3, 0, barWidth, MEASBAR_HEIGHT);
+    self.bar3VC.frameWidth = barWidth;
+    self.bar3VC.frameHeight = MEASBAR_HEIGHT;
     self.bar4V.frame = CGRectMake(barWidth*4-VC_MARGIN*4, 0, barWidth, MEASBAR_HEIGHT);
+    self.bar4VC.frameWidth = barWidth;
+    self.bar4VC.frameHeight = MEASBAR_HEIGHT;
     self.bar5V.frame = CGRectMake(barWidth*5-VC_MARGIN*5, 0, barWidth, MEASBAR_HEIGHT);
+    self.bar5VC.frameWidth = barWidth;
+    self.bar5VC.frameHeight = MEASBAR_HEIGHT;
     self.bar6V.frame = CGRectMake(barWidth*6-VC_MARGIN*6, 0, barWidth, MEASBAR_HEIGHT);
+    self.bar6VC.frameWidth = barWidth;
+    self.bar6VC.frameHeight = MEASBAR_HEIGHT;
     if(self.frameWidth == self.displayCVC.mainCVC.frameWidth)
+    {
         self.bar7V.frame = CGRectMake(barWidth*7-VC_MARGIN*7, 0, MEASBAR_SINGLE_WIDTH+VC_MARGIN*7, MEASBAR_HEIGHT);
+        self.bar7VC.frameWidth = MEASBAR_SINGLE_WIDTH+VC_MARGIN*7;
+        self.bar7VC.frameHeight = MEASBAR_HEIGHT;
+    }
     else
+    {
         self.bar7V.frame = CGRectMake(barWidth*7-VC_MARGIN*7, 0, MEASBAR_SINGLE_WIDTH+VC_MARGIN*6, MEASBAR_HEIGHT);
+        self.bar7VC.frameWidth = MEASBAR_SINGLE_WIDTH+VC_MARGIN*6;
+        self.bar7VC.frameHeight = MEASBAR_HEIGHT;
+    }
+}
+
+-(void)setMeasureBar:(int)barCount showLast:(BOOL)showLast {
+    if(showLast == YES)
+    {
+        
+    }
+    else
+    {
+        
+    }
 }
 
 -(void)adjustMeasureBarWidth:(BOOL)animated {

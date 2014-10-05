@@ -11,7 +11,7 @@
 
 @class ContainerViewController;
 @class DisplayTracesContainerViewController;
-@class DisplaySettingsContainerViewController;
+@class DisplayBarContainerViewController;
 @class MsgContainerViewController;
 @class SystemContainerViewController;
 
@@ -19,7 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet MsgContainerViewController *msgCVC;
 @property (weak, nonatomic) IBOutlet SystemContainerViewController *systCVC;
-@property (weak, nonatomic) IBOutlet DisplaySettingsContainerViewController *barCVC;
+@property (weak, nonatomic) IBOutlet DisplayBarContainerViewController *barCVC;
 @property (weak, nonatomic) IBOutlet DisplayTracesContainerViewController *traceCVC;
 @property (weak, nonatomic) IBOutlet ContainerViewController *mainCVC;
 
