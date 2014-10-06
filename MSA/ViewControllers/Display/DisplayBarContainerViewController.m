@@ -215,31 +215,112 @@
     self.bar1VC.frameHeight = MEASBAR_HEIGHT;
     if(self.shareSettings.measureBarCount > 1)
     {
-        self.bar2V.frame = CGRectMake(barWidth*1+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*2, 0, barWidth+VC_MARGIN*2, MEASBAR_HEIGHT);
+        self.bar2V.frame = CGRectMake(barWidth*1+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
+        self.bar2VC.frameWidth = barWidth;
+        self.bar2VC.frameHeight = MEASBAR_HEIGHT;
+    }
+    else
+        self.bar2V.frame = CGRectMake(barWidth*1+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, 0, 0);
+    if (self.shareSettings.measureBarCount > 2)
+    {
+        self.bar3V.frame = CGRectMake(barWidth*2+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
+        self.bar3VC.frameWidth = barWidth;
+        self.bar3VC.frameHeight = MEASBAR_HEIGHT;
+    }
+    else
+        self.bar3V.frame = CGRectMake(barWidth*2+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, 0, 0);
+    if (self.shareSettings.measureBarCount > 3)
+    {
+        self.bar4V.frame = CGRectMake(barWidth*3+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
+        self.bar4VC.frameWidth = barWidth;
+        self.bar4VC.frameHeight = MEASBAR_HEIGHT;
+    }
+    else
+        self.bar4V.frame = CGRectMake(barWidth*3+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, 0, 0);
+    if (self.shareSettings.measureBarCount > 4)
+    {
+        self.bar5V.frame = CGRectMake(barWidth*4+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
+        self.bar5VC.frameWidth = barWidth;
+        self.bar5VC.frameHeight = MEASBAR_HEIGHT;
+    }
+    else
+        self.bar5V.frame = CGRectMake(barWidth*4+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, 0, 0);
+    if (self.shareSettings.measureBarCount > 5)
+    {
+        if(self.shareSettings.showTrace == YES)
+            self.bar6V.frame = CGRectMake(barWidth*5+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
+        else
+        {
+            if(self.shareSettings.menuDisplayed == YES)
+                self.bar6V.frame = CGRectMake(barWidth*5+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*0, MEASBAR_HEIGHT);
+            else
+                self.bar6V.frame = CGRectMake(barWidth*5+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
+        }
+        self.bar6VC.frameWidth = barWidth;
+        self.bar6VC.frameHeight = MEASBAR_HEIGHT;
+    }
+    if(self.shareSettings.showTrace == YES)
+    {
+        if(self.frameWidth == self.displayCVC.mainCVC.frameWidth)
+        {
+            self.bar7V.frame = CGRectMake(barWidth*self.shareSettings.measureBarCount+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*7, 0, MEASBAR_TRACE_WIDTH+VC_MARGIN*7, MEASBAR_HEIGHT);
+            self.bar7VC.frameWidth = MEASBAR_TRACE_WIDTH+VC_MARGIN*7;
+            self.bar7VC.frameHeight = MEASBAR_HEIGHT;
+        }
+        else
+        {
+            self.bar7V.frame = CGRectMake(barWidth*self.shareSettings.measureBarCount+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*7, 0, MEASBAR_TRACE_WIDTH+VC_MARGIN*6, MEASBAR_HEIGHT);
+            self.bar7VC.frameWidth = MEASBAR_TRACE_WIDTH+VC_MARGIN*6;
+            self.bar7VC.frameHeight = MEASBAR_HEIGHT;
+        }
+    }
+    else
+        self.bar7V.frame = CGRectMake(barWidth*self.shareSettings.measureBarCount+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*7, 0, 0, 0);
+}
+
+-(void)setEachMeasureBar:(CGFloat)bar1Width bar2Width:(CGFloat)bar2Width bar3Width:(CGFloat)bar3Width bar4Width:(CGFloat)bar4Width bar5Width:(CGFloat)bar5Width bar6Width:(CGFloat)bar6Width
+{
+    self.bar0V.frame = CGRectMake(0, 0, MEASBAR_MEAS_CTRL_WIDTH, MEASBAR_HEIGHT);
+    self.bar0VC.frameWidth = MEASBAR_MEAS_CTRL_WIDTH;
+    self.bar0VC.frameHeight = MEASBAR_HEIGHT;
+    self.bar1V.frame = CGRectMake(MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, bar1Width+VC_MARGIN*1, MEASBAR_HEIGHT);
+    self.bar1VC.frameWidth = barWidth;
+    self.bar1VC.frameHeight = MEASBAR_HEIGHT;
+    if(self.shareSettings.measureBarCount > 1)
+    {
+        self.bar2V.frame = CGRectMake(barWidth*1+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
         self.bar2VC.frameWidth = barWidth;
         self.bar2VC.frameHeight = MEASBAR_HEIGHT;
     }
     if (self.shareSettings.measureBarCount > 2)
     {
-        self.bar3V.frame = CGRectMake(barWidth*2+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*3, 0, barWidth+VC_MARGIN*3, MEASBAR_HEIGHT);
+        self.bar3V.frame = CGRectMake(barWidth*2+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
         self.bar3VC.frameWidth = barWidth;
         self.bar3VC.frameHeight = MEASBAR_HEIGHT;
     }
     if (self.shareSettings.measureBarCount > 3)
     {
-        self.bar4V.frame = CGRectMake(barWidth*3+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*4, 0, barWidth+VC_MARGIN*4, MEASBAR_HEIGHT);
+        self.bar4V.frame = CGRectMake(barWidth*3+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
         self.bar4VC.frameWidth = barWidth;
         self.bar4VC.frameHeight = MEASBAR_HEIGHT;
     }
     if (self.shareSettings.measureBarCount > 4)
     {
-        self.bar5V.frame = CGRectMake(barWidth*4+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*5, 0, barWidth+VC_MARGIN*5, MEASBAR_HEIGHT);
+        self.bar5V.frame = CGRectMake(barWidth*4+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
         self.bar5VC.frameWidth = barWidth;
         self.bar5VC.frameHeight = MEASBAR_HEIGHT;
     }
     if (self.shareSettings.measureBarCount > 5)
     {
-        self.bar6V.frame = CGRectMake(barWidth*5+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*6, 0, barWidth+VC_MARGIN*6, MEASBAR_HEIGHT);
+        if(self.shareSettings.showTrace == YES)
+            self.bar6V.frame = CGRectMake(barWidth*5+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
+        else
+        {
+            if(self.shareSettings.menuDisplayed == YES)
+                self.bar6V.frame = CGRectMake(barWidth*5+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*0, MEASBAR_HEIGHT);
+            else
+                self.bar6V.frame = CGRectMake(barWidth*5+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
+        }
         self.bar6VC.frameWidth = barWidth;
         self.bar6VC.frameHeight = MEASBAR_HEIGHT;
     }

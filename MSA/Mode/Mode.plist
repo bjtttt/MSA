@@ -10,6 +10,22 @@
 			<integer>6</integer>
 			<key>showTrace</key>
 			<false/>
+			<key>widthRate</key>
+			<array>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+				<integer>1</integer>
+			</array>
+			<key>width</key>
+			<dict>
+				<key>trace</key>
+				<array/>
+				<key>traceMenu</key>
+				<array/>
+			</dict>
 		</dict>
 	</dict>
 	<key>measure</key>
