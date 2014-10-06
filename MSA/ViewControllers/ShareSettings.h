@@ -65,7 +65,8 @@ typedef enum valueType {
 #define MEAS_WIDTH 350.0f
 #define MEAS_HEIGHT 600.0f
 #define MEASBAR_HEIGHT 120.0f
-#define MEASBAR_SINGLE_WIDTH 150.0f
+#define MEASBAR_MEAS_CTRL_WIDTH 100.0f
+#define MEASBAR_TRACE_WIDTH 120.0f
 #define NAVBAR_HEIGHT 44.0f
 #define ADDINSTRUMENT_HEIGHT 75.0f
 
@@ -89,6 +90,9 @@ typedef enum valueType {
 
 @property (nonatomic) NSMutableArray *measureView;
 
+@property (nonatomic) int measureBarCount;
+@property (nonatomic) BOOL showTrace;
+
 @property (weak, nonatomic) UIStoryboard *modeStoryboard;
 @property (weak, nonatomic) UIStoryboard *measBarStoryboard;
 
@@ -97,6 +101,7 @@ typedef enum valueType {
 +(id)sharedSettings;
 
 - (void) initMeasureView;
+- (void) initMeasureBar;
 -(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum;
 -(UIImage *)blurryImage:(UIImage *)image;
 

@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #include "ShareSettings.h"
 
-@class DisplaySettingsContainerViewController;
+@class DisplayBarContainerViewController;
 
 @interface Bar6TableViewController : UITableViewController
 
-@property (weak, nonatomic) IBOutlet DisplaySettingsContainerViewController *displaySettingsCVC;
+@property (weak, nonatomic) IBOutlet DisplayBarContainerViewController *displayBarCVC;
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;

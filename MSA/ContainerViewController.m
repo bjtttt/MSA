@@ -111,6 +111,7 @@
     //self.shareSettings.measBarStoryboard = self.measBarStoryboard;
     
     [self.shareSettings initMeasureView];
+    [self.shareSettings initMeasureBar];
     
     self.parManager = [ParameterManager parameterManager];
     [self.parManager registerParameterChangedEvent];
@@ -249,14 +250,14 @@
         
         if(self.shareSettings.menuDisplayed == YES)
         {
-            singleBarWidth = (self.frameWidth - MENU_WIDTH - MEASBAR_SINGLE_WIDTH) / 7.0;
+            singleBarWidth = (self.frameWidth - MENU_WIDTH - MEASBAR_TRACE_WIDTH) / 7.0;
             
             [self.displayView setUserInteractionEnabled:NO];
             [self.menuView setUserInteractionEnabled:NO];
         }
         else
         {
-            singleBarWidth = (self.frameWidth - MEASBAR_SINGLE_WIDTH) / 7.0;
+            singleBarWidth = (self.frameWidth - MEASBAR_TRACE_WIDTH) / 7.0;
         
             [self.displayView setUserInteractionEnabled:NO];
             //[self.menuView setUserInteractionEnabled:NO];
@@ -325,9 +326,9 @@
         CGFloat singleBarWidth = 0.0f;
         
         if(self.shareSettings.menuDisplayed == YES)
-            singleBarWidth = (self.frameWidth - MENU_WIDTH - MEASBAR_SINGLE_WIDTH) / 7.0;
+            singleBarWidth = (self.frameWidth - MENU_WIDTH - MEASBAR_TRACE_WIDTH) / 7.0;
         else
-            singleBarWidth = (self.frameWidth - MEASBAR_SINGLE_WIDTH) / 7.0;
+            singleBarWidth = (self.frameWidth - MEASBAR_TRACE_WIDTH) / 7.0;
         self.blurView.frame = CGRectMake(-self.frameWidth-VC_MARGIN, 0, self.frameWidth, self.frameHeight);
         
         if(self.shareSettings.menuDisplayed == YES)

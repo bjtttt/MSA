@@ -1211,10 +1211,10 @@
             </objects>
             <point key="canvasLocation" x="203" y="1198"/>
         </scene>
-        <!--Display Settings Container View Controller-->
+        <!--Display Bar Container View Controller-->
         <scene sceneID="2If-02-SXC">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="5z9-dO-1lJ" customClass="DisplaySettingsContainerViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="5z9-dO-1lJ" customClass="DisplayBarContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FCv-Bw-CoZ"/>
                         <viewControllerLayoutGuide type="bottom" id="iOV-XJ-Xly"/>
@@ -1226,49 +1226,49 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KKW-Yy-M8o" userLabel="Measure Bar 0 Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                 <connections>
-                                    <segue destination="4KN-gf-rTD" kind="embed" id="vgO-cs-A6L"/>
+                                    <segue destination="4KN-gf-rTD" kind="embed" identifier="embedSegueToBar0VC" id="vgO-cs-A6L"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arC-zI-02b" userLabel="Measure Bar 1 Container View">
                                 <rect key="frame" x="64" y="0.0" width="100" height="120"/>
                                 <connections>
-                                    <segue destination="pd2-d9-gQT" kind="embed" id="LF3-1P-UWd"/>
+                                    <segue destination="pd2-d9-gQT" kind="embed" identifier="embedSegueToBar1VC" id="LF3-1P-UWd"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nyb-j1-WbM" userLabel="Measure Bar 2 Container View">
                                 <rect key="frame" x="128" y="0.0" width="100" height="120"/>
                                 <connections>
-                                    <segue destination="stm-nr-rAG" kind="embed" id="MpJ-Mr-JrQ"/>
+                                    <segue destination="stm-nr-rAG" kind="embed" identifier="embedSegueToBar2VC" id="MpJ-Mr-JrQ"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xG5-RZ-PEu" userLabel="Measure Bar 4 Container View">
                                 <rect key="frame" x="300" y="0.0" width="100" height="120"/>
                                 <connections>
-                                    <segue destination="fZI-P6-mpq" kind="embed" id="z26-eB-6t6"/>
+                                    <segue destination="fZI-P6-mpq" kind="embed" identifier="embedSegueToBar4VC" id="z26-eB-6t6"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Z2-gk-mLG" userLabel="Measure Bar 5 Container View">
                                 <rect key="frame" x="400" y="0.0" width="100" height="120"/>
                                 <connections>
-                                    <segue destination="cKA-dj-1z9" kind="embed" id="Pgv-D6-cgJ"/>
+                                    <segue destination="cKA-dj-1z9" kind="embed" identifier="embedSegueToBar5VC" id="Pgv-D6-cgJ"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q4C-s1-DXW" userLabel="Measure Bar 6 Container View">
                                 <rect key="frame" x="500" y="0.0" width="100" height="120"/>
                                 <connections>
-                                    <segue destination="y8j-Ej-uWk" kind="embed" id="H5o-mw-8wn"/>
+                                    <segue destination="y8j-Ej-uWk" kind="embed" identifier="embedSegueToBar6VC" id="H5o-mw-8wn"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hB4-j7-6Rc" userLabel="Measure Bar 7 Container View">
                                 <rect key="frame" x="874" y="0.0" width="150" height="120"/>
                                 <connections>
-                                    <segue destination="FD7-Jg-lZQ" kind="embed" id="Yfi-AN-wBF"/>
+                                    <segue destination="FD7-Jg-lZQ" kind="embed" identifier="embedSegueToBar7VC" id="Yfi-AN-wBF"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bnz-fr-Gfz" userLabel="Measure Bar 3 Container View">
                                 <rect key="frame" x="200" y="0.0" width="100" height="120"/>
                                 <connections>
-                                    <segue destination="Z8j-Md-6yz" kind="embed" id="tb6-eS-lOX"/>
+                                    <segue destination="Z8j-Md-6yz" kind="embed" identifier="embedSegueToBar3VC" id="tb6-eS-lOX"/>
                                 </connections>
                             </containerView>
                         </subviews>

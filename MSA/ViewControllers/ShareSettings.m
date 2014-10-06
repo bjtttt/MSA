@@ -197,5 +197,18 @@
     }
 }
 
+- (void) initMeasureBar
+{
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *path = [bundle pathForResource:@"Mode" ofType:@"plist"];
+    
+    NSDictionary *modeInfo = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSDictionary *settingsInfo = [modeInfo objectForKey:@"settings"];
+    
+    NSDictionary *settingsMeasureBar = (NSDictionary *)[settingsInfo objectForKey:@"measureBar"];
+    self.measureBarCount = [[settingsMeasureBar objectForKey:@"count"] intValue];
+    self.showTrace = [[settingsMeasureBar objectForKey:@"showTrace"] boolValue];
+}
+
 @end
 

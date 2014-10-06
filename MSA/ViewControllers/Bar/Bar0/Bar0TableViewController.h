@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #include "ShareSettings.h"
 
-@class DisplaySettingsContainerViewController;
+@class DisplayBarContainerViewController;
 
 @interface Bar0TableViewController : UITableViewController
 
-@property (weak, nonatomic) IBOutlet DisplaySettingsContainerViewController *displaySettingsCVC;
+@property (weak, nonatomic) IBOutlet DisplayBarContainerViewController *displayBarCVC;
 
 @property (weak, nonatomic) IBOutlet UIImageView *singleContinousIV;
 

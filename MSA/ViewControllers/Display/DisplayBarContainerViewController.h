@@ -51,7 +51,6 @@
 -(void)setMeasureBarAccordingToFrame;
 -(void)setMeasureBar:(CGFloat)barWidth;
 -(void)adjustMeasureBarWidth:(BOOL)animated;
--(void)setMeasureBar:(int)barCount showLast:(BOOL)showLast;
 
 @end
 
