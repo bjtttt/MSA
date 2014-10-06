@@ -206,8 +206,68 @@
     NSDictionary *settingsInfo = [modeInfo objectForKey:@"settings"];
     
     NSDictionary *settingsMeasureBar = (NSDictionary *)[settingsInfo objectForKey:@"measureBar"];
+    
     self.measureBarCount = [[settingsMeasureBar objectForKey:@"count"] intValue];
+    NSAssert(self.measureBarCount > 0, @"Bar Count is %d.", self.measureBarCount);
+    
     self.showTrace = [[settingsMeasureBar objectForKey:@"showTrace"] boolValue];
+    self.useBarRatio = [[settingsMeasureBar objectForKey:@"useRatio"] boolValue];
+    if(self.useBarRatio == YES)
+    {
+        self.barRatios = [settingsMeasureBar objectForKey:@"widthRatio"];
+        NSAssert(self.barRatios != nil, @"Bar Ratios is nil.");
+        NSAssert(self.barRatios.count == 6, @"The count of the Bar Ratios is %d, not 6.", self.barRatios.count);
+        NSLog(@"Bar Ratios : %f, %f, %f, %f, %f, %f", [[self.barRatios objectAtIndex:0] floatValue], [[self.barRatios objectAtIndex:1] floatValue], [[self.barRatios objectAtIndex:2] floatValue], [[self.barRatios objectAtIndex:3] floatValue], [[self.barRatios objectAtIndex:4] floatValue], [[self.barRatios objectAtIndex:5] floatValue]);
+        if(self.measureBarCount > 0)
+            NSAssert([[self.barRatios objectAtIndex:0] floatValue] > 0.0f, @"The 1st Bar Ratios is %f.", [[self.barRatios objectAtIndex:0] floatValue]);
+        if(self.measureBarCount > 1)
+            NSAssert([[self.barRatios objectAtIndex:1] floatValue] > 0.0f, @"The 2nd Bar Ratios is %f.", [[self.barRatios objectAtIndex:1] floatValue]);
+        if(self.measureBarCount > 2)
+            NSAssert([[self.barRatios objectAtIndex:2] floatValue] > 0.0f, @"The 3rd Bar Ratios is %f.", [[self.barRatios objectAtIndex:2] floatValue]);
+        if(self.measureBarCount > 3)
+            NSAssert([[self.barRatios objectAtIndex:3] floatValue] > 0.0f, @"The 4th Bar Ratios is %f.", [[self.barRatios objectAtIndex:3] floatValue]);
+        if(self.measureBarCount > 4)
+            NSAssert([[self.barRatios objectAtIndex:4] floatValue] > 0.0f, @"The 5th Bar Ratios is %f.", [[self.barRatios objectAtIndex:4] floatValue]);
+        if(self.measureBarCount > 5)
+            NSAssert([[self.barRatios objectAtIndex:5] floatValue] > 0.0f, @"The 6th Bar Ratios is %f.", [[self.barRatios objectAtIndex:5] floatValue]);
+    }
+    else
+    {
+        NSDictionary *widths = [settingsMeasureBar objectForKey:@"width"];
+        self.barWidths = [widths objectForKey:@"trace"];
+        NSAssert(self.barWidths != nil, @"Bar Widths is nil.");
+        NSAssert(self.barWidths.count == 6, @"The count of the Bar Widths is %d, not 6.", self.barWidths.count);
+        NSLog(@"Bar Widths : %f, %f, %f, %f, %f, %f", [[self.barWidths objectAtIndex:0] floatValue], [[self.barWidths objectAtIndex:1] floatValue], [[self.barWidths objectAtIndex:2] floatValue], [[self.barWidths objectAtIndex:3] floatValue], [[self.barWidths objectAtIndex:4] floatValue], [[self.barWidths objectAtIndex:5] floatValue]);
+        if(self.measureBarCount > 0)
+            NSAssert([[self.barWidths objectAtIndex:0] floatValue] > 0.0f, @"The 1st Bar Width is %f.", [[self.barWidths objectAtIndex:0] floatValue]);
+        if(self.measureBarCount > 1)
+            NSAssert([[self.barWidths objectAtIndex:1] floatValue] > 0.0f, @"The 2nd Bar Width is %f.", [[self.barWidths objectAtIndex:1] floatValue]);
+        if(self.measureBarCount > 2)
+            NSAssert([[self.barWidths objectAtIndex:2] floatValue] > 0.0f, @"The 3rd Bar Width is %f.", [[self.barWidths objectAtIndex:2] floatValue]);
+        if(self.measureBarCount > 3)
+            NSAssert([[self.barWidths objectAtIndex:3] floatValue] > 0.0f, @"The 4th Bar Width is %f.", [[self.barWidths objectAtIndex:3] floatValue]);
+        if(self.measureBarCount > 4)
+            NSAssert([[self.barWidths objectAtIndex:4] floatValue] > 0.0f, @"The 5th Bar Width is %f.", [[self.barWidths objectAtIndex:4] floatValue]);
+        if(self.measureBarCount > 5)
+            NSAssert([[self.barWidths objectAtIndex:5] floatValue] > 0.0f, @"The 6th Bar Width is %f.", [[self.barWidths objectAtIndex:5] floatValue]);
+        
+        self.barWidthsWithMenu = [widths objectForKey:@"traceMenu"];
+        NSAssert(self.barWidthsWithMenu != nil, @"Bar Widths w/ Menu is nil.");
+        NSAssert(self.barWidthsWithMenu.count == 6, @"The count of the Bar Widths w/Menu is %d, not 6.", self.barWidthsWithMenu.count);
+        NSLog(@"Bar Widths w/ Menu : %f, %f, %f, %f, %f, %f", [[self.barWidthsWithMenu objectAtIndex:0] floatValue], [[self.barWidthsWithMenu objectAtIndex:1] floatValue], [[self.barWidthsWithMenu objectAtIndex:2] floatValue], [[self.barWidthsWithMenu objectAtIndex:3] floatValue], [[self.barWidthsWithMenu objectAtIndex:4] floatValue], [[self.barWidthsWithMenu objectAtIndex:5] floatValue]);
+        if(self.measureBarCount > 0)
+            NSAssert([[self.barWidthsWithMenu objectAtIndex:0] floatValue] > 0.0f, @"The 1st Bar Width w/ Menu is %f.", [[self.barWidthsWithMenu objectAtIndex:0] floatValue]);
+        if(self.measureBarCount > 1)
+            NSAssert([[self.barWidthsWithMenu objectAtIndex:1] floatValue] > 0.0f, @"The 2nd Bar Width w/ Menu is %f.", [[self.barWidthsWithMenu objectAtIndex:1] floatValue]);
+        if(self.measureBarCount > 2)
+            NSAssert([[self.barWidthsWithMenu objectAtIndex:2] floatValue] > 0.0f, @"The 3rd Bar Width w/ Menu is %f.", [[self.barWidthsWithMenu objectAtIndex:2] floatValue]);
+        if(self.measureBarCount > 3)
+            NSAssert([[self.barWidthsWithMenu objectAtIndex:3] floatValue] > 0.0f, @"The 4th Bar Width w/ Menu is %f.", [[self.barWidthsWithMenu objectAtIndex:3] floatValue]);
+        if(self.measureBarCount > 4)
+            NSAssert([[self.barWidthsWithMenu objectAtIndex:4] floatValue] > 0.0f, @"The 5th Bar Width w/ Menu is %f.", [[self.barWidthsWithMenu objectAtIndex:4] floatValue]);
+        if(self.measureBarCount > 5)
+            NSAssert([[self.barWidthsWithMenu objectAtIndex:5] floatValue] > 0.0f, @"The 6th Bar Width w/ Menu is %f.", [[self.barWidthsWithMenu objectAtIndex:5] floatValue]);
+    }
 }
 
 @end
