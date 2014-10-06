@@ -208,7 +208,7 @@
     NSDictionary *settingsMeasureBar = (NSDictionary *)[settingsInfo objectForKey:@"measureBar"];
     
     self.measureBarCount = [[settingsMeasureBar objectForKey:@"count"] intValue];
-    NSAssert(self.measureBarCount > 0, @"Bar Count is %d.", self.measureBarCount);
+    NSAssert(self.measureBarCount > 0 && self.measureBarCount <= 6, @"Bar Count is %d.", self.measureBarCount);
     
     self.showTrace = [[settingsMeasureBar objectForKey:@"showTrace"] boolValue];
     self.useBarRatio = [[settingsMeasureBar objectForKey:@"useRatio"] boolValue];

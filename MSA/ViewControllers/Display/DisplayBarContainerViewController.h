@@ -32,6 +32,8 @@
 @property (weak, nonatomic) IBOutlet UIView *bar6V;
 @property (weak, nonatomic) IBOutlet UIView *bar7V;
 
+@property (strong, nonatomic) NSArray *barVs;
+
 @property (weak, nonatomic) IBOutlet Bar0TableViewController *bar0VC;
 @property (weak, nonatomic) IBOutlet Bar1TableViewController *bar1VC;
 @property (weak, nonatomic) IBOutlet Bar2TableViewController *bar2VC;
@@ -40,6 +42,8 @@
 @property (weak, nonatomic) IBOutlet Bar5TableViewController *bar5VC;
 @property (weak, nonatomic) IBOutlet Bar6TableViewController *bar6VC;
 @property (weak, nonatomic) IBOutlet Bar7TableViewController *bar7VC;
+
+@property (strong, nonatomic) NSArray *barVCs;
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;

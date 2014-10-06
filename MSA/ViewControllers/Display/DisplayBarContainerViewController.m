@@ -25,75 +25,25 @@
 @end
 
 @implementation DisplayBarContainerViewController
-            
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    // Border Radius
-    [self.bar0V.layer setCornerRadius:LIGHT_CORNER_RADIUS];
-    [self.bar0V.layer setMasksToBounds:YES];
-    //[self.measureView setClipsToBounds:YES];
-    // Border
-    [self.bar0V.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [self.bar0V.layer setBorderWidth:NORMAL_BORDER_WIDTH];
-    // Background
-    //[self.bar0V.layer setBackgroundColor:[UIColor darkGrayColor].CGColor];
     
-    // Border Radius
-    [self.bar1V.layer setCornerRadius:LIGHT_CORNER_RADIUS];
-    [self.bar1V.layer setMasksToBounds:YES];
-    //[self.measureView setClipsToBounds:YES];
-    // Border
-    [self.bar1V.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [self.bar1V.layer setBorderWidth:NORMAL_BORDER_WIDTH];
+    self.barVs = [[NSArray alloc] initWithObjects:self.bar0V, self.bar1V, self.bar2V, self.bar3V, self.bar4V, self.bar5V, self.bar6V, self.bar7V, nil];
+    self.barVCs = [[NSArray alloc] initWithObjects:self.bar0VC, self.bar1VC, self.bar2VC, self.bar3VC, self.bar4VC, self.bar5VC, self.bar6VC, self.bar7VC, nil];
     
-    // Border Radius
-    [self.bar2V.layer setCornerRadius:LIGHT_CORNER_RADIUS];
-    [self.bar2V.layer setMasksToBounds:YES];
-    //[self.measureView setClipsToBounds:YES];
-    // Border
-    [self.bar2V.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [self.bar2V.layer setBorderWidth:NORMAL_BORDER_WIDTH];
-    
-    // Border Radius
-    [self.bar3V.layer setCornerRadius:LIGHT_CORNER_RADIUS];
-    [self.bar3V.layer setMasksToBounds:YES];
-    //[self.measureView setClipsToBounds:YES];
-    // Border
-    [self.bar3V.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [self.bar3V.layer setBorderWidth:NORMAL_BORDER_WIDTH];
-    
-    // Border Radius
-    [self.bar4V.layer setCornerRadius:LIGHT_CORNER_RADIUS];
-    [self.bar4V.layer setMasksToBounds:YES];
-    //[self.measureView setClipsToBounds:YES];
-    // Border
-    [self.bar4V.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [self.bar4V.layer setBorderWidth:NORMAL_BORDER_WIDTH];
-    
-    // Border Radius
-    [self.bar5V.layer setCornerRadius:LIGHT_CORNER_RADIUS];
-    [self.bar5V.layer setMasksToBounds:YES];
-    //[self.measureView setClipsToBounds:YES];
-    // Border
-    [self.bar5V.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [self.bar5V.layer setBorderWidth:NORMAL_BORDER_WIDTH];
-    
-    // Border Radius
-    [self.bar6V.layer setCornerRadius:LIGHT_CORNER_RADIUS];
-    [self.bar6V.layer setMasksToBounds:YES];
-    //[self.measureView setClipsToBounds:YES];
-    // Border
-    [self.bar6V.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [self.bar6V.layer setBorderWidth:NORMAL_BORDER_WIDTH];
-    
-    // Border Radius
-    [self.bar7V.layer setCornerRadius:LIGHT_CORNER_RADIUS];
-    [self.bar7V.layer setMasksToBounds:YES];
-    //[self.measureView setClipsToBounds:YES];
-    // Border
-    [self.bar7V.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [self.bar7V.layer setBorderWidth:NORMAL_BORDER_WIDTH];
+    for(UIView *bv in self.barVs)
+    {
+        // Border Radius
+        [bv.layer setCornerRadius:LIGHT_CORNER_RADIUS];
+        [bv.layer setMasksToBounds:YES];
+        //[self.measureView setClipsToBounds:YES];
+        // Border
+        [bv.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+        [bv.layer setBorderWidth:NORMAL_BORDER_WIDTH];
+        // Background
+        //[self.bar0V.layer setBackgroundColor:[UIColor darkGrayColor].CGColor];
+    }
     
     //[self adjustMeasureBarWidth:NO];
     
@@ -192,24 +142,21 @@
 }
 
 -(void)setMeasureBarAccordingToFrame {
-    NSAssert1(self.shareSettings.measureBarCount > 0 && self.shareSettings.measureBarCount <= 6, @"barCount should be > 0 and <= 6 but it is %d", self.shareSettings.measureBarCount);
-    
     CGFloat width = 0.0f;
     
     if(self.shareSettings.showTrace == YES)
-        width = (self.frameWidth - MEASBAR_TRACE_WIDTH - MEASBAR_MEAS_CTRL_WIDTH) / self.shareSettings.measureBarCount;
+        width = self.frameWidth - MEASBAR_TRACE_WIDTH - MEASBAR_MEAS_CTRL_WIDTH;
     else
-        width = (self.frameWidth - MEASBAR_MEAS_CTRL_WIDTH) / self.shareSettings.measureBarCount;
+        width = self.frameWidth - MEASBAR_MEAS_CTRL_WIDTH;
     
     [self setMeasureBar:width];
 }
 
--(void)setMeasureBar:(CGFloat)barWidth {
-    NSAssert1(self.shareSettings.measureBarCount > 0 && self.shareSettings.measureBarCount <= 6, @"barCount should be > 0 and <= 6 but it is %d", self.shareSettings.measureBarCount);
-    
+-(void)setMeasureBar:(CGFloat)width {
     self.bar0V.frame = CGRectMake(0, 0, MEASBAR_MEAS_CTRL_WIDTH, MEASBAR_HEIGHT);
     self.bar0VC.frameWidth = MEASBAR_MEAS_CTRL_WIDTH;
     self.bar0VC.frameHeight = MEASBAR_HEIGHT;
+    
     self.bar1V.frame = CGRectMake(MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
     self.bar1VC.frameWidth = barWidth;
     self.bar1VC.frameHeight = MEASBAR_HEIGHT;
