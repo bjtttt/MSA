@@ -94,9 +94,9 @@ typedef enum valueType {
 @property (nonatomic) BOOL showTrace;
 @property (nonatomic) BOOL useBarRatio;
 @property (nonatomic) BOOL barResizable;
-@property (weak, nonatomic) NSArray *barRatios;
-@property (weak, nonatomic) NSArray *barWidths;
-@property (weak, nonatomic) NSArray *barWidthsWithMenu;
+@property (strong, nonatomic) NSArray *barRatios;
+@property (strong, nonatomic) NSArray *barWidths;
+@property (strong, nonatomic) NSArray *barWidthsWithMenu;
 
 @property (weak, nonatomic) UIStoryboard *modeStoryboard;
 @property (weak, nonatomic) UIStoryboard *measBarStoryboard;
