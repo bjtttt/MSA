@@ -22,12 +22,10 @@
 				<integer>1</integer>
 			</array>
 			<key>width</key>
-			<dict>
-				<key>trace</key>
+			<array>
 				<array/>
-				<key>traceMenu</key>
 				<array/>
-			</dict>
+			</array>
 		</dict>
 	</dict>
 	<key>measure</key>

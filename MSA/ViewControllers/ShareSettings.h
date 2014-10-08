@@ -93,7 +93,7 @@ typedef enum valueType {
 @property (nonatomic) int measureBarCount;
 @property (nonatomic) BOOL showTrace;
 @property (nonatomic) BOOL useBarRatio;
-@property (nonatomic) BOOL barResizable;
+//@property (nonatomic) BOOL barResizable;
 @property (strong, nonatomic) NSArray *barRatios;
 @property (strong, nonatomic) NSArray *barWidths;
 @property (strong, nonatomic) NSArray *barWidthsWithMenu;

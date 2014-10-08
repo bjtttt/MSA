@@ -161,17 +161,17 @@
         [self setResizableBarWidth:width sizeArray:self.shareSettings.barRatios];
     else
     {
-        if(self.shareSettings.barResizable == YES)
-        {
-            if(self.shareSettings.menuDisplayed == YES)
-                [self setResizableBarWidth:width sizeArray:self.shareSettings.barWidthsWithMenu];
-            else
-                [self setResizableBarWidth:width sizeArray:self.shareSettings.barWidths];
-        }
+        //if(self.shareSettings.barResizable == YES)
+        //{
+        if(self.shareSettings.menuDisplayed == YES)
+            [self setResizableBarWidth:width sizeArray:self.shareSettings.barWidthsWithMenu];
         else
-        {
-            NSAssert(self.shareSettings.barResizable == YES, @"Bar Resiable is %d", self.shareSettings.barResizable);
-        }
+            [self setResizableBarWidth:width sizeArray:self.shareSettings.barWidths];
+        //}
+        //else
+        //{
+        //    NSAssert(self.shareSettings.barResizable == YES, @"Bar Resiable is %d", self.shareSettings.barResizable);
+        //}
     }
 }
 
