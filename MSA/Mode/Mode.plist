@@ -128,7 +128,7 @@
 			<string>Select Input</string>
 			<key>nameString</key>
 			<string>Input</string>
-			<key>valueType</key>
+			<key>type</key>
 			<integer>4</integer>
 			<key>valueString</key>
 			<string></string>
@@ -136,7 +136,7 @@
 			<integer>0</integer>
 			<key>unit</key>
 			<string></string>
-			<key>enumValueList</key>
+			<key>enumValues</key>
 			<array>
 				<dict>
 					<key>value</key>
@@ -149,7 +149,93 @@
 				<dict>
 					<key>value</key>
 					<integer>1</integer>
-					<key>shorLabel</key>
+					<key>shortLabel</key>
+					<string>EXT MIXER</string>
+					<key>label</key>
+					<string>External Mixer</string>
+				</dict>
+				<dict>
+					<key>value</key>
+					<integer>2</integer>
+					<key>shortLabel</key>
+					<string>I/Q</string>
+					<key>label</key>
+					<string>I/Q</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>shortLabel</key>
+			<string>Input</string>
+			<key>label</key>
+			<string>Select Input</string>
+			<key>nameString</key>
+			<string>Input</string>
+			<key>type</key>
+			<integer>4</integer>
+			<key>valueString</key>
+			<string></string>
+			<key>value</key>
+			<integer>0</integer>
+			<key>unit</key>
+			<string></string>
+			<key>enumValues</key>
+			<array>
+				<dict>
+					<key>value</key>
+					<integer>0</integer>
+					<key>shortLabel</key>
+					<string>RF</string>
+					<key>label</key>
+					<string>RF</string>
+				</dict>
+				<dict>
+					<key>value</key>
+					<integer>1</integer>
+					<key>shortLabel</key>
+					<string>EXT MIXER</string>
+					<key>label</key>
+					<string>External Mixer</string>
+				</dict>
+				<dict>
+					<key>value</key>
+					<integer>2</integer>
+					<key>shortLabel</key>
+					<string>I/Q</string>
+					<key>label</key>
+					<string>I/Q</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>shortLabel</key>
+			<string>Input</string>
+			<key>label</key>
+			<string>Select Input</string>
+			<key>nameString</key>
+			<string>Input</string>
+			<key>type</key>
+			<integer>4</integer>
+			<key>valueString</key>
+			<string></string>
+			<key>value</key>
+			<integer>0</integer>
+			<key>unit</key>
+			<string></string>
+			<key>enumValues</key>
+			<array>
+				<dict>
+					<key>value</key>
+					<integer>0</integer>
+					<key>shortLabel</key>
+					<string>RF</string>
+					<key>label</key>
+					<string>RF</string>
+				</dict>
+				<dict>
+					<key>value</key>
+					<integer>1</integer>
+					<key>shortLabel</key>
 					<string>EXT MIXER</string>
 					<key>label</key>
 					<string>External Mixer</string>
