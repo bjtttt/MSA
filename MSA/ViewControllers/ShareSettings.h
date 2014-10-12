@@ -54,6 +54,12 @@ typedef enum valueType {
     VAL_STRING
 }ValueType;
 
+typedef enum unitType {
+    UNIT_NONE = 0,
+    UNIT_FREQ,
+    UNIT_AMP
+}UnitType;
+
 #define LIGHT_CORNER_RADIUS 3.0f
 #define NORMAL_CORNER_RADIUS 5.0f
 #define HEAVY_CORNER_RADIUS 10.0f

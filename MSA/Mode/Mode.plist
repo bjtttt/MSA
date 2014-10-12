@@ -135,7 +135,7 @@
 			<key>value</key>
 			<integer>0</integer>
 			<key>unit</key>
-			<string></string>
+			<string>0</string>
 			<key>enumValues</key>
 			<array>
 				<dict>
@@ -178,7 +178,7 @@
 			<key>value</key>
 			<integer>0</integer>
 			<key>unit</key>
-			<string></string>
+			<string>0</string>
 			<key>enumValues</key>
 			<array>
 				<dict>
