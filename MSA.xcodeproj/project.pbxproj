@@ -314,7 +314,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9A006C2519DC09850009EA82 /* BarMenu */ = {
+		9A006C2519DC09850009EA82 /* Bar */ = {
 			isa = PBXGroup;
 			children = (
 				9AD4A4E819DD8CAA00FE1914 /* BarMenuContainerViewController.h */,
@@ -322,7 +322,7 @@
 				9A006C2619DC09FC0009EA82 /* BarMenuTableViewController.h */,
 				9A006C2719DC09FC0009EA82 /* BarMenuTableViewController.m */,
 			);
-			name = BarMenu;
+			name = Bar;
 			sourceTree = "<group>";
 		};
 		9A19790E19D270E5008E87E1 /* 20 */ = {
@@ -399,10 +399,8 @@
 		9A39BD9519C2CB380097A7C3 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				9A1C92A219CED75C00074EA6 /* Soft */,
-				9A1C92A119CED75600074EA6 /* Preset */,
-				9A953EE119AD84E7005467A1 /* MenuContainerViewController.h */,
-				9A953EE219AD84E7005467A1 /* MenuContainerViewController.m */,
+				9A006C2519DC09850009EA82 /* Bar */,
+				9ADB42B819EEA93200BA769E /* Mode */,
 			);
 			name = Menu;
 			sourceTree = "<group>";
@@ -567,7 +565,6 @@
 			isa = PBXGroup;
 			children = (
 				9AE7CCD819D5992D005EAF1C /* Storyboard */,
-				9AE7CCDC19D5A6BB005EAF1C /* Bar */,
 				9A79537019CD2A91009984A6 /* Measure */,
 				9A39BD9519C2CB380097A7C3 /* Menu */,
 				9AE0AFB619C2B4E8008544AC /* Display */,
@@ -604,6 +601,7 @@
 			children = (
 				9A79537A19CDA18F009984A6 /* Extended */,
 				9AF7001219B82CAE000A69A5 /* Data */,
+				9ADB42B719EE8FD100BA769E /* Mode */,
 				9A953EDA19AD8436005467A1 /* ViewControllers */,
 				9A9C673119AD7078007D3248 /* Images */,
 				9A9C670F19AD6C81007D3248 /* AppDelegate.h */,
@@ -702,7 +700,6 @@
 			isa = PBXGroup;
 			children = (
 				9A7422A619BDDBC900A251ED /* MSAList.plist */,
-				9ACB212719D44E080022EB5F /* Mode.plist */,
 			);
 			name = ModeList;
 			sourceTree = "<group>";
@@ -753,13 +750,32 @@
 			name = ScreenShot;
 			sourceTree = "<group>";
 		};
+		9ADB42B719EE8FD100BA769E /* Mode */ = {
+			isa = PBXGroup;
+			children = (
+				9ACB212719D44E080022EB5F /* Mode.plist */,
+				9AE7CCD519D5991E005EAF1C /* Mode.storyboard */,
+				9AE7CCDC19D5A6BB005EAF1C /* MeasureBar */,
+			);
+			name = Mode;
+			sourceTree = "<group>";
+		};
+		9ADB42B819EEA93200BA769E /* Mode */ = {
+			isa = PBXGroup;
+			children = (
+				9A1C92A219CED75C00074EA6 /* Soft */,
+				9A1C92A119CED75600074EA6 /* Preset */,
+				9A953EE119AD84E7005467A1 /* MenuContainerViewController.h */,
+				9A953EE219AD84E7005467A1 /* MenuContainerViewController.m */,
+			);
+			name = Mode;
+			sourceTree = "<group>";
+		};
 		9AE0AFB619C2B4E8008544AC /* Display */ = {
 			isa = PBXGroup;
 			children = (
 				9A953EDD19AD84E7005467A1 /* DisplayContainerViewController.h */,
 				9A953EDE19AD84E7005467A1 /* DisplayContainerViewController.m */,
-				9AE0AFB719C2B55C008544AC /* DisplayBarContainerViewController.h */,
-				9AE0AFB819C2B55C008544AC /* DisplayBarContainerViewController.m */,
 				9AE0AFBA19C2B626008544AC /* DisplayTracesContainerViewController.h */,
 				9AE0AFBB19C2B626008544AC /* DisplayTracesContainerViewController.m */,
 			);
@@ -770,16 +786,16 @@
 			isa = PBXGroup;
 			children = (
 				9A9C671819AD6C81007D3248 /* Main.storyboard */,
-				9AE7CCD519D5991E005EAF1C /* Mode.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
 		};
-		9AE7CCDC19D5A6BB005EAF1C /* Bar */ = {
+		9AE7CCDC19D5A6BB005EAF1C /* MeasureBar */ = {
 			isa = PBXGroup;
 			children = (
+				9AE0AFB719C2B55C008544AC /* DisplayBarContainerViewController.h */,
+				9AE0AFB819C2B55C008544AC /* DisplayBarContainerViewController.m */,
 				9A6A209B19DF77C20011B98A /* CellStyle */,
-				9A006C2519DC09850009EA82 /* BarMenu */,
 				9AE7CCDD19D5A6C5005EAF1C /* Bar0 */,
 				9AE7CCDE19D5A6CC005EAF1C /* Bar1 */,
 				9AE7CCDF19D5A6D6005EAF1C /* Bar2 */,
@@ -789,7 +805,7 @@
 				9AE7CCE319D5A6E0005EAF1C /* Bar6 */,
 				9AE7CCE419D5A6E3005EAF1C /* Bar7 */,
 			);
-			name = Bar;
+			name = MeasureBar;
 			sourceTree = "<group>";
 		};
 		9AE7CCDD19D5A6C5005EAF1C /* Bar0 */ = {
