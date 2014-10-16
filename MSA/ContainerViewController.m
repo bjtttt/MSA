@@ -14,7 +14,7 @@
 #import "MeasureContainerViewController.h"
 #import "DisplayBarContainerViewController.h"
 #import "BlurViewController.h"
-#import "BarMenuContainerViewController.h"
+#import "BarMenuTableViewController.h"
 #import "UIView+Screenshot.h"
 
 @interface ContainerViewController ()
@@ -176,14 +176,14 @@
         self.measureCVC.frameWidth = MENU_WIDTH;
         self.measureCVC.frameHeight = self.frameHeight;
     }
-    if([segue.identifier isEqualToString:@"embedSegueToBarMenuCVC"])
+    if([segue.identifier isEqualToString:@"embedSegueToBarMenuTVC"])
     {
-        self.barMenuCVC = (BarMenuContainerViewController *)segue.destinationViewController;
-        self.barMenuCVC.shareSettings = self.shareSettings;
-        self.barMenuCVC.mainCVC = self;
+        self.barMenuTVC = (BarMenuTableViewController *)segue.destinationViewController;
+        self.barMenuTVC.shareSettings = self.shareSettings;
+        self.barMenuTVC.mainCVC = self;
         
-        self.barMenuCVC.frameWidth = MENU_WIDTH;
-        self.barMenuCVC.frameHeight = BAR_MENU_HEIGHT;
+        self.barMenuTVC.frameWidth = MENU_WIDTH;
+        self.barMenuTVC.frameHeight = BAR_MENU_HEIGHT;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBlurVC"])
     {

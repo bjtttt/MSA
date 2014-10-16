@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
@@ -44,7 +44,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pg0-Tj-Oce" userLabel="Bar Menu View">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
                                 <connections>
-                                    <segue destination="81q-Gj-I5K" kind="embed" identifier="embedSegueToBarMenuCVC" id="3Jk-UC-Gs3"/>
+                                    <segue destination="ENN-LG-RWc" kind="embed" identifier="embedSegueToBarMenuTVC" id="tVT-Mf-qM0"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -1972,62 +1972,12 @@
             </objects>
             <point key="canvasLocation" x="1858" y="1198"/>
         </scene>
-        <!--Bar Menu Container View Controller-->
-        <scene sceneID="w8D-Qe-fS9">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="81q-Gj-I5K" customClass="BarMenuContainerViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cxq-I5-OnB"/>
-                        <viewControllerLayoutGuide type="bottom" id="XoV-ok-csW"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CED-8G-sCD">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vWo-p9-jF6">
-                                <rect key="frame" x="0.0" y="44" width="150" height="256"/>
-                                <connections>
-                                    <segue destination="ENN-LG-RWc" kind="embed" identifier="embedSegueToBarMenuTVC" id="MYZ-Qe-rsg"/>
-                                </connections>
-                            </containerView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ob-Om-gJf">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
-                                <items>
-                                    <navigationItem id="bTz-4Y-30m">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="34x-jf-CRf">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GNN-RE-DeU">
-                                                <rect key="frame" x="101" y="7" width="24" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="OK.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="cancelBarPopupMenu:" destination="81q-Gj-I5K" eventType="touchUpInside" id="TTC-IW-7Md"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <connections>
-                        <outlet property="cancelButton" destination="GNN-RE-DeU" id="75M-G4-2QY"/>
-                        <outlet property="navBar" destination="8ob-Om-gJf" id="duw-bK-60I"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1CX-vT-Z6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="203" y="-21"/>
-        </scene>
         <!--Bar Menu Table View Controller-->
         <scene sceneID="ZAt-G6-FhL">
             <objects>
                 <tableViewController id="ENN-LG-RWc" customClass="BarMenuTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Uof-Mc-zdG">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="256"/>
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -2046,7 +1996,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGh-ee-WlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="475" y="-21"/>
+            <point key="canvasLocation" x="165" y="-21"/>
         </scene>
         <!--Blur View Controller-->
         <scene sceneID="1or-BJ-eB7">
