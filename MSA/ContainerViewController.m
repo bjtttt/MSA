@@ -120,6 +120,10 @@
     //[self.menuCVC showHidePresetMenu:YES];
     //[self layoutVC:[self getMSALayout] animated:NO];
     
+    UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
+    self.shareSettings.modeStoryboard = modeUIS;
+    DisplayBarContainerViewController *barCVC = (DisplayBarContainerViewController *)[modeUIS instantiateViewControllerWithIdentifier:@"displayBarCVC"];
+    self.shareSettings.barCVC = barCVC;
 }
 
 -(void) viewWillAppear:(BOOL)animated{

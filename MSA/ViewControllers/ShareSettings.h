@@ -79,6 +79,7 @@ typedef enum unitType {
 #define DEBUG_OUTPUT YES
 
 @class GPUImageiOSBlurFilter;
+@class DisplayBarContainerViewController;
 
 @interface ShareSettings : NSObject
 
@@ -105,7 +106,7 @@ typedef enum unitType {
 @property (strong, nonatomic) NSArray *barWidthsWithMenu;
 
 @property (weak, nonatomic) UIStoryboard *modeStoryboard;
-@property (weak, nonatomic) UIStoryboard *measBarStoryboard;
+@property (weak, nonatomic) DisplayBarContainerViewController *barCVC;
 
 @property (nonatomic) GPUImageiOSBlurFilter *blurFilter;
 
