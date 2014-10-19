@@ -23,8 +23,8 @@
 @property (weak, nonatomic) IBOutlet DisplayTracesContainerViewController *traceCVC;
 @property (weak, nonatomic) IBOutlet ContainerViewController *mainCVC;
 
-@property (weak, nonatomic) IBOutlet UIView *settingsV;
 @property (weak, nonatomic) IBOutlet UIView *tracesV;
+@property (weak, nonatomic) IBOutlet UIView *barV;
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *displayNavBar;
 @property (weak, nonatomic) IBOutlet UIButton *showConnectButton;

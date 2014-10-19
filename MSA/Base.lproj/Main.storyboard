@@ -215,9 +215,9 @@
                     </view>
                     <toolbarItems/>
                     <connections>
+                        <outlet property="barV" destination="ewP-be-Wb1" id="BC8-et-aBt"/>
                         <outlet property="displayNavBar" destination="PI7-wW-2OI" id="5Og-dy-hHb"/>
                         <outlet property="displayToolBar" destination="ybd-le-ga9" id="Qns-8e-WAI"/>
-                        <outlet property="settingsV" destination="ewP-be-Wb1" id="j5j-Ip-AI0"/>
                         <outlet property="showConnectButton" destination="cDu-ka-75F" id="4sB-Sg-su9"/>
                         <outlet property="showHideMenuButton" destination="OqV-j5-b0U" id="stC-0r-ZjC"/>
                         <outlet property="showMsgButton" destination="1yH-oA-9ta" id="xg2-PA-I7d"/>

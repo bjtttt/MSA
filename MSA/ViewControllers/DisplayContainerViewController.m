@@ -40,6 +40,8 @@
     self.navBarHeight=NAVBAR_HEIGHT;
     self.toolBarHeight=NAVBAR_HEIGHT;
     self.settingsHeight=MEASBAR_HEIGHT;
+
+    UIStoryboardSegue *modeUISS = [UIStoryboardSegue segueWithIdentifier:@"embedSegueToBarVC" source:self.barV. destination:<#(UIViewController *)#> performHandler:<#^(void)performHandler#>];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -96,7 +98,7 @@
     self.displayNavBar.frame = CGRectMake(0, 0, self.frameWidth, self.navBarHeight);
     self.displayToolBar.frame = CGRectMake(0, self.frameHeight-self.toolBarHeight, self.frameWidth, self.toolBarHeight);
 
-    self.settingsV.frame = CGRectMake(0, self.navBarHeight, self.frameWidth, self.settingsHeight);
+    self.barV.frame = CGRectMake(0, self.navBarHeight, self.frameWidth, self.settingsHeight);
     self.tracesV.frame = CGRectMake(0, self.navBarHeight+self.settingsHeight, self.frameWidth, self.frameHeight-self.navBarHeight-self.toolBarHeight-self.settingsHeight);
 }
 
