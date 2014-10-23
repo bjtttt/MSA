@@ -41,7 +41,9 @@
     self.toolBarHeight=NAVBAR_HEIGHT;
     self.settingsHeight=MEASBAR_HEIGHT;
 
-    UIStoryboardSegue *modeUISS = [UIStoryboardSegue segueWithIdentifier:@"embedSegueToBarVC" source:self.barV. destination:<#(UIViewController *)#> performHandler:<#^(void)performHandler#>];
+    //UIStoryboardSegue *modeUISS = [UIStoryboardSegue segueWithIdentifier:@"embedSegueToBarVC" source:self.barV. destination:<#(UIViewController *)#> performHandler:<#^(void)performHandler#>];
+    
+    [self.barV addSubview:self.shareSettings.barCVC.view];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
