@@ -177,8 +177,6 @@
 
 -(void) setResizableBarWidth:(CGFloat)width sizeArray:(NSArray *)sizeArray
 {
-    return;
-    
     CGFloat total = 0;
     for(NSNumber *num in sizeArray)
     {

@@ -59,6 +59,7 @@
         self.systCVC.shareSettings = self.shareSettings;
         self.systCVC.displayCVC = self;
     }
+    /*
     if([segue.identifier isEqualToString:@"presentSegueToBarCVC"])
     {
         self.barCVC = (DisplayBarContainerViewController *)segue.destinationViewController;
@@ -79,6 +80,7 @@
         self.traceCVC.frameWidth = self.frameWidth;
         self.traceCVC.frameHeight = self.frameHeight - MEASBAR_HEIGHT;
     }
+    */
 }
 
 - (void)didReceiveMemoryWarning {

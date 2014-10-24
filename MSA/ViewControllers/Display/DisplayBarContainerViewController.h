@@ -56,13 +56,14 @@
 -(void)setMeasureBar:(CGFloat)barWidth;
 -(void)adjustMeasureBarWidth:(BOOL)animated;
 
+/*
 -(void)setEachMeasureBar:(CGFloat)bar1Width;
 -(void)setEachMeasureBar:(CGFloat)bar1Width bar2Width:(CGFloat)bar2Width;
 -(void)setEachMeasureBar:(CGFloat)bar1Width bar2Width:(CGFloat)bar2Width bar3Width:(CGFloat)bar3Width;
 -(void)setEachMeasureBar:(CGFloat)bar1Width bar2Width:(CGFloat)bar2Width bar3Width:(CGFloat)bar3Width bar4Width:(CGFloat)bar4Width;
 -(void)setEachMeasureBar:(CGFloat)bar1Width bar2Width:(CGFloat)bar2Width bar3Width:(CGFloat)bar3Width bar4Width:(CGFloat)bar4Width bar5Width:(CGFloat)bar5Width;
 -(void)setEachMeasureBar:(CGFloat)bar1Width bar2Width:(CGFloat)bar2Width bar3Width:(CGFloat)bar3Width bar4Width:(CGFloat)bar4Width bar5Width:(CGFloat)bar5Width bar6Width:(CGFloat)bar6Width;
-
+*/
 
 @end
 

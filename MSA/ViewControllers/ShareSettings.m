@@ -208,34 +208,52 @@
     NSDictionary *settingsMeasureBar = (NSDictionary *)[settingsInfo objectForKey:@"measureBar"];
     
     self.measureBarCount = [[settingsMeasureBar objectForKey:@"count"] intValue];
-    NSAssert(self.measureBarCount > 0 && self.measureBarCount <= 6, @"Bar Count is %d.", self.measureBarCount);
+    NSAssert(self.measureBarCount > 0, @"Bar Count is %d.", self.measureBarCount);
     
     self.showTrace = [[settingsMeasureBar objectForKey:@"showTrace"] boolValue];
+    
     self.useBarRatio = [[settingsMeasureBar objectForKey:@"useRatio"] boolValue];
     if(self.useBarRatio == YES)
     {
         self.barRatios = [settingsMeasureBar objectForKey:@"widthRatio"];
-        NSAssert(self.barRatios != nil, @"Bar Ratios is nil.");
-        NSAssert(self.barRatios.count == 6, @"The count of the Bar Ratios is %d, not 6.", self.barRatios.count);
-        NSLog(@"Bar Ratios : %f, %f, %f, %f, %f, %f", [[self.barRatios objectAtIndex:0] floatValue], [[self.barRatios objectAtIndex:1] floatValue], [[self.barRatios objectAtIndex:2] floatValue], [[self.barRatios objectAtIndex:3] floatValue], [[self.barRatios objectAtIndex:4] floatValue], [[self.barRatios objectAtIndex:5] floatValue]);
-        if(self.measureBarCount > 0)
-            NSAssert([[self.barRatios objectAtIndex:0] floatValue] > 0.0f, @"The 1st Bar Ratios is %f.", [[self.barRatios objectAtIndex:0] floatValue]);
-        if(self.measureBarCount > 1)
-            NSAssert([[self.barRatios objectAtIndex:1] floatValue] > 0.0f, @"The 2nd Bar Ratios is %f.", [[self.barRatios objectAtIndex:1] floatValue]);
-        if(self.measureBarCount > 2)
-            NSAssert([[self.barRatios objectAtIndex:2] floatValue] > 0.0f, @"The 3rd Bar Ratios is %f.", [[self.barRatios objectAtIndex:2] floatValue]);
-        if(self.measureBarCount > 3)
-            NSAssert([[self.barRatios objectAtIndex:3] floatValue] > 0.0f, @"The 4th Bar Ratios is %f.", [[self.barRatios objectAtIndex:3] floatValue]);
-        if(self.measureBarCount > 4)
-            NSAssert([[self.barRatios objectAtIndex:4] floatValue] > 0.0f, @"The 5th Bar Ratios is %f.", [[self.barRatios objectAtIndex:4] floatValue]);
-        if(self.measureBarCount > 5)
-            NSAssert([[self.barRatios objectAtIndex:5] floatValue] > 0.0f, @"The 6th Bar Ratios is %f.", [[self.barRatios objectAtIndex:5] floatValue]);
+        if(self.barRatios != nil)
+        {
+            NSAssert(self.barRatios.count == 0 || self.barRatios.count == self.measureBarCount, @"The count of the Bar Ratios is %d, not %d.", self.barRatios.count, self.measureBarCount);
+            if(self.barRatios.count != 0)
+            {
+                for(int i=0;i<self.measureBarCount;i++)
+                {
+                    NSLog(@"Bar Ratios : %d - %f", i, [[self.barRatios objectAtIndex:0] floatValue]);
+                    NSAssert([[self.barRatios objectAtIndex:i] floatValue] > 0.0f, @"The 1st Bar Ratios is %f.", [[self.barRatios objectAtIndex:i] floatValue]);
+                }
+            }
+        }
     }
     else
     {
         NSArray *widths = [settingsMeasureBar objectForKey:@"width"];
+        if(widths != nil)
+        {
+            NSAssert([widths count] >= 0 || [widths count] <= 2, @"The count of the Bar Widths is %d, not 6.", [widths count]);
+
+            switch([widths count])
+            {
+                default:
+                    break;
+                case 0:
+                    break;
+                case 1:
+                    self.barWidths = [widths objectAtIndex:0];
+                    self.barWidthsWithMenu = [widths objectAtIndex:0];
+                    break;
+                case 2:
+                    self.barWidths = [widths objectAtIndex:0];
+                    self.barWidthsWithMenu = [widths objectAtIndex:1];
+                    break;
+            }
+        }
+        
         self.barWidths = [widths objectAtIndex:0];
-        NSAssert(self.barWidths != nil, @"Bar Widths is nil.");
         NSAssert(self.barWidths.count == 6, @"The count of the Bar Widths is %d, not 6.", self.barWidths.count);
         NSLog(@"Bar Widths : %f, %f, %f, %f, %f, %f", [[self.barWidths objectAtIndex:0] floatValue], [[self.barWidths objectAtIndex:1] floatValue], [[self.barWidths objectAtIndex:2] floatValue], [[self.barWidths objectAtIndex:3] floatValue], [[self.barWidths objectAtIndex:4] floatValue], [[self.barWidths objectAtIndex:5] floatValue]);
         if(self.measureBarCount > 0)

@@ -123,6 +123,10 @@
     UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
     self.shareSettings.modeStoryboard = modeUIS;
     DisplayBarContainerViewController *barCVC = (DisplayBarContainerViewController *)[modeUIS instantiateViewControllerWithIdentifier:@"displayBarCVC"];
+    barCVC.frameWidth = self.frameWidth;
+    barCVC.frameHeight = MEASBAR_HEIGHT;
+    barCVC.shareSettings = self.shareSettings;
+    barCVC.displayCVC = self.displayCVC;
     self.shareSettings.barCVC = barCVC;
 }
 

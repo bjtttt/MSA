@@ -7,24 +7,20 @@
 		<key>measureBar</key>
 		<dict>
 			<key>count</key>
-			<integer>6</integer>
+			<integer>7</integer>
 			<key>useRatio</key>
 			<true/>
 			<key>showTrace</key>
 			<false/>
 			<key>widthRatio</key>
 			<array>
+				<integer>1</integer>
 				<real>1</real>
 				<real>1</real>
 				<integer>1</integer>
 				<integer>1</integer>
 				<integer>1</integer>
-				<integer>1</integer>
-			</array>
-			<key>width</key>
-			<array>
-				<array/>
-				<array/>
+				<integer>2</integer>
 			</array>
 		</dict>
 	</dict>
