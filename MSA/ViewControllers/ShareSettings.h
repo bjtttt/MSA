@@ -70,9 +70,7 @@ typedef enum unitType {
 #define BAR_MENU_HEIGHT 300.0f
 #define MEAS_WIDTH 350.0f
 #define MEAS_HEIGHT 600.0f
-#define MEASBAR_HEIGHT 120.0f
-#define MEASBAR_MEAS_CTRL_WIDTH 100.0f
-#define MEASBAR_TRACE_WIDTH 120.0f
+#define BAR_HEIGHT 120.0f
 #define NAVBAR_HEIGHT 44.0f
 #define ADDINSTRUMENT_HEIGHT 75.0f
 

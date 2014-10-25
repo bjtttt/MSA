@@ -215,7 +215,7 @@
     self.barWidths = [[NSMutableArray alloc] initWithArray:(NSArray *)[settingsMeasureBar objectForKey:@"width"]];
     if(self.barWidths != nil)
     {
-        NSAssert(self.barWidths.count == 0 || self.barWidths.count == self.measureBarCount, @"The count of the Bar Width is %lu not %d.", self.barWidths.count, self.measureBarCount);
+        NSAssert(self.barWidths.count == 0 || self.barWidths.count == self.measureBarCount, @"The count of the Bar Width is %u not %d.", self.barWidths.count, self.measureBarCount);
         if(self.barWidths.count != 0)
         {
             for(int i=0;i<self.measureBarCount;i++)
@@ -232,6 +232,15 @@
             {
                 [self.barWidths insertObject:@1.0 atIndex:i];
             }
+        }
+    }
+    else
+    {
+        self.barWidths = [[NSMutableArray alloc] initWithCapacity:self.measureBarCount];
+        NSLog(@"Initiate each Bar Width to be equal.");
+        for(int i=0;i<self.measureBarCount;i++)
+        {
+            [self.barWidths insertObject:@1.0 atIndex:i];
         }
     }
 }
