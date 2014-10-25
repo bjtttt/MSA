@@ -10,9 +10,7 @@
 			<integer>7</integer>
 			<key>useRatio</key>
 			<true/>
-			<key>showTrace</key>
-			<false/>
-			<key>widthRatio</key>
+			<key>width</key>
 			<array>
 				<integer>1</integer>
 				<real>1</real>

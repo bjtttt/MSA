@@ -210,81 +210,29 @@
     self.measureBarCount = [[settingsMeasureBar objectForKey:@"count"] intValue];
     NSAssert(self.measureBarCount > 0, @"Bar Count is %d.", self.measureBarCount);
     
-    self.showTrace = [[settingsMeasureBar objectForKey:@"showTrace"] boolValue];
-    
     self.useBarRatio = [[settingsMeasureBar objectForKey:@"useRatio"] boolValue];
-    if(self.useBarRatio == YES)
-    {
-        self.barRatios = [settingsMeasureBar objectForKey:@"widthRatio"];
-        if(self.barRatios != nil)
-        {
-            NSAssert(self.barRatios.count == 0 || self.barRatios.count == self.measureBarCount, @"The count of the Bar Ratios is %d, not %d.", self.barRatios.count, self.measureBarCount);
-            if(self.barRatios.count != 0)
-            {
-                for(int i=0;i<self.measureBarCount;i++)
-                {
-                    NSLog(@"Bar Ratios : %d - %f", i, [[self.barRatios objectAtIndex:0] floatValue]);
-                    NSAssert([[self.barRatios objectAtIndex:i] floatValue] > 0.0f, @"The 1st Bar Ratios is %f.", [[self.barRatios objectAtIndex:i] floatValue]);
-                }
-            }
-        }
-    }
-    else
-    {
-        NSArray *widths = [settingsMeasureBar objectForKey:@"width"];
-        if(widths != nil)
-        {
-            NSAssert([widths count] >= 0 || [widths count] <= 2, @"The count of the Bar Widths is %d, not 6.", [widths count]);
 
-            switch([widths count])
+    self.barWidths = [[NSMutableArray alloc] initWithArray:(NSArray *)[settingsMeasureBar objectForKey:@"width"]];
+    if(self.barWidths != nil)
+    {
+        NSAssert(self.barWidths.count == 0 || self.barWidths.count == self.measureBarCount, @"The count of the Bar Width is %lu not %d.", self.barWidths.count, self.measureBarCount);
+        if(self.barWidths.count != 0)
+        {
+            for(int i=0;i<self.measureBarCount;i++)
             {
-                default:
-                    break;
-                case 0:
-                    break;
-                case 1:
-                    self.barWidths = [widths objectAtIndex:0];
-                    self.barWidthsWithMenu = [widths objectAtIndex:0];
-                    break;
-                case 2:
-                    self.barWidths = [widths objectAtIndex:0];
-                    self.barWidthsWithMenu = [widths objectAtIndex:1];
-                    break;
+                NSLog(@"Bar Width : %d - %f", i, [[self.barWidths objectAtIndex:0] floatValue]);
+                NSAssert([[self.barWidths objectAtIndex:i] floatValue] >= 0.0f, @"The %d Bar Width is %f.", i, [[self.barWidths objectAtIndex:i] floatValue]);
             }
         }
-        
-        self.barWidths = [widths objectAtIndex:0];
-        NSAssert(self.barWidths.count == 6, @"The count of the Bar Widths is %d, not 6.", self.barWidths.count);
-        NSLog(@"Bar Widths : %f, %f, %f, %f, %f, %f", [[self.barWidths objectAtIndex:0] floatValue], [[self.barWidths objectAtIndex:1] floatValue], [[self.barWidths objectAtIndex:2] floatValue], [[self.barWidths objectAtIndex:3] floatValue], [[self.barWidths objectAtIndex:4] floatValue], [[self.barWidths objectAtIndex:5] floatValue]);
-        if(self.measureBarCount > 0)
-            NSAssert([[self.barWidths objectAtIndex:0] floatValue] > 0.0f, @"The 1st Bar Width is %f.", [[self.barWidths objectAtIndex:0] floatValue]);
-        if(self.measureBarCount > 1)
-            NSAssert([[self.barWidths objectAtIndex:1] floatValue] > 0.0f, @"The 2nd Bar Width is %f.", [[self.barWidths objectAtIndex:1] floatValue]);
-        if(self.measureBarCount > 2)
-            NSAssert([[self.barWidths objectAtIndex:2] floatValue] > 0.0f, @"The 3rd Bar Width is %f.", [[self.barWidths objectAtIndex:2] floatValue]);
-        if(self.measureBarCount > 3)
-            NSAssert([[self.barWidths objectAtIndex:3] floatValue] > 0.0f, @"The 4th Bar Width is %f.", [[self.barWidths objectAtIndex:3] floatValue]);
-        if(self.measureBarCount > 4)
-            NSAssert([[self.barWidths objectAtIndex:4] floatValue] > 0.0f, @"The 5th Bar Width is %f.", [[self.barWidths objectAtIndex:4] floatValue]);
-        if(self.measureBarCount > 5)
-            NSAssert([[self.barWidths objectAtIndex:5] floatValue] > 0.0f, @"The 6th Bar Width is %f.", [[self.barWidths objectAtIndex:5] floatValue]);
-        
-        self.barWidthsWithMenu = [widths objectAtIndex:1];
-        NSAssert(self.barWidthsWithMenu != nil, @"Bar Widths w/ Menu is nil.");
-        NSAssert(self.barWidthsWithMenu.count == 6, @"The count of the Bar Widths w/Menu is %d, not 6.", self.barWidthsWithMenu.count);
-        NSLog(@"Bar Widths w/ Menu : %f, %f, %f, %f, %f, %f", [[self.barWidthsWithMenu objectAtIndex:0] floatValue], [[self.barWidthsWithMenu objectAtIndex:1] floatValue], [[self.barWidthsWithMenu objectAtIndex:2] floatValue], [[self.barWidthsWithMenu objectAtIndex:3] floatValue], [[self.barWidthsWithMenu objectAtIndex:4] floatValue], [[self.barWidthsWithMenu objectAtIndex:5] floatValue]);
-        if(self.measureBarCount > 0)
-            NSAssert([[self.barWidthsWithMenu objectAtIndex:0] floatValue] > 0.0f, @"The 1st Bar Width w/ Menu is %f.", [[self.barWidthsWithMenu objectAtIndex:0] floatValue]);
-        if(self.measureBarCount > 1)
-            NSAssert([[self.barWidthsWithMenu objectAtIndex:1] floatValue] > 0.0f, @"The 2nd Bar Width w/ Menu is %f.", [[self.barWidthsWithMenu objectAtIndex:1] floatValue]);
-        if(self.measureBarCount > 2)
-            NSAssert([[self.barWidthsWithMenu objectAtIndex:2] floatValue] > 0.0f, @"The 3rd Bar Width w/ Menu is %f.", [[self.barWidthsWithMenu objectAtIndex:2] floatValue]);
-        if(self.measureBarCount > 3)
-            NSAssert([[self.barWidthsWithMenu objectAtIndex:3] floatValue] > 0.0f, @"The 4th Bar Width w/ Menu is %f.", [[self.barWidthsWithMenu objectAtIndex:3] floatValue]);
-        if(self.measureBarCount > 4)
-            NSAssert([[self.barWidthsWithMenu objectAtIndex:4] floatValue] > 0.0f, @"The 5th Bar Width w/ Menu is %f.", [[self.barWidthsWithMenu objectAtIndex:4] floatValue]);
-        if(self.measureBarCount > 5)
-            NSAssert([[self.barWidthsWithMenu objectAtIndex:5] floatValue] > 0.0f, @"The 6th Bar Width w/ Menu is %f.", [[self.barWidthsWithMenu objectAtIndex:5] floatValue]);
+        else
+        {
+            self.barWidths = [[NSMutableArray alloc] initWithCapacity:self.measureBarCount];
+            NSLog(@"Initiate each Bar Width to be equal.");
+            for(int i=0;i<self.measureBarCount;i++)
+            {
+                [self.barWidths insertObject:@1.0 atIndex:i];
+            }
+        }
     }
 }
 
