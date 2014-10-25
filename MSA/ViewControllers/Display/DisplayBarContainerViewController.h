@@ -17,7 +17,7 @@
 @class Bar4TableViewController;
 @class Bar5TableViewController;
 @class Bar6TableViewController;
-@class Bar7TableViewController;
+//@class Bar7TableViewController;
 
 @interface DisplayBarContainerViewController : UIViewController
 
@@ -30,9 +30,9 @@
 @property (weak, nonatomic) IBOutlet UIView *bar4V;
 @property (weak, nonatomic) IBOutlet UIView *bar5V;
 @property (weak, nonatomic) IBOutlet UIView *bar6V;
-@property (weak, nonatomic) IBOutlet UIView *bar7V;
+//@property (weak, nonatomic) IBOutlet UIView *bar7V;
 
-@property (strong, nonatomic) NSArray *barVs;
+@property (strong, nonatomic) NSMutableArray *barVs;
 
 @property (weak, nonatomic) IBOutlet Bar0TableViewController *bar0VC;
 @property (weak, nonatomic) IBOutlet Bar1TableViewController *bar1VC;
@@ -41,9 +41,9 @@
 @property (weak, nonatomic) IBOutlet Bar4TableViewController *bar4VC;
 @property (weak, nonatomic) IBOutlet Bar5TableViewController *bar5VC;
 @property (weak, nonatomic) IBOutlet Bar6TableViewController *bar6VC;
-@property (weak, nonatomic) IBOutlet Bar7TableViewController *bar7VC;
+//@property (weak, nonatomic) IBOutlet Bar7TableViewController *bar7VC;
 
-@property (strong, nonatomic) NSArray *barVCs;
+@property (strong, nonatomic) NSMutableArray *barVCs;
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;

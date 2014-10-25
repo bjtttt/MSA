@@ -39,7 +39,7 @@
     
     self.navBarHeight=NAVBAR_HEIGHT;
     self.toolBarHeight=NAVBAR_HEIGHT;
-    self.settingsHeight=MEASBAR_HEIGHT;
+    self.settingsHeight=BAR_HEIGHT;
 
     //UIStoryboardSegue *modeUISS = [UIStoryboardSegue segueWithIdentifier:@"embedSegueToBarVC" source:self.barV. destination:<#(UIViewController *)#> performHandler:<#^(void)performHandler#>];
     

@@ -88,7 +88,7 @@ typedef enum unitType {
 
 @property (nonatomic) BOOL menuDisplayed;
 @property (nonatomic) BOOL measureDisplayed;
-@property (nonatomic) BOOL barDisplayed;
+@property (nonatomic) BOOL barMenuDisplayed;
 
 @property (nonatomic) InstrumentStatus currentInstrumentStatus;
 @property (nonatomic) NSMutableString *currentInstrument;
@@ -110,6 +110,8 @@ typedef enum unitType {
 - (void) initMeasureBar;
 -(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum;
 -(UIImage *)blurryImage:(UIImage *)image;
+
+-(CGFloat) measureBarMenuPosition:(NSInteger)index forWidth:(CGFloat)width;
 
 @end
 

@@ -18,7 +18,7 @@
 #import "Bar4TableViewController.h"
 #import "Bar5TableViewController.h"
 #import "Bar6TableViewController.h"
-#import "Bar7TableViewController.h"
+//#import "Bar7TableViewController.h"
 
 @interface DisplayBarContainerViewController ()
 
@@ -29,8 +29,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.barVs = [[NSArray alloc] initWithObjects:self.bar0V, self.bar1V, self.bar2V, self.bar3V, self.bar4V, self.bar5V, self.bar6V, self.bar7V, nil];
-    self.barVCs = [[NSArray alloc] initWithObjects:self.bar0VC, self.bar1VC, self.bar2VC, self.bar3VC, self.bar4VC, self.bar5VC, self.bar6VC, self.bar7VC, nil];
+    self.barVs = [[NSMutableArray alloc] initWithObjects:self.bar0V, self.bar1V, self.bar2V, self.bar3V, self.bar4V, self.bar5V, self.bar6V, nil];//, self.bar7V, nil];
+    self.barVCs = [[NSMutableArray alloc] initWithObjects:self.bar0VC, self.bar1VC, self.bar2VC, self.bar3VC, self.bar4VC, self.bar5VC, self.bar6VC, nil];//, self.bar7VC, nil];
     
     for(UIView *bv in self.barVs)
     {
@@ -93,12 +93,14 @@
         self.bar6VC.shareSettings = self.shareSettings;
         self.bar6VC.displayBarCVC = self;
     }
+    /*
     if([segue.identifier isEqualToString:@"embedSegueToBar7VC"])
     {
         self.bar7VC = (Bar7TableViewController *)segue.destinationViewController;
         self.bar7VC.shareSettings = self.shareSettings;
         self.bar7VC.displayBarCVC = self;
     }
+    */
 }
 
 -(void)viewWillAppear:(BOOL)animated {

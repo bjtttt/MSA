@@ -124,7 +124,7 @@
     self.shareSettings.modeStoryboard = modeUIS;
     DisplayBarContainerViewController *barCVC = (DisplayBarContainerViewController *)[modeUIS instantiateViewControllerWithIdentifier:@"displayBarCVC"];
     barCVC.frameWidth = self.frameWidth;
-    barCVC.frameHeight = MEASBAR_HEIGHT;
+    barCVC.frameHeight = BAR_HEIGHT;
     barCVC.shareSettings = self.shareSettings;
     barCVC.displayCVC = self.displayCVC;
     self.shareSettings.barCVC = barCVC;
@@ -233,7 +233,7 @@
 }
 
 -(void)barTapped {
-    self.shareSettings.barDisplayed = !self.shareSettings.barDisplayed;
+    self.shareSettings.barMenuDisplayed = !self.shareSettings.barMenuDisplayed;
     [self layoutVC:YES];
 }
 
@@ -250,34 +250,41 @@
     UIImage *img = nil;
     UIImage *blurImg = nil;
     
-    NSAssert(!(self.shareSettings.barDisplayed == YES && self.shareSettings.measureDisplayed == YES), @"ERROR : Bar PopupMenu and Measure Select are both YES!");
+    NSAssert(!(self.shareSettings.barMenuDisplayed == YES && self.shareSettings.measureDisplayed == YES), @"ERROR : Bar PopupMenu and Measure Select are both YES!");
     
-    if(self.shareSettings.barDisplayed == YES)
+    if(self.shareSettings.barMenuDisplayed == YES)
     {
-        CGFloat singleBarWidth = 0.0f;
+        CGFloat displayWidth = 0.0f;
         
         if(self.shareSettings.menuDisplayed == YES)
         {
-            singleBarWidth = (self.frameWidth - MENU_WIDTH - MEASBAR_TRACE_WIDTH) / 7.0;
+            displayWidth = self.frameWidth - MENU_WIDTH;
             
-            [self.displayView setUserInteractionEnabled:NO];
-            [self.menuView setUserInteractionEnabled:NO];
+            //singleBarWidth = (self.frameWidth - MENU_WIDTH) / self.shareSettings.measureBarCount;
+            
+            //[self.displayView setUserInteractionEnabled:NO];
+            //[self.menuView setUserInteractionEnabled:NO];
         }
         else
         {
-            singleBarWidth = (self.frameWidth - MEASBAR_TRACE_WIDTH) / 7.0;
+            displayWidth = self.frameWidth;
+            
+            //singleBarWidth = (self.frameWidth - MEASBAR_TRACE_WIDTH) / 7.0;
         
-            [self.displayView setUserInteractionEnabled:NO];
-            //[self.menuView setUserInteractionEnabled:NO];
+            //[self.displayView setUserInteractionEnabled:NO];
+            ////[self.menuView setUserInteractionEnabled:NO];
         }
-        self.barView.frame = CGRectMake(singleBarWidth*self.shareSettings.barTappedIndex, NAVBAR_HEIGHT+MEASBAR_HEIGHT, MENU_WIDTH, 0);
-
+        
+        CGFloat barMenuPosition = [self.shareSettings measureBarMenuPosition:self.shareSettings.barTappedIndex forWidth:displayWidth];
+        
+        self.barView.frame = CGRectMake(barMenuPosition, NAVBAR_HEIGHT+BAR_HEIGHT, 0, 0);
+        
         //img = [self.view convertViewToImage];// [self.shareSettings screenShot:self saveInAlbum:NO];
         //blurImg = [self.shareSettings blurryImage:img];
 
         layoutBlock = ^(void)
         {
-            self.barView.frame = CGRectMake(singleBarWidth*self.shareSettings.barTappedIndex, NAVBAR_HEIGHT+MEASBAR_HEIGHT, MENU_WIDTH, BAR_MENU_HEIGHT);
+            self.barView.frame = CGRectMake(barMenuPosition, NAVBAR_HEIGHT+BAR_HEIGHT, MENU_WIDTH, BAR_MENU_HEIGHT);
         };
         completionBlock = ^(BOOL finished){
         };
@@ -329,14 +336,31 @@
             };
         }
     }
-    if(self.shareSettings.barDisplayed == NO && self.shareSettings.measureDisplayed == NO)
+    if(self.shareSettings.barMenuDisplayed == NO && self.shareSettings.measureDisplayed == NO)
     {
-        CGFloat singleBarWidth = 0.0f;
+        CGFloat displayWidth = 0.0f;
         
         if(self.shareSettings.menuDisplayed == YES)
-            singleBarWidth = (self.frameWidth - MENU_WIDTH - MEASBAR_TRACE_WIDTH) / 7.0;
+        {
+            displayWidth = self.frameWidth - MENU_WIDTH;
+            
+            //singleBarWidth = (self.frameWidth - MENU_WIDTH) / self.shareSettings.measureBarCount;
+            
+            //[self.displayView setUserInteractionEnabled:NO];
+            //[self.menuView setUserInteractionEnabled:NO];
+        }
         else
-            singleBarWidth = (self.frameWidth - MEASBAR_TRACE_WIDTH) / 7.0;
+        {
+            displayWidth = self.frameWidth;
+            
+            //singleBarWidth = (self.frameWidth - MEASBAR_TRACE_WIDTH) / 7.0;
+            
+            //[self.displayView setUserInteractionEnabled:NO];
+            ////[self.menuView setUserInteractionEnabled:NO];
+        }
+        
+        CGFloat barMenuPosition = [self.shareSettings measureBarMenuPosition:self.shareSettings.barTappedIndex forWidth:displayWidth];
+
         self.blurView.frame = CGRectMake(-self.frameWidth-VC_MARGIN, 0, self.frameWidth, self.frameHeight);
         
         if(self.shareSettings.menuDisplayed == YES)
@@ -353,7 +377,7 @@
                 self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, (self.frameHeight-MEAS_HEIGHT)/2, MEAS_WIDTH, MEAS_HEIGHT);
                 self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth-MENU_WIDTH, self.frameHeight);
-                self.barView.frame = CGRectMake(singleBarWidth*self.shareSettings.barTappedIndex, NAVBAR_HEIGHT+MEASBAR_HEIGHT, MENU_WIDTH, 0);
+                self.barView.frame = CGRectMake(barMenuPosition, NAVBAR_HEIGHT+BAR_HEIGHT, MENU_WIDTH, 0);
             };
             completionBlock = ^(BOOL finished){
             };
@@ -371,7 +395,7 @@
                 self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, (self.frameHeight-MEAS_HEIGHT)/2, MEAS_WIDTH, MEAS_HEIGHT);
                 self.menuView.frame = CGRectMake(self.frameWidth+VC_MARGIN, 0, MENU_WIDTH, self.frameHeight);
                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
-                self.barView.frame = CGRectMake(singleBarWidth*self.shareSettings.barTappedIndex, NAVBAR_HEIGHT+MEASBAR_HEIGHT, MENU_WIDTH, 0);
+                self.barView.frame = CGRectMake(barMenuPosition, NAVBAR_HEIGHT+BAR_HEIGHT, MENU_WIDTH, 0);
             };
             completionBlock = ^(BOOL finished){
             };
