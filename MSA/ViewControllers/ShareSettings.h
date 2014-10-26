@@ -84,7 +84,7 @@ typedef enum unitType {
 @property (nonatomic) BOOL menuTapped;
 @property (nonatomic) BOOL measureTapped;
 @property (nonatomic) BOOL barTapped;
-@property (nonatomic) int barTappedIndex;
+@property (nonatomic) NSInteger barTappedIndex;
 
 @property (nonatomic) BOOL menuDisplayed;
 @property (nonatomic) BOOL measureDisplayed;
@@ -95,9 +95,10 @@ typedef enum unitType {
 
 @property (nonatomic) NSMutableArray *measureView;
 
-@property (nonatomic) int measureBarCount;
+@property (nonatomic) NSInteger measureBarCount;
 @property (nonatomic) BOOL useBarRatio;
 @property (strong, nonatomic) NSMutableArray *barWidths;
+@property (nonatomic) CGFloat totalBarWidth;
 
 @property (weak, nonatomic) UIStoryboard *modeStoryboard;
 @property (weak, nonatomic) DisplayBarContainerViewController *barCVC;

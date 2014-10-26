@@ -143,156 +143,44 @@
     return YES;
 }
 
--(void)setMeasureBarAccordingToFrame {
-    CGFloat width = 0.0f;
-    
-    if(self.shareSettings.showTrace == YES)
-        width = self.frameWidth - MEASBAR_TRACE_WIDTH - MEASBAR_MEAS_CTRL_WIDTH;
-    else
-        width = self.frameWidth - MEASBAR_MEAS_CTRL_WIDTH;
-    
-    [self setMeasureBar:width];
-}
-
--(void)setMeasureBar:(CGFloat)width {
-    self.bar0V.frame = CGRectMake(0, 0, MEASBAR_MEAS_CTRL_WIDTH, MEASBAR_HEIGHT);
-    self.bar0VC.frameWidth = MEASBAR_MEAS_CTRL_WIDTH;
-    self.bar0VC.frameHeight = MEASBAR_HEIGHT;
-    
-    if(self.shareSettings.useBarRatio == YES)
-        [self setResizableBarWidth:width sizeArray:self.shareSettings.barRatios];
-    else
-    {
-        //if(self.shareSettings.barResizable == YES)
-        //{
-        if(self.shareSettings.menuDisplayed == YES)
-            [self setResizableBarWidth:width sizeArray:self.shareSettings.barWidthsWithMenu];
-        else
-            [self setResizableBarWidth:width sizeArray:self.shareSettings.barWidths];
-        //}
-        //else
-        //{
-        //    NSAssert(self.shareSettings.barResizable == YES, @"Bar Resiable is %d", self.shareSettings.barResizable);
-        //}
-    }
-}
-
--(void) setResizableBarWidth:(CGFloat)width sizeArray:(NSArray *)sizeArray
+-(void) setBarsStartAndWidthAccordingTo:(CGFloat)width
 {
-    CGFloat total = 0;
-    for(NSNumber *num in sizeArray)
-    {
-        total = total + [num floatValue];
-    }
+    CGFloat prevWidth = 0.0;
+    CGFloat barWidth = 0.0;
 
-    CGFloat barWidth = [[self.shareSettings.barRatios objectAtIndex:0] floatValue] * width / total;
-    
-    self.bar1V.frame = CGRectMake(MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
-    self.bar1VC.frameWidth = barWidth;
-    self.bar1VC.frameHeight = MEASBAR_HEIGHT;
-    
-    barWidth = [[self.shareSettings.barRatios objectAtIndex:1] floatValue] * width / total;
-    
-    if(self.shareSettings.measureBarCount > 1)
+    for(int i=0;i<self.shareSettings.measureBarCount; i++)
     {
-        self.bar2V.frame = CGRectMake(barWidth*1+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
-        self.bar2VC.frameWidth = barWidth;
-        self.bar2VC.frameHeight = MEASBAR_HEIGHT;
-    }
-    else
-        self.bar2V.frame = CGRectMake(barWidth*1+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, 0, 0);
-    
-    barWidth = [[self.shareSettings.barRatios objectAtIndex:2] floatValue] * width / total;
-    
-    if (self.shareSettings.measureBarCount > 2)
-    {
-        self.bar3V.frame = CGRectMake(barWidth*2+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
-        self.bar3VC.frameWidth = barWidth;
-        self.bar3VC.frameHeight = MEASBAR_HEIGHT;
-    }
-    else
-        self.bar3V.frame = CGRectMake(barWidth*2+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, 0, 0);
-    
-    barWidth = [[self.shareSettings.barRatios objectAtIndex:3] floatValue] * width / total;
-    
-    if (self.shareSettings.measureBarCount > 3)
-    {
-        self.bar4V.frame = CGRectMake(barWidth*3+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
-        self.bar4VC.frameWidth = barWidth;
-        self.bar4VC.frameHeight = MEASBAR_HEIGHT;
-    }
-    else
-        self.bar4V.frame = CGRectMake(barWidth*3+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, 0, 0);
-    
-    barWidth = [[self.shareSettings.barRatios objectAtIndex:4] floatValue] * width / total;
-    
-    if (self.shareSettings.measureBarCount > 4)
-    {
-        self.bar5V.frame = CGRectMake(barWidth*4+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
-        self.bar5VC.frameWidth = barWidth;
-        self.bar5VC.frameHeight = MEASBAR_HEIGHT;
-    }
-    else
-        self.bar5V.frame = CGRectMake(barWidth*4+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, 0, 0);
-    
-    barWidth = [[self.shareSettings.barRatios objectAtIndex:5] floatValue] * width / total;
-    
-    if (self.shareSettings.measureBarCount > 5)
-    {
-        if(self.shareSettings.showTrace == YES)
-            self.bar6V.frame = CGRectMake(barWidth*5+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
-        else
+        UIView *view = (UIView *)[self.barVs objectAtIndex:i];
+        UIViewController *vc = (UIViewController *)[self.barVCs objectAtIndex:i];
+        
+        if(self.shareSettings.useBarRatio == YES)
         {
-            if(self.shareSettings.menuDisplayed == YES)
-                self.bar6V.frame = CGRectMake(barWidth*5+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*0, MEASBAR_HEIGHT);
-            else
-                self.bar6V.frame = CGRectMake(barWidth*5+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, barWidth+VC_MARGIN*1, MEASBAR_HEIGHT);
-        }
-        self.bar6VC.frameWidth = barWidth;
-        self.bar6VC.frameHeight = MEASBAR_HEIGHT;
-    }
-    else
-        self.bar6V.frame = CGRectMake(barWidth*5+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*1, 0, 0, 0);
-    
-    if(self.shareSettings.showTrace == YES)
-    {
-        if(self.frameWidth == self.displayCVC.mainCVC.frameWidth)
-        {
-            self.bar7V.frame = CGRectMake(width+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*7, 0, MEASBAR_TRACE_WIDTH+VC_MARGIN*7, MEASBAR_HEIGHT);
-            self.bar7VC.frameWidth = MEASBAR_TRACE_WIDTH+VC_MARGIN*7;
-            self.bar7VC.frameHeight = MEASBAR_HEIGHT;
+            
+            
+            barWidth = width * (CGFloat)[self.shareSettings.barWidths objectAtIndex:i] / self.shareSettings.totalBarWidth;
         }
         else
         {
-            self.bar7V.frame = CGRectMake(width+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*7, 0, MEASBAR_TRACE_WIDTH+VC_MARGIN*6, MEASBAR_HEIGHT);
-            self.bar7VC.frameWidth = MEASBAR_TRACE_WIDTH+VC_MARGIN*6;
-            self.bar7VC.frameHeight = MEASBAR_HEIGHT;
+            barWidth = (CGFloat)[self.shareSettings.barWidths objectAtIndex:i];
         }
+        
+        view.frame = CGRectMake(prevWidth, 0, barWidth, BAR_HEIGHT);
+        vc.frameWidth = barWidth;
+        vc.frameHeight = BAR_HEIGHT;
+        
+        prevWidth = prevWidth + barWidth;
     }
-    else
-        self.bar7V.frame = CGRectMake(width+MEASBAR_MEAS_CTRL_WIDTH-VC_MARGIN*7, 0, 0, 0);
-    
 }
 
 -(void)adjustMeasureBarWidth:(BOOL)animated {
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
     
-    CGFloat width = 0.0f;
-    if(self.shareSettings.showTrace == YES)
-        width = self.previousFrameWidth - MEASBAR_TRACE_WIDTH - MEASBAR_MEAS_CTRL_WIDTH;
-    else
-        width = self.previousFrameWidth - MEASBAR_MEAS_CTRL_WIDTH;
-    [self setMeasureBar:width];
+    [self setBarsStartAndWidthAccordingTo:self.previousFrameWidth];
 
     layoutBlock = ^(void)
     {
-        CGFloat width = 0.0f;
-        if(self.shareSettings.showTrace == YES)
-            width = self.frameWidth - MEASBAR_TRACE_WIDTH - MEASBAR_MEAS_CTRL_WIDTH;
-        else
-            width = self.frameWidth - MEASBAR_MEAS_CTRL_WIDTH;
-        [self setMeasureBar:width];
+        [self setBarsStartAndWidthAccordingTo:self.frameWidth];
     };
     completionBlock = ^(BOOL finished){
     };

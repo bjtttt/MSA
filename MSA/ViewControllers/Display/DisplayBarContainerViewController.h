@@ -56,6 +56,8 @@
 -(void)setMeasureBar:(CGFloat)barWidth;
 -(void)adjustMeasureBarWidth:(BOOL)animated;
 
+-(void) setBarsStartAndWidth;
+
 /*
 -(void)setEachMeasureBar:(CGFloat)bar1Width;
 -(void)setEachMeasureBar:(CGFloat)bar1Width bar2Width:(CGFloat)bar2Width;

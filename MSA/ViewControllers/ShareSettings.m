@@ -243,11 +243,18 @@
             [self.barWidths insertObject:@1.0 atIndex:i];
         }
     }
+    
+    CGFloat totalWidth = 0.0;
+    for(int i=0;i<self.measureBarCount;i++)
+    {
+        totalWidth = totalWidth + [[self.barWidths objectAtIndex:i] floatValue];
+    }
+    self.totalBarWidth = totalWidth;
 }
 
 -(CGFloat) measureBarMenuPosition:(NSInteger)index forWidth:(CGFloat)width
 {
-    NSAssert(index >= 0 && index < self.measureBarCount, @"Index is %d.", index);
+    NSAssert(index >= 0 && index < self.measureBarCount, @"Index is %u.", index);
     NSAssert(width >= 0.0, @"Width is %f.", width);
     
     if(self.useBarRatio == YES)
