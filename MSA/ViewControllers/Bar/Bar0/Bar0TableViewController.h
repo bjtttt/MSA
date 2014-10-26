@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#include "ShareSettings.h"
+#import "ShareSettings.h"
+#import "MeasureBarDefinition.h"
 
 @class DisplayBarContainerViewController;
 
-@interface Bar0TableViewController : UITableViewController
+@interface Bar0TableViewController : UITableViewController <MeasureBarDefinition>
 
 @property (weak, nonatomic) IBOutlet DisplayBarContainerViewController *displayBarCVC;
 
@@ -19,8 +20,8 @@
 
 @property (nonatomic) BOOL isContinouse;
 
-@property (nonatomic) double frameWidth;
-@property (nonatomic) double frameHeight;
+@property (nonatomic) CGFloat frameWidth;
+@property (nonatomic) CGFloat frameHeight;
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
 

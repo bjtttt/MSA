@@ -19,6 +19,7 @@
 #import "Bar5TableViewController.h"
 #import "Bar6TableViewController.h"
 //#import "Bar7TableViewController.h"
+#import "MeasureBarDefinition.h"
 
 @interface DisplayBarContainerViewController ()
 
@@ -59,9 +60,9 @@
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar1VC"])
     {
-        self.bar0VC = (Bar0TableViewController *)segue.destinationViewController;
-        self.bar0VC.shareSettings = self.shareSettings;
-        self.bar0VC.displayBarCVC = self;
+        self.bar1VC = (Bar1TableViewController *)segue.destinationViewController;
+        self.bar1VC.shareSettings = self.shareSettings;
+        self.bar1VC.displayBarCVC = self;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar2VC"])
     {
@@ -131,7 +132,7 @@
         self.previousFrameWidth = self.frameWidth;
     }
     else
-        [self setMeasureBarAccordingToFrame];
+        [self setBarsStartAndWidthAccordingTo:self.frameWidth];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -151,18 +152,13 @@
     for(int i=0;i<self.shareSettings.measureBarCount; i++)
     {
         UIView *view = (UIView *)[self.barVs objectAtIndex:i];
-        UIViewController *vc = (UIViewController *)[self.barVCs objectAtIndex:i];
+        UIViewController<MeasureBarDefinition> *vc = (UIViewController<MeasureBarDefinition> *)[self.barVCs objectAtIndex:i];
         
+        CGFloat fv = [(NSNumber *)[self.shareSettings.barWidths objectAtIndex:i] floatValue];
         if(self.shareSettings.useBarRatio == YES)
-        {
-            
-            
-            barWidth = width * (CGFloat)[self.shareSettings.barWidths objectAtIndex:i] / self.shareSettings.totalBarWidth;
-        }
+            barWidth = width * fv / self.shareSettings.totalBarWidth;
         else
-        {
-            barWidth = (CGFloat)[self.shareSettings.barWidths objectAtIndex:i];
-        }
+            barWidth = fv;
         
         view.frame = CGRectMake(prevWidth, 0, barWidth, BAR_HEIGHT);
         vc.frameWidth = barWidth;

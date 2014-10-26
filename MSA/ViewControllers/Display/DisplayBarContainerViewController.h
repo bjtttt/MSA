@@ -52,11 +52,9 @@
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 
--(void)setMeasureBarAccordingToFrame;
--(void)setMeasureBar:(CGFloat)barWidth;
 -(void)adjustMeasureBarWidth:(BOOL)animated;
 
--(void) setBarsStartAndWidth;
+-(void) setBarsStartAndWidthAccordingTo:(CGFloat)width;
 
 /*
 -(void)setEachMeasureBar:(CGFloat)bar1Width;
