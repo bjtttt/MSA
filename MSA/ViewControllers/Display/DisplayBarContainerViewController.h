@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
+#import "MeasureBarContainerDefinition.h"
 
 @class DisplayContainerViewController;
 @class Bar0TableViewController;
@@ -19,7 +20,7 @@
 @class Bar6TableViewController;
 //@class Bar7TableViewController;
 
-@interface DisplayBarContainerViewController : UIViewController
+@interface DisplayBarContainerViewController : UIViewController <MeasureBarContainerDefinition>
 
 @property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
 
@@ -45,16 +46,16 @@
 
 @property (strong, nonatomic) NSMutableArray *barVCs;
 
-@property (nonatomic) double frameWidth;
-@property (nonatomic) double frameHeight;
+@property (nonatomic) CGFloat frameWidth;
+@property (nonatomic) CGFloat frameHeight;
 
-@property (nonatomic) double previousFrameWidth;
+@property (nonatomic) CGFloat previousFrameWidth;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 
 -(void)adjustMeasureBarWidth:(BOOL)animated;
 
--(void) setBarsStartAndWidthAccordingTo:(CGFloat)width;
+-(void)setBarsStartAndWidthAccordingTo:(CGFloat)width;
 
 /*
 -(void)setEachMeasureBar:(CGFloat)bar1Width;

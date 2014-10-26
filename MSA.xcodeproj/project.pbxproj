@@ -201,6 +201,7 @@
 		9A92057619FD23B200B846F8 /* Connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Connect.png; path = Images/32/Connect.png; sourceTree = "<group>"; };
 		9A92057719FD23B200B846F8 /* Disconnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Disconnect.png; path = Images/32/Disconnect.png; sourceTree = "<group>"; };
 		9A92057819FD23B200B846F8 /* UnknownConnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UnknownConnect.png; path = Images/32/UnknownConnect.png; sourceTree = "<group>"; };
+		9A92057C19FD2AA500B846F8 /* MeasureBarContainerDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeasureBarContainerDefinition.h; path = Data/Definition/MeasureBarContainerDefinition.h; sourceTree = "<group>"; };
 		9A953EDD19AD84E7005467A1 /* DisplayContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayContainerViewController.h; path = ViewControllers/DisplayContainerViewController.h; sourceTree = "<group>"; };
 		9A953EDE19AD84E7005467A1 /* DisplayContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayContainerViewController.m; path = ViewControllers/DisplayContainerViewController.m; sourceTree = "<group>"; };
 		9A953EE119AD84E7005467A1 /* MenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuContainerViewController.h; path = ViewControllers/MenuContainerViewController.h; sourceTree = "<group>"; };
@@ -676,6 +677,7 @@
 		9AC0BF6B19D6E14A00C8D9F2 /* Definition */ = {
 			isa = PBXGroup;
 			children = (
+				9A92057C19FD2AA500B846F8 /* MeasureBarContainerDefinition.h */,
 				9AC0BF6E19D6E1BD00C8D9F2 /* MeasureBarDefinition.h */,
 			);
 			name = Definition;
