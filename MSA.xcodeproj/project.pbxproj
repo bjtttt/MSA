@@ -52,6 +52,9 @@
 		9A79537619CD35BE009984A6 /* MeasureSelectNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79537419CD35BE009984A6 /* MeasureSelectNavigationViewController.m */; };
 		9A79537919CD3902009984A6 /* MeasureSelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A79537819CD3902009984A6 /* MeasureSelectTableViewController.m */; };
 		9A90589919C08EFD00B0B6AB /* MsgSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A90589819C08EFD00B0B6AB /* MsgSplitViewController.m */; };
+		9A92057919FD23B200B846F8 /* Connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A92057619FD23B200B846F8 /* Connect.png */; };
+		9A92057A19FD23B200B846F8 /* Disconnect.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A92057719FD23B200B846F8 /* Disconnect.png */; };
+		9A92057B19FD23B200B846F8 /* UnknownConnect.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A92057819FD23B200B846F8 /* UnknownConnect.png */; };
 		9A953EE419AD84E7005467A1 /* DisplayContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EDE19AD84E7005467A1 /* DisplayContainerViewController.m */; };
 		9A953EE619AD84E7005467A1 /* MenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EE219AD84E7005467A1 /* MenuContainerViewController.m */; };
 		9A953EE919ADCBB6005467A1 /* ShareSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A953EE819ADCBB6005467A1 /* ShareSettings.m */; };
@@ -67,7 +70,6 @@
 		9A9FFE8919C04FAB00F76D38 /* MsgInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9FFE8619C04FAB00F76D38 /* MsgInfo.png */; };
 		9A9FFE8A19C04FAB00F76D38 /* MsgWarning.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9FFE8719C04FAB00F76D38 /* MsgWarning.png */; };
 		9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AAE0EB919B466EF004D9146 /* MsgContainerViewController.m */; };
-		9AB67C1A19D43103004B664A /* Connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AB67C1919D43103004B664A /* Connect.png */; };
 		9ABEDCF219D83AF3004EB212 /* Continous.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ABEDCF119D83AF3004EB212 /* Continous.png */; };
 		9ABEDCF419D83E6D004EB212 /* Single.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ABEDCF319D83E6D004EB212 /* Single.png */; };
 		9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AC5448C19B1F73500A7F334 /* HideBar.png */; };
@@ -196,6 +198,9 @@
 		9A79537819CD3902009984A6 /* MeasureSelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasureSelectTableViewController.m; path = ViewControllers/Measure/MeasureSelectTableViewController.m; sourceTree = "<group>"; };
 		9A90589819C08EFD00B0B6AB /* MsgSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgSplitViewController.m; path = ViewControllers/Msg/MsgSplitViewController.m; sourceTree = "<group>"; };
 		9A90589A19C08F1000B0B6AB /* MsgSplitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MsgSplitViewController.h; path = ViewControllers/Msg/MsgSplitViewController.h; sourceTree = "<group>"; };
+		9A92057619FD23B200B846F8 /* Connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Connect.png; path = Images/32/Connect.png; sourceTree = "<group>"; };
+		9A92057719FD23B200B846F8 /* Disconnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Disconnect.png; path = Images/32/Disconnect.png; sourceTree = "<group>"; };
+		9A92057819FD23B200B846F8 /* UnknownConnect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UnknownConnect.png; path = Images/32/UnknownConnect.png; sourceTree = "<group>"; };
 		9A953EDD19AD84E7005467A1 /* DisplayContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayContainerViewController.h; path = ViewControllers/DisplayContainerViewController.h; sourceTree = "<group>"; };
 		9A953EDE19AD84E7005467A1 /* DisplayContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayContainerViewController.m; path = ViewControllers/DisplayContainerViewController.m; sourceTree = "<group>"; };
 		9A953EE119AD84E7005467A1 /* MenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuContainerViewController.h; path = ViewControllers/MenuContainerViewController.h; sourceTree = "<group>"; };
@@ -222,7 +227,6 @@
 		9A9FFE8719C04FAB00F76D38 /* MsgWarning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MsgWarning.png; path = Images/24/MsgWarning.png; sourceTree = "<group>"; };
 		9AAE0EB819B466EF004D9146 /* MsgContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgContainerViewController.h; path = ViewControllers/MsgContainerViewController.h; sourceTree = "<group>"; };
 		9AAE0EB919B466EF004D9146 /* MsgContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgContainerViewController.m; path = ViewControllers/MsgContainerViewController.m; sourceTree = "<group>"; };
-		9AB67C1919D43103004B664A /* Connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Connect.png; path = Images/24/Connect.png; sourceTree = "<group>"; };
 		9ABEDCF119D83AF3004EB212 /* Continous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Continous.png; path = Images/32/Continous.png; sourceTree = "<group>"; };
 		9ABEDCF319D83E6D004EB212 /* Single.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Single.png; path = Images/32/Single.png; sourceTree = "<group>"; };
 		9AC0BF6E19D6E1BD00C8D9F2 /* MeasureBarDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MeasureBarDefinition.h; path = Data/Definition/MeasureBarDefinition.h; sourceTree = "<group>"; };
@@ -428,6 +432,9 @@
 		9A5FDA7D19B5FB9200B3C300 /* 32 */ = {
 			isa = PBXGroup;
 			children = (
+				9A92057619FD23B200B846F8 /* Connect.png */,
+				9A92057719FD23B200B846F8 /* Disconnect.png */,
+				9A92057819FD23B200B846F8 /* UnknownConnect.png */,
 				9ABEDCF319D83E6D004EB212 /* Single.png */,
 				9ABEDCF119D83AF3004EB212 /* Continous.png */,
 				9A19791119D278AD008E87E1 /* AddInstrument.png */,
@@ -654,7 +661,6 @@
 		9A9C673319AD7081007D3248 /* 24 */ = {
 			isa = PBXGroup;
 			children = (
-				9AB67C1919D43103004B664A /* Connect.png */,
 				9A19794E19D28DDA008E87E1 /* Cancel.png */,
 				9A19794F19D28DDA008E87E1 /* OK.png */,
 				9A9FFE8519C04FAB00F76D38 /* MsgError.png */,
@@ -1013,9 +1019,11 @@
 				9ABEDCF419D83E6D004EB212 /* Single.png in Resources */,
 				9AC5448D19B1F73500A7F334 /* HideBar.png in Resources */,
 				9AE7CCD719D5991E005EAF1C /* Mode.storyboard in Resources */,
+				9A92057A19FD23B200B846F8 /* Disconnect.png in Resources */,
+				9A92057B19FD23B200B846F8 /* UnknownConnect.png in Resources */,
 				9A19791019D270EE008E87E1 /* ReturnRoot.png in Resources */,
-				9AB67C1A19D43103004B664A /* Connect.png in Resources */,
 				9A659BDF19B6BC2000C30CE2 /* ShowMenu.png in Resources */,
+				9A92057919FD23B200B846F8 /* Connect.png in Resources */,
 				9A7422A719BDDBC900A251ED /* MSAList.plist in Resources */,
 				9A19795119D28DDA008E87E1 /* OK.png in Resources */,
 				9A9FFE8919C04FAB00F76D38 /* MsgInfo.png in Resources */,
