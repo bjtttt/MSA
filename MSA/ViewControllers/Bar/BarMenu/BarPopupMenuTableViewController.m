@@ -1,5 +1,5 @@
 //
-//  BarMenuTableViewController.m
+//  BarPopupMenuTableViewController.m
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.
@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BarMenuTableViewController.h"
+#import "BarPopupMenuTableViewController.h"
 #import "PresetMenuContainerViewController.h"
 #import "PresetMenuWhiteGreenTableViewCell.h"
 #import "PresetMenuGreenWhiteTableViewCell.h"
@@ -15,11 +15,11 @@
 #import "PresetMenuDarkGrayWhiteTableViewCell.h"
 #import "MenuContainerViewController.h"
 
-@interface BarMenuTableViewController()
+@interface BarPopupMenuTableViewController()
 
 @end
 
-@implementation BarMenuTableViewController
+@implementation BarPopupMenuTableViewController
 
 static NSString *presetMenuCellTable_Green_White_Id = @"presetMenuTVC_Green_White";
 static NSString *presetMenuCellTable_DarkGray_Green_2Lines_Id = @"presetMenuTVC_DarkGray_Green_2Lines";

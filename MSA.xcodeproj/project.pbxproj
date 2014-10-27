@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A006C2819DC09FC0009EA82 /* BarMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A006C2719DC09FC0009EA82 /* BarMenuTableViewController.m */; };
+		9A006C2819DC09FC0009EA82 /* BarPopupMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A006C2719DC09FC0009EA82 /* BarPopupMenuTableViewController.m */; };
 		9A006C2C19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A006C2B19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.m */; };
 		9A006C3119DC3A220009EA82 /* SoftMenuBooleanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A006C2E19DC3A220009EA82 /* SoftMenuBooleanTableViewCell.m */; };
 		9A006C3219DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A006C3019DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m */; };
@@ -119,8 +119,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9A006C2619DC09FC0009EA82 /* BarMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarMenuTableViewController.h; path = ViewControllers/Bar/BarMenu/BarMenuTableViewController.h; sourceTree = "<group>"; };
-		9A006C2719DC09FC0009EA82 /* BarMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarMenuTableViewController.m; path = ViewControllers/Bar/BarMenu/BarMenuTableViewController.m; sourceTree = "<group>"; };
+		9A006C2619DC09FC0009EA82 /* BarPopupMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarPopupMenuTableViewController.h; path = ViewControllers/Bar/BarMenu/BarPopupMenuTableViewController.h; sourceTree = "<group>"; };
+		9A006C2719DC09FC0009EA82 /* BarPopupMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarPopupMenuTableViewController.m; path = ViewControllers/Bar/BarMenu/BarPopupMenuTableViewController.m; sourceTree = "<group>"; };
 		9A006C2A19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuNumericTableViewCell.h; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuNumericTableViewCell.h; sourceTree = "<group>"; };
 		9A006C2B19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuNumericTableViewCell.m; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuNumericTableViewCell.m; sourceTree = "<group>"; };
 		9A006C2D19DC3A220009EA82 /* SoftMenuBooleanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuBooleanTableViewCell.h; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuBooleanTableViewCell.h; sourceTree = "<group>"; };
@@ -317,8 +317,8 @@
 		9A006C2519DC09850009EA82 /* Bar */ = {
 			isa = PBXGroup;
 			children = (
-				9A006C2619DC09FC0009EA82 /* BarMenuTableViewController.h */,
-				9A006C2719DC09FC0009EA82 /* BarMenuTableViewController.m */,
+				9A006C2619DC09FC0009EA82 /* BarPopupMenuTableViewController.h */,
+				9A006C2719DC09FC0009EA82 /* BarPopupMenuTableViewController.m */,
 			);
 			name = Bar;
 			sourceTree = "<group>";
@@ -1084,7 +1084,7 @@
 				9A1C929D19CED2B400074EA6 /* SoftMenuTableViewController.m in Sources */,
 				9A6A20A119DF79170011B98A /* Bar0OneLineTableViewCell.m in Sources */,
 				9ACCD86219DEC29400A6ACD5 /* UIView+Screenshot.m in Sources */,
-				9A006C2819DC09FC0009EA82 /* BarMenuTableViewController.m in Sources */,
+				9A006C2819DC09FC0009EA82 /* BarPopupMenuTableViewController.m in Sources */,
 				9AE7CCED19D5A8A4005EAF1C /* Bar2TableViewController.m in Sources */,
 				9A345F4719D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m in Sources */,
 				9A726F6319C19FDE00CDF55D /* SystemDetailContainerViewController.m in Sources */,

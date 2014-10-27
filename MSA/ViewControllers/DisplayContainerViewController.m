@@ -62,7 +62,7 @@
     /*
     if([segue.identifier isEqualToString:@"presentSegueToBarCVC"])
     {
-        self.barCVC = (MeasureBarContainerViewController *)segue.destinationViewController;
+        self.barCVC = (DisplayBarContainerViewController *)segue.destinationViewController;
         self.barCVC.shareSettings = self.shareSettings;
         self.barCVC.displayCVC = self;
         

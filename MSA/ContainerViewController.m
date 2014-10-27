@@ -14,7 +14,7 @@
 #import "MeasureContainerViewController.h"
 #import "MeasureBarContainerViewController.h"
 #import "BlurViewController.h"
-#import "BarMenuTableViewController.h"
+#import "BarPopupMenuTableViewController.h"
 #import "UIView+Screenshot.h"
 
 @interface ContainerViewController ()
@@ -128,6 +128,7 @@
     barCVC.shareSettings = self.shareSettings;
     barCVC.displayCVC = self.displayCVC;
     self.shareSettings.barCVC = barCVC;
+    self.barCVC = barCVC;
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -186,7 +187,7 @@
     }
     if([segue.identifier isEqualToString:@"embedSegueToBarMenuTVC"])
     {
-        self.barMenuTVC = (BarMenuTableViewController *)segue.destinationViewController;
+        self.barMenuTVC = (BarPopupMenuTableViewController *)segue.destinationViewController;
         self.barMenuTVC.shareSettings = self.shareSettings;
         self.barMenuTVC.mainCVC = self;
         
@@ -302,6 +303,9 @@
             self.displayCVC.frameHeight = self.frameHeight;
             self.displayCVC.barCVC.frameWidth = self.frameWidth - MENU_WIDTH;
             
+            self.barCVC.frameWidth = self.frameWidth - MENU_WIDTH;
+            [self.barCVC adjustMeasureBarWidth:YES];
+            
             // In fact, it is not necessary.
             // It is to keep the same as Bar Popup Menu
             [self.displayView setUserInteractionEnabled:NO];
@@ -323,6 +327,9 @@
             self.displayCVC.frameHeight = self.frameHeight;
             self.displayCVC.barCVC.frameWidth = self.frameWidth;
             
+            self.barCVC.frameWidth = self.frameWidth;
+            [self.barCVC adjustMeasureBarWidth:YES];
+
             // In fact, it is not necessary.
             // It is to keep the same as Bar Popup Menu
             [self.displayView setUserInteractionEnabled:NO];

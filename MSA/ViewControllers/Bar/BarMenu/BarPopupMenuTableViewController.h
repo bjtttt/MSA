@@ -1,5 +1,5 @@
 //
-//  BarMenuTableViewController.h
+//  BarPopupMenuTableViewController.h
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.
@@ -11,7 +11,7 @@
 
 @class ContainerViewController;
 
-@interface BarMenuTableViewController : UITableViewController
+@interface BarPopupMenuTableViewController : UITableViewController
 
 @property (weak, nonatomic) IBOutlet ContainerViewController *mainCVC;
 
