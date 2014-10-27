@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--Display Bar Container View Controller-->
+        <!--Measure Bar Container View Controller-->
         <scene sceneID="8fB-4k-ZSg">
             <objects>
-                <viewController storyboardIdentifier="displayBarCVC" automaticallyAdjustsScrollViewInsets="NO" id="ZJF-Pj-cMM" customClass="DisplayBarContainerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="displayBarCVC" automaticallyAdjustsScrollViewInsets="NO" id="ZJF-Pj-cMM" customClass="MeasureBarContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hmE-SI-uzd"/>
                         <viewControllerLayoutGuide type="bottom" id="qlv-hs-odw"/>

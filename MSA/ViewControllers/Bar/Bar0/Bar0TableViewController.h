@@ -10,11 +10,11 @@
 #import "ShareSettings.h"
 #import "MeasureBarDefinition.h"
 
-@class DisplayBarContainerViewController;
+@class MeasureBarContainerViewController;
 
 @interface Bar0TableViewController : UITableViewController <MeasureBarDefinition>
 
-@property (weak, nonatomic) IBOutlet DisplayBarContainerViewController *displayBarCVC;
+@property (weak, nonatomic) IBOutlet MeasureBarContainerViewController *displayBarCVC;
 
 @property (weak, nonatomic) IBOutlet UIImageView *singleContinousIV;
 

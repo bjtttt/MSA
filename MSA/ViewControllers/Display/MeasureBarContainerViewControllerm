@@ -1,5 +1,5 @@
 //
-//  DisplayBarContainerViewController.m
+//  MeasureBarContainerViewController.m
 //  MSA
 //
 //  Created by GUO Zhitao on 14-8-26.
@@ -10,7 +10,7 @@
 #import "ShareSettings.h"
 #import "ContainerViewController.h"
 #import "DisplayContainerViewController.h"
-#import "DisplayBarContainerViewController.h"
+#import "MeasureBarContainerViewController.h"
 #import "Bar0TableViewController.h"
 #import "Bar1TableViewController.h"
 #import "Bar2TableViewController.h"
@@ -21,11 +21,11 @@
 //#import "Bar7TableViewController.h"
 #import "MeasureBarDefinition.h"
 
-@interface DisplayBarContainerViewController ()
+@interface MeasureBarContainerViewController ()
 
 @end
 
-@implementation DisplayBarContainerViewController
+@implementation MeasureBarContainerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

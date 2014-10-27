@@ -12,7 +12,7 @@
 #import "DisplayContainerViewController.h"
 #import "MenuContainerViewController.h"
 #import "MeasureContainerViewController.h"
-#import "DisplayBarContainerViewController.h"
+#import "MeasureBarContainerViewController.h"
 #import "BlurViewController.h"
 #import "BarMenuTableViewController.h"
 #import "UIView+Screenshot.h"
@@ -122,7 +122,7 @@
     
     UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
     self.shareSettings.modeStoryboard = modeUIS;
-    DisplayBarContainerViewController *barCVC = (DisplayBarContainerViewController *)[modeUIS instantiateViewControllerWithIdentifier:@"displayBarCVC"];
+    MeasureBarContainerViewController *barCVC = (MeasureBarContainerViewController *)[modeUIS instantiateViewControllerWithIdentifier:@"displayBarCVC"];
     barCVC.frameWidth = self.frameWidth;
     barCVC.frameHeight = BAR_HEIGHT;
     barCVC.shareSettings = self.shareSettings;

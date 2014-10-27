@@ -1,5 +1,5 @@
 //
-//  DisplayBarContainerViewController.h
+//  MeasureBarContainerViewController.h
 //  MSA
 //
 //  Created by GUO Zhitao on 14-8-26.
@@ -20,7 +20,7 @@
 @class Bar6TableViewController;
 //@class Bar7TableViewController;
 
-@interface DisplayBarContainerViewController : UIViewController <MeasureBarContainerDefinition>
+@interface MeasureBarContainerViewController : UIViewController <MeasureBarContainerDefinition>
 
 @property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
 
