@@ -27,7 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIView *msgView;
 @property (weak, nonatomic) IBOutlet UIView *systemView;
 @property (weak, nonatomic) IBOutlet UIView *blurView;
-@property (weak, nonatomic) IBOutlet UIView *barView;
+@property (weak, nonatomic) IBOutlet UIView *barPopupMenuView;
 
 @property (strong, nonatomic) IBOutlet UIView *mainView;
 
@@ -39,7 +39,7 @@
 @property (weak, nonatomic) IBOutlet BlurViewController *blurVC;
 @property (weak, nonatomic) IBOutlet BarPopupMenuTableViewController *barPMenuTVC;
 
-@property (weak, nonatomic) MeasureBarContainerViewController *barCVC;
+@property (strong, nonatomic) MeasureBarContainerViewController *barCVC;
 
 @property (weak, nonatomic) UIStoryboard *modeStoryboard;
 //@property (weak, nonatomic) UIStoryboard *measBarStoryboard;

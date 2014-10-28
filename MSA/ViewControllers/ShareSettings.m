@@ -252,7 +252,7 @@
     self.totalBarWidth = totalWidth;
 }
 
--(CGFloat) measureBarMenuPosition:(NSInteger)index forWidth:(CGFloat)width
+-(CGFloat) measureBarPopupMenuPosition:(NSInteger)index forWidth:(CGFloat)width
 {
     NSAssert(index >= 0 && index < self.measureBarCount, @"Index is %u.", index);
     NSAssert(width >= 0.0, @"Width is %f.", width);

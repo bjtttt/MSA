@@ -94,6 +94,10 @@
 }
 
 - (void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated {
+    [self showHidePresetMenu:showPresetMenu animated:animated inTime:0.25];
+}
+
+- (void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated inTime:(CGFloat)inTime {
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
 
@@ -115,7 +119,7 @@
     
     if(animated)
     {
-        [UIView animateWithDuration:0.25
+        [UIView animateWithDuration:inTime
                         //delay:0
                         //options:UIViewAnimationOptionLayoutSubviews
                          animations:layoutBlock

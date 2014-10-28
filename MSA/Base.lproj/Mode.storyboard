@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJF-Pj-cMM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ZJF-Pj-cMM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
@@ -8,54 +8,57 @@
         <scene sceneID="8fB-4k-ZSg">
             <objects>
                 <viewController storyboardIdentifier="measureBarCVC" automaticallyAdjustsScrollViewInsets="NO" id="ZJF-Pj-cMM" customClass="MeasureBarContainerViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hmE-SI-uzd"/>
-                        <viewControllerLayoutGuide type="bottom" id="qlv-hs-odw"/>
-                    </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kIl-NV-POs">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ho6-xa-8wo" userLabel="Measure Bar 0 Container View">
+                            <containerView opaque="NO" contentMode="scaleToFill" id="ho6-xa-8wo" userLabel="Measure Bar 0 Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="ngl-Ab-5eN" kind="embed" identifier="embedSegueToBar0VC" id="XiP-w4-WC1"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qgv-Yy-LFc" userLabel="Measure Bar 2 Container View">
+                            <containerView opaque="NO" contentMode="scaleToFill" id="qgv-Yy-LFc" userLabel="Measure Bar 2 Container View">
                                 <rect key="frame" x="200" y="0.0" width="100" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="Ghj-dm-tUF" kind="embed" identifier="embedSegueToBar2VC" id="SPG-0q-dLc"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mRq-B8-UhR" userLabel="Measure Bar 3 Container View">
+                            <containerView opaque="NO" contentMode="scaleToFill" id="mRq-B8-UhR" userLabel="Measure Bar 3 Container View">
                                 <rect key="frame" x="299" y="0.0" width="100" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="tOM-uW-m95" kind="embed" identifier="embedSegueToBar3VC" id="y1u-Lb-qaf"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3es-ZX-Aaa" userLabel="Measure Bar 4 Container View">
+                            <containerView opaque="NO" contentMode="scaleToFill" id="3es-ZX-Aaa" userLabel="Measure Bar 4 Container View">
                                 <rect key="frame" x="399" y="0.0" width="100" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="Sy4-T5-bMK" kind="embed" identifier="embedSegueToBar4VC" id="w4e-m4-tzz"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CNr-1T-lVt" userLabel="Measure Bar 5 Container View">
+                            <containerView opaque="NO" contentMode="scaleToFill" id="CNr-1T-lVt" userLabel="Measure Bar 5 Container View">
                                 <rect key="frame" x="499" y="0.0" width="100" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="foO-BB-KAo" kind="embed" identifier="embedSegueToBar5VC" id="Cvg-TQ-wJB"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1nQ-IQ-0Yg" userLabel="Measure Bar 6 Container View">
-                                <rect key="frame" x="599" y="0.0" width="100" height="120"/>
-                                <connections>
-                                    <segue destination="jAd-5O-v4c" kind="embed" identifier="embedSegueToBar6VC" id="5OH-Og-tdB"/>
-                                </connections>
-                            </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NRB-as-DYH" userLabel="Measure Bar 1 Container View">
+                            <containerView opaque="NO" contentMode="scaleToFill" id="NRB-as-DYH" userLabel="Measure Bar 1 Container View">
                                 <rect key="frame" x="100" y="0.0" width="100" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="cYg-Dd-t98" kind="embed" identifier="embedSegueToBar1VC" id="gZC-gk-n5R"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="1nQ-IQ-0Yg" userLabel="Measure Bar 6 Container View">
+                                <rect key="frame" x="599" y="0.0" width="100" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="jAd-5O-v4c" kind="embed" identifier="embedSegueToBar6VC" id="5OH-Og-tdB"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -76,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEy-PU-pi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1388" y="-1129"/>
+            <point key="canvasLocation" x="740.26666666666665" y="-1068.7866666666666"/>
         </scene>
         <!--Bar 0 Table View Controller-->
         <scene sceneID="mNf-EB-wqa">
@@ -92,8 +95,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZDU-ns-web" id="fap-sf-I4j">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lbV-8s-9xL">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="lbV-8s-9xL">
                                             <rect key="frame" x="68" y="0.0" width="32" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -106,8 +110,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UjF-kr-aN6" id="aIz-Tp-Yon">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vih-iN-FFg">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vih-iN-FFg">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -127,7 +132,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCI-Hd-wpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2106" y="-1651"/>
+            <point key="canvasLocation" x="1123.2" y="-1562.9466666666667"/>
         </scene>
         <!--Bar 1 Table View Controller-->
         <scene sceneID="b5Q-C4-fQ1">
@@ -145,7 +150,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QbL-EI-VYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2326" y="-1651"/>
+            <point key="canvasLocation" x="1240.5333333333333" y="-1562.9466666666667"/>
         </scene>
         <!--Bar 2 Table View Controller-->
         <scene sceneID="A65-eH-i4M">
@@ -163,7 +168,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eux-bf-K6r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2106" y="-1365"/>
+            <point key="canvasLocation" x="1123.2" y="-1292.2"/>
         </scene>
         <!--Bar 4 Table View Controller-->
         <scene sceneID="Vxd-yr-jDl">
@@ -181,7 +186,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wK2-jz-1my" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2106" y="-1043"/>
+            <point key="canvasLocation" x="1123.2" y="-987.37333333333333"/>
         </scene>
         <!--Bar 5 Table View Controller-->
         <scene sceneID="uyC-BM-MUZ">
@@ -199,7 +204,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbh-z2-uQX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2326" y="-1043"/>
+            <point key="canvasLocation" x="1240.5333333333333" y="-987.37333333333333"/>
         </scene>
         <!--Bar 3 Table View Controller-->
         <scene sceneID="weR-i6-SiR">
@@ -217,7 +222,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qNc-ao-4zq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2326" y="-1365"/>
+            <point key="canvasLocation" x="1240.5333333333333" y="-1292.2"/>
         </scene>
         <!--Bar 6 Table View Controller-->
         <scene sceneID="56F-vs-QMr">
@@ -235,7 +240,15 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X1z-80-YnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2106" y="-754"/>
+            <point key="canvasLocation" x="1123.2" y="-713.78666666666663"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
+    </simulatedMetricsContainer>
 </document>

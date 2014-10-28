@@ -36,7 +36,7 @@
     for(UIView *bv in self.barVs)
     {
         // Border Radius
-        [bv.layer setCornerRadius:LIGHT_CORNER_RADIUS];
+        //[bv.layer setCornerRadius:LIGHT_CORNER_RADIUS];
         [bv.layer setMasksToBounds:YES];
         //[self.measureView setClipsToBounds:YES];
         // Border
@@ -159,6 +159,8 @@
             barWidth = width * fv / self.shareSettings.totalBarWidth;
         else
             barWidth = fv;
+        
+        NSLog(@"Bar Index %d : Width %f", i, barWidth);
         
         view.frame = CGRectMake(prevWidth, 0, barWidth, BAR_HEIGHT);
         vc.frameWidth = barWidth;

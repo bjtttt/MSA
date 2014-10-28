@@ -52,7 +52,7 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="barView" destination="Pg0-Tj-Oce" id="tgA-ev-Gl3"/>
+                        <outlet property="barPopupMenuView" destination="Pg0-Tj-Oce" id="tgA-ev-Gl3"/>
                         <outlet property="blurView" destination="rMo-M9-Qwt" id="4b7-Nw-iTQ"/>
                         <outlet property="displayView" destination="vId-ub-NnX" id="ujP-uw-bQ7"/>
                         <outlet property="mainView" destination="ex4-JV-8sr" id="dRC-bq-Vwv"/>
