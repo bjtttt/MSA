@@ -94,7 +94,7 @@
 		9ACCD85419DEA1A000A6ACD5 /* GPUImageLuminanceRangeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCD85319DEA1A000A6ACD5 /* GPUImageLuminanceRangeFilter.m */; };
 		9ACCD86219DEC29400A6ACD5 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACCD86119DEC29400A6ACD5 /* UIView+Screenshot.m */; };
 		9AD4A4E619DD860B00FE1914 /* BlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD4A4E519DD860B00FE1914 /* BlurViewController.m */; };
-		9AE0AFB919C2B55C008544AC /* MeasureBarContainerViewControllerm in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0AFB819C2B55C008544AC /* MeasureBarContainerViewControllerm */; };
+		9AE0AFB919C2B55C008544AC /* MeasureBarContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0AFB819C2B55C008544AC /* MeasureBarContainerViewController.m */; };
 		9AE0AFBC19C2B626008544AC /* DisplayTracesContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE0AFBB19C2B626008544AC /* DisplayTracesContainerViewController.m */; };
 		9AE7CCD719D5991E005EAF1C /* Mode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7CCD519D5991E005EAF1C /* Mode.storyboard */; };
 		9AE7CCE719D5A87B005EAF1C /* Bar0TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7CCE619D5A87B005EAF1C /* Bar0TableViewController.m */; };
@@ -273,7 +273,7 @@
 		9AD4A4E519DD860B00FE1914 /* BlurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlurViewController.m; path = ViewControllers/BlurViewController.m; sourceTree = "<group>"; };
 		9AD4A4E719DD862000FE1914 /* BlurViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BlurViewController.h; path = ViewControllers/BlurViewController.h; sourceTree = "<group>"; };
 		9AE0AFB719C2B55C008544AC /* MeasureBarContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeasureBarContainerViewController.h; path = ViewControllers/Display/MeasureBarContainerViewController.h; sourceTree = "<group>"; };
-		9AE0AFB819C2B55C008544AC /* MeasureBarContainerViewControllerm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MeasureBarContainerViewControllerm; path = ViewControllers/Display/MeasureBarContainerViewControllerm; sourceTree = "<group>"; };
+		9AE0AFB819C2B55C008544AC /* MeasureBarContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasureBarContainerViewController.m; path = ViewControllers/Display/MeasureBarContainerViewController.m; sourceTree = "<group>"; };
 		9AE0AFBA19C2B626008544AC /* DisplayTracesContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DisplayTracesContainerViewController.h; path = ViewControllers/Display/DisplayTracesContainerViewController.h; sourceTree = "<group>"; };
 		9AE0AFBB19C2B626008544AC /* DisplayTracesContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DisplayTracesContainerViewController.m; path = ViewControllers/Display/DisplayTracesContainerViewController.m; sourceTree = "<group>"; };
 		9AE7CCD619D5991E005EAF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Mode.storyboard; sourceTree = "<group>"; };
@@ -794,7 +794,7 @@
 			isa = PBXGroup;
 			children = (
 				9AE0AFB719C2B55C008544AC /* MeasureBarContainerViewController.h */,
-				9AE0AFB819C2B55C008544AC /* MeasureBarContainerViewControllerm */,
+				9AE0AFB819C2B55C008544AC /* MeasureBarContainerViewController.m */,
 				9A6A209B19DF77C20011B98A /* CellStyle */,
 				9AE7CCDD19D5A6C5005EAF1C /* Bar0 */,
 				9AE7CCDE19D5A6CC005EAF1C /* Bar1 */,
@@ -1073,7 +1073,7 @@
 				9ACCD83919DEA07600A6ACD5 /* GPUImageFramebuffer.m in Sources */,
 				9A6A209E19DF78990011B98A /* Bar0SingleContinousTableViewCell.m in Sources */,
 				9ACCD84A19DEA14900A6ACD5 /* GPUImageGaussianBlurFilter.m in Sources */,
-				9AE0AFB919C2B55C008544AC /* MeasureBarContainerViewControllerm in Sources */,
+				9AE0AFB919C2B55C008544AC /* MeasureBarContainerViewController.m in Sources */,
 				9AE7CCF019D5A8BA005EAF1C /* Bar3TableViewController.m in Sources */,
 				9A953EE619AD84E7005467A1 /* MenuContainerViewController.m in Sources */,
 				9ACA2EB919BD4651005542B5 /* MsgMasterTableViewController.m in Sources */,

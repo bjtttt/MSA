@@ -122,13 +122,14 @@
     
     UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
     self.shareSettings.modeStoryboard = modeUIS;
-    MeasureBarContainerViewController *barCVC = (MeasureBarContainerViewController *)[modeUIS instantiateViewControllerWithIdentifier:@"displayBarCVC"];
-    barCVC.frameWidth = self.frameWidth;
-    barCVC.frameHeight = BAR_HEIGHT;
-    barCVC.shareSettings = self.shareSettings;
-    barCVC.displayCVC = self.displayCVC;
-    self.shareSettings.barCVC = barCVC;
-    self.barCVC = barCVC;
+    MeasureBarContainerViewController *mbarCVC = (MeasureBarContainerViewController *)[modeUIS instantiateViewControllerWithIdentifier:@"measureBarCVC"];
+    NSAssert([mbarCVC isKindOfClass:[MeasureBarContainerViewController class]], @"mbarCVC should be MeasureBarContainerViewController.");
+    mbarCVC.frameWidth = self.frameWidth;
+    mbarCVC.frameHeight = BAR_HEIGHT;
+    mbarCVC.shareSettings = self.shareSettings;
+    mbarCVC.displayCVC = self.displayCVC;
+    self.shareSettings.barCVC = mbarCVC;
+    self.barCVC = mbarCVC;
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -187,12 +188,12 @@
     }
     if([segue.identifier isEqualToString:@"embedSegueToBarMenuTVC"])
     {
-        self.barMenuTVC = (BarPopupMenuTableViewController *)segue.destinationViewController;
-        self.barMenuTVC.shareSettings = self.shareSettings;
-        self.barMenuTVC.mainCVC = self;
+        self.barPMenuTVC = (BarPopupMenuTableViewController *)segue.destinationViewController;
+        self.barPMenuTVC.shareSettings = self.shareSettings;
+        self.barPMenuTVC.mainCVC = self;
         
-        self.barMenuTVC.frameWidth = MENU_WIDTH;
-        self.barMenuTVC.frameHeight = BAR_MENU_HEIGHT;
+        self.barPMenuTVC.frameWidth = MENU_WIDTH;
+        self.barPMenuTVC.frameHeight = BAR_MENU_HEIGHT;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBlurVC"])
     {

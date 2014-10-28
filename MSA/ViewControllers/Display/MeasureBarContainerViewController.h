@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
-#import "MeasureBarContainerDefinition.h"
+//#import "MeasureBarContainerDefinition.h"
 
 @class DisplayContainerViewController;
 @class Bar0TableViewController;
@@ -20,7 +20,7 @@
 @class Bar6TableViewController;
 //@class Bar7TableViewController;
 
-@interface MeasureBarContainerViewController : UIViewController <MeasureBarContainerDefinition>
+@interface MeasureBarContainerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
 

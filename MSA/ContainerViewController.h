@@ -37,7 +37,7 @@
 @property (weak, nonatomic) IBOutlet SystemContainerViewController *systemCVC;
 @property (weak, nonatomic) IBOutlet MeasureContainerViewController *measureCVC;
 @property (weak, nonatomic) IBOutlet BlurViewController *blurVC;
-@property (weak, nonatomic) IBOutlet BarPopupMenuTableViewController *barMenuTVC;
+@property (weak, nonatomic) IBOutlet BarPopupMenuTableViewController *barPMenuTVC;
 
 @property (weak, nonatomic) MeasureBarContainerViewController *barCVC;
 

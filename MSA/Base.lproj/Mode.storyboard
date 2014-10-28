@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJF-Pj-cMM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJF-Pj-cMM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
         <!--Measure Bar Container View Controller-->
         <scene sceneID="8fB-4k-ZSg">
             <objects>
-                <viewController storyboardIdentifier="displayBarCVC" automaticallyAdjustsScrollViewInsets="NO" id="ZJF-Pj-cMM" customClass="MeasureBarContainerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="measureBarCVC" automaticallyAdjustsScrollViewInsets="NO" id="ZJF-Pj-cMM" customClass="MeasureBarContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hmE-SI-uzd"/>
                         <viewControllerLayoutGuide type="bottom" id="qlv-hs-odw"/>
@@ -87,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barMenuTVC_Single_Continous" id="ZDU-ns-web" userLabel="barMenuTVC_Single_Continous" customClass="Bar0SingleContinousTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barPMenuTVC_Single_Continous" id="ZDU-ns-web" userLabel="barPMenuTVC_Single_Continous" customClass="Bar0SingleContinousTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZDU-ns-web" id="fap-sf-I4j">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -101,7 +101,7 @@
                                     <outlet property="singleContinousImgV" destination="lbV-8s-9xL" id="VG6-65-uRT"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barMenuTVC_One_Line" id="UjF-kr-aN6" userLabel="barMenuTVC_One_Line" customClass="Bar0OneLineTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barPMenuTVC_One_Line" id="UjF-kr-aN6" userLabel="barPMenuTVC_One_Line" customClass="Bar0OneLineTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UjF-kr-aN6" id="aIz-Tp-Yon">
                                     <autoresizingMask key="autoresizingMask"/>
