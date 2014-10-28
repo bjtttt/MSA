@@ -130,6 +130,16 @@
     mbarCVC.displayCVC = self.displayCVC;
     self.shareSettings.barCVC = mbarCVC;
     self.barCVC = mbarCVC;
+
+    // Border Radius
+    //[self.menuView.layer setCornerRadius:LIGHT_CORNER_RADIUS];
+    [self.menuView.layer setMasksToBounds:YES];
+    //[self.menuView setClipsToBounds:YES];
+    // Border
+    [self.menuView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self.menuView.layer setBorderWidth:NORMAL_BORDER_WIDTH];
+    // Background
+    //[self.menuView.layer setBackgroundColor:[UIColor darkGrayColor].CGColor];
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -330,7 +340,7 @@
                 self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, (self.frameHeight-MEAS_HEIGHT)/2, MEAS_WIDTH, MEAS_HEIGHT);
                 self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth-MENU_WIDTH, self.frameHeight);
-                self.barPopupMenuView.frame = CGRectMake(barMenuPosition, NAVBAR_HEIGHT+BAR_HEIGHT, MENU_WIDTH, 0);
+                self.barPopupMenuView.frame = CGRectMake(barMenuPosition, NAVBAR_HEIGHT+BAR_HEIGHT, 0, 0);
             };
             completionBlock = ^(BOOL finished){
             };
@@ -351,7 +361,7 @@
                 self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, (self.frameHeight-MEAS_HEIGHT)/2, MEAS_WIDTH, MEAS_HEIGHT);
                 self.menuView.frame = CGRectMake(self.frameWidth+VC_MARGIN, 0, MENU_WIDTH, self.frameHeight);
                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
-                self.barPopupMenuView.frame = CGRectMake(barMenuPosition, NAVBAR_HEIGHT+BAR_HEIGHT, MENU_WIDTH, 0);
+                self.barPopupMenuView.frame = CGRectMake(barMenuPosition, NAVBAR_HEIGHT+BAR_HEIGHT, 0, 0);
             };
             completionBlock = ^(BOOL finished){
             };

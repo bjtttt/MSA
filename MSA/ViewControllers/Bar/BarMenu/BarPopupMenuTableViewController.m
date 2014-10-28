@@ -14,6 +14,7 @@
 #import "PresetMenuDarkGrayGreen2LinesTableViewCell.h"
 #import "PresetMenuDarkGrayWhiteTableViewCell.h"
 #import "MenuContainerViewController.h"
+#import "ContainerViewController.h"
 
 @interface BarPopupMenuTableViewController()
 
@@ -62,6 +63,18 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
     
     NSLog(@"\nPresetMenu Table View Controller - viewDidAppear:\nx = %f\ny = %f\nwidth = %f\nheight = %f",
           self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+}
+
+-(BOOL)resignFirstResponder
+{
+    self.shareSettings.barTapped = !self.shareSettings.barTapped;
+	    
+    return [super resignFirstResponder];
+}
+
+-(BOOL)becomeFirstResponder
+{
+    return [super becomeFirstResponder];
 }
 
 #pragma mark - Table View

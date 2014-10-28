@@ -263,7 +263,7 @@
         CGFloat wholeRatios = 0.0;
         for (NSInteger i=0;i<self.measureBarCount;i++)
         {
-            if(i <= index)
+            if(i < index)
                 ratios = ratios + [[self.barWidths objectAtIndex:i] floatValue];
             wholeRatios = wholeRatios + [[self.barWidths objectAtIndex:i] floatValue];
         }
@@ -273,7 +273,7 @@
     else
     {
         CGFloat ratios = 0.0;
-        for (NSInteger i=0;i<=index;i++)
+        for (NSInteger i=0;i<index;i++)
         {
             ratios = ratios + [[self.barWidths objectAtIndex:i] floatValue];
         }
