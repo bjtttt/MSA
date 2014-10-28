@@ -20,4 +20,7 @@
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
 
+//-(BOOL)resignFirstResponder;
+//-(BOOL)becomeFirstResponder;
+
 @end

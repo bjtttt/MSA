@@ -69,7 +69,7 @@ static NSString *measureSelectCellTable_MultiView_Id = @"measureSelectCellTable_
     NSInteger row = [indexPath row];
     UIKeyMeasure *meas = [self.shareSettings.measureView objectAtIndex:row];
     NSMutableArray *views = meas.views;
-    int viewCount = [views count];
+    NSUInteger viewCount = [views count];
     UITableViewCell *cell;
     if(viewCount > 0)
     {

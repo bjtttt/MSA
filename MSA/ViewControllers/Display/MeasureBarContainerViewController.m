@@ -57,42 +57,49 @@
         self.bar0VC = (Bar0TableViewController *)segue.destinationViewController;
         self.bar0VC.shareSettings = self.shareSettings;
         self.bar0VC.displayBarCVC = self;
+        self.bar0VC.barPopupMenuTVC = self.barPopupMenuTVC;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar1VC"])
     {
         self.bar1VC = (Bar1TableViewController *)segue.destinationViewController;
         self.bar1VC.shareSettings = self.shareSettings;
         self.bar1VC.displayBarCVC = self;
+        self.bar1VC.barPopupMenuTVC = self.barPopupMenuTVC;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar2VC"])
     {
         self.bar2VC = (Bar2TableViewController *)segue.destinationViewController;
         self.bar2VC.shareSettings = self.shareSettings;
         self.bar2VC.displayBarCVC = self;
+        self.bar2VC.barPopupMenuTVC = self.barPopupMenuTVC;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar3VC"])
     {
         self.bar3VC = (Bar3TableViewController *)segue.destinationViewController;
         self.bar3VC.shareSettings = self.shareSettings;
         self.bar3VC.displayBarCVC = self;
+        self.bar3VC.barPopupMenuTVC = self.barPopupMenuTVC;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar4VC"])
     {
         self.bar4VC = (Bar4TableViewController *)segue.destinationViewController;
         self.bar4VC.shareSettings = self.shareSettings;
         self.bar4VC.displayBarCVC = self;
+        self.bar4VC.barPopupMenuTVC = self.barPopupMenuTVC;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar5VC"])
     {
         self.bar5VC = (Bar5TableViewController *)segue.destinationViewController;
         self.bar5VC.shareSettings = self.shareSettings;
         self.bar5VC.displayBarCVC = self;
+        self.bar5VC.barPopupMenuTVC = self.barPopupMenuTVC;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar6VC"])
     {
         self.bar6VC = (Bar6TableViewController *)segue.destinationViewController;
         self.bar6VC.shareSettings = self.shareSettings;
         self.bar6VC.displayBarCVC = self;
+        self.bar6VC.barPopupMenuTVC = self.barPopupMenuTVC;
     }
     /*
     if([segue.identifier isEqualToString:@"embedSegueToBar7VC"])
@@ -102,6 +109,17 @@
         self.bar7VC.displayBarCVC = self;
     }
     */
+}
+
+-(void)setBarPopupMenuViewController:(BarPopupMenuTableViewController *)barPMenuTVC
+{
+    self.bar0VC.barPopupMenuTVC = self.barPopupMenuTVC;
+    self.bar1VC.barPopupMenuTVC = self.barPopupMenuTVC;
+    self.bar2VC.barPopupMenuTVC = self.barPopupMenuTVC;
+    self.bar3VC.barPopupMenuTVC = self.barPopupMenuTVC;
+    self.bar4VC.barPopupMenuTVC = self.barPopupMenuTVC;
+    self.bar5VC.barPopupMenuTVC = self.barPopupMenuTVC;
+    self.bar6VC.barPopupMenuTVC = self.barPopupMenuTVC;
 }
 
 -(void)viewWillAppear:(BOOL)animated {

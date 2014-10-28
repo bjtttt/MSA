@@ -130,6 +130,7 @@
     mbarCVC.displayCVC = self.displayCVC;
     self.shareSettings.barCVC = mbarCVC;
     self.barCVC = mbarCVC;
+    //mbarCVC.barPopupMenuTVC = self.barPMenuTVC;
 
     // Border Radius
     //[self.menuView.layer setCornerRadius:LIGHT_CORNER_RADIUS];
@@ -204,6 +205,9 @@
         
         self.barPMenuTVC.frameWidth = MENU_WIDTH;
         self.barPMenuTVC.frameHeight = BAR_MENU_HEIGHT;
+        
+        self.barCVC.barPopupMenuTVC = self.barPMenuTVC;
+        [self.barCVC setBarPopupMenuViewController:self.barPMenuTVC];
     }
     if([segue.identifier isEqualToString:@"embedSegueToBlurVC"])
     {

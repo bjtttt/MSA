@@ -74,7 +74,13 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
 
 -(BOOL)becomeFirstResponder
 {
-    return [super becomeFirstResponder];
+    //BOOL bv = [self isFirstResponder];
+    
+    //BOOL bvRet = [super becomeFirstResponder];
+    
+    //bv = [self isFirstResponder];
+    
+    return [super becomeFirstResponder];//bvRet;
 }
 
 #pragma mark - Table View

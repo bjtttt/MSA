@@ -208,14 +208,14 @@
     NSDictionary *settingsMeasureBar = (NSDictionary *)[settingsInfo objectForKey:@"measureBar"];
     
     self.measureBarCount = [[settingsMeasureBar objectForKey:@"count"] intValue];
-    NSAssert(self.measureBarCount > 0, @"Bar Count is %d.", self.measureBarCount);
+    NSAssert(self.measureBarCount > 0, @"Bar Count is %ld.", self.measureBarCount);
     
     self.useBarRatio = [[settingsMeasureBar objectForKey:@"useRatio"] boolValue];
 
     self.barWidths = [[NSMutableArray alloc] initWithArray:(NSArray *)[settingsMeasureBar objectForKey:@"width"]];
     if(self.barWidths != nil)
     {
-        NSAssert(self.barWidths.count == 0 || self.barWidths.count == self.measureBarCount, @"The count of the Bar Width is %u not %d.", self.barWidths.count, self.measureBarCount);
+        NSAssert(self.barWidths.count == 0 || self.barWidths.count == self.measureBarCount, @"The count of the Bar Width is %lu not %ld.", self.barWidths.count, self.measureBarCount);
         if(self.barWidths.count != 0)
         {
             for(int i=0;i<self.measureBarCount;i++)
@@ -254,7 +254,7 @@
 
 -(CGFloat) measureBarPopupMenuPosition:(NSInteger)index forWidth:(CGFloat)width
 {
-    NSAssert(index >= 0 && index < self.measureBarCount, @"Index is %u.", index);
+    NSAssert(index >= 0 && index < self.measureBarCount, @"Index is %ld.", index);
     NSAssert(width >= 0.0, @"Width is %f.", width);
     
     if(self.useBarRatio == YES)

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Bar0TableViewController.h"
 #import "Bar0SingleContinousTableViewCell.h"
+#import "BarPopupMenuTableViewController.h"
 
 @interface Bar0TableViewController()
 
@@ -63,6 +64,18 @@ static NSString *barPMenuTVC_One_Line_Id = @"barPMenuTVC_One_Line";
     self.shareSettings.barTapped = !self.shareSettings.barTapped;
 
     [[NSNotificationCenter defaultCenter] postNotificationName:@"barTapped" object:nil];
+    
+    //[self.barPopupMenuTVC becomeFirstResponder];
+}
+
+-(BOOL)resignFirstResponder
+{
+    return [super resignFirstResponder];
+}
+
+-(BOOL)becomeFirstResponder
+{
+    return [super becomeFirstResponder];
 }
 
 #pragma mark - Split view
