@@ -67,7 +67,7 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
 
 -(BOOL)resignFirstResponder
 {
-    self.shareSettings.barTapped = !self.shareSettings.barTapped;
+    //self.shareSettings.barTapped = !self.shareSettings.barTapped;
 	    
     return [super resignFirstResponder];
 }

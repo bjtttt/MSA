@@ -30,7 +30,8 @@
     if(CGRectContainsPoint(self.barPopupMenuV.bounds, pointForTargetView))
     {
         self.shareSettings.barPopupMenuAreaTapped = YES;
-
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"barPopupMenuAreaTapped" object:nil];
+        
         NSLog(@"Measure Bar Popup Menu : x = %f, y = %f, width = %f, height = %f", self.barPopupMenuV.frame.origin.x, self.barPopupMenuV.frame.origin.y, self.barPopupMenuV.frame.size.width, self.barPopupMenuV.frame.size.height);
         return [self.barPopupMenuV hitTest:point withEvent:event];
     }
@@ -43,7 +44,8 @@
     if(CGRectContainsPoint(self.barV.bounds, pointForTargetView1))
     {
         self.shareSettings.barAreaTapped = YES;
-
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"barAreaTapped" object:nil];
+        
         NSLog(@"Measure Bar : x = %f, y = %f, width = %f, height = %f", self.barV.frame.origin.x, self.barV.frame.origin.y, self.barV.frame.size.width, self.barPopupMenuV.frame.size.height);
         return [self.barV hitTest:point withEvent:event];
     }

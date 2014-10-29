@@ -103,7 +103,7 @@
     self.shareSettings = [ShareSettings sharedSettings];
     self.shareSettings.menuTapped=NO;
     self.shareSettings.measureTapped=NO;
-    self.shareSettings.barTapped=NO;
+    //self.shareSettings.barTapped=NO;
     self.shareSettings.menuDisplayed=NO;
     self.shareSettings.measureDisplayed=NO;
     self.shareSettings.barPopupMenuDisplayed=NO;
@@ -163,9 +163,9 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuTapped) name:@"menuTapped" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(measureTapped) name:@"measureTapped" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barTapped) name:@"barTapped" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notBarPopupMenuTapped) name:@"notBarPopupMenuTapped" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notBarTapped) name:@"notBarTapped" object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barTapped) name:@"barTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barPopupMenuAreaTapped) name:@"barPopupMenuAreaTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barAreaTapped) name:@"barAreaTapped" object:nil];
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
@@ -175,9 +175,9 @@
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"menuTapped" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"measureTapped" object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barTapped" object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"notBarPopupMenuTapped" object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"notBarTapped" object:nil];
+    //[[NSNotificationCenter defaultCenter] removeObserver:self name:@"barTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barPopupMenuAreaTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barAreaTapped" object:nil];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -265,25 +265,20 @@
     [self layoutVC:YES];
 }
 
--(void)barTapped {
-    //if(self.shareSettings.barTappedIndex == self.shareSettings.currentBarPopupMenuIndex)
-    //    return;
-    //if(self.shareSettings.currentBarPopupMenuIndex == -1)
-    //    self.shareSettings.currentBarPopupMenuIndex = self.shareSettings.barTappedIndex;
-    //self.shareSettings.barDisplayed = !self.shareSettings.barDisplayed;
-    [self layoutVC:YES];
-}
+//-(void)barTapped {
+//    [self layoutVC:YES];
+//}
 
 - (void)measureTapped {
     self.shareSettings.measureDisplayed = !self.shareSettings.measureDisplayed;
     [self layoutVC:YES];
 }
 
-- (void)notBarPopupMenuTapped {
+- (void)barPopupMenuAreaTapped {
     [self layoutVC:YES];
 }
 
-- (void)notBarTapped {
+- (void)barAreaTapped {
     [self layoutVC:YES];
 }
 

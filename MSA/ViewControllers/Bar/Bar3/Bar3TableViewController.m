@@ -37,7 +37,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     self.shareSettings.barTappedIndex = 3;
-    self.shareSettings.barTapped = !self.shareSettings.barTapped;
+    //self.shareSettings.barTapped = !self.shareSettings.barTapped;
 }
 
 #pragma mark - Split view

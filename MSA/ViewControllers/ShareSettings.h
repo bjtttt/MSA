@@ -84,7 +84,7 @@ typedef enum unitType {
 
 @property (nonatomic) BOOL menuTapped;
 @property (nonatomic) BOOL measureTapped;
-@property (nonatomic) BOOL barTapped;
+//@property (nonatomic) BOOL barTapped;
 @property (nonatomic) NSInteger barTappedIndex;
 @property (nonatomic) NSInteger currentBarPopupMenuIndex;
 
