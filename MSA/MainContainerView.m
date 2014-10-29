@@ -24,12 +24,12 @@
     NSLog(@"Convert Touch Position : x = %f, y = %f", pointForTargetView.x, pointForTargetView.y);
     NSLog(@"Measure Bar Popup Menu Bounds : x = %f, y = %f, width = %f, height = %f", self.barPopupMenuV.bounds.origin.x, self.barPopupMenuV.bounds.origin.y, self.barPopupMenuV.bounds.size.width, self.barPopupMenuV.bounds.size.height);
     
-    self.shareSettings.notBarPopupMenuTapped = YES;
-    self.shareSettings.notBarTapped = YES;
+    self.shareSettings.barPopupMenuAreaTapped = NO;
+    self.shareSettings.barAreaTapped = NO;
 
     if(CGRectContainsPoint(self.barPopupMenuV.bounds, pointForTargetView))
     {
-        self.shareSettings.notBarPopupMenuTapped = NO;
+        self.shareSettings.barPopupMenuAreaTapped = YES;
 
         NSLog(@"Measure Bar Popup Menu : x = %f, y = %f, width = %f, height = %f", self.barPopupMenuV.frame.origin.x, self.barPopupMenuV.frame.origin.y, self.barPopupMenuV.frame.size.width, self.barPopupMenuV.frame.size.height);
         return [self.barPopupMenuV hitTest:point withEvent:event];
@@ -42,12 +42,11 @@
 
     if(CGRectContainsPoint(self.barV.bounds, pointForTargetView1))
     {
-        self.shareSettings.notBarTapped = NO;
+        self.shareSettings.barAreaTapped = YES;
 
         NSLog(@"Measure Bar : x = %f, y = %f, width = %f, height = %f", self.barV.frame.origin.x, self.barV.frame.origin.y, self.barV.frame.size.width, self.barPopupMenuV.frame.size.height);
         return [self.barV hitTest:point withEvent:event];
     }
-
 
     return [super hitTest:point withEvent:event];
 }

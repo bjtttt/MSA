@@ -88,12 +88,12 @@ typedef enum unitType {
 @property (nonatomic) NSInteger barTappedIndex;
 @property (nonatomic) NSInteger currentBarPopupMenuIndex;
 
-@property (nonatomic) BOOL notBarPopupMenuTapped;
-@property (nonatomic) BOOL notBarTapped;    // not == !barTapped because bar area has some blanks which won't trigger barTapped
+@property (nonatomic) BOOL barPopupMenuAreaTapped;
+@property (nonatomic) BOOL barAreaTapped;    // not == !barTapped because bar area has some blanks which won't trigger barTapped
 
 @property (nonatomic) BOOL menuDisplayed;
 @property (nonatomic) BOOL measureDisplayed;
-@property (nonatomic) BOOL barDisplayed;
+//@property (nonatomic) BOOL barDisplayed;
 @property (nonatomic) BOOL barPopupMenuDisplayed;
 
 @property (nonatomic) InstrumentStatus currentInstrumentStatus;

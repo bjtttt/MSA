@@ -282,5 +282,12 @@
     }
 }
 
+-(void)setBarAreaTapped:(BOOL)barAreaTapped
+{
+    _barAreaTapped = barAreaTapped;
+    if(barAreaTapped == NO)
+        self.currentBarPopupMenuIndex = -1;
+}
+
 @end
 

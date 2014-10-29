@@ -50,7 +50,7 @@
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
 
-@property (nonatomic) BOOL barPopupMenuShowed;
+//@property (nonatomic) BOOL barPopupMenuShowed;
 
 //- (void)layoutVC:(VCLayoutType)layoutType animated:(BOOL)animated;
 

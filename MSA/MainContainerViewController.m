@@ -103,19 +103,21 @@
     self.shareSettings = [ShareSettings sharedSettings];
     self.shareSettings.menuTapped=NO;
     self.shareSettings.measureTapped=NO;
-    //self.shareSettings.barTapped=NO;
+    self.shareSettings.barTapped=NO;
     self.shareSettings.menuDisplayed=NO;
     self.shareSettings.measureDisplayed=NO;
     self.shareSettings.barPopupMenuDisplayed=NO;
-    //self.shareSettings.prevprevMSALayout=MSA_DISP;
     
+    self.shareSettings.barTappedIndex = -1;
     self.shareSettings.currentBarPopupMenuIndex = -1;
+
+    self.shareSettings.barPopupMenuAreaTapped=NO;
+    self.shareSettings.barAreaTapped=NO;
 
     self.shareSettings.currentInstrument = [[NSMutableString alloc] initWithString:@""];
     self.shareSettings.currentInstrumentStatus = INST_DISC;
     
     self.shareSettings.modeStoryboard = self.modeStoryboard;
-    //self.shareSettings.measBarStoryboard = self.measBarStoryboard;
     
     [self.shareSettings initMeasureView];
     [self.shareSettings initMeasureBar];
@@ -123,10 +125,6 @@
     self.parManager = [ParameterManager parameterManager];
     [self.parManager registerParameterChangedEvent];
 
-    //[self.menuView setHidden:YES];
-    //[self.menuCVC showHidePresetMenu:YES];
-    //[self layoutVC:[self getMSALayout] animated:NO];
-    
     UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
     self.shareSettings.modeStoryboard = modeUIS;
     MeasureBarContainerViewController *mbarCVC = (MeasureBarContainerViewController *)[modeUIS instantiateViewControllerWithIdentifier:@"measureBarCVC"];
@@ -151,7 +149,7 @@
     // Background
     //[self.menuView.layer setBackgroundColor:[UIColor darkGrayColor].CGColor];
     
-    self.barPopupMenuShowed = NO;
+    //self.barPopupMenuShowed = NO;
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -268,7 +266,11 @@
 }
 
 -(void)barTapped {
-    self.shareSettings.barDisplayed = !self.shareSettings.barDisplayed;
+    //if(self.shareSettings.barTappedIndex == self.shareSettings.currentBarPopupMenuIndex)
+    //    return;
+    //if(self.shareSettings.currentBarPopupMenuIndex == -1)
+    //    self.shareSettings.currentBarPopupMenuIndex = self.shareSettings.barTappedIndex;
+    //self.shareSettings.barDisplayed = !self.shareSettings.barDisplayed;
     [self layoutVC:YES];
 }
 
@@ -299,9 +301,9 @@
     //    self.shareSettings.barPopupMenuDisplayed = NO;
     //}
     
-    if(self.shareSettings.notBarPopupMenuTapped == YES)
+    if(self.shareSettings.barPopupMenuAreaTapped == NO)
     {
-        if(self.shareSettings.barPopupMenuDisplayed == YES)
+        if(self.shareSettings.barAreaTapped == YES)
         {
             
         }
@@ -309,10 +311,6 @@
         {
             
         }
-    }
-    else
-    {
-        
     }
     
     CGFloat displayWidth = 0.0f;
@@ -330,7 +328,7 @@
 
         self.barPopupMenuView.frame = CGRectMake(barMenuPosition, NAVBAR_HEIGHT+BAR_HEIGHT, 0, 0);
         
-        self.barPopupMenuShowed = YES;
+        //self.barPopupMenuShowed = YES;
 
         layoutBlock = ^(void)
         {
