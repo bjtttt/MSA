@@ -19,7 +19,7 @@
 @class BarPopupMenuTableViewController;
 @class MeasureBarContainerViewController;
 
-@interface ContainerViewController : UIViewController
+@interface MainContainerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *displayView;
 @property (weak, nonatomic) IBOutlet UIView *menuView;
@@ -49,6 +49,8 @@
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
+
+@property (nonatomic) BOOL barPopupMenuShowed;
 
 //- (void)layoutVC:(VCLayoutType)layoutType animated:(BOOL)animated;
 

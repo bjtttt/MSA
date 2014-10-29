@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--MXA Container View Controller-->
+        <!--Main Container View Controller-->
         <scene sceneID="yQP-Rg-Hzj">
             <objects>
-                <viewController id="l8A-Mb-vf8" userLabel="MXA Container View Controller" customClass="ContainerViewController" sceneMemberID="viewController">
+                <viewController id="l8A-Mb-vf8" userLabel="Main Container View Controller" customClass="MainContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gc0-Tr-9q4"/>
                         <viewControllerLayoutGuide type="bottom" id="tLi-n1-032"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ex4-JV-8sr">
+                    <view key="view" contentMode="scaleToFill" id="ex4-JV-8sr" customClass="MainContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -44,7 +44,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pg0-Tj-Oce" userLabel="Bar Menu View">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
                                 <connections>
-                                    <segue destination="ENN-LG-RWc" kind="embed" identifier="embedSegueToBarMenuTVC" id="tVT-Mf-qM0"/>
+                                    <segue destination="ENN-LG-RWc" kind="embed" identifier="embedSegueToBarPopupMenuTVC" id="tVT-Mf-qM0"/>
                                 </connections>
                             </containerView>
                         </subviews>

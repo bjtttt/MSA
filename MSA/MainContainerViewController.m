@@ -8,7 +8,7 @@
 
 #import "ShareSettings.h"
 #import "ParameterManager.h"
-#import "ContainerViewController.h"
+#import "MainContainerViewController.h"
 #import "DisplayContainerViewController.h"
 #import "MenuContainerViewController.h"
 #import "MeasureContainerViewController.h"
@@ -16,12 +16,13 @@
 #import "BlurViewController.h"
 #import "BarPopupMenuTableViewController.h"
 #import "UIView+Screenshot.h"
+#import "MainContainerView.h"
 
-@interface ContainerViewController ()
+@interface MainContainerViewController ()
 
 @end
 
-@implementation ContainerViewController
+@implementation MainContainerViewController
 
 -(void)viewDidLoad {
     [super viewDidLoad];
@@ -130,6 +131,7 @@
     mbarCVC.displayCVC = self.displayCVC;
     self.shareSettings.barCVC = mbarCVC;
     self.barCVC = mbarCVC;
+    ((MainContainerView *)self.mainView).barV = mbarCVC.view;
     //mbarCVC.barPopupMenuTVC = self.barPMenuTVC;
 
     // Border Radius
@@ -141,6 +143,8 @@
     [self.menuView.layer setBorderWidth:NORMAL_BORDER_WIDTH];
     // Background
     //[self.menuView.layer setBackgroundColor:[UIColor darkGrayColor].CGColor];
+    
+    self.barPopupMenuShowed = NO;
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -197,7 +201,7 @@
         self.measureCVC.frameWidth = MENU_WIDTH;
         self.measureCVC.frameHeight = self.frameHeight;
     }
-    if([segue.identifier isEqualToString:@"embedSegueToBarMenuTVC"])
+    if([segue.identifier isEqualToString:@"embedSegueToBarPopupMenuTVC"])
     {
         self.barPMenuTVC = (BarPopupMenuTableViewController *)segue.destinationViewController;
         self.barPMenuTVC.shareSettings = self.shareSettings;
@@ -208,6 +212,8 @@
         
         self.barCVC.barPopupMenuTVC = self.barPMenuTVC;
         [self.barCVC setBarPopupMenuViewController:self.barPMenuTVC];
+        
+        ((MainContainerView *)self.mainView).barPopupMenuV = self.barPMenuTVC.view;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBlurVC"])
     {
@@ -266,22 +272,28 @@
     UIImage *img = nil;
     UIImage *blurImg = nil;
     
+    if(self.barPopupMenuShowed == YES)
+    {
+        self.barPopupMenuShowed = NO;
+        self.shareSettings.barPopupMenuDisplayed = NO;
+    }
+    
+    CGFloat displayWidth = 0.0f;
+    if(self.shareSettings.menuDisplayed == YES)
+        displayWidth = self.frameWidth - MENU_WIDTH;
+    else
+        displayWidth = self.frameWidth;
+    CGFloat barMenuPosition = [self.shareSettings measureBarPopupMenuPosition:self.shareSettings.barTappedIndex forWidth:displayWidth];
+
     NSAssert(!(self.shareSettings.barPopupMenuDisplayed == YES && self.shareSettings.measureDisplayed == YES), @"ERROR : Bar PopupMenu and Measure Select are both YES!");
     
     if(self.shareSettings.barPopupMenuDisplayed == YES)
     {
         // Show Bar Popup Menu
-        
-        CGFloat displayWidth = 0.0f;
-        
-        if(self.shareSettings.menuDisplayed == YES)
-            displayWidth = self.frameWidth - MENU_WIDTH;
-        else
-            displayWidth = self.frameWidth;
-        
-        CGFloat barMenuPosition = [self.shareSettings measureBarPopupMenuPosition:self.shareSettings.barTappedIndex forWidth:displayWidth];
-        
+
         self.barPopupMenuView.frame = CGRectMake(barMenuPosition, NAVBAR_HEIGHT+BAR_HEIGHT, 0, 0);
+        
+        self.barPopupMenuShowed = YES;
 
         layoutBlock = ^(void)
         {
@@ -302,6 +314,7 @@
             self.menuCVC.presetViewVisible = NO;
             [self.menuCVC showHidePresetMenu:NO animated:NO];
         }
+        self.barPopupMenuView.frame = CGRectMake(barMenuPosition, NAVBAR_HEIGHT+BAR_HEIGHT, 0, 0);
 
         img = [self.view convertViewToImage];
         blurImg = [self.shareSettings blurryImage:img];
@@ -315,16 +328,6 @@
     }
     if(self.shareSettings.barPopupMenuDisplayed == NO && self.shareSettings.measureDisplayed == NO)
     {
-        CGFloat displayWidth = 0.0f;
-        
-        if(self.shareSettings.menuDisplayed == YES)
-            displayWidth = self.frameWidth - MENU_WIDTH;
-        else
-            displayWidth = self.frameWidth;
-        
-        // Not deleted until auto hiding is implemented when lost focus
-        CGFloat barMenuPosition = [self.shareSettings measureBarPopupMenuPosition:self.shareSettings.barTappedIndex forWidth:displayWidth];
-
         self.blurView.frame = CGRectMake(-self.frameWidth-VC_MARGIN, 0, self.frameWidth, self.frameHeight);
         
         if(self.shareSettings.menuDisplayed == YES)

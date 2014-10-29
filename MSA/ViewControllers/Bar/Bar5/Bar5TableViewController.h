@@ -15,7 +15,7 @@
 
 @interface Bar5TableViewController : UITableViewController <MeasureBarDefinition>
 
-@property (weak, nonatomic) IBOutlet MeasureBarContainerViewController *displayBarCVC;
+@property (weak, nonatomic) IBOutlet MeasureBarContainerViewController *measureBarCVC;
 @property (weak, nonatomic) IBOutlet BarPopupMenuTableViewController *barPopupMenuTVC;
 
 @property (nonatomic) CGFloat frameWidth;

@@ -11,7 +11,7 @@
 
 @class AddInstrumentContainerViewController;
 @class MeasureSelectNavigationViewController;
-@class ContainerViewController;
+@class MainContainerViewController;
 
 @interface MeasureContainerViewController: UIViewController
 
@@ -26,7 +26,7 @@
 
 @property (weak, nonatomic) IBOutlet AddInstrumentContainerViewController *addInstrumentCVC;
 @property (weak, nonatomic) IBOutlet MeasureSelectNavigationViewController *measureSelectNVC;
-@property (weak, nonatomic) IBOutlet ContainerViewController *mainCVC;
+@property (weak, nonatomic) IBOutlet MainContainerViewController *mainCVC;
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;

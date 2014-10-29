@@ -13,7 +13,7 @@
 
 @interface BlurViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet ContainerViewController *mainCVC;
+@property (weak, nonatomic) IBOutlet MainContainerViewController *mainCVC;
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;

@@ -10,6 +10,9 @@
 #import "Bar0TableViewController.h"
 #import "Bar0SingleContinousTableViewCell.h"
 #import "BarPopupMenuTableViewController.h"
+#import "DisplayContainerViewController.h"
+#import "MeasureBarContainerViewController.h"
+#import "MainContainerViewController.h"
 
 @interface Bar0TableViewController()
 
@@ -66,6 +69,7 @@ static NSString *barPMenuTVC_One_Line_Id = @"barPMenuTVC_One_Line";
     [[NSNotificationCenter defaultCenter] postNotificationName:@"barTapped" object:nil];
     
     //[self.barPopupMenuTVC becomeFirstResponder];
+    //self.measureBarCVC.displayCVC.mainCVC.view.window
 }
 
 -(BOOL)resignFirstResponder

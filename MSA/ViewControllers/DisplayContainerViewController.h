@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 
-@class ContainerViewController;
+@class MainContainerViewController;
 @class DisplayTracesContainerViewController;
 @class MeasureBarContainerViewController;
 @class MsgContainerViewController;
@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet SystemContainerViewController *systCVC;
 @property (weak, nonatomic) IBOutlet MeasureBarContainerViewController *barCVC;
 @property (weak, nonatomic) IBOutlet DisplayTracesContainerViewController *traceCVC;
-@property (weak, nonatomic) IBOutlet ContainerViewController *mainCVC;
+@property (weak, nonatomic) IBOutlet MainContainerViewController *mainCVC;
 
 @property (weak, nonatomic) IBOutlet UIView *tracesV;
 @property (weak, nonatomic) IBOutlet UIView *barV;

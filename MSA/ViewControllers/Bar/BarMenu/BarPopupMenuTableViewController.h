@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #include "ShareSettings.h"
 
-@class ContainerViewController;
+@class MainContainerViewController;
 
 @interface BarPopupMenuTableViewController : UITableViewController
 
-@property (weak, nonatomic) IBOutlet ContainerViewController *mainCVC;
+@property (weak, nonatomic) IBOutlet MainContainerViewController *mainCVC;
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
