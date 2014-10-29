@@ -14,4 +14,6 @@
 @property (weak, nonatomic) UIView *barPopupMenuV;
 @property (weak, nonatomic) UIView *barV;
 
+@property (strong, nonatomic) ShareSettings * shareSettings;
+
 @end

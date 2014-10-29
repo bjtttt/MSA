@@ -55,6 +55,9 @@
     // Bar View Border
     [self.barPopupMenuView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
     [self.barPopupMenuView.layer setBorderWidth:NORMAL_BORDER_WIDTH];
+    
+    if(((MainContainerView *)self.mainView).barV == nil)
+        ((MainContainerView *)self.mainView).barV = self.displayCVC.barV;
 
     //self.shareSettings = [ShareSettings sharedSettings];
     //self.shareSettings.menuTapped=NO;
@@ -103,7 +106,10 @@
     //self.shareSettings.barTapped=NO;
     self.shareSettings.menuDisplayed=NO;
     self.shareSettings.measureDisplayed=NO;
+    self.shareSettings.barPopupMenuDisplayed=NO;
     //self.shareSettings.prevprevMSALayout=MSA_DISP;
+    
+    self.shareSettings.currentBarPopupMenuIndex = -1;
 
     self.shareSettings.currentInstrument = [[NSMutableString alloc] initWithString:@""];
     self.shareSettings.currentInstrumentStatus = INST_DISC;
@@ -131,7 +137,8 @@
     mbarCVC.displayCVC = self.displayCVC;
     self.shareSettings.barCVC = mbarCVC;
     self.barCVC = mbarCVC;
-    ((MainContainerView *)self.mainView).barV = mbarCVC.view;
+    ((MainContainerView *)self.mainView).shareSettings = self.shareSettings;
+    
     //mbarCVC.barPopupMenuTVC = self.barPMenuTVC;
 
     // Border Radius
@@ -159,6 +166,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuTapped) name:@"menuTapped" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(measureTapped) name:@"measureTapped" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barTapped) name:@"barTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notBarPopupMenuTapped) name:@"notBarPopupMenuTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notBarTapped) name:@"notBarTapped" object:nil];
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
@@ -169,6 +178,8 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"menuTapped" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"measureTapped" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"notBarPopupMenuTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"notBarTapped" object:nil];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -182,6 +193,8 @@
         
         self.displayCVC.frameWidth = self.frameWidth;
         self.displayCVC.frameHeight = self.frameHeight;
+
+        //((MainContainerView *)self.mainView).barV = self.displayCVC.barV;
     }
     if([segue.identifier isEqualToString:@"embedSegueToMenuVC"])
     {
@@ -255,12 +268,20 @@
 }
 
 -(void)barTapped {
-    self.shareSettings.barPopupMenuDisplayed = !self.shareSettings.barPopupMenuDisplayed;
+    self.shareSettings.barDisplayed = !self.shareSettings.barDisplayed;
     [self layoutVC:YES];
 }
 
 - (void)measureTapped {
     self.shareSettings.measureDisplayed = !self.shareSettings.measureDisplayed;
+    [self layoutVC:YES];
+}
+
+- (void)notBarPopupMenuTapped {
+    [self layoutVC:YES];
+}
+
+- (void)notBarTapped {
     [self layoutVC:YES];
 }
 
@@ -272,10 +293,26 @@
     UIImage *img = nil;
     UIImage *blurImg = nil;
     
-    if(self.barPopupMenuShowed == YES)
+    //if(self.barPopupMenuShowed == YES)
+    //{
+    //    self.barPopupMenuShowed = NO;
+    //    self.shareSettings.barPopupMenuDisplayed = NO;
+    //}
+    
+    if(self.shareSettings.notBarPopupMenuTapped == YES)
     {
-        self.barPopupMenuShowed = NO;
-        self.shareSettings.barPopupMenuDisplayed = NO;
+        if(self.shareSettings.barPopupMenuDisplayed == YES)
+        {
+            
+        }
+        else
+        {
+            
+        }
+    }
+    else
+    {
+        
     }
     
     CGFloat displayWidth = 0.0f;
