@@ -268,6 +268,12 @@
 
     if(self.shareSettings.barPopupMenuAreaTapped == NO)
     {
+        if(self.shareSettings.menuDisplayed == YES)
+        {
+            self.menuCVC.presetViewVisible = NO;
+            [self.menuCVC showHidePresetMenu:NO animated:YES];
+        }
+
         if(self.shareSettings.barTappedIndex == -1)
         {
             barMenuPosition = [self.shareSettings measureBarPopupMenuPosition:self.shareSettings.previousBarPopupMenuIndex forWidth:displayWidth];
