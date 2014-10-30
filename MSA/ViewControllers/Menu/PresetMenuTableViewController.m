@@ -27,8 +27,6 @@ static NSString *presetMenuCellTable_DarkGray_White_Id = @"presetMenuTVC_DarkGra
 static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Green";
 
 -(void)viewDidLoad{
-    NSLog(@"PresetMenuTableViewController - viewDidLoad");
-
     [super viewDidLoad];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"MSAList" ofType:@"plist"];
