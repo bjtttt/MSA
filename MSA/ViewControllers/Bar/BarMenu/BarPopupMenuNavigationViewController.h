@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 #include "ShareSettings.h"
 
-@class MainContainerViewController;
+@class BarPopupMenuContainerViewController;
 @class BarPopupMenuTableViewController;
 
 @interface BarPopupMenuNavigationViewController : UINavigationController
 
-@property (weak, nonatomic) IBOutlet MainContainerViewController *mainCVC;
-@property (weak, nonatomic) IBOutlet BarPopupMenuTableViewController *softMenuTVC;
+@property (weak, nonatomic) IBOutlet BarPopupMenuContainerViewController *barPopupMenuCVC;
+@property (weak, nonatomic) IBOutlet BarPopupMenuTableViewController *barPopupMenuTVC;
 
 @property (nonatomic) CGFloat frameWidth;
 @property (nonatomic) CGFloat frameHeight;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l8A-Mb-vf8">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
-        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main Container View Controller-->
@@ -44,7 +44,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pg0-Tj-Oce" userLabel="Bar Menu View">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
                                 <connections>
-                                    <segue destination="zE2-a3-ugE" kind="embed" identifier="embedSegueToBarPopupMenuNVC" id="Z4t-0n-kSa"/>
+                                    <segue destination="uKh-zS-hd6" kind="embed" identifier="embedSegueToBarPopupMenuCVC" id="SkK-eP-bgn"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -1994,7 +1994,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4PN-Tt-fSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="-21"/>
+            <point key="canvasLocation" x="709" y="-21"/>
         </scene>
         <!--Bar Popup Menu Navigation View Controller-->
         <scene sceneID="qE7-Gc-9Fv">
@@ -2009,6 +2009,35 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzZ-8v-Kxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="-21"/>
+        </scene>
+        <!--Bar Popup Menu Container View Controller-->
+        <scene sceneID="mVf-Dy-Bmx">
+            <objects>
+                <viewController id="uKh-zS-hd6" customClass="BarPopupMenuContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gjR-qs-wgB"/>
+                        <viewControllerLayoutGuide type="bottom" id="PH0-ok-iac"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GvO-Iq-kPr">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OUG-QW-vch">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
+                                <connections>
+                                    <segue destination="zE2-a3-ugE" kind="embed" identifier="embedSegueToBarPopupMenuNVC" id="F7Y-B3-ulF"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="barPopupMenuV" destination="OUG-QW-vch" id="64v-8j-YIZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69G-If-e7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="203" y="-21"/>
         </scene>

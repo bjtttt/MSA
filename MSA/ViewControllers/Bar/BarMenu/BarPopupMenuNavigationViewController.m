@@ -19,9 +19,9 @@
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    self.softMenuTVC = [self.viewControllers firstObject];
-    self.softMenuTVC.shareSettings = self.shareSettings;
-    self.softMenuTVC.softMenuNVC = self;
+    self.barPopupMenuTVC = [self.viewControllers firstObject];
+    self.barPopupMenuTVC.shareSettings = self.shareSettings;
+    self.barPopupMenuTVC.barPopupMenuNVC = self;
 }
 
 #pragma mark - Split view

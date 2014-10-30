@@ -1,5 +1,5 @@
 //
-//  BarPopupMenuTableViewController.h
+//  BarPopupMenuContainerViewController.h
 //  MSA
 //
 //  Created by guozhitao on 9/8/14.
@@ -7,20 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-#include "ShareSettings.h"
+#import "ShareSettings.h"
 
 @class BarPopupMenuNavigationViewController;
+@class MainContainerViewController;
 
-@interface BarPopupMenuTableViewController : UITableViewController
+@interface BarPopupMenuContainerViewController: UIViewController
 
+@property (weak, nonatomic) IBOutlet UIView *barPopupMenuV;
+
+@property (weak, nonatomic) IBOutlet MainContainerViewController *mainCVC;
 @property (weak, nonatomic) IBOutlet BarPopupMenuNavigationViewController *barPopupMenuNVC;
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
-
-//-(BOOL)resignFirstResponder;
-//-(BOOL)becomeFirstResponder;
 
 @end

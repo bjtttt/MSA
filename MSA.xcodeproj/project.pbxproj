@@ -68,6 +68,7 @@
 		9A9C671A19AD6C81007D3248 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A9C671819AD6C81007D3248 /* Main.storyboard */; };
 		9A9C671C19AD6C81007D3248 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9C671B19AD6C81007D3248 /* Images.xcassets */; };
 		9A9C672819AD6C81007D3248 /* MSATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C672719AD6C81007D3248 /* MSATests.m */; };
+		9A9E99501A025BBA00E6FBBC /* BarPopupMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E994F1A025BBA00E6FBBC /* BarPopupMenuContainerViewController.m */; };
 		9A9FFE7E19C0430800F76D38 /* MsgDetailNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FFE7D19C0430800F76D38 /* MsgDetailNavigationViewController.m */; };
 		9A9FFE8819C04FAB00F76D38 /* MsgError.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9FFE8519C04FAB00F76D38 /* MsgError.png */; };
 		9A9FFE8919C04FAB00F76D38 /* MsgInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9FFE8619C04FAB00F76D38 /* MsgInfo.png */; };
@@ -229,6 +230,8 @@
 		9A9C672119AD6C81007D3248 /* MSATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9C672619AD6C81007D3248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9C672719AD6C81007D3248 /* MSATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSATests.m; sourceTree = "<group>"; };
+		9A9E994E1A025BBA00E6FBBC /* BarPopupMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarPopupMenuContainerViewController.h; path = ViewControllers/Bar/BarMenu/BarPopupMenuContainerViewController.h; sourceTree = "<group>"; };
+		9A9E994F1A025BBA00E6FBBC /* BarPopupMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarPopupMenuContainerViewController.m; path = ViewControllers/Bar/BarMenu/BarPopupMenuContainerViewController.m; sourceTree = "<group>"; };
 		9A9FFE7C19C0430800F76D38 /* MsgDetailNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgDetailNavigationViewController.h; path = ViewControllers/Msg/MsgDetailNavigationViewController.h; sourceTree = "<group>"; };
 		9A9FFE7D19C0430800F76D38 /* MsgDetailNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgDetailNavigationViewController.m; path = ViewControllers/Msg/MsgDetailNavigationViewController.m; sourceTree = "<group>"; };
 		9A9FFE8519C04FAB00F76D38 /* MsgError.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MsgError.png; path = Images/24/MsgError.png; sourceTree = "<group>"; };
@@ -323,6 +326,8 @@
 		9A006C2519DC09850009EA82 /* Bar */ = {
 			isa = PBXGroup;
 			children = (
+				9A9E994E1A025BBA00E6FBBC /* BarPopupMenuContainerViewController.h */,
+				9A9E994F1A025BBA00E6FBBC /* BarPopupMenuContainerViewController.m */,
 				9A19E0C01A023632001F2CC5 /* BarPopupMenuNavigationViewController.h */,
 				9A19E0C11A023632001F2CC5 /* BarPopupMenuNavigationViewController.m */,
 				9A006C2619DC09FC0009EA82 /* BarPopupMenuTableViewController.h */,
@@ -1098,6 +1103,7 @@
 				9ACCD83019DE9F9600A6ACD5 /* GPUImageOutput.m in Sources */,
 				9AE7CCF619D5A8D1005EAF1C /* Bar5TableViewController.m in Sources */,
 				9ACCD85119DEA17E00A6ACD5 /* GPUImageTwoPassFilter.m in Sources */,
+				9A9E99501A025BBA00E6FBBC /* BarPopupMenuContainerViewController.m in Sources */,
 				9A1C929419CECC9B00074EA6 /* PresetMenuTableViewController.m in Sources */,
 				9A7128021A01EC2E00DF0D96 /* MeasureBarContainerView.m in Sources */,
 				9ACCD84E19DEA16800A6ACD5 /* GPUImageTwoPassTextureSamplingFilter.m in Sources */,
