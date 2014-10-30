@@ -18,7 +18,8 @@
 @class Bar4TableViewController;
 @class Bar5TableViewController;
 @class Bar6TableViewController;
-//@class Bar7TableViewController;
+
+@class MeasureBarContainerView;
 @class BarPopupMenuTableViewController;
 
 @interface MeasureBarContainerViewController : UIViewController
@@ -33,7 +34,8 @@
 @property (weak, nonatomic) IBOutlet UIView *bar4V;
 @property (weak, nonatomic) IBOutlet UIView *bar5V;
 @property (weak, nonatomic) IBOutlet UIView *bar6V;
-//@property (weak, nonatomic) IBOutlet UIView *bar7V;
+
+@property (strong, nonatomic) IBOutlet MeasureBarContainerView *barCV;
 
 @property (strong, nonatomic) NSMutableArray *barVs;
 

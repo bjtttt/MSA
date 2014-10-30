@@ -17,38 +17,47 @@
 
 -(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
-    NSLog(@"Touch Position : x = %f, y = %f", point.x, point.y);
+    self.sendNotification = !self.sendNotification;
+    if(self.sendNotification == NO)
+        return [super hitTest:point withEvent:event];
+    
+    NSLog(@"MainContainerView : hitTest");
+    
+    //NSLog(@"Touch Position : x = %f, y = %f", point.x, point.y);
 
     CGPoint pointForTargetView = [self.barPopupMenuV convertPoint:point fromView:self];
     
-    NSLog(@"Convert Touch Position : x = %f, y = %f", pointForTargetView.x, pointForTargetView.y);
-    NSLog(@"Measure Bar Popup Menu Bounds : x = %f, y = %f, width = %f, height = %f", self.barPopupMenuV.bounds.origin.x, self.barPopupMenuV.bounds.origin.y, self.barPopupMenuV.bounds.size.width, self.barPopupMenuV.bounds.size.height);
+    //NSLog(@"Convert Touch Position : x = %f, y = %f", pointForTargetView.x, pointForTargetView.y);
+    //NSLog(@"Measure Bar Popup Menu Bounds : x = %f, y = %f, width = %f, height = %f", self.barPopupMenuV.bounds.origin.x, self.barPopupMenuV.bounds.origin.y, self.barPopupMenuV.bounds.size.width, self.barPopupMenuV.bounds.size.height);
     
     self.shareSettings.barPopupMenuAreaTapped = NO;
-    self.shareSettings.barAreaTapped = NO;
+    self.shareSettings.barTappedIndex = -1;
 
-    if(CGRectContainsPoint(self.barPopupMenuV.bounds, pointForTargetView))
+    if(CGRectContainsPoint(self.shareSettings.barPopupMenuCGRect, pointForTargetView))//self.barPopupMenuV.bounds, pointForTargetView))
+    //if(CGRectContainsPoint(self.barPopupMenuV.bounds, pointForTargetView))
     {
         self.shareSettings.barPopupMenuAreaTapped = YES;
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"barPopupMenuAreaTapped" object:nil];
+        //[[NSNotificationCenter defaultCenter] postNotificationName:@"barPopupMenuAreaTapped" object:nil];
         
-        NSLog(@"Measure Bar Popup Menu : x = %f, y = %f, width = %f, height = %f", self.barPopupMenuV.frame.origin.x, self.barPopupMenuV.frame.origin.y, self.barPopupMenuV.frame.size.width, self.barPopupMenuV.frame.size.height);
+        //NSLog(@"Measure Bar Popup Menu : x = %f, y = %f, width = %f, height = %f", self.barPopupMenuV.frame.origin.x, self.barPopupMenuV.frame.origin.y, self.barPopupMenuV.frame.size.width, self.barPopupMenuV.frame.size.height);
         return [self.barPopupMenuV hitTest:point withEvent:event];
     }
     
-    CGPoint pointForTargetView1 = [self.barV convertPoint:point fromView:self];
+    CGPoint pointForTargetView1 = [self.barCV convertPoint:point fromView:self];
 
-    NSLog(@"Convert Touch Position 1 : x = %f, y = %f", pointForTargetView1.x, pointForTargetView1.y);
-    NSLog(@"Measure Bar Bounds : x = %f, y = %f, width = %f, height = %f", self.barV.bounds.origin.x, self.barV.bounds.origin.y, self.barV.bounds.size.width, self.barV.bounds.size.height);
+    //NSLog(@"Convert Touch Position 1 : x = %f, y = %f", pointForTargetView1.x, pointForTargetView1.y);
+    //NSLog(@"Measure Bar Bounds : x = %f, y = %f, width = %f, height = %f", self.barCV.bounds.origin.x, self.barCV.bounds.origin.y, self.barCV.bounds.size.width, self.barCV.bounds.size.height);
 
-    if(CGRectContainsPoint(self.barV.bounds, pointForTargetView1))
+    if(CGRectContainsPoint(self.shareSettings.barCGRect, pointForTargetView1))// self.barCV.bounds, pointForTargetView1))
+    //if(CGRectContainsPoint(self.barCV.bounds, pointForTargetView1))
     {
-        self.shareSettings.barAreaTapped = YES;
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"barAreaTapped" object:nil];
-        
-        NSLog(@"Measure Bar : x = %f, y = %f, width = %f, height = %f", self.barV.frame.origin.x, self.barV.frame.origin.y, self.barV.frame.size.width, self.barPopupMenuV.frame.size.height);
-        return [self.barV hitTest:point withEvent:event];
+        //NSLog(@"Measure Bar : x = %f, y = %f, width = %f, height = %f", self.barCV.frame.origin.x, self.barCV.frame.origin.y, self.barCV.frame.size.width, self.barCV.frame.size.height);
+        return [self.barCV hitTest:point withEvent:event];
     }
+
+    //self.sendNotification = !self.sendNotification;
+    //if(self.sendNotification == NO)
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"barPopupMenuAreaTapped" object:nil];
 
     return [super hitTest:point withEvent:event];
 }

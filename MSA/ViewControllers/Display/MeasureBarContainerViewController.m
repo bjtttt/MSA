@@ -20,6 +20,7 @@
 #import "Bar6TableViewController.h"
 //#import "Bar7TableViewController.h"
 #import "MeasureBarDefinition.h"
+#import "MeasureBarContainerView.h"
 
 @interface MeasureBarContainerViewController ()
 
@@ -27,11 +28,11 @@
 
 @implementation MeasureBarContainerViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(void)loadView
+{
+    [super loadView];
     
     self.barVs = [[NSMutableArray alloc] initWithObjects:self.bar0V, self.bar1V, self.bar2V, self.bar3V, self.bar4V, self.bar5V, self.bar6V, nil];//, self.bar7V, nil];
-    self.barVCs = [[NSMutableArray alloc] initWithObjects:self.bar0VC, self.bar1VC, self.bar2VC, self.bar3VC, self.bar4VC, self.bar5VC, self.bar6VC, nil];//, self.bar7VC, nil];
     
     for(UIView *bv in self.barVs)
     {
@@ -46,7 +47,20 @@
         //[self.bar0V.layer setBackgroundColor:[UIColor darkGrayColor].CGColor];
     }
     
-    //[self adjustMeasureBarWidth:NO];
+    self.barCV.barVs = [[NSMutableArray alloc] initWithObjects:self.bar0V, self.bar1V, self.bar2V, self.bar3V, self.bar4V, self.bar5V, self.bar6V, nil];
+    
+    //self.barCV.sendNotification = YES;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    if(self.barVCs == nil)
+    {
+        self.barVCs = [[NSMutableArray alloc] initWithObjects:self.bar0VC, self.bar1VC, self.bar2VC, self.bar3VC, self.bar4VC, self.bar5VC, self.bar6VC, nil];//, self.bar7VC, nil];
+    }
+    if(self.barCV.shareSettings == nil)
+        self.barCV.shareSettings = self.shareSettings;
     
     self.previousFrameWidth = self.frameWidth;
 }

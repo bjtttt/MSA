@@ -18,6 +18,7 @@
 @class BlurViewController;
 @class BarPopupMenuTableViewController;
 @class MeasureBarContainerViewController;
+@class MainContainerView;
 
 @interface MainContainerViewController : UIViewController
 
@@ -29,7 +30,7 @@
 @property (weak, nonatomic) IBOutlet UIView *blurView;
 @property (weak, nonatomic) IBOutlet UIView *barPopupMenuView;
 
-@property (strong, nonatomic) IBOutlet UIView *mainView;
+@property (strong, nonatomic) IBOutlet MainContainerView *mainView;
 
 @property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
 @property (weak, nonatomic) IBOutlet MenuContainerViewController *menuCVC;

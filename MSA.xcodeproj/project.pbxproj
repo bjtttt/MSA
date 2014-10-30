@@ -39,6 +39,7 @@
 		9A6A20A119DF79170011B98A /* Bar0OneLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A20A019DF79170011B98A /* Bar0OneLineTableViewCell.m */; };
 		9A6A20A419DFE94E0011B98A /* ParameterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A20A319DFE94E0011B98A /* ParameterManager.m */; };
 		9A6A20A819DFF8DB0011B98A /* ParameterCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A20A719DFF8DB0011B98A /* ParameterCollection.m */; };
+		9A7128021A01EC2E00DF0D96 /* MeasureBarContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7128011A01EC2E00DF0D96 /* MeasureBarContainerView.m */; };
 		9A726F4E19C1880000CDF55D /* MsgMasterNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F4D19C1880000CDF55D /* MsgMasterNavigationViewController.m */; };
 		9A726F5219C188C200CDF55D /* MsgDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F5119C188C200CDF55D /* MsgDetailTableViewController.m */; };
 		9A726F5B19C19FC000CDF55D /* SystemMasterNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F5819C19FC000CDF55D /* SystemMasterNavigationViewController.m */; };
@@ -105,7 +106,6 @@
 		9AE7CCF319D5A8C6005EAF1C /* Bar4TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7CCF219D5A8C6005EAF1C /* Bar4TableViewController.m */; };
 		9AE7CCF619D5A8D1005EAF1C /* Bar5TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7CCF519D5A8D1005EAF1C /* Bar5TableViewController.m */; };
 		9AE7CCF919D5A8EA005EAF1C /* Bar6TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7CCF819D5A8EA005EAF1C /* Bar6TableViewController.m */; };
-		9AE7CCFC19D5A8F7005EAF1C /* Bar7TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7CCFB19D5A8F7005EAF1C /* Bar7TableViewController.m */; };
 		9AF7001119B81FE5000A69A5 /* Return.png in Resources */ = {isa = PBXBuildFile; fileRef = 9AF7001019B81FE5000A69A5 /* Return.png */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +174,8 @@
 		9A6A20A519DFE9600011B98A /* ParameterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParameterManager.h; path = Data/Parameter/ParameterManager.h; sourceTree = "<group>"; };
 		9A6A20A719DFF8DB0011B98A /* ParameterCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParameterCollection.m; path = Data/Parameter/Mode/ParameterCollection.m; sourceTree = "<group>"; };
 		9A6A20A919DFF8F70011B98A /* ParameterCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParameterCollection.h; path = Data/Parameter/Mode/ParameterCollection.h; sourceTree = "<group>"; };
+		9A7128001A01EC2E00DF0D96 /* MeasureBarContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeasureBarContainerView.h; path = ViewControllers/Bar/MeasureBarContainerView.h; sourceTree = "<group>"; };
+		9A7128011A01EC2E00DF0D96 /* MeasureBarContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasureBarContainerView.m; path = ViewControllers/Bar/MeasureBarContainerView.m; sourceTree = "<group>"; };
 		9A726F4D19C1880000CDF55D /* MsgMasterNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgMasterNavigationViewController.m; path = ViewControllers/Msg/MsgMasterNavigationViewController.m; sourceTree = "<group>"; };
 		9A726F4F19C1881C00CDF55D /* MsgMasterNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MsgMasterNavigationViewController.h; path = ViewControllers/Msg/MsgMasterNavigationViewController.h; sourceTree = "<group>"; };
 		9A726F5019C188C200CDF55D /* MsgDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgDetailTableViewController.h; path = ViewControllers/Msg/MsgDetailTableViewController.h; sourceTree = "<group>"; };
@@ -294,8 +296,6 @@
 		9AE7CCF519D5A8D1005EAF1C /* Bar5TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bar5TableViewController.m; path = ViewControllers/Bar/Bar5/Bar5TableViewController.m; sourceTree = "<group>"; };
 		9AE7CCF719D5A8EA005EAF1C /* Bar6TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bar6TableViewController.h; path = ViewControllers/Bar/Bar6/Bar6TableViewController.h; sourceTree = "<group>"; };
 		9AE7CCF819D5A8EA005EAF1C /* Bar6TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bar6TableViewController.m; path = ViewControllers/Bar/Bar6/Bar6TableViewController.m; sourceTree = "<group>"; };
-		9AE7CCFA19D5A8F7005EAF1C /* Bar7TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bar7TableViewController.h; path = ViewControllers/Bar/Bar7/Bar7TableViewController.h; sourceTree = "<group>"; };
-		9AE7CCFB19D5A8F7005EAF1C /* Bar7TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bar7TableViewController.m; path = ViewControllers/Bar/Bar7/Bar7TableViewController.m; sourceTree = "<group>"; };
 		9AF7001019B81FE5000A69A5 /* Return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Return.png; path = Images/24/Return.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -798,6 +798,8 @@
 		9AE7CCDC19D5A6BB005EAF1C /* MeasureBar */ = {
 			isa = PBXGroup;
 			children = (
+				9A7128001A01EC2E00DF0D96 /* MeasureBarContainerView.h */,
+				9A7128011A01EC2E00DF0D96 /* MeasureBarContainerView.m */,
 				9AE0AFB719C2B55C008544AC /* MeasureBarContainerViewController.h */,
 				9AE0AFB819C2B55C008544AC /* MeasureBarContainerViewController.m */,
 				9A6A209B19DF77C20011B98A /* CellStyle */,
@@ -808,7 +810,6 @@
 				9AE7CCE119D5A6DB005EAF1C /* Bar4 */,
 				9AE7CCE219D5A6DE005EAF1C /* Bar5 */,
 				9AE7CCE319D5A6E0005EAF1C /* Bar6 */,
-				9AE7CCE419D5A6E3005EAF1C /* Bar7 */,
 			);
 			name = MeasureBar;
 			sourceTree = "<group>";
@@ -874,15 +875,6 @@
 				9AE7CCF819D5A8EA005EAF1C /* Bar6TableViewController.m */,
 			);
 			name = Bar6;
-			sourceTree = "<group>";
-		};
-		9AE7CCE419D5A6E3005EAF1C /* Bar7 */ = {
-			isa = PBXGroup;
-			children = (
-				9AE7CCFA19D5A8F7005EAF1C /* Bar7TableViewController.h */,
-				9AE7CCFB19D5A8F7005EAF1C /* Bar7TableViewController.m */,
-			);
-			name = Bar7;
 			sourceTree = "<group>";
 		};
 		9AF7001219B82CAE000A69A5 /* Data */ = {
@@ -1066,7 +1058,6 @@
 				9A9C671419AD6C81007D3248 /* MSA.xcdatamodeld in Sources */,
 				9A1C929B19CED2B400074EA6 /* SoftMenuContainerViewController.m in Sources */,
 				9ACCD84519DEA10600A6ACD5 /* GPUImageSaturationFilter.m in Sources */,
-				9AE7CCFC19D5A8F7005EAF1C /* Bar7TableViewController.m in Sources */,
 				9A726F4E19C1880000CDF55D /* MsgMasterNavigationViewController.m in Sources */,
 				9AE0AFBC19C2B626008544AC /* DisplayTracesContainerViewController.m in Sources */,
 				9A726F6519C19FDE00CDF55D /* SystemDetailTableViewController.m in Sources */,
@@ -1103,6 +1094,7 @@
 				9AE7CCF619D5A8D1005EAF1C /* Bar5TableViewController.m in Sources */,
 				9ACCD85119DEA17E00A6ACD5 /* GPUImageTwoPassFilter.m in Sources */,
 				9A1C929419CECC9B00074EA6 /* PresetMenuTableViewController.m in Sources */,
+				9A7128021A01EC2E00DF0D96 /* MeasureBarContainerView.m in Sources */,
 				9ACCD84E19DEA16800A6ACD5 /* GPUImageTwoPassTextureSamplingFilter.m in Sources */,
 				9A90589919C08EFD00B0B6AB /* MsgSplitViewController.m in Sources */,
 				9A9C671719AD6C81007D3248 /* MainContainerViewController.m in Sources */,

@@ -12,7 +12,7 @@
                         <viewControllerLayoutGuide type="top" id="3l4-6C-XM3"/>
                         <viewControllerLayoutGuide type="bottom" id="Lce-Qn-m6S"/>
                     </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kIl-NV-POs">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kIl-NV-POs" customClass="MeasureBarContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -20,6 +20,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                 <connections>
                                     <segue destination="ngl-Ab-5eN" kind="embed" identifier="embedSegueToBar0VC" id="XiP-w4-WC1"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NRB-as-DYH" userLabel="Measure Bar 1 Container View">
+                                <rect key="frame" x="100" y="0.0" width="100" height="120"/>
+                                <connections>
+                                    <segue destination="cYg-Dd-t98" kind="embed" identifier="embedSegueToBar1VC" id="gZC-gk-n5R"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qgv-Yy-LFc" userLabel="Measure Bar 2 Container View">
@@ -46,12 +52,6 @@
                                     <segue destination="foO-BB-KAo" kind="embed" identifier="embedSegueToBar5VC" id="Cvg-TQ-wJB"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NRB-as-DYH" userLabel="Measure Bar 1 Container View">
-                                <rect key="frame" x="100" y="0.0" width="100" height="120"/>
-                                <connections>
-                                    <segue destination="cYg-Dd-t98" kind="embed" identifier="embedSegueToBar1VC" id="gZC-gk-n5R"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1nQ-IQ-0Yg" userLabel="Measure Bar 6 Container View">
                                 <rect key="frame" x="599" y="0.0" width="100" height="120"/>
                                 <connections>
@@ -72,6 +72,7 @@
                         <outlet property="bar4V" destination="3es-ZX-Aaa" id="FLu-aW-dMO"/>
                         <outlet property="bar5V" destination="CNr-1T-lVt" id="sgu-9Q-VSU"/>
                         <outlet property="bar6V" destination="1nQ-IQ-0Yg" id="4sz-vx-AqX"/>
+                        <outlet property="barCV" destination="kIl-NV-POs" id="hRl-9e-lBb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEy-PU-pi1" userLabel="First Responder" sceneMemberID="firstResponder"/>

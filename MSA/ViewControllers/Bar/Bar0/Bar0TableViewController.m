@@ -62,14 +62,6 @@ static NSString *barPMenuTVC_One_Line_Id = @"barPMenuTVC_One_Line";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    
-    self.shareSettings.barTappedIndex = 0;
-    //self.shareSettings.barTapped = !self.shareSettings.barTapped;
-
-    //[[NSNotificationCenter defaultCenter] postNotificationName:@"barTapped" object:nil];
-    
-    //[self.barPopupMenuTVC becomeFirstResponder];
-    //self.measureBarCVC.displayCVC.mainCVC.view.window
 }
 
 -(BOOL)resignFirstResponder

@@ -254,8 +254,11 @@
 
 -(CGFloat) measureBarPopupMenuPosition:(NSInteger)index forWidth:(CGFloat)width
 {
-    NSAssert(index >= 0 && index < self.measureBarCount, @"Index is %ld.", (long)index);
+    NSAssert(index >= -1 && index < self.measureBarCount, @"Index is %ld.", (long)index);
     NSAssert(width >= 0.0, @"Width is %f.", width);
+    
+    if(index == -1)
+        index = 0;
     
     if(self.useBarRatio == YES)
     {
@@ -280,13 +283,6 @@
         
         return ratios;
     }
-}
-
--(void)setBarAreaTapped:(BOOL)barAreaTapped
-{
-    _barAreaTapped = barAreaTapped;
-    if(barAreaTapped == NO)
-        self.currentBarPopupMenuIndex = -1;
 }
 
 @end

@@ -84,17 +84,17 @@ typedef enum unitType {
 
 @property (nonatomic) BOOL menuTapped;
 @property (nonatomic) BOOL measureTapped;
-//@property (nonatomic) BOOL barTapped;
-@property (nonatomic) NSInteger barTappedIndex;
-@property (nonatomic) NSInteger currentBarPopupMenuIndex;
 
 @property (nonatomic) BOOL barPopupMenuAreaTapped;
-@property (nonatomic) BOOL barAreaTapped;    // not == !barTapped because bar area has some blanks which won't trigger barTapped
+@property (nonatomic) NSInteger barTappedIndex;
+@property (nonatomic) NSInteger currentBarPopupMenuIndex;
+@property (nonatomic) NSInteger previousBarPopupMenuIndex;
 
 @property (nonatomic) BOOL menuDisplayed;
 @property (nonatomic) BOOL measureDisplayed;
-//@property (nonatomic) BOOL barDisplayed;
 @property (nonatomic) BOOL barPopupMenuDisplayed;
+@property (nonatomic) CGRect barPopupMenuCGRect;
+@property (nonatomic) CGRect barCGRect;
 
 @property (nonatomic) InstrumentStatus currentInstrumentStatus;
 @property (nonatomic) NSMutableString *currentInstrument;

@@ -1,5 +1,5 @@
 //
-//  MainContainerView.h
+//  MeasureBarContainerView.h
 //  MSA
 //
 //  Created by GUO Zhitao on 29/10/14.
@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 
-@interface MainContainerView : UIView
+@interface MeasureBarContainerView : UIView
 
-@property (weak, nonatomic) UIView *barPopupMenuV;
-@property (weak, nonatomic) UIView *barCV;
+@property (strong, nonatomic) NSMutableArray *barVs;
 
 @property (nonatomic) BOOL sendNotification;
 
