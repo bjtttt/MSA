@@ -192,7 +192,7 @@
         else
             barWidth = fv;
         
-        NSLog(@"Bar Index %d : Width %f", i, barWidth);
+        //NSLog(@"Bar Index %d : Width %f", i, barWidth);
         
         view.frame = CGRectMake(prevWidth, 0, barWidth, BAR_HEIGHT);
         vc.frameWidth = barWidth;
@@ -217,7 +217,7 @@
     
     if (animated)
     {
-        [UIView animateWithDuration:0.25
+        [UIView animateWithDuration:0.1
          //delay:0
          //options:UIViewAnimationOptionLayoutSubviews
                          animations:layoutBlock

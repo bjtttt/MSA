@@ -94,7 +94,7 @@
 }
 
 - (void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated {
-    [self showHidePresetMenu:showPresetMenu animated:animated inTime:0.25];
+    [self showHidePresetMenu:showPresetMenu animated:animated inTime:0.1];
 }
 
 - (void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated inTime:(CGFloat)inTime {

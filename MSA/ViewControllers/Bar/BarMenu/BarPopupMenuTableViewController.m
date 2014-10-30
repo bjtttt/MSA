@@ -48,7 +48,7 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
 //}
 
 -(void)viewWillLayoutSubviews {
-    NSLog(@"PresetMenuTableViewController - viewWillLayoutSubviews");
+    //NSLog(@"PresetMenuTableViewController - viewWillLayoutSubviews");
 
     [super viewWillLayoutSubviews];
     
@@ -61,8 +61,7 @@ static NSString *presetMenuCellTable_White_Green_Id = @"presetMenuTVC_White_Gree
     
     self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.frameWidth, self.frameHeight);
     
-    NSLog(@"\nPresetMenu Table View Controller - viewDidAppear:\nx = %f\ny = %f\nwidth = %f\nheight = %f",
-          self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+    //NSLog(@"\nPresetMenu Table View Controller - viewDidAppear:\nx = %f\ny = %f\nwidth = %f\nheight = %f", self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
 }
 
 -(BOOL)resignFirstResponder

@@ -64,7 +64,7 @@
 }
 
 -(void) loadView {
-    NSLog(@"ContainerViewController - loadView");
+    //NSLog(@"ContainerViewController - loadView");
     
     [super loadView];
     
@@ -129,7 +129,7 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-    NSLog(@"ContainerViewController - viewDidAppear");
+    //NSLog(@"ContainerViewController - viewDidAppear");
 
     [super viewDidAppear:animated];
     
@@ -141,7 +141,7 @@
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
-    NSLog(@"ContainerViewController - viewDidDisappear");
+    //NSLog(@"ContainerViewController - viewDidDisappear");
 
     [super viewDidDisappear:animated];
     
@@ -338,7 +338,7 @@
     
         if (animated)
         {
-            [UIView animateWithDuration:0.25
+            [UIView animateWithDuration:0.1
              //delay:0
              //options:UIViewAnimationOptionLayoutSubviews
                              animations:layoutBlock
@@ -362,7 +362,6 @@
             self.menuCVC.presetViewVisible = NO;
             [self.menuCVC showHidePresetMenu:NO animated:NO];
         }
-        //self.barPopupMenuView.frame = CGRectMake(barMenuPosition, NAVBAR_HEIGHT+BAR_HEIGHT, 0, 0);
 
         img = [self.view convertViewToImage];
         blurImg = [self.shareSettings blurryImage:img];
@@ -387,15 +386,11 @@
             self.barCVC.frameWidth = self.frameWidth - MENU_WIDTH;
             [self.barCVC adjustMeasureBarWidth:YES];
             
-            //[self.displayView setUserInteractionEnabled:YES];
-            //[self.menuView setUserInteractionEnabled:YES];
-
             layoutBlock = ^(void)
             {
                 self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, (self.frameHeight-MEAS_HEIGHT)/2, MEAS_WIDTH, MEAS_HEIGHT);
                 self.menuView.frame = CGRectMake(self.frameWidth-MENU_WIDTH, 0, MENU_WIDTH, self.frameHeight);
                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth-MENU_WIDTH, self.frameHeight);
-                //self.barPopupMenuView.frame = CGRectMake(barMenuPosition, NAVBAR_HEIGHT+BAR_HEIGHT, 0, 0);
             };
             completionBlock = ^(BOOL finished){
             };
@@ -409,14 +404,11 @@
             self.barCVC.frameWidth = self.frameWidth;
             [self.barCVC adjustMeasureBarWidth:YES];
 
-            //[self.displayView setUserInteractionEnabled:YES];
-
             layoutBlock = ^(void)
             {
                 self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, (self.frameHeight-MEAS_HEIGHT)/2, MEAS_WIDTH, MEAS_HEIGHT);
                 self.menuView.frame = CGRectMake(self.frameWidth+VC_MARGIN, 0, MENU_WIDTH, self.frameHeight);
                 self.displayView.frame = CGRectMake(0, 0, self.frameWidth, self.frameHeight);
-                //self.barPopupMenuView.frame = CGRectMake(barMenuPosition, NAVBAR_HEIGHT+BAR_HEIGHT, 0, 0);
             };
             completionBlock = ^(BOOL finished){
             };
@@ -424,11 +416,13 @@
     }
     
     self.shareSettings.barPopupMenuCGRect = CGRectMake(self.barPopupMenuView.frame.origin.x, self.barPopupMenuView.frame.origin.y, self.barPopupMenuView.frame.size.width, self.barPopupMenuView.frame.size.height);
-    self.shareSettings.barCGRect = CGRectMake(self.displayView.frame.origin.x, self.displayView.frame.origin.y, self.displayView.frame.size.width, BAR_HEIGHT);
+    self.shareSettings.barCGRect = CGRectMake(0, NAVBAR_HEIGHT, self.displayView.frame.size.width, BAR_HEIGHT);
+    //NSLog(@"SET Measure Bar Popup Menu Rect : x = %f, y = %f, width = %f, height = %f", self.shareSettings.barPopupMenuCGRect.origin.x, self.shareSettings.barPopupMenuCGRect.origin.y, self.shareSettings.barPopupMenuCGRect.size.width, self.shareSettings.barPopupMenuCGRect.size.height);
+    //NSLog(@"SET Measure Bar Rect : x = %f, y = %f, width = %f, height = %f", self.shareSettings.barCGRect.origin.x, self.shareSettings.barCGRect.origin.y, self.shareSettings.barCGRect.size.width, self.shareSettings.barCGRect.size.height);
     
     if (animated)
     {
-        [UIView animateWithDuration:0.25
+        [UIView animateWithDuration:0.1
          //delay:0
          //options:UIViewAnimationOptionLayoutSubviews
                          animations:layoutBlock

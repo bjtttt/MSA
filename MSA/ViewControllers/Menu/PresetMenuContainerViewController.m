@@ -18,16 +18,15 @@
 @implementation PresetMenuContainerViewController
 
 -(void)viewDidLoad{
-    NSLog(@"PresetMenuContainerViewController - viewDidLoad");
+    //NSLog(@"PresetMenuContainerViewController - viewDidLoad");
 
     [super viewDidLoad];
 
-    NSLog(@"\nPresetMenu Container View Controller:\nx = %f\ny = %f\nwidth = %f\nheight = %f",
-          self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+    //NSLog(@"\nPresetMenu Container View Controller:\nx = %f\ny = %f\nwidth = %f\nheight = %f", self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"PresetMenuContainerViewController - prepareForSegue");
+    //NSLog(@"PresetMenuContainerViewController - prepareForSegue");
 
     if([segue.identifier isEqualToString:@"embedSegueToPresetMenuTVC"])
     {
@@ -43,13 +42,13 @@
 }
 
 -(void)viewWillLayoutSubviews {
-    NSLog(@"PresetMenuContainerViewController - viewWillLayoutSubviews");
+    //NSLog(@"PresetMenuContainerViewController - viewWillLayoutSubviews");
 
     [super viewWillLayoutSubviews];
 }
 
 -(void)viewDidLayoutSubviews {
-    NSLog(@"PresetMenuContainerViewController - viewDidLayoutSubviews");
+    //NSLog(@"PresetMenuContainerViewController - viewDidLayoutSubviews");
 
     [super viewDidLayoutSubviews];
     
