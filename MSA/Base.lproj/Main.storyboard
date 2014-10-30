@@ -2103,7 +2103,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4PN-Tt-fSZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="493" y="-21"/>
+            <point key="canvasLocation" x="525" y="-21"/>
         </scene>
         <!--Bar Popup Menu Navigation View Controller-->
         <scene sceneID="qE7-Gc-9Fv">
@@ -2119,7 +2119,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzZ-8v-Kxw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="264" y="-21"/>
+            <point key="canvasLocation" x="290" y="-21"/>
         </scene>
         <!--Bar Popup Menu Container View Controller-->
         <scene sceneID="mVf-Dy-Bmx">
