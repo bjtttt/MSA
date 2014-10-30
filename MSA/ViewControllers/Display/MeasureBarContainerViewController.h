@@ -20,12 +20,12 @@
 @class Bar6TableViewController;
 
 @class MeasureBarContainerView;
-@class BarPopupMenuTableViewController;
+@class BarPopupMenuNavigationViewController;
 
 @interface MeasureBarContainerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
-@property (weak, nonatomic) IBOutlet BarPopupMenuTableViewController *barPopupMenuTVC;
+@property (weak, nonatomic) IBOutlet BarPopupMenuNavigationViewController *barPopupMenuNVC;
 
 @property (weak, nonatomic) IBOutlet UIView *bar0V;
 @property (weak, nonatomic) IBOutlet UIView *bar1V;
@@ -60,7 +60,7 @@
 -(void)adjustMeasureBarWidth:(BOOL)animated;
 -(void)setBarsStartAndWidthAccordingTo:(CGFloat)width;
 
--(void)setBarPopupMenuViewController:(BarPopupMenuTableViewController *)barPMenuTVC;
+-(void)setBarPopupMenuViewController:(BarPopupMenuNavigationViewController *)barPopupMenuNVC;
 
 /*
 -(void)setEachMeasureBar:(CGFloat)bar1Width;

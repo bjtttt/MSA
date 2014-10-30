@@ -14,7 +14,7 @@
 #import "MeasureContainerViewController.h"
 #import "MeasureBarContainerViewController.h"
 #import "BlurViewController.h"
-#import "BarPopupMenuTableViewController.h"
+#import "BarPopupMenuNavigationViewController.h"
 #import "UIView+Screenshot.h"
 #import "MainContainerView.h"
 
@@ -184,19 +184,19 @@
         self.measureCVC.frameWidth = MENU_WIDTH;
         self.measureCVC.frameHeight = self.frameHeight;
     }
-    if([segue.identifier isEqualToString:@"embedSegueToBarPopupMenuTVC"])
+    if([segue.identifier isEqualToString:@"embedSegueToBarPopupMenuNVC"])
     {
-        self.barPMenuTVC = (BarPopupMenuTableViewController *)segue.destinationViewController;
-        self.barPMenuTVC.shareSettings = self.shareSettings;
-        self.barPMenuTVC.mainCVC = self;
+        self.barPopupMenuNVC = (BarPopupMenuTableViewController *)segue.destinationViewController;
+        self.barPopupMenuNVC.shareSettings = self.shareSettings;
+        self.barPopupMenuNVC.mainCVC = self;
         
-        self.barPMenuTVC.frameWidth = MENU_WIDTH;
-        self.barPMenuTVC.frameHeight = BAR_MENU_HEIGHT;
+        self.barPopupMenuNVC.frameWidth = MENU_WIDTH;
+        self.barPopupMenuNVC.frameHeight = BAR_MENU_HEIGHT;
         
-        self.barCVC.barPopupMenuTVC = self.barPMenuTVC;
-        [self.barCVC setBarPopupMenuViewController:self.barPMenuTVC];
+        self.barCVC.barPopupMenuNVC = self.barPopupMenuNVC;
+        [self.barCVC setBarPopupMenuViewController:self.barPopupMenuNVC];
         
-        ((MainContainerView *)self.mainView).barPopupMenuV = self.barPMenuTVC.view;
+        ((MainContainerView *)self.mainView).barPopupMenuV = self.barPopupMenuNVC.view;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBlurVC"])
     {

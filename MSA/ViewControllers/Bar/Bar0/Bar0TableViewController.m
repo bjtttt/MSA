@@ -20,8 +20,8 @@
 
 @implementation Bar0TableViewController
 
-static NSString *barPMenuTVC_Single_Continous_Id = @"barPMenuTVC_Single_Continous";
-static NSString *barPMenuTVC_One_Line_Id = @"barPMenuTVC_One_Line";
+static NSString *barPopupMenuTVC_Single_Continous_Id = @"barPopupMenuTVC_Single_Continous";
+static NSString *barPopupMenuTVC_One_Line_Id = @"barPopupMenuTVC_One_Line";
 
 -(void)viewDidLoad{
     [super viewDidLoad];
@@ -53,7 +53,7 @@ static NSString *barPMenuTVC_One_Line_Id = @"barPMenuTVC_One_Line";
 {
     //NSUInteger row = [indexPath row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:barPMenuTVC_Single_Continous_Id forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:barPopupMenuTVC_Single_Continous_Id forIndexPath:indexPath];
     [((Bar0SingleContinousTableViewCell *)cell).singleContinousImgV setImage:[UIImage imageNamed:@"Continous.png"]];
     
     return cell;

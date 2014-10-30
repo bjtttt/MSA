@@ -17,6 +17,7 @@
 		9A19795019D28DDA008E87E1 /* Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A19794E19D28DDA008E87E1 /* Cancel.png */; };
 		9A19795119D28DDA008E87E1 /* OK.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A19794F19D28DDA008E87E1 /* OK.png */; };
 		9A19795619D2A547008E87E1 /* AddInstrumentContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A19795319D2A547008E87E1 /* AddInstrumentContainerViewController.m */; };
+		9A19E0C21A023632001F2CC5 /* BarPopupMenuNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A19E0C11A023632001F2CC5 /* BarPopupMenuNavigationViewController.m */; };
 		9A1C929419CECC9B00074EA6 /* PresetMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C929319CECC9B00074EA6 /* PresetMenuTableViewController.m */; };
 		9A1C929B19CED2B400074EA6 /* SoftMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C929619CED2B400074EA6 /* SoftMenuContainerViewController.m */; };
 		9A1C929C19CED2B400074EA6 /* SoftMenuNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C929819CED2B400074EA6 /* SoftMenuNavigationViewController.m */; };
@@ -136,6 +137,8 @@
 		9A19794F19D28DDA008E87E1 /* OK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OK.png; path = Images/24/OK.png; sourceTree = "<group>"; };
 		9A19795219D2A547008E87E1 /* AddInstrumentContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddInstrumentContainerViewController.h; path = ViewControllers/Measure/AddInstrumentContainerViewController.h; sourceTree = "<group>"; };
 		9A19795319D2A547008E87E1 /* AddInstrumentContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddInstrumentContainerViewController.m; path = ViewControllers/Measure/AddInstrumentContainerViewController.m; sourceTree = "<group>"; };
+		9A19E0C01A023632001F2CC5 /* BarPopupMenuNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarPopupMenuNavigationViewController.h; path = ViewControllers/Bar/BarMenu/BarPopupMenuNavigationViewController.h; sourceTree = "<group>"; };
+		9A19E0C11A023632001F2CC5 /* BarPopupMenuNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarPopupMenuNavigationViewController.m; path = ViewControllers/Bar/BarMenu/BarPopupMenuNavigationViewController.m; sourceTree = "<group>"; };
 		9A1C929219CECC9B00074EA6 /* PresetMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PresetMenuTableViewController.h; path = ViewControllers/Menu/PresetMenuTableViewController.h; sourceTree = "<group>"; };
 		9A1C929319CECC9B00074EA6 /* PresetMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresetMenuTableViewController.m; path = ViewControllers/Menu/PresetMenuTableViewController.m; sourceTree = "<group>"; };
 		9A1C929519CED2B400074EA6 /* SoftMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuContainerViewController.h; path = ViewControllers/Menu/SoftMenuContainerViewController.h; sourceTree = "<group>"; };
@@ -320,6 +323,8 @@
 		9A006C2519DC09850009EA82 /* Bar */ = {
 			isa = PBXGroup;
 			children = (
+				9A19E0C01A023632001F2CC5 /* BarPopupMenuNavigationViewController.h */,
+				9A19E0C11A023632001F2CC5 /* BarPopupMenuNavigationViewController.m */,
 				9A006C2619DC09FC0009EA82 /* BarPopupMenuTableViewController.h */,
 				9A006C2719DC09FC0009EA82 /* BarPopupMenuTableViewController.m */,
 			);
@@ -1103,6 +1108,7 @@
 				9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */,
 				9A726F6819C19FEE00CDF55D /* SystemSplitViewController.m in Sources */,
 				9A953EE919ADCBB6005467A1 /* ShareSettings.m in Sources */,
+				9A19E0C21A023632001F2CC5 /* BarPopupMenuNavigationViewController.m in Sources */,
 				9A57E25D19D503BB00C58113 /* UIKeyMeasure.m in Sources */,
 				9ACCD83C19DEA09000A6ACD5 /* GPUImageFramebufferCache.m in Sources */,
 				9A726F5C19C19FC000CDF55D /* SystemMasterTableViewController.m in Sources */,
