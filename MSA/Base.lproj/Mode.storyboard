@@ -98,8 +98,6 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="lbV-8s-9xL" secondAttribute="bottom" id="9xC-c4-yBa"/>
-                                        <constraint firstItem="lbV-8s-9xL" firstAttribute="top" secondItem="fap-sf-I4j" secondAttribute="top" id="q2f-H2-X0k"/>
                                         <constraint firstAttribute="trailing" secondItem="lbV-8s-9xL" secondAttribute="trailing" id="z7Y-hI-Zku"/>
                                     </constraints>
                                 </tableViewCellContentView>
