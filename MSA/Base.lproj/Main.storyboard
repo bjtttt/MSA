@@ -806,7 +806,7 @@
                                     <segue destination="A36-8i-CUx" kind="show" id="xwi-4d-dlp"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="66" id="bUS-mo-exK" userLabel="Enum Boolean Table View Cell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="66" id="bUS-mo-exK" userLabel="Enum Boolean Table View Cell" customClass="SoftMenuLeftLabelResultBooleanBranchTableViewCell">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bUS-mo-exK" id="pLS-3K-dUF">
@@ -875,7 +875,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hHq-3h-Thv" userLabel="Numeric Table View Cell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hHq-3h-Thv" userLabel="Numeric Table View Cell" customClass="SoftMenuNumericTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hHq-3h-Thv" id="PyY-ii-jzs">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -894,6 +894,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="content" destination="LRf-cV-Ghq" id="nXK-UM-JA1"/>
+                                    <outlet property="title" destination="sGH-GQ-N66" id="8jZ-Kf-Pxg"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ard-K3-chM" userLabel="Boolean Table View Cell">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
@@ -1038,6 +1042,21 @@
                                 <connections>
                                     <segue destination="Nep-BV-LME" kind="show" id="S3W-hr-YyG"/>
                                 </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hOd-10-SQd" userLabel="Immediate Table View Cell">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hOd-10-SQd" id="LBB-bQ-W1r">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZT-yy-Z4Z">
+                                            <rect key="frame" x="0.0" y="11" width="150" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1613,6 +1632,21 @@
                                 <connections>
                                     <segue destination="gXW-zN-Be6" kind="show" id="jqw-jv-rR0"/>
                                 </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MP8-Jx-V22" userLabel="Immediate Table View Cell">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MP8-Jx-V22" id="YlR-pQ-v9x">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHD-p1-3vV">
+                                            <rect key="frame" x="0.0" y="11" width="150" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>

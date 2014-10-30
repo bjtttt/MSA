@@ -69,6 +69,11 @@
 		9A9C671C19AD6C81007D3248 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9C671B19AD6C81007D3248 /* Images.xcassets */; };
 		9A9C672819AD6C81007D3248 /* MSATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C672719AD6C81007D3248 /* MSATests.m */; };
 		9A9E99501A025BBA00E6FBBC /* BarPopupMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E994F1A025BBA00E6FBBC /* BarPopupMenuContainerViewController.m */; };
+		9A9E995B1A02762300E6FBBC /* SoftMenuLeftLabelResultBooleanBranchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E99521A02762300E6FBBC /* SoftMenuLeftLabelResultBooleanBranchTableViewCell.m */; };
+		9A9E995C1A02762300E6FBBC /* SoftMenuLeftLabelResultBranchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E99541A02762300E6FBBC /* SoftMenuLeftLabelResultBranchTableViewCell.m */; };
+		9A9E995D1A02762300E6FBBC /* SoftMenuLeftLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E99561A02762300E6FBBC /* SoftMenuLeftLabelTableViewCell.m */; };
+		9A9E995E1A02762300E6FBBC /* SoftMenuMidLabelBranchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E99581A02762300E6FBBC /* SoftMenuMidLabelBranchTableViewCell.m */; };
+		9A9E995F1A02762300E6FBBC /* SoftMenuMidLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E995A1A02762300E6FBBC /* SoftMenuMidLabelTableViewCell.m */; };
 		9A9FFE7E19C0430800F76D38 /* MsgDetailNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9FFE7D19C0430800F76D38 /* MsgDetailNavigationViewController.m */; };
 		9A9FFE8819C04FAB00F76D38 /* MsgError.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9FFE8519C04FAB00F76D38 /* MsgError.png */; };
 		9A9FFE8919C04FAB00F76D38 /* MsgInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A9FFE8619C04FAB00F76D38 /* MsgInfo.png */; };
@@ -232,6 +237,16 @@
 		9A9C672719AD6C81007D3248 /* MSATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSATests.m; sourceTree = "<group>"; };
 		9A9E994E1A025BBA00E6FBBC /* BarPopupMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarPopupMenuContainerViewController.h; path = ViewControllers/Bar/BarMenu/BarPopupMenuContainerViewController.h; sourceTree = "<group>"; };
 		9A9E994F1A025BBA00E6FBBC /* BarPopupMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarPopupMenuContainerViewController.m; path = ViewControllers/Bar/BarMenu/BarPopupMenuContainerViewController.m; sourceTree = "<group>"; };
+		9A9E99511A02762300E6FBBC /* SoftMenuLeftLabelResultBooleanBranchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuLeftLabelResultBooleanBranchTableViewCell.h; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuLeftLabelResultBooleanBranchTableViewCell.h; sourceTree = "<group>"; };
+		9A9E99521A02762300E6FBBC /* SoftMenuLeftLabelResultBooleanBranchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuLeftLabelResultBooleanBranchTableViewCell.m; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuLeftLabelResultBooleanBranchTableViewCell.m; sourceTree = "<group>"; };
+		9A9E99531A02762300E6FBBC /* SoftMenuLeftLabelResultBranchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuLeftLabelResultBranchTableViewCell.h; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuLeftLabelResultBranchTableViewCell.h; sourceTree = "<group>"; };
+		9A9E99541A02762300E6FBBC /* SoftMenuLeftLabelResultBranchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuLeftLabelResultBranchTableViewCell.m; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuLeftLabelResultBranchTableViewCell.m; sourceTree = "<group>"; };
+		9A9E99551A02762300E6FBBC /* SoftMenuLeftLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuLeftLabelTableViewCell.h; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuLeftLabelTableViewCell.h; sourceTree = "<group>"; };
+		9A9E99561A02762300E6FBBC /* SoftMenuLeftLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuLeftLabelTableViewCell.m; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuLeftLabelTableViewCell.m; sourceTree = "<group>"; };
+		9A9E99571A02762300E6FBBC /* SoftMenuMidLabelBranchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuMidLabelBranchTableViewCell.h; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuMidLabelBranchTableViewCell.h; sourceTree = "<group>"; };
+		9A9E99581A02762300E6FBBC /* SoftMenuMidLabelBranchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuMidLabelBranchTableViewCell.m; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuMidLabelBranchTableViewCell.m; sourceTree = "<group>"; };
+		9A9E99591A02762300E6FBBC /* SoftMenuMidLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuMidLabelTableViewCell.h; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuMidLabelTableViewCell.h; sourceTree = "<group>"; };
+		9A9E995A1A02762300E6FBBC /* SoftMenuMidLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuMidLabelTableViewCell.m; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuMidLabelTableViewCell.m; sourceTree = "<group>"; };
 		9A9FFE7C19C0430800F76D38 /* MsgDetailNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MsgDetailNavigationViewController.h; path = ViewControllers/Msg/MsgDetailNavigationViewController.h; sourceTree = "<group>"; };
 		9A9FFE7D19C0430800F76D38 /* MsgDetailNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgDetailNavigationViewController.m; path = ViewControllers/Msg/MsgDetailNavigationViewController.m; sourceTree = "<group>"; };
 		9A9FFE8519C04FAB00F76D38 /* MsgError.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MsgError.png; path = Images/24/MsgError.png; sourceTree = "<group>"; };
@@ -701,6 +716,16 @@
 		9AC0BF6F19D6E93500C8D9F2 /* CellStyle */ = {
 			isa = PBXGroup;
 			children = (
+				9A9E99511A02762300E6FBBC /* SoftMenuLeftLabelResultBooleanBranchTableViewCell.h */,
+				9A9E99521A02762300E6FBBC /* SoftMenuLeftLabelResultBooleanBranchTableViewCell.m */,
+				9A9E99531A02762300E6FBBC /* SoftMenuLeftLabelResultBranchTableViewCell.h */,
+				9A9E99541A02762300E6FBBC /* SoftMenuLeftLabelResultBranchTableViewCell.m */,
+				9A9E99551A02762300E6FBBC /* SoftMenuLeftLabelTableViewCell.h */,
+				9A9E99561A02762300E6FBBC /* SoftMenuLeftLabelTableViewCell.m */,
+				9A9E99571A02762300E6FBBC /* SoftMenuMidLabelBranchTableViewCell.h */,
+				9A9E99581A02762300E6FBBC /* SoftMenuMidLabelBranchTableViewCell.m */,
+				9A9E99591A02762300E6FBBC /* SoftMenuMidLabelTableViewCell.h */,
+				9A9E995A1A02762300E6FBBC /* SoftMenuMidLabelTableViewCell.m */,
 				9A006C2D19DC3A220009EA82 /* SoftMenuBooleanTableViewCell.h */,
 				9A006C2E19DC3A220009EA82 /* SoftMenuBooleanTableViewCell.m */,
 				9A006C2F19DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.h */,
@@ -1065,9 +1090,11 @@
 				9ACCD84B19DEA14900A6ACD5 /* GPUImagePicture.m in Sources */,
 				9ACB212619D44A4E0022EB5F /* MeasureSelect2ndTableViewController.m in Sources */,
 				9A1C92A019CED75300074EA6 /* PresetMenuContainerViewController.m in Sources */,
+				9A9E995F1A02762300E6FBBC /* SoftMenuMidLabelTableViewCell.m in Sources */,
 				9A9C671419AD6C81007D3248 /* MSA.xcdatamodeld in Sources */,
 				9A1C929B19CED2B400074EA6 /* SoftMenuContainerViewController.m in Sources */,
 				9ACCD84519DEA10600A6ACD5 /* GPUImageSaturationFilter.m in Sources */,
+				9A9E995E1A02762300E6FBBC /* SoftMenuMidLabelBranchTableViewCell.m in Sources */,
 				9A726F4E19C1880000CDF55D /* MsgMasterNavigationViewController.m in Sources */,
 				9AE0AFBC19C2B626008544AC /* DisplayTracesContainerViewController.m in Sources */,
 				9A726F6519C19FDE00CDF55D /* SystemDetailTableViewController.m in Sources */,
@@ -1083,6 +1110,7 @@
 				9AE0AFB919C2B55C008544AC /* MeasureBarContainerViewController.m in Sources */,
 				9AE7CCF019D5A8BA005EAF1C /* Bar3TableViewController.m in Sources */,
 				9A953EE619AD84E7005467A1 /* MenuContainerViewController.m in Sources */,
+				9A9E995D1A02762300E6FBBC /* SoftMenuLeftLabelTableViewCell.m in Sources */,
 				9ACA2EB919BD4651005542B5 /* MsgMasterTableViewController.m in Sources */,
 				9A79537919CD3902009984A6 /* MeasureSelectTableViewController.m in Sources */,
 				9A006C2C19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.m in Sources */,
@@ -1095,6 +1123,7 @@
 				9AE7CCED19D5A8A4005EAF1C /* Bar2TableViewController.m in Sources */,
 				9A345F4719D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m in Sources */,
 				9A726F6319C19FDE00CDF55D /* SystemDetailContainerViewController.m in Sources */,
+				9A9E995B1A02762300E6FBBC /* SoftMenuLeftLabelResultBooleanBranchTableViewCell.m in Sources */,
 				9AE7CCEA19D5A886005EAF1C /* Bar1TableViewController.m in Sources */,
 				9ACCD82A19DE9CE600A6ACD5 /* GPUImageiOSBlurFilter.m in Sources */,
 				9AD4A4E619DD860B00FE1914 /* BlurViewController.m in Sources */,
@@ -1114,6 +1143,7 @@
 				9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */,
 				9A726F6819C19FEE00CDF55D /* SystemSplitViewController.m in Sources */,
 				9A953EE919ADCBB6005467A1 /* ShareSettings.m in Sources */,
+				9A9E995C1A02762300E6FBBC /* SoftMenuLeftLabelResultBranchTableViewCell.m in Sources */,
 				9A19E0C21A023632001F2CC5 /* BarPopupMenuNavigationViewController.m in Sources */,
 				9A57E25D19D503BB00C58113 /* UIKeyMeasure.m in Sources */,
 				9ACCD83C19DEA09000A6ACD5 /* GPUImageFramebufferCache.m in Sources */,
