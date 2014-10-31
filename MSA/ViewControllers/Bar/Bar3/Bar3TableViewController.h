@@ -11,12 +11,12 @@
 #import "MeasureBarDefinition.h"
 
 @class MeasureBarContainerViewController;
-@class BarPopupMenuNavigationViewController;
+@class BarPopupMenuContainerViewController;
 
 @interface Bar3TableViewController : UITableViewController <MeasureBarDefinition>
 
 @property (weak, nonatomic) IBOutlet MeasureBarContainerViewController *measureBarCVC;
-@property (weak, nonatomic) IBOutlet BarPopupMenuNavigationViewController *barPopupMenuNVC;
+@property (weak, nonatomic) IBOutlet BarPopupMenuContainerViewController *barPopupMenuCVC;
 
 @property (nonatomic) CGFloat frameWidth;
 @property (nonatomic) CGFloat frameHeight;

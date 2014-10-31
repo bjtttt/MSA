@@ -1,5 +1,5 @@
 //
-//  SoftMenuNumericTableViewCell.h
+//  SoftMenuMidLabelBranchTableViewCell.h
 //  MSA
 //
 //  Created by GUO Zhitao on 22/09/14.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 
-@interface SoftMenuNumericTableViewCell : UITableViewCell
+@interface SoftMenuMidLabelBranchTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *content;

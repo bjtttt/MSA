@@ -1,5 +1,5 @@
 //
-//  ContainerViewController.m
+//  MainContainerViewController.m
 //  MSA
 //
 //  Created by GUO Zhitao on 14-8-26.
@@ -14,7 +14,7 @@
 #import "MeasureContainerViewController.h"
 #import "MeasureBarContainerViewController.h"
 #import "BlurViewController.h"
-#import "BarPopupMenuNavigationViewController.h"
+#import "BarPopupMenuContainerViewController.h"
 #import "UIView+Screenshot.h"
 #import "MainContainerView.h"
 
@@ -184,19 +184,19 @@
         self.measureCVC.frameWidth = MENU_WIDTH;
         self.measureCVC.frameHeight = self.frameHeight;
     }
-    if([segue.identifier isEqualToString:@"embedSegueToBarPopupMenuNVC"])
+    if([segue.identifier isEqualToString:@"embedSegueToBarPopupMenuCVC"])
     {
-        self.barPopupMenuNVC = (BarPopupMenuTableViewController *)segue.destinationViewController;
-        self.barPopupMenuNVC.shareSettings = self.shareSettings;
-        self.barPopupMenuNVC.mainCVC = self;
+        self.barPopupMenuCVC = (BarPopupMenuContainerViewController *)segue.destinationViewController;
+        self.barPopupMenuCVC.shareSettings = self.shareSettings;
+        self.barPopupMenuCVC.mainCVC = self;
         
-        self.barPopupMenuNVC.frameWidth = MENU_WIDTH;
-        self.barPopupMenuNVC.frameHeight = BAR_MENU_HEIGHT;
+        self.barPopupMenuCVC.frameWidth = MENU_WIDTH;
+        self.barPopupMenuCVC.frameHeight = BAR_MENU_HEIGHT;
         
-        self.barCVC.barPopupMenuNVC = self.barPopupMenuNVC;
-        [self.barCVC setBarPopupMenuViewController:self.barPopupMenuNVC];
+        self.barCVC.barPopupMenuCVC = self.barPopupMenuCVC;
+        [self.barCVC setBarPopupMenuViewController:self.barPopupMenuCVC];
         
-        ((MainContainerView *)self.mainView).barPopupMenuV = self.barPopupMenuNVC.view;
+        ((MainContainerView *)self.mainView).barPopupMenuV = self.barPopupMenuCVC.view;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBlurVC"])
     {

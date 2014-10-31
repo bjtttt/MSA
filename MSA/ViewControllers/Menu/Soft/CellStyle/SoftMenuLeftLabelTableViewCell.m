@@ -1,5 +1,5 @@
 //
-//  SoftMenuNumericTableViewCell.m
+//  SoftMenuLeftLabelTableViewCell.m
 //  MSA
 //
 //  Created by GUO Zhitao on 22/09/14.
@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SoftMenuNumericTableViewCell.h"
+#import "SoftMenuLeftLabelTableViewCell.h"
 
-@interface SoftMenuNumericTableViewCell()
+@interface SoftMenuLeftLabelTableViewCell()
 
 @end
 
-@implementation SoftMenuNumericTableViewCell
+@implementation SoftMenuLeftLabelTableViewCell
 
 //-(void)viewDidLoad{
 //    [super viewDidLoad];

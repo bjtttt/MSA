@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UILabel *content;
+@property (weak, nonatomic) IBOutlet UILabel *content1;
 @property (weak, nonatomic) IBOutlet UISwitch *state;
 
 @end

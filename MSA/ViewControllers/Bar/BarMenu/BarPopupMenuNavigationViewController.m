@@ -22,6 +22,7 @@
     self.barPopupMenuTVC = [self.viewControllers firstObject];
     self.barPopupMenuTVC.shareSettings = self.shareSettings;
     self.barPopupMenuTVC.barPopupMenuNVC = self;
+
 }
 
 #pragma mark - Split view
