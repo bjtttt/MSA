@@ -72,11 +72,11 @@
                         <viewControllerLayoutGuide type="top" id="FPv-W1-1Oj"/>
                         <viewControllerLayoutGuide type="bottom" id="Vh9-Iw-cO3"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="W7O-wD-0R7">
+                    <view key="view" contentMode="scaleToFill" id="W7O-wD-0R7" customClass="MenuContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="150" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBu-G0-MKp">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dBu-G0-MKp">
                                 <rect key="frame" x="-1" y="0.0" width="150" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
@@ -105,7 +105,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VEf-4y-LoC" userLabel="Soft Menu Container View">
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VEf-4y-LoC" userLabel="Soft Menu Container View">
                                 <rect key="frame" x="-1" y="44" width="150" height="556"/>
                                 <connections>
                                     <segue destination="hHG-jj-huI" kind="embed" identifier="embedSegueToSoftMenuCVC" id="iSV-JH-xJF"/>
@@ -120,9 +120,15 @@
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VEf-4y-LoC" firstAttribute="top" secondItem="W7O-wD-0R7" secondAttribute="top" constant="44" id="Aru-Xd-0Eu"/>
+                            <constraint firstItem="VEf-4y-LoC" firstAttribute="top" secondItem="dBu-G0-MKp" secondAttribute="bottom" id="OUB-vR-aR2"/>
+                            <constraint firstItem="VEf-4y-LoC" firstAttribute="bottom" secondItem="Vh9-Iw-cO3" secondAttribute="top" id="PjC-lU-FNm"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="menuNavBar" destination="dBu-G0-MKp" id="qmX-a5-h5Y"/>
+                        <outlet property="navBarPresetMenuBI" destination="R5d-gu-nno" id="QZc-0J-kV1"/>
                         <outlet property="presetMenuV" destination="5CF-ca-Iu9" id="28s-CX-s2X"/>
                         <outlet property="softMenuV" destination="5CF-ca-Iu9" id="FRM-fA-wSx"/>
                     </connections>

@@ -44,8 +44,8 @@
         self.softMenuCVC.shareSettings = self.shareSettings;
         self.softMenuCVC.menuCVC = self;
         
-        self.presetMenuCVC.frameHeight = self.frameHeight - NAVBAR_HEIGHT;
-        self.presetMenuCVC.frameWidth = self.frameWidth;
+        self.softMenuCVC.frameHeight = self.frameHeight - NAVBAR_HEIGHT;
+        self.softMenuCVC.frameWidth = self.frameWidth;
     }
 }
 

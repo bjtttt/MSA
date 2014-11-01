@@ -36,6 +36,14 @@
     }
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    self.softMenuV.frame = CGRectMake(self.softMenuV.frame.origin.x, self.softMenuV.frame.origin.y, self.frameWidth, self.frameHeight);
+    
+    //NSLog(@"\nSoftMenuNavigationViewController - viewDidAppear:\nx = %f\ny = %f\nwidth = %f\nheight = %f", self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+}
+
 -(void)viewWillLayoutSubviews {
     NSLog(@"SoftMenuContainerViewController - viewWillLayoutSubviews");
 
@@ -47,6 +55,11 @@
 
     [super viewDidLayoutSubviews];
     
+    //self.softMenuV.frame = CGRectMake(0, VC_MARGIN, self.frameWidth, self.frameHeight-VC_MARGIN);
+}
+
+-(void)setSoftMenuFrame
+{
     //self.softMenuV.frame = CGRectMake(0, VC_MARGIN, self.frameWidth, self.frameHeight-VC_MARGIN);
 }
 

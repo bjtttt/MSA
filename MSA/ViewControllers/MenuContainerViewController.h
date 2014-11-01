@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIView *presetMenuV;
 @property (weak, nonatomic) IBOutlet UIView *softMenuV;
 @property (weak, nonatomic) IBOutlet UINavigationBar *menuNavBar;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *navBarPresetMenuBI;
 
 @property (weak, nonatomic) IBOutlet PresetMenuContainerViewController *presetMenuCVC;
 @property (weak, nonatomic) IBOutlet SoftMenuContainerViewController *softMenuCVC;

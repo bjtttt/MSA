@@ -85,6 +85,7 @@ typedef enum unitType {
 @property (nonatomic) BOOL menuTapped;
 @property (nonatomic) BOOL measureTapped;
 
+@property (nonatomic) BOOL navPresetMenuButtonAreaTapped;
 @property (nonatomic) BOOL barPopupMenuAreaTapped;
 @property (nonatomic) NSInteger barTappedIndex;
 @property (nonatomic) NSInteger currentBarPopupMenuIndex;
@@ -95,6 +96,7 @@ typedef enum unitType {
 @property (nonatomic) BOOL barPopupMenuDisplayed;
 @property (nonatomic) CGRect barPopupMenuCGRect;
 @property (nonatomic) CGRect barCGRect;
+@property (nonatomic) CGRect navBarPresetMenuButtonRect;
 
 @property (nonatomic) InstrumentStatus currentInstrumentStatus;
 @property (nonatomic) NSMutableString *currentInstrument;

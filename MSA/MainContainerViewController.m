@@ -17,6 +17,7 @@
 #import "BarPopupMenuContainerViewController.h"
 #import "UIView+Screenshot.h"
 #import "MainContainerView.h"
+#import "SoftMenuContainerViewController.h"
 
 @interface MainContainerViewController ()
 
@@ -84,6 +85,7 @@
     self.shareSettings.previousBarPopupMenuIndex = -1;
 
     self.shareSettings.barPopupMenuAreaTapped=NO;
+    self.shareSettings.navPresetMenuButtonAreaTapped=NO;
 
     self.shareSettings.currentInstrument = [[NSMutableString alloc] initWithString:@""];
     self.shareSettings.currentInstrumentStatus = INST_DISC;
@@ -138,6 +140,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barTappedIndex) name:@"barTappedIndex" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barPopupMenuAreaTapped) name:@"barPopupMenuAreaTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(navPresetMenuButtonAreaTapped) name:@"navPresetMenuButtonAreaTapped" object:nil];
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
@@ -150,6 +153,7 @@
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barTappedIndex" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barPopupMenuAreaTapped" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"navPresetMenuButtonAreaTapped" object:nil];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -174,6 +178,9 @@
         
         self.menuCVC.frameWidth = MENU_WIDTH;
         self.menuCVC.frameHeight = self.frameHeight;
+
+        //self.menuView.frame = CGRectMake(self.menuView.frame.origin.x, self.menuView.frame.origin.y, MENU_WIDTH, self.frameHeight);
+        //self.menuCVC.softMenuV.frame = CGRectMake(self.menuCVC.softMenuV.frame.origin.x, self.menuCVC.softMenuV.frame.origin.y, MENU_WIDTH, self.frameHeight);
     }
     if([segue.identifier isEqualToString:@"embedSegueToMeasureVC"])
     {
@@ -246,6 +253,10 @@
 }
 
 - (void)barPopupMenuAreaTapped {
+    [self layoutVC:YES];
+}
+
+- (void)navPresetMenuButtonAreaTapped {
     [self layoutVC:YES];
 }
 
@@ -388,6 +399,8 @@
             self.barCVC.frameWidth = self.frameWidth - MENU_WIDTH;
             [self.barCVC adjustMeasureBarWidth:YES];
             
+            //[self.menuCVC.softMenuCVC setSoftMenuFrame];
+            
             layoutBlock = ^(void)
             {
                 self.measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, (self.frameHeight-MEAS_HEIGHT)/2, MEAS_WIDTH, MEAS_HEIGHT);
@@ -419,6 +432,10 @@
     
     self.shareSettings.barPopupMenuCGRect = CGRectMake(self.barPopupMenuView.frame.origin.x, self.barPopupMenuView.frame.origin.y, self.barPopupMenuView.frame.size.width, self.barPopupMenuView.frame.size.height);
     self.shareSettings.barCGRect = CGRectMake(0, NAVBAR_HEIGHT, self.displayView.frame.size.width, BAR_HEIGHT);
+    if(self.shareSettings.menuDisplayed == YES)
+        self.shareSettings.navBarPresetMenuButtonRect = CGRectMake(self.frameWidth - MENU_WIDTH + self.menuCVC.navBarPresetMenuBI.customView.frame.origin.x, self.menuCVC.navBarPresetMenuBI.customView.frame.origin.y, self.menuCVC.navBarPresetMenuBI.customView.frame.size.width, self.menuCVC.navBarPresetMenuBI.customView.frame.size.height);
+    else
+        self.shareSettings.navBarPresetMenuButtonRect = CGRectMake(self.frameWidth + self.menuCVC.navBarPresetMenuBI.customView.frame.origin.x, self.menuCVC.navBarPresetMenuBI.customView.frame.origin.y, self.menuCVC.navBarPresetMenuBI.customView.frame.size.width, self.menuCVC.navBarPresetMenuBI.customView.frame.size.height);
     //NSLog(@"SET Measure Bar Popup Menu Rect : x = %f, y = %f, width = %f, height = %f", self.shareSettings.barPopupMenuCGRect.origin.x, self.shareSettings.barPopupMenuCGRect.origin.y, self.shareSettings.barPopupMenuCGRect.size.width, self.shareSettings.barPopupMenuCGRect.size.height);
     //NSLog(@"SET Measure Bar Rect : x = %f, y = %f, width = %f, height = %f", self.shareSettings.barCGRect.origin.x, self.shareSettings.barCGRect.origin.y, self.shareSettings.barCGRect.size.width, self.shareSettings.barCGRect.size.height);
     

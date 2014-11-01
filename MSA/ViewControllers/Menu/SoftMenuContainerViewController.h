@@ -24,4 +24,6 @@
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
 
+-(void)setSoftMenuFrame;
+
 @end
