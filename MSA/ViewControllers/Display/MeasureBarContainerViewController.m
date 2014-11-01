@@ -63,6 +63,8 @@
         self.barCV.shareSettings = self.shareSettings;
     
     self.previousFrameWidth = self.frameWidth;
+
+    //self.view.backgroundColor = [UIColor colorWithRed:77.0f/255.0f green:77.0f/255.0f blue:77.0f/255.0f alpha:1.0f];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

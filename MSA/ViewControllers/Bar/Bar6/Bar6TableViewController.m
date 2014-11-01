@@ -26,6 +26,7 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     //[self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self.view setBackgroundColor:[UIColor darkGrayColor]];
 }
 
 //-(void) setCurrentStatus:(MSGType)currentSystem{

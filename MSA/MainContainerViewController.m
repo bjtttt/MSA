@@ -54,7 +54,7 @@
 -(void)setBarPopupMenuViewStyle
 {
     // Bar View Border Radius
-    [self.barPopupMenuView.layer setCornerRadius:NORMAL_CORNER_RADIUS];
+    //[self.barPopupMenuView.layer setCornerRadius:NORMAL_CORNER_RADIUS];
     [self.barPopupMenuView.layer setMasksToBounds:YES];
     //[self.measureView setClipsToBounds:YES];
     
@@ -268,12 +268,6 @@
 
     if(self.shareSettings.barPopupMenuAreaTapped == NO)
     {
-        if(self.shareSettings.menuDisplayed == YES)
-        {
-            self.menuCVC.presetViewVisible = NO;
-            [self.menuCVC showHidePresetMenu:NO animated:YES];
-        }
-
         if(self.shareSettings.barTappedIndex == -1)
         {
             barMenuPosition = [self.shareSettings measureBarPopupMenuPosition:self.shareSettings.previousBarPopupMenuIndex forWidth:displayWidth];
@@ -290,6 +284,14 @@
         }
         else
         {
+            /*
+            if(self.shareSettings.menuDisplayed == YES)
+            {
+                self.menuCVC.presetViewVisible = NO;
+                [self.menuCVC showHidePresetMenu:NO animated:YES];
+            }
+            */
+
             if (self.shareSettings.currentBarPopupMenuIndex == -1)
             {
                 // Bar Popup Menu isn't displayed

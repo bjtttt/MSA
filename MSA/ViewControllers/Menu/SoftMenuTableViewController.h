@@ -15,6 +15,9 @@
 
 @property (weak, nonatomic) IBOutlet SoftMenuNavigationViewController *softMenuNVC;
 
+@property (nonatomic) CGFloat frameWidth;
+@property (nonatomic) CGFloat frameHeight;
+
 @property (copy, nonatomic) NSArray *systems;
 
 @property (weak, nonatomic) ShareSettings *shareSettings;

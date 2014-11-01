@@ -41,6 +41,8 @@ static NSString *presetMenuCellTable_White_Green_Id = @"PresetMenuTVC_White_Gree
     [self.tableView setBackgroundColor:[UIColor whiteColor]];
     
     //[self.navigationController setNavigationBarHidden:YES animated:YES];
+
+    self.view.backgroundColor = [UIColor colorWithRed:29.0f/255.0f green:173.0f/255.0f blue:219.0f/255.0f alpha:1.0f];
     
     NSLog(@"\nPresetMenu Table View Controller - viewDidLoad:\nx = %f\ny = %f\nwidth = %f\nheight = %f",
           self.view.frame.origin.x, self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
