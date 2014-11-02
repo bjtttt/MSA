@@ -89,8 +89,12 @@
 }
 
 - (IBAction)showPresetMenu:(id)sender {
-    self.presetViewVisible = !self.presetViewVisible;
-    [self showHidePresetMenu:self.presetViewVisible animated:YES];
+    // It is taken over by MainContainerViewController - layoutVC
+    // If it is not taken over by it, some codes should be changed in MainContainerViewController - layoutVC
+    // Those codes should monitor whether Preset Button is pressed or not.
+    
+    //self.presetViewVisible = !self.presetViewVisible;
+    //[self showHidePresetMenu:self.presetViewVisible animated:YES];
 }
 
 - (void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated {
@@ -100,6 +104,8 @@
 - (void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated inTime:(CGFloat)inTime {
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
+    
+    self.shareSettings.presetMenuDisplayed = showPresetMenu;
 
     layoutBlock = ^(void){
         if(showPresetMenu == YES)

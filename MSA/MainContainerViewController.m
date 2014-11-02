@@ -18,6 +18,7 @@
 #import "UIView+Screenshot.h"
 #import "MainContainerView.h"
 #import "SoftMenuContainerViewController.h"
+#import "PresetMenuContainerViewController.h"
 
 @interface MainContainerViewController ()
 
@@ -140,7 +141,6 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barTappedIndex) name:@"barTappedIndex" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barPopupMenuAreaTapped) name:@"barPopupMenuAreaTapped" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(navPresetMenuButtonAreaTapped) name:@"navPresetMenuButtonAreaTapped" object:nil];
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
@@ -153,7 +153,6 @@
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barTappedIndex" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barPopupMenuAreaTapped" object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"navPresetMenuButtonAreaTapped" object:nil];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -256,10 +255,6 @@
     [self layoutVC:YES];
 }
 
-- (void)navPresetMenuButtonAreaTapped {
-    [self layoutVC:YES];
-}
-
 - (void)layoutVC:(BOOL)animated
 {
     void (^layoutBlock)(void);
@@ -276,6 +271,26 @@
     else
         displayWidth = self.frameWidth;
     CGFloat barMenuPosition = [self.shareSettings measureBarPopupMenuPosition:self.shareSettings.barTappedIndex forWidth:displayWidth];
+    
+    if(self.shareSettings.presetMenuDisplayed == YES)
+    {
+        if(self.shareSettings.presetMenuAreaTapped == NO)
+        {
+            self.menuCVC.presetViewVisible = NO;
+            [self.menuCVC showHidePresetMenu:NO animated:YES];
+        }
+    }
+    else
+    {
+        if(self.shareSettings.menuDisplayed == YES)
+        {
+            if(self.shareSettings.navPresetMenuButtonAreaTapped == YES)
+            {
+                self.menuCVC.presetViewVisible = YES;
+                [self.menuCVC showHidePresetMenu:YES animated:YES];
+            }
+        }
+    }
 
     if(self.shareSettings.barPopupMenuAreaTapped == NO)
     {
@@ -433,11 +448,18 @@
     self.shareSettings.barPopupMenuCGRect = CGRectMake(self.barPopupMenuView.frame.origin.x, self.barPopupMenuView.frame.origin.y, self.barPopupMenuView.frame.size.width, self.barPopupMenuView.frame.size.height);
     self.shareSettings.barCGRect = CGRectMake(0, NAVBAR_HEIGHT, self.displayView.frame.size.width, BAR_HEIGHT);
     if(self.shareSettings.menuDisplayed == YES)
-        self.shareSettings.navBarPresetMenuButtonRect = CGRectMake(self.frameWidth - MENU_WIDTH + self.menuCVC.navBarPresetMenuBI.customView.frame.origin.x, self.menuCVC.navBarPresetMenuBI.customView.frame.origin.y, self.menuCVC.navBarPresetMenuBI.customView.frame.size.width, self.menuCVC.navBarPresetMenuBI.customView.frame.size.height);
+    {
+        self.shareSettings.navBarPresetMenuButtonCGRect = CGRectMake(self.frameWidth - MENU_WIDTH + self.menuCVC.navBarPresetMenuBI.customView.frame.origin.x, self.menuCVC.navBarPresetMenuBI.customView.frame.origin.y, self.menuCVC.navBarPresetMenuBI.customView.frame.size.width, self.menuCVC.navBarPresetMenuBI.customView.frame.size.height);
+        self.shareSettings.presetMenuCGRect = CGRectMake(self.frameWidth - MENU_WIDTH, NAVBAR_HEIGHT, self.menuCVC.presetMenuCVC.view.frame.size.width, self.menuCVC.presetMenuCVC.view.frame.size.height);
+    }
     else
-        self.shareSettings.navBarPresetMenuButtonRect = CGRectMake(self.frameWidth + self.menuCVC.navBarPresetMenuBI.customView.frame.origin.x, self.menuCVC.navBarPresetMenuBI.customView.frame.origin.y, self.menuCVC.navBarPresetMenuBI.customView.frame.size.width, self.menuCVC.navBarPresetMenuBI.customView.frame.size.height);
+    {
+        self.shareSettings.navBarPresetMenuButtonCGRect = CGRectMake(self.frameWidth + self.menuCVC.navBarPresetMenuBI.customView.frame.origin.x, self.menuCVC.navBarPresetMenuBI.customView.frame.origin.y, self.menuCVC.navBarPresetMenuBI.customView.frame.size.width, self.menuCVC.navBarPresetMenuBI.customView.frame.size.height);
+        self.shareSettings.presetMenuCGRect = CGRectMake(self.frameWidth - MENU_WIDTH, NAVBAR_HEIGHT, self.menuCVC.presetMenuCVC.view.frame.size.width, self.menuCVC.presetMenuCVC.view.frame.size.height);
+    }
     //NSLog(@"SET Measure Bar Popup Menu Rect : x = %f, y = %f, width = %f, height = %f", self.shareSettings.barPopupMenuCGRect.origin.x, self.shareSettings.barPopupMenuCGRect.origin.y, self.shareSettings.barPopupMenuCGRect.size.width, self.shareSettings.barPopupMenuCGRect.size.height);
     //NSLog(@"SET Measure Bar Rect : x = %f, y = %f, width = %f, height = %f", self.shareSettings.barCGRect.origin.x, self.shareSettings.barCGRect.origin.y, self.shareSettings.barCGRect.size.width, self.shareSettings.barCGRect.size.height);
+    //NSLog(@"SET Nav Bar Preset Menu Button Rect : x = %f, y = %f, width = %f, height = %f", self.shareSettings.navBarPresetMenuButtonCGRect.origin.x, self.shareSettings.navBarPresetMenuButtonCGRect.origin.y, self.shareSettings.navBarPresetMenuButtonCGRect.size.width, self.shareSettings.navBarPresetMenuButtonCGRect.size.height);
     
     if (animated)
     {
