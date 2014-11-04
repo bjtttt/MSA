@@ -88,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barPopupMenuTVC_Single_Continous" id="ZDU-ns-web" userLabel="barPopupMenuTVC_Single_Continous" customClass="Bar0SingleContinousTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barPopupMenuTVC_Single_Continous" id="ZDU-ns-web" userLabel="BarPopupMenuTVC_Single_Continous" customClass="Bar0SingleContinousTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZDU-ns-web" id="fap-sf-I4j">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -106,7 +106,7 @@
                                     <outlet property="singleContinousImgV" destination="lbV-8s-9xL" id="VG6-65-uRT"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barPopupMenuTVC_One_Line" id="UjF-kr-aN6" userLabel="barPopupMenuTVC_One_Line" customClass="Bar0OneLineTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barPopupMenuTVC_One_Line" id="UjF-kr-aN6" userLabel="BarPopupMenuTVC_One_Line" customClass="Bar0OneLineTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UjF-kr-aN6" id="aIz-Tp-Yon">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -114,13 +114,32 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vih-iN-FFg">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="content" destination="vih-iN-FFg" id="zGp-gZ-BSI"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barPopupMenuTVC_One_Line" id="UMD-GT-cZF" userLabel="BarPopupMenuTVC_One_Line_Yellow" customClass="Bar0OneLineYellowTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UMD-GT-cZF" id="PBS-L3-MRR">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfT-St-aUJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="content" destination="HfT-St-aUJ" id="O2Q-qL-PhW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

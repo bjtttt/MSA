@@ -12,6 +12,7 @@
 		9A006C3119DC3A220009EA82 /* SoftMenuBooleanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A006C2E19DC3A220009EA82 /* SoftMenuBooleanTableViewCell.m */; };
 		9A006C3219DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A006C3019DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m */; };
 		9A162D661A00E58C005319EF /* MainContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A162D651A00E58C005319EF /* MainContainerView.m */; };
+		9A194D201A08DA2D0001BEAD /* Bar0OneLineYellowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A194D1F1A08DA2D0001BEAD /* Bar0OneLineYellowTableViewCell.m */; };
 		9A19791019D270EE008E87E1 /* ReturnRoot.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A19790F19D270EE008E87E1 /* ReturnRoot.png */; };
 		9A19791219D278AD008E87E1 /* AddInstrument.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A19791119D278AD008E87E1 /* AddInstrument.png */; };
 		9A19795019D28DDA008E87E1 /* Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A19794E19D28DDA008E87E1 /* Cancel.png */; };
@@ -137,6 +138,8 @@
 		9A006C3019DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuNumericBooleanTableViewCell.m; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuNumericBooleanTableViewCell.m; sourceTree = "<group>"; };
 		9A162D651A00E58C005319EF /* MainContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainContainerView.m; sourceTree = "<group>"; };
 		9A162D671A00E5A1005319EF /* MainContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainContainerView.h; sourceTree = "<group>"; };
+		9A194D1E1A08DA2D0001BEAD /* Bar0OneLineYellowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bar0OneLineYellowTableViewCell.h; path = ViewControllers/Bar/CellStyle/Bar0OneLineYellowTableViewCell.h; sourceTree = "<group>"; };
+		9A194D1F1A08DA2D0001BEAD /* Bar0OneLineYellowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bar0OneLineYellowTableViewCell.m; path = ViewControllers/Bar/CellStyle/Bar0OneLineYellowTableViewCell.m; sourceTree = "<group>"; };
 		9A19790F19D270EE008E87E1 /* ReturnRoot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ReturnRoot.png; path = Images/20/ReturnRoot.png; sourceTree = "<group>"; };
 		9A19791119D278AD008E87E1 /* AddInstrument.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AddInstrument.png; path = Images/32/AddInstrument.png; sourceTree = "<group>"; };
 		9A19794E19D28DDA008E87E1 /* Cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cancel.png; path = Images/24/Cancel.png; sourceTree = "<group>"; };
@@ -487,6 +490,8 @@
 		9A6A209B19DF77C20011B98A /* CellStyle */ = {
 			isa = PBXGroup;
 			children = (
+				9A194D1E1A08DA2D0001BEAD /* Bar0OneLineYellowTableViewCell.h */,
+				9A194D1F1A08DA2D0001BEAD /* Bar0OneLineYellowTableViewCell.m */,
 				9A6A209F19DF79170011B98A /* Bar0OneLineTableViewCell.h */,
 				9A6A20A019DF79170011B98A /* Bar0OneLineTableViewCell.m */,
 				9A6A209C19DF78990011B98A /* Bar0SingleContinousTableViewCell.h */,
@@ -1083,6 +1088,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A162D661A00E58C005319EF /* MainContainerView.m in Sources */,
+				9A194D201A08DA2D0001BEAD /* Bar0OneLineYellowTableViewCell.m in Sources */,
 				9A19795619D2A547008E87E1 /* AddInstrumentContainerViewController.m in Sources */,
 				9A006C3219DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m in Sources */,
 				9A726F5B19C19FC000CDF55D /* SystemMasterNavigationViewController.m in Sources */,

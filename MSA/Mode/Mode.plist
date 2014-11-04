@@ -251,7 +251,255 @@
 				<array/>
 			</dict>
 		</array>
-		<array/>
+		<array>
+			<dict>
+				<key>shortLabel</key>
+				<string>Input Z</string>
+				<key>label</key>
+				<string>Input Z</string>
+				<key>nameString</key>
+				<string></string>
+				<key>type</key>
+				<integer>4</integer>
+				<key>valueString</key>
+				<string></string>
+				<key>value</key>
+				<integer>0</integer>
+				<key>unit</key>
+				<string></string>
+				<key>enumValues</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<integer>0</integer>
+						<key>shortLabel</key>
+						<string>50 Ohm</string>
+						<key>label</key>
+						<string>50 Ohm</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>1</integer>
+						<key>shortLabel</key>
+						<string>75 Ohm</string>
+						<key>label</key>
+						<string>75 Ohm</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>shortLabel</key>
+				<string></string>
+				<key>label</key>
+				<string>Select Correction</string>
+				<key>nameString</key>
+				<string></string>
+				<key>type</key>
+				<integer>4</integer>
+				<key>valueString</key>
+				<string></string>
+				<key>value</key>
+				<integer>0</integer>
+				<key>unit</key>
+				<string></string>
+				<key>enumValues</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<integer>0</integer>
+						<key>shortLabel</key>
+						<string></string>
+						<key>label</key>
+						<string>Correction 1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>1</integer>
+						<key>shortLabel</key>
+						<string></string>
+						<key>label</key>
+						<string>Correction 2</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>2</integer>
+						<key>shortLabel</key>
+						<string></string>
+						<key>label</key>
+						<string>Correction 3</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>3</integer>
+						<key>shortLabel</key>
+						<string></string>
+						<key>label</key>
+						<string>Correction 4</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>4</integer>
+						<key>shortLabel</key>
+						<string></string>
+						<key>label</key>
+						<string>Correction 5</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>5</integer>
+						<key>shortLabel</key>
+						<string></string>
+						<key>label</key>
+						<string>Correction 6</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>6</integer>
+						<key>shortLabel</key>
+						<string></string>
+						<key>label</key>
+						<string>Correction 7</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>7</integer>
+						<key>shortLabel</key>
+						<string></string>
+						<key>label</key>
+						<string>Correction 8</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>shortLabel</key>
+				<string>Corrections</string>
+				<key>label</key>
+				<string>Corrections</string>
+				<key>nameString</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>valueString</key>
+				<string></string>
+				<key>value</key>
+				<integer>0</integer>
+				<key>unit</key>
+				<string></string>
+				<key>enumValues</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<integer>0</integer>
+						<key>shortLabel</key>
+						<string>Off</string>
+						<key>label</key>
+						<string>Off</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>1</integer>
+						<key>shortLabel</key>
+						<string>On</string>
+						<key>label</key>
+						<string>On</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>shortLabel</key>
+				<string>Freq Ref</string>
+				<key>label</key>
+				<string>Freq Ref Input</string>
+				<key>nameString</key>
+				<string></string>
+				<key>type</key>
+				<integer>4</integer>
+				<key>valueString</key>
+				<string></string>
+				<key>value</key>
+				<integer>0</integer>
+				<key>unit</key>
+				<string></string>
+				<key>enumValues</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<integer>0</integer>
+						<key>shortLabel</key>
+						<string>Internal</string>
+						<key>label</key>
+						<string>Internal</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>1</integer>
+						<key>shortLabel</key>
+						<string>External</string>
+						<key>label</key>
+						<string>External</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>2</integer>
+						<key>shortLabel</key>
+						<string>Sense</string>
+						<key>label</key>
+						<string>Sense</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>3</integer>
+						<key>shortLabel</key>
+						<string>Pulse</string>
+						<key>label</key>
+						<string>Pulse</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>shortLabel</key>
+				<string>Align</string>
+				<key>label</key>
+				<string>Auto Align</string>
+				<key>nameString</key>
+				<string></string>
+				<key>type</key>
+				<integer>4</integer>
+				<key>valueString</key>
+				<string></string>
+				<key>value</key>
+				<integer>0</integer>
+				<key>unit</key>
+				<string></string>
+				<key>enumValues</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<integer>0</integer>
+						<key>shortLabel</key>
+						<string>On</string>
+						<key>label</key>
+						<string>On</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>1</integer>
+						<key>shortLabel</key>
+						<string>Off</string>
+						<key>label</key>
+						<string>Off</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>2</integer>
+						<key>shortLabel</key>
+						<string>Partial</string>
+						<key>label</key>
+						<string>Partial</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
 		<array/>
 		<array/>
 		<array/>
