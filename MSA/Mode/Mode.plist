@@ -819,7 +819,182 @@
 				</dict>
 			</dict>
 		</array>
-		<array/>
+		<array>
+			<dict>
+				<key>shortLabel</key>
+				<string>PNO</string>
+				<key>label</key>
+				<string>Phase Noise Optimization</string>
+				<key>nameString</key>
+				<string></string>
+				<key>type</key>
+				<integer>4</integer>
+				<key>valueString</key>
+				<string></string>
+				<key>value</key>
+				<integer>0</integer>
+				<key>unit</key>
+				<string></string>
+				<key>enumValues</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<integer>0</integer>
+						<key>shortLabel</key>
+						<string>Close</string>
+						<key>label</key>
+						<string>Best Close-In Noise</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>1</integer>
+						<key>shortLabel</key>
+						<string>Balanced</string>
+						<key>label</key>
+						<string>Balanced</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>2</integer>
+						<key>shortLabel</key>
+						<string>Best Spurs</string>
+						<key>label</key>
+						<string>Best Spurs</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>3</integer>
+						<key>shortLabel</key>
+						<string>Wide</string>
+						<key>label</key>
+						<string>Wide-Offset</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>4</integer>
+						<key>shortLabel</key>
+						<string>Fast</string>
+						<key>label</key>
+						<string>Fast Tuning</string>
+					</dict>
+				</array>
+				<key>subBoolEnum</key>
+				<dict>
+					<key>shortLabel</key>
+					<string></string>
+					<key>label</key>
+					<string></string>
+					<key>nameString</key>
+					<string></string>
+					<key>type</key>
+					<integer>4</integer>
+					<key>valueString</key>
+					<string></string>
+					<key>value</key>
+					<integer>0</integer>
+					<key>unit</key>
+					<string></string>
+					<key>enumValues</key>
+					<array>
+						<dict>
+							<key>value</key>
+							<integer>0</integer>
+							<key>shortLabel</key>
+							<string></string>
+							<key>label</key>
+							<string>Auto</string>
+						</dict>
+						<dict>
+							<key>value</key>
+							<integer>1</integer>
+							<key>shortLabel</key>
+							<string></string>
+							<key>label</key>
+							<string>Man</string>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<dict>
+				<key>shortLabel</key>
+				<string>IF Gain</string>
+				<key>label</key>
+				<string>IF Gain</string>
+				<key>nameString</key>
+				<string></string>
+				<key>type</key>
+				<integer>4</integer>
+				<key>valueString</key>
+				<string></string>
+				<key>value</key>
+				<integer>0</integer>
+				<key>unit</key>
+				<string></string>
+				<key>enumValues</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<integer>0</integer>
+						<key>shortLabel</key>
+						<string>Autorange</string>
+						<key>label</key>
+						<string>Autorange</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>1</integer>
+						<key>shortLabel</key>
+						<string>Low Gain</string>
+						<key>label</key>
+						<string>Low Gain</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>2</integer>
+						<key>shortLabel</key>
+						<string>High Gain</string>
+						<key>label</key>
+						<string>High Gain</string>
+					</dict>
+				</array>
+				<key>subBoolEnum</key>
+				<dict>
+					<key>shortLabel</key>
+					<string></string>
+					<key>label</key>
+					<string></string>
+					<key>nameString</key>
+					<string></string>
+					<key>type</key>
+					<integer>4</integer>
+					<key>valueString</key>
+					<string></string>
+					<key>value</key>
+					<integer>0</integer>
+					<key>unit</key>
+					<string></string>
+					<key>enumValues</key>
+					<array>
+						<dict>
+							<key>value</key>
+							<integer>0</integer>
+							<key>shortLabel</key>
+							<string></string>
+							<key>label</key>
+							<string>Auto</string>
+						</dict>
+						<dict>
+							<key>value</key>
+							<integer>1</integer>
+							<key>shortLabel</key>
+							<string></string>
+							<key>label</key>
+							<string>Man</string>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+		</array>
 		<array/>
 	</array>
 </dict>
