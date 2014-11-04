@@ -995,7 +995,182 @@
 				</dict>
 			</dict>
 		</array>
-		<array/>
+		<array>
+			<dict>
+				<key>shortLabel</key>
+				<string>Center Freq</string>
+				<key>label</key>
+				<string>Center Freq</string>
+				<key>nameString</key>
+				<string></string>
+				<key>type</key>
+				<integer>2</integer>
+				<key>valueString</key>
+				<string></string>
+				<key>value</key>
+				<integer>0</integer>
+				<key>unit</key>
+				<string>Hz</string>
+				<key>enumValues</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>shortLabel</key>
+				<string>Avg Type</string>
+				<key>label</key>
+				<string>Avg Type</string>
+				<key>nameString</key>
+				<string></string>
+				<key>type</key>
+				<integer>4</integer>
+				<key>valueString</key>
+				<string></string>
+				<key>value</key>
+				<integer>0</integer>
+				<key>unit</key>
+				<string></string>
+				<key>enumValues</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<integer>0</integer>
+						<key>shortLabel</key>
+						<string>Autorange</string>
+						<key>label</key>
+						<string>Autorange</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>1</integer>
+						<key>shortLabel</key>
+						<string>Low Gain</string>
+						<key>label</key>
+						<string>Low Gain</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>2</integer>
+						<key>shortLabel</key>
+						<string>High Gain</string>
+						<key>label</key>
+						<string>High Gain</string>
+					</dict>
+				</array>
+				<key>subBoolEnum</key>
+				<dict>
+					<key>shortLabel</key>
+					<string></string>
+					<key>label</key>
+					<string></string>
+					<key>nameString</key>
+					<string></string>
+					<key>type</key>
+					<integer>4</integer>
+					<key>valueString</key>
+					<string></string>
+					<key>value</key>
+					<integer>0</integer>
+					<key>unit</key>
+					<string></string>
+					<key>enumValues</key>
+					<array>
+						<dict>
+							<key>value</key>
+							<integer>0</integer>
+							<key>shortLabel</key>
+							<string>Pwr Avg</string>
+							<key>label</key>
+							<string>Pwr Avg(RMS)</string>
+						</dict>
+						<dict>
+							<key>value</key>
+							<integer>1</integer>
+							<key>shortLabel</key>
+							<string>Log-Pwr Avg</string>
+							<key>label</key>
+							<string>Log-Pwr Avg(Video)</string>
+						</dict>
+						<dict>
+							<key>value</key>
+							<integer>2</integer>
+							<key>shortLabel</key>
+							<string>Voltage Avg</string>
+							<key>label</key>
+							<string>Voltage Avg</string>
+						</dict>
+						<dict>
+							<key>value</key>
+							<integer>3</integer>
+							<key>shortLabel</key>
+							<string>Maximum</string>
+							<key>label</key>
+							<string>Maximum</string>
+						</dict>
+						<dict>
+							<key>value</key>
+							<integer>4</integer>
+							<key>shortLabel</key>
+							<string>Minimum</string>
+							<key>label</key>
+							<string>Minimum</string>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<dict>
+				<key>shortLabel</key>
+				<string>Avg|Hold</string>
+				<key>label</key>
+				<string>Avg|Hold Number</string>
+				<key>nameString</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>valueString</key>
+				<string></string>
+				<key>value</key>
+				<integer>0</integer>
+				<key>unit</key>
+				<string></string>
+				<key>enumValues</key>
+				<array/>
+			</dict>
+			<dict>
+				<key>shortLabel</key>
+				<string>Averaging</string>
+				<key>label</key>
+				<string>Averaging</string>
+				<key>nameString</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>valueString</key>
+				<string></string>
+				<key>value</key>
+				<integer>0</integer>
+				<key>unit</key>
+				<string></string>
+				<key>enumValues</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<integer>0</integer>
+						<key>shortLabel</key>
+						<string></string>
+						<key>label</key>
+						<string>Off</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>0</integer>
+						<key>shortLabel</key>
+						<string></string>
+						<key>label</key>
+						<string>On</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
 	</array>
 </dict>
 </plist>
