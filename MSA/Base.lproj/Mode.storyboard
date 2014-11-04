@@ -88,7 +88,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barPopupMenuTVC_Single_Continous" id="ZDU-ns-web" userLabel="BarPopupMenuTVC_Single_Continous" customClass="Bar0SingleContinousTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BarPopupMenuTVC_Single_Continous" id="ZDU-ns-web" userLabel="BarPopupMenuTVC_Single_Continous" customClass="Bar0SingleContinousTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZDU-ns-web" id="fap-sf-I4j">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -106,7 +106,7 @@
                                     <outlet property="singleContinousImgV" destination="lbV-8s-9xL" id="VG6-65-uRT"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barPopupMenuTVC_One_Line" id="UjF-kr-aN6" userLabel="BarPopupMenuTVC_One_Line" customClass="Bar0OneLineTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BarPopupMenuTVC_One_Line" id="UjF-kr-aN6" userLabel="BarPopupMenuTVC_One_Line" customClass="Bar0OneLineTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UjF-kr-aN6" id="aIz-Tp-Yon">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -139,7 +139,7 @@
                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="content" destination="HfT-St-aUJ" id="O2Q-qL-PhW"/>
+                                    <outlet property="content" destination="HfT-St-aUJ" id="lAI-2i-xa6"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
