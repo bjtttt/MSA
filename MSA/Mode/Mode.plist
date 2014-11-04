@@ -688,7 +688,137 @@
 				</array>
 			</dict>
 		</array>
-		<array/>
+		<array>
+			<dict>
+				<key>shortLabel</key>
+				<string>Trig</string>
+				<key>label</key>
+				<string>Select Trig Source</string>
+				<key>nameString</key>
+				<string></string>
+				<key>type</key>
+				<integer>4</integer>
+				<key>valueString</key>
+				<string></string>
+				<key>value</key>
+				<integer>0</integer>
+				<key>unit</key>
+				<string></string>
+				<key>enumValues</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<integer>0</integer>
+						<key>shortLabel</key>
+						<string>Free Run</string>
+						<key>label</key>
+						<string>Free Run</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>1</integer>
+						<key>shortLabel</key>
+						<string>Video</string>
+						<key>label</key>
+						<string>Video</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>2</integer>
+						<key>shortLabel</key>
+						<string>Line</string>
+						<key>label</key>
+						<string>Line</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>3</integer>
+						<key>shortLabel</key>
+						<string>External 1</string>
+						<key>label</key>
+						<string>External 1</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>4</integer>
+						<key>shortLabel</key>
+						<string>External 2</string>
+						<key>label</key>
+						<string>External 2</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>5</integer>
+						<key>shortLabel</key>
+						<string>RF Burst</string>
+						<key>label</key>
+						<string>RF Burst</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>6</integer>
+						<key>shortLabel</key>
+						<string>Periodic</string>
+						<key>label</key>
+						<string>Periodic</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>shortLabel</key>
+				<string></string>
+				<key>label</key>
+				<string>Trigger Delay</string>
+				<key>nameString</key>
+				<string></string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>valueString</key>
+				<string></string>
+				<key>value</key>
+				<integer>0</integer>
+				<key>unit</key>
+				<string>s</string>
+				<key>enumValues</key>
+				<array/>
+				<key>subBoolEnum</key>
+				<dict>
+					<key>shortLabel</key>
+					<string></string>
+					<key>label</key>
+					<string></string>
+					<key>nameString</key>
+					<string></string>
+					<key>type</key>
+					<integer>4</integer>
+					<key>valueString</key>
+					<string></string>
+					<key>value</key>
+					<integer>0</integer>
+					<key>unit</key>
+					<string></string>
+					<key>enumValues</key>
+					<array>
+						<dict>
+							<key>value</key>
+							<integer>0</integer>
+							<key>shortLabel</key>
+							<string></string>
+							<key>label</key>
+							<string>Off</string>
+						</dict>
+						<dict>
+							<key>value</key>
+							<integer>1</integer>
+							<key>shortLabel</key>
+							<string></string>
+							<key>label</key>
+							<string>On</string>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+		</array>
 		<array/>
 		<array/>
 	</array>
