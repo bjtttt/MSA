@@ -120,11 +120,46 @@
 				<key>shortLabel</key>
 				<string></string>
 				<key>label</key>
-				<string></string>
+				<string>Sweep/Measure</string>
 				<key>nameString</key>
 				<string></string>
 				<key>type</key>
+				<integer>3</integer>
+				<key>valueString</key>
+				<string></string>
+				<key>value</key>
 				<integer>0</integer>
+				<key>unit</key>
+				<string></string>
+				<key>enumValues</key>
+				<array>
+					<dict>
+						<key>value</key>
+						<integer>0</integer>
+						<key>shortLabel</key>
+						<string></string>
+						<key>label</key>
+						<string>Single</string>
+					</dict>
+					<dict>
+						<key>value</key>
+						<integer>1</integer>
+						<key>shortLabel</key>
+						<string></string>
+						<key>label</key>
+						<string>Continous</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>shortLabel</key>
+				<string></string>
+				<key>label</key>
+				<string>Restart</string>
+				<key>nameString</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
 				<key>valueString</key>
 				<string></string>
 				<key>value</key>
@@ -138,29 +173,11 @@
 				<key>shortLabel</key>
 				<string></string>
 				<key>label</key>
-				<string></string>
+				<string>Pause</string>
 				<key>nameString</key>
 				<string></string>
 				<key>type</key>
-				<integer>0</integer>
-				<key>valueString</key>
-				<string></string>
-				<key>value</key>
-				<integer>0</integer>
-				<key>unit</key>
-				<string></string>
-				<key>enumValues</key>
-				<array/>
-			</dict>
-			<dict>
-				<key>shortLabel</key>
-				<string></string>
-				<key>label</key>
-				<string></string>
-				<key>nameString</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
+				<integer>6</integer>
 				<key>valueString</key>
 				<string></string>
 				<key>value</key>
@@ -178,7 +195,7 @@
 				<key>label</key>
 				<string>Select Input</string>
 				<key>nameString</key>
-				<string>Input</string>
+				<string></string>
 				<key>type</key>
 				<integer>4</integer>
 				<key>valueString</key>
@@ -217,99 +234,21 @@
 			</dict>
 			<dict>
 				<key>shortLabel</key>
-				<string>Input</string>
+				<string>Ext Gain</string>
 				<key>label</key>
-				<string>Select Input</string>
+				<string>External Gain</string>
 				<key>nameString</key>
-				<string>Input</string>
+				<string></string>
 				<key>type</key>
-				<integer>4</integer>
+				<integer>2</integer>
 				<key>valueString</key>
 				<string></string>
 				<key>value</key>
 				<integer>0</integer>
 				<key>unit</key>
-				<string>0</string>
+				<string>dB</string>
 				<key>enumValues</key>
-				<array>
-					<dict>
-						<key>value</key>
-						<integer>0</integer>
-						<key>shortLabel</key>
-						<string>RF</string>
-						<key>label</key>
-						<string>RF</string>
-					</dict>
-					<dict>
-						<key>value</key>
-						<integer>1</integer>
-						<key>shortLabel</key>
-						<string>EXT MIXER</string>
-						<key>label</key>
-						<string>External Mixer</string>
-					</dict>
-					<dict>
-						<key>value</key>
-						<integer>2</integer>
-						<key>shortLabel</key>
-						<string>I/Q</string>
-						<key>label</key>
-						<string>I/Q</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>shortLabel</key>
-				<string>Input</string>
-				<key>label</key>
-				<string>Select Input</string>
-				<key>nameString</key>
-				<string>Input</string>
-				<key>type</key>
-				<integer>4</integer>
-				<key>valueString</key>
-				<string></string>
-				<key>value</key>
-				<integer>0</integer>
-				<key>unit</key>
-				<string>0</string>
-				<key>enumValues</key>
-				<array>
-					<dict>
-						<key>value</key>
-						<integer>0</integer>
-						<key>shortLabel</key>
-						<string>RF</string>
-						<key>label</key>
-						<string>RF</string>
-					</dict>
-					<dict>
-						<key>value</key>
-						<integer>1</integer>
-						<key>shortLabel</key>
-						<string>EXT MIXER</string>
-						<key>label</key>
-						<string>External Mixer</string>
-					</dict>
-					<dict>
-						<key>value</key>
-						<integer>2</integer>
-						<key>shortLabel</key>
-						<string>I/Q</string>
-						<key>label</key>
-						<string>I/Q</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>label</key>
-				<string>Coupling</string>
-				<key>string</key>
-				<string>Coupling</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>value</key>
-				<string>DC</string>
+				<array/>
 			</dict>
 		</array>
 	</array>

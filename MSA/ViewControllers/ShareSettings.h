@@ -52,7 +52,8 @@ typedef enum valueType {
     VAL_DOUBLE,
     VAL_BOOL,
     VAL_ENUM,
-    VAL_STRING
+    VAL_STRING,
+    VAL_IMM = 6
 }ValueType;
 
 typedef enum unitType {
