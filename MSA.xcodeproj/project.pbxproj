@@ -28,6 +28,10 @@
 		9A345F4719D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A345F4619D00AC500507A5A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m */; };
 		9A345F4A19D00BC500507A5A /* PresetMenuDarkGrayWhiteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A345F4919D00BC500507A5A /* PresetMenuDarkGrayWhiteTableViewCell.m */; };
 		9A345F4E19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A345F4D19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.m */; };
+		9A4F03A71A09C69E00B19DBB /* UISoftPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F03A61A09C69E00B19DBB /* UISoftPanel.m */; };
+		9A4F03AB1A09DB0500B19DBB /* UISoftKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F03AA1A09DB0500B19DBB /* UISoftKey.m */; };
+		9A4F03AD1A09E1C300B19DBB /* UISoftKeyEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F03AC1A09E1C300B19DBB /* UISoftKeyEnum.m */; };
+		9A4F03B01A09E1FB00B19DBB /* UISoftKeyEnumItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F03AF1A09E1FB00B19DBB /* UISoftKeyEnumItem.m */; };
 		9A57E25D19D503BB00C58113 /* UIKeyMeasure.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A57E25C19D503BB00C58113 /* UIKeyMeasure.m */; };
 		9A57E26019D504B100C58113 /* UIKeyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A57E25F19D504B100C58113 /* UIKeyView.m */; };
 		9A5FDA7F19B5FB9A00B3C300 /* Preset.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A5FDA7E19B5FB9A00B3C300 /* Preset.png */; };
@@ -166,6 +170,14 @@
 		9A345F4B19D00BDA00507A5A /* PresetMenuDarkGrayWhiteTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PresetMenuDarkGrayWhiteTableViewCell.h; path = ViewControllers/Menu/Preset/CellStyle/PresetMenuDarkGrayWhiteTableViewCell.h; sourceTree = "<group>"; };
 		9A345F4C19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PresetMenuWhiteGreenTableViewCell.h; path = ViewControllers/Menu/Preset/CellStyle/PresetMenuWhiteGreenTableViewCell.h; sourceTree = "<group>"; };
 		9A345F4D19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresetMenuWhiteGreenTableViewCell.m; path = ViewControllers/Menu/Preset/CellStyle/PresetMenuWhiteGreenTableViewCell.m; sourceTree = "<group>"; };
+		9A4F03A61A09C69E00B19DBB /* UISoftPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UISoftPanel.m; path = UI/Key/Menu/UISoftPanel.m; sourceTree = "<group>"; };
+		9A4F03A81A09C6AF00B19DBB /* UISoftPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UISoftPanel.h; path = UI/Key/Menu/UISoftPanel.h; sourceTree = "<group>"; };
+		9A4F03A91A09DB0500B19DBB /* UISoftKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UISoftKey.h; path = UI/Key/Menu/UISoftKey.h; sourceTree = "<group>"; };
+		9A4F03AA1A09DB0500B19DBB /* UISoftKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UISoftKey.m; path = UI/Key/Menu/UISoftKey.m; sourceTree = "<group>"; };
+		9A4F03AC1A09E1C300B19DBB /* UISoftKeyEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UISoftKeyEnum.m; path = UI/Key/Menu/UISoftKeyEnum.m; sourceTree = "<group>"; };
+		9A4F03AE1A09E1DB00B19DBB /* UISoftKeyEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UISoftKeyEnum.h; path = UI/Key/Menu/UISoftKeyEnum.h; sourceTree = "<group>"; };
+		9A4F03AF1A09E1FB00B19DBB /* UISoftKeyEnumItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UISoftKeyEnumItem.m; path = UI/Key/Menu/UISoftKeyEnumItem.m; sourceTree = "<group>"; };
+		9A4F03B11A09E20900B19DBB /* UISoftKeyEnumItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UISoftKeyEnumItem.h; path = UI/Key/Menu/UISoftKeyEnumItem.h; sourceTree = "<group>"; };
 		9A57E25C19D503BB00C58113 /* UIKeyMeasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIKeyMeasure.m; path = UI/Key/MeasureView/UIKeyMeasure.m; sourceTree = "<group>"; };
 		9A57E25E19D5041C00C58113 /* UIKeyMeasure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UIKeyMeasure.h; path = UI/Key/MeasureView/UIKeyMeasure.h; sourceTree = "<group>"; };
 		9A57E25F19D504B100C58113 /* UIKeyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIKeyView.m; path = UI/Key/MeasureView/UIKeyView.m; sourceTree = "<group>"; };
@@ -434,9 +446,33 @@
 			name = Menu;
 			sourceTree = "<group>";
 		};
+		9A4F03A41A09C5DA00B19DBB /* MeasureBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = MeasureBar;
+			sourceTree = "<group>";
+		};
+		9A4F03A51A09C5EC00B19DBB /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				9A4F03A91A09DB0500B19DBB /* UISoftKey.h */,
+				9A4F03AA1A09DB0500B19DBB /* UISoftKey.m */,
+				9A4F03A61A09C69E00B19DBB /* UISoftPanel.m */,
+				9A4F03A81A09C6AF00B19DBB /* UISoftPanel.h */,
+				9A4F03AC1A09E1C300B19DBB /* UISoftKeyEnum.m */,
+				9A4F03AE1A09E1DB00B19DBB /* UISoftKeyEnum.h */,
+				9A4F03AF1A09E1FB00B19DBB /* UISoftKeyEnumItem.m */,
+				9A4F03B11A09E20900B19DBB /* UISoftKeyEnumItem.h */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
 		9A57E25919D502EE00C58113 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9A4F03A51A09C5EC00B19DBB /* Menu */,
+				9A4F03A41A09C5DA00B19DBB /* MeasureBar */,
 				9A57E25B19D5035400C58113 /* Key */,
 			);
 			name = UI;
@@ -1101,6 +1137,7 @@
 				9A1C929B19CED2B400074EA6 /* SoftMenuContainerViewController.m in Sources */,
 				9ACCD84519DEA10600A6ACD5 /* GPUImageSaturationFilter.m in Sources */,
 				9A9E995E1A02762300E6FBBC /* SoftMenuMidLabelBranchTableViewCell.m in Sources */,
+				9A4F03A71A09C69E00B19DBB /* UISoftPanel.m in Sources */,
 				9A726F4E19C1880000CDF55D /* MsgMasterNavigationViewController.m in Sources */,
 				9AE0AFBC19C2B626008544AC /* DisplayTracesContainerViewController.m in Sources */,
 				9A726F6519C19FDE00CDF55D /* SystemDetailTableViewController.m in Sources */,
@@ -1119,6 +1156,7 @@
 				9A9E995D1A02762300E6FBBC /* SoftMenuLeftLabelTableViewCell.m in Sources */,
 				9ACA2EB919BD4651005542B5 /* MsgMasterTableViewController.m in Sources */,
 				9A79537919CD3902009984A6 /* MeasureSelectTableViewController.m in Sources */,
+				9A4F03B01A09E1FB00B19DBB /* UISoftKeyEnumItem.m in Sources */,
 				9A006C2C19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.m in Sources */,
 				9A6A20A419DFE94E0011B98A /* ParameterManager.m in Sources */,
 				9AE7CCE719D5A87B005EAF1C /* Bar0TableViewController.m in Sources */,
@@ -1144,6 +1182,7 @@
 				9ACCD84E19DEA16800A6ACD5 /* GPUImageTwoPassTextureSamplingFilter.m in Sources */,
 				9A90589919C08EFD00B0B6AB /* MsgSplitViewController.m in Sources */,
 				9A9C671719AD6C81007D3248 /* MainContainerViewController.m in Sources */,
+				9A4F03AB1A09DB0500B19DBB /* UISoftKey.m in Sources */,
 				9ACCD83319DEA01700A6ACD5 /* GPUImageContext.m in Sources */,
 				9A726F5219C188C200CDF55D /* MsgDetailTableViewController.m in Sources */,
 				9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */,
@@ -1163,6 +1202,7 @@
 				9A6A20A819DFF8DB0011B98A /* ParameterCollection.m in Sources */,
 				9ACCD83F19DEA0A700A6ACD5 /* GPUImageFilter.m in Sources */,
 				9A345F4A19D00BC500507A5A /* PresetMenuDarkGrayWhiteTableViewCell.m in Sources */,
+				9A4F03AD1A09E1C300B19DBB /* UISoftKeyEnum.m in Sources */,
 				9A659BEB19B6DE9A00C30CE2 /* SystemContainerViewController.m in Sources */,
 				9A79537519CD35BE009984A6 /* MeasureContainerViewController.m in Sources */,
 				9ACCD84219DEA0D300A6ACD5 /* GPUImageMovieWriter.m in Sources */,

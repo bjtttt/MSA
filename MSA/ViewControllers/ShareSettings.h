@@ -47,10 +47,11 @@ typedef enum instrumentStatus {
 }InstrumentStatus;
 
 typedef enum valueType {
+    VAL_NONE = -1,
     VAL_INT = 0,
-    VAL_FLOAT,
     VAL_DOUBLE,
-    VAL_BOOL,
+    VAL_BOOL_ONOFF,
+    VAL_BOOL_AUTOMAN,
     VAL_ENUM,
     VAL_STRING,
     VAL_IMM = 6
