@@ -47,7 +47,7 @@
 {
     if(self.valueType != valueType)
     {
-        self.valueType = valueType;
+        _valueType = valueType;
         self.valueTypeInteger = (int)valueType;
     }
 }
@@ -58,7 +58,7 @@
        valueTypeInteger >= -1 &&
        valueTypeInteger < (int)VAL_IMM)
     {
-        self.valueTypeInteger = valueTypeInteger;
+        _valueTypeInteger = valueTypeInteger;
         self.valueType = (ValueType)valueTypeInteger;
     }
     else

@@ -314,9 +314,22 @@
             softPanel.title=title;
             
             UISoftKey *softKey = [[UISoftKey alloc] init];
-            softKey.label=[measBarItem objectForKey:@"label"];
-            softKey.labelShort=[measBarItem objectForKey:@"labelShort"];
-            softKey.nameString=[measBarItem objectForKey:@"nameString"];
+            NSString *stringItem;
+            stringItem = [measBarItem objectForKey:@"label"];
+            if(stringItem == nil)
+                softKey.label=[[NSMutableString alloc] initWithString:@""];
+            else
+                softKey.label=[[NSMutableString alloc] initWithString:stringItem];
+            stringItem = [measBarItem objectForKey:@"labelShort"];
+            if(stringItem == nil)
+                softKey.labelShort=[[NSMutableString alloc] initWithString:@""];
+            else
+                softKey.labelShort=[[NSMutableString alloc] initWithString:stringItem];
+            stringItem = [measBarItem objectForKey:@"nameString"];
+            if(stringItem == nil)
+                softKey.nameString=[[NSMutableString alloc] initWithString:@""];
+            else
+                softKey.nameString=[[NSMutableString alloc] initWithString:stringItem];
             softKey.valueTypeInteger=[[measBarItem objectForKey:@"type"] intValue];
             softKey.value=[measBarItem objectForKey:@"value"];
             softKey.valueString=[measBarItem objectForKey:@"valueString"];

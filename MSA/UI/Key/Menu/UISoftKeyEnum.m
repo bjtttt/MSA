@@ -34,8 +34,14 @@
 
     UISoftKeyEnumItem *item = [[UISoftKeyEnumItem alloc] init];
     item.value = value;
-    item.label = [[NSMutableString init] initWithString:label];
-    item.labelShort = [[NSMutableString init] initWithString:labelShort];
+    if(label == nil)
+        item.label = [[NSMutableString alloc] initWithString:@""];
+    else
+        item.label = [[NSMutableString alloc] initWithString:label];
+    if(labelShort == nil)
+        item.labelShort = [[NSMutableString alloc] initWithString:@""];
+    else
+        item.labelShort = [[NSMutableString alloc] initWithString:labelShort];
     item.softkeyEnum = self;
     
     if(self.itemArray.count > 0)
@@ -62,7 +68,7 @@
             return item;
     }
     
-    NSAssert(YES==NO, @"UISoftKeyEnum Enum Item Array doesn't contain %d", value);
+    //NSAssert(YES==NO, @"UISoftKeyEnum Enum Item Array doesn't contain %d", value);
     
     return nil;
 }
