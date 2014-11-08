@@ -97,8 +97,6 @@
 	<dict>
 		<key>measureBar</key>
 		<dict>
-			<key>count</key>
-			<integer>7</integer>
 			<key>useRatio</key>
 			<true/>
 			<key>width</key>

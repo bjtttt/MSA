@@ -297,7 +297,16 @@
     NSDictionary *modeInfo = [[NSDictionary alloc] initWithContentsOfFile:path];
     NSArray *measBarPanels = [modeInfo objectForKey:@"measureBar"];
     
-    int count
+    for(int i=0; i<self.measureBarCount;i++)
+    {
+        NSArray *measBar=[measBarPanels objectAtIndex:i];
+        int count = measBar.count;
+        for(int index=0;index<count;index++)
+        {
+            NSDictionary *measBarItem=[measBar objectAtIndex:index];
+            
+        }
+    }
 }
 
 @end
