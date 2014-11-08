@@ -12,6 +12,7 @@
 #import "ShareSettings.h"
 
 @class UISoftKeyEnum;
+@class UISoftKeyEnumItem;
 @class UISoftPanel;
 
 @interface UISoftKey : NSObject
@@ -35,6 +36,10 @@
 @property (nonatomic) UISoftKey *previous;
 
 @property (nonatomic) UISoftPanel *softPanel;
+
+-(void)initSoftKeyEnum;
+-(UISoftKeyEnumItem *)addSoftkeyEnumItem:(int)value label:(NSString *)label labelShort:(NSString *)labelShort;
+-(UISoftKeyEnumItem *)findEnumItemByValue:(int)value;
 
 @end
 

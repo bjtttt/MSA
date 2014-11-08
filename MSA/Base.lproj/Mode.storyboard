@@ -124,7 +124,7 @@
                                     <outlet property="content" destination="vih-iN-FFg" id="zGp-gZ-BSI"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="barPopupMenuTVC_One_Line" id="UMD-GT-cZF" userLabel="BarPopupMenuTVC_One_Line_Yellow" customClass="Bar0OneLineYellowTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BarPopupMenuTVC_One_Line_Orange" id="UMD-GT-cZF" userLabel="BarPopupMenuTVC_One_Line_Yellow" customClass="Bar0OneLineYellowTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UMD-GT-cZF" id="PBS-L3-MRR">
                                     <autoresizingMask key="autoresizingMask"/>

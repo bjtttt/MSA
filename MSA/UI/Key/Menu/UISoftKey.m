@@ -63,43 +63,24 @@
     }
 }
 
--(void)initSoftKeyEnum:(NSString *)withName
+-(void)initSoftKeyEnum//:(NSString *)withName
 {
     self.softKeyEnum = [[UISoftKeyEnum alloc] init];
-    self.softKeyEnum.name = [[NSMutableString alloc] initWithString:withName];
+    //self.softKeyEnum.name = [[NSMutableString alloc] initWithString:withName];
 }
 
--(void)addSoftkeyEnumItem:(int)value label:(NSString *)label labelShort:(NSString *)labelShort
+-(UISoftKeyEnumItem *)addSoftkeyEnumItem:(int)value label:(NSString *)label labelShort:(NSString *)labelShort
 {
     NSAssert(self.softKeyEnum != nil, @"Softkey %@ Enum is nil", self.label);
-    NSAssert([self findEnumItemByValue:value] == nil, @"Softkey %@ Enum already has value %d", self.label, value);
     
-    UISoftKeyEnumItem *item = [[UISoftKeyEnumItem alloc] init];
-    item.value = value;
-    item.label = [[NSMutableString alloc] initWithString:label];
-    item.labelShort = [[NSMutableString alloc] initWithString:labelShort];
-    item.softkeyEnum = self.softKeyEnum;
-    
-    [self.softKeyEnum.itemArray addObject:item];
+    return [self.softKeyEnum addEnumItem:value label:label labelShort:labelShort];
 }
 
 -(UISoftKeyEnumItem *)findEnumItemByValue:(int)value
 {
     NSAssert(self.softKeyEnum != nil, @"Softkey %@ Enum is nil", self.label);
-    NSAssert(self.softKeyEnum.itemArray != nil, @"Softkey %@ Enum Item Array is nil", self.label);
     
-    int count = (int)[self.softKeyEnum.itemArray count];
-
-    NSAssert(count > 0, @"Softkey %@ Enum Item Array is empty", self.label);
-    
-    for(int i=0;i<count;i++)
-    {
-        UISoftKeyEnumItem *item = (UISoftKeyEnumItem *)[self.softKeyEnum.itemArray objectAtIndex:i];
-        if(item.value == value)
-            return item;
-    }
-    
-    return nil;
+    return [self.softKeyEnum findEnumItemByValue:value];
 }
 
 @end

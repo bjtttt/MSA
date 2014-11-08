@@ -13,6 +13,7 @@
 #import <UIKit/UIKit.h>
 #import <Accelerate/Accelerate.h>
 #import "GPUImageiOSBlurFilter.h"
+#import "UISoftMenu.h"
 
 @implementation ShareSettings
 
@@ -215,7 +216,7 @@
     self.barWidths = [[NSMutableArray alloc] initWithArray:(NSArray *)[settingsMeasureBar objectForKey:@"width"]];
     if(self.barWidths != nil)
     {
-        NSAssert(self.barWidths.count == 0 || self.barWidths.count == self.measureBarCount, @"The count of the Bar Width is %u not %d.", self.barWidths.count, self.measureBarCount);
+        NSAssert(self.barWidths.count == 0 || self.barWidths.count == self.measureBarCount, @"The count of the Bar Width is %u not %d.", self.barWidths.count, (int)self.measureBarCount);
         if(self.barWidths.count != 0)
         {
             for(int i=0;i<self.measureBarCount;i++)
@@ -283,6 +284,12 @@
         
         return ratios;
     }
+}
+
+-(void)initSoftMenuSystem
+{
+    self.softMenuSystem=[[UISoftMenu alloc] init];
+    self.softMenuSystem.shareSettings=self;
 }
 
 @end

@@ -95,6 +95,7 @@
     
     [self.shareSettings initMeasureView];
     [self.shareSettings initMeasureBar];
+    [self.shareSettings initSoftMenuSystem];
     
     self.parManager = [ParameterManager parameterManager];
     [self.parManager registerParameterChangedEvent];

@@ -81,23 +81,24 @@ typedef enum unitType {
 
 @class GPUImageiOSBlurFilter;
 @class MeasureBarContainerViewController;
+@class UISoftMenu;
 
 @interface ShareSettings : NSObject
 
-@property (nonatomic) BOOL menuTapped;
-@property (nonatomic) BOOL measureTapped;
+@property (nonatomic) bool menuTapped;
+@property (nonatomic) bool measureTapped;
 
-@property (nonatomic) BOOL navPresetMenuButtonAreaTapped;
-@property (nonatomic) BOOL presetMenuAreaTapped;
-@property (nonatomic) BOOL barPopupMenuAreaTapped;
-@property (nonatomic) NSInteger barTappedIndex;
-@property (nonatomic) NSInteger currentBarPopupMenuIndex;
-@property (nonatomic) NSInteger previousBarPopupMenuIndex;
+@property (nonatomic) bool navPresetMenuButtonAreaTapped;
+@property (nonatomic) bool presetMenuAreaTapped;
+@property (nonatomic) bool barPopupMenuAreaTapped;
+@property (nonatomic) int barTappedIndex;
+@property (nonatomic) int currentBarPopupMenuIndex;
+@property (nonatomic) int previousBarPopupMenuIndex;
 
-@property (nonatomic) BOOL menuDisplayed;
-@property (nonatomic) BOOL measureDisplayed;
-@property (nonatomic) BOOL barPopupMenuDisplayed;
-@property (nonatomic) BOOL presetMenuDisplayed;
+@property (nonatomic) bool menuDisplayed;
+@property (nonatomic) bool measureDisplayed;
+@property (nonatomic) bool barPopupMenuDisplayed;
+@property (nonatomic) bool presetMenuDisplayed;
 @property (nonatomic) CGRect barPopupMenuCGRect;
 @property (nonatomic) CGRect barCGRect;
 @property (nonatomic) CGRect navBarPresetMenuButtonCGRect;
@@ -108,20 +109,23 @@ typedef enum unitType {
 
 @property (nonatomic) NSMutableArray *measureView;
 
-@property (nonatomic) NSInteger measureBarCount;
-@property (nonatomic) BOOL useBarRatio;
+@property (nonatomic) int measureBarCount;
+@property (nonatomic) bool useBarRatio;
 @property (strong, nonatomic) NSMutableArray *barWidths;
-@property (nonatomic) CGFloat totalBarWidth;
+@property (nonatomic) float totalBarWidth;
 
 @property (weak, nonatomic) UIStoryboard *modeStoryboard;
 @property (weak, nonatomic) MeasureBarContainerViewController *barCVC;
 
 @property (nonatomic) GPUImageiOSBlurFilter *blurFilter;
 
+@property (nonatomic) UISoftMenu *softMenuSystem;
+
 +(id)sharedSettings;
 
-- (void) initMeasureView;
-- (void) initMeasureBar;
+-(void)initMeasureView;
+-(void)initMeasureBar;
+-(void)initSoftMenuSystem;
 -(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum;
 -(UIImage *)blurryImage:(UIImage *)image;
 

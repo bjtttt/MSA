@@ -20,8 +20,9 @@
 
 @implementation Bar0TableViewController
 
-static NSString *barPopupMenuTVC_Single_Continous_Id = @"barPopupMenuTVC_Single_Continous";
-static NSString *barPopupMenuTVC_One_Line_Id = @"barPopupMenuTVC_One_Line";
+static NSString *barPopupMenuTVC_Single_Continous_Id = @"BarPopupMenuTVC_Single_Continous";
+static NSString *barPopupMenuTVC_One_Line_Id = @"BarPopupMenuTVC_One_Line";
+static NSString *barPopupMenuTVC_One_Line_Orange_Id = @"BarPopupMenuTVC_One_Line_Orange";
 
 -(void)viewDidLoad{
     [super viewDidLoad];
