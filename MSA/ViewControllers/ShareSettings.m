@@ -14,6 +14,7 @@
 #import <Accelerate/Accelerate.h>
 #import "GPUImageiOSBlurFilter.h"
 #import "UISoftMenu.h"
+#import "UISoftPanel.h"
 
 @implementation ShareSettings
 
@@ -304,7 +305,8 @@
         for(int index=0;index<count;index++)
         {
             NSDictionary *measBarItem=[measBar objectAtIndex:index];
-            
+            UISoftPanel *softPanel=[[UISoftPanel alloc] init];
+            softPanel
         }
     }
 }
