@@ -61,6 +61,10 @@
         self.valueTypeInteger = valueTypeInteger;
         self.valueType = (ValueType)valueTypeInteger;
     }
+    else
+    {
+        NSAssert(valueTypeInteger >= -1 && valueTypeInteger < (int)VAL_IMM, @"Softkey %@ type is %d", self.label, valueTypeInteger);
+    }
 }
 
 -(void)initSoftKeyEnum//:(NSString *)withName

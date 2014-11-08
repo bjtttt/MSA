@@ -15,6 +15,9 @@
 #import "GPUImageiOSBlurFilter.h"
 #import "UISoftMenu.h"
 #import "UISoftPanel.h"
+#import "UISoftKey.h"
+#import "UISoftKeyEnum.h"
+#import "UISoftKeyEnumItem.h"
 
 @implementation ShareSettings
 
@@ -298,7 +301,7 @@
     NSDictionary *modeInfo = [[NSDictionary alloc] initWithContentsOfFile:path];
     NSArray *measBarPanels = [modeInfo objectForKey:@"measureBar"];
     
-    for(int i=0; i<self.measureBarCount;i++)
+    for(int i=0; i<self.measureBarCount; i++)
     {
         NSArray *measBar=[measBarPanels objectAtIndex:i];
         int count = measBar.count;
@@ -306,7 +309,36 @@
         {
             NSDictionary *measBarItem=[measBar objectAtIndex:index];
             UISoftPanel *softPanel=[[UISoftPanel alloc] init];
-            softPanel
+            NSMutableString *title = [[NSMutableString alloc] initWithString:@""];
+            [title appendFormat:@"Measure Bar %d", index];
+            softPanel.title=title;
+            
+            UISoftKey *softKey = [[UISoftKey alloc] init];
+            softKey.label=[measBarItem objectForKey:@"label"];
+            softKey.labelShort=[measBarItem objectForKey:@"labelShort"];
+            softKey.nameString=[measBarItem objectForKey:@"nameString"];
+            softKey.valueTypeInteger=[[measBarItem objectForKey:@"type"] intValue];
+            softKey.value=[measBarItem objectForKey:@"value"];
+            softKey.valueString=[measBarItem objectForKey:@"valueString"];
+            softKey.unit=[measBarItem objectForKey:@"unit"];
+            
+            NSArray *enumArray=[measBarItem objectForKey:@"enumValues"];
+            if(enumArray != nil)
+            {
+                //UISoftKeyEnum *skEnum=[[UISoftKeyEnum alloc] init];
+                [softKey initSoftKeyEnum];
+                int enumArrayCount = enumArray.count;
+                for(int j=0;j<enumArrayCount;j++)
+                {
+                    //UISoftKeyEnumItem *skEnumItem=[[UISoftKeyEnumItem alloc] init];
+                    NSDictionary *enumItem=[enumArray objectAtIndex:j];
+                    int enumItemValue=[[enumItem objectForKey:@"value"] intValue];
+                    NSString *enumItemLabel=[enumItem objectForKey:@"label"];
+                    NSString *enumItemLabelShort=[enumItem objectForKey:@"labelShort"];
+                    
+                    [softKey addSoftkeyEnumItem:enumItemValue label:enumItemLabel labelShort:enumItemLabelShort];
+                }
+            }
         }
     }
 }
