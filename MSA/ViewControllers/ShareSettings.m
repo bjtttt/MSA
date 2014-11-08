@@ -205,11 +205,11 @@
     
     NSDictionary *modeInfo = [[NSDictionary alloc] initWithContentsOfFile:path];
     NSDictionary *settingsInfo = [modeInfo objectForKey:@"settings"];
+    NSArray *measBarPanels = [modeInfo objectForKey:@"measureBar"];
     
     NSDictionary *settingsMeasureBar = (NSDictionary *)[settingsInfo objectForKey:@"measureBar"];
     
-    self.measureBarCount = [[settingsMeasureBar objectForKey:@"count"] intValue];
-    NSAssert(self.measureBarCount > 0, @"Bar Count is %ld.", (long)self.measureBarCount);
+    self.measureBarCount = measBarPanels.count;
     
     self.useBarRatio = [[settingsMeasureBar objectForKey:@"useRatio"] boolValue];
 
@@ -290,6 +290,14 @@
 {
     self.softMenuSystem=[[UISoftMenu alloc] init];
     self.softMenuSystem.shareSettings=self;
+    
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *path = [bundle pathForResource:@"Mode" ofType:@"plist"];
+    
+    NSDictionary *modeInfo = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSArray *measBarPanels = [modeInfo objectForKey:@"measureBar"];
+    
+    int count
 }
 
 @end
