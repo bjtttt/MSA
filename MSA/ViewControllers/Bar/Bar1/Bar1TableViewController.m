@@ -34,6 +34,21 @@
 //    self.title = self.systems[currentSystem];
 //}
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+    //NSUInteger row = [indexPath row];
+    
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:barPopupMenuTVC_Single_Continous_Id forIndexPath:indexPath];
+    //[((Bar0SingleContinousTableViewCell *)cell).singleContinousImgV setImage:[UIImage imageNamed:@"Continous.png"]];
+    
+    //return cell;
+//}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];

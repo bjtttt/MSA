@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ParameterManager.h"
-#import "ParameterCollection.h"
+#import "ModeParameterCollection.h"
 
 @interface ParameterManager()
 
@@ -31,7 +31,7 @@
 -(id) init {
     if ((self = [super init]))
     {
-        self.parCol = [ParameterCollection parameterCollection];
+        self.modeParCol = [ModeParameterCollection parameterCollection];
     }
     
     return self;

@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UISoftPanel.h"
+#import "UISoftKey.h"
 #import "UISoftKeyEnum.h"
 #import "UISoftKeyEnumItem.h"
 
@@ -29,8 +31,8 @@
 
 -(UISoftKeyEnumItem *)addEnumItem:(int)value label:(NSString *)label labelShort:(NSString *)labelShort
 {
-    NSAssert(self.itemArray != nil, @"UISoftKeyEnum Enum Item Array is nil");
-    NSAssert([self findEnumItemByValue:value] == nil, @"UISoftKeyEnum Enum Item Array already has %d", value);
+    NSAssert(self.itemArray != nil, @"UISoftPanel %@ UISoftKey %@ UISoftKeyEnum Enum Item Array is nil", self.softkey.softPanel.title, self.softkey.label);
+    NSAssert([self findEnumItemByValue:value] == nil, @"UISoftPanel %@ UISoftKey %@ UISoftKeyEnum Enum Item Array already has %d", self.softkey.softPanel.title, self.softkey.label, value);
 
     UISoftKeyEnumItem *item = [[UISoftKeyEnumItem alloc] init];
     item.value = value;
@@ -58,7 +60,7 @@
 
 -(UISoftKeyEnumItem *)findEnumItemByValue:(int)value
 {
-    NSAssert(self.itemArray != nil, @"UISoftKeyEnum Enum Item Array is nil");
+    NSAssert(self.itemArray != nil, @"UISoftPanel %@ UISoftKey %@ UISoftKeyEnum Enum Item Array is nil", self.softkey.softPanel.title, self.softkey.label);
     
     int count=(int)self.itemArray.count;
     for(int index=0;index<count;index++)

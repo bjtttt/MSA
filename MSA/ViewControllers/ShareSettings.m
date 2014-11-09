@@ -304,16 +304,18 @@
     for(int i=0; i<self.measureBarCount; i++)
     {
         NSArray *measBar=[measBarPanels objectAtIndex:i];
+        UISoftPanel *softPanel=[[UISoftPanel alloc] init];
+        NSMutableString *spTitle = [[NSMutableString alloc] initWithString:@""];
+        [spTitle appendFormat:@"Measure Bar %d", i];
+        softPanel.title=spTitle;
+
         int count = measBar.count;
         for(int index=0;index<count;index++)
         {
             NSDictionary *measBarItem=[measBar objectAtIndex:index];
-            UISoftPanel *softPanel=[[UISoftPanel alloc] init];
-            NSMutableString *title = [[NSMutableString alloc] initWithString:@""];
-            [title appendFormat:@"Measure Bar %d", index];
-            softPanel.title=title;
             
             UISoftKey *softKey = [[UISoftKey alloc] init];
+            softKey.softPanel=softPanel;
             NSString *stringItem;
             stringItem = [measBarItem objectForKey:@"label"];
             if(stringItem == nil)

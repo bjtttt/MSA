@@ -93,6 +93,9 @@
     
     self.shareSettings.modeStoryboard = self.modeStoryboard;
     
+    //self.shareSettings.dataParameters = [[NSDictionary alloc] init];
+    self.shareSettings.parManager = [[ParameterManager alloc] init];
+    
     [self.shareSettings initMeasureView];
     [self.shareSettings initMeasureBar];
     [self.shareSettings initSoftMenuSystem];

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UISoftPanel.h"
 #import "UISoftKey.h"
 #import "UISoftKeyEnum.h"
 #import "UISoftKeyEnumItem.h"
@@ -56,33 +57,34 @@
 {
     if(self.valueTypeInteger != valueTypeInteger &&
        valueTypeInteger >= -1 &&
-       valueTypeInteger < (int)VAL_IMM)
+       valueTypeInteger <= (int)VAL_IMM)
     {
         _valueTypeInteger = valueTypeInteger;
         self.valueType = (ValueType)valueTypeInteger;
     }
     else
     {
-        NSAssert(valueTypeInteger >= -1 && valueTypeInteger < (int)VAL_IMM, @"Softkey %@ type is %d", self.label, valueTypeInteger);
+        NSAssert(valueTypeInteger >= -1 && valueTypeInteger <= (int)VAL_IMM, @"UISoftPanel %@ UISoftkey %@ type is %d", self.softPanel.title, self.label, valueTypeInteger);
     }
 }
 
 -(void)initSoftKeyEnum//:(NSString *)withName
 {
     self.softKeyEnum = [[UISoftKeyEnum alloc] init];
+    self.softKeyEnum.softkey=self;
     //self.softKeyEnum.name = [[NSMutableString alloc] initWithString:withName];
 }
 
 -(UISoftKeyEnumItem *)addSoftkeyEnumItem:(int)value label:(NSString *)label labelShort:(NSString *)labelShort
 {
-    NSAssert(self.softKeyEnum != nil, @"Softkey %@ Enum is nil", self.label);
+    NSAssert(self.softKeyEnum != nil, @"UISoftPanel %@ UISoftkey %@ Enum is nil", self.softPanel.title, self.label);
     
     return [self.softKeyEnum addEnumItem:value label:label labelShort:labelShort];
 }
 
 -(UISoftKeyEnumItem *)findEnumItemByValue:(int)value
 {
-    NSAssert(self.softKeyEnum != nil, @"Softkey %@ Enum is nil", self.label);
+    NSAssert(self.softKeyEnum != nil, @"UISoftPanel %@ UISoftkey %@ Enum is nil", self.softPanel.title, self.label);
     
     return [self.softKeyEnum findEnumItemByValue:value];
 }

@@ -1,5 +1,5 @@
 //
-//  ParameterCollection.m
+//  ModeParameterCollection.m
 //  MSA
 //
 //  Created by guozhitao on 10/4/14.
@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ParameterCollection.h"
+#import "ModeParameterCollection.h"
 
-@interface ParameterCollection()
+@interface ModeParameterCollection()
 
 @end
 
-@implementation ParameterCollection
+@implementation ModeParameterCollection
 
 + (id)parameterCollection
 {

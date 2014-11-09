@@ -82,6 +82,7 @@ typedef enum unitType {
 @class GPUImageiOSBlurFilter;
 @class MeasureBarContainerViewController;
 @class UISoftMenu;
+@class ParameterManager;
 
 @interface ShareSettings : NSObject
 
@@ -120,6 +121,9 @@ typedef enum unitType {
 @property (nonatomic) GPUImageiOSBlurFilter *blurFilter;
 
 @property (nonatomic) UISoftMenu *softMenuSystem;
+
+//@property (nonatomic) NSDictionary *dataParameters;
+@property (nonatomic) ParameterManager *parManager;
 
 +(id)sharedSettings;
 
