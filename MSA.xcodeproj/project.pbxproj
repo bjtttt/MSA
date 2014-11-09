@@ -14,6 +14,7 @@
 		9A13708A1A0F51D000F57FE3 /* SpecParameterCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1370841A0F51D000F57FE3 /* SpecParameterCollection.m */; };
 		9A13708B1A0F51D000F57FE3 /* WaveParameterCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1370871A0F51D000F57FE3 /* WaveParameterCollection.m */; };
 		9A13708C1A0F51D000F57FE3 /* ModeParameterCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1370891A0F51D000F57FE3 /* ModeParameterCollection.m */; };
+		9A1370901A0F7B6600F57FE3 /* MeasureBarParameterCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A13708F1A0F7B6600F57FE3 /* MeasureBarParameterCollection.m */; };
 		9A162D661A00E58C005319EF /* MainContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A162D651A00E58C005319EF /* MainContainerView.m */; };
 		9A194D201A08DA2D0001BEAD /* Bar0OneLineYellowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A194D1F1A08DA2D0001BEAD /* Bar0OneLineYellowTableViewCell.m */; };
 		9A19791019D270EE008E87E1 /* ReturnRoot.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A19790F19D270EE008E87E1 /* ReturnRoot.png */; };
@@ -149,6 +150,8 @@
 		9A1370871A0F51D000F57FE3 /* WaveParameterCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveParameterCollection.m; sourceTree = "<group>"; };
 		9A1370881A0F51D000F57FE3 /* ModeParameterCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeParameterCollection.h; sourceTree = "<group>"; };
 		9A1370891A0F51D000F57FE3 /* ModeParameterCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeParameterCollection.m; sourceTree = "<group>"; };
+		9A13708E1A0F7B6600F57FE3 /* MeasureBarParameterCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBarParameterCollection.h; sourceTree = "<group>"; };
+		9A13708F1A0F7B6600F57FE3 /* MeasureBarParameterCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureBarParameterCollection.m; sourceTree = "<group>"; };
 		9A162D651A00E58C005319EF /* MainContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainContainerView.m; sourceTree = "<group>"; };
 		9A162D671A00E5A1005319EF /* MainContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainContainerView.h; sourceTree = "<group>"; };
 		9A194D1E1A08DA2D0001BEAD /* Bar0OneLineYellowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bar0OneLineYellowTableViewCell.h; path = ViewControllers/Bar/CellStyle/Bar0OneLineYellowTableViewCell.h; sourceTree = "<group>"; };
@@ -378,6 +381,7 @@
 		9A1370811A0F51D000F57FE3 /* Parameter */ = {
 			isa = PBXGroup;
 			children = (
+				9A13708D1A0F7B6600F57FE3 /* MeasureBar */,
 				9A1370821A0F51D000F57FE3 /* ComplexSpectrum */,
 				9A1370851A0F51D000F57FE3 /* IQWaveform */,
 				9A1370881A0F51D000F57FE3 /* ModeParameterCollection.h */,
@@ -403,6 +407,15 @@
 				9A1370871A0F51D000F57FE3 /* WaveParameterCollection.m */,
 			);
 			path = IQWaveform;
+			sourceTree = "<group>";
+		};
+		9A13708D1A0F7B6600F57FE3 /* MeasureBar */ = {
+			isa = PBXGroup;
+			children = (
+				9A13708E1A0F7B6600F57FE3 /* MeasureBarParameterCollection.h */,
+				9A13708F1A0F7B6600F57FE3 /* MeasureBarParameterCollection.m */,
+			);
+			path = MeasureBar;
 			sourceTree = "<group>";
 		};
 		9A19790E19D270E5008E87E1 /* 20 */ = {
@@ -1221,6 +1234,7 @@
 				9A4F03AB1A09DB0500B19DBB /* UISoftKey.m in Sources */,
 				9ACCD83319DEA01700A6ACD5 /* GPUImageContext.m in Sources */,
 				9A726F5219C188C200CDF55D /* MsgDetailTableViewController.m in Sources */,
+				9A1370901A0F7B6600F57FE3 /* MeasureBarParameterCollection.m in Sources */,
 				9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */,
 				9A726F6819C19FEE00CDF55D /* SystemSplitViewController.m in Sources */,
 				9A953EE919ADCBB6005467A1 /* ShareSettings.m in Sources */,

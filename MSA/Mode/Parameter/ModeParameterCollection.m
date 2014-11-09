@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "ModeParameterCollection.h"
+#import "SpecParameterCollection.h"
+#import "WaveParameterCollection.h"
 
 @interface ModeParameterCollection()
 
@@ -30,9 +32,30 @@
 -(id) init {
     if ((self = [super init]))
     {
+        self.specParCol = [[SpecParameterCollection alloc] init];
+        self.waveParCol = [[WaveParameterCollection alloc] init];
     }
     
     return self;
+}
+
+-(void)setShareSettings:(ShareSettings *)shareSettings
+{
+    _shareSettings=shareSettings;
+    self.specParCol.shareSettings=shareSettings;
+    self.waveParCol.shareSettings=shareSettings;
+}
+
+-(void)registerParameterEvent
+{
+    [self.specParCol registerParameterEvent];
+    [self.waveParCol registerParameterEvent];
+}
+
+-(void)unregisterParameterEvent
+{
+    [self.specParCol unregisterParameterEvent];
+    [self.waveParCol unregisterParameterEvent];
 }
 
 @end

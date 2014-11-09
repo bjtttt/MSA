@@ -1,5 +1,5 @@
 //
-//  WaveParameterCollection.m
+//  MeasureBarParameterCollection.m
 //  MSA
 //
 //  Created by guozhitao on 10/4/14.
@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WaveParameterCollection.h"
+#import "MeasureBarParameterCollection.h"
 
-@interface WaveParameterCollection()
+@interface MeasureBarParameterCollection()
 
 @end
 
-@implementation WaveParameterCollection
+@implementation MeasureBarParameterCollection
 
 + (id)parameterCollection
 {

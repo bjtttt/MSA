@@ -38,11 +38,17 @@
 }
 
 -(void) registerParameterChangedEvent {
-    
+    [self.modeParCol registerParameterEvent];
 }
 
 -(void) unregisterParameterChangedEvent {
-    
+    [self.modeParCol unregisterParameterEvent];
+}
+
+-(void)setShareSettings:(ShareSettings *)shareSettings
+{
+    _shareSettings=shareSettings;
+    self.modeParCol.shareSettings=shareSettings;
 }
 
 @end

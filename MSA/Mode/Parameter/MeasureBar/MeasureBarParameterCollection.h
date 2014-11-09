@@ -1,5 +1,5 @@
 //
-//  ModeParameterCollection.h
+//  MeasureBarParameterCollection.h
 //  MSA
 //
 //  Created by guozhitao on 10/4/14.
@@ -8,16 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class SpecParameterCollection;
-@class WaveParameterCollection;
 @class ShareSettings;
 
-@interface ModeParameterCollection : NSObject
+@interface MeasureBarParameterCollection : NSObject
 
 +(id)parameterCollection;
-
-@property (nonatomic) SpecParameterCollection * specParCol;
-@property (nonatomic) WaveParameterCollection * waveParCol;
 
 @property (nonatomic) ShareSettings *shareSettings;
 

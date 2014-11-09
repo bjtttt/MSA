@@ -100,7 +100,9 @@
     [self.shareSettings initMeasureBar];
     [self.shareSettings initSoftMenuSystem];
     
+    // Must be initialized after initSoftMenuSystem because we can get the data name string
     self.parManager = [ParameterManager parameterManager];
+    self.parManager.shareSettings=self.shareSettings;
     [self.parManager registerParameterChangedEvent];
 
     UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];

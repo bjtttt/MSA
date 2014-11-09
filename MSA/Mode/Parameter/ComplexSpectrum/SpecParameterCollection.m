@@ -35,4 +35,14 @@
     return self;
 }
 
+-(void)registerParameterEvent
+{
+    
+}
+
+-(void)unregisterParameterEvent
+{
+    
+}
+
 @end
