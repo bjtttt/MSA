@@ -21,5 +21,6 @@
 
 -(void) registerParameterChangedEvent;
 -(void) unregisterParameterChangedEvent;
+-(void)parseParameter;
 
 @end

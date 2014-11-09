@@ -51,4 +51,9 @@
     self.modeParCol.shareSettings=shareSettings;
 }
 
+-(void)parseParameter
+{
+    [self.modeParCol parseParameter];
+}
+
 @end

@@ -16,7 +16,10 @@
 
 @property (nonatomic) ShareSettings *shareSettings;
 
+@property (nonatomic) NSDictionary *parDict;
+
 -(void)registerParameterEvent;
 -(void)unregisterParameterEvent;
+-(void)parseParameter;
 
 @end

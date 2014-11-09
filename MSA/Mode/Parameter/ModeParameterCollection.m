@@ -63,4 +63,11 @@
     [self.mbarParCol unregisterParameterEvent];
 }
 
+-(void)parseParameter
+{
+    [self.specParCol parseParameter];
+    [self.waveParCol parseParameter];
+    [self.mbarParCol parseParameter];
+}
+
 @end

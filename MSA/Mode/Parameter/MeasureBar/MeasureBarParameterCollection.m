@@ -30,6 +30,7 @@
 -(id) init {
     if ((self = [super init]))
     {
+        self.parDict=[[NSDictionary alloc] init];
     }
     
     return self;
@@ -41,6 +42,11 @@
 }
 
 -(void)unregisterParameterEvent
+{
+    
+}
+
+-(void)parseParameter
 {
     
 }

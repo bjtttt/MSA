@@ -18,5 +18,6 @@
 
 -(void)registerParameterEvent;
 -(void)unregisterParameterEvent;
+-(void)parseParameter;
 
 @end
