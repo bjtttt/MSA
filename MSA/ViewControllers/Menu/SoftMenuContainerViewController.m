@@ -23,7 +23,7 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"SoftMenuContainerViewController - prepareForSegue");
+    //NSLog(@"SoftMenuContainerViewController - prepareForSegue");
 
     if([segue.identifier isEqualToString:@"embedSegueToSoftMenuNVC"])
     {
@@ -45,7 +45,7 @@
 }
 
 -(void)viewWillLayoutSubviews {
-    NSLog(@"SoftMenuContainerViewController - viewWillLayoutSubviews");
+    //NSLog(@"SoftMenuContainerViewController - viewWillLayoutSubviews");
 
     [super viewWillLayoutSubviews];
 }

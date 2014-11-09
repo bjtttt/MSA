@@ -162,7 +162,7 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"ContainerViewController - prepareForSegue");
+    //NSLog(@"ContainerViewController - prepareForSegue");
 
     if([segue.identifier isEqualToString:@"embedSegueToDisplayVC"])
     {

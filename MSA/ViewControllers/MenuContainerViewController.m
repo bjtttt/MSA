@@ -27,7 +27,7 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"MenuContainerViewController - prepareForSegue");
+    //NSLog(@"MenuContainerViewController - prepareForSegue");
 
     if([segue.identifier isEqualToString:@"embedSegueToPresetMenuCVC"])
     {
