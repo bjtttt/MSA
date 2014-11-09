@@ -10,6 +10,7 @@
 
 @class SpecParameterCollection;
 @class WaveParameterCollection;
+@class MeasureBarParameterCollection;
 @class ShareSettings;
 
 @interface ModeParameterCollection : NSObject
@@ -18,6 +19,7 @@
 
 @property (nonatomic) SpecParameterCollection * specParCol;
 @property (nonatomic) WaveParameterCollection * waveParCol;
+@property (nonatomic) MeasureBarParameterCollection * mbarParCol;
 
 @property (nonatomic) ShareSettings *shareSettings;
 

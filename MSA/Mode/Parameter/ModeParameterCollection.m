@@ -10,6 +10,7 @@
 #import "ModeParameterCollection.h"
 #import "SpecParameterCollection.h"
 #import "WaveParameterCollection.h"
+#import "MeasureBarParameterCollection.h"
 
 @interface ModeParameterCollection()
 
@@ -34,6 +35,7 @@
     {
         self.specParCol = [[SpecParameterCollection alloc] init];
         self.waveParCol = [[WaveParameterCollection alloc] init];
+        self.mbarParCol = [[MeasureBarParameterCollection alloc] init];
     }
     
     return self;
@@ -44,18 +46,21 @@
     _shareSettings=shareSettings;
     self.specParCol.shareSettings=shareSettings;
     self.waveParCol.shareSettings=shareSettings;
+    self.mbarParCol.shareSettings=shareSettings;
 }
 
 -(void)registerParameterEvent
 {
     [self.specParCol registerParameterEvent];
     [self.waveParCol registerParameterEvent];
+    [self.mbarParCol registerParameterEvent];
 }
 
 -(void)unregisterParameterEvent
 {
     [self.specParCol unregisterParameterEvent];
     [self.waveParCol unregisterParameterEvent];
+    [self.mbarParCol unregisterParameterEvent];
 }
 
 @end
