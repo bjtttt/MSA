@@ -90,6 +90,8 @@
             if(sKey.subSoftkey != nil)
             {
                 nameString=sKey.subSoftkey.nameString;
+                NSAssert(nameString != nil, @"UISoftKey %@ has nil sub Name String.", sKey.label);
+                NSAssert(nameString.length > 0, @"UISoftKey %@ has empty sub Name String.", sKey.label);
                 switch(sKey.subSoftkey.valueType)
                 {
                     case VAL_BOOL_AUTOMAN:
