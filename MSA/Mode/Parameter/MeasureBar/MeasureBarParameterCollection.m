@@ -12,6 +12,7 @@
 #import "UISoftPanel.h"
 #import "UISoftKey.h"
 #import "ShareSettings.h"
+#import "ImmediateParameter.h"
 
 @interface MeasureBarParameterCollection()
 
@@ -67,7 +68,7 @@
             switch(sKey.valueType)
             {
                 case VAL_IMM:
-                    [self.parDict setObject:nil forKey:nameString];
+                    [self.parDict setObject:[[ImmediateParameter alloc] init] forKey:nameString];
                     break;
                 case VAL_STRING:
                     [self.parDict setObject:sKey.valueString forKey:nameString];
@@ -80,13 +81,29 @@
                     [self.parDict setObject:sKey.value forKey:nameString];
                     break;
                 default:
-                case VAL_NONE:
+                //case VAL_NONE:
                     NSAssert(false, @"UISoftKey %@ has a value type of %d", sKey.label, sKey.valueType);
                     break;
             }
             if(sKey.subSoftkey != nil)
             {
-                
+                nameString=sKey.subSoftkey.nameString;
+                switch(sKey.subSoftkey.valueType)
+                {
+                    case VAL_BOOL_AUTOMAN:
+                    case VAL_BOOL_ONOFF:
+                    case VAL_ENUM:
+                        [self.parDict setObject:sKey.value forKey:nameString];
+                        break;
+                    default:
+                    //case VAL_STRING:
+                    //case VAL_IMM:
+                    //case VAL_INT:
+                    //case VAL_DOUBLE:
+                    //case VAL_NONE:
+                        NSAssert(false, @"UISoftKey %@ has a sub value type of %d", sKey.label, sKey.subSoftkey.valueType);
+                        break;
+                }
             }
         }
     }

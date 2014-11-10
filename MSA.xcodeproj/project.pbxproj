@@ -49,6 +49,8 @@
 		9A6A209E19DF78990011B98A /* Bar0SingleContinousTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A209D19DF78990011B98A /* Bar0SingleContinousTableViewCell.m */; };
 		9A6A20A119DF79170011B98A /* Bar0OneLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A20A019DF79170011B98A /* Bar0OneLineTableViewCell.m */; };
 		9A6A20A419DFE94E0011B98A /* ParameterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A20A319DFE94E0011B98A /* ParameterManager.m */; };
+		9A6F69FF1A10EB5900462206 /* ImmediateParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F69FE1A10EB5900462206 /* ImmediateParameter.m */; };
+		9A6F6A021A10EBAC00462206 /* Parameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F6A011A10EBAC00462206 /* Parameter.m */; };
 		9A7128021A01EC2E00DF0D96 /* MeasureBarContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7128011A01EC2E00DF0D96 /* MeasureBarContainerView.m */; };
 		9A726F4E19C1880000CDF55D /* MsgMasterNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F4D19C1880000CDF55D /* MsgMasterNavigationViewController.m */; };
 		9A726F5219C188C200CDF55D /* MsgDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A726F5119C188C200CDF55D /* MsgDetailTableViewController.m */; };
@@ -210,6 +212,10 @@
 		9A6A20A019DF79170011B98A /* Bar0OneLineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bar0OneLineTableViewCell.m; path = ViewControllers/Bar/CellStyle/Bar0OneLineTableViewCell.m; sourceTree = "<group>"; };
 		9A6A20A319DFE94E0011B98A /* ParameterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParameterManager.m; path = Data/Parameter/ParameterManager.m; sourceTree = "<group>"; };
 		9A6A20A519DFE9600011B98A /* ParameterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ParameterManager.h; path = Data/Parameter/ParameterManager.h; sourceTree = "<group>"; };
+		9A6F69FE1A10EB5900462206 /* ImmediateParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImmediateParameter.m; path = Data/Parameter/ImmediateParameter.m; sourceTree = "<group>"; };
+		9A6F6A001A10EB6700462206 /* ImmediateParameter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImmediateParameter.h; path = Data/Parameter/ImmediateParameter.h; sourceTree = "<group>"; };
+		9A6F6A011A10EBAC00462206 /* Parameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Parameter.m; path = Data/Parameter/Parameter.m; sourceTree = "<group>"; };
+		9A6F6A031A10EBBA00462206 /* Parameter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Parameter.h; path = Data/Parameter/Parameter.h; sourceTree = "<group>"; };
 		9A7128001A01EC2E00DF0D96 /* MeasureBarContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeasureBarContainerView.h; path = ViewControllers/Bar/MeasureBarContainerView.h; sourceTree = "<group>"; };
 		9A7128011A01EC2E00DF0D96 /* MeasureBarContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeasureBarContainerView.m; path = ViewControllers/Bar/MeasureBarContainerView.m; sourceTree = "<group>"; };
 		9A726F4D19C1880000CDF55D /* MsgMasterNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MsgMasterNavigationViewController.m; path = ViewControllers/Msg/MsgMasterNavigationViewController.m; sourceTree = "<group>"; };
@@ -595,6 +601,10 @@
 			children = (
 				9A6A20A519DFE9600011B98A /* ParameterManager.h */,
 				9A6A20A319DFE94E0011B98A /* ParameterManager.m */,
+				9A6F69FE1A10EB5900462206 /* ImmediateParameter.m */,
+				9A6F6A001A10EB6700462206 /* ImmediateParameter.h */,
+				9A6F6A011A10EBAC00462206 /* Parameter.m */,
+				9A6F6A031A10EBBA00462206 /* Parameter.h */,
 			);
 			name = Parameter;
 			sourceTree = "<group>";
@@ -1171,6 +1181,7 @@
 				9A162D661A00E58C005319EF /* MainContainerView.m in Sources */,
 				9A194D201A08DA2D0001BEAD /* Bar0OneLineYellowTableViewCell.m in Sources */,
 				9A19795619D2A547008E87E1 /* AddInstrumentContainerViewController.m in Sources */,
+				9A6F69FF1A10EB5900462206 /* ImmediateParameter.m in Sources */,
 				9A006C3219DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m in Sources */,
 				9A726F5B19C19FC000CDF55D /* SystemMasterNavigationViewController.m in Sources */,
 				9A1C929C19CED2B400074EA6 /* SoftMenuNavigationViewController.m in Sources */,
@@ -1231,6 +1242,7 @@
 				9ACCD84E19DEA16800A6ACD5 /* GPUImageTwoPassTextureSamplingFilter.m in Sources */,
 				9A90589919C08EFD00B0B6AB /* MsgSplitViewController.m in Sources */,
 				9A9C671719AD6C81007D3248 /* MainContainerViewController.m in Sources */,
+				9A6F6A021A10EBAC00462206 /* Parameter.m in Sources */,
 				9A4F03AB1A09DB0500B19DBB /* UISoftKey.m in Sources */,
 				9ACCD83319DEA01700A6ACD5 /* GPUImageContext.m in Sources */,
 				9A726F5219C188C200CDF55D /* MsgDetailTableViewController.m in Sources */,
