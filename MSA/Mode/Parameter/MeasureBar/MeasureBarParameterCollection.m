@@ -65,6 +65,8 @@
         {
             UISoftKey *sKey=[sKeyArray objectAtIndex:j];
             NSMutableString *nameString=sKey.nameString;
+            NSAssert(nameString != nil, @"UISoftKey %@ has nil Name String.", sKey.label);
+            NSAssert(nameString.length > 0, @"UISoftKey %@ has empty Name String.", sKey.label);
             switch(sKey.valueType)
             {
                 case VAL_IMM:
