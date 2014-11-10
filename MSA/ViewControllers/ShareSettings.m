@@ -367,6 +367,7 @@
                 subSoftKey.softPanel = softPanel;
                 
                 //NSString *stringItem;
+                /*
                 stringItem = [subMeasBarItem objectForKey:@"label"];
                 if(stringItem == nil)
                     subSoftKey.label=[[NSMutableString alloc] initWithString:@""];
@@ -377,6 +378,7 @@
                     subSoftKey.labelShort=[[NSMutableString alloc] initWithString:@""];
                 else
                     subSoftKey.labelShort=[[NSMutableString alloc] initWithString:stringItem];
+                */
                 stringItem = [subMeasBarItem objectForKey:@"nameString"];
                 if(stringItem == nil)
                     subSoftKey.nameString=[[NSMutableString alloc] initWithString:@""];
@@ -384,8 +386,8 @@
                     subSoftKey.nameString=[[NSMutableString alloc] initWithString:stringItem];
                 subSoftKey.valueTypeInteger=[[subMeasBarItem objectForKey:@"type"] intValue];
                 subSoftKey.value=[subMeasBarItem objectForKey:@"value"];
-                subSoftKey.valueString=[subMeasBarItem objectForKey:@"valueString"];
-                subSoftKey.unit=[subMeasBarItem objectForKey:@"unit"];
+                //subSoftKey.valueString=[subMeasBarItem objectForKey:@"valueString"];
+                //subSoftKey.unit=[subMeasBarItem objectForKey:@"unit"];
                 
                 //NSArray *enumArray=[subMeasBarItem objectForKey:@"enumValues"];
                 enumArray=[subMeasBarItem objectForKey:@"enumValues"];
@@ -404,6 +406,10 @@
                         
                         [subSoftKey addSoftkeyEnumItem:enumItemValue label:enumItemLabel labelShort:enumItemLabelShort];
                     }
+                }
+                else
+                {
+                    NSAssert(enumArray != nil, @"UISoftKey %@ has sub UISoftKey with nil Enum", softKey.label);
                 }
             }
         }

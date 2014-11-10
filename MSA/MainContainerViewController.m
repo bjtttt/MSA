@@ -103,6 +103,7 @@
     // Must be initialized after initSoftMenuSystem because we can get the data name string
     self.parManager = [ParameterManager parameterManager];
     self.parManager.shareSettings=self.shareSettings;
+    [self.parManager parseParameter];
     [self.parManager registerParameterChangedEvent];
 
     UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
