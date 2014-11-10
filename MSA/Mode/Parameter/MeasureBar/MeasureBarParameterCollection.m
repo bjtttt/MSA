@@ -34,7 +34,7 @@
 -(id) init {
     if ((self = [super init]))
     {
-        self.parDict=[[NSDictionary alloc] init];
+        self.parDict=[[NSMutableDictionary alloc] init];
     }
     
     return self;
@@ -54,32 +54,39 @@
 {
     UISoftMenu *sMenu = self.shareSettings.softMenuSystem;
     NSMutableArray *mbarSystem = sMenu.measBarPanels;
-    int count = mbarSystem.count;
+    int count = (int)mbarSystem.count;
     for(int i=0;i<count;i++)
     {
         UISoftPanel *sPanel=[mbarSystem objectAtIndex:i];
         NSMutableArray *sKeyArray=sPanel.keyArray;
-        int countKeys=sKeyArray.count;
+        int countKeys=(int)sKeyArray.count;
         for(int j=0;j<countKeys;j++)
         {
             UISoftKey *sKey=[sKeyArray objectAtIndex:j];
             NSMutableString *nameString=sKey.nameString;
-            ValueType vType=sKey.valueType;
             switch(sKey.valueType)
             {
                 case VAL_IMM:
+                    [self.parDict setObject:nil forKey:nameString];
                     break;
                 case VAL_STRING:
+                    [self.parDict setObject:sKey.valueString forKey:nameString];
                     break;
                 case VAL_INT:
                 case VAL_DOUBLE:
                 case VAL_BOOL_AUTOMAN:
                 case VAL_BOOL_ONOFF:
                 case VAL_ENUM:
+                    [self.parDict setObject:sKey.value forKey:nameString];
                     break;
                 default:
                 case VAL_NONE:
+                    NSAssert(false, @"UISoftKey %@ has a value type of %d", sKey.label, sKey.valueType);
                     break;
+            }
+            if(sKey.subSoftkey != nil)
+            {
+                
             }
         }
     }

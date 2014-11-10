@@ -213,14 +213,14 @@
     
     NSDictionary *settingsMeasureBar = (NSDictionary *)[settingsInfo objectForKey:@"measureBar"];
     
-    self.measureBarCount = measBarPanels.count;
+    self.measureBarCount = (int)measBarPanels.count;
     
     self.useBarRatio = [[settingsMeasureBar objectForKey:@"useRatio"] boolValue];
 
     self.barWidths = [[NSMutableArray alloc] initWithArray:(NSArray *)[settingsMeasureBar objectForKey:@"width"]];
     if(self.barWidths != nil)
     {
-        NSAssert(self.barWidths.count == 0 || self.barWidths.count == self.measureBarCount, @"The count of the Bar Width is %u not %d.", self.barWidths.count, (int)self.measureBarCount);
+        NSAssert((int)self.barWidths.count == 0 || (int)self.barWidths.count == self.measureBarCount, @"The count of the Bar Width is %u not %d.", (int)self.barWidths.count, (int)self.measureBarCount);
         if(self.barWidths.count != 0)
         {
             for(int i=0;i<self.measureBarCount;i++)
@@ -308,14 +308,17 @@
         NSMutableString *spTitle = [[NSMutableString alloc] initWithString:@""];
         [spTitle appendFormat:@"Measure Bar %d", i];
         softPanel.title=spTitle;
+        [self.softMenuSystem.measBarPanels addObject:softPanel];
 
-        int count = measBar.count;
+        int count = (int)measBar.count;
         for(int index=0;index<count;index++)
         {
             NSDictionary *measBarItem=[measBar objectAtIndex:index];
             
             UISoftKey *softKey = [[UISoftKey alloc] init];
             softKey.softPanel=softPanel;
+            [softPanel.keyArray addObject:softKey];
+            
             NSString *stringItem;
             stringItem = [measBarItem objectForKey:@"label"];
             if(stringItem == nil)
@@ -342,7 +345,7 @@
             {
                 //UISoftKeyEnum *skEnum=[[UISoftKeyEnum alloc] init];
                 [softKey initSoftKeyEnum];
-                int enumArrayCount = enumArray.count;
+                int enumArrayCount = (int)enumArray.count;
                 for(int j=0;j<enumArrayCount;j++)
                 {
                     //UISoftKeyEnumItem *skEnumItem=[[UISoftKeyEnumItem alloc] init];
@@ -352,6 +355,55 @@
                     NSString *enumItemLabelShort=[enumItem objectForKey:@"labelShort"];
                     
                     [softKey addSoftkeyEnumItem:enumItemValue label:enumItemLabel labelShort:enumItemLabelShort];
+                }
+            }
+            
+            NSDictionary *subMeasBarItem = [measBarItem objectForKey:@"subBoolEnum"];
+            if(subMeasBarItem != nil)
+            {
+                UISoftKey *subSoftKey = [[UISoftKey alloc] init];
+                softKey.subSoftkey = subSoftKey;
+                subSoftKey.parentSoftkey = softKey;
+                subSoftKey.softPanel = softPanel;
+                
+                //NSString *stringItem;
+                stringItem = [subMeasBarItem objectForKey:@"label"];
+                if(stringItem == nil)
+                    subSoftKey.label=[[NSMutableString alloc] initWithString:@""];
+                else
+                    subSoftKey.label=[[NSMutableString alloc] initWithString:stringItem];
+                stringItem = [subMeasBarItem objectForKey:@"labelShort"];
+                if(stringItem == nil)
+                    subSoftKey.labelShort=[[NSMutableString alloc] initWithString:@""];
+                else
+                    subSoftKey.labelShort=[[NSMutableString alloc] initWithString:stringItem];
+                stringItem = [subMeasBarItem objectForKey:@"nameString"];
+                if(stringItem == nil)
+                    subSoftKey.nameString=[[NSMutableString alloc] initWithString:@""];
+                else
+                    subSoftKey.nameString=[[NSMutableString alloc] initWithString:stringItem];
+                subSoftKey.valueTypeInteger=[[subMeasBarItem objectForKey:@"type"] intValue];
+                subSoftKey.value=[subMeasBarItem objectForKey:@"value"];
+                subSoftKey.valueString=[subMeasBarItem objectForKey:@"valueString"];
+                subSoftKey.unit=[subMeasBarItem objectForKey:@"unit"];
+                
+                //NSArray *enumArray=[subMeasBarItem objectForKey:@"enumValues"];
+                enumArray=[subMeasBarItem objectForKey:@"enumValues"];
+                if(enumArray != nil)
+                {
+                    //UISoftKeyEnum *skEnum=[[UISoftKeyEnum alloc] init];
+                    [subSoftKey initSoftKeyEnum];
+                    int enumArrayCount = (int)enumArray.count;
+                    for(int j=0;j<enumArrayCount;j++)
+                    {
+                        //UISoftKeyEnumItem *skEnumItem=[[UISoftKeyEnumItem alloc] init];
+                        NSDictionary *enumItem=[enumArray objectAtIndex:j];
+                        int enumItemValue=[[enumItem objectForKey:@"value"] intValue];
+                        NSString *enumItemLabel=[enumItem objectForKey:@"label"];
+                        NSString *enumItemLabelShort=[enumItem objectForKey:@"labelShort"];
+                        
+                        [subSoftKey addSoftkeyEnumItem:enumItemValue label:enumItemLabel labelShort:enumItemLabelShort];
+                    }
                 }
             }
         }

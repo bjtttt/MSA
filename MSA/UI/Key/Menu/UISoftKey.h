@@ -30,7 +30,9 @@
 @property (nonatomic) NSMutableString *unit;
 
 @property (nonatomic) UISoftKeyEnum *softKeyEnum;
+
 @property (nonatomic) UISoftKey *subSoftkey;
+@property (nonatomic) UISoftKey *parentSoftkey;
 
 @property (nonatomic) UISoftKey *next;
 @property (nonatomic) UISoftKey *previous;
