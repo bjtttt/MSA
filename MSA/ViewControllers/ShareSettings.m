@@ -18,6 +18,7 @@
 #import "UISoftKey.h"
 #import "UISoftKeyEnum.h"
 #import "UISoftKeyEnumItem.h"
+#import "MeasureBarDetail.h"
 
 @implementation ShareSettings
 
@@ -213,10 +214,21 @@
     
     NSDictionary *settingsMeasureBar = (NSDictionary *)[settingsInfo objectForKey:@"measureBar"];
     
-    self.measureBarCount = (int)measBarPanels.count;
+    //self.measureBarCount = (int)measBarPanels.count;
     
     self.useBarRatio = [[settingsMeasureBar objectForKey:@"useRatio"] boolValue];
+    NSDictionary *widthsDict = [settingsMeasureBar objectForKey:@"widths"];
 
+    NSEnumerator *enumerator = [widthsDict objectEnumerator];
+    id key;
+    while ((key = [enumerator nextObject]))
+    {
+        NSString *sKey = (NSString *)key;
+        NSString *sVal = (NSString *)[widthsDict objectForKey:sKey];
+        //NSLog(@"Key:%@,Value:%@",key,[requestData objectForKey:key]);
+    }
+    
+    /*
     self.barWidths = [[NSMutableArray alloc] initWithArray:(NSArray *)[settingsMeasureBar objectForKey:@"width"]];
     if(self.barWidths != nil)
     {
@@ -255,6 +267,7 @@
         totalWidth = totalWidth + [[self.barWidths objectAtIndex:i] floatValue];
     }
     self.totalBarWidth = totalWidth;
+    */
 }
 
 -(CGFloat) measureBarPopupMenuPosition:(NSInteger)index forWidth:(CGFloat)width
@@ -343,12 +356,10 @@
             NSArray *enumArray=[measBarItem objectForKey:@"enumValues"];
             if(enumArray != nil)
             {
-                //UISoftKeyEnum *skEnum=[[UISoftKeyEnum alloc] init];
                 [softKey initSoftKeyEnum];
                 int enumArrayCount = (int)enumArray.count;
                 for(int j=0;j<enumArrayCount;j++)
                 {
-                    //UISoftKeyEnumItem *skEnumItem=[[UISoftKeyEnumItem alloc] init];
                     NSDictionary *enumItem=[enumArray objectAtIndex:j];
                     int enumItemValue=[[enumItem objectForKey:@"value"] intValue];
                     NSString *enumItemLabel=[enumItem objectForKey:@"label"];
@@ -366,19 +377,6 @@
                 subSoftKey.parentSoftkey = softKey;
                 subSoftKey.softPanel = softPanel;
                 
-                //NSString *stringItem;
-                /*
-                stringItem = [subMeasBarItem objectForKey:@"label"];
-                if(stringItem == nil)
-                    subSoftKey.label=[[NSMutableString alloc] initWithString:@""];
-                else
-                    subSoftKey.label=[[NSMutableString alloc] initWithString:stringItem];
-                stringItem = [subMeasBarItem objectForKey:@"labelShort"];
-                if(stringItem == nil)
-                    subSoftKey.labelShort=[[NSMutableString alloc] initWithString:@""];
-                else
-                    subSoftKey.labelShort=[[NSMutableString alloc] initWithString:stringItem];
-                */
                 stringItem = [subMeasBarItem objectForKey:@"nameString"];
                 if(stringItem == nil)
                     subSoftKey.nameString=[[NSMutableString alloc] initWithString:@""];
@@ -414,6 +412,28 @@
             }
         }
     }
+}
+
+-(void)switchMeasure:(NSString *)curMeas
+{
+    self.prevMeasure = self.curMeasure;
+    self.curMeasure = [[NSMutableString alloc] initWithString:curMeas];
+    
+    MeasureBarDetail *mbd = nil;
+    for (id mbdi in self.mbarDetails)
+    {
+        if([((MeasureBarDetail *)mbdi).measure isEqualToString:curMeas])
+        {
+            mbd = mbdi;
+            break;
+        }
+    }
+    
+    self.measureBarCount = mbd.mbarCount;
+    self.barWidths = mbd.mbarWidths;
+    self.barSmallWidths = mbd.mbarSmallWidths;
+    self.totalBarWidth = mbd.totalWidth;
+    self.totalBarSmallWidth = mbd.totalSmallWidth;
 }
 
 @end

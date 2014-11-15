@@ -99,16 +99,13 @@
 		<dict>
 			<key>useRatio</key>
 			<true/>
-			<key>width</key>
-			<array>
-				<integer>1</integer>
-				<real>1</real>
-				<real>1</real>
-				<integer>1</integer>
-				<integer>1</integer>
-				<integer>1</integer>
-				<integer>2</integer>
-			</array>
+			<key>widths</key>
+			<dict>
+				<key>ComplexSpectrum</key>
+				<string>1:1:1:1:1:1:2</string>
+				<key>IQWaveform</key>
+				<string>1:1:1:1:1:1:2</string>
+			</dict>
 		</dict>
 	</dict>
 	<key>measureBar</key>

@@ -110,10 +110,13 @@ typedef enum unitType {
 
 @property (nonatomic) NSMutableArray *measureView;
 
-@property (nonatomic) int measureBarCount;
 @property (nonatomic) bool useBarRatio;
+@property (nonatomic) int measureBarCount;
 @property (strong, nonatomic) NSMutableArray *barWidths;
+@property (strong, nonatomic) NSMutableArray *barSmallWidths;
 @property (nonatomic) float totalBarWidth;
+@property (nonatomic) float totalBarSmallWidth;
+@property (nonatomic) NSMutableArray *mbarDetails;
 
 @property (weak, nonatomic) UIStoryboard *modeStoryboard;
 @property (weak, nonatomic) MeasureBarContainerViewController *barCVC;
@@ -125,6 +128,9 @@ typedef enum unitType {
 //@property (nonatomic) NSDictionary *dataParameters;
 @property (nonatomic) ParameterManager *parManager;
 
+@property (nonatomic) NSMutableString *prevMeasure;
+@property (nonatomic) NSMutableString *curMeasure;
+
 +(id)sharedSettings;
 
 -(void)initMeasureView;
@@ -132,6 +138,8 @@ typedef enum unitType {
 -(void)initSoftMenuSystem;
 -(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum;
 -(UIImage *)blurryImage:(UIImage *)image;
+
+-(void)switchMeasure:(NSString *)curMeas;
 
 -(CGFloat) measureBarPopupMenuPosition:(NSInteger)index forWidth:(CGFloat)width;
 
