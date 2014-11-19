@@ -313,14 +313,31 @@
 
 -(void)initSoftMenuSystem
 {
-    self.softMenuSystem=[[UISoftMenu alloc] init];
-    self.softMenuSystem.shareSettings=self;
+    self.softMenuDict=[[NSMutableDictionary alloc] init];
     
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *path = [bundle pathForResource:@"Mode" ofType:@"plist"];
     
     NSDictionary *modeInfo = [[NSDictionary alloc] initWithContentsOfFile:path];
-    NSArray *measBarPanels = [modeInfo objectForKey:@"measureBar"];
+    NSDictionary *measBarDict = [modeInfo objectForKey:@"measureBar"];
+    
+    NSEnumerator *enumerator = [measBarDict objectEnumerator];
+    id key;
+    while ((key = [enumerator nextObject]))
+    {
+        NSString *sKey = (NSString *)key;
+        NSDictionary *sVal = (NSDictionary *)[measBarDict objectForKey:sKey];
+        
+        UISoftMenu *sMenu = [[UISoftMenu alloc] init];
+        [self.softMenuDict setValue:sMenu forKey:sKey];
+        
+        sMenu.shareSettings = self;
+        
+        NSArray *definition = [sVal objectForKey:@"definition"];
+        NSDictionary *widthDict = [sVal objectForKey:@"width"];
+        
+        int defCount = definition.count;
+    }
     
     for(int i=0; i<self.measureBarCount; i++)
     {
