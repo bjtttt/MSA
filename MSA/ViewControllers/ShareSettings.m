@@ -226,6 +226,14 @@
         NSString *sKey = (NSString *)key;
         NSString *sVal = (NSString *)[widthsDict objectForKey:sKey];
         //NSLog(@"Key:%@,Value:%@",key,[requestData objectForKey:key]);
+        
+        NSAssert(sKey != nil, @"Measure Bar Width : measure is nil.");
+        NSAssert(sKey.length > 0, @"Measure Bar WIdth : measure is empty.");
+        
+        MeasureBarDetail *mbd = [[MeasureBarDetail alloc] init];
+        mbd.measure = [[NSMutableString alloc] initWithString:sKey];
+        
+        
     }
     
     /*
