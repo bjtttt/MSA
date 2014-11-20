@@ -14,6 +14,8 @@
 @interface UIKeyView : NSObject
 
 @property (nonatomic) NSMutableString *name;
+@property (nonatomic) NSMutableString *nameDisplay;
+@property (nonatomic) BOOL isDefault;
 @property (nonatomic) BOOL enabled;
 
 @end
