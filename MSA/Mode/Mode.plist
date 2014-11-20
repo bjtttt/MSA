@@ -4,10 +4,10 @@
 <dict>
 	<key>measure</key>
 	<dict>
-		<key>Complex Spectrum</key>
+		<key>ComplexSpectrum</key>
 		<dict>
-			<key>name</key>
-			<string>ComplexSpectrum</string>
+			<key>display</key>
+			<string>Complex Spectrum</string>
 			<key>isDefault</key>
 			<true/>
 			<key>enabled</key>
@@ -15,10 +15,10 @@
 			<key>view</key>
 			<dict/>
 		</dict>
-		<key>IQ Waveform</key>
+		<key>IQWaveform</key>
 		<dict>
-			<key>name</key>
-			<string>IQWaveform</string>
+			<key>display</key>
+			<string>IQ Waveform</string>
 			<key>isDefault</key>
 			<false/>
 			<key>enabled</key>

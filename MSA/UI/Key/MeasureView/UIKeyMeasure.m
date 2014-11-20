@@ -20,6 +20,8 @@
     if(self = [super init])
     {
         self.name = [[NSMutableString alloc] initWithString:@""];
+        self.nameDisplay = [[NSMutableString alloc] initWithString:@""];
+        self.isDefault = NO;
         self.enabled = NO;
         self.views = [[NSMutableArray alloc] init];
     }

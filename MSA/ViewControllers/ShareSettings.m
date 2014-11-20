@@ -184,8 +184,9 @@
         NSDictionary *measInfo = [measViewInfos objectForKey:measKey];
         UIKeyMeasure *meas = [[UIKeyMeasure alloc] init];
         meas.name = [[NSMutableString alloc] initWithString:measKey];
-        [meas.name replaceOccurrencesOfString:@"\\n" withString:@" " options:NSCaseInsensitiveSearch range:NSMakeRange(0, [meas.name length])];
-        meas.enabled = [[measInfo objectForKey:@"Enabled"] boolValue];
+        meas.nameDisplay = [[NSMutableString alloc] initWithString:(NSString *)[measInfo objectForKey:@"display"]];
+        meas.isDefault = [[measInfo objectForKey:@"isDefault"] boolValue];
+        meas.enabled = [[measInfo objectForKey:@"enabled"] boolValue];
         
         NSDictionary *viewInfos = (NSDictionary *)[measInfo objectForKey:@"View"];
         for(NSString *viewKey in viewInfos)
@@ -193,8 +194,9 @@
             NSDictionary *viewInfo = [viewInfos objectForKey:viewKey];
             UIKeyView *view = [[UIKeyView alloc] init];
             view.name = [[NSMutableString alloc] initWithString:viewKey];
-            [view.name replaceOccurrencesOfString:@"\\n" withString:@" " options:NSCaseInsensitiveSearch range:NSMakeRange(0, [view.name length])];
-            view.enabled = [[viewInfo objectForKey:@"Enabled"] boolValue];
+            view.name = [[NSMutableString alloc] initWithString:(NSString *)[viewInfo objectForKey:@"display"]];
+            view.isDefault = [[viewInfo objectForKey:@"isDefault"] boolValue];
+            view.enabled = [[viewInfo objectForKey:@"enabled"] boolValue];
             
             [meas.views addObject:view];
         }
@@ -203,6 +205,7 @@
     }
 }
 
+/*
 - (void) initMeasureBar
 {
     NSBundle *bundle = [NSBundle mainBundle];
@@ -232,7 +235,7 @@
         
         
     }
-    
+*/
     /*
     self.barWidths = [[NSMutableArray alloc] initWithArray:(NSArray *)[settingsMeasureBar objectForKey:@"width"]];
     if(self.barWidths != nil)
@@ -273,7 +276,9 @@
     }
     self.totalBarWidth = totalWidth;
     */
+/*
 }
+*/
 
 -(CGFloat) measureBarPopupMenuPosition:(NSInteger)index forWidth:(CGFloat)width
 {
