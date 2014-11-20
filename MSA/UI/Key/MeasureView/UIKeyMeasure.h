@@ -14,6 +14,8 @@
 @interface UIKeyMeasure : NSObject
 
 @property (nonatomic) NSMutableString *name;
+@property (nonatomic) NSMutableString *nameDisplay;
+@property (nonatomic) BOOL isDefault;
 @property (nonatomic) BOOL enabled;
 
 @property (nonatomic) NSMutableArray *views;

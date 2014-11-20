@@ -53,7 +53,9 @@
 
 -(void)parseParameter
 {
-    UISoftMenu *sMenu = self.shareSettings.softMenuSystem;
+    UISoftMenu *sMenu = (UISoftMenu *)[self.shareSettings.softMenuDict objectForKey:self.shareSettings.curMeasure];
+    NSAssert(sMenu != nil, @"%@ menu is nil", self.shareSettings.curMeasure);
+    
     NSMutableArray *mbarSystem = sMenu.measBarPanels;
     int count = (int)mbarSystem.count;
     for(int i=0;i<count;i++)
