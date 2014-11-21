@@ -40,7 +40,7 @@
 						<key>label</key>
 						<string>Sweep/Measure</string>
 						<key>nameString</key>
-						<string></string>
+						<string>Continuous Mode</string>
 						<key>type</key>
 						<integer>3</integer>
 						<key>valueString</key>
@@ -65,7 +65,7 @@
 								<key>shortLabel</key>
 								<string></string>
 								<key>label</key>
-								<string>Continous</string>
+								<string>Continuous</string>
 							</dict>
 						</array>
 					</dict>
@@ -75,7 +75,7 @@
 						<key>label</key>
 						<string>Restart</string>
 						<key>nameString</key>
-						<string></string>
+						<string>Restart</string>
 						<key>type</key>
 						<integer>6</integer>
 						<key>valueString</key>
@@ -93,7 +93,7 @@
 						<key>label</key>
 						<string>Pause</string>
 						<key>nameString</key>
-						<string></string>
+						<string>Pause Resume</string>
 						<key>type</key>
 						<integer>6</integer>
 						<key>valueString</key>
