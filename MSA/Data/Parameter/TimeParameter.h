@@ -6,17 +6,12 @@
 //  Copyright (c) 2014 KeySight. All rights reserved.
 //
 
-#ifndef MSA_ImmediateParameter_h
-#define MSA_ImmediateParameter_h
+#ifndef MSA_TimeParameter_h
+#define MSA_TimeParameter_h
 
-#import "Parameter.h"
+#import "DoubleParameter.h"
 
-@interface AmplitudeParameter : Parameter
-
-@property (nonatomic) NSMutableString *value;
-
--(void)valueChanged;
--(void)valueChanging;
+@interface TimeParameter : DoubleParameter
 
 @end
 

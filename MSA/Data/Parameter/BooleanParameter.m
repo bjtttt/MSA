@@ -1,5 +1,5 @@
 //
-//  ImmediateParameter.m
+//  BooleanParameter.m
 //  MSA
 //
 //  Created by 智滔郭 on 11/10/14.
@@ -7,22 +7,42 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ImmediateParameter.h"
+#import "BooleanParameter.h"
+//#import "ShareSettings.h"
+//#import "Parameter.h"
+//#import "Parameter.h"
 
-@interface ImmediateParameter()
+@interface BooleanParameter()
 
 @end
 
-@implementation ImmediateParameter
+@implementation BooleanParameter
 
 - (id) init
 {
     if(self = [super init])
     {
-        self.valueType = VAL_IMM;
+        self.valueType = VAL_BOOL;
     }
     
     return self;
+}
+
+-(void)setValue:(bool)value
+{
+    if(self.value == self.valuePrevious)
+    {
+        [self valueTouching];
+    }
+    else
+    {
+        [self valueChanging];
+        
+        self.valuePrevious = self.value;
+        self.value = value;
+        
+        [self valueChanged];
+    }
 }
 
 @end

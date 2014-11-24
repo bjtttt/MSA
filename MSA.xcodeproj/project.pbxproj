@@ -638,32 +638,18 @@
 		9A6A20A219DFE90C0011B98A /* Parameter */ = {
 			isa = PBXGroup;
 			children = (
-				9A52DA0C1A232B9D00B683A9 /* DoubleParameter.h */,
-				9A52DA0D1A232B9D00B683A9 /* DoubleParameter.m */,
-				9A52DA091A232B6000B683A9 /* TimeParameter.h */,
-				9A52DA0A1A232B6000B683A9 /* TimeParameter.m */,
-				9A52D9EE1A23270800B683A9 /* AmplitudeParameter.h */,
-				9A52D9EF1A23270800B683A9 /* AmplitudeParameter.m */,
-				9A52D9F01A23270800B683A9 /* AutoManParameter.h */,
-				9A52D9F11A23270800B683A9 /* AutoManParameter.m */,
-				9A52D9F21A23270800B683A9 /* BooleanParameter.h */,
-				9A52D9F31A23270800B683A9 /* BooleanParameter.m */,
+				9A76B3441A235D3400450CE4 /* BooleanParameter */,
+				9A76B3431A235D0600450CE4 /* DoubleParameter */,
 				9A52D9F41A23270800B683A9 /* EnumParameter.h */,
 				9A52D9F51A23270800B683A9 /* EnumParameter.m */,
-				9A52D9F61A23270800B683A9 /* FrequencyParameter.h */,
-				9A52D9F71A23270800B683A9 /* FrequencyParameter.m */,
 				9A52D9F81A23270800B683A9 /* IntParameter.h */,
 				9A52D9F91A23270800B683A9 /* IntParameter.m */,
-				9A52D9FA1A23270800B683A9 /* OnOffParameter.h */,
-				9A52D9FB1A23270800B683A9 /* OnOffParameter.m */,
-				9A52D9FC1A23270800B683A9 /* RelativeAmplitudeParameter.h */,
-				9A52D9FD1A23270800B683A9 /* RelativeAmplitudeParameter.m */,
 				9A52D9FE1A23270800B683A9 /* StringParameter.h */,
 				9A52D9FF1A23270800B683A9 /* StringParameter.m */,
-				9A6F69FE1A10EB5900462206 /* ImmediateParameter.m */,
 				9A6F6A001A10EB6700462206 /* ImmediateParameter.h */,
-				9A6F6A011A10EBAC00462206 /* Parameter.m */,
+				9A6F69FE1A10EB5900462206 /* ImmediateParameter.m */,
 				9A6F6A031A10EBBA00462206 /* Parameter.h */,
+				9A6F6A011A10EBAC00462206 /* Parameter.m */,
 				9A6A20A519DFE9600011B98A /* ParameterManager.h */,
 				9A6A20A319DFE94E0011B98A /* ParameterManager.m */,
 			);
@@ -716,6 +702,36 @@
 				9A726F6219C19FDE00CDF55D /* SystemDetailTableViewController.m */,
 			);
 			name = Detail;
+			sourceTree = "<group>";
+		};
+		9A76B3431A235D0600450CE4 /* DoubleParameter */ = {
+			isa = PBXGroup;
+			children = (
+				9A52DA0C1A232B9D00B683A9 /* DoubleParameter.h */,
+				9A52DA0D1A232B9D00B683A9 /* DoubleParameter.m */,
+				9A52DA091A232B6000B683A9 /* TimeParameter.h */,
+				9A52DA0A1A232B6000B683A9 /* TimeParameter.m */,
+				9A52D9EE1A23270800B683A9 /* AmplitudeParameter.h */,
+				9A52D9EF1A23270800B683A9 /* AmplitudeParameter.m */,
+				9A52D9F61A23270800B683A9 /* FrequencyParameter.h */,
+				9A52D9F71A23270800B683A9 /* FrequencyParameter.m */,
+				9A52D9FC1A23270800B683A9 /* RelativeAmplitudeParameter.h */,
+				9A52D9FD1A23270800B683A9 /* RelativeAmplitudeParameter.m */,
+			);
+			name = DoubleParameter;
+			sourceTree = "<group>";
+		};
+		9A76B3441A235D3400450CE4 /* BooleanParameter */ = {
+			isa = PBXGroup;
+			children = (
+				9A52D9F21A23270800B683A9 /* BooleanParameter.h */,
+				9A52D9F31A23270800B683A9 /* BooleanParameter.m */,
+				9A52D9F01A23270800B683A9 /* AutoManParameter.h */,
+				9A52D9F11A23270800B683A9 /* AutoManParameter.m */,
+				9A52D9FA1A23270800B683A9 /* OnOffParameter.h */,
+				9A52D9FB1A23270800B683A9 /* OnOffParameter.m */,
+			);
+			name = BooleanParameter;
 			sourceTree = "<group>";
 		};
 		9A79537019CD2A91009984A6 /* Measure */ = {

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "StringParameter.h"
+//#import "ShareSettings.h"
+//#import "Parameter.h"
 
 @interface StringParameter()
 
@@ -23,6 +25,23 @@
     }
     
     return self;
+}
+
+-(void)setValue:(NSMutableString *)value
+{
+    if(self.value == self.valuePrevious)
+    {
+        [self valueTouching];
+    }
+    else
+    {
+        [self valueChanging];
+        
+        self.valuePrevious = self.value;
+        self.value = value;
+        
+        [self valueChanged];
+    }
 }
 
 @end

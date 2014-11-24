@@ -6,17 +6,19 @@
 //  Copyright (c) 2014 KeySight. All rights reserved.
 //
 
-#ifndef MSA_ImmediateParameter_h
-#define MSA_ImmediateParameter_h
+#ifndef MSA_StringParameter_h
+#define MSA_StringParameter_h
 
 #import "Parameter.h"
 
 @interface StringParameter : Parameter
 
 @property (nonatomic) NSMutableString *value;
+@property (nonatomic) NSMutableString *valuePrevious;
 
--(void)valueChanged;
--(void)valueChanging;
+@property (nonatomic) SEL valueChanged;
+@property (nonatomic) SEL valueChanging;
+@property (nonatomic) SEL valueTouching;
 
 @end
 

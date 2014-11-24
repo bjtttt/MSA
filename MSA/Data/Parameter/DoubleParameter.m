@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "DoubleParameter.h"
+//#import "ShareSettings.h"
+//#import "Parameter.h"
 
 @interface DoubleParameter()
 
@@ -29,11 +31,19 @@
 
 -(void)setValue:(double)value
 {
-    [self valueChanging];
+    if(self.value == self.valuePrevious)
+    {
+        [self valueChanging];
+    }
+    else
+    {
+        [self valueChanging];
     
-    self.value = value;
+        self.valuePrevious = self.value;
+        self.value = value;
     
-    [self valueChanged];
+        [self valueChanged];
+    }
 }
 
 @end

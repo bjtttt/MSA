@@ -7,19 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ImmediateParameter.h"
+#import "FrequencyParameter.h"
+//#import "ShareSettings.h"
+//#import "Parameter.h"
 
-@interface ImmediateParameter()
+@interface FrequencyParameter()
 
 @end
 
-@implementation ImmediateParameter
+@implementation FrequencyParameter
 
 - (id) init
 {
     if(self = [super init])
     {
-        self.valueType = VAL_IMM;
+        self.valueType = VAL_FREQ;
     }
     
     return self;

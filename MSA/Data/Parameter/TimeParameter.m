@@ -1,5 +1,5 @@
 //
-//  AmplitudeParameter.m
+//  TimeParameter.m
 //  MSA
 //
 //  Created by 智滔郭 on 11/10/14.
@@ -7,19 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AmplitudeParameter.h"
+#import "TimeParameter.h"
+//#import "ShareSettings.h"
+//#import "Parameter.h"
 
-@interface AmplitudeParameter()
+@interface TimeParameter()
 
 @end
 
-@implementation AmplitudeParameter
+@implementation TimeParameter
 
 - (id) init
 {
     if(self = [super init])
     {
-        self.valueType = VAL_;
+        self.valueType = VAL_TIME;
     }
     
     return self;

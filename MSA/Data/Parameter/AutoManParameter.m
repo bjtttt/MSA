@@ -1,5 +1,5 @@
 //
-//  ImmediateParameter.m
+//  AutoManParameter.m
 //  MSA
 //
 //  Created by 智滔郭 on 11/10/14.
@@ -7,19 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ImmediateParameter.h"
+#import "AutoManParameter.h"
+//#import "ShareSettings.h"
+//#import "Parameter.h"
 
-@interface ImmediateParameter()
+@interface AutoManParameter()
 
 @end
 
-@implementation ImmediateParameter
+@implementation AutoManParameter
 
 - (id) init
 {
     if(self = [super init])
     {
-        self.valueType = VAL_IMM;
+        self.valueType = VAL_BOOL_AUTOMAN;
     }
     
     return self;

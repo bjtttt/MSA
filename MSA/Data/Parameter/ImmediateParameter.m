@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "ImmediateParameter.h"
+//#import "ShareSettings.h"
+//#import "Parameter.h"
 
 @interface ImmediateParameter()
 

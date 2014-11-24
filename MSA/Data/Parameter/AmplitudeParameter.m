@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "AmplitudeParameter.h"
+//#import "ShareSettings.h"
+//#import "Parameter.h"
 
 @interface AmplitudeParameter()
 
@@ -19,7 +21,7 @@
 {
     if(self = [super init])
     {
-        self.valueType = VAL_;
+        self.valueType = VAL_AMP;
     }
     
     return self;

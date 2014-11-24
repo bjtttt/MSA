@@ -16,8 +16,9 @@
 @property (nonatomic) double valuePrevious;
 @property (nonatomic) double value;
 
--(void)valueChanged;
--(void)valueChanging;
+@property (nonatomic) SEL valueChanged;
+@property (nonatomic) SEL valueChanging;
+@property (nonatomic) SEL valueTouching;
 
 @end
 

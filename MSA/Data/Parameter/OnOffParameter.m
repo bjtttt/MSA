@@ -1,5 +1,5 @@
 //
-//  ImmediateParameter.m
+//  OnOffParameter.m
 //  MSA
 //
 //  Created by 智滔郭 on 11/10/14.
@@ -7,19 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ImmediateParameter.h"
+#import "OnOffParameter.h"
+//#import "Parameter.h"
 
-@interface ImmediateParameter()
+@interface OnOffParameter()
 
 @end
 
-@implementation ImmediateParameter
+@implementation OnOffParameter
 
 - (id) init
 {
     if(self = [super init])
     {
-        self.valueType = VAL_IMM;
+        self.valueType = VAL_BOOL_ONOFF;
     }
     
     return self;

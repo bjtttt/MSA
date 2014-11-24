@@ -15,4 +15,14 @@
 
 @implementation Parameter
 
+- (id) init
+{
+    if(self = [super init])
+    {
+        self.valueType = VAL_NONE;
+    }
+    
+    return self;
+}
+
 @end
