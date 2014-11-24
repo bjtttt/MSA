@@ -14,6 +14,7 @@
 @interface Parameter : NSObject
 
 @property (nonatomic) ValueType valueType;
+@property (nonatomic) NSMutableString *key;
 
 @end
 

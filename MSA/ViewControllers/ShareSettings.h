@@ -54,7 +54,11 @@ typedef enum valueType {
     VAL_BOOL_AUTOMAN,
     VAL_ENUM,
     VAL_STRING,
-    VAL_IMM = 6
+    VAL_FREQ,
+    VAL_AMP,
+    VAL_RELAMP,
+    VAL_TIME,
+    VAL_IMM = 10
 }ValueType;
 
 typedef enum unitType {
