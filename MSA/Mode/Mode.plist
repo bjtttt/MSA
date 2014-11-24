@@ -93,7 +93,7 @@
 						<key>label</key>
 						<string>Pause</string>
 						<key>nameString</key>
-						<string>Pause Resume</string>
+						<string>Pause Resume+</string>
 						<key>type</key>
 						<integer>6</integer>
 						<key>valueString</key>
@@ -113,7 +113,7 @@
 						<key>label</key>
 						<string>Select Input</string>
 						<key>nameString</key>
-						<string></string>
+						<string>Input Port</string>
 						<key>type</key>
 						<integer>4</integer>
 						<key>valueString</key>
@@ -152,11 +152,46 @@
 					</dict>
 					<dict>
 						<key>shortLabel</key>
+						<string>Coupling</string>
+						<key>label</key>
+						<string>RF Coupling</string>
+						<key>nameString</key>
+						<string>Input Coupling</string>
+						<key>type</key>
+						<integer>4</integer>
+						<key>valueString</key>
+						<string></string>
+						<key>value</key>
+						<integer>0</integer>
+						<key>unit</key>
+						<string>dB</string>
+						<key>enumValues</key>
+						<array>
+							<dict>
+								<key>value</key>
+								<integer>0</integer>
+								<key>shortLabel</key>
+								<string>AC</string>
+								<key>label</key>
+								<string>AC</string>
+							</dict>
+							<dict>
+								<key>value</key>
+								<integer>1</integer>
+								<key>shortLabel</key>
+								<string>DC</string>
+								<key>label</key>
+								<string>DC</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>shortLabel</key>
 						<string>Ext Gain</string>
 						<key>label</key>
 						<string>External Gain</string>
 						<key>nameString</key>
-						<string></string>
+						<string>ExtGainPreampDb</string>
 						<key>type</key>
 						<integer>2</integer>
 						<key>valueString</key>
@@ -176,7 +211,7 @@
 						<key>label</key>
 						<string>Input Z</string>
 						<key>nameString</key>
-						<string></string>
+						<string>InputZCorrection</string>
 						<key>type</key>
 						<integer>4</integer>
 						<key>valueString</key>
@@ -211,7 +246,7 @@
 						<key>label</key>
 						<string>Select Correction</string>
 						<key>nameString</key>
-						<string></string>
+						<string>AmpcorSelected</string>
 						<key>type</key>
 						<integer>4</integer>
 						<key>valueString</key>
@@ -290,11 +325,11 @@
 					</dict>
 					<dict>
 						<key>shortLabel</key>
-						<string>Corrections</string>
+						<string>Correction</string>
 						<key>label</key>
-						<string>Corrections</string>
+						<string>Correction</string>
 						<key>nameString</key>
-						<string></string>
+						<string>AmpcorState</string>
 						<key>type</key>
 						<integer>3</integer>
 						<key>valueString</key>
@@ -329,7 +364,7 @@
 						<key>label</key>
 						<string>Freq Ref Input</string>
 						<key>nameString</key>
-						<string></string>
+						<string>ReferenceOscillatorUI</string>
 						<key>type</key>
 						<integer>4</integer>
 						<key>valueString</key>
@@ -380,7 +415,7 @@
 						<key>label</key>
 						<string>Auto Align</string>
 						<key>nameString</key>
-						<string></string>
+						<string>Auto Align Type</string>
 						<key>type</key>
 						<integer>4</integer>
 						<key>valueString</key>
@@ -417,6 +452,41 @@
 							</dict>
 						</array>
 					</dict>
+					<dict>
+						<key>shortLabel</key>
+						<string></string>
+						<key>label</key>
+						<string>All but RF</string>
+						<key>nameString</key>
+						<string>Auto Align Mode</string>
+						<key>type</key>
+						<integer>2</integer>
+						<key>valueString</key>
+						<string></string>
+						<key>value</key>
+						<integer>0</integer>
+						<key>unit</key>
+						<string></string>
+						<key>enumValues</key>
+						<array>
+							<dict>
+								<key>value</key>
+								<integer>0</integer>
+								<key>shortLabel</key>
+								<string></string>
+								<key>label</key>
+								<string>Off</string>
+							</dict>
+							<dict>
+								<key>value</key>
+								<integer>1</integer>
+								<key>shortLabel</key>
+								<string></string>
+								<key>label</key>
+								<string>On</string>
+							</dict>
+						</array>
+					</dict>
 				</array>
 				<array>
 					<dict>
@@ -425,7 +495,7 @@
 						<key>label</key>
 						<string>Mech Atten</string>
 						<key>nameString</key>
-						<string></string>
+						<string>MechanicalAtten</string>
 						<key>type</key>
 						<integer>0</integer>
 						<key>valueString</key>
@@ -443,7 +513,7 @@
 						<key>label</key>
 						<string>Elec Atten</string>
 						<key>nameString</key>
-						<string></string>
+						<string>ElectricalAtten</string>
 						<key>type</key>
 						<integer>0</integer>
 						<key>valueString</key>
@@ -461,7 +531,7 @@
 							<key>label</key>
 							<string></string>
 							<key>nameString</key>
-							<string></string>
+							<string>ElectricalAttenState</string>
 							<key>type</key>
 							<integer>4</integer>
 							<key>valueString</key>
@@ -476,7 +546,7 @@
 									<key>value</key>
 									<integer>0</integer>
 									<key>shortLabel</key>
-									<string></string>
+									<string>Disable</string>
 									<key>label</key>
 									<string>Disable</string>
 								</dict>
@@ -484,7 +554,7 @@
 									<key>value</key>
 									<integer>1</integer>
 									<key>shortLabel</key>
-									<string></string>
+									<string>Enable</string>
 									<key>label</key>
 									<string>Enable</string>
 								</dict>
@@ -497,7 +567,7 @@
 						<key>label</key>
 						<string>Internal Preamp</string>
 						<key>nameString</key>
-						<string></string>
+						<string>Internal Preamp</string>
 						<key>type</key>
 						<integer>4</integer>
 						<key>valueString</key>
@@ -512,25 +582,17 @@
 								<key>value</key>
 								<integer>0</integer>
 								<key>shortLabel</key>
-								<string></string>
-								<key>label</key>
 								<string>Low Band</string>
+								<key>label</key>
+								<string>Low Band [3.60 GHz]</string>
 							</dict>
 							<dict>
 								<key>value</key>
 								<integer>1</integer>
 								<key>shortLabel</key>
-								<string></string>
+								<string>Full Range</string>
 								<key>label</key>
-								<string>Mid Band</string>
-							</dict>
-							<dict>
-								<key>value</key>
-								<integer>2</integer>
-								<key>shortLabel</key>
-								<string></string>
-								<key>label</key>
-								<string>High Band</string>
+								<string>Full Range [26.5 GHz]</string>
 							</dict>
 						</array>
 						<key>subBoolEnum</key>
@@ -540,9 +602,9 @@
 							<key>label</key>
 							<string></string>
 							<key>nameString</key>
-							<string></string>
+							<string>Internal Preamp</string>
 							<key>type</key>
-							<integer>4</integer>
+							<integer>2</integer>
 							<key>valueString</key>
 							<string></string>
 							<key>value</key>
@@ -576,7 +638,7 @@
 						<key>label</key>
 						<string>uW Path Control</string>
 						<key>nameString</key>
-						<string></string>
+						<string>Microwave Path Control</string>
 						<key>type</key>
 						<integer>4</integer>
 						<key>valueString</key>
@@ -591,17 +653,25 @@
 								<key>value</key>
 								<integer>0</integer>
 								<key>shortLabel</key>
-								<string>Enabled</string>
+								<string>Standard Path</string>
 								<key>label</key>
-								<string>LNP Enable</string>
+								<string>Standard Path</string>
 							</dict>
 							<dict>
 								<key>value</key>
 								<integer>1</integer>
 								<key>shortLabel</key>
-								<string>Disabled</string>
+								<string>LNP Enable</string>
 								<key>label</key>
-								<string>Standard Path</string>
+								<string>Low Noise Path Enable</string>
+							</dict>
+							<dict>
+								<key>value</key>
+								<integer>2</integer>
+								<key>shortLabel</key>
+								<string>uW Presel Bypass</string>
+								<key>label</key>
+								<string>uW Presel Bypass</string>
 							</dict>
 						</array>
 					</dict>
@@ -613,7 +683,7 @@
 						<key>label</key>
 						<string>Select Trig Source</string>
 						<key>nameString</key>
-						<string></string>
+						<string>TriggerSource</string>
 						<key>type</key>
 						<integer>4</integer>
 						<key>valueString</key>
@@ -688,7 +758,7 @@
 						<key>label</key>
 						<string>Trigger Delay</string>
 						<key>nameString</key>
-						<string></string>
+						<string>Trigger Delay</string>
 						<key>type</key>
 						<integer>1</integer>
 						<key>valueString</key>
@@ -706,9 +776,9 @@
 							<key>label</key>
 							<string></string>
 							<key>nameString</key>
-							<string></string>
+							<string>Trigger Delay State</string>
 							<key>type</key>
-							<integer>4</integer>
+							<integer>2</integer>
 							<key>valueString</key>
 							<string></string>
 							<key>value</key>
@@ -1061,7 +1131,7 @@
 						<key>nameString</key>
 						<string></string>
 						<key>type</key>
-						<integer>0</integer>
+						<integer>2</integer>
 						<key>valueString</key>
 						<string></string>
 						<key>value</key>
