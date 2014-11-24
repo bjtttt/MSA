@@ -814,7 +814,7 @@
 						<key>label</key>
 						<string>Phase Noise Optimization</string>
 						<key>nameString</key>
-						<string></string>
+						<string>Phase Noise Opt</string>
 						<key>type</key>
 						<integer>4</integer>
 						<key>valueString</key>
@@ -873,9 +873,9 @@
 							<key>label</key>
 							<string></string>
 							<key>nameString</key>
-							<string></string>
+							<string>Phase Noise Opt Auto</string>
 							<key>type</key>
-							<integer>4</integer>
+							<integer>3</integer>
 							<key>valueString</key>
 							<string></string>
 							<key>value</key>
@@ -909,7 +909,7 @@
 						<key>label</key>
 						<string>IF Gain</string>
 						<key>nameString</key>
-						<string></string>
+						<string>IfGainState</string>
 						<key>type</key>
 						<integer>4</integer>
 						<key>valueString</key>
@@ -952,9 +952,9 @@
 							<key>label</key>
 							<string></string>
 							<key>nameString</key>
-							<string></string>
+							<string>IFGainAuto</string>
 							<key>type</key>
-							<integer>4</integer>
+							<integer>3</integer>
 							<key>valueString</key>
 							<string></string>
 							<key>value</key>
@@ -990,7 +990,7 @@
 						<key>label</key>
 						<string>Center Freq</string>
 						<key>nameString</key>
-						<string></string>
+						<string>CenterFrequency</string>
 						<key>type</key>
 						<integer>2</integer>
 						<key>valueString</key>
@@ -1008,7 +1008,7 @@
 						<key>label</key>
 						<string>Avg Type</string>
 						<key>nameString</key>
-						<string></string>
+						<string>Average Type</string>
 						<key>type</key>
 						<integer>4</integer>
 						<key>valueString</key>
@@ -1023,25 +1023,41 @@
 								<key>value</key>
 								<integer>0</integer>
 								<key>shortLabel</key>
-								<string>Autorange</string>
+								<string>Pwr Avg</string>
 								<key>label</key>
-								<string>Autorange</string>
+								<string>Pwr Avg(RMS)</string>
 							</dict>
 							<dict>
 								<key>value</key>
 								<integer>1</integer>
 								<key>shortLabel</key>
-								<string>Low Gain</string>
+								<string>Log-Pwr Avg</string>
 								<key>label</key>
-								<string>Low Gain</string>
+								<string>Log-Pwr Avg(Video)</string>
 							</dict>
 							<dict>
 								<key>value</key>
 								<integer>2</integer>
 								<key>shortLabel</key>
-								<string>High Gain</string>
+								<string>Voltage Avg</string>
 								<key>label</key>
-								<string>High Gain</string>
+								<string>Voltage Avg</string>
+							</dict>
+							<dict>
+								<key>value</key>
+								<integer>3</integer>
+								<key>shortLabel</key>
+								<string>Maximum</string>
+								<key>label</key>
+								<string>Maximum</string>
+							</dict>
+							<dict>
+								<key>value</key>
+								<integer>4</integer>
+								<key>shortLabel</key>
+								<string>Minimum</string>
+								<key>label</key>
+								<string>Minimum</string>
 							</dict>
 						</array>
 						<key>subBoolEnum</key>
@@ -1051,9 +1067,9 @@
 							<key>label</key>
 							<string></string>
 							<key>nameString</key>
-							<string></string>
+							<string>Average Type Auto</string>
 							<key>type</key>
-							<integer>4</integer>
+							<integer>3</integer>
 							<key>valueString</key>
 							<string></string>
 							<key>value</key>
@@ -1066,41 +1082,17 @@
 									<key>value</key>
 									<integer>0</integer>
 									<key>shortLabel</key>
-									<string>Pwr Avg</string>
+									<string></string>
 									<key>label</key>
-									<string>Pwr Avg(RMS)</string>
+									<string>Auto</string>
 								</dict>
 								<dict>
 									<key>value</key>
 									<integer>1</integer>
 									<key>shortLabel</key>
-									<string>Log-Pwr Avg</string>
+									<string></string>
 									<key>label</key>
-									<string>Log-Pwr Avg(Video)</string>
-								</dict>
-								<dict>
-									<key>value</key>
-									<integer>2</integer>
-									<key>shortLabel</key>
-									<string>Voltage Avg</string>
-									<key>label</key>
-									<string>Voltage Avg</string>
-								</dict>
-								<dict>
-									<key>value</key>
-									<integer>3</integer>
-									<key>shortLabel</key>
-									<string>Maximum</string>
-									<key>label</key>
-									<string>Maximum</string>
-								</dict>
-								<dict>
-									<key>value</key>
-									<integer>4</integer>
-									<key>shortLabel</key>
-									<string>Minimum</string>
-									<key>label</key>
-									<string>Minimum</string>
+									<string>Man</string>
 								</dict>
 							</array>
 						</dict>
@@ -1111,7 +1103,7 @@
 						<key>label</key>
 						<string>Avg|Hold Number</string>
 						<key>nameString</key>
-						<string></string>
+						<string>Average Number</string>
 						<key>type</key>
 						<integer>0</integer>
 						<key>valueString</key>
@@ -1129,7 +1121,7 @@
 						<key>label</key>
 						<string>Averaging</string>
 						<key>nameString</key>
-						<string></string>
+						<string>Averaging State</string>
 						<key>type</key>
 						<integer>2</integer>
 						<key>valueString</key>
