@@ -32,7 +32,13 @@
 {
     if(self = [super init])
     {
+        self.valueType = VAL_ENUM;
+        self.valuePrevious = NO;
+        self.value = NO;
         self.enumDefinition = enumDefinition;
+        self.valueChanged = nil;
+        self.valueChanging = nil;
+        self.valueTouching = nil;
     }
     
     return self;
@@ -42,7 +48,8 @@
 {
     if(self.value == self.valuePrevious)
     {
-        [self valueTouching];
+        if(self.valueTouching != nil)
+            [self valueTouching];
     }
     else
     {
@@ -58,12 +65,14 @@
         if(found == NO)
             NSAssert(YES == NO, @"Cannot find value %d in EnumParameter %@", value, self.key);
         
-        [self valueChanging];
+        if(self.valueChanging != nil)
+            [self valueChanging];
         
         self.valuePrevious = self.value;
         self.value = value;
         
-        [self valueChanged];
+        if(self.valueChanged != nil)
+            [self valueChanged];
     }
 }
 

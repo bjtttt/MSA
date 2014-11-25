@@ -22,6 +22,7 @@
     if(self = [super init])
     {
         self.valueType = VAL_IMM;
+        self.valueTouching = nil;
     }
     
     return self;

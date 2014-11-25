@@ -21,6 +21,8 @@
 @property (nonatomic) NSMutableString *label;
 @property (nonatomic) NSMutableString *labelShort;
 
+@property (nonatomic) ShareSettings *shareSettings;
+
 @end
 
 #endif

@@ -12,6 +12,8 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
+@class Parameter;
+
 typedef NS_ENUM(int, MSGType) {
     MSG_CURRENT_CONDITIONS = 0,
     MSG_HISTORY,
@@ -135,9 +137,9 @@ typedef NS_ENUM(int, ValueType) {
 
 -(CGFloat) measureBarPopupMenuPosition:(NSInteger)index forWidth:(CGFloat)width;
 
--(void)valueTouching:(id)parameter;
--(void)valueChanging:(id)parameter;
--(void)valueChanged:(id)parameter;
+-(void)valueTouching:(Parameter *)param;
+-(void)valueChanging:(Parameter *)param;
+-(void)valueChanged:(Parameter *)param;
 
 @end
 

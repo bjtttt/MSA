@@ -22,6 +22,9 @@
     if(self = [super init])
     {
         self.valueType = VAL_STRING;
+        self.valueChanged = nil;
+        self.valueChanging = nil;
+        self.valueTouching = nil;
     }
     
     return self;
@@ -31,16 +34,19 @@
 {
     if(self.value == self.valuePrevious)
     {
-        [self valueTouching];
+        if(self.valueTouching != nil)
+            [self valueTouching];
     }
     else
     {
-        [self valueChanging];
+        if(self.valueChanging != nil)
+            [self valueChanging];
         
         self.valuePrevious = self.value;
         self.value = value;
         
-        [self valueChanged];
+        if(self.valueChanged != nil)
+            [self valueChanged];
     }
 }
 

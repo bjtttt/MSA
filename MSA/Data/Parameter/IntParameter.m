@@ -24,6 +24,9 @@
         self.valueType = VAL_INT;
         self.valuePrevious = 0;
         self.value = 0;
+        self.valueChanged = nil;
+        self.valueChanging = nil;
+        self.valueTouching = nil;
     }
     
     return self;
@@ -33,16 +36,19 @@
 {
     if(self.value == self.valuePrevious)
     {
-        [self valueTouching];
+        if(self.valueTouching != nil)
+            [self valueTouching];
     }
     else
     {
-        [self valueChanging];
+        if(self.valueChanging != nil)
+            [self valueChanging];
         
         self.valuePrevious = self.value;
         self.value = value;
         
-        [self valueChanged];
+        if(self.valueChanged != nil)
+            [self valueChanged];
     }
 }
 

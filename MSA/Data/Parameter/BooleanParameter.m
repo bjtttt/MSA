@@ -29,6 +29,9 @@
         self.yesLabelShort = [[NSMutableString alloc] initWithString:@""];
         self.noLabel = [[NSMutableString alloc] initWithString:@""];
         self.noLabelShort = [[NSMutableString alloc] initWithString:@""];
+        self.valueChanged = nil;
+        self.valueChanging = nil;
+        self.valueTouching = nil;
     }
     
     return self;
@@ -38,17 +41,35 @@
 {
     if(self.value == self.valuePrevious)
     {
-        [self valueTouching];
+        if(self.valueTouching != nil)
+            [self valueTouching];
     }
     else
     {
-        [self valueChanging];
+        if(self.valueChanging != nil)
+            [self valueChanging];
         
         self.valuePrevious = self.value;
         self.value = value;
         
-        [self valueChanged];
+        if(self.valueChanged != nil)
+            [self valueChanged];
     }
+}
+
+-(void)valueChangedHandler:(Parameter *)param
+{
+    [self.shareSettings performSelector:@selector(valueChanged:) withObject:param];
+}
+
+-(void)valueChangingHandler:(Parameter *)param
+{
+    [self.shareSettings performSelector:@selector(valueChanging:) withObject:param];
+}
+
+-(void)valueTouchingHandler:(Parameter *)param
+{
+    [self.shareSettings performSelector:@selector(valueTouching:) withObject:param];
 }
 
 @end

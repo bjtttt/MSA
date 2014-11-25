@@ -49,7 +49,7 @@
         bp.yesLabel = [[NSMutableString alloc] initWithString:@"Continous"];
         bp.noLabel = [[NSMutableString alloc] initWithString:@"Single"];
         bp.label = [[NSMutableString alloc] initWithString:@"Sweep/Measure"];
-        bp.valueChanged = @selector(shareSettings.valueChanged:);
+        bp.valueChanged = @selector(valueChangedHandler:);
         [self.mbarParamDict setValue:bp forKey:(NSString *)bp.key];
     }
     

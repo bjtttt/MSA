@@ -16,9 +16,9 @@
 @property (nonatomic) NSMutableString *value;
 @property (nonatomic) NSMutableString *valuePrevious;
 
-@property (nonatomic) SEL valueChanged;
-@property (nonatomic) SEL valueChanging;
-@property (nonatomic) SEL valueTouching;
+@property (nonatomic,assign) SEL valueChanged;
+@property (nonatomic,assign) SEL valueChanging;
+@property (nonatomic,assign) SEL valueTouching;
 
 @end
 

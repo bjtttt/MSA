@@ -25,6 +25,9 @@
         self.valuePrevious = 0.0;
         self.value = 0.0;
         self.unit = [[NSMutableString alloc] initWithString:@""];
+        self.valueChanged = nil;
+        self.valueChanging = nil;
+        self.valueTouching = nil;
     }
     
     return self;
@@ -34,16 +37,19 @@
 {
     if(self.value == self.valuePrevious)
     {
-        [self valueChanging];
+        if(self.valueTouching != nil)
+            [self valueTouching];
     }
     else
     {
-        [self valueChanging];
-    
+        if(self.valueChanging != nil)
+            [self valueChanging];
+        
         self.valuePrevious = self.value;
         self.value = value;
-    
-        [self valueChanged];
+        
+        if(self.valueChanged != nil)
+            [self valueChanged];
     }
 }
 
