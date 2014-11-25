@@ -489,5 +489,20 @@
     self.totalBarSmallWidth = mbd.totalSmallWidth;
 }
 
+-(void)valueTouching:(id)parameter
+{
+    
+}
+
+-(void)valueChanging:(id)parameter
+{
+    
+}
+
+-(void)valueChanged:(id)parameter
+{
+    
+}
+
 @end
 

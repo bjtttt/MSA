@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "OnOffParameter.h"
-//#import "Parameter.h"
 
 @interface OnOffParameter()
 
@@ -21,6 +20,10 @@
     if(self = [super init])
     {
         self.valueType = VAL_BOOL_ONOFF;
+        self.yesLabel = [[NSMutableString alloc] initWithString:@"On"];
+        self.yesLabelShort = [[NSMutableString alloc] initWithString:@"On"];
+        self.noLabel = [[NSMutableString alloc] initWithString:@"Off"];
+        self.noLabelShort = [[NSMutableString alloc] initWithString:@"Off"];
     }
     
     return self;

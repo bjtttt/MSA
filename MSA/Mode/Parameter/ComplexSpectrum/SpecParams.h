@@ -1,5 +1,5 @@
 //
-//  WaveParameterCollection.h
+//  SpecParameterCollection.h
 //  MSA
 //
 //  Created by guozhitao on 10/4/14.
@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class ShareSettings;
+@class SpecMeasBarParams;
 
-@interface WaveParameterCollection : NSObject
+@interface SpecParams : NSObject
 
-+(id)parameterCollection;
+@property (nonatomic) NSMutableDictionary *specParamDict;
+@property (nonatomic) SpecMeasBarParams *specMeasBarParams;
 
 @property (nonatomic) ShareSettings *shareSettings;
 

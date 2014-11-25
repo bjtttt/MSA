@@ -11,10 +11,10 @@
 		9A006C2C19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A006C2B19DC37BF0009EA82 /* SoftMenuNumericTableViewCell.m */; };
 		9A006C3119DC3A220009EA82 /* SoftMenuBooleanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A006C2E19DC3A220009EA82 /* SoftMenuBooleanTableViewCell.m */; };
 		9A006C3219DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A006C3019DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m */; };
-		9A13708A1A0F51D000F57FE3 /* SpecParameterCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1370841A0F51D000F57FE3 /* SpecParameterCollection.m */; };
-		9A13708B1A0F51D000F57FE3 /* WaveParameterCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1370871A0F51D000F57FE3 /* WaveParameterCollection.m */; };
-		9A13708C1A0F51D000F57FE3 /* ModeParameterCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1370891A0F51D000F57FE3 /* ModeParameterCollection.m */; };
-		9A1370901A0F7B6600F57FE3 /* MeasureBarParameterCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A13708F1A0F7B6600F57FE3 /* MeasureBarParameterCollection.m */; };
+		9A13708A1A0F51D000F57FE3 /* SpecParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1370841A0F51D000F57FE3 /* SpecParams.m */; };
+		9A13708B1A0F51D000F57FE3 /* WaveParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1370871A0F51D000F57FE3 /* WaveParams.m */; };
+		9A13708C1A0F51D000F57FE3 /* ModeParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A1370891A0F51D000F57FE3 /* ModeParams.m */; };
+		9A1370901A0F7B6600F57FE3 /* MeasBarParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A13708F1A0F7B6600F57FE3 /* MeasBarParams.m */; };
 		9A162D661A00E58C005319EF /* MainContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A162D651A00E58C005319EF /* MainContainerView.m */; };
 		9A194D201A08DA2D0001BEAD /* Bar0OneLineYellowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A194D1F1A08DA2D0001BEAD /* Bar0OneLineYellowTableViewCell.m */; };
 		9A19791019D270EE008E87E1 /* ReturnRoot.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A19790F19D270EE008E87E1 /* ReturnRoot.png */; };
@@ -57,6 +57,7 @@
 		9A659BDF19B6BC2000C30CE2 /* ShowMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BDE19B6BC2000C30CE2 /* ShowMenu.png */; };
 		9A659BEB19B6DE9A00C30CE2 /* SystemContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A659BEA19B6DE9A00C30CE2 /* SystemContainerViewController.m */; };
 		9A659BED19B7008500C30CE2 /* System.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A659BEC19B7008500C30CE2 /* System.png */; };
+		9A66431D1A245A4A003B0303 /* SpecMeasBarParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A66431C1A245A4A003B0303 /* SpecMeasBarParams.m */; };
 		9A6A209E19DF78990011B98A /* Bar0SingleContinousTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A209D19DF78990011B98A /* Bar0SingleContinousTableViewCell.m */; };
 		9A6A20A119DF79170011B98A /* Bar0OneLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A20A019DF79170011B98A /* Bar0OneLineTableViewCell.m */; };
 		9A6A20A419DFE94E0011B98A /* ParameterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6A20A319DFE94E0011B98A /* ParameterManager.m */; };
@@ -160,14 +161,14 @@
 		9A006C2E19DC3A220009EA82 /* SoftMenuBooleanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuBooleanTableViewCell.m; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuBooleanTableViewCell.m; sourceTree = "<group>"; };
 		9A006C2F19DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoftMenuNumericBooleanTableViewCell.h; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuNumericBooleanTableViewCell.h; sourceTree = "<group>"; };
 		9A006C3019DC3A220009EA82 /* SoftMenuNumericBooleanTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoftMenuNumericBooleanTableViewCell.m; path = ViewControllers/Menu/Soft/CellStyle/SoftMenuNumericBooleanTableViewCell.m; sourceTree = "<group>"; };
-		9A1370831A0F51D000F57FE3 /* SpecParameterCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecParameterCollection.h; sourceTree = "<group>"; };
-		9A1370841A0F51D000F57FE3 /* SpecParameterCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecParameterCollection.m; sourceTree = "<group>"; };
-		9A1370861A0F51D000F57FE3 /* WaveParameterCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveParameterCollection.h; sourceTree = "<group>"; };
-		9A1370871A0F51D000F57FE3 /* WaveParameterCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveParameterCollection.m; sourceTree = "<group>"; };
-		9A1370881A0F51D000F57FE3 /* ModeParameterCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeParameterCollection.h; sourceTree = "<group>"; };
-		9A1370891A0F51D000F57FE3 /* ModeParameterCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeParameterCollection.m; sourceTree = "<group>"; };
-		9A13708E1A0F7B6600F57FE3 /* MeasureBarParameterCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBarParameterCollection.h; sourceTree = "<group>"; };
-		9A13708F1A0F7B6600F57FE3 /* MeasureBarParameterCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureBarParameterCollection.m; sourceTree = "<group>"; };
+		9A1370831A0F51D000F57FE3 /* SpecParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecParams.h; sourceTree = "<group>"; };
+		9A1370841A0F51D000F57FE3 /* SpecParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecParams.m; sourceTree = "<group>"; };
+		9A1370861A0F51D000F57FE3 /* WaveParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveParams.h; sourceTree = "<group>"; };
+		9A1370871A0F51D000F57FE3 /* WaveParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveParams.m; sourceTree = "<group>"; };
+		9A1370881A0F51D000F57FE3 /* ModeParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeParams.h; sourceTree = "<group>"; };
+		9A1370891A0F51D000F57FE3 /* ModeParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeParams.m; sourceTree = "<group>"; };
+		9A13708E1A0F7B6600F57FE3 /* MeasBarParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasBarParams.h; sourceTree = "<group>"; };
+		9A13708F1A0F7B6600F57FE3 /* MeasBarParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasBarParams.m; sourceTree = "<group>"; };
 		9A162D651A00E58C005319EF /* MainContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainContainerView.m; sourceTree = "<group>"; };
 		9A162D671A00E5A1005319EF /* MainContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainContainerView.h; sourceTree = "<group>"; };
 		9A194D1E1A08DA2D0001BEAD /* Bar0OneLineYellowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bar0OneLineYellowTableViewCell.h; path = ViewControllers/Bar/CellStyle/Bar0OneLineYellowTableViewCell.h; sourceTree = "<group>"; };
@@ -242,6 +243,8 @@
 		9A659BE919B6DE9A00C30CE2 /* SystemContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemContainerViewController.h; path = ViewControllers/SystemContainerViewController.h; sourceTree = "<group>"; };
 		9A659BEA19B6DE9A00C30CE2 /* SystemContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemContainerViewController.m; path = ViewControllers/SystemContainerViewController.m; sourceTree = "<group>"; };
 		9A659BEC19B7008500C30CE2 /* System.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = System.png; path = Images/32/System.png; sourceTree = "<group>"; };
+		9A66431B1A245A4A003B0303 /* SpecMeasBarParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecMeasBarParams.h; sourceTree = "<group>"; };
+		9A66431C1A245A4A003B0303 /* SpecMeasBarParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecMeasBarParams.m; sourceTree = "<group>"; };
 		9A6A209C19DF78990011B98A /* Bar0SingleContinousTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bar0SingleContinousTableViewCell.h; path = ViewControllers/Bar/CellStyle/Bar0SingleContinousTableViewCell.h; sourceTree = "<group>"; };
 		9A6A209D19DF78990011B98A /* Bar0SingleContinousTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bar0SingleContinousTableViewCell.m; path = ViewControllers/Bar/CellStyle/Bar0SingleContinousTableViewCell.m; sourceTree = "<group>"; };
 		9A6A209F19DF79170011B98A /* Bar0OneLineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bar0OneLineTableViewCell.h; path = ViewControllers/Bar/CellStyle/Bar0OneLineTableViewCell.h; sourceTree = "<group>"; };
@@ -432,8 +435,8 @@
 				9A13708D1A0F7B6600F57FE3 /* MeasureBar */,
 				9A1370821A0F51D000F57FE3 /* ComplexSpectrum */,
 				9A1370851A0F51D000F57FE3 /* IQWaveform */,
-				9A1370881A0F51D000F57FE3 /* ModeParameterCollection.h */,
-				9A1370891A0F51D000F57FE3 /* ModeParameterCollection.m */,
+				9A1370881A0F51D000F57FE3 /* ModeParams.h */,
+				9A1370891A0F51D000F57FE3 /* ModeParams.m */,
 			);
 			name = Parameter;
 			path = Mode/Parameter;
@@ -442,8 +445,10 @@
 		9A1370821A0F51D000F57FE3 /* ComplexSpectrum */ = {
 			isa = PBXGroup;
 			children = (
-				9A1370831A0F51D000F57FE3 /* SpecParameterCollection.h */,
-				9A1370841A0F51D000F57FE3 /* SpecParameterCollection.m */,
+				9A66431B1A245A4A003B0303 /* SpecMeasBarParams.h */,
+				9A66431C1A245A4A003B0303 /* SpecMeasBarParams.m */,
+				9A1370831A0F51D000F57FE3 /* SpecParams.h */,
+				9A1370841A0F51D000F57FE3 /* SpecParams.m */,
 			);
 			path = ComplexSpectrum;
 			sourceTree = "<group>";
@@ -451,8 +456,8 @@
 		9A1370851A0F51D000F57FE3 /* IQWaveform */ = {
 			isa = PBXGroup;
 			children = (
-				9A1370861A0F51D000F57FE3 /* WaveParameterCollection.h */,
-				9A1370871A0F51D000F57FE3 /* WaveParameterCollection.m */,
+				9A1370861A0F51D000F57FE3 /* WaveParams.h */,
+				9A1370871A0F51D000F57FE3 /* WaveParams.m */,
 			);
 			path = IQWaveform;
 			sourceTree = "<group>";
@@ -460,8 +465,8 @@
 		9A13708D1A0F7B6600F57FE3 /* MeasureBar */ = {
 			isa = PBXGroup;
 			children = (
-				9A13708E1A0F7B6600F57FE3 /* MeasureBarParameterCollection.h */,
-				9A13708F1A0F7B6600F57FE3 /* MeasureBarParameterCollection.m */,
+				9A13708E1A0F7B6600F57FE3 /* MeasBarParams.h */,
+				9A13708F1A0F7B6600F57FE3 /* MeasBarParams.m */,
 			);
 			path = MeasureBar;
 			sourceTree = "<group>";
@@ -1292,8 +1297,8 @@
 				9ACB212619D44A4E0022EB5F /* MeasureSelect2ndTableViewController.m in Sources */,
 				9A1C92A019CED75300074EA6 /* PresetMenuContainerViewController.m in Sources */,
 				9A9E995F1A02762300E6FBBC /* SoftMenuMidLabelTableViewCell.m in Sources */,
-				9A13708A1A0F51D000F57FE3 /* SpecParameterCollection.m in Sources */,
-				9A13708C1A0F51D000F57FE3 /* ModeParameterCollection.m in Sources */,
+				9A13708A1A0F51D000F57FE3 /* SpecParams.m in Sources */,
+				9A13708C1A0F51D000F57FE3 /* ModeParams.m in Sources */,
 				9A52DA001A23270800B683A9 /* AmplitudeParameter.m in Sources */,
 				9A9C671419AD6C81007D3248 /* MSA.xcdatamodeld in Sources */,
 				9A1C929B19CED2B400074EA6 /* SoftMenuContainerViewController.m in Sources */,
@@ -1344,7 +1349,7 @@
 				9A52DA081A23270800B683A9 /* StringParameter.m in Sources */,
 				9A345F4E19D00CA500507A5A /* PresetMenuWhiteGreenTableViewCell.m in Sources */,
 				9AE7CCF919D5A8EA005EAF1C /* Bar6TableViewController.m in Sources */,
-				9A13708B1A0F51D000F57FE3 /* WaveParameterCollection.m in Sources */,
+				9A13708B1A0F51D000F57FE3 /* WaveParams.m in Sources */,
 				9ACCD83019DE9F9600A6ACD5 /* GPUImageOutput.m in Sources */,
 				9A52DA0E1A232B9D00B683A9 /* DoubleParameter.m in Sources */,
 				9AE7CCF619D5A8D1005EAF1C /* Bar5TableViewController.m in Sources */,
@@ -1360,7 +1365,7 @@
 				9A4F03AB1A09DB0500B19DBB /* UISoftKey.m in Sources */,
 				9ACCD83319DEA01700A6ACD5 /* GPUImageContext.m in Sources */,
 				9A726F5219C188C200CDF55D /* MsgDetailTableViewController.m in Sources */,
-				9A1370901A0F7B6600F57FE3 /* MeasureBarParameterCollection.m in Sources */,
+				9A1370901A0F7B6600F57FE3 /* MeasBarParams.m in Sources */,
 				9AAE0EBA19B466EF004D9146 /* MsgContainerViewController.m in Sources */,
 				9A726F6819C19FEE00CDF55D /* SystemSplitViewController.m in Sources */,
 				9AA588221A16DAE3004ACD7B /* Bar7TableViewController.m in Sources */,
@@ -1383,6 +1388,7 @@
 				9A4F03AD1A09E1C300B19DBB /* UISoftKeyEnum.m in Sources */,
 				9A659BEB19B6DE9A00C30CE2 /* SystemContainerViewController.m in Sources */,
 				9A79537519CD35BE009984A6 /* MeasureContainerViewController.m in Sources */,
+				9A66431D1A245A4A003B0303 /* SpecMeasBarParams.m in Sources */,
 				9ACCD84219DEA0D300A6ACD5 /* GPUImageMovieWriter.m in Sources */,
 				9ACCD82D19DE9F7900A6ACD5 /* GPUImageFilterGroup.m in Sources */,
 				9A79537619CD35BE009984A6 /* MeasureSelectNavigationViewController.m in Sources */,

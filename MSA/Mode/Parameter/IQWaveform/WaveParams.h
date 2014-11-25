@@ -1,5 +1,5 @@
 //
-//  SpecParameterCollection.h
+//  WaveParameterCollection.h
 //  MSA
 //
 //  Created by guozhitao on 10/4/14.
@@ -10,9 +10,7 @@
 
 @class ShareSettings;
 
-@interface SpecParameterCollection : NSObject
-
-+(id)parameterCollection;
+@interface WaveParams : NSObject
 
 @property (nonatomic) ShareSettings *shareSettings;
 

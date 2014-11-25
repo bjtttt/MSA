@@ -126,7 +126,7 @@ typedef NS_ENUM(int, ValueType) {
 +(id)sharedSettings;
 
 -(void)initMeasureView;
--(void)initMeasureBar;
+//-(void)initMeasureBar;
 -(void)initSoftMenuSystem;
 -(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum;
 -(UIImage *)blurryImage:(UIImage *)image;
@@ -134,6 +134,10 @@ typedef NS_ENUM(int, ValueType) {
 -(void)switchMeasure:(NSString *)curMeas;
 
 -(CGFloat) measureBarPopupMenuPosition:(NSInteger)index forWidth:(CGFloat)width;
+
+-(void)valueTouching:(id)parameter;
+-(void)valueChanging:(id)parameter;
+-(void)valueChanged:(id)parameter;
 
 @end
 

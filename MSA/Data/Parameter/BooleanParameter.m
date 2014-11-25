@@ -23,6 +23,12 @@
     if(self = [super init])
     {
         self.valueType = VAL_BOOL;
+        self.valuePrevious = NO;
+        self.value = NO;
+        self.yesLabel = [[NSMutableString alloc] initWithString:@""];
+        self.yesLabelShort = [[NSMutableString alloc] initWithString:@""];
+        self.noLabel = [[NSMutableString alloc] initWithString:@""];
+        self.noLabelShort = [[NSMutableString alloc] initWithString:@""];
     }
     
     return self;

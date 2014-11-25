@@ -22,6 +22,10 @@
     if(self = [super init])
     {
         self.valueType = VAL_BOOL_AUTOMAN;
+        self.yesLabel = [[NSMutableString alloc] initWithString:@"Auto"];
+        self.yesLabelShort = [[NSMutableString alloc] initWithString:@"Auto"];
+        self.noLabel = [[NSMutableString alloc] initWithString:@"Man"];
+        self.noLabelShort = [[NSMutableString alloc] initWithString:@"Man"];
     }
     
     return self;

@@ -100,7 +100,7 @@
     self.shareSettings.curMeasure = [[NSMutableString alloc] initWithString:@""];
     
     [self.shareSettings initMeasureView];
-    [self.shareSettings initMeasureBar];
+    //[self.shareSettings initMeasureBar];
     [self.shareSettings initSoftMenuSystem];
     
     // Must be initialized after initSoftMenuSystem because we can get the data name string

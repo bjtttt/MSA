@@ -16,7 +16,7 @@
 @property (nonatomic) NSString *display;
 @property (nonatomic) NSString *displayShort;
 
-- (id) initWithEnumMemberInfo:(int)value withDisplay:(NSString *)string withDisplayShort:(NSString *)shortString;
+- (id) initWithEnumMemberInfo:(int)value display:(NSString *)display displayShort:(NSString *)displayShort;
 
 @end
 

@@ -14,7 +14,12 @@
 @interface Parameter : NSObject
 
 @property (nonatomic) ValueType valueType;
+
 @property (nonatomic) NSMutableString *key;
+@property (nonatomic) bool isStandardKey;
+
+@property (nonatomic) NSMutableString *label;
+@property (nonatomic) NSMutableString *labelShort;
 
 @end
 
