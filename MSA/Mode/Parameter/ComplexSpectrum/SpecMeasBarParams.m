@@ -60,7 +60,14 @@
         ip.key = [[NSMutableString alloc] initWithString:@"Restart"];
         [self.mbarParamDict setValue:ip forKey:(NSString *)ip.key];
     }
-    
+
+    // Pause Resume
+    if([self.mbarParamDict objectForKey:@"Pause/Resume"] == nil)
+    {
+        ImmediateParameter *ip = [[ImmediateParameter alloc] init];
+        ip.key = [[NSMutableString alloc] initWithString:@"Pause/Resume"];
+        [self.mbarParamDict setValue:ip forKey:(NSString *)ip.key];
+    }
 }
 
 -(void)addBar1Parameters

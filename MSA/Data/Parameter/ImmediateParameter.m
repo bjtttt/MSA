@@ -22,10 +22,15 @@
     if(self = [super init])
     {
         self.valueType = VAL_IMM;
-        self.valueTouching = nil;
+        self.immedaiteAction = @selector(immediateActionHandler:);
     }
     
     return self;
+}
+
+-(void)immediateActionHandler:(Parameter *)param
+{
+    [self.shareSettings performSelector:@selector(valueTouching:) withObject:param];
 }
 
 @end

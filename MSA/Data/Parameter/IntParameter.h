@@ -22,6 +22,10 @@
 
 @property (nonatomic, readonly) NSString *valueString;
 
+-(void)valueChangedHandler:(Parameter *)param;
+-(void)valueChangingHandler:(Parameter *)param;
+-(void)valueTouchingHandler:(Parameter *)param;
+
 @end
 
 #endif

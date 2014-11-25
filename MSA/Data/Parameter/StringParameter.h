@@ -20,6 +20,10 @@
 @property (nonatomic,assign) SEL valueChanging;
 @property (nonatomic,assign) SEL valueTouching;
 
+-(void)valueChangedHandler:(Parameter *)param;
+-(void)valueChangingHandler:(Parameter *)param;
+-(void)valueTouchingHandler:(Parameter *)param;
+
 @end
 
 #endif

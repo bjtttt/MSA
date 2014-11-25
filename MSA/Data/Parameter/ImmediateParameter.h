@@ -15,6 +15,8 @@
 
 @property (nonatomic,assign) SEL immedaiteAction;
 
+-(void)immediateActionHandler:(Parameter *)param;
+
 @end
 
 #endif

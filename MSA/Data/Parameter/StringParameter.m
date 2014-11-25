@@ -50,4 +50,19 @@
     }
 }
 
+-(void)valueChangedHandler:(Parameter *)param
+{
+    [self.shareSettings performSelector:@selector(valueChanged:) withObject:param];
+}
+
+-(void)valueChangingHandler:(Parameter *)param
+{
+    [self.shareSettings performSelector:@selector(valueChanging:) withObject:param];
+}
+
+-(void)valueTouchingHandler:(Parameter *)param
+{
+    [self.shareSettings performSelector:@selector(valueTouching:) withObject:param];
+}
+
 @end

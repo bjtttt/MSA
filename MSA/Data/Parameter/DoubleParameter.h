@@ -25,6 +25,10 @@
 @property (nonatomic, readonly) NSString *valueString;
 @property (nonatomic, readonly) NSString *valueStringWithUnit;
 
+-(void)valueChangedHandler:(Parameter *)param;
+-(void)valueChangingHandler:(Parameter *)param;
+-(void)valueTouchingHandler:(Parameter *)param;
+
 @end
 
 #endif
