@@ -22,6 +22,7 @@
     if(self = [super init])
     {
         self.valueType = VAL_TIME;
+        self.unit = [[NSMutableString alloc] initWithString:@"s"];
     }
     
     return self;

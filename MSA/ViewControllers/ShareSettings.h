@@ -11,21 +11,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-//#import "MeasureBarContainerDefinition.h"
 
-//typedef enum msaLayout {
-//    MSA_DISP,
-//    MSA_MENU,
-//    MSA_MEAS,
-//} MSALayout;
-
-typedef enum msgType {
+typedef NS_ENUM(int, MSGType) {
     MSG_CURRENT_CONDITIONS = 0,
     MSG_HISTORY,
     MSG_SETTINGS
-}MSGType;
+};
 
-typedef enum systType {
+typedef NS_ENUM(int, SYSTType) {
     SYST_SYSTEM = 0,
     SYST_IO_CONFIG,
     SYST_USER_INTERFACE,
@@ -37,16 +30,16 @@ typedef enum systType {
     SYST_DIAG,
     SYST_SERVICE,
     SYST_LANG
-}SYSTType;
+};
 
-typedef enum instrumentStatus {
+typedef NS_ENUM(int, InstrumentStatus) {
     INST_DISC = 0,
     INST_INCONN,
     INST_CONN,
     INST_INDISC
-}InstrumentStatus;
+};
 
-typedef enum valueType {
+typedef NS_ENUM(int, ValueType) {
     VAL_NONE = -1,
     VAL_INT = 0,
     VAL_DOUBLE,
@@ -60,13 +53,7 @@ typedef enum valueType {
     VAL_RELAMP,
     VAL_TIME,
     VAL_IMM = 10
-}ValueType;
-
-typedef enum unitType {
-    UNIT_NONE = 0,
-    UNIT_FREQ,
-    UNIT_AMP
-}UnitType;
+};
 
 #define LIGHT_CORNER_RADIUS 3.0f
 #define NORMAL_CORNER_RADIUS 5.0f

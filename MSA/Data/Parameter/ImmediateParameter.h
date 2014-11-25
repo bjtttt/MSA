@@ -13,6 +13,8 @@
 
 @interface ImmediateParameter : Parameter
 
+@property (nonatomic) SEL immedateAction;
+
 @end
 
 #endif

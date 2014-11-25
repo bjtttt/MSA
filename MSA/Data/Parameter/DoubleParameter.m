@@ -24,6 +24,7 @@
         self.valueType = VAL_DOUBLE;
         self.valuePrevious = 0.0;
         self.value = 0.0;
+        self.unit = [[NSMutableString alloc] initWithString:@""];
     }
     
     return self;
@@ -44,6 +45,19 @@
     
         [self valueChanged];
     }
+}
+
+-(NSString *)valueString
+{
+    return [NSString stringWithFormat:@"%f", self.value];
+}
+
+-(NSString *)valueStringWithUnit
+{
+    NSString *str = [NSString stringWithFormat:@"%f", self.value];
+    if(self.unit == nil || [self.unit length] < 1)
+        return str;
+    return [str stringByAppendingString:(NSString *)self.unit];
 }
 
 @end

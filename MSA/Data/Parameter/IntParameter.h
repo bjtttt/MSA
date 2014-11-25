@@ -20,6 +20,8 @@
 @property (nonatomic) SEL valueChanging;
 @property (nonatomic) SEL valueTouching;
 
+@property (nonatomic, readonly) NSString *valueString;
+
 @end
 
 #endif

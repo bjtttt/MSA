@@ -13,16 +13,16 @@
 
 @interface EnumParameter : Parameter
 
-@property (nonatomic) id valuePrevious;
-@property (nonatomic) id value;
+@property (nonatomic) int valuePrevious;
+@property (nonatomic) int value;
 
-@property (nonatomic) NSMutableDictionary *memberDict;
+@property (nonatomic) NSMutableArray *enumDefinition;
 
 @property (nonatomic) SEL valueChanged;
 @property (nonatomic) SEL valueChanging;
 @property (nonatomic) SEL valueTouching;
 
-//-(void)initWithEnum:(type)
+- (id) initWithEnumDefinition:(NSMutableArray *)enumDefinition;
 
 @end
 

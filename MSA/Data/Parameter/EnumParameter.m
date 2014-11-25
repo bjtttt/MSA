@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "EnumParameter.h"
 #import "ShareSettings.h"
-//#import "Parameter.h"
+#import "EnumMemberInfo.h"
 
 @interface EnumParameter()
 
@@ -19,19 +19,26 @@
 
 - (id) init
 {
-    NSAssert(YES == NO, @"EnumParameter can only use initWithEnum");
+    NSAssert(YES == NO, @"EnumParameter can only use initWithEnumDefinition");
     
     if(self = [super init])
     {
-        //self.valueType = VAL_ENUM;
-        //self.value = nil;
-        //self.valuePrevious = nil;
     }
     
     return self;
 }
 
--(void)setValue:(id)value
+- (id) initWithEnumDefinition:(NSMutableArray *)enumDefinition
+{
+    if(self = [super init])
+    {
+        self.enumDefinition = enumDefinition;
+    }
+    
+    return self;
+}
+
+-(void)setValue:(int)value
 {
     if(self.value == self.valuePrevious)
     {
@@ -39,6 +46,18 @@
     }
     else
     {
+        bool found = NO;
+        for(EnumMemberInfo *emi in self.enumDefinition)
+        {
+            if(emi.value == value)
+            {
+                found = YES;
+                break;
+            }
+        }
+        if(found == NO)
+            NSAssert(YES == NO, @"Cannot find value %d in EnumParameter %@", value, self.key);
+        
         [self valueChanging];
         
         self.valuePrevious = self.value;

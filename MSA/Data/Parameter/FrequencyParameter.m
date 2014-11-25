@@ -22,6 +22,7 @@
     if(self = [super init])
     {
         self.valueType = VAL_FREQ;
+        self.unit = [[NSMutableString alloc] initWithString:@"Hz"];
     }
     
     return self;

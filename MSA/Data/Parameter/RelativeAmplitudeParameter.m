@@ -22,6 +22,7 @@
     if(self = [super init])
     {
         self.valueType = VAL_RELAMP;
+        self.unit = [[NSMutableString alloc] initWithString:@"dB"];
     }
     
     return self;

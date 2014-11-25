@@ -16,9 +16,14 @@
 @property (nonatomic) double valuePrevious;
 @property (nonatomic) double value;
 
+@property (nonatomic) NSMutableString *unit;
+
 @property (nonatomic) SEL valueChanged;
 @property (nonatomic) SEL valueChanging;
 @property (nonatomic) SEL valueTouching;
+
+@property (nonatomic, readonly) NSString *valueString;
+@property (nonatomic, readonly) NSString *valueStringWithUnit;
 
 @end
 

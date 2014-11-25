@@ -22,6 +22,8 @@
     if(self = [super init])
     {
         self.valueType = VAL_INT;
+        self.valuePrevious = 0;
+        self.value = 0;
     }
     
     return self;
@@ -42,6 +44,11 @@
         
         [self valueChanged];
     }
+}
+
+-(NSString *)valueString
+{
+    return [NSString stringWithFormat:@"%ld", self.value];
 }
 
 @end
