@@ -48,6 +48,8 @@
         self.valuePrevious = self.value;
         self.value = value;
         
+        [[NSNotificationCenter defaultCenter] postNotificationName:(NSString *)self.key object:self];
+
         if(self.valueChanged != nil)
             [self valueChanged];
     }
