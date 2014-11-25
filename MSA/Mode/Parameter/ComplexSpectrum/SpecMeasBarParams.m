@@ -61,7 +61,7 @@
         [self.mbarParamDict setValue:ip forKey:(NSString *)ip.key];
     }
 
-    // Pause Resume
+    // Pause/Resume
     if([self.mbarParamDict objectForKey:@"Pause/Resume"] == nil)
     {
         ImmediateParameter *ip = [[ImmediateParameter alloc] init];
@@ -72,7 +72,23 @@
 
 -(void)addBar1Parameters
 {
-    
+    // Select Inport
+    if([self.mbarParamDict objectForKey:@"Input Port"] == nil)
+    {
+        EnumMemberInfo *emiRF = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"RF" displayShort:@"RF"];
+        EnumMemberInfo *emiEM = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"External Mixer" displayShort:@"EXT MIXER"];
+        EnumMemberInfo *emiIQ = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 display:@"I/Q" displayShort:@"I/Q"];
+        NSMutableArray *emiArray = [[NSMutableArray alloc] init];
+        [emiArray addObject:emiRF];
+        [emiArray addObject:emiEM];
+        [emiArray addObject:emiIQ];
+        EnumParameter *ep = [[EnumParameter alloc] initWithEnumDefinition:emiArray];
+        ep.key = [[NSMutableString alloc] initWithString:@"Input Port"];
+        ep.label = [[NSMutableString alloc] initWithString:@"Select Input"];
+        ep.labelShort = [[NSMutableString alloc] initWithString:@"Input"];
+        ep.valueChanged = @selector(valueChangedHandler:);
+        [self.mbarParamDict setValue:ep forKey:(NSString *)ep.key];
+    }
 }
 
 -(void)addBar2Parameters
