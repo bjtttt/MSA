@@ -24,6 +24,10 @@
 
 @property (nonatomic) UISoftKeyEnum *softkeyEnum;
 
+@property (nonatomic) Parameter *connectParam;
+@property (nonatomic) int *connectEnumValue;
+
+
 @end
 
 #endif

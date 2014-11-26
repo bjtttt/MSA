@@ -39,6 +39,8 @@
 
 @property (nonatomic) UISoftPanel *softPanel;
 
+@property (nonatomic) Parameter *connectParam;
+
 -(void)initSoftKeyEnum;
 -(UISoftKeyEnumItem *)addSoftkeyEnumItem:(int)value label:(NSString *)label labelShort:(NSString *)labelShort;
 -(UISoftKeyEnumItem *)findEnumItemByValue:(int)value;

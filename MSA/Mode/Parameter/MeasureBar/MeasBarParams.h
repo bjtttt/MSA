@@ -28,5 +28,9 @@
 -(void)addBar5Parameters;
 -(void)addBar6Parameters;
 -(void)addBar7Parameters;
+-(void)addBar8Parameters;
+-(void)addBar9Parameters;
+
+-(void)setBarWidth;
 
 @end

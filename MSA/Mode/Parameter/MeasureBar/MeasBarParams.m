@@ -41,12 +41,12 @@
 
 -(void)registerParameterEvent
 {
-    
+    NSAssert(YES==NO, @"MeasBarParam::registerParameterEvent should be overrrided in each measurement.");
 }
 
 -(void)unregisterParameterEvent
 {
-    
+    NSAssert(YES==NO, @"MeasBarParam::unregisterParameterEvent should be overrrided in each measurement.");
 }
 
 -(void)parseParameter
@@ -63,41 +63,57 @@
 
 -(void)addBar0Parameters
 {
+    NSAssert(YES==NO, @"MeasBarParam::addBar0Parameters should be overrrided in each measurement.");
 }
 
 -(void)addBar1Parameters
 {
-    
+    NSAssert(YES==NO, @"MeasBarParam::addBar1Parameters should be overrrided in each measurement.");
 }
 
 -(void)addBar2Parameters
 {
-    
+    NSAssert(YES==NO, @"MeasBarParam::addBar2Parameters should be overrrided in each measurement.");
 }
 
 -(void)addBar3Parameters
 {
-    
+    NSAssert(YES==NO, @"MeasBarParam::addBar3Parameters should be overrrided in each measurement.");
 }
 
 -(void)addBar4Parameters
 {
-    
+    NSAssert(YES==NO, @"MeasBarParam::addBar4Parameters should be overrrided in each measurement.");
 }
 
 -(void)addBar5Parameters
 {
-    
+    NSAssert(YES==NO, @"MeasBarParam::addBar5Parameters should be overrrided in each measurement.");
 }
 
 -(void)addBar6Parameters
 {
-    
+    NSAssert(YES==NO, @"MeasBarParam::addBar6Parameters should be overrrided in each measurement.");
 }
 
 -(void)addBar7Parameters
 {
-    
+    NSAssert(YES==NO, @"MeasBarParam::addBar7Parameters should be overrrided in each measurement.");
+}
+
+-(void)addBar8Parameters
+{
+    NSAssert(YES==NO, @"MeasBarParam::addBar8Parameters should be overrrided in each measurement.");
+}
+
+-(void)addBar9Parameters
+{
+    NSAssert(YES==NO, @"MeasBarParam::addBar9Parameters should be overrrided in each measurement.");
+}
+
+-(void)setBarWidth
+{
+    NSAssert(YES==NO, @"MeasBarParam::setBarWidth should be overrrided in each measurement.");
 }
 
 @end

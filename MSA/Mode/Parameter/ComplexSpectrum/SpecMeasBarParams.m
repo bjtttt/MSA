@@ -485,7 +485,7 @@
     }
 }
 
--(void)addBar7Parameters
+-(void)setBarWidth
 {
     
 }
