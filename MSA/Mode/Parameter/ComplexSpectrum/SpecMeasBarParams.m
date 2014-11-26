@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SpecMeasBarParams.h"
 #import "ShareSettings.h"
+#import "MeasureBarDetail.h"
 #import "EnumMemberInfo.h"
 #import "EnumParameter.h"
 #import "BooleanParameter.h"
@@ -460,7 +461,7 @@
     {
         FrequencyParameter *fp = [[FrequencyParameter alloc] init];
         fp.key = [[NSMutableString alloc] initWithString:@"Average Counter"];
-       fp.valueChanged = @selector(valueChangedHandler:);
+        fp.valueChanged = @selector(valueChangedHandler:);
         [self.mbarParamDict setValue:fp forKey:(NSString *)fp.key];
     }
 
@@ -488,6 +489,19 @@
 -(void)setBarWidth
 {
     
+}
+
+-(void)initMeasBarDetail
+{
+    self.mbarDetail = [[MeasureBarDetail alloc] init];
+    self.mbarDetail.useRatio = true;
+    self.mbarDetail.mbarCount = 7;
+    self.mbarDetail.mbarWidths = [@[@1.0, @1.0, @1.0, @1.0, @1.0, @1.0, @2.0] mutableCopy];
+    self.mbarDetail.mbarSmallWidths = [@[@1.0, @1.0, @1.0, @1.0, @1.0, @1.0, @2.0] mutableCopy];
+    self.mbarDetail.totalWidth = 8.0f;
+    self.mbarDetail.totalSmallWidth = 8.0f;
+    self.mbarDetail.popupMenuHeights = [@[@200.0, @200.0, @200.0, @200.0, @200.0, @200.0, @200.0] mutableCopy];
+    self.mbarDetail.popupMenuWidths = [@[@150.0, @150.0, @150.0, @150.0, @150.0, @150.0, @150.0] mutableCopy];
 }
 
 @end

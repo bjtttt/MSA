@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @class ShareSettings;
+@class MeasureBarDetail;
 
 @interface MeasBarParams : NSObject
 
 @property (nonatomic) ShareSettings *shareSettings;
 
 @property (nonatomic) NSMutableDictionary *mbarParamDict;
+
+@property (nonatomic) MeasureBarDetail *mbarDetail;
 
 -(void)registerParameterEvent;
 -(void)unregisterParameterEvent;
@@ -31,6 +34,7 @@
 -(void)addBar8Parameters;
 -(void)addBar9Parameters;
 
+-(void)initMeasBarDetail;
 -(void)setBarWidth;
 
 @end

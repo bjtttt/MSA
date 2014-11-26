@@ -110,7 +110,7 @@ typedef NS_ENUM(int, ValueType) {
 @property (strong, nonatomic) NSMutableArray *barSmallWidths;
 @property (nonatomic) float totalBarWidth;
 @property (nonatomic) float totalBarSmallWidth;
-@property (nonatomic) NSMutableArray *mbarDetails;
+//@property (nonatomic) NSMutableArray *mbarDetails;
 
 @property (weak, nonatomic) UIStoryboard *modeStoryboard;
 @property (weak, nonatomic) MeasureBarContainerViewController *barCVC;

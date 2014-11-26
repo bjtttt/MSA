@@ -19,7 +19,7 @@
 {
     if(self = [super init])
     {
-        self.measure = nil;
+        //self.measure = nil;
         self.useRatio = true;
         self.mbarCount = 0;
         //self.mbarSmallCount = 0;
@@ -27,6 +27,8 @@
         self.totalSmallWidth = 0.0f;
         self.mbarWidths = [[NSMutableArray alloc] init];
         self.mbarSmallWidths = [[NSMutableArray alloc] init];
+        self.popupMenuHeights = [[NSMutableArray alloc] init];
+        self.popupMenuWidths = [[NSMutableArray alloc] init];
     }
     
     return self;
