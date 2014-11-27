@@ -22,6 +22,7 @@
 
 @implementation ShareSettings
 
+/*
 + (id)sharedSettings
 {
     static id shareSettings = nil;
@@ -33,6 +34,7 @@
     
     return shareSettings;
 }
+*/
 
 -(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum {
     NSLog(@"Screeen UIViewController View Bounds X %f, Y %f, Width %f, Height %f", uiVC.view.bounds.origin.x, uiVC.view.bounds.origin.y, uiVC.view.bounds.size.width, uiVC.view.bounds.size.height);
@@ -348,26 +350,6 @@
         
         NSAssert(defCount == normalCount && defCount == smallCount, @"Measure bar definition %d, normal count %d, small count %d", defCount, normalCount, smallCount);
         
-        MeasureBarDetail *mbd = [[MeasureBarDetail alloc] init];
-        mbd.measure = [[NSMutableString alloc] initWithString:sKey];
-        mbd.useRatio = useRatio;
-        mbd.mbarCount = normalCount;
-        mbd.mbarWidths = [[NSMutableArray alloc] initWithArray:normalWidth];
-        float totalWidth = 0.0;
-        for (int i = 0; i < defCount ; i++)
-        {
-            totalWidth = totalWidth + [[mbd.mbarWidths objectAtIndex:i] floatValue];
-        }
-        mbd.totalWidth = totalWidth;
-        mbd.mbarSmallWidths = [[NSMutableArray alloc] initWithArray:smallWidth];
-        totalWidth = 0.0;
-        for (int i=0;i<defCount;i++)
-        {
-            totalWidth = totalWidth + [[mbd.mbarSmallWidths objectAtIndex:i] floatValue];
-        }
-        mbd.totalSmallWidth = totalWidth;
-       [self.mbarDetails addObject:mbd];
-
         for(int i = 0; i < defCount; i++)
         {
             NSArray *measBar=[definition objectAtIndex:i];

@@ -35,6 +35,5 @@
 -(void)addBar9Parameters;
 
 -(void)initMeasBarDetail;
--(void)setBarWidth;
 
 @end

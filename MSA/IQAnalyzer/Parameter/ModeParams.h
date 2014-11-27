@@ -1,5 +1,5 @@
 //
-//  ModeParameterCollection.h
+//  ModeParams.h
 //  MSA
 //
 //  Created by guozhitao on 10/4/14.
@@ -12,7 +12,7 @@
 @class WaveParams;
 @class ShareSettings;
 
-@interface ModeParameterCollection : NSObject
+@interface ModeParams : NSObject
 
 @property (nonatomic) SpecParams * specParams;
 @property (nonatomic) WaveParams * waveParams;

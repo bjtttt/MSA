@@ -16,44 +16,32 @@
 
 @implementation ParameterManager
 
-+ (id)parameterManager
-{
-    static id parManager = nil;
-    static dispatch_once_t onceToken;
-    
-    dispatch_once(&onceToken, ^{
-        parManager = [[self alloc] init];
-    });
-    
-    return parManager;
-}
-
 -(id) init {
     if ((self = [super init]))
     {
-        self.modeParCol = [[ModeParameterCollection alloc] init];
+        self.modePars = [[ModeParams alloc] init];
     }
     
     return self;
 }
 
 -(void) registerParameterChangedEvent {
-    [self.modeParCol registerParameterEvent];
+    [self.modePars registerParameterEvent];
 }
 
 -(void) unregisterParameterChangedEvent {
-    [self.modeParCol unregisterParameterEvent];
+    [self.modePars unregisterParameterEvent];
 }
 
 -(void)setShareSettings:(ShareSettings *)shareSettings
 {
     _shareSettings=shareSettings;
-    self.modeParCol.shareSettings=shareSettings;
+    self.modePars.shareSettings=shareSettings;
 }
 
 -(void)parseParameter
 {
-    [self.modeParCol parseParameter];
+    [self.modePars parseParameter];
 }
 
 @end

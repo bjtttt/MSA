@@ -73,7 +73,7 @@
     self.frameWidth = self.view.frame.size.width;
     self.frameHeight = self.view.frame.size.height;
 
-    self.shareSettings = [ShareSettings sharedSettings];
+    self.shareSettings = [[ShareSettings alloc] init];
     self.shareSettings.menuTapped=NO;
     self.shareSettings.measureTapped=NO;
     //self.shareSettings.barTapped=NO;
@@ -104,7 +104,7 @@
     [self.shareSettings initSoftMenuSystem];
     
     // Must be initialized after initSoftMenuSystem because we can get the data name string
-    self.parManager = [ParameterManager parameterManager];
+    self.parManager = [[ParameterManager alloc] init];
     self.parManager.shareSettings=self.shareSettings;
     [self.parManager parseParameter];
     [self.parManager registerParameterChangedEvent];

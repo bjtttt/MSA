@@ -113,11 +113,6 @@
     NSAssert(YES==NO, @"MeasBarParam::addBar9Parameters should be overrrided in each measurement.");
 }
 
--(void)setBarWidth
-{
-    NSAssert(YES==NO, @"MeasBarParam::setBarWidth should be overrrided in each measurement.");
-}
-
 -(void)initMeasBarDetail
 {
     NSAssert(YES==NO, @"MeasBarParam::initMeasBarDetail should be overrrided in each measurement.");

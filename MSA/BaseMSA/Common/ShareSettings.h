@@ -125,7 +125,7 @@ typedef NS_ENUM(int, ValueType) {
 @property (nonatomic) NSMutableString *prevMeasure;
 @property (nonatomic) NSMutableString *curMeasure;
 
-+(id)sharedSettings;
+//+(id)sharedSettings;
 
 -(void)initMeasureView;
 //-(void)initMeasureBar;

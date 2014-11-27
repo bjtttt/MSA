@@ -1,5 +1,5 @@
 //
-//  ModeParameterCollection.m
+//  ModeParams.m
 //  MSA
 //
 //  Created by guozhitao on 10/4/14.
@@ -11,11 +11,11 @@
 #import "SpecParams.h"
 #import "WaveParams.h"
 
-@interface ModeParameterCollection()
+@interface ModeParams()
 
 @end
 
-@implementation ModeParameterCollection
+@implementation ModeParams
 
 -(id) init {
     if ((self = [super init]))

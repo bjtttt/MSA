@@ -486,11 +486,6 @@
     }
 }
 
--(void)setBarWidth
-{
-    
-}
-
 -(void)initMeasBarDetail
 {
     self.mbarDetail = [[MeasureBarDetail alloc] init];

@@ -8,19 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@class ModeParameterCollection;
+@class ModeParams;
 @class ShareSettings;
 
 @interface ParameterManager : NSObject
 
-@property (strong, nonatomic) ModeParameterCollection *modeParCol;
-
-+ (id)parameterManager;
+@property (strong, nonatomic) ModeParams *modePars;
 
 @property (nonatomic) ShareSettings *shareSettings;
 
--(void) registerParameterChangedEvent;
--(void) unregisterParameterChangedEvent;
+-(void)registerParameterChangedEvent;
+-(void)unregisterParameterChangedEvent;
 -(void)parseParameter;
 
 @end
