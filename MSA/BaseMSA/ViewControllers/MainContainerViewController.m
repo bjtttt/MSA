@@ -8,6 +8,7 @@
 
 #import "ShareSettings.h"
 #import "ParameterManager.h"
+#import "ModeManager.h"
 #import "MainContainerViewController.h"
 #import "DisplayContainerViewController.h"
 #import "MenuContainerViewController.h"
@@ -103,11 +104,19 @@
     //[self.shareSettings initMeasureBar];
     [self.shareSettings initSoftMenuSystem];
     
+    NSAssert(self.parManager == nil, @"ParameterManager is NOT nil");
+    
     // Must be initialized after initSoftMenuSystem because we can get the data name string
     self.parManager = [[ParameterManager alloc] init];
     self.parManager.shareSettings=self.shareSettings;
     [self.parManager parseParameter];
     [self.parManager registerParameterChangedEvent];
+
+    NSAssert(self.modeManager == nil, @"ParameterManager is NOT nil");
+    self.modeManager = [[ModeManager alloc] init];
+    self.modeManager.shareSettings = self.shareSettings;
+    [self.modeManager initMode];
+    [self.modeManager initMenuSystem];
 
     UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
     self.shareSettings.modeStoryboard = modeUIS;

@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class MeasureBase;
+
 @interface ModeBase : NSObject
 
 @property (nonatomic) NSMutableString *modeName;
 @property (nonatomic) NSMutableDictionary *measureDict;
 
+@property (nonatomic) MeasureBase *curMeasure;
+
+-(void)switchMeasurement:(MeasureBase *)curMeas;
 
 @end

@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class ViewBase;
+
 @interface MeasureBase : NSObject
 
 @property (nonatomic) NSMutableString *measureName;
 @property (nonatomic) NSMutableDictionary *viewDict;
 
+@property (nonatomic) ViewBase *curView;
 
 @end

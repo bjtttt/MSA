@@ -1,5 +1,5 @@
 //
-//  ModeBase.m
+//  ModeManager.m
 //  MSA
 //
 //  Created by guozhitao on 10/4/14.
@@ -7,21 +7,30 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ModeBase.h"
+#import "ModeManager.h"
 
-@interface ModeBase()
+@interface ModeManager()
 
 @end
 
-@implementation ModeBase
+@implementation ModeManager
 
 -(id) init {
     if ((self = [super init]))
     {
-        self.measureDict = [[NSMutableDictionary alloc] init];
     }
     
     return self;
+}
+
+-(void)initMode
+{
+    
+}
+
+-(void)initMenuSystem
+{
+    
 }
 
 @end

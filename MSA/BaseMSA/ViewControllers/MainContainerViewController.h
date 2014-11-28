@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
-#import "ParameterManager.h"
 
 @class DisplayContainerViewController;
 @class MenuContainerViewController;
@@ -20,6 +19,8 @@
 @class MeasureBarContainerViewController;
 @class MainContainerView;
 @class BarPopupMenuContainerViewController;
+@class ParameterManager;
+@class ModeManager;
 
 @interface MainContainerViewController : UIViewController
 
@@ -48,6 +49,7 @@
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 @property (strong, nonatomic) ParameterManager * parManager;
+@property (strong, nonatomic) ModeManager * modeManager;
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
