@@ -159,6 +159,7 @@
 		9AEFB94C1A285DAD00E2CBFD /* ModeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB9441A285DAD00E2CBFD /* ModeManager.m */; };
 		9AEFB94D1A285DAD00E2CBFD /* ParameterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB9471A285DAD00E2CBFD /* ParameterManager.m */; };
 		9AEFB9501A286C9400E2CBFD /* Mode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB94F1A286C9400E2CBFD /* Mode.m */; };
+		9AEFB9551A286F9A00E2CBFD /* SpecMeasurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB9541A286F9A00E2CBFD /* SpecMeasurement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -440,6 +441,8 @@
 		9AEFB9471A285DAD00E2CBFD /* ParameterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParameterManager.m; sourceTree = "<group>"; };
 		9AEFB94F1A286C9400E2CBFD /* Mode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mode.m; sourceTree = "<group>"; };
 		9AEFB9511A286CA900E2CBFD /* Mode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode.h; sourceTree = "<group>"; };
+		9AEFB9541A286F9A00E2CBFD /* SpecMeasurement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecMeasurement.m; sourceTree = "<group>"; };
+		9AEFB9561A286FA700E2CBFD /* SpecMeasurement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecMeasurement.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -949,11 +952,11 @@
 		9A23C1351A2719B10069971A /* Parameter */ = {
 			isa = PBXGroup;
 			children = (
+				9A23C1411A2719B10069971A /* ModeParams.h */,
+				9A23C1421A2719B10069971A /* ModeParams.m */,
 				9A23C1361A2719B10069971A /* ComplexSpectrum */,
 				9A23C13B1A2719B10069971A /* IQWaveform */,
 				9A23C13E1A2719B10069971A /* MeasureBar */,
-				9A23C1411A2719B10069971A /* ModeParams.h */,
-				9A23C1421A2719B10069971A /* ModeParams.m */,
 			);
 			path = Parameter;
 			sourceTree = "<group>";
@@ -1202,8 +1205,26 @@
 			children = (
 				9AEFB9511A286CA900E2CBFD /* Mode.h */,
 				9AEFB94F1A286C9400E2CBFD /* Mode.m */,
+				9AEFB9521A286F1100E2CBFD /* ComplexSpectrum */,
+				9AEFB9531A286F1100E2CBFD /* IQWaveform */,
 			);
 			path = ModeMeasureView;
+			sourceTree = "<group>";
+		};
+		9AEFB9521A286F1100E2CBFD /* ComplexSpectrum */ = {
+			isa = PBXGroup;
+			children = (
+				9AEFB9561A286FA700E2CBFD /* SpecMeasurement.h */,
+				9AEFB9541A286F9A00E2CBFD /* SpecMeasurement.m */,
+			);
+			path = ComplexSpectrum;
+			sourceTree = "<group>";
+		};
+		9AEFB9531A286F1100E2CBFD /* IQWaveform */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IQWaveform;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1356,6 +1377,7 @@
 				9A23C12D1A2719AC0069971A /* GPUImagePicture.m in Sources */,
 				9A23C0C21A2719AC0069971A /* EnumParameter.m in Sources */,
 				9A23C10D1A2719AC0069971A /* SoftMenuMidLabelTableViewCell.m in Sources */,
+				9AEFB9551A286F9A00E2CBFD /* SpecMeasurement.m in Sources */,
 				9A23C0FA1A2719AC0069971A /* DisplayContainerViewController.m in Sources */,
 				9A23C0CA1A2719AC0069971A /* TimeParameter.m in Sources */,
 				9A23C0FF1A2719AC0069971A /* MeasureSelectNavigationViewController.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MeasureBase.h"
+#import "UISoftMenu.h"
 
 @interface MeasureBase()
 
@@ -18,9 +19,27 @@
 -(id) init {
     if ((self = [super init]))
     {
+        self.viewDict = [[NSMutableDictionary alloc] init];
+        self.barMenu = [[UISoftMenu alloc] init];
+        self.softMenu = [[UISoftMenu  alloc] init];
     }
     
     return self;
+}
+
+-(void)initMeasureBarMenu
+{
+    NSAssert(YES==NO, @"MeasureBase::initMeasureBarMenu should be override in each mode.");
+}
+
+-(void)initMeasureSoftMenu
+{
+    NSAssert(YES==NO, @"MeasureBase::initMeasureSoftMenu should be override in each mode.");
+}
+
+-(void)initMeasureView
+{
+    NSAssert(YES==NO, @"MeasureBase::initMeasureView should be override in each mode.");
 }
 
 @end

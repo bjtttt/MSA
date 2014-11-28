@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class UISoftMenu;
 @class ViewBase;
 
 @interface MeasureBase : NSObject
@@ -16,5 +17,12 @@
 @property (nonatomic) NSMutableDictionary *viewDict;
 
 @property (nonatomic) ViewBase *curView;
+
+@property (nonatomic) UISoftMenu *barMenu;
+@property (nonatomic) UISoftMenu *softMenu;
+
+-(void)initMeasureBarMenu;
+-(void)initMeasureSoftMenu;
+-(void)initMeasureView;
 
 @end
