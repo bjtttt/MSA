@@ -77,6 +77,7 @@ typedef NS_ENUM(int, ValueType) {
 @class MeasureBarContainerViewController;
 @class UISoftMenu;
 @class ParameterManager;
+@class ModeManager;
 
 @interface ShareSettings : NSObject
 
@@ -102,40 +103,29 @@ typedef NS_ENUM(int, ValueType) {
 @property (nonatomic) InstrumentStatus currentInstrumentStatus;
 @property (nonatomic) NSMutableString *currentInstrument;
 
+//Should beremoved
 @property (nonatomic) NSMutableArray *measureView;
-
-@property (nonatomic) bool useBarRatio;
-@property (nonatomic) int measureBarCount;
-@property (strong, nonatomic) NSMutableArray *barWidths;
-@property (strong, nonatomic) NSMutableArray *barSmallWidths;
-@property (nonatomic) float totalBarWidth;
-@property (nonatomic) float totalBarSmallWidth;
-//@property (nonatomic) NSMutableArray *mbarDetails;
 
 @property (weak, nonatomic) UIStoryboard *modeStoryboard;
 @property (weak, nonatomic) MeasureBarContainerViewController *barCVC;
 
 @property (nonatomic) GPUImageiOSBlurFilter *blurFilter;
 
+//Should beremoved
 @property (nonatomic) NSMutableDictionary *softMenuDict;
 
-//@property (nonatomic) NSDictionary *dataParameters;
 @property (nonatomic) ParameterManager *parManager;
-
-@property (nonatomic) NSMutableString *prevMeasure;
-@property (nonatomic) NSMutableString *curMeasure;
+@property (nonatomic) ModeManager *modeManager;
 
 //+(id)sharedSettings;
 
+// Should be removed
 -(void)initMeasureView;
 //-(void)initMeasureBar;
+// Should be removed
 -(void)initSoftMenuSystem;
 -(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum;
 -(UIImage *)blurryImage:(UIImage *)image;
-
--(void)switchMeasure:(NSString *)curMeas;
-
--(CGFloat) measureBarPopupMenuPosition:(NSInteger)index forWidth:(CGFloat)width;
 
 -(void)valueTouching:(Parameter *)param;
 -(void)valueChanging:(Parameter *)param;

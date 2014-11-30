@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A09020C1A2ACE6B00EEBDE2 /* ParamDictBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A09020B1A2ACE6B00EEBDE2 /* ParamDictBase.m */; };
 		9A23C0BA1A2719AC0069971A /* MSAList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A23BFCC1A2719AC0069971A /* MSAList.plist */; };
 		9A23C0BB1A2719AC0069971A /* ShareSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23BFCE1A2719AC0069971A /* ShareSettings.m */; };
 		9A23C0BC1A2719AC0069971A /* MeasureBarDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23BFD41A2719AC0069971A /* MeasureBarDetail.m */; };
@@ -130,7 +131,6 @@
 		9A23C16F1A2719B10069971A /* SpecMeasBarParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C1381A2719B10069971A /* SpecMeasBarParams.m */; };
 		9A23C1701A2719B10069971A /* SpecParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C13A1A2719B10069971A /* SpecParams.m */; };
 		9A23C1711A2719B10069971A /* WaveParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C13D1A2719B10069971A /* WaveParams.m */; };
-		9A23C1721A2719B10069971A /* MeasBarParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C1401A2719B10069971A /* MeasBarParams.m */; };
 		9A23C1731A2719B10069971A /* ModeParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C1421A2719B10069971A /* ModeParams.m */; };
 		9A23C1741A2719B10069971A /* Bar0TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C1471A2719B10069971A /* Bar0TableViewController.m */; };
 		9A23C1751A2719B10069971A /* Bar1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C14A1A2719B10069971A /* Bar1TableViewController.m */; };
@@ -147,15 +147,18 @@
 		9A23C1801A2719B10069971A /* Bar0OneLineYellowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C1681A2719B10069971A /* Bar0OneLineYellowTableViewCell.m */; };
 		9A23C1811A2719B10069971A /* Bar0SingleContinousTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C16A1A2719B10069971A /* Bar0SingleContinousTableViewCell.m */; };
 		9A23C1821A2719B10069971A /* MeasureBarContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C16C1A2719B10069971A /* MeasureBarContainerView.m */; };
+		9A6616CC1A2943C500D3E2CA /* MeasureBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616BE1A2943C500D3E2CA /* MeasureBase.m */; };
+		9A6616CD1A2943C500D3E2CA /* ModeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616C01A2943C500D3E2CA /* ModeBase.m */; };
+		9A6616CE1A2943C500D3E2CA /* ViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616C21A2943C500D3E2CA /* ViewBase.m */; };
+		9A6616CF1A2943C500D3E2CA /* WindowBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616C41A2943C500D3E2CA /* WindowBase.m */; };
+		9A6616D01A2943C500D3E2CA /* MeasBarParamDictBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616C71A2943C500D3E2CA /* MeasBarParamDictBase.m */; };
+		9A6616D11A2943C500D3E2CA /* MeasParamDictBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616C91A2943C500D3E2CA /* MeasParamDictBase.m */; };
+		9A6616D21A2943C500D3E2CA /* ModeParamDictBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616CB1A2943C500D3E2CA /* ModeParamDictBase.m */; };
 		9A9C670E19AD6C81007D3248 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C670D19AD6C81007D3248 /* main.m */; };
 		9A9C671119AD6C81007D3248 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C671019AD6C81007D3248 /* AppDelegate.m */; };
 		9A9C671419AD6C81007D3248 /* MSA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C671219AD6C81007D3248 /* MSA.xcdatamodeld */; };
 		9A9C671C19AD6C81007D3248 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A9C671B19AD6C81007D3248 /* Images.xcassets */; };
 		9A9C672819AD6C81007D3248 /* MSATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C672719AD6C81007D3248 /* MSATests.m */; };
-		9AEFB9481A285DAD00E2CBFD /* MeasureBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB93C1A285DAD00E2CBFD /* MeasureBase.m */; };
-		9AEFB9491A285DAD00E2CBFD /* ModeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB93E1A285DAD00E2CBFD /* ModeBase.m */; };
-		9AEFB94A1A285DAD00E2CBFD /* ViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB9401A285DAD00E2CBFD /* ViewBase.m */; };
-		9AEFB94B1A285DAD00E2CBFD /* WindowBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB9421A285DAD00E2CBFD /* WindowBase.m */; };
 		9AEFB94C1A285DAD00E2CBFD /* ModeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB9441A285DAD00E2CBFD /* ModeManager.m */; };
 		9AEFB94D1A285DAD00E2CBFD /* ParameterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB9471A285DAD00E2CBFD /* ParameterManager.m */; };
 		9AEFB9501A286C9400E2CBFD /* Mode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB94F1A286C9400E2CBFD /* Mode.m */; };
@@ -173,6 +176,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A09020A1A2ACE6B00EEBDE2 /* ParamDictBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParamDictBase.h; sourceTree = "<group>"; };
+		9A09020B1A2ACE6B00EEBDE2 /* ParamDictBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamDictBase.m; sourceTree = "<group>"; };
 		9A23BFCC1A2719AC0069971A /* MSAList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MSAList.plist; sourceTree = "<group>"; };
 		9A23BFCD1A2719AC0069971A /* ShareSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareSettings.h; sourceTree = "<group>"; };
 		9A23BFCE1A2719AC0069971A /* ShareSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareSettings.m; sourceTree = "<group>"; };
@@ -383,8 +388,6 @@
 		9A23C13A1A2719B10069971A /* SpecParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecParams.m; sourceTree = "<group>"; };
 		9A23C13C1A2719B10069971A /* WaveParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveParams.h; sourceTree = "<group>"; };
 		9A23C13D1A2719B10069971A /* WaveParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveParams.m; sourceTree = "<group>"; };
-		9A23C13F1A2719B10069971A /* MeasBarParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasBarParams.h; sourceTree = "<group>"; };
-		9A23C1401A2719B10069971A /* MeasBarParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasBarParams.m; sourceTree = "<group>"; };
 		9A23C1411A2719B10069971A /* ModeParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeParams.h; sourceTree = "<group>"; };
 		9A23C1421A2719B10069971A /* ModeParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeParams.m; sourceTree = "<group>"; };
 		9A23C1461A2719B10069971A /* Bar0TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar0TableViewController.h; sourceTree = "<group>"; };
@@ -417,6 +420,20 @@
 		9A23C16A1A2719B10069971A /* Bar0SingleContinousTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar0SingleContinousTableViewCell.m; sourceTree = "<group>"; };
 		9A23C16B1A2719B10069971A /* MeasureBarContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBarContainerView.h; sourceTree = "<group>"; };
 		9A23C16C1A2719B10069971A /* MeasureBarContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureBarContainerView.m; sourceTree = "<group>"; };
+		9A6616BD1A2943C500D3E2CA /* MeasureBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBase.h; sourceTree = "<group>"; };
+		9A6616BE1A2943C500D3E2CA /* MeasureBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureBase.m; sourceTree = "<group>"; };
+		9A6616BF1A2943C500D3E2CA /* ModeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeBase.h; sourceTree = "<group>"; };
+		9A6616C01A2943C500D3E2CA /* ModeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeBase.m; sourceTree = "<group>"; };
+		9A6616C11A2943C500D3E2CA /* ViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewBase.h; sourceTree = "<group>"; };
+		9A6616C21A2943C500D3E2CA /* ViewBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewBase.m; sourceTree = "<group>"; };
+		9A6616C31A2943C500D3E2CA /* WindowBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowBase.h; sourceTree = "<group>"; };
+		9A6616C41A2943C500D3E2CA /* WindowBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowBase.m; sourceTree = "<group>"; };
+		9A6616C61A2943C500D3E2CA /* MeasBarParamDictBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasBarParamDictBase.h; sourceTree = "<group>"; };
+		9A6616C71A2943C500D3E2CA /* MeasBarParamDictBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasBarParamDictBase.m; sourceTree = "<group>"; };
+		9A6616C81A2943C500D3E2CA /* MeasParamDictBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasParamDictBase.h; sourceTree = "<group>"; };
+		9A6616C91A2943C500D3E2CA /* MeasParamDictBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasParamDictBase.m; sourceTree = "<group>"; };
+		9A6616CA1A2943C500D3E2CA /* ModeParamDictBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeParamDictBase.h; sourceTree = "<group>"; };
+		9A6616CB1A2943C500D3E2CA /* ModeParamDictBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeParamDictBase.m; sourceTree = "<group>"; };
 		9A9C670819AD6C81007D3248 /* MSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9C670C19AD6C81007D3248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9C670D19AD6C81007D3248 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -427,14 +444,6 @@
 		9A9C672119AD6C81007D3248 /* MSATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9C672619AD6C81007D3248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9C672719AD6C81007D3248 /* MSATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSATests.m; sourceTree = "<group>"; };
-		9AEFB93B1A285DAD00E2CBFD /* MeasureBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBase.h; sourceTree = "<group>"; };
-		9AEFB93C1A285DAD00E2CBFD /* MeasureBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureBase.m; sourceTree = "<group>"; };
-		9AEFB93D1A285DAD00E2CBFD /* ModeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeBase.h; sourceTree = "<group>"; };
-		9AEFB93E1A285DAD00E2CBFD /* ModeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeBase.m; sourceTree = "<group>"; };
-		9AEFB93F1A285DAD00E2CBFD /* ViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewBase.h; sourceTree = "<group>"; };
-		9AEFB9401A285DAD00E2CBFD /* ViewBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewBase.m; sourceTree = "<group>"; };
-		9AEFB9411A285DAD00E2CBFD /* WindowBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowBase.h; sourceTree = "<group>"; };
-		9AEFB9421A285DAD00E2CBFD /* WindowBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindowBase.m; sourceTree = "<group>"; };
 		9AEFB9441A285DAD00E2CBFD /* ModeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeManager.m; sourceTree = "<group>"; };
 		9AEFB9451A285DAD00E2CBFD /* ModeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeManager.h; sourceTree = "<group>"; };
 		9AEFB9461A285DAD00E2CBFD /* ParameterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterManager.h; sourceTree = "<group>"; };
@@ -655,16 +664,16 @@
 		9A23C0261A2719AC0069971A /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				9A23C02D1A2719AC0069971A /* UISoftMenu.h */,
+				9A23C02E1A2719AC0069971A /* UISoftMenu.m */,
+				9A23C02F1A2719AC0069971A /* UISoftPanel.h */,
+				9A23C0301A2719AC0069971A /* UISoftPanel.m */,
 				9A23C0271A2719AC0069971A /* UISoftKey.h */,
 				9A23C0281A2719AC0069971A /* UISoftKey.m */,
 				9A23C0291A2719AC0069971A /* UISoftKeyEnum.h */,
 				9A23C02A1A2719AC0069971A /* UISoftKeyEnum.m */,
 				9A23C02B1A2719AC0069971A /* UISoftKeyEnumItem.h */,
 				9A23C02C1A2719AC0069971A /* UISoftKeyEnumItem.m */,
-				9A23C02D1A2719AC0069971A /* UISoftMenu.h */,
-				9A23C02E1A2719AC0069971A /* UISoftMenu.m */,
-				9A23C02F1A2719AC0069971A /* UISoftPanel.h */,
-				9A23C0301A2719AC0069971A /* UISoftPanel.m */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -956,7 +965,6 @@
 				9A23C1421A2719B10069971A /* ModeParams.m */,
 				9A23C1361A2719B10069971A /* ComplexSpectrum */,
 				9A23C13B1A2719B10069971A /* IQWaveform */,
-				9A23C13E1A2719B10069971A /* MeasureBar */,
 			);
 			path = Parameter;
 			sourceTree = "<group>";
@@ -979,15 +987,6 @@
 				9A23C13D1A2719B10069971A /* WaveParams.m */,
 			);
 			path = IQWaveform;
-			sourceTree = "<group>";
-		};
-		9A23C13E1A2719B10069971A /* MeasureBar */ = {
-			isa = PBXGroup;
-			children = (
-				9A23C13F1A2719B10069971A /* MeasBarParams.h */,
-				9A23C1401A2719B10069971A /* MeasBarParams.m */,
-			);
-			path = MeasureBar;
 			sourceTree = "<group>";
 		};
 		9A23C1431A2719B10069971A /* ViewControllers */ = {
@@ -1115,6 +1114,36 @@
 			path = CellStyle;
 			sourceTree = "<group>";
 		};
+		9A6616BC1A2943C500D3E2CA /* ModeMeasureViewWindow */ = {
+			isa = PBXGroup;
+			children = (
+				9A6616BD1A2943C500D3E2CA /* MeasureBase.h */,
+				9A6616BE1A2943C500D3E2CA /* MeasureBase.m */,
+				9A6616BF1A2943C500D3E2CA /* ModeBase.h */,
+				9A6616C01A2943C500D3E2CA /* ModeBase.m */,
+				9A6616C11A2943C500D3E2CA /* ViewBase.h */,
+				9A6616C21A2943C500D3E2CA /* ViewBase.m */,
+				9A6616C31A2943C500D3E2CA /* WindowBase.h */,
+				9A6616C41A2943C500D3E2CA /* WindowBase.m */,
+			);
+			path = ModeMeasureViewWindow;
+			sourceTree = "<group>";
+		};
+		9A6616C51A2943C500D3E2CA /* Parameter */ = {
+			isa = PBXGroup;
+			children = (
+				9A09020A1A2ACE6B00EEBDE2 /* ParamDictBase.h */,
+				9A09020B1A2ACE6B00EEBDE2 /* ParamDictBase.m */,
+				9A6616C61A2943C500D3E2CA /* MeasBarParamDictBase.h */,
+				9A6616C71A2943C500D3E2CA /* MeasBarParamDictBase.m */,
+				9A6616C81A2943C500D3E2CA /* MeasParamDictBase.h */,
+				9A6616C91A2943C500D3E2CA /* MeasParamDictBase.m */,
+				9A6616CA1A2943C500D3E2CA /* ModeParamDictBase.h */,
+				9A6616CB1A2943C500D3E2CA /* ModeParamDictBase.m */,
+			);
+			path = Parameter;
+			sourceTree = "<group>";
+		};
 		9A9C66FF19AD6C80007D3248 = {
 			isa = PBXGroup;
 			children = (
@@ -1177,14 +1206,8 @@
 		9AEFB93A1A285DAD00E2CBFD /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				9AEFB93B1A285DAD00E2CBFD /* MeasureBase.h */,
-				9AEFB93C1A285DAD00E2CBFD /* MeasureBase.m */,
-				9AEFB93D1A285DAD00E2CBFD /* ModeBase.h */,
-				9AEFB93E1A285DAD00E2CBFD /* ModeBase.m */,
-				9AEFB93F1A285DAD00E2CBFD /* ViewBase.h */,
-				9AEFB9401A285DAD00E2CBFD /* ViewBase.m */,
-				9AEFB9411A285DAD00E2CBFD /* WindowBase.h */,
-				9AEFB9421A285DAD00E2CBFD /* WindowBase.m */,
+				9A6616BC1A2943C500D3E2CA /* ModeMeasureViewWindow */,
+				9A6616C51A2943C500D3E2CA /* Parameter */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1370,6 +1393,7 @@
 				9A9C671419AD6C81007D3248 /* MSA.xcdatamodeld in Sources */,
 				9A23C1241A2719AC0069971A /* GPUImageFilter.m in Sources */,
 				9A23C1151A2719AC0069971A /* MsgDetailNavigationViewController.m in Sources */,
+				9A6616CF1A2943C500D3E2CA /* WindowBase.m in Sources */,
 				9A23C0F61A2719AC0069971A /* UISoftPanel.m in Sources */,
 				9A23C0F81A2719AC0069971A /* DisplayTracesContainerViewController.m in Sources */,
 				9A23C0F71A2719AC0069971A /* BlurViewController.m in Sources */,
@@ -1384,23 +1408,23 @@
 				9A23C1101A2719AC0069971A /* SoftMenuContainerViewController.m in Sources */,
 				9A23C1171A2719AC0069971A /* MsgMasterNavigationViewController.m in Sources */,
 				9A23C10F1A2719AC0069971A /* SoftMenuNumericTableViewCell.m in Sources */,
+				9A09020C1A2ACE6B00EEBDE2 /* ParamDictBase.m in Sources */,
 				9A23C11E1A2719AC0069971A /* SystemMasterNavigationViewController.m in Sources */,
 				9A23C0C31A2719AC0069971A /* FrequencyParameter.m in Sources */,
 				9A23C0C01A2719AC0069971A /* DoubleParameter.m in Sources */,
 				9A9C671119AD6C81007D3248 /* AppDelegate.m in Sources */,
 				9A23C11B1A2719AC0069971A /* SystemDetailContainerViewController.m in Sources */,
 				9A23C1301A2719AC0069971A /* GPUImageTwoPassTextureSamplingFilter.m in Sources */,
+				9A6616CE1A2943C500D3E2CA /* ViewBase.m in Sources */,
 				9A23C17B1A2719B10069971A /* Bar7TableViewController.m in Sources */,
 				9A23C1791A2719B10069971A /* Bar5TableViewController.m in Sources */,
 				9A23C1701A2719B10069971A /* SpecParams.m in Sources */,
 				9A23C1291A2719AC0069971A /* GPUImageiOSBlurFilter.m in Sources */,
 				9A23C1781A2719B10069971A /* Bar4TableViewController.m in Sources */,
-				9AEFB94B1A285DAD00E2CBFD /* WindowBase.m in Sources */,
 				9AEFB94C1A285DAD00E2CBFD /* ModeManager.m in Sources */,
 				9A23C17E1A2719B10069971A /* BarPopupMenuTableViewController.m in Sources */,
 				9A23C0C51A2719AC0069971A /* IntParameter.m in Sources */,
 				9A23C0BB1A2719AC0069971A /* ShareSettings.m in Sources */,
-				9A23C1721A2719B10069971A /* MeasBarParams.m in Sources */,
 				9AEFB94D1A285DAD00E2CBFD /* ParameterManager.m in Sources */,
 				9AEFB9501A286C9400E2CBFD /* Mode.m in Sources */,
 				9A23C0F21A2719AC0069971A /* UISoftKey.m in Sources */,
@@ -1419,7 +1443,6 @@
 				9A23C1821A2719B10069971A /* MeasureBarContainerView.m in Sources */,
 				9A23C1021A2719AC0069971A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m in Sources */,
 				9A23C11D1A2719AC0069971A /* SystemDetailTableViewController.m in Sources */,
-				9AEFB94A1A285DAD00E2CBFD /* ViewBase.m in Sources */,
 				9A23C17C1A2719B10069971A /* BarPopupMenuContainerViewController.m in Sources */,
 				9A23C10B1A2719AC0069971A /* SoftMenuLeftLabelTableViewCell.m in Sources */,
 				9A23C12C1A2719AC0069971A /* GPUImageOutput.m in Sources */,
@@ -1434,6 +1457,8 @@
 				9A23C1221A2719AC0069971A /* GLProgram.m in Sources */,
 				9A23C1801A2719B10069971A /* Bar0OneLineYellowTableViewCell.m in Sources */,
 				9A23C1181A2719AC0069971A /* MsgMasterTableViewController.m in Sources */,
+				9A6616D21A2943C500D3E2CA /* ModeParamDictBase.m in Sources */,
+				9A6616CD1A2943C500D3E2CA /* ModeBase.m in Sources */,
 				9A23C1251A2719AC0069971A /* GPUImageFilterGroup.m in Sources */,
 				9A23C1751A2719B10069971A /* Bar1TableViewController.m in Sources */,
 				9A23C1761A2719B10069971A /* Bar2TableViewController.m in Sources */,
@@ -1442,18 +1467,19 @@
 				9A23C0BC1A2719AC0069971A /* MeasureBarDetail.m in Sources */,
 				9A23C0C81A2719AC0069971A /* RelativeAmplitudeParameter.m in Sources */,
 				9A23C0BE1A2719AC0069971A /* AutoManParameter.m in Sources */,
-				9AEFB9481A285DAD00E2CBFD /* MeasureBase.m in Sources */,
 				9A23C11F1A2719AC0069971A /* SystemMasterTableViewController.m in Sources */,
 				9A23C1771A2719B10069971A /* Bar3TableViewController.m in Sources */,
 				9A23C1111A2719AC0069971A /* SoftMenuNavigationViewController.m in Sources */,
 				9A23C0F91A2719AC0069971A /* MeasureBarContainerViewController.m in Sources */,
-				9AEFB9491A285DAD00E2CBFD /* ModeBase.m in Sources */,
 				9A23C0FC1A2719AC0069971A /* MainContainerViewController.m in Sources */,
+				9A6616D01A2943C500D3E2CA /* MeasBarParamDictBase.m in Sources */,
 				9A23C1231A2719AC0069971A /* GPUImageContext.m in Sources */,
 				9A23C11C1A2719AC0069971A /* SystemDetailNavigationViewController.m in Sources */,
 				9A23C0BF1A2719AC0069971A /* BooleanParameter.m in Sources */,
+				9A6616D11A2943C500D3E2CA /* MeasParamDictBase.m in Sources */,
 				9A23C12F1A2719AC0069971A /* GPUImageTwoPassFilter.m in Sources */,
 				9A23C12E1A2719AC0069971A /* GPUImageSaturationFilter.m in Sources */,
+				9A6616CC1A2943C500D3E2CA /* MeasureBase.m in Sources */,
 				9A23C1731A2719B10069971A /* ModeParams.m in Sources */,
 				9A23C1051A2719AC0069971A /* PresetMenuWhiteGreenTableViewCell.m in Sources */,
 				9A23C0BD1A2719AC0069971A /* AmplitudeParameter.m in Sources */,

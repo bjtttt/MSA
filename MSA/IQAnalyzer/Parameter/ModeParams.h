@@ -7,20 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ModeParamDictBase.h"
 
 @class SpecParams;
 @class WaveParams;
 @class ShareSettings;
 
-@interface ModeParams : NSObject
+@interface ModeParams : ModeParamDictBase
 
 @property (nonatomic) SpecParams * specParams;
 @property (nonatomic) WaveParams * waveParams;
-
-@property (nonatomic) ShareSettings *shareSettings;
-
--(void)registerParameterEvent;
--(void)unregisterParameterEvent;
--(void)parseParameter;
 
 @end

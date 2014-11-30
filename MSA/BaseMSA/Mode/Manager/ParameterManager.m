@@ -33,12 +33,6 @@
     [self.modePars unregisterParameterEvent];
 }
 
--(void)setShareSettings:(ShareSettings *)shareSettings
-{
-    _shareSettings=shareSettings;
-    self.modePars.shareSettings=shareSettings;
-}
-
 -(void)parseParameter
 {
     [self.modePars parseParameter];

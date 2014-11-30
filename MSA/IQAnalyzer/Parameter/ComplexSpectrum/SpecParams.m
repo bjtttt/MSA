@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SpecParams.h"
-#import "SpecMeasBarParams.h"
+#import "MeasParamDictBase.h"
 
 @interface SpecParams()
 
@@ -19,9 +19,6 @@
 -(id) init {
     if ((self = [super init]))
     {
-        self.specParamDict = [[NSMutableDictionary alloc] init];
-        self.specMeasBarParams = [[SpecMeasBarParams alloc] init];
-        self.specMeasBarParams.mbarParamDict = self.specParamDict;
     }
     
     return self;
@@ -37,9 +34,17 @@
     
 }
 
--(void)parseParameter
+-(void)addMeasParameters
 {
-    [self.specMeasBarParams parseParameter];
+    [super addMeasParameters];
+}
+
+-(void)addMeasPanelParameters
+{
+}
+
+-(void)addMeasOtherParameters
+{
 }
 
 @end

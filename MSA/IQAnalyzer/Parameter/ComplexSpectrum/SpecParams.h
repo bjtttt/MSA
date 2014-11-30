@@ -7,19 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MeasParamDictBase.h"
 
-@class ShareSettings;
-@class SpecMeasBarParams;
-
-@interface SpecParams : NSObject
-
-@property (nonatomic) NSMutableDictionary *specParamDict;
-@property (nonatomic) SpecMeasBarParams *specMeasBarParams;
-
-@property (nonatomic) ShareSettings *shareSettings;
-
--(void)registerParameterEvent;
--(void)unregisterParameterEvent;
--(void)parseParameter;
+@interface SpecParams : MeasParamDictBase
 
 @end

@@ -10,6 +10,7 @@
 #import "ModeParams.h"
 #import "SpecParams.h"
 #import "WaveParams.h"
+#import "ModeParamDictBase.h"
 
 @interface ModeParams()
 
@@ -29,7 +30,8 @@
 
 -(void)setShareSettings:(ShareSettings *)shareSettings
 {
-    _shareSettings=shareSettings;
+    [super setShareSettings:shareSettings];
+
     self.specParams.shareSettings=shareSettings;
     self.waveParams.shareSettings=shareSettings;
 }

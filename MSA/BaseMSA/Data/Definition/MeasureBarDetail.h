@@ -11,10 +11,8 @@
 
 @interface MeasureBarDetail : NSObject
 
-//@property (nonatomic) NSMutableString *measure;
 @property (nonatomic) bool useRatio;
 @property (nonatomic) int mbarCount;
-//@property (nonatomic) int mbarSmallCount;
 @property (nonatomic) NSMutableArray *mbarWidths;
 @property (nonatomic) NSMutableArray *mbarSmallWidths;
 @property (nonatomic) float totalWidth;

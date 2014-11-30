@@ -14,5 +14,6 @@
 @interface WindowBase : NSObject
 
 @property (nonatomic) NSMutableString *windowName;
+@property (nonatomic) ShareSettings *shareSettings;
 
 @end

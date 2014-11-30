@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ModeManager.h"
+#import "Mode.h"
 
 @interface ModeManager()
 
@@ -18,6 +19,7 @@
 -(id) init {
     if ((self = [super init]))
     {
+        self.mode = [[Mode alloc] init];
     }
     
     return self;
@@ -25,12 +27,9 @@
 
 -(void)initMode
 {
-    
-}
-
--(void)initMenuSystem
-{
-    
+    self.mode = [[Mode alloc] init];
+    [self.mode initMode];
+    [self.mode initMeasurement];
 }
 
 @end

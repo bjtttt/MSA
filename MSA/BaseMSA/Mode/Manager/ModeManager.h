@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class Mode;
 @class ShareSettings;
 
 @interface ModeManager : NSObject
 
+@property (nonatomic) Mode *mode;
+
 @property (nonatomic) ShareSettings *shareSettings;
 
 -(void)initMode;
--(void)initMenuSystem;
 
 @end

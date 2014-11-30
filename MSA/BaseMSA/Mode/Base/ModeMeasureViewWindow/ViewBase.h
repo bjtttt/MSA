@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class ShareSettings;
+
 @interface ViewBase : NSObject
 
 @property (nonatomic) NSMutableString *viewName;
 @property (nonatomic) NSMutableDictionary *windowDict;
+
+@property (nonatomic) ShareSettings *shareSettings;
 
 @end

@@ -21,6 +21,9 @@
 //#import "Bar7TableViewController.h"
 #import "MeasureBarDefinition.h"
 #import "MeasureBarContainerView.h"
+#import "ModeManager.h"
+#import "ModeBase.h"
+#import "MeasureBase.h"
 
 @interface MeasureBarContainerViewController ()
 
@@ -168,7 +171,7 @@
     CGFloat prevWidth = 0.0;
     CGFloat barWidth = 0.0;
 
-    for(int i=0;i<self.shareSettings.measureBarCount; i++)
+    for(int i=0;i<self.shareSettings.modeManager.measureBarCount; i++)
     {
         UIView *view = (UIView *)[self.barVs objectAtIndex:i];
         UIViewController<MeasureBarDefinition> *vc = (UIViewController<MeasureBarDefinition> *)[self.barVCs objectAtIndex:i];

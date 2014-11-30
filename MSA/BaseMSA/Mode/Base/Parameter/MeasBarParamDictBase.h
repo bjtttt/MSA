@@ -1,5 +1,5 @@
 //
-//  MeasBarParams.h
+//  MeasBarParamDictBase.h
 //  MSA
 //
 //  Created by guozhitao on 10/4/14.
@@ -7,21 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ParamDictBase.h"
 
-@class ShareSettings;
-@class MeasureBarDetail;
+@class MeasureBase;
 
-@interface MeasBarParams : NSObject
+@interface MeasBarParamDictBase : ParamDictBase
 
-@property (nonatomic) ShareSettings *shareSettings;
+@property (nonatomic) MeasureBase *measure;
 
-@property (nonatomic) NSMutableDictionary *mbarParamDict;
+@property (nonatomic) ModeParamDictBase *modePar;
 
-@property (nonatomic) MeasureBarDetail *mbarDetail;
-
--(void)registerParameterEvent;
--(void)unregisterParameterEvent;
--(void)parseParameter;
+-(void)addBarParameters;
 
 -(void)addBar0Parameters;
 -(void)addBar1Parameters;
@@ -33,7 +29,5 @@
 -(void)addBar7Parameters;
 -(void)addBar8Parameters;
 -(void)addBar9Parameters;
-
--(void)initMeasBarDetail;
 
 @end

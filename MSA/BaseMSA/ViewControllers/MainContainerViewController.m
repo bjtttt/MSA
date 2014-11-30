@@ -96,10 +96,7 @@
     
     //self.shareSettings.dataParameters = [[NSDictionary alloc] init];
     self.shareSettings.parManager = [[ParameterManager alloc] init];
-    
-    self.shareSettings.prevMeasure = [[NSMutableString alloc] initWithString:@""];
-    self.shareSettings.curMeasure = [[NSMutableString alloc] initWithString:@""];
-    
+        
     [self.shareSettings initMeasureView];
     //[self.shareSettings initMeasureBar];
     [self.shareSettings initSoftMenuSystem];

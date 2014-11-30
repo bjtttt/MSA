@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MeasBarParams.h"
+#import "MeasBarParamDictBase.h"
 
-@interface SpecMeasBarParams : MeasBarParams
+@interface SpecMeasBarParams : MeasBarParamDictBase
 
 @end

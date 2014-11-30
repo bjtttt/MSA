@@ -11,7 +11,11 @@
 
 #import "ModeBase.h"
 
+@class SpecMeasurement;
+
 @interface Mode : ModeBase
+
+@property (nonatomic) SpecMeasurement *specMeas;
 
 @end
 
