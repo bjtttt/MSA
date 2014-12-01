@@ -14,6 +14,8 @@
 #import "UISoftKeyEnum.h"
 #import "UISoftKeyEnumItem.h"
 #import "MeasureBarDetail.h"
+#import "MeasParamDictBase.h"
+#import "Parameter.h"
 
 @interface SpecMeasurement()
 
@@ -43,15 +45,60 @@
 -(UISoftPanel *)setupMeasureBar0Menu
 {
     UISoftPanel *uiSP = [[UISoftPanel alloc] init];
+    uiSP.shareSettings = self.shareSettings;
     uiSP.title = [@"Measure Bar 0" mutableCopy];
     
     UISoftKey *uiSK = [[UISoftKey alloc] init];
-    uiSK.valueType = VAL_BOOL;
-    uiSK.connectParam 
+    uiSK.softKeyType = KEY_IMM;
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"Continuous Mode"];
+    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+    
+    uiSK = [[UISoftKey alloc] init];
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"Restart"];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+    
+    uiSK = [[UISoftKey alloc] init];
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"Pause/Resume"];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+    
+    return uiSP;
 }
 
 -(UISoftPanel *)setupMeasureBar1Menu
 {
+    UISoftPanel *uiSP = [[UISoftPanel alloc] init];
+    uiSP.shareSettings = self.shareSettings;
+    uiSP.title = [@"Measure Bar 1" mutableCopy];
+    
+    UISoftKey *uiSK = [[UISoftKey alloc] init];
+    uiSK.skType = KEY_ENUM;
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"Input Port"];
+    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+    
+    uiSK = [[UISoftKey alloc] init];
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"Input Coupling"];
+    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+    
+    uiSK = [[UISoftKey alloc] init];
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"ExtGainPreampDb"];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+    
+    return uiSP;
 }
 
 -(UISoftPanel *)setupMeasureBar2Menu

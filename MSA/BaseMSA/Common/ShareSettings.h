@@ -57,6 +57,15 @@ typedef NS_ENUM(int, ValueType) {
     VAL_IMM = 10
 };
 
+typedef NS_ENUM(int, SoftKeyType) {
+    KEY_IMM = 0,
+    KEY_VALUE,
+    KEY_BOOL,
+    KEY_ENUM,
+    KEY_VALUE_BOOL,
+    KEY_ENUM_ITEM
+};
+
 #define LIGHT_CORNER_RADIUS 3.0f
 #define NORMAL_CORNER_RADIUS 5.0f
 #define HEAVY_CORNER_RADIUS 10.0f
@@ -120,16 +129,19 @@ typedef NS_ENUM(int, ValueType) {
 //+(id)sharedSettings;
 
 // Should be removed
--(void)initMeasureView;
+//-(void)initMeasureView;
 //-(void)initMeasureBar;
 // Should be removed
--(void)initSoftMenuSystem;
+//-(void)initSoftMenuSystem;
 -(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum;
 -(UIImage *)blurryImage:(UIImage *)image;
 
 -(void)valueTouching:(Parameter *)param;
 -(void)valueChanging:(Parameter *)param;
 -(void)valueChanged:(Parameter *)param;
+
+-(NSString *)convertFrequency:(double)freq;
+-(NSString *)convertTime:(double)time;
 
 @end
 

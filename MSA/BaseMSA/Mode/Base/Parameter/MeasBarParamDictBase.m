@@ -47,68 +47,68 @@
     NSAssert(YES==NO, @"MeasBarParam::unregisterParameterEvent should be overrrided in each measurement.");
 }
 
--(void)addBarParameters
+-(void)parseParameter
 {
-    [self addBar0Parameters];
-    [self addBar1Parameters];
-    [self addBar2Parameters];
-    [self addBar3Parameters];
-    [self addBar4Parameters];
-    [self addBar5Parameters];
-    [self addBar6Parameters];
-    [self addBar7Parameters];
-    [self addBar8Parameters];
-    [self addBar9Parameters];
+    [self parseBar0Parameters];
+    [self parseBar1Parameters];
+    [self parseBar2Parameters];
+    [self parseBar3Parameters];
+    [self parseBar4Parameters];
+    [self parseBar5Parameters];
+    [self parseBar6Parameters];
+    [self parseBar7Parameters];
+    [self parseBar8Parameters];
+    [self parseBar9Parameters];
 }
 
--(void)addBar0Parameters
+-(void)parseBar0Parameters
 {
-    NSAssert(YES==NO, @"MeasBarParamDictBase::addBar0Parameters should be override in each mode.");
+    NSAssert(YES==NO, @"MeasBarParamDictBase::parseBar0Parameters should be override in each mode.");
 }
 
--(void)addBar1Parameters
+-(void)parseBar1Parameters
 {
-    NSAssert(YES==NO, @"MeasBarParamDictBase::addBar1Parameters should be override in each mode.");
+    NSAssert(YES==NO, @"MeasBarParamDictBase::parseBar1Parameters should be override in each mode.");
 }
 
--(void)addBar2Parameters
+-(void)parseBar2Parameters
 {
-    NSAssert(YES==NO, @"MeasBarParamDictBase::addBar2Parameters should be override in each mode.");
+    NSAssert(YES==NO, @"MeasBarParamDictBase::parseBar2Parameters should be override in each mode.");
 }
 
--(void)addBar3Parameters
+-(void)parseBar3Parameters
 {
-    NSAssert(YES==NO, @"MeasBarParamDictBase::addBar3Parameters should be override in each mode.");
+    NSAssert(YES==NO, @"MeasBarParamDictBase::parseBar3Parameters should be override in each mode.");
 }
 
--(void)addBar4Parameters
+-(void)parseBar4Parameters
 {
-    NSAssert(YES==NO, @"MeasBarParamDictBase::addBar4Parameters should be override in each mode.");
+    NSAssert(YES==NO, @"MeasBarParamDictBase::parseBar4Parameters should be override in each mode.");
 }
 
--(void)addBar5Parameters
+-(void)parseBar5Parameters
 {
-    NSAssert(YES==NO, @"MeasBarParamDictBase::addBar5Parameters should be override in each mode.");
+    NSAssert(YES==NO, @"MeasBarParamDictBase::parseBar5Parameters should be override in each mode.");
 }
 
--(void)addBar6Parameters
+-(void)parseBar6Parameters
 {
-    NSAssert(YES==NO, @"MeasBarParamDictBase::addBar6Parameters should be override in each mode.");
+    NSAssert(YES==NO, @"MeasBarParamDictBase::parseBar6Parameters should be override in each mode.");
 }
 
--(void)addBar7Parameters
+-(void)parseBar7Parameters
 {
-    NSAssert(YES==NO, @"MeasBarParamDictBase::addBar7Parameters should be override in each mode.");
+    NSAssert(YES==NO, @"MeasBarParamDictBase::parseBar7Parameters should be override in each mode.");
 }
 
--(void)addBar8Parameters
+-(void)parseBar8Parameters
 {
-    NSAssert(YES==NO, @"MeasBarParamDictBase::addBar8Parameters should be override in each mode.");
+    NSAssert(YES==NO, @"MeasBarParamDictBase::parseBar8Parameters should be override in each mode.");
 }
 
--(void)addBar9Parameters
+-(void)parseBar9Parameters
 {
-    NSAssert(YES==NO, @"MeasBarParamDictBase::addBar9Parameters should be override in each mode.");
+    NSAssert(YES==NO, @"MeasBarParamDictBase::parseBar9Parameters should be override in each mode.");
 }
 
 -(void)addParameter:(Parameter *)par forKey:(NSString *)key

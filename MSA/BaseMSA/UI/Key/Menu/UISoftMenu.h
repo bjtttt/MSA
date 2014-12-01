@@ -13,10 +13,10 @@
 
 @interface UISoftMenu : NSObject
 
+@property (nonatomic) ShareSettings *shareSettings;
+
 @property (nonatomic) NSMutableArray *measBarPanels;
 @property (nonatomic) NSMutableArray *softMenuPanels;
-
-@property (nonatomic) ShareSettings *shareSettings;
 
 @end
 

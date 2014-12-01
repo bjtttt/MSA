@@ -16,6 +16,8 @@
 @property (nonatomic) long valuePrevious;
 @property (nonatomic) long value;
 
+@property (nonatomic) NSMutableString *unit;
+
 @property (nonatomic,assign) SEL valueChanged;
 @property (nonatomic,assign) SEL valueChanging;
 @property (nonatomic,assign) SEL valueTouching;

@@ -14,24 +14,27 @@
 @class UISoftKeyEnum;
 @class UISoftKeyEnumItem;
 @class UISoftPanel;
+@class Parameter;
 
 @interface UISoftKey : NSObject
 
-@property (nonatomic) NSMutableString *label;
-@property (nonatomic) NSMutableString *labelShort;
-@property (nonatomic) NSMutableString *nameString;
+@property (nonatomic) ShareSettings *shareSettings;
 
-@property (nonatomic) ValueType valueType;
-@property (nonatomic) int valueTypeInteger;
+@property (nonatomic, readonly) NSMutableString *label;
+@property (nonatomic, readonly) NSMutableString *labelShort;
+@property (nonatomic, readonly) NSMutableString *nameString;
 
-@property (nonatomic) NSMutableString *valueString;
-@property (nonatomic) NSNumber *value;
+@property (nonatomic) SoftKeyType softKeyType;
 
-@property (nonatomic) NSMutableString *unit;
+@property (nonatomic, readonly) NSMutableString *valueString;
+
+@property (nonatomic, readonly) NSNumber *valueNumber;
+@property (nonatomic, readonly) NSMutableString *unit;
+@property (nonatomic, readonly) NSMutableString *formattedValue;
 
 @property (nonatomic) UISoftKeyEnum *softKeyEnum;
 
-@property (nonatomic) UISoftKey *subSoftkey;
+@property (nonatomic) UISoftPanel *subSoftPanel;
 @property (nonatomic) UISoftKey *parentSoftkey;
 
 @property (nonatomic) UISoftKey *next;
@@ -42,6 +45,10 @@
 @property (nonatomic) Parameter *connectParam;
 
 -(void)initSoftKeyEnum;
+-(void)initSoftKeyEnumFromParameter:(Parameter *)par;
+
+-(void)expandEnumSoftPanel;
+
 -(UISoftKeyEnumItem *)addSoftkeyEnumItem:(int)value label:(NSString *)label labelShort:(NSString *)labelShort;
 -(UISoftKeyEnumItem *)findEnumItemByValue:(int)value;
 

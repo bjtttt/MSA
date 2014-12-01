@@ -57,7 +57,7 @@
     return blurredImage;
 }
 
-// Should be removed
+/* Should be removed
 - (void) initMeasureView
 {
     NSBundle *bundle = [NSBundle mainBundle];
@@ -92,6 +92,7 @@
         [self.measureView addObject:meas];
     }
 }
+*/
 
 /*
 - (void) initMeasureBar
@@ -168,7 +169,7 @@
 }
 */
 
-// Should be removed
+/* Should be removed
 -(void)initSoftMenuSystem
 {
     self.softMenuDict=[[NSMutableDictionary alloc] init];
@@ -302,6 +303,7 @@
         }
     }
 }
+*/
 
 -(void)valueTouching:(id)parameter
 {
@@ -316,6 +318,95 @@
 -(void)valueChanged:(id)parameter
 {
     
+}
+
+-(NSString *)convertFrequency:(double)dbFreq
+{
+    bool isNeg = false;
+    if(dbFreq < 0.0)
+    {
+        isNeg = true;
+        dbFreq = -dbFreq;
+    }
+    
+    NSMutableString *msv = nil;
+    if(dbFreq > 1.0e9)
+    {
+        dbFreq = dbFreq / 1.0e9;
+        msv = [[[NSNumber numberWithDouble:dbFreq] stringValue] mutableCopy];
+        [msv appendString:@" G"];
+    }
+    else if(dbFreq > 1.0e6)
+    {
+        dbFreq = dbFreq / 1.0e6;
+        msv = [[[NSNumber numberWithDouble:dbFreq] stringValue] mutableCopy];
+        [msv appendString:@" M"];
+    }
+    else if(dbFreq > 1.0e3)
+    {
+        dbFreq = dbFreq / 1.0e3;
+        msv = [[[NSNumber numberWithDouble:dbFreq] stringValue] mutableCopy];
+        [msv appendString:@" k"];
+    }
+    else
+    {
+        msv = [[[NSNumber numberWithDouble:dbFreq] stringValue] mutableCopy];
+        [msv appendString:@" "];
+    }
+
+    if(isNeg)
+        [msv insertString:@"-" atIndex:0];
+    return (NSString *)msv;
+}
+
+-(NSString *)convertTime:(double)dbTime
+{
+    bool isNeg = false;
+    if(dbTime < 0.0)
+    {
+        isNeg = true;
+        dbTime = -dbTime;
+    }
+    
+    NSMutableString *msv = nil;
+    if(dbTime > 1.0e3)
+    {
+        dbTime = dbTime / 1.0e3;
+        msv = [[[NSNumber numberWithDouble:dbTime] stringValue] mutableCopy];
+        [msv appendString:@" k"];
+    }
+    else if(dbTime > 1.0)
+    {
+        msv = [[[NSNumber numberWithDouble:dbTime] stringValue] mutableCopy];
+        [msv appendString:@" "];
+    }
+    else if(dbTime > 1.0e-3)
+    {
+        dbTime = dbTime * 1.0e3;
+        msv = [[[NSNumber numberWithDouble:dbTime] stringValue] mutableCopy];
+        [msv appendString:@" m"];
+    }
+    else if(dbTime > 1.0e-6)
+    {
+        dbTime = dbTime * 1.0e6;
+        msv = [[[NSNumber numberWithDouble:dbTime] stringValue] mutableCopy];
+        [msv appendString:@" u"];
+    }
+    else if(dbTime > 1.0e-9)
+    {
+        dbTime = dbTime * 1.0e9;
+        msv = [[[NSNumber numberWithDouble:dbTime] stringValue] mutableCopy];
+        [msv appendString:@" n"];
+    }
+    else
+    {
+        msv = [[[NSNumber numberWithDouble:dbTime] stringValue] mutableCopy];
+        [msv appendString:@" "];
+    }
+
+    if(isNeg)
+        [msv insertString:@"-" atIndex:0];
+    return (NSString *)msv;
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "UISoftPanel.h"
+#import "UISoftKey.h"
 
 @interface UISoftPanel()
 
@@ -24,6 +25,26 @@
     }
     
     return self;
+}
+
+-(void)addSoftKey:(UISoftKey *)uiSK
+{
+    if(uiSK == nil)
+    {
+        NSAssert(YES==NO, @"SoftPanel %@ cannot add nil SoftKey", self.title);
+        return;
+    }
+    
+    int count = (int)self.keyArray.count;
+    if(count < 1)
+        [self.keyArray addObject:uiSK];
+    else
+    {
+        UISoftKey *uiPrevSK = self.keyArray[count-1];
+        [self.keyArray addObject:uiSK];
+        uiPrevSK.next = uiSK;
+        uiSK.previous = uiPrevSK;
+    }
 }
 
 @end

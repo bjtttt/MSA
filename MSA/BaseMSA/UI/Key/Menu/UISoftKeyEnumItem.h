@@ -12,8 +12,11 @@
 #import "ShareSettings.h"
 
 @class UISoftKeyEnum;
+@class ShareSettings;
 
 @interface UISoftKeyEnumItem : NSObject
+
+@property (nonatomic) ShareSettings *shareSettings;
 
 @property (nonatomic) int value;
 @property (nonatomic) NSMutableString *labelShort;

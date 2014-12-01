@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SpecParams.h"
 #import "MeasParamDictBase.h"
+#import "MeasBarParamDictBase.h"
 
 @interface SpecParams()
 
@@ -34,12 +35,12 @@
     
 }
 
--(void)addMeasParameters
+-(void)addMeasBarParameters
 {
-    [super addMeasParameters];
+    [self.mbarPar parseParameter];
 }
 
--(void)addMeasPanelParameters
+-(void)addMeasMenuParameters
 {
 }
 

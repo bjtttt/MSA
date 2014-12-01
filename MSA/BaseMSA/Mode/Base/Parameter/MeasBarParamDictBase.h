@@ -10,6 +10,7 @@
 #import "ParamDictBase.h"
 
 @class MeasureBase;
+@class ModeParamDictBase;
 
 @interface MeasBarParamDictBase : ParamDictBase
 
@@ -17,17 +18,15 @@
 
 @property (nonatomic) ModeParamDictBase *modePar;
 
--(void)addBarParameters;
-
--(void)addBar0Parameters;
--(void)addBar1Parameters;
--(void)addBar2Parameters;
--(void)addBar3Parameters;
--(void)addBar4Parameters;
--(void)addBar5Parameters;
--(void)addBar6Parameters;
--(void)addBar7Parameters;
--(void)addBar8Parameters;
--(void)addBar9Parameters;
+-(void)parseBar0Parameters;
+-(void)parseBar1Parameters;
+-(void)parseBar2Parameters;
+-(void)parseBar3Parameters;
+-(void)parseBar4Parameters;
+-(void)parseBar5Parameters;
+-(void)parseBar6Parameters;
+-(void)parseBar7Parameters;
+-(void)parseBar8Parameters;
+-(void)parseBar9Parameters;
 
 @end

@@ -13,10 +13,12 @@
 
 @class UISoftKey;
 @class UISoftKeyEnumItem;
+@class ShareSettings;
 
 @interface UISoftKeyEnum : NSObject
 
-//@property (nonatomic) NSMutableString *name;
+@property (nonatomic) ShareSettings *shareSettings;
+
 @property (nonatomic) NSMutableArray *itemArray;
 
 @property (nonatomic) UISoftKey *softkey;

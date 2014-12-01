@@ -65,7 +65,7 @@
 
 -(void)addMeasBarParameters
 {
-    NSAssert(YES==NO, @"MeasParamDictBase::addMeasBarParameters should be overrrided in each measurement.");
+    [self.mbarPar parseParameter];
 }
 
 -(void)addMeasMenuParameters

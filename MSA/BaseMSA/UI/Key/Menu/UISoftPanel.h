@@ -9,12 +9,17 @@
 #ifndef MSA_UISoftPanel_h
 #define MSA_UISoftPanel_h
 
-#import "ShareSettings.h"
+@class UISoftKey;
+@class ShareSettings;
 
 @interface UISoftPanel : NSObject
 
+@property (nonatomic) ShareSettings *shareSettings;
+
 @property (nonatomic) NSMutableString *title;
 @property (nonatomic) NSMutableArray *keyArray;
+
+-(void)addSoftKey:(UISoftKey *)uiSK;
 
 @end
 

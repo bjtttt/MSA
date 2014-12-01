@@ -28,13 +28,40 @@
     return self;
 }
 
-- (id) initWithEnumDefinition:(NSMutableArray *)enumDefinition
+- (id) initWithEnumDefinition:(NSMutableArray *)enumDefinition withDefaultValue:(int)defaultValue
 {
     if(self = [super init])
     {
         self.valueType = VAL_ENUM;
-        self.valuePrevious = NO;
-        self.value = NO;
+        self.valuePrevious = defaultValue;
+        self.value = defaultValue;
+        self.enumDefinition = enumDefinition;
+        self.valueChanged = nil;
+        self.valueChanging = nil;
+        self.valueTouching = nil;
+    }
+    
+    return self;
+}
+
+- (id) initWithEnumDefinition:(NSMutableArray *)enumDefinition
+{
+    if(enumDefinition == nil)
+    {
+        NSAssert(YES==NO, @"EnumParameter %@ cannot initiate nil ENUM", self.key);
+        return nil;
+    }
+    if(enumDefinition.count < 1)
+    {
+        NSAssert(YES==NO, @"EnumParameter %@ cannot initiate empty ENUM", self.key);
+        return nil;
+    }
+    
+    if(self = [super init])
+    {
+        self.valueType = VAL_ENUM;
+        self.valuePrevious = ((EnumMemberInfo *)enumDefinition[0]).value;
+        self.value = ((EnumMemberInfo *)enumDefinition[0]).value;
         self.enumDefinition = enumDefinition;
         self.valueChanged = nil;
         self.valueChanging = nil;

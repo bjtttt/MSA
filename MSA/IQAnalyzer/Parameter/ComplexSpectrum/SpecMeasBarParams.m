@@ -40,7 +40,7 @@
     return self;
 }
 
--(void)addBar0Parameters
+-(void)parseBar0Parameters
 {
     // Sweep/Measure
     if([self getParameterBy:@"Continuous Mode"] == nil)
@@ -71,7 +71,7 @@
     }
 }
 
--(void)addBar1Parameters
+-(void)parseBar1Parameters
 {
     // Select Inport
     if([self getParameterBy:@"Input Port"] == nil)
@@ -118,7 +118,7 @@
     }
 }
 
--(void)addBar2Parameters
+-(void)parseBar2Parameters
 {
     // Input Z Correction
     if([self getParameterBy:@"InputZCorrection"] == nil)
@@ -222,7 +222,7 @@
     }
 }
 
--(void)addBar3Parameters
+-(void)parseBar3Parameters
 {
     // Total Atten
     if([self getParameterBy:@"TotalAtten"] == nil)
@@ -307,7 +307,7 @@
     }
 }
 
--(void)addBar4Parameters
+-(void)parseBar4Parameters
 {
     // Select Trig Source
     if([self getParameterBy:@"TriggerSource"] == nil)
@@ -354,7 +354,7 @@
     }
 }
 
--(void)addBar5Parameters
+-(void)parseBar5Parameters
 {
     // Phase Noise Optimization
     if([self getParameterBy:@"Phase Noise Opt"] == nil)
@@ -413,7 +413,7 @@
     }
 }
 
--(void)addBar6Parameters
+-(void)parseBar6Parameters
 {
     // Center Freq
     if([self getParameterBy:@"CenterFrequency"] == nil)
@@ -486,17 +486,17 @@
     }
 }
 
--(void)addBar7Parameters
+-(void)parseBar7Parameters
 {
     
 }
 
--(void)addBar8Parameters
+-(void)parseBar8Parameters
 {
     
 }
 
--(void)addBar9Parameters
+-(void)parseBar9Parameters
 {
     
 }
