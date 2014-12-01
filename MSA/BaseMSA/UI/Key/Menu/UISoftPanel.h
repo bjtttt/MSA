@@ -19,6 +19,8 @@
 @property (nonatomic) NSMutableString *title;
 @property (nonatomic) NSMutableArray *keyArray;
 
+@property (nonatomic) UISoftKey *parentSoftKey;
+
 -(void)addSoftKey:(UISoftKey *)uiSK;
 
 @end

@@ -62,6 +62,7 @@ typedef NS_ENUM(int, SoftKeyType) {
     KEY_VALUE,
     KEY_BOOL,
     KEY_ENUM,
+    KEY_ENUM_BOOL,
     KEY_VALUE_BOOL,
     KEY_ENUM_ITEM
 };

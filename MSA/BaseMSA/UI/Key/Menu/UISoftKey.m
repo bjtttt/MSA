@@ -20,6 +20,7 @@
 #import "RelativeAmplitudeParameter.h"
 #import "IntParameter.h"
 #import "StringParameter.h"
+#import "EnumMemberInfo.h"
 
 @interface UISoftKey()
 
@@ -32,12 +33,6 @@
     if(self = [super init])
     {
         self.softKeyType = KEY_IMM;
-        
-        self.softKeyEnum = nil;
-
-        self.next = nil;
-        self.previous = nil;
-        self.softPanel = nil;
     }
     
     return self;
@@ -45,17 +40,56 @@
 
 -(NSMutableString *)label
 {
-    return self.connectParam.label;
+    if(self.softKeyType == KEY_ENUM_ITEM)
+        return [self.enumMemberInfo.display mutableCopy];
+    else
+        return self.connectParam.label;
+}
+
+-(NSMutableString *)label2nd
+{
+    if(self.softKeyType == KEY_VALUE_BOOL || self.softKeyType == KEY_ENUM_BOOL)
+        return self.connect2ndParam.label;
+    else
+    {
+        NSAssert(YES==NO, @"Current SoftKey %d with Parameter %@ has no 2nd label.", self.softKeyType, self.connectParam.key);
+        return nil;
+    }
 }
 
 -(NSMutableString *)labelShort
 {
-    return self.connectParam.labelShort;
+    if(self.softKeyType == KEY_ENUM_ITEM)
+        return [self.enumMemberInfo.displayShort mutableCopy];
+    else
+        return self.connectParam.labelShort;
+}
+
+-(NSMutableString *)labelShort2nd
+{
+    if(self.softKeyType == KEY_VALUE_BOOL || self.softKeyType == KEY_ENUM_BOOL)
+        return self.connect2ndParam.labelShort;
+    else
+    {
+        NSAssert(YES==NO, @"Current SoftKey %d with Parameter %@ has no 2nd short label.", self.softKeyType, self.connectParam.key);
+        return nil;
+    }
 }
 
 -(NSMutableString *)nameString
 {
     return self.connectParam.key;
+}
+
+-(NSMutableString *)nameString2nd
+{
+    if(self.softKeyType == KEY_VALUE_BOOL || self.softKeyType == KEY_ENUM_BOOL)
+        return self.connect2ndParam.key;
+    else
+    {
+        NSAssert(YES==NO, @"Current SoftKey %d with Parameter %@ has no 2nd name string.", self.softKeyType, self.connectParam.key);
+        return nil;
+    }
 }
 
 -(NSMutableString *)valueString
@@ -72,6 +106,9 @@
 
 -(NSNumber *)valueNumber
 {
+    if(self.softKeyType == KEY_ENUM_ITEM)
+        return [NSNumber numberWithInt:self.enumMemberInfo.value];
+    
     switch(self.connectParam.valueType)
     {
         default:
@@ -92,8 +129,26 @@
     }
 }
 
+-(NSNumber *)valueNumber2nd
+{
+    if(self.softKeyType == KEY_VALUE_BOOL || self.softKeyType == KEY_ENUM_BOOL)
+    {
+        BooleanParameter *bp = (BooleanParameter *)self.connect2ndParam;
+        return [NSNumber numberWithBool:bp.value];
+    }
+    
+    NSAssert(YES==NO, @"Current SoftKey %d with Parameter %@ has no 2nd number value.", self.softKeyType, self.connectParam.key);
+    return nil;
+}
+
 -(NSMutableString *)unit
 {
+    if(self.softKeyType == KEY_ENUM_ITEM)
+    {
+        NSAssert(YES==NO, @"Current Parameter %@ Enum Member %@ with type %d has no unit.", self.connectParam.key, self.enumMemberInfo.display, self.connectParam.valueType);
+        return nil;
+    }
+    
     switch(self.connectParam.valueType)
     {
         default:
@@ -116,10 +171,17 @@
 
 -(NSMutableString *)formattedValue
 {
+    if(self.softKeyType == KEY_ENUM_ITEM)
+    {
+        NSAssert(YES==NO, @"Current Parameter %@ Enum Member %@ with type %d has no formatted value.", self.connectParam.key, self.enumMemberInfo.display, self.connectParam.valueType);
+        return nil;
+    }
+
     switch(self.connectParam.valueType)
     {
         default:
-            return [@"" mutableCopy];
+            NSAssert(YES==NO, @"Current Parameter %@ with type %d has no formatted value.", self.connectParam.key, self.connectParam.valueType);
+            return nil;
         case VAL_RELAMP:
         case VAL_AMP:
         {
@@ -212,17 +274,37 @@
 
 -(void)expandEnumSoftPanel
 {
+    if(![self.connectParam isKindOfClass:EnumParameter.class])
+    {
+        NSAssert(self.softKeyEnum != nil, @"UISoftPanel %@ UISoftkey %@ is not an EnumParameter", self.softPanel.title, self.label);
+        return;
+    }
+    
     if(self.softKeyEnum == nil)
         return;
     
     if(self.softKeyEnum.itemArray.count < 1)
     {
         NSAssert(self.softKeyEnum != nil, @"UISoftPanel %@ UISoftkey %@ Enum is empty and cannot be expanded", self.softPanel.title, self.label);
-        
         return;
     }
     
-    
+    EnumParameter * ep = (EnumParameter *)self.connectParam;
+    UISoftPanel *uiSP = [[UISoftPanel alloc] init];
+    uiSP.shareSettings = self.shareSettings;
+    uiSP.title = self.label;
+    self.subSoftPanel = uiSP;
+    uiSP.parentSoftKey = self;
+    for(EnumMemberInfo *emi in ep.enumDefinition)
+    {
+        UISoftKey *uiSK = [[UISoftKey alloc] init];
+        uiSK.shareSettings = uiSP.shareSettings;
+        uiSK.softPanel = uiSP;
+        uiSK.softKeyType = KEY_ENUM_ITEM;
+        uiSK.connectParam = self.connectParam;
+        uiSK.enumMemberInfo = emi;
+        [uiSP.keyArray addObject:uiSK];
+    }
 }
 
 @end
