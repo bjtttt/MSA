@@ -16,45 +16,41 @@
 @class UISoftPanel;
 @class Parameter;
 @class EnumMemberInfo;
+@class BooleanParameter;
 
 @interface UISoftKey : NSObject
 
 @property (nonatomic) ShareSettings *shareSettings;
 
-@property (nonatomic, readonly) NSMutableString *label;
-@property (nonatomic, readonly) NSMutableString *labelShort;
-@property (nonatomic, readonly) NSMutableString *nameString;
+@property (nonatomic, readonly) NSString *label;
+@property (nonatomic, readonly) NSString *labelShort;
+@property (nonatomic, readonly) NSString *nameString;
 
-@property (nonatomic, readonly) NSMutableString *label2nd;
-@property (nonatomic, readonly) NSMutableString *labelShort2nd;
-@property (nonatomic, readonly) NSMutableString *nameString2nd;
+@property (nonatomic, readonly) NSString *nameStringSubBoolean;
 
 @property (nonatomic) SoftKeyType softKeyType;
 
-@property (nonatomic, readonly) NSMutableString *valueString;
+@property (nonatomic, readonly) NSString *valueString;
 
 @property (nonatomic, readonly) NSNumber *valueNumber;
-@property (nonatomic, readonly) NSMutableString *unit;
-@property (nonatomic, readonly) NSMutableString *formattedValue;
+@property (nonatomic, readonly) NSString *unit;
+@property (nonatomic, readonly) NSString *formattedValue;
 
-@property (nonatomic, readonly) NSNumber *valueNumber2nd;
+@property (nonatomic, readonly) bool valueSubBoolean;
 
 @property (nonatomic) EnumMemberInfo *enumMemberInfo;
 
 @property (nonatomic) UISoftKeyEnum *softKeyEnum;
-@property (nonatomic) UISoftKeyEnum *softKeyEnum2nd;
+@property (nonatomic) UISoftKeyEnum *softKeySubBoolean;
 
 @property (nonatomic) UISoftPanel *softPanel;
 @property (nonatomic) UISoftPanel *subSoftPanel;
 
 @property (nonatomic) Parameter *connectParam;
-@property (nonatomic) Parameter *connect2ndParam;
+@property (nonatomic) BooleanParameter *connectSubBoolean;
 
 -(void)initSoftKeyEnum;
--(void)initSoftKeyEnumFromParameter:(Parameter *)par;
-
--(void)initSoftKeyEnum2nd;
--(void)initSoftKeyEnum2ndFromParameter:(Parameter *)par;???
+-(void)initSoftKeySubBoolean;
 
 -(void)expandEnumSoftPanel;
 

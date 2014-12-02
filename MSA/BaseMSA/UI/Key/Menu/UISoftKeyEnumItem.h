@@ -19,11 +19,8 @@
 @property (nonatomic) ShareSettings *shareSettings;
 
 @property (nonatomic) int value;
-@property (nonatomic) NSMutableString *labelShort;
-@property (nonatomic) NSMutableString *label;
-
-@property (nonatomic) UISoftKeyEnumItem *next;
-@property (nonatomic) UISoftKeyEnumItem *previous;
+@property (nonatomic) NSString *labelShort;
+@property (nonatomic) NSString *label;
 
 @property (nonatomic) UISoftKeyEnum *softkeyEnum;
 

@@ -19,7 +19,7 @@
 
 - (id) init
 {
-    NSAssert(YES == NO, @"EnumParameter can only use initWithEnumDefinition");
+    [NSException raise:@"EnumParameter::init" format:@"EnumParameter can only use initWithEnumDefinition:[withDefaultValue:]"];
     
     if(self = [super init])
     {
@@ -28,54 +28,85 @@
     return self;
 }
 
-- (id) initWithEnumDefinition:(NSMutableArray *)enumDefinition withDefaultValue:(int)defaultValue
+- (id) initWithKey:(NSString *)key withEnumDefinition:(NSMutableArray *)enumDefinition withDefaultValue:(int)defaultValue
 {
-    if(self = [super init])
+    if(key == nil)
     {
-        self.valueType = VAL_ENUM;
-        self.valuePrevious = defaultValue;
-        self.value = defaultValue;
-        self.enumDefinition = enumDefinition;
-        self.valueChanged = nil;
-        self.valueChanging = nil;
-        self.valueTouching = nil;
+        [NSException raise:@"EnumParameter::initWithKey:withEnumDefinition:withDefaultValue:" format:@"nil key"];
+        return nil;
     }
-    
-    return self;
-}
-
-- (id) initWithEnumDefinition:(NSMutableArray *)enumDefinition
-{
+    if(key == nil)
+    {
+        [NSException raise:@"EnumParameter::initWithKey:withEnumDefinition:withDefaultValue:" format:@"Empty key"];
+        return nil;
+    }
     if(enumDefinition == nil)
     {
-        NSAssert(YES==NO, @"EnumParameter %@ cannot initiate nil ENUM", self.key);
+        [NSException raise:@"EnumParameter::initWithKey:withEnumDefinition:withDefaultValue:" format:@"\"%@\" cannot initiate nil ENUM", key];
         return nil;
     }
     if(enumDefinition.count < 1)
     {
-        NSAssert(YES==NO, @"EnumParameter %@ cannot initiate empty ENUM", self.key);
+        [NSException raise:@"EnumParameter::initWithKey:withEnumDefinition:withDefaultValue:" format:@"\"%@\" cannot initiate empty ENUM", key];
         return nil;
     }
-    
+
     if(self = [super init])
     {
+        bool found = false;
+        for (EnumMemberInfo *emi in enumDefinition) {
+            if(defaultValue == emi.value)
+            {
+                found = YES;
+                break;
+            }
+        }
+        if(found == NO)
+            [NSException raise:@"EnumParameter" format:@"\"%@ \"::initWithEnumDefinition:withDefaultValue: uses a wrong default value", key];
+        
+        self.key = key;
         self.valueType = VAL_ENUM;
-        self.valuePrevious = ((EnumMemberInfo *)enumDefinition[0]).value;
-        self.value = ((EnumMemberInfo *)enumDefinition[0]).value;
+        self.valuePrevious = defaultValue;
+        self.value = defaultValue;
         self.enumDefinition = enumDefinition;
-        self.valueChanged = nil;
-        self.valueChanging = nil;
-        self.valueTouching = nil;
     }
     
     return self;
 }
 
+- (id) initWithKey:(NSString *)key withEnumDefinition:(NSMutableArray *)enumDefinition
+{
+    if(key == nil)
+    {
+        [NSException raise:@"EnumParameter::initWithKey:withEnumDefinition:withDefaultValue:" format:@"nil key"];
+        return nil;
+    }
+    if(key == nil)
+    {
+        [NSException raise:@"EnumParameter::initWithKey:withEnumDefinition:withDefaultValue:" format:@"Empty key"];
+        return nil;
+    }
+    if(enumDefinition == nil)
+    {
+        [NSException raise:@"EnumParameter::initWithKey:withEnumDefinition:withDefaultValue:" format:@"\"%@\" cannot initiate nil ENUM", key];
+        return nil;
+    }
+    if(enumDefinition.count < 1)
+    {
+        [NSException raise:@"EnumParameter::initWithKey:withEnumDefinition:withDefaultValue:" format:@"\"%@\" cannot initiate empty ENUM", key];
+        return nil;
+    }
+    
+    int defValue = ((EnumMemberInfo *)enumDefinition[0]).value;
+    
+    return [self initWithKey:key withEnumDefinition:enumDefinition withDefaultValue:defValue];
+}
+
 -(void)setValue:(int)value
 {
-    if(self.value == self.valuePrevious)
+    if(_value == _valuePrevious)
     {
-        if(self.valueTouching != nil)
+        if(_valueTouching != nil)
             [self valueTouching];
     }
     else
@@ -90,7 +121,7 @@
             }
         }
         if(found == NO)
-            NSAssert(YES == NO, @"Cannot find value %d in EnumParameter %@", value, self.key);
+            [NSException raise:@"EnumParameter::setValue:" format:@"\"%@\" doesn't contain value %d in ENUM", self.key, value];
         
         if(self.valueChanging != nil)
             [self valueChanging];
@@ -100,7 +131,7 @@
         
         [[NSNotificationCenter defaultCenter] postNotificationName:(NSString *)self.key object:self];
         
-        if(self.valueChanged != nil)
+        if(_valueChanged != nil)
             [self valueChanged];
     }
 }

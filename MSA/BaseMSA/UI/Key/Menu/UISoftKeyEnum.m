@@ -22,8 +22,7 @@
 {
     if(self = [super init])
     {
-        //self.name = [[NSMutableString alloc] initWithString:@""];
-        self.itemArray = [[NSMutableArray alloc] init];
+        _itemArray = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -31,46 +30,34 @@
 
 -(UISoftKeyEnumItem *)addEnumItem:(int)value label:(NSString *)label labelShort:(NSString *)labelShort
 {
-    NSAssert(self.itemArray != nil, @"UISoftPanel %@ UISoftKey %@ UISoftKeyEnum Enum Item Array is nil", self.softkey.softPanel.title, self.softkey.label);
-    NSAssert([self findEnumItemByValue:value] == nil, @"UISoftPanel %@ UISoftKey %@ UISoftKeyEnum Enum Item Array already has %d", self.softkey.softPanel.title, self.softkey.label, value);
+    if(_itemArray == nil)
+        [NSException raise:@"UISoftKeyEnum::addEnumItem:label:labelShort" format:@"UISoftPanel(\"%@\")-UISoftKey(\"%@\") : Enum item array is nil", self.softkey.softPanel.title, self.softkey.label];
+    if([self findEnumItemByValue:value] != nil)
+        [NSException raise:@"UISoftKeyEnum::addEnumItem:label:labelShort" format:@"UISoftPanel(\"%@\")-UISoftKey(\"%@\") : Enum item array already contains %d", _softkey.softPanel.title, _softkey.label, value];
 
     UISoftKeyEnumItem *item = [[UISoftKeyEnumItem alloc] init];
     item.value = value;
-    if(label == nil)
-        item.label = [[NSMutableString alloc] initWithString:@""];
-    else
-        item.label = [[NSMutableString alloc] initWithString:label];
-    if(labelShort == nil)
-        item.labelShort = [[NSMutableString alloc] initWithString:@""];
-    else
-        item.labelShort = [[NSMutableString alloc] initWithString:labelShort];
+    item.label = label;             // Maybe it is nil
+    item.labelShort = labelShort;   // Maybe it is nil
     item.softkeyEnum = self;
     
-    if(self.itemArray.count > 0)
-    {
-        int index=(int)self.itemArray.count-1;
-        UISoftKeyEnumItem *previousItem=(UISoftKeyEnumItem *)[self.itemArray objectAtIndex:index];
-        previousItem.next=item;
-        item.previous=previousItem;
-    }
-    [self.itemArray addObject:item];
+    [_itemArray addObject:item];
     
     return item;
 }
 
 -(UISoftKeyEnumItem *)findEnumItemByValue:(int)value
 {
-    NSAssert(self.itemArray != nil, @"UISoftPanel %@ UISoftKey %@ UISoftKeyEnum Enum Item Array is nil", self.softkey.softPanel.title, self.softkey.label);
+    if(_itemArray == nil)
+        [NSException raise:@"UISoftKeyEnum::findEnumItemByValue:" format:@"UISoftPanel(\"%@\")-UISoftKey(\"%@\") : Enum item array is nil", _softkey.softPanel.title, _softkey.label];
     
-    int count=(int)self.itemArray.count;
+    int count=(int)_itemArray.count;
     for(int index=0;index<count;index++)
     {
         UISoftKeyEnumItem *item=(UISoftKeyEnumItem *)[self.itemArray objectAtIndex:index];
         if(item.value==value)
             return item;
     }
-    
-    //NSAssert(YES==NO, @"UISoftKeyEnum Enum Item Array doesn't contain %d", value);
     
     return nil;
 }

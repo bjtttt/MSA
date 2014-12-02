@@ -83,8 +83,7 @@
         [emiArray addObject:emiRF];
         [emiArray addObject:emiEM];
         [emiArray addObject:emiIQ];
-        EnumParameter *ep = [[EnumParameter alloc] initWithEnumDefinition:emiArray];
-        ep.key = [[NSMutableString alloc] initWithString:@"Input Port"];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Input Port" withEnumDefinition:emiArray withDefaultValue:0];
         ep.label = [[NSMutableString alloc] initWithString:@"Select Input"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"Input"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -155,8 +154,7 @@
         [emiArray addObject:emiC6];
         [emiArray addObject:emiC7];
         [emiArray addObject:emiC8];
-        EnumParameter *ep = [[EnumParameter alloc] initWithEnumDefinition:emiArray];
-        ep.key = [[NSMutableString alloc] initWithString:@"AmpcorSelected"];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"AmpcorSelected" withEnumDefinition:emiArray withDefaultValue:0];
         ep.label = [[NSMutableString alloc] initWithString:@"Select Correction"];
         ep.valueChanged = @selector(valueChangedHandler:);
         [self addParameter:ep forKey:(NSString *)ep.key];
@@ -185,8 +183,7 @@
         [emiArray addObject:emiExt];
         [emiArray addObject:emiSense];
         [emiArray addObject:emiPulse];
-        EnumParameter *ep = [[EnumParameter alloc] initWithEnumDefinition:emiArray];
-        ep.key = [[NSMutableString alloc] initWithString:@"ReferenceOscillatorUI"];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"ReferenceOscillatorUI" withEnumDefinition:emiArray withDefaultValue:0];
         ep.label = [[NSMutableString alloc] initWithString:@"Freq Ref Input"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"Freq Ref"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -203,8 +200,7 @@
         [emiArray addObject:emiOn];
         [emiArray addObject:emiOff];
         [emiArray addObject:emiPartial];
-        EnumParameter *ep = [[EnumParameter alloc] initWithEnumDefinition:emiArray];
-        ep.key = [[NSMutableString alloc] initWithString:@"Auto Align Type"];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Auto Align Type" withEnumDefinition:emiArray withDefaultValue:0];
         ep.label = [[NSMutableString alloc] initWithString:@"Auto Align"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"Align"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -272,8 +268,7 @@
         NSMutableArray *emiArray = [[NSMutableArray alloc] init];
         [emiArray addObject:emiLow];
         [emiArray addObject:emiFull];
-        EnumParameter *ep = [[EnumParameter alloc] initWithEnumDefinition:emiArray];
-        ep.key = [[NSMutableString alloc] initWithString:@"Internal Preamp Band"];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Internal Preamp Band" withEnumDefinition:emiArray withDefaultValue:0];
         ep.label = [[NSMutableString alloc] initWithString:@"Internal Preamp"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"Int Preamp"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -298,8 +293,7 @@
         [emiArray addObject:emi1];
         [emiArray addObject:emi2];
         [emiArray addObject:emi3];
-        EnumParameter *ep = [[EnumParameter alloc] initWithEnumDefinition:emiArray];
-        ep.key = [[NSMutableString alloc] initWithString:@"Microwave Path Control"];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Microwave Path Control" withEnumDefinition:emiArray withDefaultValue:0];
         ep.label = [[NSMutableString alloc] initWithString:@"uW Path Control"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"LNP"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -327,8 +321,7 @@
         [emiArray addObject:emiExt2];
         [emiArray addObject:emiRFB];
         [emiArray addObject:emiPer];
-        EnumParameter *ep = [[EnumParameter alloc] initWithEnumDefinition:emiArray];
-        ep.key = [[NSMutableString alloc] initWithString:@"TriggerSource"];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"TriggerSource" withEnumDefinition:emiArray withDefaultValue:0];
         ep.label = [[NSMutableString alloc] initWithString:@"Select Trig Source"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"Trig"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -370,8 +363,7 @@
         [emiArray addObject:emi3];
         [emiArray addObject:emi4];
         [emiArray addObject:emi5];
-        EnumParameter *ep = [[EnumParameter alloc] initWithEnumDefinition:emiArray];
-        ep.key = [[NSMutableString alloc] initWithString:@"Phase Noise Opt"];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Phase Noise Opt" withEnumDefinition:emiArray withDefaultValue:0];
         ep.label = [[NSMutableString alloc] initWithString:@"Phase Noise Optimization"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"PNO"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -396,8 +388,7 @@
         [emiArray addObject:emiAuto];
         [emiArray addObject:emiLow];
         [emiArray addObject:emiHigh];
-        EnumParameter *ep = [[EnumParameter alloc] initWithEnumDefinition:emiArray];
-        ep.key = [[NSMutableString alloc] initWithString:@"IfGainState"];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"IfGainState" withEnumDefinition:emiArray withDefaultValue:0];
         ep.label = [[NSMutableString alloc] initWithString:@"IF Gain"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"IF Gain"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -440,8 +431,7 @@
         [emiArray addObject:emi3];
         [emiArray addObject:emi4];
         [emiArray addObject:emi5];
-        EnumParameter *ep = [[EnumParameter alloc] initWithEnumDefinition:emiArray];
-        ep.key = [[NSMutableString alloc] initWithString:@"Average Type"];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Average Type" withEnumDefinition:emiArray withDefaultValue:0];
         ep.label = [[NSMutableString alloc] initWithString:@"Avg Type"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"Avg Type"];
         ep.valueChanged = @selector(valueChangedHandler:);

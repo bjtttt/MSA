@@ -52,7 +52,7 @@
     uiSK.softKeyType = KEY_BOOL;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"Continuous Mode"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    [uiSK initSoftKeyEnum];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
     
@@ -83,7 +83,7 @@
     uiSK.softKeyType = KEY_ENUM;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"Input Port"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    [uiSK initSoftKeyEnum];
     [uiSK expandEnumSoftPanel];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
@@ -92,7 +92,7 @@
     uiSK.softKeyType = KEY_BOOL;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"Input Coupling"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    [uiSK initSoftKeyEnum];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
     
@@ -116,7 +116,7 @@
     uiSK.softKeyType = KEY_BOOL;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"InputZCorrection"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    [uiSK initSoftKeyEnum];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
 
@@ -124,7 +124,7 @@
     uiSK.softKeyType = KEY_ENUM;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"AmpcorSelected"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    [uiSK initSoftKeyEnum];
     [uiSK expandEnumSoftPanel];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
@@ -133,7 +133,7 @@
     uiSK.softKeyType = KEY_BOOL;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"AmpcorState"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    [uiSK initSoftKeyEnum];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
     
@@ -141,7 +141,7 @@
     uiSK.softKeyType = KEY_ENUM;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"ReferenceOscillatorUI"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    [uiSK initSoftKeyEnum];
     [uiSK expandEnumSoftPanel];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
@@ -150,7 +150,7 @@
     uiSK.softKeyType = KEY_ENUM;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"Auto Align Type"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    [uiSK initSoftKeyEnum];
     [uiSK expandEnumSoftPanel];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
@@ -159,7 +159,7 @@
     uiSK.softKeyType = KEY_BOOL;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"Auto Align Mode"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    [uiSK initSoftKeyEnum];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
     
@@ -190,8 +190,8 @@
     uiSK.softKeyType = KEY_VALUE_BOOL;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"Electrical Atten"];
-    uiSK.connect2ndParam = [self.measParDict getParameterBy:@"Electrical Atten State"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connect2ndParam];
+    uiSK.connectSubBoolean = (BooleanParameter *)[self.measParDict getParameterBy:@"Electrical Atten State"];
+    [uiSK initSoftKeySubBoolean];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
     
@@ -199,9 +199,10 @@
     uiSK.softKeyType = KEY_ENUM_BOOL;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"Internal Preamp Band"];
-    uiSK.connect2ndParam = [self.measParDict getParameterBy:@"Internal Preamp Band"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    uiSK.connectSubBoolean = (BooleanParameter *)[self.measParDict getParameterBy:@"Internal Preamp Band"];
+    [uiSK initSoftKeyEnum];
     [uiSK expandEnumSoftPanel];
+    [uiSK initSoftKeySubBoolean];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
     
@@ -209,7 +210,7 @@
     uiSK.softKeyType = KEY_BOOL;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"AmpcorState"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    [uiSK initSoftKeyEnum];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
     
@@ -217,7 +218,7 @@
     uiSK.softKeyType = KEY_ENUM;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"ReferenceOscillatorUI"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    [uiSK initSoftKeyEnum];
     [uiSK expandEnumSoftPanel];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
@@ -226,7 +227,7 @@
     uiSK.softKeyType = KEY_ENUM;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"Auto Align Type"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    [uiSK initSoftKeyEnum];
     [uiSK expandEnumSoftPanel];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
@@ -235,7 +236,7 @@
     uiSK.softKeyType = KEY_BOOL;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"Auto Align Mode"];
-    [uiSK initSoftKeyEnumFromParameter:uiSK.connectParam];
+    [uiSK initSoftKeyEnum];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
     

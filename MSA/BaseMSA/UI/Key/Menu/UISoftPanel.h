@@ -16,7 +16,7 @@
 
 @property (nonatomic) ShareSettings *shareSettings;
 
-@property (nonatomic) NSMutableString *title;
+@property (nonatomic) NSString *title;
 @property (nonatomic) NSMutableArray *keyArray;
 
 @property (nonatomic) UISoftKey *parentSoftKey;

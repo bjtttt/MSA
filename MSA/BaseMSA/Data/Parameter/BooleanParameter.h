@@ -16,10 +16,10 @@
 @property (nonatomic) bool valuePrevious;
 @property (nonatomic) bool value;
 
-@property (nonatomic) NSMutableString *yesLabel;
-@property (nonatomic) NSMutableString *yesLabelShort;
-@property (nonatomic) NSMutableString *noLabel;
-@property (nonatomic) NSMutableString *noLabelShort;
+@property (nonatomic) NSString *yesLabel;
+@property (nonatomic) NSString *yesLabelShort;
+@property (nonatomic) NSString *noLabel;
+@property (nonatomic) NSString *noLabelShort;
 
 @property (nonatomic) SEL valueChanged;
 @property (nonatomic) SEL valueChanging;

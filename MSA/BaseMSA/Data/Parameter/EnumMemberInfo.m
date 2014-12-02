@@ -18,7 +18,7 @@
 
 - (id) init
 {
-    NSAssert(YES == NO, @"EnumParameter can only use initWithEnumMemberInfo");
+    [NSException raise:@"EnumParameter::init:" format:@"EnumParameter can only use initWithEnumMemberInfo:display:displayShort:"];
     
     if(self = [super init])
     {

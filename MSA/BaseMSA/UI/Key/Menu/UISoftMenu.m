@@ -27,9 +27,4 @@
     return self;
 }
 
--(void)initMeasureBarPanels
-{
-    
-}
-
 @end

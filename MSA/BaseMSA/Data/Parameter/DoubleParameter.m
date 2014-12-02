@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "DoubleParameter.h"
-//#import "ShareSettings.h"
-//#import "Parameter.h"
 
 @interface DoubleParameter()
 
@@ -22,12 +20,7 @@
     if(self = [super init])
     {
         self.valueType = VAL_DOUBLE;
-        self.valuePrevious = 0.0;
-        self.value = 0.0;
-        self.unit = [[NSMutableString alloc] initWithString:@""];
-        self.valueChanged = nil;
-        self.valueChanging = nil;
-        self.valueTouching = nil;
+        self.unit = @"";
     }
     
     return self;
@@ -35,14 +28,14 @@
 
 -(void)setValue:(double)value
 {
-    if(self.value == self.valuePrevious)
+    if(_value == _valuePrevious)
     {
         if(self.valueTouching != nil)
             [self valueTouching];
     }
     else
     {
-        if(self.valueChanging != nil)
+        if(_valueChanging != nil)
             [self valueChanging];
         
         _valuePrevious = _value;
@@ -50,22 +43,22 @@
         
         [[NSNotificationCenter defaultCenter] postNotificationName:(NSString *)self.key object:self];
 
-        if(self.valueChanged != nil)
+        if(_valueChanged != nil)
             [self valueChanged];
     }
 }
 
 -(NSString *)valueString
 {
-    return [NSString stringWithFormat:@"%f", self.value];
+    return [NSString stringWithFormat:@"%f", _value];
 }
 
 -(NSString *)valueStringWithUnit
 {
-    NSString *str = [NSString stringWithFormat:@"%f", self.value];
-    if(self.unit == nil || [self.unit length] < 1)
+    NSString *str = [NSString stringWithFormat:@"%f", _value];
+    if(_unit == nil || [_unit length] < 1)
         return str;
-    return [str stringByAppendingString:(NSString *)self.unit];
+    return [str stringByAppendingString:(NSString *)_unit];
 }
 
 -(void)valueChangedHandler:(Parameter *)param

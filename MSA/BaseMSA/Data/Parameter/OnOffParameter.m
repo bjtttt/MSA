@@ -20,10 +20,10 @@
     if(self = [super init])
     {
         self.valueType = VAL_BOOL_ONOFF;
-        self.yesLabel = [[NSMutableString alloc] initWithString:@"On"];
-        self.yesLabelShort = [[NSMutableString alloc] initWithString:@"On"];
-        self.noLabel = [[NSMutableString alloc] initWithString:@"Off"];
-        self.noLabelShort = [[NSMutableString alloc] initWithString:@"Off"];
+        self.yesLabel = @"On";
+        self.yesLabelShort = @"On";
+        self.noLabel = @"Off";
+        self.noLabelShort = @"Off";
     }
     
     return self;

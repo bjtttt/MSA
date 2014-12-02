@@ -67,6 +67,12 @@ typedef NS_ENUM(int, SoftKeyType) {
     KEY_ENUM_ITEM
 };
 
+typedef NS_ENUM(int, ParamDictType) {
+    MODE_DICT = 0,
+    MEAS_DICT,
+    MBAR_DICT
+};
+
 #define LIGHT_CORNER_RADIUS 3.0f
 #define NORMAL_CORNER_RADIUS 5.0f
 #define HEAVY_CORNER_RADIUS 10.0f

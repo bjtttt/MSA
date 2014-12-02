@@ -22,12 +22,6 @@
     if(self = [super init])
     {
         self.valueType = VAL_INT;
-        self.valuePrevious = 0;
-        self.value = 0;
-        self.unit = [[NSMutableString alloc] initWithString:@""];
-        self.valueChanged = nil;
-        self.valueChanging = nil;
-        self.valueTouching = nil;
     }
     
     return self;

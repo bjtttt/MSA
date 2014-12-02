@@ -20,7 +20,6 @@
 {
     if(self = [super init])
     {
-        self.title = [[NSMutableString alloc] initWithString:@""];
         self.keyArray = [[NSMutableArray alloc] init];
     }
     
@@ -35,16 +34,7 @@
         return;
     }
     
-    int count = (int)self.keyArray.count;
-    if(count < 1)
-        [self.keyArray addObject:uiSK];
-    else
-    {
-        UISoftKey *uiPrevSK = self.keyArray[count-1];
-        [self.keyArray addObject:uiSK];
-        uiPrevSK.next = uiSK;
-        uiSK.previous = uiPrevSK;
-    }
+    [self.keyArray addObject:uiSK];
 }
 
 @end

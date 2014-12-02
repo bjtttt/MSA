@@ -22,7 +22,7 @@
     if(self = [super init])
     {
         self.valueType = VAL_AMP;
-        self.unit = [[NSMutableString alloc] initWithString:@"dBm"];
+        self.unit = @"dBm";
     }
     
     return self;

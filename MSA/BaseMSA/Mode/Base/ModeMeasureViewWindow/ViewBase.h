@@ -12,7 +12,7 @@
 
 @interface ViewBase : NSObject
 
-@property (nonatomic) NSMutableString *viewName;
+@property (nonatomic) NSString *viewName;
 @property (nonatomic) NSMutableDictionary *windowDict;
 
 @property (nonatomic) ShareSettings *shareSettings;

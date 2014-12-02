@@ -15,11 +15,10 @@
 
 @property (nonatomic) ValueType valueType;
 
-@property (nonatomic) NSMutableString *key;
-@property (nonatomic) bool isStandardKey;
+@property (nonatomic) NSString *key;
 
-@property (nonatomic) NSMutableString *label;
-@property (nonatomic) NSMutableString *labelShort;
+@property (nonatomic) NSString *label;
+@property (nonatomic) NSString *labelShort;
 
 @property (nonatomic) ShareSettings *shareSettings;
 

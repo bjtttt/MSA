@@ -19,11 +19,10 @@
 
 @property (nonatomic) ShareSettings *shareSettings;
 
-@property (nonatomic) NSMutableArray *itemArray;
-
 @property (nonatomic) UISoftKey *softkey;
 
 @property (nonatomic) Parameter *connectParam;
+@property (nonatomic) NSMutableArray *itemArray;
 
 -(UISoftKeyEnumItem *)addEnumItem:(int)value label:(NSString *)label labelShort:(NSString *)labelShort;
 -(UISoftKeyEnumItem *)findEnumItemByValue:(int)value;

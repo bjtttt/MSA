@@ -19,7 +19,7 @@
 
 @property (nonatomic) ShareSettings *shareSettings;
 
-@property (nonatomic) NSMutableString *measureName;
+@property (nonatomic) NSString *measureName;
 @property (nonatomic) NSMutableDictionary *viewDict;
 @property (nonatomic) MeasureBarDetail *mbarDetail;
 

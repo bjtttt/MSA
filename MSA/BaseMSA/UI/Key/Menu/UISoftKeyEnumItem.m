@@ -19,13 +19,6 @@
 {
     if(self = [super init])
     {
-        self.value = 0;
-        self.label = [[NSMutableString alloc] initWithString:@""];
-        self.labelShort = [[NSMutableString alloc] initWithString:@""];
-
-        self.next = nil;
-        self.previous = nil;
-        self.softkeyEnum = nil;
     }
     
     return self;

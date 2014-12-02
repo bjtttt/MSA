@@ -16,7 +16,7 @@
 
 @property (nonatomic) ShareSettings *shareSettings;
 
-@property (nonatomic) NSMutableString *modeName;
+@property (nonatomic) NSString *modeName;
 @property (nonatomic) NSMutableDictionary *measureDict;
 
 @property (nonatomic) MeasureBase *curMeasure;

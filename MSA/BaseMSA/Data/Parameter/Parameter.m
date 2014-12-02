@@ -20,9 +20,6 @@
     if(self = [super init])
     {
         self.valueType = VAL_NONE;
-        self.isStandardKey = YES;
-        self.label = [[NSMutableString alloc] initWithString:@"Off"];
-        self.labelShort = [[NSMutableString alloc] initWithString:@"Off"];
     }
     
     return self;

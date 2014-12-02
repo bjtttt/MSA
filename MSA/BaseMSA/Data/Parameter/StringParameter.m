@@ -22,9 +22,6 @@
     if(self = [super init])
     {
         self.valueType = VAL_STRING;
-        self.valueChanged = nil;
-        self.valueChanging = nil;
-        self.valueTouching = nil;
     }
     
     return self;

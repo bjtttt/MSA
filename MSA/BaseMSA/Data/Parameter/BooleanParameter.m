@@ -23,15 +23,6 @@
     if(self = [super init])
     {
         self.valueType = VAL_BOOL;
-        self.valuePrevious = NO;
-        self.value = NO;
-        self.yesLabel = [[NSMutableString alloc] initWithString:@""];
-        self.yesLabelShort = [[NSMutableString alloc] initWithString:@""];
-        self.noLabel = [[NSMutableString alloc] initWithString:@""];
-        self.noLabelShort = [[NSMutableString alloc] initWithString:@""];
-        self.valueChanged = nil;
-        self.valueChanging = nil;
-        self.valueTouching = nil;
     }
     
     return self;
@@ -39,14 +30,14 @@
 
 -(void)setValue:(bool)value
 {
-    if(self.value == self.valuePrevious)
+    if(_value == _valuePrevious)
     {
-        if(self.valueTouching != nil)
+        if(_valueTouching != nil)
             [self valueTouching];
     }
     else
     {
-        if(self.valueChanging != nil)
+        if(_valueChanging != nil)
             [self valueChanging];
         
         _valuePrevious = _value;
@@ -54,7 +45,7 @@
         
         [[NSNotificationCenter defaultCenter] postNotificationName:(NSString *)self.key object:self];
 
-        if(self.valueChanged != nil)
+        if(_valueChanged != nil)
             [self valueChanged];
     }
 }
