@@ -34,7 +34,7 @@
     NSAssert(YES==NO, @"ModeBase::initMode should be override in each mode.");
 }
 
--(void)initMeasureMent
+-(void)initMeasurement
 {
     NSAssert(YES==NO, @"ModeBase::initMeasureMent should be override in each mode.");
 }

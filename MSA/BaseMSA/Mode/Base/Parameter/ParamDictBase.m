@@ -44,7 +44,7 @@
     NSAssert(YES==NO, @"ParamDictBase::parseParameter should be override in each mode/meas.");
 }
 
--(void)addParameter:(Parameter *)par withKey:(NSString *)key
+-(void)addParameter:(Parameter *)par forKey:(NSString *)key
 {
     NSAssert(YES==NO, @"ParamDictBase::addParameter should be override in each mode/meas.");
 }
