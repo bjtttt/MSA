@@ -10,10 +10,12 @@
 
 @class Mode;
 @class ShareSettings;
+@class MeasureBase;
 
 @interface ModeManager : NSObject
 
 @property (nonatomic) Mode *mode;
+@property (nonatomic) MeasureBase *measure;
 
 @property (nonatomic) ShareSettings *shareSettings;
 

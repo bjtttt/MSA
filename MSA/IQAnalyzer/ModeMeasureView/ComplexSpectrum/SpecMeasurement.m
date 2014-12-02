@@ -26,7 +26,7 @@
 -(id) init {
     if ((self = [super init]))
     {
-        self.measureName = [[NSMutableString alloc] initWithString:@"ComplexSpectrum"];
+        self.measureName = @"ComplexSpectrum";
     }
     
     return self;
@@ -46,7 +46,7 @@
 {
     UISoftPanel *uiSP = [[UISoftPanel alloc] init];
     uiSP.shareSettings = self.shareSettings;
-    uiSP.title = [@"Measure Bar 0" mutableCopy];
+    uiSP.title = @"Measure Bar 0";
     
     UISoftKey *uiSK = [[UISoftKey alloc] init];
     uiSK.softKeyType = KEY_BOOL;
@@ -77,7 +77,7 @@
 {
     UISoftPanel *uiSP = [[UISoftPanel alloc] init];
     uiSP.shareSettings = self.shareSettings;
-    uiSP.title = [@"Measure Bar 1" mutableCopy];
+    uiSP.title = @"Measure Bar 1";
     
     UISoftKey *uiSK = [[UISoftKey alloc] init];
     uiSK.softKeyType = KEY_ENUM;
@@ -110,7 +110,7 @@
 {
     UISoftPanel *uiSP = [[UISoftPanel alloc] init];
     uiSP.shareSettings = self.shareSettings;
-    uiSP.title = [@"Measure Bar 2" mutableCopy];
+    uiSP.title = @"Measure Bar 2";
     
     UISoftKey *uiSK = [[UISoftKey alloc] init];
     uiSK.softKeyType = KEY_BOOL;
@@ -170,7 +170,7 @@
 {
     UISoftPanel *uiSP = [[UISoftPanel alloc] init];
     uiSP.shareSettings = self.shareSettings;
-    uiSP.title = [@"Measure Bar 3" mutableCopy];
+    uiSP.title = @"Measure Bar 3";
     
     UISoftKey *uiSK = [[UISoftKey alloc] init];
     uiSK.softKeyType = KEY_VALUE;
@@ -199,7 +199,7 @@
     uiSK.softKeyType = KEY_ENUM_BOOL;
     uiSK.shareSettings = self.shareSettings;
     uiSK.connectParam = [self.measParDict getParameterBy:@"Internal Preamp Band"];
-    uiSK.connectSubBoolean = (BooleanParameter *)[self.measParDict getParameterBy:@"Internal Preamp Band"];
+    uiSK.connectSubBoolean = (BooleanParameter *)[self.measParDict getParameterBy:@"Internal Preamp"];
     [uiSK initSoftKeyEnum];
     [uiSK expandEnumSoftPanel];
     [uiSK initSoftKeySubBoolean];
@@ -207,36 +207,11 @@
     [uiSP addSoftKey:uiSK];
     
     uiSK = [[UISoftKey alloc] init];
-    uiSK.softKeyType = KEY_BOOL;
-    uiSK.shareSettings = self.shareSettings;
-    uiSK.connectParam = [self.measParDict getParameterBy:@"AmpcorState"];
-    [uiSK initSoftKeyEnum];
-    uiSK.softPanel = uiSP;
-    [uiSP addSoftKey:uiSK];
-    
-    uiSK = [[UISoftKey alloc] init];
     uiSK.softKeyType = KEY_ENUM;
     uiSK.shareSettings = self.shareSettings;
-    uiSK.connectParam = [self.measParDict getParameterBy:@"ReferenceOscillatorUI"];
+    uiSK.connectParam = [self.measParDict getParameterBy:@"Microwave Path Control"];
     [uiSK initSoftKeyEnum];
     [uiSK expandEnumSoftPanel];
-    uiSK.softPanel = uiSP;
-    [uiSP addSoftKey:uiSK];
-    
-    uiSK = [[UISoftKey alloc] init];
-    uiSK.softKeyType = KEY_ENUM;
-    uiSK.shareSettings = self.shareSettings;
-    uiSK.connectParam = [self.measParDict getParameterBy:@"Auto Align Type"];
-    [uiSK initSoftKeyEnum];
-    [uiSK expandEnumSoftPanel];
-    uiSK.softPanel = uiSP;
-    [uiSP addSoftKey:uiSK];
-    
-    uiSK = [[UISoftKey alloc] init];
-    uiSK.softKeyType = KEY_BOOL;
-    uiSK.shareSettings = self.shareSettings;
-    uiSK.connectParam = [self.measParDict getParameterBy:@"Auto Align Mode"];
-    [uiSK initSoftKeyEnum];
     uiSK.softPanel = uiSP;
     [uiSP addSoftKey:uiSK];
     
@@ -245,26 +220,126 @@
 
 -(UISoftPanel *)setupMeasureBar4Menu
 {
+    UISoftPanel *uiSP = [[UISoftPanel alloc] init];
+    uiSP.shareSettings = self.shareSettings;
+    uiSP.title = @"Measure Bar 4";
+
+    UISoftKey *uiSK = [[UISoftKey alloc] init];
+    uiSK.softKeyType = KEY_ENUM;
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"TriggerSource"];
+    [uiSK initSoftKeyEnum];
+    [uiSK expandEnumSoftPanel];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+    
+    uiSK = [[UISoftKey alloc] init];
+    uiSK.softKeyType = KEY_VALUE_BOOL;
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"Trigger Delay"];
+    uiSK.connectSubBoolean = (BooleanParameter *)[self.measParDict getParameterBy:@"Trigger Delay State"];
+    [uiSK initSoftKeySubBoolean];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+
+    return uiSP;
 }
 
 -(UISoftPanel *)setupMeasureBar5Menu
 {
+    UISoftPanel *uiSP = [[UISoftPanel alloc] init];
+    uiSP.shareSettings = self.shareSettings;
+    uiSP.title = @"Measure Bar 5";
+    
+    UISoftKey *uiSK = [[UISoftKey alloc] init];
+    uiSK.softKeyType = KEY_ENUM_BOOL;
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"Phase Noise Opt"];
+    uiSK.connectSubBoolean = (BooleanParameter *)[self.measParDict getParameterBy:@"Phase Noise Opt Auto"];
+    [uiSK initSoftKeyEnum];
+    [uiSK expandEnumSoftPanel];
+    [uiSK initSoftKeySubBoolean];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+
+    uiSK = [[UISoftKey alloc] init];
+    uiSK.softKeyType = KEY_ENUM_BOOL;
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"IfGainState"];
+    uiSK.connectSubBoolean = (BooleanParameter *)[self.measParDict getParameterBy:@"IFGainAuto"];
+    [uiSK initSoftKeyEnum];
+    [uiSK expandEnumSoftPanel];
+    [uiSK initSoftKeySubBoolean];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+    
+    return uiSP;
 }
 
 -(UISoftPanel *)setupMeasureBar6Menu
 {
+    UISoftPanel *uiSP = [[UISoftPanel alloc] init];
+    uiSP.shareSettings = self.shareSettings;
+    uiSP.title = @"Measure Bar 6";
+    
+    UISoftKey *uiSK = [[UISoftKey alloc] init];
+    uiSK.softKeyType = KEY_VALUE;
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"CenterFrequency"];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+
+    uiSK = [[UISoftKey alloc] init];
+    uiSK.softKeyType = KEY_ENUM_BOOL;
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"Average Type"];
+    uiSK.connectSubBoolean = (BooleanParameter *)[self.measParDict getParameterBy:@"Average Type Auto"];
+    [uiSK initSoftKeyEnum];
+    [uiSK expandEnumSoftPanel];
+    [uiSK initSoftKeySubBoolean];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+    
+    /*
+    uiSK = [[UISoftKey alloc] init];
+    uiSK.softKeyType = KEY_VALUE;
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"Average Counter"];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+     */
+    
+    uiSK = [[UISoftKey alloc] init];
+    uiSK.softKeyType = KEY_VALUE;
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"Average Number"];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+    
+    uiSK = [[UISoftKey alloc] init];
+    uiSK.softKeyType = KEY_BOOL;
+    uiSK.shareSettings = self.shareSettings;
+    uiSK.connectParam = [self.measParDict getParameterBy:@"Average State"];
+    [uiSK initSoftKeyEnum];
+    uiSK.softPanel = uiSP;
+    [uiSP addSoftKey:uiSK];
+    
+    return uiSP;
 }
 
 -(UISoftPanel *)setupMeasureBar7Menu
 {
+    return nil;
 }
 
 -(UISoftPanel *)setupMeasureBar8Menu
 {
+    return nil;
 }
 
 -(UISoftPanel *)setupMeasureBar9Menu
 {
+    return nil;
 }
 
 -(void)initMeasureSoftMenu

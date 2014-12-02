@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ModeManager.h"
 #import "Mode.h"
+#import "ModeBase.h"
 
 @interface ModeManager()
 
@@ -27,9 +28,14 @@
 
 -(void)initMode
 {
-    self.mode = [[Mode alloc] init];
-    [self.mode initMode];
-    [self.mode initMeasurement];
+    _mode = [[Mode alloc] init];
+    [_mode initMode];
+    [_mode initMeasurement];
+}
+
+-(MeasureBase *)measure
+{
+    return _mode.curMeasure;
 }
 
 @end

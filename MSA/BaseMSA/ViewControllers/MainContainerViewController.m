@@ -9,6 +9,7 @@
 #import "ShareSettings.h"
 #import "ParameterManager.h"
 #import "ModeManager.h"
+#import "MeasureBase.h"
 #import "MainContainerViewController.h"
 #import "DisplayContainerViewController.h"
 #import "MenuContainerViewController.h"
@@ -97,9 +98,9 @@
     //self.shareSettings.dataParameters = [[NSDictionary alloc] init];
     self.shareSettings.parManager = [[ParameterManager alloc] init];
         
-    [self.shareSettings initMeasureView];
+    //[self.shareSettings initMeasureView];
     //[self.shareSettings initMeasureBar];
-    [self.shareSettings initSoftMenuSystem];
+    //[self.shareSettings initSoftMenuSystem];
     
     NSAssert(self.parManager == nil, @"ParameterManager is NOT nil");
     
@@ -113,7 +114,7 @@
     self.modeManager = [[ModeManager alloc] init];
     self.modeManager.shareSettings = self.shareSettings;
     [self.modeManager initMode];
-    [self.modeManager initMenuSystem];
+    //[self.modeManager initMenuSystem];
 
     UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
     self.shareSettings.modeStoryboard = modeUIS;
@@ -286,7 +287,8 @@
         displayWidth = self.frameWidth - MENU_WIDTH;
     else
         displayWidth = self.frameWidth;
-    CGFloat barMenuPosition = [self.shareSettings measureBarPopupMenuPosition:self.shareSettings.barTappedIndex forWidth:displayWidth];
+    CGFloat barMenuPosition = [_shareSettings.modeManager.measure
+                               measureBarPopupMenuPosition:_shareSettings.barTappedIndex forWidth:displayWidth];
     
     if(self.shareSettings.presetMenuDisplayed == YES)
     {
@@ -312,7 +314,8 @@
     {
         if(self.shareSettings.barTappedIndex == -1)
         {
-            barMenuPosition = [self.shareSettings measureBarPopupMenuPosition:self.shareSettings.previousBarPopupMenuIndex forWidth:displayWidth];
+            barMenuPosition = [_shareSettings.modeManager.measure
+                               measureBarPopupMenuPosition:self.shareSettings.previousBarPopupMenuIndex forWidth:displayWidth];
             
             layoutBlock = ^(void)
             {

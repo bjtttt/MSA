@@ -24,6 +24,7 @@
 #import "ModeManager.h"
 #import "ModeBase.h"
 #import "MeasureBase.h"
+#import "MeasureBarDetail.h"
 
 @interface MeasureBarContainerViewController ()
 
@@ -166,19 +167,20 @@
     return YES;
 }
 
+// This method is not completed.
 -(void) setBarsStartAndWidthAccordingTo:(CGFloat)width
 {
     CGFloat prevWidth = 0.0;
     CGFloat barWidth = 0.0;
 
-    for(int i=0;i<self.shareSettings.modeManager.measureBarCount; i++)
+    for(int i=0;i<_shareSettings.modeManager.measure.mbarDetail.mbarCount; i++)
     {
         UIView *view = (UIView *)[self.barVs objectAtIndex:i];
         UIViewController<MeasureBarDefinition> *vc = (UIViewController<MeasureBarDefinition> *)[self.barVCs objectAtIndex:i];
         
-        CGFloat fv = [(NSNumber *)[self.shareSettings.barWidths objectAtIndex:i] floatValue];
-        if(self.shareSettings.useBarRatio == YES)
-            barWidth = width * fv / self.shareSettings.totalBarWidth;
+        CGFloat fv = [(NSNumber *)[_shareSettings.modeManager.measure.mbarDetail.mbarWidths objectAtIndex:i] floatValue];
+        if(_shareSettings.modeManager.measure.mbarDetail.useRatio == YES)
+            barWidth = width * fv / _shareSettings.modeManager.measure.mbarDetail.totalWidth;
         else
             barWidth = fv;
         
