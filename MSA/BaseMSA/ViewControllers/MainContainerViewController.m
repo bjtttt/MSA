@@ -120,6 +120,8 @@
     _shareSettings.modeManager = _modeManager;
     [_modeManager initMode];
     
+    _modeManager.mode.modeParDict = _parManager.modePars;
+    
     UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
     self.shareSettings.modeStoryboard = modeUIS;
     MeasureBarContainerViewController *mbarCVC = (MeasureBarContainerViewController *)[modeUIS instantiateViewControllerWithIdentifier:@"measureBarCVC"];
