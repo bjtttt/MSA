@@ -18,8 +18,10 @@
 #import "Bar4TableViewController.h"
 #import "Bar5TableViewController.h"
 #import "Bar6TableViewController.h"
-//#import "Bar7TableViewController.h"
-#import "MeasureBarDefinition.h"
+#import "Bar7TableViewController.h"
+#import "Bar8TableViewController.h"
+#import "Bar9TableViewController.h"
+#import "MeasureBarProtocol.h"
 #import "MeasureBarContainerView.h"
 #import "ModeManager.h"
 #import "ModeBase.h"
@@ -114,6 +116,24 @@
         self.bar6VC.shareSettings = self.shareSettings;
         self.bar6VC.measureBarCVC = self;
     }
+    if([segue.identifier isEqualToString:@"embedSegueToBar7VC"])
+    {
+        self.bar7VC = (Bar7TableViewController *)segue.destinationViewController;
+        self.bar7VC.shareSettings = self.shareSettings;
+        self.bar7VC.measureBarCVC = self;
+    }
+    if([segue.identifier isEqualToString:@"embedSegueToBar8VC"])
+    {
+        self.bar8VC = (Bar8TableViewController *)segue.destinationViewController;
+        self.bar8VC.shareSettings = self.shareSettings;
+        self.bar8VC.measureBarCVC = self;
+    }
+    if([segue.identifier isEqualToString:@"embedSegueToBar9VC"])
+    {
+        self.bar9VC = (Bar9TableViewController *)segue.destinationViewController;
+        self.bar9VC.shareSettings = self.shareSettings;
+        self.bar9VC.measureBarCVC = self;
+    }
 }
 
 -(void)setBarPopupMenuViewController:(BarPopupMenuContainerViewController *)barPopupMenuCVC
@@ -180,7 +200,7 @@
     for(int i=0;i<count; i++)
     {
         UIView *view = (UIView *)_barVs[i];
-        UIViewController<MeasureBarDefinition> *vc = (UIViewController<MeasureBarDefinition> *)_barVCs[i];
+        UIViewController<MeasureBarProtocol> *vc = (UIViewController<MeasureBarProtocol> *)_barVCs[i];
         
         if(_shareSettings.menuDisplayed == YES)
         {
@@ -209,7 +229,7 @@
     for(int i=count;i<MAX_MEAS_BAR_COUNT;i++)
     {
         UIView *view = (UIView *)_barVs[i];
-        UIViewController<MeasureBarDefinition> *vc = (UIViewController<MeasureBarDefinition> *)_barVCs[i];
+        UIViewController<MeasureBarProtocol> *vc = (UIViewController<MeasureBarProtocol> *)_barVCs[i];
 
         view.frame = CGRectMake(0, 0, 0, 0);
         vc.frameWidth = 0;

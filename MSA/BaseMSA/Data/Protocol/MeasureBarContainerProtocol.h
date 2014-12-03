@@ -12,7 +12,7 @@
 @class BarPopupMenuContainerViewController;
 @class DisplayContainerViewController;
 
-@protocol MeasureBarContainerDefinition
+@protocol MeasureBarContainerProtocol
 
 @property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
 

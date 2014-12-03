@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol MeasureBarDefinition
+@protocol MeasureBarProtocol
 
 @property (nonatomic) CGFloat frameWidth;
 @property (nonatomic) CGFloat frameHeight;

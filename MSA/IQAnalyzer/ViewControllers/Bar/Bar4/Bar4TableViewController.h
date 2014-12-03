@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#include "ShareSettings.h"
-#import "MeasureBarDefinition.h"
+#import "ShareSettings.h"
+#import "MeasureBarProtocol.h"
 
 @class MeasureBarContainerViewController;
 @class BarPopupMenuContainerViewController;
 
-@interface Bar4TableViewController : UITableViewController <MeasureBarDefinition>
+@interface Bar4TableViewController : UITableViewController <MeasureBarProtocol>
 
 @property (weak, nonatomic) IBOutlet MeasureBarContainerViewController *measureBarCVC;
 @property (weak, nonatomic) IBOutlet BarPopupMenuContainerViewController *barPopupMenuCVC;
