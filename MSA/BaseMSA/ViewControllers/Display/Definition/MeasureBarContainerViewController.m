@@ -125,7 +125,10 @@
     self.bar4VC.barPopupMenuCVC = self.barPopupMenuCVC;
     self.bar5VC.barPopupMenuCVC = self.barPopupMenuCVC;
     self.bar6VC.barPopupMenuCVC = self.barPopupMenuCVC;
-}
+    self.bar7VC.barPopupMenuCVC = self.barPopupMenuCVC;
+    self.bar8VC.barPopupMenuCVC = self.barPopupMenuCVC;
+    self.bar9VC.barPopupMenuCVC = self.barPopupMenuCVC;
+}  
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

@@ -185,8 +185,6 @@
 		9A23BFCC1A2719AC0069971A /* MSAList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MSAList.plist; sourceTree = "<group>"; };
 		9A23BFCD1A2719AC0069971A /* ShareSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareSettings.h; sourceTree = "<group>"; };
 		9A23BFCE1A2719AC0069971A /* ShareSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareSettings.m; sourceTree = "<group>"; };
-		9A23BFD11A2719AC0069971A /* MeasureBarContainerDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBarContainerDefinition.h; sourceTree = "<group>"; };
-		9A23BFD21A2719AC0069971A /* MeasureBarDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBarDefinition.h; sourceTree = "<group>"; };
 		9A23BFD31A2719AC0069971A /* MeasureBarDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBarDetail.h; sourceTree = "<group>"; };
 		9A23BFD41A2719AC0069971A /* MeasureBarDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureBarDetail.m; sourceTree = "<group>"; };
 		9A23BFD61A2719AC0069971A /* AmplitudeParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmplitudeParameter.h; sourceTree = "<group>"; };
@@ -428,6 +426,8 @@
 		9A3FECC71A2F3D8900B9801C /* Bar8TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar8TableViewController.m; sourceTree = "<group>"; };
 		9A3FECC91A2F3D8900B9801C /* Bar9TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar9TableViewController.h; sourceTree = "<group>"; };
 		9A3FECCA1A2F3D8900B9801C /* Bar9TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar9TableViewController.m; sourceTree = "<group>"; };
+		9A3FECCE1A2F4F1C00B9801C /* MeasureBarContainerDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBarContainerDefinition.h; sourceTree = "<group>"; };
+		9A3FECCF1A2F4F1C00B9801C /* MeasureBarDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBarDefinition.h; sourceTree = "<group>"; };
 		9A6616BD1A2943C500D3E2CA /* MeasureBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBase.h; sourceTree = "<group>"; };
 		9A6616BE1A2943C500D3E2CA /* MeasureBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureBase.m; sourceTree = "<group>"; };
 		9A6616BF1A2943C500D3E2CA /* ModeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeBase.h; sourceTree = "<group>"; };
@@ -510,6 +510,7 @@
 		9A23BFCF1A2719AC0069971A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				9A3FECCD1A2F4F1C00B9801C /* Protocol */,
 				9A23BFD01A2719AC0069971A /* Definition */,
 				9A23BFD51A2719AC0069971A /* Parameter */,
 			);
@@ -519,8 +520,6 @@
 		9A23BFD01A2719AC0069971A /* Definition */ = {
 			isa = PBXGroup;
 			children = (
-				9A23BFD11A2719AC0069971A /* MeasureBarContainerDefinition.h */,
-				9A23BFD21A2719AC0069971A /* MeasureBarDefinition.h */,
 				9A23BFD31A2719AC0069971A /* MeasureBarDetail.h */,
 				9A23BFD41A2719AC0069971A /* MeasureBarDetail.m */,
 			);
@@ -1146,6 +1145,15 @@
 				9A3FECCA1A2F3D8900B9801C /* Bar9TableViewController.m */,
 			);
 			path = Bar9;
+			sourceTree = "<group>";
+		};
+		9A3FECCD1A2F4F1C00B9801C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9A3FECCE1A2F4F1C00B9801C /* MeasureBarContainerDefinition.h */,
+				9A3FECCF1A2F4F1C00B9801C /* MeasureBarDefinition.h */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		9A6616BC1A2943C500D3E2CA /* ModeMeasureViewWindow */ = {

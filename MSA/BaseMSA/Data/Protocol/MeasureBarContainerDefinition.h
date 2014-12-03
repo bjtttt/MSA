@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 
+@class BarPopupMenuContainerViewController;
 @class DisplayContainerViewController;
 
 @protocol MeasureBarContainerDefinition
@@ -26,6 +27,7 @@
 
 -(void)adjustMeasureBarWidth:(BOOL)animated;
 -(void)setBarsStartAndWidthAccordingTo:(CGFloat)width;
+-(void)setBarPopupMenuViewController:(BarPopupMenuContainerViewController *)barPopupMenuCVC;
 
 @optional
 

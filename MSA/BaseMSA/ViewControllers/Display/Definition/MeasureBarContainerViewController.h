@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
-//#import "MeasureBarContainerDefinition.h"
+#import "MeasureBarContainerDefinition.h"
 
 @class DisplayContainerViewController;
 @class Bar0TableViewController;
@@ -25,7 +25,7 @@
 @class MeasureBarContainerView;
 @class BarPopupMenuContainerViewController;
 
-@interface MeasureBarContainerViewController : UIViewController
+@interface MeasureBarContainerViewController : UIViewController <MeasureBarContainerDefinition>
 
 @property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
 @property (weak, nonatomic) IBOutlet BarPopupMenuContainerViewController *barPopupMenuCVC;
@@ -69,15 +69,6 @@
 -(void)setBarsStartAndWidthAccordingTo:(CGFloat)width;
 
 -(void)setBarPopupMenuViewController:(BarPopupMenuContainerViewController *)barPopupMenuCVC;
-
-/*
--(void)setEachMeasureBar:(CGFloat)bar1Width;
--(void)setEachMeasureBar:(CGFloat)bar1Width bar2Width:(CGFloat)bar2Width;
--(void)setEachMeasureBar:(CGFloat)bar1Width bar2Width:(CGFloat)bar2Width bar3Width:(CGFloat)bar3Width;
--(void)setEachMeasureBar:(CGFloat)bar1Width bar2Width:(CGFloat)bar2Width bar3Width:(CGFloat)bar3Width bar4Width:(CGFloat)bar4Width;
--(void)setEachMeasureBar:(CGFloat)bar1Width bar2Width:(CGFloat)bar2Width bar3Width:(CGFloat)bar3Width bar4Width:(CGFloat)bar4Width bar5Width:(CGFloat)bar5Width;
--(void)setEachMeasureBar:(CGFloat)bar1Width bar2Width:(CGFloat)bar2Width bar3Width:(CGFloat)bar3Width bar4Width:(CGFloat)bar4Width bar5Width:(CGFloat)bar5Width bar6Width:(CGFloat)bar6Width;
-*/
 
 @end
 
