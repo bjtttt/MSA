@@ -44,6 +44,7 @@
 -(void)initMeasurement
 {
     [_specMeas initMeasureMent];
+    self.curMeasure = _specMeas;
 }
 
 @end

@@ -147,6 +147,8 @@
 		9A23C1801A2719B10069971A /* Bar0OneLineYellowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C1681A2719B10069971A /* Bar0OneLineYellowTableViewCell.m */; };
 		9A23C1811A2719B10069971A /* Bar0SingleContinousTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C16A1A2719B10069971A /* Bar0SingleContinousTableViewCell.m */; };
 		9A23C1821A2719B10069971A /* MeasureBarContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C16C1A2719B10069971A /* MeasureBarContainerView.m */; };
+		9A3FECCB1A2F3D8900B9801C /* Bar8TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3FECC71A2F3D8900B9801C /* Bar8TableViewController.m */; };
+		9A3FECCC1A2F3D8900B9801C /* Bar9TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3FECCA1A2F3D8900B9801C /* Bar9TableViewController.m */; };
 		9A6616CC1A2943C500D3E2CA /* MeasureBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616BE1A2943C500D3E2CA /* MeasureBase.m */; };
 		9A6616CD1A2943C500D3E2CA /* ModeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616C01A2943C500D3E2CA /* ModeBase.m */; };
 		9A6616CE1A2943C500D3E2CA /* ViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616C21A2943C500D3E2CA /* ViewBase.m */; };
@@ -422,6 +424,10 @@
 		9A23C16A1A2719B10069971A /* Bar0SingleContinousTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar0SingleContinousTableViewCell.m; sourceTree = "<group>"; };
 		9A23C16B1A2719B10069971A /* MeasureBarContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBarContainerView.h; sourceTree = "<group>"; };
 		9A23C16C1A2719B10069971A /* MeasureBarContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureBarContainerView.m; sourceTree = "<group>"; };
+		9A3FECC61A2F3D8900B9801C /* Bar8TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar8TableViewController.h; sourceTree = "<group>"; };
+		9A3FECC71A2F3D8900B9801C /* Bar8TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar8TableViewController.m; sourceTree = "<group>"; };
+		9A3FECC91A2F3D8900B9801C /* Bar9TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar9TableViewController.h; sourceTree = "<group>"; };
+		9A3FECCA1A2F3D8900B9801C /* Bar9TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar9TableViewController.m; sourceTree = "<group>"; };
 		9A6616BD1A2943C500D3E2CA /* MeasureBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBase.h; sourceTree = "<group>"; };
 		9A6616BE1A2943C500D3E2CA /* MeasureBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureBase.m; sourceTree = "<group>"; };
 		9A6616BF1A2943C500D3E2CA /* ModeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeBase.h; sourceTree = "<group>"; };
@@ -1008,6 +1014,8 @@
 		9A23C1441A2719B10069971A /* Bar */ = {
 			isa = PBXGroup;
 			children = (
+				9A3FECC51A2F3D8900B9801C /* Bar8 */,
+				9A3FECC81A2F3D8900B9801C /* Bar9 */,
 				9A23C1451A2719B10069971A /* Bar0 */,
 				9A23C1481A2719B10069971A /* Bar1 */,
 				9A23C14B1A2719B10069971A /* Bar2 */,
@@ -1120,6 +1128,24 @@
 				9A23C16A1A2719B10069971A /* Bar0SingleContinousTableViewCell.m */,
 			);
 			path = CellStyle;
+			sourceTree = "<group>";
+		};
+		9A3FECC51A2F3D8900B9801C /* Bar8 */ = {
+			isa = PBXGroup;
+			children = (
+				9A3FECC61A2F3D8900B9801C /* Bar8TableViewController.h */,
+				9A3FECC71A2F3D8900B9801C /* Bar8TableViewController.m */,
+			);
+			path = Bar8;
+			sourceTree = "<group>";
+		};
+		9A3FECC81A2F3D8900B9801C /* Bar9 */ = {
+			isa = PBXGroup;
+			children = (
+				9A3FECC91A2F3D8900B9801C /* Bar9TableViewController.h */,
+				9A3FECCA1A2F3D8900B9801C /* Bar9TableViewController.m */,
+			);
+			path = Bar9;
 			sourceTree = "<group>";
 		};
 		9A6616BC1A2943C500D3E2CA /* ModeMeasureViewWindow */ = {
@@ -1413,6 +1439,7 @@
 				9AEFB9551A286F9A00E2CBFD /* SpecMeasurement.m in Sources */,
 				9A23C0FA1A2719AC0069971A /* DisplayContainerViewController.m in Sources */,
 				9A23C0CA1A2719AC0069971A /* TimeParameter.m in Sources */,
+				9A3FECCB1A2F3D8900B9801C /* Bar8TableViewController.m in Sources */,
 				9A23C0FF1A2719AC0069971A /* MeasureSelectNavigationViewController.m in Sources */,
 				9A23C1101A2719AC0069971A /* SoftMenuContainerViewController.m in Sources */,
 				9A23C1171A2719AC0069971A /* MsgMasterNavigationViewController.m in Sources */,
@@ -1511,6 +1538,7 @@
 				9A23C1001A2719AC0069971A /* MeasureSelectTableViewController.m in Sources */,
 				9A23C1811A2719B10069971A /* Bar0SingleContinousTableViewCell.m in Sources */,
 				9A23C0C61A2719AC0069971A /* OnOffParameter.m in Sources */,
+				9A3FECCC1A2F3D8900B9801C /* Bar9TableViewController.m in Sources */,
 				9A23C1091A2719AC0069971A /* SoftMenuLeftLabelResultBooleanBranchTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

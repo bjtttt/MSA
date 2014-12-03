@@ -51,7 +51,7 @@
         //[self.bar0V.layer setBackgroundColor:[UIColor darkGrayColor].CGColor];
     }
     
-    self.barCV.barVs = [[NSMutableArray alloc] initWithObjects:self.bar0V, self.bar1V, self.bar2V, self.bar3V, self.bar4V, self.bar5V, self.bar6V, nil];
+    self.barCV.barVs = [[NSMutableArray alloc] initWithObjects:self.bar0V, self.bar1V, self.bar2V, self.bar3V, self.bar4V, self.bar5V, self.bar6V, self.bar7V, self.bar8V, self.bar9V, nil];
     
     //self.barCV.sendNotification = YES;
 }
@@ -61,7 +61,7 @@
     
     if(self.barVCs == nil)
     {
-        self.barVCs = [[NSMutableArray alloc] initWithObjects:self.bar0VC, self.bar1VC, self.bar2VC, self.bar3VC, self.bar4VC, self.bar5VC, self.bar6VC, nil];//, self.bar7VC, nil];
+        self.barVCs = [[NSMutableArray alloc] initWithObjects:self.bar0VC, self.bar1VC, self.bar2VC, self.bar3VC, self.bar4VC, self.bar5VC, self.bar6VC, self.bar7VC, self.bar8VC, self.bar9VC, nil];//, self.bar7VC, nil];
     }
     if(self.barCV.shareSettings == nil)
         self.barCV.shareSettings = self.shareSettings;
@@ -176,22 +176,41 @@
     int count = _shareSettings.modeManager.curMBarDetail.mbarCount;
     for(int i=0;i<count; i++)
     {
-        UIView *view = (UIView *)[self.barVs objectAtIndex:i];
-        UIViewController<MeasureBarDefinition> *vc = (UIViewController<MeasureBarDefinition> *)[self.barVCs objectAtIndex:i];
+        UIView *view = (UIView *)_barVs[i];
+        UIViewController<MeasureBarDefinition> *vc = (UIViewController<MeasureBarDefinition> *)_barVCs[i];
         
-        CGFloat fv = [(NSNumber *)[_shareSettings.modeManager.curMBarDetail.mbarWidths objectAtIndex:i] floatValue];
-        if(_shareSettings.modeManager.curMBarDetail.useRatio == YES)
-            barWidth = width * fv / _shareSettings.modeManager.curMBarDetail.totalWidth;
+        if(_shareSettings.menuDisplayed == YES)
+        {
+            CGFloat fv = [(NSNumber *)_shareSettings.modeManager.curMBarDetail.mbarSmallWidths[i] floatValue];
+            if(_shareSettings.modeManager.curMBarDetail.useRatio == YES)
+                barWidth = width * fv / _shareSettings.modeManager.curMBarDetail.totalSmallWidth;
+            else
+                barWidth = fv;
+        }
         else
-            barWidth = fv;
-        
-        //NSLog(@"Bar Index %d : Width %f", i, barWidth);
+        {
+            CGFloat fv = [(NSNumber *)_shareSettings.modeManager.curMBarDetail.mbarWidths[i] floatValue];
+            if(_shareSettings.modeManager.curMBarDetail.useRatio == YES)
+                barWidth = width * fv / _shareSettings.modeManager.curMBarDetail.totalWidth;
+            else
+                barWidth = fv;
+        }
         
         view.frame = CGRectMake(prevWidth, 0, barWidth, BAR_HEIGHT);
         vc.frameWidth = barWidth;
         vc.frameHeight = BAR_HEIGHT;
         
         prevWidth = prevWidth + barWidth;
+    }
+    
+    for(int i=count;i<MAX_MEAS_BAR_COUNT;i++)
+    {
+        UIView *view = (UIView *)_barVs[i];
+        UIViewController<MeasureBarDefinition> *vc = (UIViewController<MeasureBarDefinition> *)_barVCs[i];
+
+        view.frame = CGRectMake(0, 0, 0, 0);
+        vc.frameWidth = 0;
+        vc.frameHeight = 0;
     }
 }
 

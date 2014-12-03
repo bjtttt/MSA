@@ -86,6 +86,7 @@ typedef NS_ENUM(int, ParamDictType) {
 #define BAR_HEIGHT 120.0f
 #define NAVBAR_HEIGHT 44.0f
 #define ADDINSTRUMENT_HEIGHT 75.0f
+#define MAX_MEAS_BAR_COUNT 10
 
 #define DEBUG_OUTPUT YES
 
