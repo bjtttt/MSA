@@ -12,7 +12,6 @@
 @interface EnumMemberInfo : NSObject
 
 @property (nonatomic) int value;
-
 @property (nonatomic) NSString *display;
 @property (nonatomic) NSString *displayShort;
 

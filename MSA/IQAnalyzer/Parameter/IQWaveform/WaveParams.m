@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "WaveParams.h"
+#import "ShareSettings.h"
 
 @interface WaveParams()
 
@@ -15,8 +16,16 @@
 
 @implementation WaveParams
 
--(id) init {
-    if ((self = [super init]))
+-(id)init
+{
+    [NSException raise:@"WaveParams::init" format:@"Call WaveParams::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
+{
+    if ((self = [super initWithConfig:ss]))
     {
     }
     

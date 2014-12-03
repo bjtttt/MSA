@@ -7,15 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MeasParamDictBase.h"
 
-@class ShareSettings;
-
-@interface WaveParams : NSObject
-
-@property (nonatomic) ShareSettings *shareSettings;
-
--(void)registerParameterEvent;
--(void)unregisterParameterEvent;
--(void)parseParameter;
+@interface WaveParams : MeasParamDictBase
 
 @end

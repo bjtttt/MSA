@@ -27,6 +27,7 @@
 @property (nonatomic) Parameter *connectParam;
 @property (nonatomic) int *connectEnumValue;
 
+-(id)initWithConfig:(ShareSettings *)ss;
 
 @end
 

@@ -16,12 +16,20 @@
 
 @implementation UISoftMenu
 
-- (id) init
+-(id)init
+{
+    [NSException raise:@"UISoftMenu::init" format:@"Call UISoftMenu::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super init])
     {
-        self.measBarPanels = [[NSMutableArray alloc] init];
-        self.softMenuPanels = [[NSMutableArray alloc] init];
+        _shareSettings = ss;
+        _measBarPanels = [[NSMutableArray alloc] init];
+        _softMenuPanels = [[NSMutableArray alloc] init];
     }
     
     return self;

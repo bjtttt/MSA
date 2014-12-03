@@ -22,6 +22,7 @@
 @property (nonatomic) UISoftKey *parentSoftKey;
 
 -(void)addSoftKey:(UISoftKey *)uiSK;
+-(id)initWithConfig:(ShareSettings *)ss;
 
 @end
 

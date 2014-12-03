@@ -21,4 +21,6 @@
 -(void)unregisterParameterChangedEvent;
 -(void)parseParameter;
 
+-(id)initWithConfig:(ShareSettings *)ss;
+
 @end

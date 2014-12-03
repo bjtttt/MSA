@@ -17,11 +17,19 @@
 
 @implementation Mode
 
--(id) init {
-    if ((self = [super init]))
+-(id)init
+{
+    [NSException raise:@"Mode::init" format:@"Call Mode::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
+{
+    if ((self = [super initWithConfig:ss]))
     {
-        self.modeName = [@"IQ Analyzer" mutableCopy];
-        self.specMeas = [[SpecMeasurement alloc] init];
+        self.modeName = @"IQ Analyzer";
+        _specMeas = [[SpecMeasurement alloc] initWithConfig:ss];
     }
     
     return self;
@@ -33,7 +41,8 @@
 
 -(void)initMeasurement
 {
-    [self.specMeas initMeasureSoftMenu];
+    _specMeas.shareSettings = self.shareSettings;
+    [_specMeas initMeasureSoftMenu];
 }
 
 @end

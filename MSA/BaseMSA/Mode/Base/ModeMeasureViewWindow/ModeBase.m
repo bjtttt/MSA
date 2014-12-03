@@ -15,10 +15,19 @@
 
 @implementation ModeBase
 
--(id) init {
+-(id)init
+{
+    [NSException raise:@"ModeBase::init" format:@"Call ModeBase::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
+{
     if ((self = [super init]))
     {
-        self.measureDict = [[NSMutableDictionary alloc] init];
+        _shareSettings = ss;
+        _measureDict = [[NSMutableDictionary alloc] init];
     }
     
     return self;
@@ -26,17 +35,17 @@
 
 -(void)switchMeasurement:(MeasureBase *)curMeas
 {
-    NSAssert(YES==NO, @"ModeBase::switchMeasure should be override in each mode.");
+    [NSException raise:@"ModeBase::switchMeasurement:" format:@"ModeBase::switchMeasure: should be override in each mode."];
 }
 
 -(void)initMode
 {
-    NSAssert(YES==NO, @"ModeBase::initMode should be override in each mode.");
+    [NSException raise:@"ModeBase::initMode" format:@"ModeBase::initMode should be override in each mode."];
 }
 
 -(void)initMeasurement
 {
-    NSAssert(YES==NO, @"ModeBase::initMeasureMent should be override in each mode.");
+    [NSException raise:@"ModeBase::initMeasurement" format:@"ModeBase::initMeasurement should be override in each mode."];
 }
 
 @end

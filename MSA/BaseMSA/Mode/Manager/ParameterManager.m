@@ -16,26 +16,37 @@
 
 @implementation ParameterManager
 
--(id) init {
+-(id)init
+{
+    [NSException raise:@"ParameterManager::init" format:@"Call ParameterManager::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
+{
     if ((self = [super init]))
     {
-        self.modePars = [[ModeParams alloc] init];
+        _shareSettings = ss;
+        _modePars = [[ModeParams alloc] initWithConfig:ss];
     }
     
     return self;
 }
 
--(void) registerParameterChangedEvent {
-    [self.modePars registerParameterEvent];
+-(void)registerParameterChangedEvent
+{
+    [_modePars registerParameterEvent];
 }
 
--(void) unregisterParameterChangedEvent {
-    [self.modePars unregisterParameterEvent];
+-(void)unregisterParameterChangedEvent
+{
+    [_modePars unregisterParameterEvent];
 }
 
 -(void)parseParameter
 {
-    [self.modePars parseParameter];
+    [_modePars parseParameter];
 }
 
 @end

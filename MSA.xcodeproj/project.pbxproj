@@ -154,6 +154,7 @@
 		9A6616D01A2943C500D3E2CA /* MeasBarParamDictBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616C71A2943C500D3E2CA /* MeasBarParamDictBase.m */; };
 		9A6616D11A2943C500D3E2CA /* MeasParamDictBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616C91A2943C500D3E2CA /* MeasParamDictBase.m */; };
 		9A6616D21A2943C500D3E2CA /* ModeParamDictBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616CB1A2943C500D3E2CA /* ModeParamDictBase.m */; };
+		9A9209301A2EC33500E9651E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A92092E1A2EC33500E9651E /* Main.storyboard */; };
 		9A9C670E19AD6C81007D3248 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C670D19AD6C81007D3248 /* main.m */; };
 		9A9C671119AD6C81007D3248 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C671019AD6C81007D3248 /* AppDelegate.m */; };
 		9A9C671419AD6C81007D3248 /* MSA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C671219AD6C81007D3248 /* MSA.xcdatamodeld */; };
@@ -163,6 +164,7 @@
 		9AEFB94D1A285DAD00E2CBFD /* ParameterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB9471A285DAD00E2CBFD /* ParameterManager.m */; };
 		9AEFB9501A286C9400E2CBFD /* Mode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB94F1A286C9400E2CBFD /* Mode.m */; };
 		9AEFB9551A286F9A00E2CBFD /* SpecMeasurement.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB9541A286F9A00E2CBFD /* SpecMeasurement.m */; };
+		9AFD9F1F1A2EC42D00BD660E /* MenuContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD9F1E1A2EC42D00BD660E /* MenuContainerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -434,6 +436,7 @@
 		9A6616C91A2943C500D3E2CA /* MeasParamDictBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasParamDictBase.m; sourceTree = "<group>"; };
 		9A6616CA1A2943C500D3E2CA /* ModeParamDictBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeParamDictBase.h; sourceTree = "<group>"; };
 		9A6616CB1A2943C500D3E2CA /* ModeParamDictBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeParamDictBase.m; sourceTree = "<group>"; };
+		9A92092F1A2EC33500E9651E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MSA/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		9A9C670819AD6C81007D3248 /* MSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9C670C19AD6C81007D3248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A9C670D19AD6C81007D3248 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -452,6 +455,8 @@
 		9AEFB9511A286CA900E2CBFD /* Mode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mode.h; sourceTree = "<group>"; };
 		9AEFB9541A286F9A00E2CBFD /* SpecMeasurement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecMeasurement.m; sourceTree = "<group>"; };
 		9AEFB9561A286FA700E2CBFD /* SpecMeasurement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecMeasurement.h; sourceTree = "<group>"; };
+		9AFD9F1D1A2EC42D00BD660E /* MenuContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuContainerView.h; sourceTree = "<group>"; };
+		9AFD9F1E1A2EC42D00BD660E /* MenuContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuContainerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -488,6 +493,7 @@
 		9A23BFCB1A2719AC0069971A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9A92092E1A2EC33500E9651E /* Main.storyboard */,
 				9A23BFCC1A2719AC0069971A /* MSAList.plist */,
 				9A23BFCD1A2719AC0069971A /* ShareSettings.h */,
 				9A23BFCE1A2719AC0069971A /* ShareSettings.m */,
@@ -746,6 +752,8 @@
 			isa = PBXGroup;
 			children = (
 				9A23C04D1A2719AC0069971A /* Definition */,
+				9AFD9F1D1A2EC42D00BD660E /* MenuContainerView.h */,
+				9AFD9F1E1A2EC42D00BD660E /* MenuContainerView.m */,
 				9A23C0741A2719AC0069971A /* MenuContainerViewController.h */,
 				9A23C0751A2719AC0069971A /* MenuContainerViewController.m */,
 			);
@@ -1341,6 +1349,7 @@
 				9A23C16E1A2719B10069971A /* Mode.storyboard in Resources */,
 				9A23C0D91A2719AC0069971A /* MsgEmpty.png in Resources */,
 				9A23C0CE1A2719AC0069971A /* MsgError.png in Resources */,
+				9A9209301A2EC33500E9651E /* Main.storyboard in Resources */,
 				9A23C0EB1A2719AC0069971A /* ShowMenu.png in Resources */,
 				9A23C0E01A2719AC0069971A /* AddInstrument.png in Resources */,
 				9A23C16D1A2719B10069971A /* Mode.plist in Resources */,
@@ -1495,6 +1504,7 @@
 				9A23C17F1A2719B10069971A /* Bar0OneLineTableViewCell.m in Sources */,
 				9A23C1191A2719AC0069971A /* MsgSplitViewController.m in Sources */,
 				9A23C1211A2719AC0069971A /* SystemContainerViewController.m in Sources */,
+				9AFD9F1F1A2EC42D00BD660E /* MenuContainerView.m in Sources */,
 				9A23C10C1A2719AC0069971A /* SoftMenuMidLabelBranchTableViewCell.m in Sources */,
 				9A23C1011A2719AC0069971A /* MeasureContainerViewController.m in Sources */,
 				9A23C1071A2719AC0069971A /* PresetMenuTableViewController.m in Sources */,
@@ -1522,6 +1532,17 @@
 			targetProxy = 9A9C672219AD6C81007D3248 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A92092E1A2EC33500E9651E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A92092F1A2EC33500E9651E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9A9C672919AD6C81007D3248 /* Debug */ = {

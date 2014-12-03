@@ -11,14 +11,18 @@
 @class Mode;
 @class ShareSettings;
 @class MeasureBase;
+@class MeasureBarDetail;
 
 @interface ModeManager : NSObject
 
 @property (nonatomic) Mode *mode;
-@property (nonatomic) MeasureBase *measure;
+@property (nonatomic, readonly) MeasureBase *measure;
+@property (nonatomic, readonly) MeasureBarDetail *mbarDetail;
 
 @property (nonatomic) ShareSettings *shareSettings;
 
 -(void)initMode;
+
+-(id)initWithConfig:(ShareSettings *)ss;
 
 @end

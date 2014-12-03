@@ -18,6 +18,8 @@
 @property (nonatomic) NSMutableArray *measBarPanels;
 @property (nonatomic) NSMutableArray *softMenuPanels;
 
+-(id)initWithConfig:(ShareSettings *)ss;
+
 @end
 
 #endif

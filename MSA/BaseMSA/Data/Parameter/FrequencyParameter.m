@@ -17,9 +17,16 @@
 
 @implementation FrequencyParameter
 
-- (id) init
+-(id)init
 {
-    if(self = [super init])
+    [NSException raise:@"FrequencyParameter::init" format:@"Call FrequencyParameter::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
+{
+    if(self = [super initWithConfig:ss])
     {
         self.valueType = VAL_FREQ;
         self.unit = @"Hz";

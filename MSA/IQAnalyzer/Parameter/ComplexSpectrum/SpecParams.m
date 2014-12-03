@@ -17,8 +17,16 @@
 
 @implementation SpecParams
 
--(id) init {
-    if ((self = [super init]))
+-(id)init
+{
+    [NSException raise:@"SpecParams::init" format:@"Call SpecParams::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
+{
+    if ((self = [super initWithConfig:ss]))
     {
     }
     

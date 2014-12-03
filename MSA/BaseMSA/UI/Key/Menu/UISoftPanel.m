@@ -16,11 +16,19 @@
 
 @implementation UISoftPanel
 
-- (id) init
+-(id)init
+{
+    [NSException raise:@"UISoftPanel::init" format:@"Call UISoftPanel::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super init])
     {
-        self.keyArray = [[NSMutableArray alloc] init];
+        _shareSettings = ss;
+        _keyArray = [[NSMutableArray alloc] init];
     }
     
     return self;

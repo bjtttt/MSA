@@ -29,4 +29,6 @@
 -(void)initMode;
 -(void)initMeasurement;
 
+-(id)initWithConfig:(ShareSettings *)ss;
+
 @end

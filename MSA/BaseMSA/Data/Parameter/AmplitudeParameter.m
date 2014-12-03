@@ -17,9 +17,16 @@
 
 @implementation AmplitudeParameter
 
-- (id) init
+-(id)init
 {
-    if(self = [super init])
+    [NSException raise:@"AmplitudeParameter::init" format:@"Call AmplitudeParameter::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
+{
+    if(self = [super initWithConfig:ss])
     {
         self.valueType = VAL_AMP;
         self.unit = @"dBm";

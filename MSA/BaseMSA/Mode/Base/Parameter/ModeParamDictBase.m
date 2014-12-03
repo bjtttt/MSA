@@ -17,12 +17,20 @@
 
 @implementation ModeParamDictBase
 
--(id) init {
-    if ((self = [super init]))
+-(id)init
+{
+    [NSException raise:@"ModeParamDictBase::init" format:@"Call ModeParamDictBase::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id) initWithConfig:(ShareSettings *)ss
+{
+    if ((self = [super initWithConfig:ss]))
     {
-        self.parDict = [[NSMutableDictionary alloc] init];
-        self.measParArray = [[NSMutableArray alloc] init];
         self.dictType = MODE_DICT;
+        self.parDict = [[NSMutableDictionary alloc] init];
+        _measParArray = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -36,16 +44,6 @@
 -(NSString *)measName
 {
     return nil;
-}
-
--(void)setShareSettings:(ShareSettings *)shareSettings
-{
-    [super setShareSettings:shareSettings];
-    
-    for (MeasParamDictBase *measPars in self.measParArray)
-    {
-        measPars.shareSettings = shareSettings;
-    }
 }
 
 -(void)addMeasurePar:(MeasParamDictBase *)measPar
@@ -63,25 +61,52 @@
 
 -(void)addParameter:(Parameter *)par forKey:(NSString *)key
 {
-    NSAssert(par != nil, @"Cannot insert nil parameter into mode %@ parameter dictionary.", self.modeName);
-    NSAssert(key != nil, @"Cannot insert nil key into mode %@ parameter dictionary.", self.modeName);
-    NSAssert(key.length > 0, @"Cannot insert empty key into mode %@ parameter dictionary.", self.modeName);
+    if(self.parDict == nil)
+        [NSException raise:@"ModeParamDictBase::getParameterBy:" format:@"Cannot use nil data dictionary for mode(\"%@\").", self.modeName];
+    if(par == nil)
+        [NSException raise:@"ModeParamDictBase::addParameter:forKey:" format:@"Cannot insert nil parameter into mode(\"%@\") mode parameter dictionary.", self.modeName];
+    if(key == nil)
+        [NSException raise:@"ModeParamDictBase::addParameter:forKey:" format:@"Cannot insert nil key into mode(\"%@\") mode parameter dictionary.", self.modeName];
+    if(key.length <= 0)
+        [NSException raise:@"ModeParamDictBase::addParameter:forKey:" format:@"Cannot insert empty key into mode(\"%@\") mode parameter dictionary.", self.modeName];
     
     Parameter *parInDict = (Parameter *)[self.parDict objectForKey:key];
-    NSAssert(parInDict == nil, @"Cannot insert parameter %@ with the same key %@ into mode %@ parameter dictionary.", par, key, self.modeName);
+    if(parInDict != nil)
+        [NSException raise:@"ModeParamDictBase::addParameter:forKey:" format:@"Cannot insert parameter(\"%@\") with the same key(\"%@\") into mode(\"%@\") mode parameter dictionary.", par, key, self.modeName];
     
     [self.parDict setValue:par forKey:key];
 }
 
 -(Parameter *)getParameterBy:(NSString *)key
 {
-    NSAssert(key != nil, @"Cannot use nil key for mode %@ parameter dictionary.", self.modeName);
-    NSAssert(key.length > 0, @"Cannot use empty key for mode %@ parameter dictionary.", self.modeName);
+    if(self.parDict == nil)
+        [NSException raise:@"ModeParamDictBase::getParameterBy:" format:@"Cannot use nil data dictionary for mode(\"%@\").", self.modeName];
+    if(key == nil)
+        [NSException raise:@"ModeParamDictBase::getParameterBy:" format:@"Cannot use nil key for mode(\"%@\") mode parameter dictionary.", self.modeName];
+    if(key.length <= 0)
+        [NSException raise:@"ModeParamDictBase::getParameterBy:" format:@"Cannot use empty key for mode(\"%@\") mode parameter dictionary.", self.modeName];
     
     Parameter *parInDict = (Parameter *)[self.parDict objectForKey:key];
-    NSAssert(parInDict == nil, @"Cannot get parameter with key %@ from mode %@ parameter dictionary.", key, self.modeName);
+    if(parInDict == nil)
+        [NSException raise:@"ModeParamDictBase::getParameterBy:" format:@"Cannot get parameter with the key(\"%@\") from mode(\"%@\") mode parameter dictionary.",  key, self.modeName];
     
     return parInDict;
+}
+
+-(bool)CheckParameterBy:(NSString *)key
+{
+    if(self.parDict == nil)
+        [NSException raise:@"ModeParamDictBase::getParameterBy:" format:@"Cannot use nil data dictionary for mode(\"%@\").", self.modeName];
+    if(key == nil)
+        [NSException raise:@"ModeParamDictBase::CheckParameterBy:" format:@"Cannot use nil key for mode(\"%@\") mode parameter dictionary.", self.modeName];
+    if(key.length <= 0)
+        [NSException raise:@"ModeParamDictBase::CheckParameterBy:" format:@"Cannot use empty key for mode(\"%@\") mode parameter dictionary.", self.modeName];
+    
+    Parameter *parInDict = (Parameter *)[self.parDict objectForKey:key];
+    if(parInDict != nil)
+        return YES;
+    else
+        return NO;
 }
 
 @end

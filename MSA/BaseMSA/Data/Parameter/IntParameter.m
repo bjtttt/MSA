@@ -17,9 +17,16 @@
 
 @implementation IntParameter
 
-- (id) init
+-(id)init
 {
-    if(self = [super init])
+    [NSException raise:@"IntParameter::init" format:@"Call IntParameter::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
+{
+    if(self = [super initWithConfig:ss])
     {
         self.valueType = VAL_INT;
     }

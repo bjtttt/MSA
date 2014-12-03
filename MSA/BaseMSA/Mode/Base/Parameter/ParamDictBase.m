@@ -17,43 +17,54 @@
 @implementation ParamDictBase
 
 -(id) init {
+    
+    [NSException raise:@"MeasBarParamDictBase::init" format:@"Call MeasBarParamDictBase::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id) initWithConfig:(ShareSettings *)ss
+{
     if ((self = [super init]))
     {
+        _shareSettings = ss;
     }
     
     return self;
 }
 
--(void)setShareSettings:(ShareSettings *)shareSettings
-{
-    _shareSettings = shareSettings;
-}
-
 -(void)registerParameterEvent
 {
-    NSAssert(YES==NO, @"ParamDictBase::registerParameterEvent should be override in each mode/meas.");
+    [NSException raise:@"ParamDictBase::init" format:@"ParamDictBase::registerParameterEvent should be override in each mode/meas."];
 }
 
 -(void)unregisterParameterEvent
 {
-    NSAssert(YES==NO, @"ParamDictBase::unregisterParameterEvent should be override in each mode/meas.");
+    [NSException raise:@"ParamDictBase::unregisterParameterEvent" format:@"ParamDictBase::unregisterParameterEvent should be override in each mode/meas."];
 }
 
 -(void)parseParameter
 {
-    NSAssert(YES==NO, @"ParamDictBase::parseParameter should be override in each mode/meas.");
+    [NSException raise:@"ParamDictBase::parseParameter" format:@"ParamDictBase::parseParameter should be override in each mode/meas."];
 }
 
 -(void)addParameter:(Parameter *)par forKey:(NSString *)key
 {
-    NSAssert(YES==NO, @"ParamDictBase::addParameter should be override in each mode/meas.");
+    [NSException raise:@"ParamDictBase::addParameter:forKey:" format:@"ParamDictBase::addParameter:forKey: should be override in each mode/meas."];
 }
 
 -(Parameter *)getParameterBy:(NSString *)key
 {
-    NSAssert(YES==NO, @"ParamDictBase::getParameterBy should be override in each mode/meas.");
+    [NSException raise:@"ParamDictBase::getParameterBy:" format:@"ParamDictBase::getParameterBy: should be override in each mode/meas."];
     
     return nil;
+}
+
+-(bool)checkParameterBy:(NSString *)key
+{
+    [NSException raise:@"ParamDictBase::checkParameterBy" format:@"ParamDictBase::getParameterBy should be override in each mode/meas."];
+    
+    return NO;
 }
 
 @end

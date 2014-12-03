@@ -15,12 +15,19 @@
 
 @implementation ImmediateParameter
 
-- (id) init
+-(id)init
 {
-    if(self = [super init])
+    [NSException raise:@"ImmediateParameter::init" format:@"Call ImmediateParameter::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
+{
+    if(self = [super initWithConfig:ss])
     {
         self.valueType = VAL_IMM;
-        self.immedaiteAction = @selector(immediateActionHandler:);
+        _immedaiteAction = @selector(immediateActionHandler:);
     }
     
     return self;

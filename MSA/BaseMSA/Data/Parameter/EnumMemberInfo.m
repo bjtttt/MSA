@@ -31,9 +31,9 @@
 {
     if(self = [super init])
     {
-        self.value = value;
-        self.display = display;
-        self.displayShort = displayShort;
+        _value = value;
+        _display = display;
+        _displayShort = displayShort;
     }
     
     return self;

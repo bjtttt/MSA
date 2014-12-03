@@ -18,9 +18,16 @@
 
 @implementation BooleanParameter
 
-- (id) init
+-(id) init
+{    
+    [NSException raise:@"BooleanParameter::init" format:@"Call BooleanParameter::initWithConfig: instead"];
+    
+    return nil;
+}
+
+- (id) initWithConfig:(ShareSettings *)ss
 {
-    if(self = [super init])
+    if(self = [super initWithConfig:ss])
     {
         self.valueType = VAL_BOOL;
     }

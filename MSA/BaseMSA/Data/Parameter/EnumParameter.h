@@ -22,8 +22,8 @@
 @property (nonatomic) SEL valueChanging;
 @property (nonatomic) SEL valueTouching;
 
-- (id) initWithKey:(NSString *)key withEnumDefinition:(NSMutableArray *)enumDefinition withDefaultValue:(int)defaultValue;
-- (id) initWithKey:(NSString *)key withEnumDefinition:(NSMutableArray *)enumDefinition;
+- (id) initWithKey:(NSString *)key withEnumDefinition:(NSMutableArray *)enumDefinition withDefaultValue:(int)defaultValue withConfig:(ShareSettings *)ss;
+- (id) initWithKey:(NSString *)key withEnumDefinition:(NSMutableArray *)enumDefinition withConfig:(ShareSettings *)ss;
 
 -(void)valueChangedHandler:(Parameter *)param;
 -(void)valueChangingHandler:(Parameter *)param;

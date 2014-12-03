@@ -15,9 +15,18 @@
 
 @implementation ViewBase
 
--(id) init {
+-(id)init
+{
+    [NSException raise:@"ViewBase::init" format:@"Call ViewBase::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
+{
     if ((self = [super init]))
     {
+        _shareSettings = ss;
     }
     
     return self;

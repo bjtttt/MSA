@@ -19,7 +19,7 @@
 
 - (id) init
 {
-    [NSException raise:@"EnumParameter::init" format:@"EnumParameter can only use initWithEnumDefinition:[withDefaultValue:]"];
+    [NSException raise:@"EnumParameter::init" format:@"EnumParameter can only use initWithKey:withEnumDefinition:[withDefaultValue:]withConfig:"];
     
     if(self = [super init])
     {
@@ -28,7 +28,7 @@
     return self;
 }
 
-- (id) initWithKey:(NSString *)key withEnumDefinition:(NSMutableArray *)enumDefinition withDefaultValue:(int)defaultValue
+- (id) initWithKey:(NSString *)key withEnumDefinition:(NSMutableArray *)enumDefinition withDefaultValue:(int)defaultValue withConfig:(ShareSettings *)ss
 {
     if(key == nil)
     {
@@ -51,7 +51,7 @@
         return nil;
     }
 
-    if(self = [super init])
+    if(self = [super initWithConfig:ss])
     {
         bool found = false;
         for (EnumMemberInfo *emi in enumDefinition) {
@@ -66,15 +66,15 @@
         
         self.key = key;
         self.valueType = VAL_ENUM;
-        self.valuePrevious = defaultValue;
-        self.value = defaultValue;
-        self.enumDefinition = enumDefinition;
+        _valuePrevious = defaultValue;
+        _value = defaultValue;
+        _enumDefinition = enumDefinition;
     }
     
     return self;
 }
 
-- (id) initWithKey:(NSString *)key withEnumDefinition:(NSMutableArray *)enumDefinition
+-(id)initWithKey:(NSString *)key withEnumDefinition:(NSMutableArray *)enumDefinition withConfig:(ShareSettings *)ss
 {
     if(key == nil)
     {
@@ -99,7 +99,7 @@
     
     int defValue = ((EnumMemberInfo *)enumDefinition[0]).value;
     
-    return [self initWithKey:key withEnumDefinition:enumDefinition withDefaultValue:defValue];
+    return [self initWithKey:key withEnumDefinition:enumDefinition withDefaultValue:defValue withConfig:ss];
 }
 
 -(void)setValue:(int)value

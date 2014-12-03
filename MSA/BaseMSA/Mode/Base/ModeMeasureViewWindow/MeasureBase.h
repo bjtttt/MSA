@@ -49,4 +49,6 @@
 
 -(CGFloat)measureBarPopupMenuPosition:(NSInteger)index forWidth:(CGFloat)width;
 
+-(id)initWithConfig:(ShareSettings *)ss;
+
 @end

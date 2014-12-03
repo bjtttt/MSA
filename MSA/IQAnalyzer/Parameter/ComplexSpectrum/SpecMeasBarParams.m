@@ -32,8 +32,16 @@
 
 @implementation SpecMeasBarParams
 
--(id) init {
-    if ((self = [super init]))
+-(id)init
+{
+    [NSException raise:@"SpecMeasBarParams::init" format:@"Call SpecMeasBarParams::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
+{
+    if ((self = [super initWithConfig:ss]))
     {
     }
     
@@ -45,7 +53,7 @@
     // Sweep/Measure
     if([self getParameterBy:@"Continuous Mode"] == nil)
     {
-        BooleanParameter *bp = [[BooleanParameter alloc] init];
+        BooleanParameter *bp = [[BooleanParameter alloc] initWithConfig:self.shareSettings];
         bp.key = [[NSMutableString alloc] initWithString:@"Continuous Mode"];
         bp.yesLabel = [[NSMutableString alloc] initWithString:@"Continous"];
         bp.noLabel = [[NSMutableString alloc] initWithString:@"Single"];
@@ -57,7 +65,7 @@
     // Restart
     if([self getParameterBy:@"Restart"] == nil)
     {
-        ImmediateParameter *ip = [[ImmediateParameter alloc] init];
+        ImmediateParameter *ip = [[ImmediateParameter alloc] initWithConfig:self.shareSettings];
         ip.key = [[NSMutableString alloc] initWithString:@"Restart"];
         [self addParameter:ip forKey:(NSString *)ip.key];
     }
@@ -65,7 +73,7 @@
     // Pause/Resume
     if([self getParameterBy:@"Pause/Resume"] == nil)
     {
-        ImmediateParameter *ip = [[ImmediateParameter alloc] init];
+        ImmediateParameter *ip = [[ImmediateParameter alloc] initWithConfig:self.shareSettings];
         ip.key = [[NSMutableString alloc] initWithString:@"Pause/Resume"];
         [self addParameter:ip forKey:(NSString *)ip.key];
     }
@@ -83,7 +91,7 @@
         [emiArray addObject:emiRF];
         [emiArray addObject:emiEM];
         [emiArray addObject:emiIQ];
-        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Input Port" withEnumDefinition:emiArray withDefaultValue:0];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Input Port" withEnumDefinition:emiArray withDefaultValue:0 withConfig:self.shareSettings];
         ep.label = [[NSMutableString alloc] initWithString:@"Select Input"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"Input"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -93,7 +101,7 @@
     // RF Coupling
     if([self getParameterBy:@"Input Coupling"] == nil)
     {
-        BooleanParameter *bp = [[BooleanParameter alloc] init];
+        BooleanParameter *bp = [[BooleanParameter alloc] initWithConfig:self.shareSettings];
         bp.key = [[NSMutableString alloc] initWithString:@"Input Coupling"];
         bp.yesLabel = [[NSMutableString alloc] initWithString:@"AC"];
         bp.yesLabelShort = [[NSMutableString alloc] initWithString:@"AC"];
@@ -108,7 +116,7 @@
     // RF Coupling
     if([self getParameterBy:@"ExtGainPreampDb"] == nil)
     {
-        RelativeAmplitudeParameter *rap = [[RelativeAmplitudeParameter alloc] init];
+        RelativeAmplitudeParameter *rap = [[RelativeAmplitudeParameter alloc] initWithConfig:self.shareSettings];
         rap.key = [[NSMutableString alloc] initWithString:@"ExtGainPreampDb"];
         rap.label = [[NSMutableString alloc] initWithString:@"External Gain"];
         rap.labelShort = [[NSMutableString alloc] initWithString:@"Ext Gain"];
@@ -122,7 +130,7 @@
     // Input Z Correction
     if([self getParameterBy:@"InputZCorrection"] == nil)
     {
-        BooleanParameter *bp = [[BooleanParameter alloc] init];
+        BooleanParameter *bp = [[BooleanParameter alloc] initWithConfig:self.shareSettings];
         bp.key = [[NSMutableString alloc] initWithString:@"InputZCorrection"];
         bp.yesLabel = [[NSMutableString alloc] initWithString:@"50 Ohm"];
         bp.yesLabelShort = [[NSMutableString alloc] initWithString:@"50 Ohm"];
@@ -154,7 +162,7 @@
         [emiArray addObject:emiC6];
         [emiArray addObject:emiC7];
         [emiArray addObject:emiC8];
-        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"AmpcorSelected" withEnumDefinition:emiArray withDefaultValue:0];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"AmpcorSelected" withEnumDefinition:emiArray withDefaultValue:0 withConfig:self.shareSettings];
         ep.label = [[NSMutableString alloc] initWithString:@"Select Correction"];
         ep.valueChanged = @selector(valueChangedHandler:);
         [self addParameter:ep forKey:(NSString *)ep.key];
@@ -163,7 +171,7 @@
     // Correction
     if([self getParameterBy:@"AmpcorState"] == nil)
     {
-        OnOffParameter *oop = [[OnOffParameter alloc] init];
+        OnOffParameter *oop = [[OnOffParameter alloc] initWithConfig:self.shareSettings];
         oop.key = [[NSMutableString alloc] initWithString:@"AmpcorState"];
         oop.label = [[NSMutableString alloc] initWithString:@"Correction"];
         oop.labelShort = [[NSMutableString alloc] initWithString:@"Correction"];
@@ -183,7 +191,7 @@
         [emiArray addObject:emiExt];
         [emiArray addObject:emiSense];
         [emiArray addObject:emiPulse];
-        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"ReferenceOscillatorUI" withEnumDefinition:emiArray withDefaultValue:0];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"ReferenceOscillatorUI" withEnumDefinition:emiArray withDefaultValue:0 withConfig:self.shareSettings];
         ep.label = [[NSMutableString alloc] initWithString:@"Freq Ref Input"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"Freq Ref"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -200,7 +208,7 @@
         [emiArray addObject:emiOn];
         [emiArray addObject:emiOff];
         [emiArray addObject:emiPartial];
-        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Auto Align Type" withEnumDefinition:emiArray withDefaultValue:0];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Auto Align Type" withEnumDefinition:emiArray withDefaultValue:0 withConfig:self.shareSettings];
         ep.label = [[NSMutableString alloc] initWithString:@"Auto Align"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"Align"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -210,7 +218,7 @@
     // All but RF
     if([self getParameterBy:@"Auto Align Mode"] == nil)
     {
-        OnOffParameter *oop = [[OnOffParameter alloc] init];
+        OnOffParameter *oop = [[OnOffParameter alloc] initWithConfig:self.shareSettings];
         oop.key = [[NSMutableString alloc] initWithString:@"Auto Align Mode"];
         oop.label = [[NSMutableString alloc] initWithString:@"All but RF"];
         oop.valueChanged = @selector(valueChangedHandler:);
@@ -223,7 +231,7 @@
     // Total Atten
     if([self getParameterBy:@"TotalAtten"] == nil)
     {
-        RelativeAmplitudeParameter *rap = [[RelativeAmplitudeParameter alloc] init];
+        RelativeAmplitudeParameter *rap = [[RelativeAmplitudeParameter alloc] initWithConfig:self.shareSettings];
         rap.key = [[NSMutableString alloc] initWithString:@"TotalAtten"];
         rap.labelShort = [[NSMutableString alloc] initWithString:@"Atten"];
         rap.valueChanged = @selector(valueChangedHandler:);
@@ -233,7 +241,7 @@
     // Mech Atten
     if([self getParameterBy:@"MechanicalAtten"] == nil)
     {
-        RelativeAmplitudeParameter *rap = [[RelativeAmplitudeParameter alloc] init];
+        RelativeAmplitudeParameter *rap = [[RelativeAmplitudeParameter alloc] initWithConfig:self.shareSettings];
         rap.key = [[NSMutableString alloc] initWithString:@"MechanicalAtten"];
         rap.label = [[NSMutableString alloc] initWithString:@"Mech Atten"];
         rap.valueChanged = @selector(valueChangedHandler:);
@@ -243,7 +251,7 @@
     // Elec Atten
     if([self getParameterBy:@"Electrical Atten"] == nil)
     {
-        RelativeAmplitudeParameter *rap = [[RelativeAmplitudeParameter alloc] init];
+        RelativeAmplitudeParameter *rap = [[RelativeAmplitudeParameter alloc] initWithConfig:self.shareSettings];
         rap.key = [[NSMutableString alloc] initWithString:@"Electrical Atten"];
         rap.label = [[NSMutableString alloc] initWithString:@"Elec Atten"];
         rap.valueChanged = @selector(valueChangedHandler:);
@@ -252,7 +260,7 @@
     // Elec Atten State
     if([self getParameterBy:@"InputZCorrection"] == nil)
     {
-        BooleanParameter *bp = [[BooleanParameter alloc] init];
+        BooleanParameter *bp = [[BooleanParameter alloc] initWithConfig:self.shareSettings];
         bp.key = [[NSMutableString alloc] initWithString:@"Electrical Atten State"];
         bp.yesLabel = [[NSMutableString alloc] initWithString:@"Enable"];
         bp.noLabel = [[NSMutableString alloc] initWithString:@"Disable"];
@@ -268,7 +276,7 @@
         NSMutableArray *emiArray = [[NSMutableArray alloc] init];
         [emiArray addObject:emiLow];
         [emiArray addObject:emiFull];
-        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Internal Preamp Band" withEnumDefinition:emiArray withDefaultValue:0];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Internal Preamp Band" withEnumDefinition:emiArray withDefaultValue:0 withConfig:self.shareSettings];
         ep.label = [[NSMutableString alloc] initWithString:@"Internal Preamp"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"Int Preamp"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -277,7 +285,7 @@
     // Internal Preamp State
     if([self getParameterBy:@"Internal Preamp"] == nil)
     {
-        OnOffParameter *oop = [[OnOffParameter alloc] init];
+        OnOffParameter *oop = [[OnOffParameter alloc] initWithConfig:self.shareSettings];
         oop.key = [[NSMutableString alloc] initWithString:@"Internal Preamp"];
         oop.valueChanged = @selector(valueChangedHandler:);
         [self addParameter:oop forKey:(NSString *)oop.key];
@@ -293,7 +301,7 @@
         [emiArray addObject:emi1];
         [emiArray addObject:emi2];
         [emiArray addObject:emi3];
-        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Microwave Path Control" withEnumDefinition:emiArray withDefaultValue:0];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Microwave Path Control" withEnumDefinition:emiArray withDefaultValue:0 withConfig:self.shareSettings];
         ep.label = [[NSMutableString alloc] initWithString:@"uW Path Control"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"LNP"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -321,7 +329,7 @@
         [emiArray addObject:emiExt2];
         [emiArray addObject:emiRFB];
         [emiArray addObject:emiPer];
-        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"TriggerSource" withEnumDefinition:emiArray withDefaultValue:0];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"TriggerSource" withEnumDefinition:emiArray withDefaultValue:0 withConfig:self.shareSettings];
         ep.label = [[NSMutableString alloc] initWithString:@"Select Trig Source"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"Trig"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -331,7 +339,7 @@
     // Trig Delay
     if([self getParameterBy:@"Trigger Delay"] == nil)
     {
-        TimeParameter *tp = [[TimeParameter alloc] init];
+        TimeParameter *tp = [[TimeParameter alloc] initWithConfig:self.shareSettings];
         tp.key = [[NSMutableString alloc] initWithString:@"Trigger Delay"];
         tp.label = [[NSMutableString alloc] initWithString:@"Trig Delay"];
         tp.valueChanged = @selector(valueChangedHandler:);
@@ -340,7 +348,7 @@
     // Trig Delay State
     if([self getParameterBy:@"Trigger Delay State"] == nil)
     {
-        OnOffParameter *oop = [[OnOffParameter alloc] init];
+        OnOffParameter *oop = [[OnOffParameter alloc] initWithConfig:self.shareSettings];
         oop.key = [[NSMutableString alloc] initWithString:@"Trigger Delay State"];
         oop.valueChanged = @selector(valueChangedHandler:);
         [self addParameter:oop forKey:(NSString *)oop.key];
@@ -363,7 +371,7 @@
         [emiArray addObject:emi3];
         [emiArray addObject:emi4];
         [emiArray addObject:emi5];
-        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Phase Noise Opt" withEnumDefinition:emiArray withDefaultValue:0];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Phase Noise Opt" withEnumDefinition:emiArray withDefaultValue:0 withConfig:self.shareSettings];
         ep.label = [[NSMutableString alloc] initWithString:@"Phase Noise Optimization"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"PNO"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -372,7 +380,7 @@
     // Phase Noise Optimization State
     if([self getParameterBy:@"Phase Noise Opt Auto"] == nil)
     {
-        AutoManParameter *amp = [[AutoManParameter alloc] init];
+        AutoManParameter *amp = [[AutoManParameter alloc] initWithConfig:self.shareSettings];
         amp.key = [[NSMutableString alloc] initWithString:@"Phase Noise Opt Auto"];
         amp.valueChanged = @selector(valueChangedHandler:);
         [self addParameter:amp forKey:(NSString *)amp.key];
@@ -388,7 +396,7 @@
         [emiArray addObject:emiAuto];
         [emiArray addObject:emiLow];
         [emiArray addObject:emiHigh];
-        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"IfGainState" withEnumDefinition:emiArray withDefaultValue:0];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"IfGainState" withEnumDefinition:emiArray withDefaultValue:0 withConfig:self.shareSettings];
         ep.label = [[NSMutableString alloc] initWithString:@"IF Gain"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"IF Gain"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -397,7 +405,7 @@
     // IF Gain State
     if([self getParameterBy:@"IFGainAuto"] == nil)
     {
-        AutoManParameter *amp = [[AutoManParameter alloc] init];
+        AutoManParameter *amp = [[AutoManParameter alloc] initWithConfig:self.shareSettings];
         amp.key = [[NSMutableString alloc] initWithString:@"IFGainAuto"];
         amp.valueChanged = @selector(valueChangedHandler:);
         [self addParameter:amp forKey:(NSString *)amp.key];
@@ -409,7 +417,7 @@
     // Center Freq
     if([self getParameterBy:@"CenterFrequency"] == nil)
     {
-        FrequencyParameter *fp = [[FrequencyParameter alloc] init];
+        FrequencyParameter *fp = [[FrequencyParameter alloc] initWithConfig:self.shareSettings];
         fp.key = [[NSMutableString alloc] initWithString:@"CenterFrequency"];
         fp.label = [[NSMutableString alloc] initWithString:@"Center Freq"];
         fp.labelShort = [[NSMutableString alloc] initWithString:@"Center Freq"];
@@ -431,7 +439,7 @@
         [emiArray addObject:emi3];
         [emiArray addObject:emi4];
         [emiArray addObject:emi5];
-        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Average Type" withEnumDefinition:emiArray withDefaultValue:0];
+        EnumParameter *ep = [[EnumParameter alloc] initWithKey:@"Average Type" withEnumDefinition:emiArray withDefaultValue:0 withConfig:self.shareSettings];
         ep.label = [[NSMutableString alloc] initWithString:@"Avg Type"];
         ep.labelShort = [[NSMutableString alloc] initWithString:@"Avg Type"];
         ep.valueChanged = @selector(valueChangedHandler:);
@@ -440,7 +448,7 @@
     // Avg Type State
     if([self getParameterBy:@"Average Type Auto"] == nil)
     {
-        AutoManParameter *amp = [[AutoManParameter alloc] init];
+        AutoManParameter *amp = [[AutoManParameter alloc] initWithConfig:self.shareSettings];
         amp.key = [[NSMutableString alloc] initWithString:@"Average Type Auto"];
         amp.valueChanged = @selector(valueChangedHandler:);
         [self addParameter:amp forKey:(NSString *)amp.key];
@@ -449,7 +457,7 @@
     // Avg|Hold Counter
     if([self getParameterBy:@"Average Counter"] == nil)
     {
-        FrequencyParameter *fp = [[FrequencyParameter alloc] init];
+        FrequencyParameter *fp = [[FrequencyParameter alloc] initWithConfig:self.shareSettings];
         fp.key = [[NSMutableString alloc] initWithString:@"Average Counter"];
         fp.valueChanged = @selector(valueChangedHandler:);
         [self addParameter:fp forKey:(NSString *)fp.key];
@@ -458,7 +466,7 @@
     // Avg|Hold Number
     if([self getParameterBy:@"Average Number"] == nil)
     {
-        FrequencyParameter *fp = [[FrequencyParameter alloc] init];
+        FrequencyParameter *fp = [[FrequencyParameter alloc] initWithConfig:self.shareSettings];
         fp.key = [[NSMutableString alloc] initWithString:@"Average Number"];
         fp.label = [[NSMutableString alloc] initWithString:@"Avg|Hold Number"];
         fp.labelShort = [[NSMutableString alloc] initWithString:@"Avg|Hold"];
@@ -469,7 +477,7 @@
     // Averaging
     if([self getParameterBy:@"Average State"] == nil)
     {
-        OnOffParameter *oop = [[OnOffParameter alloc] init];
+        OnOffParameter *oop = [[OnOffParameter alloc] initWithConfig:self.shareSettings];
         oop.key = [[NSMutableString alloc] initWithString:@"Average State"];
         oop.valueChanged = @selector(valueChangedHandler:);
         [self addParameter:oop forKey:(NSString *)oop.key];

@@ -17,9 +17,16 @@
 
 @implementation StringParameter
 
-- (id) init
+-(id)init
 {
-    if(self = [super init])
+    [NSException raise:@"StringParameter::init" format:@"Call StringParameter::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
+{
+    if(self = [super initWithConfig:ss])
     {
         self.valueType = VAL_STRING;
     }

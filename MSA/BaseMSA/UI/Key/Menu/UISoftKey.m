@@ -28,10 +28,18 @@
 
 @implementation UISoftKey
 
-- (id) init
+-(id)init
+{
+    [NSException raise:@"UISoftKey::init" format:@"Call UISoftKey::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super init])
     {
+        _shareSettings = ss;
         _softKeyType = KEY_IMM;
     }
     

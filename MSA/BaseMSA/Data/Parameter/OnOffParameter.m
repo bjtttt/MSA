@@ -15,9 +15,16 @@
 
 @implementation OnOffParameter
 
-- (id) init
+-(id)init
 {
-    if(self = [super init])
+    [NSException raise:@"OnOffParameter::init" format:@"Call OnOffParameter::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
+{
+    if(self = [super initWithConfig:ss])
     {
         self.valueType = VAL_BOOL_ONOFF;
         self.yesLabel = @"On";

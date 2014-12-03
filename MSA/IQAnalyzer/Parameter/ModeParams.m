@@ -18,22 +18,22 @@
 
 @implementation ModeParams
 
--(id) init {
-    if ((self = [super init]))
+-(id)init
+{
+    [NSException raise:@"ModeParams::init" format:@"Call ModeParams::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
+{
+    if ((self = [super initWithConfig:ss]))
     {
-        self.specParams = [[SpecParams alloc] init];
-        self.waveParams = [[WaveParams alloc] init];
+        self.specParams = [[SpecParams alloc] initWithConfig:ss];
+        self.waveParams = [[WaveParams alloc] initWithConfig:ss];
     }
     
     return self;
-}
-
--(void)setShareSettings:(ShareSettings *)shareSettings
-{
-    [super setShareSettings:shareSettings];
-
-    self.specParams.shareSettings=shareSettings;
-    self.waveParams.shareSettings=shareSettings;
 }
 
 -(void)registerParameterEvent

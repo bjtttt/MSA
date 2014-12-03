@@ -17,4 +17,6 @@
 
 @property (nonatomic) ShareSettings *shareSettings;
 
+-(id)initWithConfig:(ShareSettings *)ss;
+
 @end

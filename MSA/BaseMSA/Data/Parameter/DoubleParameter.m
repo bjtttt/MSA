@@ -15,12 +15,18 @@
 
 @implementation DoubleParameter
 
-- (id) init
+-(id)init
 {
-    if(self = [super init])
+    [NSException raise:@"DoubleParameter::init" format:@"Call DoubleParameter::initWithConfig: instead"];
+    
+    return nil;
+}
+
+- (id) initWithConfig:(ShareSettings *)ss
+{
+    if(self = [super initWithConfig:ss])
     {
         self.valueType = VAL_DOUBLE;
-        self.unit = @"";
     }
     
     return self;

@@ -19,10 +19,8 @@
 {
     if(self = [super init])
     {
-        //self.measure = nil;
         self.useRatio = true;
         self.mbarCount = 0;
-        //self.mbarSmallCount = 0;
         self.totalWidth = 0.0f;
         self.totalSmallWidth = 0.0f;
         self.mbarWidths = [[NSMutableArray alloc] init];

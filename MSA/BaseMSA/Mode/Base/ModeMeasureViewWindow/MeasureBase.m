@@ -18,13 +18,21 @@
 
 @implementation MeasureBase
 
--(id) init {
+-(id) init
+{    
+    [NSException raise:@"MeasureBase::init" format:@"Call MeasureBase::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id) initWithConfig:(ShareSettings *)ss {
     if ((self = [super init]))
     {
-        self.viewDict = [[NSMutableDictionary alloc] init];
-        self.barMenu = [[UISoftMenu alloc] init];
-        self.softMenu = [[UISoftMenu  alloc] init];
-        self.mbarDetail = [[MeasureBarDetail alloc] init];
+        _shareSettings = ss;
+        _viewDict = [[NSMutableDictionary alloc] init];
+        _barMenu = [[UISoftMenu alloc] initWithConfig:ss];
+        _softMenu = [[UISoftMenu  alloc] initWithConfig:ss];
+        _mbarDetail = [[MeasureBarDetail alloc] init];
     }
     
     return self;
@@ -42,55 +50,57 @@
 {
     UISoftPanel *uiSP = [self setupMeasureBar0Menu];
     if(uiSP != nil)
-        [self.barMenu.measBarPanels addObject:uiSP];
+        [_barMenu.measBarPanels addObject:uiSP];
     uiSP = [self setupMeasureBar1Menu];
     if(uiSP != nil)
-        [self.barMenu.measBarPanels addObject:uiSP];
+        [_barMenu.measBarPanels addObject:uiSP];
     uiSP = [self setupMeasureBar2Menu];
     if(uiSP != nil)
-        [self.barMenu.measBarPanels addObject:uiSP];
+        [_barMenu.measBarPanels addObject:uiSP];
     uiSP = [self setupMeasureBar3Menu];
     if(uiSP != nil)
-        [self.barMenu.measBarPanels addObject:uiSP];
+        [_barMenu.measBarPanels addObject:uiSP];
     uiSP = [self setupMeasureBar4Menu];
     if(uiSP != nil)
-        [self.barMenu.measBarPanels addObject:uiSP];
+        [_barMenu.measBarPanels addObject:uiSP];
     uiSP = [self setupMeasureBar5Menu];
     if(uiSP != nil)
-        [self.barMenu.measBarPanels addObject:uiSP];
+        [_barMenu.measBarPanels addObject:uiSP];
     uiSP = [self setupMeasureBar6Menu];
     if(uiSP != nil)
-        [self.barMenu.measBarPanels addObject:uiSP];
+        [_barMenu.measBarPanels addObject:uiSP];
     uiSP = [self setupMeasureBar7Menu];
     if(uiSP != nil)
-        [self.barMenu.measBarPanels addObject:uiSP];
+        [_barMenu.measBarPanels addObject:uiSP];
     uiSP = [self setupMeasureBar8Menu];
     if(uiSP != nil)
-        [self.barMenu.measBarPanels addObject:uiSP];
+        [_barMenu.measBarPanels addObject:uiSP];
     uiSP = [self setupMeasureBar9Menu];
     if(uiSP != nil)
-        [self.barMenu.measBarPanels addObject:uiSP];
+        [_barMenu.measBarPanels addObject:uiSP];
 }
 
 -(void)initMeasureSoftMenu
 {
-    NSAssert(YES==NO, @"MeasureBase::initMeasureSoftMenu should be override in each mode.");
+    [NSException raise:@"MeasureBase::initMeasureSoftMenu" format:@"MeasureBase::initMeasureSoftMenu should be override in each mode."];
 }
 
 -(void)initMeasureView
 {
-    NSAssert(YES==NO, @"MeasureBase::initMeasureView should be override in each mode.");
+    [NSException raise:@"MeasureBase::initMeasureView" format:@"MeasureBase::initMeasureView should be override in each mode."];
 }
 
 -(void)initMeasBarDetail
 {
-    NSAssert(YES==NO, @"MeasureBase::initMeasBarDetail should be override in each mode.");
+    [NSException raise:@"MeasureBase::initMeasBarDetail" format:@"MeasureBase::initMeasBarDetail should be override in each mode."];
 }
 
 -(CGFloat)measureBarPopupMenuPosition:(NSInteger)index forWidth:(CGFloat)width
 {
-    NSAssert(index >= -1 && index < self.mbarDetail.mbarCount, @"Index is %ld.", (long)index);
-    NSAssert(width >= 0.0, @"Width is %f.", width);
+    if(index <= 0 && index >= self.mbarDetail.mbarCount)
+        [NSException raise:@"MeasureBase::measureBarPopupMenuPosition:forWidth:" format:@"Index is %d.", index];
+    if(width < 0.0)
+        [NSException raise:@"MeasureBase::measureBarPopupMenuPosition:forWidth:" format:@"Width is %f.", width];
     
     if(index == -1)
         index = 0;
@@ -119,70 +129,70 @@
 
 -(UISoftPanel *)setupMeasureBar0Menu
 {
-    NSAssert(YES==NO, @"MeasureBase::setupMeasureBar0Menu should be override in each mode.");
+    [NSException raise:@"MeasureBase::setupMeasureBar0Menu" format:@"MeasureBase::setupMeasureBar0Menu should be override in each mode."];
     
     return nil;
 }
 
 -(UISoftPanel *)setupMeasureBar1Menu
 {
-    NSAssert(YES==NO, @"MeasureBase::setupMeasureBar1Menu should be override in each mode.");
+    [NSException raise:@"MeasureBase::setupMeasureBar1Menu" format:@"MeasureBase::setupMeasureBar1Menu should be override in each mode."];
     
     return nil;
 }
 
 -(UISoftPanel *)setupMeasureBar2Menu
 {
-    NSAssert(YES==NO, @"MeasureBase::setupMeasureBar2Menu should be override in each mode.");
+    [NSException raise:@"MeasureBase::setupMeasureBar2Menu" format:@"MeasureBase::setupMeasureBar2Menu should be override in each mode."];
     
     return nil;
 }
 
 -(UISoftPanel *)setupMeasureBar3Menu
 {
-    NSAssert(YES==NO, @"MeasureBase::setupMeasureBar3Menu should be override in each mode.");
+    [NSException raise:@"MeasureBase::setupMeasureBar3Menu" format:@"MeasureBase::setupMeasureBar3Menu should be override in each mode."];
     
     return nil;
 }
 
 -(UISoftPanel *)setupMeasureBar4Menu
 {
-    NSAssert(YES==NO, @"MeasureBase::initMeasureBar4Menu should be override in each mode.");
+    [NSException raise:@"MeasureBase::setupMeasureBar4Menu" format:@"MeasureBase::initMeasureBar4Menu should be override in each mode."];
     
     return nil;
 }
 
 -(UISoftPanel *)setupMeasureBar5Menu
 {
-    NSAssert(YES==NO, @"MeasureBase::setupMeasureBar5Menu should be override in each mode.");
+    [NSException raise:@"MeasureBase::setupMeasureBar5Menu" format:@"MeasureBase::setupMeasureBar5Menu should be override in each mode."];
     
     return nil;
 }
 
 -(UISoftPanel *)setupMeasureBar6Menu
 {
-    NSAssert(YES==NO, @"MeasureBase::setupMeasureBar6Menu should be override in each mode.");
+    [NSException raise:@"MeasureBase::setupMeasureBar6Menu" format:@"MeasureBase::setupMeasureBar6Menu should be override in each mode."];
     
     return nil;
 }
 
 -(UISoftPanel *)setupMeasureBar7Menu
 {
-    NSAssert(YES==NO, @"MeasureBase::setupMeasureBar7Menu should be override in each mode.");
+    [NSException raise:@"MeasureBase::setupMeasureBar7Menu" format:@"MeasureBase::setupMeasureBar7Menu should be override in each mode."];
     
     return nil;
 }
 
 -(UISoftPanel *)setupMeasureBar8Menu
 {
-    NSAssert(YES==NO, @"MeasureBase::setupMeasureBar8Menu should be override in each mode.");
+    [NSException raise:@"MeasureBase::setupMeasureBar8Menu" format:@"MeasureBase::setupMeasureBar8Menu should be override in each mode."];
     
     return nil;
 }
 
 -(UISoftPanel *)setupMeasureBar9Menu
 {
-    NSAssert(YES==NO, @"MeasureBase::setupMeasureBar9Menu should be override in each mode.");
+    [NSException raise:@"MeasureBase::setupMeasureBar9Menu" format:@"MeasureBase::setupMeasureBar9Menu should be override in each mode."];
     
     return nil;
 }

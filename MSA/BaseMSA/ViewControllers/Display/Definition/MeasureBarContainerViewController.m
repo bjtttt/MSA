@@ -173,7 +173,8 @@
     CGFloat prevWidth = 0.0;
     CGFloat barWidth = 0.0;
 
-    for(int i=0;i<_shareSettings.modeManager.measure.mbarDetail.mbarCount; i++)
+    int count = _shareSettings.modeManager.mbarDetail.mbarCount;
+    for(int i=0;i<count; i++)
     {
         UIView *view = (UIView *)[self.barVs objectAtIndex:i];
         UIViewController<MeasureBarDefinition> *vc = (UIViewController<MeasureBarDefinition> *)[self.barVCs objectAtIndex:i];

@@ -15,10 +15,18 @@
 
 @implementation UISoftKeyEnumItem
 
-- (id) init
+-(id)init
+{
+    [NSException raise:@"UISoftKeyEnumItem::init" format:@"Call UISoftKeyEnumItem::initWithConfig: instead"];
+    
+    return nil;
+}
+
+-(id)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super init])
     {
+        _shareSettings = ss;
     }
     
     return self;
