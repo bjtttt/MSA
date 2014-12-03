@@ -18,7 +18,6 @@
 @interface MeasParamDictBase : ParamDictBase
 
 @property (nonatomic) MeasureBase *measure;
-
 @property (nonatomic) ModeParamDictBase *modePar;
 @property (nonatomic) MeasBarParamDictBase *mbarPar;
 

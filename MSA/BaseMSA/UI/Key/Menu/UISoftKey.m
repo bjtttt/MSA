@@ -214,7 +214,7 @@
         return;
     }
     
-    UISoftKeyEnum *uiSKE = [[UISoftKeyEnum alloc] init];
+    UISoftKeyEnum *uiSKE = [[UISoftKeyEnum alloc] initWithConfig:_shareSettings];
     if([_connectParam isKindOfClass:BooleanParameter.class])
     {
         BooleanParameter *bp = (BooleanParameter *)_connectParam;
@@ -243,7 +243,7 @@
         return;
     }
     
-    UISoftKeyEnum *uiSKE = [[UISoftKeyEnum alloc] init];
+    UISoftKeyEnum *uiSKE = [[UISoftKeyEnum alloc] initWithConfig:_shareSettings];
     [uiSKE addEnumItem:0 label:_connectSubBoolean.noLabel labelShort:_connectSubBoolean.noLabelShort];
     [uiSKE addEnumItem:1 label:_connectSubBoolean.yesLabel labelShort:_connectSubBoolean.yesLabelShort];
     
@@ -295,14 +295,14 @@
     }
     
     EnumParameter * ep = (EnumParameter *)self.connectParam;
-    UISoftPanel *uiSP = [[UISoftPanel alloc] init];
+    UISoftPanel *uiSP = [[UISoftPanel alloc] initWithConfig:_shareSettings];
     uiSP.shareSettings = self.shareSettings;
     uiSP.title = self.label;
     self.subSoftPanel = uiSP;
     uiSP.parentSoftKey = self;
     for(EnumMemberInfo *emi in ep.enumDefinition)
     {
-        UISoftKey *uiSK = [[UISoftKey alloc] init];
+        UISoftKey *uiSK = [[UISoftKey alloc] initWithConfig:_shareSettings];
         uiSK.shareSettings = uiSP.shareSettings;
         uiSK.softPanel = uiSP;
         uiSK.softKeyType = KEY_ENUM_ITEM;

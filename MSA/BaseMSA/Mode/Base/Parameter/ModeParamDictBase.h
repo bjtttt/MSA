@@ -10,14 +10,16 @@
 #import "ParamDictBase.h"
 
 @class ModeBase;
+@class MeasureBase;
 @class MeasParamDictBase;
 
 @interface ModeParamDictBase : ParamDictBase
 
 @property (nonatomic) ModeBase *mode;
+@property (nonatomic) NSMutableDictionary *measParDict;
 
-@property (nonatomic) NSMutableArray *measParArray;
-
--(void)addMeasurePar:(MeasParamDictBase *)measPar;
+-(void)addMeasurePar:(MeasParamDictBase *)measPar forKey:(NSString *)key;
+-(MeasParamDictBase *)getMeasureParByKey:(NSString *)key;
+-(bool)checkMeasureParByKey:(NSString *)key;
 
 @end

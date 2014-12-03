@@ -29,8 +29,13 @@
 {
     if ((self = [super initWithConfig:ss]))
     {
-        self.specParams = [[SpecParams alloc] initWithConfig:ss];
-        self.waveParams = [[WaveParams alloc] initWithConfig:ss];
+        _specParams = [[SpecParams alloc] initWithConfig:ss];
+        _specParams.modePar = self;
+        [self addMeasurePar:_specParams];
+        
+        _waveParams = [[WaveParams alloc] initWithConfig:ss];
+        _waveParams.modePar = self;
+        [self addMeasurePar:_waveParams];
     }
     
     return self;

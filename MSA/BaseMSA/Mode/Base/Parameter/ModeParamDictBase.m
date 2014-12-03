@@ -10,6 +10,7 @@
 #import "ModeParamDictBase.h"
 #import "MeasParamDictBase.h"
 #import "ModeBase.h"
+#import "MeasureBase.h"
 
 @interface ModeParamDictBase()
 
@@ -30,7 +31,8 @@
     {
         self.dictType = MODE_DICT;
         self.parDict = [[NSMutableDictionary alloc] init];
-        _measParArray = [[NSMutableArray alloc] init];
+        
+        _measParDict = [[NSMutableDictionary  alloc] init];
     }
     
     return self;
@@ -38,7 +40,7 @@
 
 -(NSString *)modeName
 {
-    return (NSString *)self.mode.modeName;
+    return (NSString *)_mode.modeName;
 }
 
 -(NSString *)measName
@@ -46,16 +48,30 @@
     return nil;
 }
 
--(void)addMeasurePar:(MeasParamDictBase *)measPar
+-(void)addMeasurePar:(MeasParamDictBase *)measPar forKey:(NSString *)key
 {
-    [self.measParArray addObject:measPar];
+    if(_measParDict == nil)
+        [NSException raise:@"ModeParamDictBase::addMeasurePar:forKey:" format:@"Cannot use nil measure parameter dictionary for mode(\"%@\").", self.modeName];
+    if(measPar == nil)
+        [NSException raise:@"ModeParamDictBase::addMeasurePar:forKey:" format:@"Cannot insert nil measure parameter for mode(\"%@\") measure parameter dictionary.", self.modeName];
+    if(key == nil)
+        [NSException raise:@"ModeParamDictBase::addMeasurePar:forKey:" format:@"Cannot insert nil key into mode(\"%@\") measure parameter dictionary.", self.modeName];
+    if(key.length <= 0)
+        [NSException raise:@"ModeParamDictBase::addMeasurePar:forKey:" format:@"Cannot insert empty key into mode(\"%@\") measure parameter dictionary.", self.modeName];
+
+    if([self checkParameterBy:key] == YES)
+        [NSException raise:@"ModeParamDictBase::checkParameterBy:" format:@"Cannot insert measure parameter with the same key(\"%@\") into mode(\"%@\") measure parameter dictionary.", key, self.modeName];
+    
+    _measParDict[key] = measPar;
 }
 
 -(void)parseParameter
 {
-    for (MeasParamDictBase *measPars in self.measParArray)
+    NSArray *keys = _measParDict.allKeys;
+    for (NSString *key in keys)
     {
-        [measPars parseParameter];
+        MeasParamDictBase *measPar = (MeasParamDictBase *)_measParDict[key];
+        [measPar parseParameter];
     }
 }
 
@@ -74,7 +90,7 @@
     if(parInDict != nil)
         [NSException raise:@"ModeParamDictBase::addParameter:forKey:" format:@"Cannot insert parameter(\"%@\") with the same key(\"%@\") into mode(\"%@\") mode parameter dictionary.", par, key, self.modeName];
     
-    [self.parDict setValue:par forKey:key];
+    self.parDict[key] = par;
 }
 
 -(Parameter *)getParameterBy:(NSString *)key
@@ -93,7 +109,7 @@
     return parInDict;
 }
 
--(bool)CheckParameterBy:(NSString *)key
+-(bool)checkParameterBy:(NSString *)key
 {
     if(self.parDict == nil)
         [NSException raise:@"ModeParamDictBase::getParameterBy:" format:@"Cannot use nil data dictionary for mode(\"%@\").", self.modeName];
@@ -107,6 +123,38 @@
         return YES;
     else
         return NO;
+}
+
+-(MeasParamDictBase *)getMeasureParByKey:(NSString *)key
+{
+    if(_measParDict == nil)
+        [NSException raise:@"ModeParamDictBase::getMeasureParByName:" format:@"Cannot use nil measure parameter dictionary for mode(\"%@\").", self.modeName];
+    if(key == nil)
+        [NSException raise:@"ModeParamDictBase::getMeasureParByName:" format:@"Cannot use nil measure name for mode(\"%@\") measure parameter dictionary.", self.modeName];
+    if(key.length <= 0)
+        [NSException raise:@"ModeParamDictBase::getMeasureParByName:" format:@"Cannot use empty measure name mode(\"%@\") for measure parameter dictionary.", self.modeName];
+    
+    MeasParamDictBase *measPar = (MeasParamDictBase *)_measParDict[key];
+    if(measPar == nil)
+        [NSException raise:@"ModeParamDictBase::getMeasureParByName:" format:@"Cannot get measure parameter with the key(\"%@\") from mode(\"%@\") mode parameter dictionary.",  key, self.modeName];
+    
+    return measPar;
+}
+
+-(bool)checkMeasureParByKey:(NSString *)key
+{
+    if(_measParDict == nil)
+        [NSException raise:@"ModeParamDictBase::getMeasureParByName:" format:@"Cannot use nil measure parameter dictionary for mode(\"%@\").", self.modeName];
+    if(key == nil)
+        [NSException raise:@"ModeParamDictBase::addParameter:forKey:" format:@"Cannot use nil measure name for mode(\"%@\") measure parameter dictionary.", self.modeName];
+    if(key.length <= 0)
+        [NSException raise:@"ModeParamDictBase::addParameter:forKey:" format:@"Cannot use empty measure name mode(\"%@\") for measure parameter dictionary.", self.modeName];
+
+    MeasParamDictBase *measPar = (MeasParamDictBase *)_measParDict[key];
+    if(measPar == nil)
+        return NO;
+    else
+        return YES;
 }
 
 @end

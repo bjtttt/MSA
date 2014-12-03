@@ -40,10 +40,10 @@
 
 -(void)initMeasureMent
 {
+    [self initMeasBarDetail];
     [self initMeasureBarMenu];
     [self initMeasureSoftMenu];
     [self initMeasureView];
-    [self initMeasBarDetail];
 }
 
 -(void)initMeasureBarMenu

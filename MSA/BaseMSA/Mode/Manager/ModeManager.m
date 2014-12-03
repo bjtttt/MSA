@@ -12,6 +12,7 @@
 #import "ModeBase.h"
 #import "MeasureBase.h"
 #import "MeasureBarDetail.h"
+#import "ShareSettings.h"
 
 @interface ModeManager()
 

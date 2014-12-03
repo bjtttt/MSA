@@ -16,6 +16,9 @@
 #import "MeasureBarDetail.h"
 #import "MeasParamDictBase.h"
 #import "Parameter.h"
+#import "ParameterManager.h"
+#import "ModeParamDictBase.h"
+#import "ModeParams.h"
 
 @interface SpecMeasurement()
 
@@ -35,6 +38,7 @@
     if ((self = [super initWithConfig:ss]))
     {
         self.measureName = @"ComplexSpectrum";
+        self.measParDict = (MeasParamDictBase *)[ss.parManager.modePars getMeasureParByName:@"ComplexSpectrum"];
     }
     
     return self;

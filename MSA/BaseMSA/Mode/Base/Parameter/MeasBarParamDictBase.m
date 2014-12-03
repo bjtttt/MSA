@@ -37,7 +37,7 @@
 
 -(NSString *)modeName
 {
-    return (NSString *)_modePar.modeName;
+    return (NSString *)_measPar.modeName;
 }
 
 -(NSString *)measName

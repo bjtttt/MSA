@@ -102,7 +102,8 @@
     //[self.shareSettings initMeasureBar];
     //[self.shareSettings initSoftMenuSystem];
     
-    NSAssert(_parManager == nil, @"ParameterManager is NOT nil");
+    if(_parManager != nil)
+        [NSException raise:@"MainContainerViewController::loadView" format:@"ParameterManager is NOT nil"];
     
     _parManager = [[ParameterManager alloc] initWithConfig:self.shareSettings];
     _parManager.shareSettings = _shareSettings;
@@ -110,7 +111,9 @@
     [_parManager parseParameter];
     [_parManager registerParameterChangedEvent];
 
-    NSAssert(_modeManager == nil, @"ParameterManager is NOT nil");
+    if(_modeManager != nil)
+        [NSException raise:@"MainContainerViewController::loadView" format:@"ModeManager is NOT nil"];
+
     _modeManager = [[ModeManager alloc] initWithConfig:self.shareSettings];
     _modeManager.shareSettings = _shareSettings;
     _shareSettings.modeManager = _modeManager;

@@ -10,6 +10,7 @@
 #import "SpecParams.h"
 #import "MeasParamDictBase.h"
 #import "MeasBarParamDictBase.h"
+#import "SpecMeasBarParams.h"
 
 @interface SpecParams()
 
@@ -28,6 +29,9 @@
 {
     if ((self = [super initWithConfig:ss]))
     {
+        self.mbarPar = [[SpecMeasBarParams alloc] initWithConfig:ss];
+        self.mbarPar.parDict = self.parDict;
+        self.mbarPar.measPar = self;
     }
     
     return self;
@@ -41,11 +45,6 @@
 -(void)unregisterParameterEvent
 {
     
-}
-
--(void)addMeasBarParameters
-{
-    [self.mbarPar parseParameter];
 }
 
 -(void)addMeasMenuParameters

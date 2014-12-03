@@ -51,7 +51,7 @@
 -(void)parseBar0Parameters
 {
     // Sweep/Measure
-    if([self getParameterBy:@"Continuous Mode"] == nil)
+    if([self checkParameterBy:@"Continuous Mode"] == NO)
     {
         BooleanParameter *bp = [[BooleanParameter alloc] initWithConfig:self.shareSettings];
         bp.key = [[NSMutableString alloc] initWithString:@"Continuous Mode"];
@@ -63,7 +63,7 @@
     }
     
     // Restart
-    if([self getParameterBy:@"Restart"] == nil)
+    if([self checkParameterBy:@"Restart"] == NO)
     {
         ImmediateParameter *ip = [[ImmediateParameter alloc] initWithConfig:self.shareSettings];
         ip.key = [[NSMutableString alloc] initWithString:@"Restart"];
@@ -71,7 +71,7 @@
     }
 
     // Pause/Resume
-    if([self getParameterBy:@"Pause/Resume"] == nil)
+    if([self checkParameterBy:@"Pause/Resume"] == NO)
     {
         ImmediateParameter *ip = [[ImmediateParameter alloc] initWithConfig:self.shareSettings];
         ip.key = [[NSMutableString alloc] initWithString:@"Pause/Resume"];
@@ -82,7 +82,7 @@
 -(void)parseBar1Parameters
 {
     // Select Inport
-    if([self getParameterBy:@"Input Port"] == nil)
+    if([self checkParameterBy:@"Input Port"] == NO)
     {
         EnumMemberInfo *emiRF = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"RF" displayShort:@"RF"];
         EnumMemberInfo *emiEM = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"External Mixer" displayShort:@"EXT MIXER"];
@@ -99,7 +99,7 @@
     }
     
     // RF Coupling
-    if([self getParameterBy:@"Input Coupling"] == nil)
+    if([self checkParameterBy:@"Input Coupling"] == NO)
     {
         BooleanParameter *bp = [[BooleanParameter alloc] initWithConfig:self.shareSettings];
         bp.key = [[NSMutableString alloc] initWithString:@"Input Coupling"];
@@ -114,7 +114,7 @@
     }
     
     // RF Coupling
-    if([self getParameterBy:@"ExtGainPreampDb"] == nil)
+    if([self checkParameterBy:@"ExtGainPreampDb"] == NO)
     {
         RelativeAmplitudeParameter *rap = [[RelativeAmplitudeParameter alloc] initWithConfig:self.shareSettings];
         rap.key = [[NSMutableString alloc] initWithString:@"ExtGainPreampDb"];
@@ -128,7 +128,7 @@
 -(void)parseBar2Parameters
 {
     // Input Z Correction
-    if([self getParameterBy:@"InputZCorrection"] == nil)
+    if([self checkParameterBy:@"InputZCorrection"] == NO)
     {
         BooleanParameter *bp = [[BooleanParameter alloc] initWithConfig:self.shareSettings];
         bp.key = [[NSMutableString alloc] initWithString:@"InputZCorrection"];
@@ -143,7 +143,7 @@
     }
     
     // Select Correction
-    if([self getParameterBy:@"AmpcorSelected"] == nil)
+    if([self checkParameterBy:@"AmpcorSelected"] == NO)
     {
         EnumMemberInfo *emiC1 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Correction 1" displayShort:@""];
         EnumMemberInfo *emiC2 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Correction 2" displayShort:@""];
@@ -169,7 +169,7 @@
     }
 
     // Correction
-    if([self getParameterBy:@"AmpcorState"] == nil)
+    if([self checkParameterBy:@"AmpcorState"] == NO)
     {
         OnOffParameter *oop = [[OnOffParameter alloc] initWithConfig:self.shareSettings];
         oop.key = [[NSMutableString alloc] initWithString:@"AmpcorState"];
@@ -180,7 +180,7 @@
     }
     
     // Freq Ref Input
-    if([self getParameterBy:@"ReferenceOscillatorUI"] == nil)
+    if([self checkParameterBy:@"ReferenceOscillatorUI"] == NO)
     {
         EnumMemberInfo *emiInt = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Internal" displayShort:@"Internal"];
         EnumMemberInfo *emiExt = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"External" displayShort:@"External"];
@@ -199,7 +199,7 @@
     }
     
     // Auto Align
-    if([self getParameterBy:@"Auto Align Type"] == nil)
+    if([self checkParameterBy:@"Auto Align Type"] == NO)
     {
         EnumMemberInfo *emiOn = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Normal" displayShort:@"On"];
         EnumMemberInfo *emiOff = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Off" displayShort:@"Off"];
@@ -216,7 +216,7 @@
     }
     
     // All but RF
-    if([self getParameterBy:@"Auto Align Mode"] == nil)
+    if([self checkParameterBy:@"Auto Align Mode"] == NO)
     {
         OnOffParameter *oop = [[OnOffParameter alloc] initWithConfig:self.shareSettings];
         oop.key = [[NSMutableString alloc] initWithString:@"Auto Align Mode"];
@@ -229,7 +229,7 @@
 -(void)parseBar3Parameters
 {
     // Total Atten
-    if([self getParameterBy:@"TotalAtten"] == nil)
+    if([self checkParameterBy:@"TotalAtten"] == NO)
     {
         RelativeAmplitudeParameter *rap = [[RelativeAmplitudeParameter alloc] initWithConfig:self.shareSettings];
         rap.key = [[NSMutableString alloc] initWithString:@"TotalAtten"];
@@ -239,7 +239,7 @@
     }
 
     // Mech Atten
-    if([self getParameterBy:@"MechanicalAtten"] == nil)
+    if([self checkParameterBy:@"MechanicalAtten"] == NO)
     {
         RelativeAmplitudeParameter *rap = [[RelativeAmplitudeParameter alloc] initWithConfig:self.shareSettings];
         rap.key = [[NSMutableString alloc] initWithString:@"MechanicalAtten"];
@@ -249,7 +249,7 @@
     }
 
     // Elec Atten
-    if([self getParameterBy:@"Electrical Atten"] == nil)
+    if([self checkParameterBy:@"Electrical Atten"] == NO)
     {
         RelativeAmplitudeParameter *rap = [[RelativeAmplitudeParameter alloc] initWithConfig:self.shareSettings];
         rap.key = [[NSMutableString alloc] initWithString:@"Electrical Atten"];
@@ -258,7 +258,7 @@
         [self addParameter:rap forKey:(NSString *)rap.key];
     }
     // Elec Atten State
-    if([self getParameterBy:@"InputZCorrection"] == nil)
+    if([self checkParameterBy:@"InputZCorrection"] == NO)
     {
         BooleanParameter *bp = [[BooleanParameter alloc] initWithConfig:self.shareSettings];
         bp.key = [[NSMutableString alloc] initWithString:@"Electrical Atten State"];
@@ -269,7 +269,7 @@
     }
 
     // Internal Preamp
-    if([self getParameterBy:@"Internal Preamp Band"] == nil)
+    if([self checkParameterBy:@"Internal Preamp Band"] == NO)
     {
         EnumMemberInfo *emiLow = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Low Band (3.60 GHz)" displayShort:@"Low"];
         EnumMemberInfo *emiFull = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Full Band (26.5 GHz)" displayShort:@"Full"];
@@ -283,7 +283,7 @@
         [self addParameter:ep forKey:(NSString *)ep.key];
     }
     // Internal Preamp State
-    if([self getParameterBy:@"Internal Preamp"] == nil)
+    if([self checkParameterBy:@"Internal Preamp"] == NO)
     {
         OnOffParameter *oop = [[OnOffParameter alloc] initWithConfig:self.shareSettings];
         oop.key = [[NSMutableString alloc] initWithString:@"Internal Preamp"];
@@ -292,7 +292,7 @@
     }
 
     // uW Path Control
-    if([self getParameterBy:@"Microwave Path Control"] == nil)
+    if([self checkParameterBy:@"Microwave Path Control"] == NO)
     {
         EnumMemberInfo *emi1 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Standard Path" displayShort:@"Not Enabled"];
         EnumMemberInfo *emi2 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Low Noise Path Enable" displayShort:@"Enabled"];
@@ -312,7 +312,7 @@
 -(void)parseBar4Parameters
 {
     // Select Trig Source
-    if([self getParameterBy:@"TriggerSource"] == nil)
+    if([self checkParameterBy:@"TriggerSource"] == NO)
     {
         EnumMemberInfo *emiFree = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Free Run" displayShort:@"Free Run"];
         EnumMemberInfo *emiVideo = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Video" displayShort:@"Vedio"];
@@ -337,7 +337,7 @@
     }
     
     // Trig Delay
-    if([self getParameterBy:@"Trigger Delay"] == nil)
+    if([self checkParameterBy:@"Trigger Delay"] == NO)
     {
         TimeParameter *tp = [[TimeParameter alloc] initWithConfig:self.shareSettings];
         tp.key = [[NSMutableString alloc] initWithString:@"Trigger Delay"];
@@ -346,7 +346,7 @@
         [self addParameter:tp forKey:(NSString *)tp.key];
     }
     // Trig Delay State
-    if([self getParameterBy:@"Trigger Delay State"] == nil)
+    if([self checkParameterBy:@"Trigger Delay State"] == NO)
     {
         OnOffParameter *oop = [[OnOffParameter alloc] initWithConfig:self.shareSettings];
         oop.key = [[NSMutableString alloc] initWithString:@"Trigger Delay State"];
@@ -358,7 +358,7 @@
 -(void)parseBar5Parameters
 {
     // Phase Noise Optimization
-    if([self getParameterBy:@"Phase Noise Opt"] == nil)
+    if([self checkParameterBy:@"Phase Noise Opt"] == NO)
     {
         EnumMemberInfo *emi1 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Best Close-In ~ Noise [offset < 690 kHz]" displayShort:@"Close"];
         EnumMemberInfo *emi2 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Balance Noise and Spurs [offset < 690 kHz]" displayShort:@"Balanced"];
@@ -378,7 +378,7 @@
         [self addParameter:ep forKey:(NSString *)ep.key];
     }
     // Phase Noise Optimization State
-    if([self getParameterBy:@"Phase Noise Opt Auto"] == nil)
+    if([self checkParameterBy:@"Phase Noise Opt Auto"] == NO)
     {
         AutoManParameter *amp = [[AutoManParameter alloc] initWithConfig:self.shareSettings];
         amp.key = [[NSMutableString alloc] initWithString:@"Phase Noise Opt Auto"];
@@ -387,7 +387,7 @@
     }
 
     // IF Gain
-    if([self getParameterBy:@"IfGainState"] == nil)
+    if([self checkParameterBy:@"IfGainState"] == NO)
     {
         EnumMemberInfo *emiAuto = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Autorange" displayShort:@"Autorange"];
         EnumMemberInfo *emiLow = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Low Gain" displayShort:@"Low"];
@@ -403,7 +403,7 @@
         [self addParameter:ep forKey:(NSString *)ep.key];
     }
     // IF Gain State
-    if([self getParameterBy:@"IFGainAuto"] == nil)
+    if([self checkParameterBy:@"IFGainAuto"] == NO)
     {
         AutoManParameter *amp = [[AutoManParameter alloc] initWithConfig:self.shareSettings];
         amp.key = [[NSMutableString alloc] initWithString:@"IFGainAuto"];
@@ -415,7 +415,7 @@
 -(void)parseBar6Parameters
 {
     // Center Freq
-    if([self getParameterBy:@"CenterFrequency"] == nil)
+    if([self checkParameterBy:@"CenterFrequency"] == NO)
     {
         FrequencyParameter *fp = [[FrequencyParameter alloc] initWithConfig:self.shareSettings];
         fp.key = [[NSMutableString alloc] initWithString:@"CenterFrequency"];
@@ -426,7 +426,7 @@
     }
     
     // Avg Type
-    if([self getParameterBy:@"Average Type"] == nil)
+    if([self checkParameterBy:@"Average Type"] == NO)
     {
         EnumMemberInfo *emi1 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Pwr Avg (RMS)" displayShort:@"Pwr Avg"];
         EnumMemberInfo *emi2 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Log-Pwr Avg (Video)" displayShort:@"Log-Pwr Avg (Video)"];
@@ -446,7 +446,7 @@
         [self addParameter:ep forKey:(NSString *)ep.key];
     }
     // Avg Type State
-    if([self getParameterBy:@"Average Type Auto"] == nil)
+    if([self checkParameterBy:@"Average Type Auto"] == NO)
     {
         AutoManParameter *amp = [[AutoManParameter alloc] initWithConfig:self.shareSettings];
         amp.key = [[NSMutableString alloc] initWithString:@"Average Type Auto"];
@@ -455,7 +455,7 @@
     }
 
     // Avg|Hold Counter
-    if([self getParameterBy:@"Average Counter"] == nil)
+    if([self checkParameterBy:@"Average Counter"] == NO)
     {
         FrequencyParameter *fp = [[FrequencyParameter alloc] initWithConfig:self.shareSettings];
         fp.key = [[NSMutableString alloc] initWithString:@"Average Counter"];
@@ -464,7 +464,7 @@
     }
 
     // Avg|Hold Number
-    if([self getParameterBy:@"Average Number"] == nil)
+    if([self checkParameterBy:@"Average Number"] == NO)
     {
         FrequencyParameter *fp = [[FrequencyParameter alloc] initWithConfig:self.shareSettings];
         fp.key = [[NSMutableString alloc] initWithString:@"Average Number"];
@@ -475,7 +475,7 @@
     }
 
     // Averaging
-    if([self getParameterBy:@"Average State"] == nil)
+    if([self checkParameterBy:@"Average State"] == NO)
     {
         OnOffParameter *oop = [[OnOffParameter alloc] initWithConfig:self.shareSettings];
         oop.key = [[NSMutableString alloc] initWithString:@"Average State"];

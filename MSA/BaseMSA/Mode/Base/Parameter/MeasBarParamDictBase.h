@@ -10,13 +10,13 @@
 #import "ParamDictBase.h"
 
 @class MeasureBase;
-@class ModeParamDictBase;
+@class MeasParamDictBase;
 
 @interface MeasBarParamDictBase : ParamDictBase
 
 @property (nonatomic) MeasureBase *measure;
 
-@property (nonatomic) ModeParamDictBase *modePar;
+@property (nonatomic) MeasParamDictBase *measPar;
 
 -(void)parseBar0Parameters;
 -(void)parseBar1Parameters;

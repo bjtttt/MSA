@@ -133,13 +133,6 @@ typedef NS_ENUM(int, ParamDictType) {
 @property (nonatomic) ParameterManager *parManager;
 @property (nonatomic) ModeManager *modeManager;
 
-//+(id)sharedSettings;
-
-// Should be removed
-//-(void)initMeasureView;
-//-(void)initMeasureBar;
-// Should be removed
-//-(void)initSoftMenuSystem;
 -(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum;
 -(UIImage *)blurryImage:(UIImage *)image;
 

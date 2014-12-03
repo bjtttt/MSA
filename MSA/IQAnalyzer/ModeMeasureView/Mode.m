@@ -41,8 +41,7 @@
 
 -(void)initMeasurement
 {
-    _specMeas.shareSettings = self.shareSettings;
-    [_specMeas initMeasureSoftMenu];
+    [_specMeas initMeasureMent];
 }
 
 @end
