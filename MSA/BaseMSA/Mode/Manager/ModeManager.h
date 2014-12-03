@@ -12,6 +12,7 @@
 @class ShareSettings;
 @class MeasureBase;
 @class MeasureBarDetail;
+@class ParameterManager;
 
 @interface ModeManager : NSObject
 

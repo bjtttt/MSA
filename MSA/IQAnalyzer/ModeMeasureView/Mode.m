@@ -38,6 +38,7 @@
 
 -(void)initMode
 {
+    [super initMode];
 }
 
 -(void)initMeasurement

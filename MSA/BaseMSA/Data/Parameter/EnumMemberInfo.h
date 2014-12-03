@@ -12,10 +12,10 @@
 @interface EnumMemberInfo : NSObject
 
 @property (nonatomic) int value;
-@property (nonatomic) NSString *display;
-@property (nonatomic) NSString *displayShort;
+@property (nonatomic) NSString *label;
+@property (nonatomic) NSString *labelShort;
 
-- (id) initWithEnumMemberInfo:(int)value display:(NSString *)display displayShort:(NSString *)displayShort;
+-(id)initWithEnumMemberInfo:(int)value withLabel:(NSString *)label withLabelShort:(NSString *)labelShort;
 
 @end
 

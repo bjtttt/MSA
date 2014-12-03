@@ -84,9 +84,9 @@
     // Select Inport
     if([self checkParameterBy:@"Input Port"] == NO)
     {
-        EnumMemberInfo *emiRF = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"RF" displayShort:@"RF"];
-        EnumMemberInfo *emiEM = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"External Mixer" displayShort:@"EXT MIXER"];
-        EnumMemberInfo *emiIQ = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 display:@"I/Q" displayShort:@"I/Q"];
+        EnumMemberInfo *emiRF = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 withLabel:@"RF" withLabelShort:@"RF"];
+        EnumMemberInfo *emiEM = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 withLabel:@"External Mixer" withLabelShort:@"EXT MIXER"];
+        EnumMemberInfo *emiIQ = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 withLabel:@"I/Q" withLabelShort:@"I/Q"];
         NSMutableArray *emiArray = [[NSMutableArray alloc] init];
         [emiArray addObject:emiRF];
         [emiArray addObject:emiEM];
@@ -145,14 +145,14 @@
     // Select Correction
     if([self checkParameterBy:@"AmpcorSelected"] == NO)
     {
-        EnumMemberInfo *emiC1 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Correction 1" displayShort:@""];
-        EnumMemberInfo *emiC2 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Correction 2" displayShort:@""];
-        EnumMemberInfo *emiC3 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 display:@"Correction 3" displayShort:@""];
-        EnumMemberInfo *emiC4 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:3 display:@"Correction 4" displayShort:@""];
-        EnumMemberInfo *emiC5 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:4 display:@"Correction 5" displayShort:@""];
-        EnumMemberInfo *emiC6 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:5 display:@"Correction 6" displayShort:@""];
-        EnumMemberInfo *emiC7 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:6 display:@"Correction 7" displayShort:@""];
-        EnumMemberInfo *emiC8 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:7 display:@"Correction 8" displayShort:@""];
+        EnumMemberInfo *emiC1 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 withLabel:@"Correction 1" withLabelShort:@""];
+        EnumMemberInfo *emiC2 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 withLabel:@"Correction 2" withLabelShort:@""];
+        EnumMemberInfo *emiC3 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 withLabel:@"Correction 3" withLabelShort:@""];
+        EnumMemberInfo *emiC4 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:3 withLabel:@"Correction 4" withLabelShort:@""];
+        EnumMemberInfo *emiC5 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:4 withLabel:@"Correction 5" withLabelShort:@""];
+        EnumMemberInfo *emiC6 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:5 withLabel:@"Correction 6" withLabelShort:@""];
+        EnumMemberInfo *emiC7 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:6 withLabel:@"Correction 7" withLabelShort:@""];
+        EnumMemberInfo *emiC8 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:7 withLabel:@"Correction 8" withLabelShort:@""];
         NSMutableArray *emiArray = [[NSMutableArray alloc] init];
         [emiArray addObject:emiC1];
         [emiArray addObject:emiC2];
@@ -182,10 +182,10 @@
     // Freq Ref Input
     if([self checkParameterBy:@"ReferenceOscillatorUI"] == NO)
     {
-        EnumMemberInfo *emiInt = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Internal" displayShort:@"Internal"];
-        EnumMemberInfo *emiExt = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"External" displayShort:@"External"];
-        EnumMemberInfo *emiSense = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 display:@"Sense" displayShort:@"Sense, Int"];
-        EnumMemberInfo *emiPulse = [[EnumMemberInfo alloc] initWithEnumMemberInfo:3 display:@"Pulse" displayShort:@"Pulse"];
+        EnumMemberInfo *emiInt = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 withLabel:@"Internal" withLabelShort:@"Internal"];
+        EnumMemberInfo *emiExt = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 withLabel:@"External" withLabelShort:@"External"];
+        EnumMemberInfo *emiSense = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 withLabel:@"Sense" withLabelShort:@"Sense, Int"];
+        EnumMemberInfo *emiPulse = [[EnumMemberInfo alloc] initWithEnumMemberInfo:3 withLabel:@"Pulse" withLabelShort:@"Pulse"];
         NSMutableArray *emiArray = [[NSMutableArray alloc] init];
         [emiArray addObject:emiInt];
         [emiArray addObject:emiExt];
@@ -201,9 +201,9 @@
     // Auto Align
     if([self checkParameterBy:@"Auto Align Type"] == NO)
     {
-        EnumMemberInfo *emiOn = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Normal" displayShort:@"On"];
-        EnumMemberInfo *emiOff = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Off" displayShort:@"Off"];
-        EnumMemberInfo *emiPartial = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 display:@"Partial" displayShort:@"Partial"];
+        EnumMemberInfo *emiOn = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 withLabel:@"Normal" withLabelShort:@"On"];
+        EnumMemberInfo *emiOff = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 withLabel:@"Off" withLabelShort:@"Off"];
+        EnumMemberInfo *emiPartial = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 withLabel:@"Partial" withLabelShort:@"Partial"];
         NSMutableArray *emiArray = [[NSMutableArray alloc] init];
         [emiArray addObject:emiOn];
         [emiArray addObject:emiOff];
@@ -258,7 +258,7 @@
         [self addParameter:rap forKey:(NSString *)rap.key];
     }
     // Elec Atten State
-    if([self checkParameterBy:@"InputZCorrection"] == NO)
+    if([self checkParameterBy:@"Electrical Atten State"] == NO)
     {
         BooleanParameter *bp = [[BooleanParameter alloc] initWithConfig:self.shareSettings];
         bp.key = [[NSMutableString alloc] initWithString:@"Electrical Atten State"];
@@ -271,8 +271,8 @@
     // Internal Preamp
     if([self checkParameterBy:@"Internal Preamp Band"] == NO)
     {
-        EnumMemberInfo *emiLow = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Low Band (3.60 GHz)" displayShort:@"Low"];
-        EnumMemberInfo *emiFull = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Full Band (26.5 GHz)" displayShort:@"Full"];
+        EnumMemberInfo *emiLow = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 withLabel:@"Low Band (3.60 GHz)" withLabelShort:@"Low"];
+        EnumMemberInfo *emiFull = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 withLabel:@"Full Band (26.5 GHz)" withLabelShort:@"Full"];
         NSMutableArray *emiArray = [[NSMutableArray alloc] init];
         [emiArray addObject:emiLow];
         [emiArray addObject:emiFull];
@@ -294,9 +294,9 @@
     // uW Path Control
     if([self checkParameterBy:@"Microwave Path Control"] == NO)
     {
-        EnumMemberInfo *emi1 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Standard Path" displayShort:@"Not Enabled"];
-        EnumMemberInfo *emi2 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Low Noise Path Enable" displayShort:@"Enabled"];
-        EnumMemberInfo *emi3 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"uW Presel Bypass" displayShort:@"Not Enabled"];
+        EnumMemberInfo *emi1 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 withLabel:@"Standard Path" withLabelShort:@"Not Enabled"];
+        EnumMemberInfo *emi2 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 withLabel:@"Low Noise Path Enable" withLabelShort:@"Enabled"];
+        EnumMemberInfo *emi3 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 withLabel:@"uW Presel Bypass" withLabelShort:@"Not Enabled"];
         NSMutableArray *emiArray = [[NSMutableArray alloc] init];
         [emiArray addObject:emi1];
         [emiArray addObject:emi2];
@@ -314,13 +314,13 @@
     // Select Trig Source
     if([self checkParameterBy:@"TriggerSource"] == NO)
     {
-        EnumMemberInfo *emiFree = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Free Run" displayShort:@"Free Run"];
-        EnumMemberInfo *emiVideo = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Video" displayShort:@"Vedio"];
-        EnumMemberInfo *emiLine = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 display:@"Line" displayShort:@"Line"];
-        EnumMemberInfo *emiExt1 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:3 display:@"External 1" displayShort:@"External 1"];
-        EnumMemberInfo *emiExt2 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:4 display:@"External 2" displayShort:@"External 2"];
-        EnumMemberInfo *emiRFB = [[EnumMemberInfo alloc] initWithEnumMemberInfo:5 display:@"RF Burst" displayShort:@"RF Burst"];
-        EnumMemberInfo *emiPer = [[EnumMemberInfo alloc] initWithEnumMemberInfo:6 display:@"Periodic" displayShort:@"Periodic"];
+        EnumMemberInfo *emiFree = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 withLabel:@"Free Run" withLabelShort:@"Free Run"];
+        EnumMemberInfo *emiVideo = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 withLabel:@"Video" withLabelShort:@"Vedio"];
+        EnumMemberInfo *emiLine = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 withLabel:@"Line" withLabelShort:@"Line"];
+        EnumMemberInfo *emiExt1 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:3 withLabel:@"External 1" withLabelShort:@"External 1"];
+        EnumMemberInfo *emiExt2 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:4 withLabel:@"External 2" withLabelShort:@"External 2"];
+        EnumMemberInfo *emiRFB = [[EnumMemberInfo alloc] initWithEnumMemberInfo:5 withLabel:@"RF Burst" withLabelShort:@"RF Burst"];
+        EnumMemberInfo *emiPer = [[EnumMemberInfo alloc] initWithEnumMemberInfo:6 withLabel:@"Periodic" withLabelShort:@"Periodic"];
         NSMutableArray *emiArray = [[NSMutableArray alloc] init];
         [emiArray addObject:emiFree];
         [emiArray addObject:emiVideo];
@@ -360,11 +360,11 @@
     // Phase Noise Optimization
     if([self checkParameterBy:@"Phase Noise Opt"] == NO)
     {
-        EnumMemberInfo *emi1 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Best Close-In ~ Noise [offset < 690 kHz]" displayShort:@"Close"];
-        EnumMemberInfo *emi2 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Balance Noise and Spurs [offset < 690 kHz]" displayShort:@"Balanced"];
-        EnumMemberInfo *emi3 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 display:@"Best Spurs [offset < 690 kHz]" displayShort:@"Best Spurs"];
-        EnumMemberInfo *emi4 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:3 display:@"Best Wide-Offset ~ Noise [offset > 710 kHz]" displayShort:@"Wide"];
-        EnumMemberInfo *emi5 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:4 display:@"Fast Tuning" displayShort:@"Fast"];
+        EnumMemberInfo *emi1 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 withLabel:@"Best Close-In ~ Noise [offset < 690 kHz]" withLabelShort:@"Close"];
+        EnumMemberInfo *emi2 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 withLabel:@"Balance Noise and Spurs [offset < 690 kHz]" withLabelShort:@"Balanced"];
+        EnumMemberInfo *emi3 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 withLabel:@"Best Spurs [offset < 690 kHz]" withLabelShort:@"Best Spurs"];
+        EnumMemberInfo *emi4 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:3 withLabel:@"Best Wide-Offset ~ Noise [offset > 710 kHz]" withLabelShort:@"Wide"];
+        EnumMemberInfo *emi5 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:4 withLabel:@"Fast Tuning" withLabelShort:@"Fast"];
         NSMutableArray *emiArray = [[NSMutableArray alloc] init];
         [emiArray addObject:emi1];
         [emiArray addObject:emi2];
@@ -389,9 +389,9 @@
     // IF Gain
     if([self checkParameterBy:@"IfGainState"] == NO)
     {
-        EnumMemberInfo *emiAuto = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Autorange" displayShort:@"Autorange"];
-        EnumMemberInfo *emiLow = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Low Gain" displayShort:@"Low"];
-        EnumMemberInfo *emiHigh = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 display:@"High Gain" displayShort:@"High"];
+        EnumMemberInfo *emiAuto = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 withLabel:@"Autorange" withLabelShort:@"Autorange"];
+        EnumMemberInfo *emiLow = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 withLabel:@"Low Gain" withLabelShort:@"Low"];
+        EnumMemberInfo *emiHigh = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 withLabel:@"High Gain" withLabelShort:@"High"];
         NSMutableArray *emiArray = [[NSMutableArray alloc] init];
         [emiArray addObject:emiAuto];
         [emiArray addObject:emiLow];
@@ -428,11 +428,11 @@
     // Avg Type
     if([self checkParameterBy:@"Average Type"] == NO)
     {
-        EnumMemberInfo *emi1 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 display:@"Pwr Avg (RMS)" displayShort:@"Pwr Avg"];
-        EnumMemberInfo *emi2 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 display:@"Log-Pwr Avg (Video)" displayShort:@"Log-Pwr Avg (Video)"];
-        EnumMemberInfo *emi3 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 display:@"Voltage Avg" displayShort:@"Voltage Avg"];
-        EnumMemberInfo *emi4 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:3 display:@"Maximum" displayShort:@"Voltage AvgMaximum"];
-        EnumMemberInfo *emi5 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:4 display:@"Minimum" displayShort:@"Minimum"];
+        EnumMemberInfo *emi1 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:0 withLabel:@"Pwr Avg (RMS)" withLabelShort:@"Pwr Avg"];
+        EnumMemberInfo *emi2 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:1 withLabel:@"Log-Pwr Avg (Video)" withLabelShort:@"Log-Pwr Avg (Video)"];
+        EnumMemberInfo *emi3 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:2 withLabel:@"Voltage Avg" withLabelShort:@"Voltage Avg"];
+        EnumMemberInfo *emi4 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:3 withLabel:@"Maximum" withLabelShort:@"Voltage AvgMaximum"];
+        EnumMemberInfo *emi5 = [[EnumMemberInfo alloc] initWithEnumMemberInfo:4 withLabel:@"Minimum" withLabelShort:@"Minimum"];
         NSMutableArray *emiArray = [[NSMutableArray alloc] init];
         [emiArray addObject:emi1];
         [emiArray addObject:emi2];

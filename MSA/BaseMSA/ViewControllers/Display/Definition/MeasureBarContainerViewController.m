@@ -173,15 +173,15 @@
     CGFloat prevWidth = 0.0;
     CGFloat barWidth = 0.0;
 
-    int count = _shareSettings.modeManager.mbarDetail.mbarCount;
+    int count = _shareSettings.modeManager.curMBarDetail.mbarCount;
     for(int i=0;i<count; i++)
     {
         UIView *view = (UIView *)[self.barVs objectAtIndex:i];
         UIViewController<MeasureBarDefinition> *vc = (UIViewController<MeasureBarDefinition> *)[self.barVCs objectAtIndex:i];
         
-        CGFloat fv = [(NSNumber *)[_shareSettings.modeManager.measure.mbarDetail.mbarWidths objectAtIndex:i] floatValue];
-        if(_shareSettings.modeManager.measure.mbarDetail.useRatio == YES)
-            barWidth = width * fv / _shareSettings.modeManager.measure.mbarDetail.totalWidth;
+        CGFloat fv = [(NSNumber *)[_shareSettings.modeManager.curMBarDetail.mbarWidths objectAtIndex:i] floatValue];
+        if(_shareSettings.modeManager.curMBarDetail.useRatio == YES)
+            barWidth = width * fv / _shareSettings.modeManager.curMBarDetail.totalWidth;
         else
             barWidth = fv;
         

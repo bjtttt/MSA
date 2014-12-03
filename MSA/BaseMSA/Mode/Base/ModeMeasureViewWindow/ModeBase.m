@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ModeBase.h"
+#import "ParameterManager.h"
+#import "ShareSettings.h"
+#import "ModeParamDictBase.h"
+#import "ModeParams.h"
+#import "MeasureBase.h"
 
 @interface ModeBase()
 
@@ -40,12 +45,20 @@
 
 -(void)initMode
 {
-    [NSException raise:@"ModeBase::initMode" format:@"ModeBase::initMode should be override in each mode."];
+    if([_shareSettings.parManager.modePars isKindOfClass:ModeParamDictBase.class] == NO)
+        [NSException raise:@"ModeBase::initMode" format:@"Mode parameter dictionary in mode of parameter manager is not a child of ModeParamDictBase."];
+    _modeParDict = (ModeParamDictBase *)_shareSettings.parManager.modePars;
+    //[NSException raise:@"ModeBase::initMode" format:@"ModeBase::initMode should be override in each mode."];
 }
 
 -(void)initMeasurement
 {
-    [NSException raise:@"ModeBase::initMeasurement" format:@"ModeBase::initMeasurement should be override in each mode."];
+    NSArray *vals = _measureDict.allValues;
+    for (MeasureBase *mb in vals)
+    {
+        mb.measParDict = _shareSettings.parManager.modePars.measParDict[mb.measureName];
+    }
+    //[NSException raise:@"ModeBase::initMeasurement" format:@"ModeBase::initMeasurement should be override in each mode."];
 }
 
 @end

@@ -49,7 +49,7 @@
 -(NSString *)label
 {
     if(_softKeyType == KEY_ENUM_ITEM)
-        return _enumMemberInfo.display;
+        return _enumMemberInfo.label;
     else
         return _connectParam.label;
 }
@@ -57,7 +57,7 @@
 -(NSString *)labelShort
 {
     if(_softKeyType == KEY_ENUM_ITEM)
-        return [_enumMemberInfo.displayShort mutableCopy];
+        return [_enumMemberInfo.labelShort mutableCopy];
     else
         return _connectParam.labelShort;
 }

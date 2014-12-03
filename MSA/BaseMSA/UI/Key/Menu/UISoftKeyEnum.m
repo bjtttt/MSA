@@ -43,7 +43,7 @@
     if([self findEnumItemByValue:value] != nil)
         [NSException raise:@"UISoftKeyEnum::addEnumItem:label:labelShort" format:@"UISoftPanel(\"%@\")-UISoftKey(\"%@\") : Enum item array already contains %d", _softkey.softPanel.title, _softkey.label, value];
 
-    UISoftKeyEnumItem *item = [[UISoftKeyEnumItem alloc] init];
+    UISoftKeyEnumItem *item = [[UISoftKeyEnumItem alloc] initWithConfig:_shareSettings];
     item.value = value;
     item.label = label;             // Maybe it is nil
     item.labelShort = labelShort;   // Maybe it is nil
