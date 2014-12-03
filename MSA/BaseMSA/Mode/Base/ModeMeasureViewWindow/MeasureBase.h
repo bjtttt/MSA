@@ -20,12 +20,12 @@
 @property (nonatomic) ShareSettings *shareSettings;
 
 @property (nonatomic) NSString *measureName;
-@property (nonatomic) NSMutableDictionary *viewDict;
-@property (nonatomic) MeasureBarDetail *mbarDetail;
 
+@property (nonatomic) MeasureBarDetail *mbarDetail;
 @property (nonatomic) MeasParamDictBase *measParDict;
 
 @property (nonatomic) ViewBase *curView;
+@property (nonatomic) NSMutableDictionary *viewDict;
 
 @property (nonatomic) UISoftMenu *barMenu;
 @property (nonatomic) UISoftMenu *softMenu;

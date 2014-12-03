@@ -15,8 +15,6 @@
 @interface ParamDictBase : NSObject
 
 @property (nonatomic) ParamDictType dictType;
-@property (nonatomic, readonly) NSString *modeName;
-@property (nonatomic, readonly) NSString *measName;
 @property (nonatomic) NSMutableDictionary *parDict;
 @property (nonatomic) ShareSettings *shareSettings;
 

@@ -45,12 +45,17 @@
     [_mode initMeasurement];
 }
 
--(MeasureBase *)measure
+-(MeasureBase *)prevMeasure
+{
+    return _mode.prevMeasure;
+}
+
+-(MeasureBase *)curMeasure
 {
     return _mode.curMeasure;
 }
 
--(MeasureBarDetail *)mbarDetail
+-(MeasureBarDetail *)curMBarDetail
 {
     return _mode.curMeasure.mbarDetail;
 }

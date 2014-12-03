@@ -30,6 +30,7 @@
     {
         self.modeName = @"IQ Analyzer";
         _specMeas = [[SpecMeasurement alloc] initWithConfig:ss];
+        self.measureDict[_specMeas.measureName] = _specMeas;
     }
     
     return self;

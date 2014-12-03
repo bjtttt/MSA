@@ -37,16 +37,6 @@
     return self;
 }
 
--(NSString *)modeName
-{
-    return (NSString *)_modePar.modeName;
-}
-
--(NSString *)measName
-{
-    return (NSString *)_measure.measureName;
-}
-
 -(void)registerParameterEvent
 {
     [NSException raise:@"MeasParamDictBase::registerParameterEvent" format:@"MeasParamDictBase::registerParameterEvent should be overrrided in each measurement."];
@@ -82,17 +72,17 @@
 -(void)addParameter:(Parameter *)par forKey:(NSString *)key
 {
     if(self.parDict == nil)
-        [NSException raise:@"MeasParamDictBase::getParameterBy:" format:@"Cannot use nil data dictionary for meas(\"%@\").", self.measName];
+        [NSException raise:@"MeasParamDictBase::getParameterBy:" format:@"Cannot use nil data dictionary for meas(\"%@\").", self.measure.measureName];
     if(par == nil)
-        [NSException raise:@"MeasParamDictBase::addParameter:forKey:" format:@"Cannot insert nil parameter into meas(\"%@\") meas parameter dictionary.", self.measName];
+        [NSException raise:@"MeasParamDictBase::addParameter:forKey:" format:@"Cannot insert nil parameter into meas(\"%@\") meas parameter dictionary.", self.measure.measureName];
     if(key == nil)
-        [NSException raise:@"MeasParamDictBase::addParameter:forKey:" format:@"Cannot insert nil key into meas(\"%@\") meas parameter dictionary.", self.measName];
+        [NSException raise:@"MeasParamDictBase::addParameter:forKey:" format:@"Cannot insert nil key into meas(\"%@\") meas parameter dictionary.", self.measure.measureName];
     if(key.length <= 0)
-        [NSException raise:@"MeasParamDictBase::addParameter:forKey:" format:@"Cannot insert empty key into meas(\"%@\") meas parameter dictionary.", self.measName];
+        [NSException raise:@"MeasParamDictBase::addParameter:forKey:" format:@"Cannot insert empty key into meas(\"%@\") meas parameter dictionary.", self.measure.measureName];
     
     Parameter *parInDict = (Parameter *)[self.parDict objectForKey:key];
     if(parInDict != nil)
-        [NSException raise:@"MeasParamDictBase::addParameter:forKey:" format:@"Cannot insert parameter(\"%@\") with the same key(\"%@\") into meas(\"%@\") meas parameter dictionary.", par, key, self.measName];
+        [NSException raise:@"MeasParamDictBase::addParameter:forKey:" format:@"Cannot insert parameter(\"%@\") with the same key(\"%@\") into meas(\"%@\") meas parameter dictionary.", par, key, self.measure.measureName];
     
     [self.parDict setValue:par forKey:key];
 }
@@ -100,15 +90,15 @@
 -(Parameter *)getParameterBy:(NSString *)key
 {
     if(self.parDict == nil)
-        [NSException raise:@"MeasParamDictBase::getParameterBy:" format:@"Cannot use nil data dictionary for meas(\"%@\").", self.measName];
+        [NSException raise:@"MeasParamDictBase::getParameterBy:" format:@"Cannot use nil data dictionary for meas(\"%@\").", self.measure.measureName];
     if(key == nil)
-        [NSException raise:@"MeasParamDictBase::getParameterBy:" format:@"Cannot use nil key for meas(\"%@\") meas parameter dictionary.", self.measName];
+        [NSException raise:@"MeasParamDictBase::getParameterBy:" format:@"Cannot use nil key for meas(\"%@\") meas parameter dictionary.", self.measure.measureName];
     if(key.length <= 0)
-        [NSException raise:@"MeasParamDictBase::getParameterBy:" format:@"Cannot use empty key for meas(\"%@\") meas parameter dictionary.", self.measName];
+        [NSException raise:@"MeasParamDictBase::getParameterBy:" format:@"Cannot use empty key for meas(\"%@\") meas parameter dictionary.", self.measure.measureName];
     
     Parameter *parInDict = (Parameter *)[self.parDict objectForKey:key];
     if(parInDict == nil)
-        [NSException raise:@"MeasParamDictBase::getParameterBy:" format:@"Cannot get parameter with the key(\"%@\") from meas(\"%@\") meas parameter dictionary.",  key, self.measName];
+        [NSException raise:@"MeasParamDictBase::getParameterBy:" format:@"Cannot get parameter with the key(\"%@\") from meas(\"%@\") meas parameter dictionary.",  key, self.measure.measureName];
     
     return parInDict;
 }
@@ -116,11 +106,11 @@
 -(bool)checkParameterBy:(NSString *)key
 {
     if(self.parDict == nil)
-        [NSException raise:@"MeasParamDictBase::getParameterBy:" format:@"Cannot use nil data dictionary for meas(\"%@\").", self.measName];
+        [NSException raise:@"MeasParamDictBase::getParameterBy:" format:@"Cannot use nil data dictionary for meas(\"%@\").", self.measure.measureName];
     if(key == nil)
-        [NSException raise:@"MeasParamDictBase::checkParameterBy:" format:@"Cannot use nil key for meas(\"%@\") meas parameter dictionary.", self.measName];
+        [NSException raise:@"MeasParamDictBase::checkParameterBy:" format:@"Cannot use nil key for meas(\"%@\") meas parameter dictionary.", self.measure.measureName];
     if(key.length <= 0)
-        [NSException raise:@"MeasParamDictBase::checkParameterBy:" format:@"Cannot use empty key for meas(\"%@\") meas parameter dictionary.", self.measName];
+        [NSException raise:@"MeasParamDictBase::checkParameterBy:" format:@"Cannot use empty key for meas(\"%@\") meas parameter dictionary.", self.measure.measureName];
     
     Parameter *parInDict = (Parameter *)[self.parDict objectForKey:key];
     if(parInDict != nil)

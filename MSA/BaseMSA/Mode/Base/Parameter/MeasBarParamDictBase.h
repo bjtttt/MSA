@@ -15,7 +15,6 @@
 @interface MeasBarParamDictBase : ParamDictBase
 
 @property (nonatomic) MeasureBase *measure;
-
 @property (nonatomic) MeasParamDictBase *measPar;
 
 -(void)parseBar0Parameters;

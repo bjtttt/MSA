@@ -38,7 +38,7 @@
     if ((self = [super initWithConfig:ss]))
     {
         self.measureName = @"ComplexSpectrum";
-        self.measParDict = (MeasParamDictBase *)[ss.parManager.modePars getMeasureParByName:@"ComplexSpectrum"];
+        self.measParDict = (MeasParamDictBase *)[ss.parManager.modePars getMeasureParByKey:@"ComplexSpectrum"];
     }
     
     return self;

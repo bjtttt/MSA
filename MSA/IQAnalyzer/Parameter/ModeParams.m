@@ -31,11 +31,11 @@
     {
         _specParams = [[SpecParams alloc] initWithConfig:ss];
         _specParams.modePar = self;
-        [self addMeasurePar:_specParams];
+        [self addMeasurePar:_specParams forKey:@"ComplexSpectrum"];
         
         _waveParams = [[WaveParams alloc] initWithConfig:ss];
         _waveParams.modePar = self;
-        [self addMeasurePar:_waveParams];
+        [self addMeasurePar:_waveParams forKey:@"IQWaveform"];
     }
     
     return self;

@@ -16,8 +16,9 @@
 @interface ModeManager : NSObject
 
 @property (nonatomic) Mode *mode;
-@property (nonatomic, readonly) MeasureBase *measure;
-@property (nonatomic, readonly) MeasureBarDetail *mbarDetail;
+@property (nonatomic, readonly) MeasureBase *prevMeasure;
+@property (nonatomic, readonly) MeasureBase *curMeasure;
+@property (nonatomic, readonly) MeasureBarDetail *curMBarDetail;
 
 @property (nonatomic) ShareSettings *shareSettings;
 

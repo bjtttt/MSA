@@ -9,6 +9,7 @@
 #import "ShareSettings.h"
 #import "ParameterManager.h"
 #import "ModeManager.h"
+#import "Mode.h"
 #import "MeasureBase.h"
 #import "MainContainerViewController.h"
 #import "DisplayContainerViewController.h"
@@ -118,8 +119,7 @@
     _modeManager.shareSettings = _shareSettings;
     _shareSettings.modeManager = _modeManager;
     [_modeManager initMode];
-    //[self.modeManager initMenuSystem];
-
+    
     UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
     self.shareSettings.modeStoryboard = modeUIS;
     MeasureBarContainerViewController *mbarCVC = (MeasureBarContainerViewController *)[modeUIS instantiateViewControllerWithIdentifier:@"measureBarCVC"];
@@ -291,7 +291,7 @@
         displayWidth = self.frameWidth - MENU_WIDTH;
     else
         displayWidth = self.frameWidth;
-    CGFloat barMenuPosition = [_shareSettings.modeManager.measure
+    CGFloat barMenuPosition = [_shareSettings.modeManager.mode.curMeasure
                                measureBarPopupMenuPosition:_shareSettings.barTappedIndex forWidth:displayWidth];
     
     if(self.shareSettings.presetMenuDisplayed == YES)
@@ -318,7 +318,7 @@
     {
         if(self.shareSettings.barTappedIndex == -1)
         {
-            barMenuPosition = [_shareSettings.modeManager.measure
+            barMenuPosition = [_shareSettings.modeManager.mode.curMeasure
                                measureBarPopupMenuPosition:self.shareSettings.previousBarPopupMenuIndex forWidth:displayWidth];
             
             layoutBlock = ^(void)
