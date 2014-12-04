@@ -15,4 +15,9 @@
 
 @implementation Bar1ViewControllerView
 
+-(int)curMeasBarIndex
+{
+    return 1;
+}
+
 @end

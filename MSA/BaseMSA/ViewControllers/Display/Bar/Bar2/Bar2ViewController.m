@@ -15,5 +15,4 @@
 
 @implementation Bar2ViewController
 
-
 @end

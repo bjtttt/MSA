@@ -143,7 +143,6 @@
 		9A23C17F1A2719B10069971A /* Bar0OneLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C1661A2719B10069971A /* Bar0OneLineTableViewCell.m */; };
 		9A23C1801A2719B10069971A /* Bar0OneLineYellowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C1681A2719B10069971A /* Bar0OneLineYellowTableViewCell.m */; };
 		9A23C1811A2719B10069971A /* Bar0SingleContinousTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C16A1A2719B10069971A /* Bar0SingleContinousTableViewCell.m */; };
-		9A23C1821A2719B10069971A /* MeasureBarContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C16C1A2719B10069971A /* MeasureBarContainerView.m */; };
 		9A3FECCB1A2F3D8900B9801C /* Bar8TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3FECC71A2F3D8900B9801C /* Bar8TableViewController.m */; };
 		9A3FECCC1A2F3D8900B9801C /* Bar9TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3FECCA1A2F3D8900B9801C /* Bar9TableViewController.m */; };
 		9A6616CC1A2943C500D3E2CA /* MeasureBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616BE1A2943C500D3E2CA /* MeasureBase.m */; };
@@ -153,6 +152,38 @@
 		9A6616D01A2943C500D3E2CA /* MeasBarParamDictBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616C71A2943C500D3E2CA /* MeasBarParamDictBase.m */; };
 		9A6616D11A2943C500D3E2CA /* MeasParamDictBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616C91A2943C500D3E2CA /* MeasParamDictBase.m */; };
 		9A6616D21A2943C500D3E2CA /* ModeParamDictBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616CB1A2943C500D3E2CA /* ModeParamDictBase.m */; };
+		9A69E8701A3086F000859CB0 /* MeasureBarContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E86F1A3086F000859CB0 /* MeasureBarContainerView.m */; };
+		9A69E8731A308C9000859CB0 /* BarViewControllerContainerViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8721A308C9000859CB0 /* BarViewControllerContainerViewBase.m */; };
+		9A69E8BD1A308F1400859CB0 /* Bar0ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8791A308F1400859CB0 /* Bar0ViewController.m */; };
+		9A69E8BE1A308F1400859CB0 /* Bar0ViewControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E87B1A308F1400859CB0 /* Bar0ViewControllerContainerView.m */; };
+		9A69E8BF1A308F1400859CB0 /* Bar0ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E87D1A308F1400859CB0 /* Bar0ViewControllerView.m */; };
+		9A69E8C01A308F1400859CB0 /* Bar1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8801A308F1400859CB0 /* Bar1ViewController.m */; };
+		9A69E8C11A308F1400859CB0 /* Bar1ViewControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8821A308F1400859CB0 /* Bar1ViewControllerContainerView.m */; };
+		9A69E8C21A308F1400859CB0 /* Bar1ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8841A308F1400859CB0 /* Bar1ViewControllerView.m */; };
+		9A69E8C31A308F1400859CB0 /* Bar2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8871A308F1400859CB0 /* Bar2ViewController.m */; };
+		9A69E8C41A308F1400859CB0 /* Bar2ViewControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8891A308F1400859CB0 /* Bar2ViewControllerContainerView.m */; };
+		9A69E8C51A308F1400859CB0 /* Bar2ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E88B1A308F1400859CB0 /* Bar2ViewControllerView.m */; };
+		9A69E8C61A308F1400859CB0 /* Bar3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E88E1A308F1400859CB0 /* Bar3ViewController.m */; };
+		9A69E8C71A308F1400859CB0 /* Bar3ViewControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8901A308F1400859CB0 /* Bar3ViewControllerContainerView.m */; };
+		9A69E8C81A308F1400859CB0 /* Bar3ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8921A308F1400859CB0 /* Bar3ViewControllerView.m */; };
+		9A69E8C91A308F1400859CB0 /* Bar4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8951A308F1400859CB0 /* Bar4ViewController.m */; };
+		9A69E8CA1A308F1400859CB0 /* Bar4ViewControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8971A308F1400859CB0 /* Bar4ViewControllerContainerView.m */; };
+		9A69E8CB1A308F1400859CB0 /* Bar4ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8991A308F1400859CB0 /* Bar4ViewControllerView.m */; };
+		9A69E8CC1A308F1400859CB0 /* Bar5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E89C1A308F1400859CB0 /* Bar5ViewController.m */; };
+		9A69E8CD1A308F1400859CB0 /* Bar5ViewControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E89E1A308F1400859CB0 /* Bar5ViewControllerContainerView.m */; };
+		9A69E8CE1A308F1400859CB0 /* Bar5ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8A01A308F1400859CB0 /* Bar5ViewControllerView.m */; };
+		9A69E8CF1A308F1400859CB0 /* Bar6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8A31A308F1400859CB0 /* Bar6ViewController.m */; };
+		9A69E8D01A308F1400859CB0 /* Bar6ViewControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8A51A308F1400859CB0 /* Bar6ViewControllerContainerView.m */; };
+		9A69E8D11A308F1400859CB0 /* Bar6ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8A71A308F1400859CB0 /* Bar6ViewControllerView.m */; };
+		9A69E8D21A308F1400859CB0 /* Bar7ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8AA1A308F1400859CB0 /* Bar7ViewController.m */; };
+		9A69E8D31A308F1400859CB0 /* Bar7ViewControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8AC1A308F1400859CB0 /* Bar7ViewControllerContainerView.m */; };
+		9A69E8D41A308F1400859CB0 /* Bar7ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8AE1A308F1400859CB0 /* Bar7ViewControllerView.m */; };
+		9A69E8D51A308F1400859CB0 /* Bar8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8B11A308F1400859CB0 /* Bar8ViewController.m */; };
+		9A69E8D61A308F1400859CB0 /* Bar8ViewControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8B31A308F1400859CB0 /* Bar8ViewControllerContainerView.m */; };
+		9A69E8D71A308F1400859CB0 /* Bar8ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8B51A308F1400859CB0 /* Bar8ViewControllerView.m */; };
+		9A69E8D81A308F1400859CB0 /* Bar9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8B81A308F1400859CB0 /* Bar9ViewController.m */; };
+		9A69E8D91A308F1400859CB0 /* Bar9ViewControllerContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8BA1A308F1400859CB0 /* Bar9ViewControllerContainerView.m */; };
+		9A69E8DA1A308F1400859CB0 /* Bar9ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8BC1A308F1400859CB0 /* Bar9ViewControllerView.m */; };
 		9A9209301A2EC33500E9651E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A92092E1A2EC33500E9651E /* Main.storyboard */; };
 		9A9C670E19AD6C81007D3248 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C670D19AD6C81007D3248 /* main.m */; };
 		9A9C671119AD6C81007D3248 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9C671019AD6C81007D3248 /* AppDelegate.m */; };
@@ -163,26 +194,6 @@
 		9AB3B6ED1A30013C00ED8C45 /* AppMode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AB3B6EC1A30013C00ED8C45 /* AppMode.storyboard */; };
 		9AB3B6F41A300A6F00ED8C45 /* MeasureBarContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B6F01A300A6F00ED8C45 /* MeasureBarContainerViewController.m */; };
 		9AB3B6F51A300A6F00ED8C45 /* DisplayTracesContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B6F31A300A6F00ED8C45 /* DisplayTracesContainerViewController.m */; };
-		9AB3B72D1A300C7D00ED8C45 /* Bar0ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B6F81A300C7D00ED8C45 /* Bar0ViewController.m */; };
-		9AB3B72E1A300C7D00ED8C45 /* Bar0ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B6FA1A300C7D00ED8C45 /* Bar0ViewControllerView.m */; };
-		9AB3B7311A300C7D00ED8C45 /* Bar1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B7021A300C7D00ED8C45 /* Bar1ViewController.m */; };
-		9AB3B7321A300C7D00ED8C45 /* Bar1ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B7041A300C7D00ED8C45 /* Bar1ViewControllerView.m */; };
-		9AB3B7331A300C7D00ED8C45 /* Bar2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B7071A300C7D00ED8C45 /* Bar2ViewController.m */; };
-		9AB3B7341A300C7D00ED8C45 /* Bar2ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B7091A300C7D00ED8C45 /* Bar2ViewControllerView.m */; };
-		9AB3B7351A300C7D00ED8C45 /* Bar3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B70C1A300C7D00ED8C45 /* Bar3ViewController.m */; };
-		9AB3B7361A300C7D00ED8C45 /* Bar3ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B70E1A300C7D00ED8C45 /* Bar3ViewControllerView.m */; };
-		9AB3B7371A300C7D00ED8C45 /* Bar4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B7111A300C7D00ED8C45 /* Bar4ViewController.m */; };
-		9AB3B7381A300C7D00ED8C45 /* Bar4ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B7131A300C7D00ED8C45 /* Bar4ViewControllerView.m */; };
-		9AB3B7391A300C7D00ED8C45 /* Bar5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B7161A300C7D00ED8C45 /* Bar5ViewController.m */; };
-		9AB3B73A1A300C7D00ED8C45 /* Bar5ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B7181A300C7D00ED8C45 /* Bar5ViewControllerView.m */; };
-		9AB3B73B1A300C7D00ED8C45 /* Bar6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B71B1A300C7D00ED8C45 /* Bar6ViewController.m */; };
-		9AB3B73C1A300C7D00ED8C45 /* Bar6ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B71D1A300C7D00ED8C45 /* Bar6ViewControllerView.m */; };
-		9AB3B73D1A300C7D00ED8C45 /* Bar7ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B7201A300C7D00ED8C45 /* Bar7ViewController.m */; };
-		9AB3B73E1A300C7D00ED8C45 /* Bar7ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B7221A300C7D00ED8C45 /* Bar7ViewControllerView.m */; };
-		9AB3B73F1A300C7D00ED8C45 /* Bar8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B7251A300C7D00ED8C45 /* Bar8ViewController.m */; };
-		9AB3B7401A300C7D00ED8C45 /* Bar8ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B7271A300C7D00ED8C45 /* Bar8ViewControllerView.m */; };
-		9AB3B7411A300C7D00ED8C45 /* Bar9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B72A1A300C7D00ED8C45 /* Bar9ViewController.m */; };
-		9AB3B7421A300C7D00ED8C45 /* Bar9ViewControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B72C1A300C7D00ED8C45 /* Bar9ViewControllerView.m */; };
 		9AB3B74E1A3042EB00ED8C45 /* BarViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B74B1A3042EB00ED8C45 /* BarViewControllerBase.m */; };
 		9AB3B74F1A3042EB00ED8C45 /* BarViewControllerViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB3B74D1A3042EB00ED8C45 /* BarViewControllerViewBase.m */; };
 		9AEFB94C1A285DAD00E2CBFD /* ModeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AEFB9441A285DAD00E2CBFD /* ModeManager.m */; };
@@ -438,8 +449,6 @@
 		9A23C1681A2719B10069971A /* Bar0OneLineYellowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar0OneLineYellowTableViewCell.m; sourceTree = "<group>"; };
 		9A23C1691A2719B10069971A /* Bar0SingleContinousTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar0SingleContinousTableViewCell.h; sourceTree = "<group>"; };
 		9A23C16A1A2719B10069971A /* Bar0SingleContinousTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar0SingleContinousTableViewCell.m; sourceTree = "<group>"; };
-		9A23C16B1A2719B10069971A /* MeasureBarContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBarContainerView.h; sourceTree = "<group>"; };
-		9A23C16C1A2719B10069971A /* MeasureBarContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureBarContainerView.m; sourceTree = "<group>"; };
 		9A3FECC61A2F3D8900B9801C /* Bar8TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar8TableViewController.h; sourceTree = "<group>"; };
 		9A3FECC71A2F3D8900B9801C /* Bar8TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar8TableViewController.m; sourceTree = "<group>"; };
 		9A3FECC91A2F3D8900B9801C /* Bar9TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar9TableViewController.h; sourceTree = "<group>"; };
@@ -460,6 +469,70 @@
 		9A6616C91A2943C500D3E2CA /* MeasParamDictBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasParamDictBase.m; sourceTree = "<group>"; };
 		9A6616CA1A2943C500D3E2CA /* ModeParamDictBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeParamDictBase.h; sourceTree = "<group>"; };
 		9A6616CB1A2943C500D3E2CA /* ModeParamDictBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeParamDictBase.m; sourceTree = "<group>"; };
+		9A69E86E1A3086F000859CB0 /* MeasureBarContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBarContainerView.h; sourceTree = "<group>"; };
+		9A69E86F1A3086F000859CB0 /* MeasureBarContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureBarContainerView.m; sourceTree = "<group>"; };
+		9A69E8711A308C9000859CB0 /* BarViewControllerContainerViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarViewControllerContainerViewBase.h; sourceTree = "<group>"; };
+		9A69E8721A308C9000859CB0 /* BarViewControllerContainerViewBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarViewControllerContainerViewBase.m; sourceTree = "<group>"; };
+		9A69E8781A308F1400859CB0 /* Bar0ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar0ViewController.h; sourceTree = "<group>"; };
+		9A69E8791A308F1400859CB0 /* Bar0ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar0ViewController.m; sourceTree = "<group>"; };
+		9A69E87A1A308F1400859CB0 /* Bar0ViewControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar0ViewControllerContainerView.h; sourceTree = "<group>"; };
+		9A69E87B1A308F1400859CB0 /* Bar0ViewControllerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar0ViewControllerContainerView.m; sourceTree = "<group>"; };
+		9A69E87C1A308F1400859CB0 /* Bar0ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar0ViewControllerView.h; sourceTree = "<group>"; };
+		9A69E87D1A308F1400859CB0 /* Bar0ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar0ViewControllerView.m; sourceTree = "<group>"; };
+		9A69E87F1A308F1400859CB0 /* Bar1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar1ViewController.h; sourceTree = "<group>"; };
+		9A69E8801A308F1400859CB0 /* Bar1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar1ViewController.m; sourceTree = "<group>"; };
+		9A69E8811A308F1400859CB0 /* Bar1ViewControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar1ViewControllerContainerView.h; sourceTree = "<group>"; };
+		9A69E8821A308F1400859CB0 /* Bar1ViewControllerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar1ViewControllerContainerView.m; sourceTree = "<group>"; };
+		9A69E8831A308F1400859CB0 /* Bar1ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar1ViewControllerView.h; sourceTree = "<group>"; };
+		9A69E8841A308F1400859CB0 /* Bar1ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar1ViewControllerView.m; sourceTree = "<group>"; };
+		9A69E8861A308F1400859CB0 /* Bar2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar2ViewController.h; sourceTree = "<group>"; };
+		9A69E8871A308F1400859CB0 /* Bar2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar2ViewController.m; sourceTree = "<group>"; };
+		9A69E8881A308F1400859CB0 /* Bar2ViewControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar2ViewControllerContainerView.h; sourceTree = "<group>"; };
+		9A69E8891A308F1400859CB0 /* Bar2ViewControllerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar2ViewControllerContainerView.m; sourceTree = "<group>"; };
+		9A69E88A1A308F1400859CB0 /* Bar2ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar2ViewControllerView.h; sourceTree = "<group>"; };
+		9A69E88B1A308F1400859CB0 /* Bar2ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar2ViewControllerView.m; sourceTree = "<group>"; };
+		9A69E88D1A308F1400859CB0 /* Bar3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar3ViewController.h; sourceTree = "<group>"; };
+		9A69E88E1A308F1400859CB0 /* Bar3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar3ViewController.m; sourceTree = "<group>"; };
+		9A69E88F1A308F1400859CB0 /* Bar3ViewControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar3ViewControllerContainerView.h; sourceTree = "<group>"; };
+		9A69E8901A308F1400859CB0 /* Bar3ViewControllerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar3ViewControllerContainerView.m; sourceTree = "<group>"; };
+		9A69E8911A308F1400859CB0 /* Bar3ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar3ViewControllerView.h; sourceTree = "<group>"; };
+		9A69E8921A308F1400859CB0 /* Bar3ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar3ViewControllerView.m; sourceTree = "<group>"; };
+		9A69E8941A308F1400859CB0 /* Bar4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar4ViewController.h; sourceTree = "<group>"; };
+		9A69E8951A308F1400859CB0 /* Bar4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar4ViewController.m; sourceTree = "<group>"; };
+		9A69E8961A308F1400859CB0 /* Bar4ViewControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar4ViewControllerContainerView.h; sourceTree = "<group>"; };
+		9A69E8971A308F1400859CB0 /* Bar4ViewControllerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar4ViewControllerContainerView.m; sourceTree = "<group>"; };
+		9A69E8981A308F1400859CB0 /* Bar4ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar4ViewControllerView.h; sourceTree = "<group>"; };
+		9A69E8991A308F1400859CB0 /* Bar4ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar4ViewControllerView.m; sourceTree = "<group>"; };
+		9A69E89B1A308F1400859CB0 /* Bar5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar5ViewController.h; sourceTree = "<group>"; };
+		9A69E89C1A308F1400859CB0 /* Bar5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar5ViewController.m; sourceTree = "<group>"; };
+		9A69E89D1A308F1400859CB0 /* Bar5ViewControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar5ViewControllerContainerView.h; sourceTree = "<group>"; };
+		9A69E89E1A308F1400859CB0 /* Bar5ViewControllerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar5ViewControllerContainerView.m; sourceTree = "<group>"; };
+		9A69E89F1A308F1400859CB0 /* Bar5ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar5ViewControllerView.h; sourceTree = "<group>"; };
+		9A69E8A01A308F1400859CB0 /* Bar5ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar5ViewControllerView.m; sourceTree = "<group>"; };
+		9A69E8A21A308F1400859CB0 /* Bar6ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar6ViewController.h; sourceTree = "<group>"; };
+		9A69E8A31A308F1400859CB0 /* Bar6ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar6ViewController.m; sourceTree = "<group>"; };
+		9A69E8A41A308F1400859CB0 /* Bar6ViewControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar6ViewControllerContainerView.h; sourceTree = "<group>"; };
+		9A69E8A51A308F1400859CB0 /* Bar6ViewControllerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar6ViewControllerContainerView.m; sourceTree = "<group>"; };
+		9A69E8A61A308F1400859CB0 /* Bar6ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar6ViewControllerView.h; sourceTree = "<group>"; };
+		9A69E8A71A308F1400859CB0 /* Bar6ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar6ViewControllerView.m; sourceTree = "<group>"; };
+		9A69E8A91A308F1400859CB0 /* Bar7ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar7ViewController.h; sourceTree = "<group>"; };
+		9A69E8AA1A308F1400859CB0 /* Bar7ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar7ViewController.m; sourceTree = "<group>"; };
+		9A69E8AB1A308F1400859CB0 /* Bar7ViewControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar7ViewControllerContainerView.h; sourceTree = "<group>"; };
+		9A69E8AC1A308F1400859CB0 /* Bar7ViewControllerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar7ViewControllerContainerView.m; sourceTree = "<group>"; };
+		9A69E8AD1A308F1400859CB0 /* Bar7ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar7ViewControllerView.h; sourceTree = "<group>"; };
+		9A69E8AE1A308F1400859CB0 /* Bar7ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar7ViewControllerView.m; sourceTree = "<group>"; };
+		9A69E8B01A308F1400859CB0 /* Bar8ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar8ViewController.h; sourceTree = "<group>"; };
+		9A69E8B11A308F1400859CB0 /* Bar8ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar8ViewController.m; sourceTree = "<group>"; };
+		9A69E8B21A308F1400859CB0 /* Bar8ViewControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar8ViewControllerContainerView.h; sourceTree = "<group>"; };
+		9A69E8B31A308F1400859CB0 /* Bar8ViewControllerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar8ViewControllerContainerView.m; sourceTree = "<group>"; };
+		9A69E8B41A308F1400859CB0 /* Bar8ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar8ViewControllerView.h; sourceTree = "<group>"; };
+		9A69E8B51A308F1400859CB0 /* Bar8ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar8ViewControllerView.m; sourceTree = "<group>"; };
+		9A69E8B71A308F1400859CB0 /* Bar9ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar9ViewController.h; sourceTree = "<group>"; };
+		9A69E8B81A308F1400859CB0 /* Bar9ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar9ViewController.m; sourceTree = "<group>"; };
+		9A69E8B91A308F1400859CB0 /* Bar9ViewControllerContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar9ViewControllerContainerView.h; sourceTree = "<group>"; };
+		9A69E8BA1A308F1400859CB0 /* Bar9ViewControllerContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar9ViewControllerContainerView.m; sourceTree = "<group>"; };
+		9A69E8BB1A308F1400859CB0 /* Bar9ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar9ViewControllerView.h; sourceTree = "<group>"; };
+		9A69E8BC1A308F1400859CB0 /* Bar9ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar9ViewControllerView.m; sourceTree = "<group>"; };
 		9A92092F1A2EC33500E9651E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MSA/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		9A9C670819AD6C81007D3248 /* MSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9C670C19AD6C81007D3248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -477,46 +550,6 @@
 		9AB3B6F01A300A6F00ED8C45 /* MeasureBarContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureBarContainerViewController.m; sourceTree = "<group>"; };
 		9AB3B6F21A300A6F00ED8C45 /* DisplayTracesContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayTracesContainerViewController.h; sourceTree = "<group>"; };
 		9AB3B6F31A300A6F00ED8C45 /* DisplayTracesContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayTracesContainerViewController.m; sourceTree = "<group>"; };
-		9AB3B6F71A300C7D00ED8C45 /* Bar0ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar0ViewController.h; sourceTree = "<group>"; };
-		9AB3B6F81A300C7D00ED8C45 /* Bar0ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar0ViewController.m; sourceTree = "<group>"; };
-		9AB3B6F91A300C7D00ED8C45 /* Bar0ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar0ViewControllerView.h; sourceTree = "<group>"; };
-		9AB3B6FA1A300C7D00ED8C45 /* Bar0ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar0ViewControllerView.m; sourceTree = "<group>"; };
-		9AB3B7011A300C7D00ED8C45 /* Bar1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar1ViewController.h; sourceTree = "<group>"; };
-		9AB3B7021A300C7D00ED8C45 /* Bar1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar1ViewController.m; sourceTree = "<group>"; };
-		9AB3B7031A300C7D00ED8C45 /* Bar1ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar1ViewControllerView.h; sourceTree = "<group>"; };
-		9AB3B7041A300C7D00ED8C45 /* Bar1ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar1ViewControllerView.m; sourceTree = "<group>"; };
-		9AB3B7061A300C7D00ED8C45 /* Bar2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar2ViewController.h; sourceTree = "<group>"; };
-		9AB3B7071A300C7D00ED8C45 /* Bar2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar2ViewController.m; sourceTree = "<group>"; };
-		9AB3B7081A300C7D00ED8C45 /* Bar2ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar2ViewControllerView.h; sourceTree = "<group>"; };
-		9AB3B7091A300C7D00ED8C45 /* Bar2ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar2ViewControllerView.m; sourceTree = "<group>"; };
-		9AB3B70B1A300C7D00ED8C45 /* Bar3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar3ViewController.h; sourceTree = "<group>"; };
-		9AB3B70C1A300C7D00ED8C45 /* Bar3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar3ViewController.m; sourceTree = "<group>"; };
-		9AB3B70D1A300C7D00ED8C45 /* Bar3ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar3ViewControllerView.h; sourceTree = "<group>"; };
-		9AB3B70E1A300C7D00ED8C45 /* Bar3ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar3ViewControllerView.m; sourceTree = "<group>"; };
-		9AB3B7101A300C7D00ED8C45 /* Bar4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar4ViewController.h; sourceTree = "<group>"; };
-		9AB3B7111A300C7D00ED8C45 /* Bar4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar4ViewController.m; sourceTree = "<group>"; };
-		9AB3B7121A300C7D00ED8C45 /* Bar4ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar4ViewControllerView.h; sourceTree = "<group>"; };
-		9AB3B7131A300C7D00ED8C45 /* Bar4ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar4ViewControllerView.m; sourceTree = "<group>"; };
-		9AB3B7151A300C7D00ED8C45 /* Bar5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar5ViewController.h; sourceTree = "<group>"; };
-		9AB3B7161A300C7D00ED8C45 /* Bar5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar5ViewController.m; sourceTree = "<group>"; };
-		9AB3B7171A300C7D00ED8C45 /* Bar5ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar5ViewControllerView.h; sourceTree = "<group>"; };
-		9AB3B7181A300C7D00ED8C45 /* Bar5ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar5ViewControllerView.m; sourceTree = "<group>"; };
-		9AB3B71A1A300C7D00ED8C45 /* Bar6ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar6ViewController.h; sourceTree = "<group>"; };
-		9AB3B71B1A300C7D00ED8C45 /* Bar6ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar6ViewController.m; sourceTree = "<group>"; };
-		9AB3B71C1A300C7D00ED8C45 /* Bar6ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar6ViewControllerView.h; sourceTree = "<group>"; };
-		9AB3B71D1A300C7D00ED8C45 /* Bar6ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar6ViewControllerView.m; sourceTree = "<group>"; };
-		9AB3B71F1A300C7D00ED8C45 /* Bar7ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar7ViewController.h; sourceTree = "<group>"; };
-		9AB3B7201A300C7D00ED8C45 /* Bar7ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar7ViewController.m; sourceTree = "<group>"; };
-		9AB3B7211A300C7D00ED8C45 /* Bar7ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar7ViewControllerView.h; sourceTree = "<group>"; };
-		9AB3B7221A300C7D00ED8C45 /* Bar7ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar7ViewControllerView.m; sourceTree = "<group>"; };
-		9AB3B7241A300C7D00ED8C45 /* Bar8ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar8ViewController.h; sourceTree = "<group>"; };
-		9AB3B7251A300C7D00ED8C45 /* Bar8ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar8ViewController.m; sourceTree = "<group>"; };
-		9AB3B7261A300C7D00ED8C45 /* Bar8ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar8ViewControllerView.h; sourceTree = "<group>"; };
-		9AB3B7271A300C7D00ED8C45 /* Bar8ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar8ViewControllerView.m; sourceTree = "<group>"; };
-		9AB3B7291A300C7D00ED8C45 /* Bar9ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar9ViewController.h; sourceTree = "<group>"; };
-		9AB3B72A1A300C7D00ED8C45 /* Bar9ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar9ViewController.m; sourceTree = "<group>"; };
-		9AB3B72B1A300C7D00ED8C45 /* Bar9ViewControllerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar9ViewControllerView.h; sourceTree = "<group>"; };
-		9AB3B72C1A300C7D00ED8C45 /* Bar9ViewControllerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar9ViewControllerView.m; sourceTree = "<group>"; };
 		9AB3B74A1A3042EB00ED8C45 /* BarViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarViewControllerBase.h; sourceTree = "<group>"; };
 		9AB3B74B1A3042EB00ED8C45 /* BarViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarViewControllerBase.m; sourceTree = "<group>"; };
 		9AB3B74C1A3042EB00ED8C45 /* BarViewControllerViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarViewControllerViewBase.h; sourceTree = "<group>"; };
@@ -1084,8 +1117,6 @@
 				9A23C15A1A2719B10069971A /* Bar7 */,
 				9A23C15D1A2719B10069971A /* BarMenu */,
 				9A23C1641A2719B10069971A /* CellStyle */,
-				9A23C16B1A2719B10069971A /* MeasureBarContainerView.h */,
-				9A23C16C1A2719B10069971A /* MeasureBarContainerView.m */,
 			);
 			path = Bar;
 			sourceTree = "<group>";
@@ -1245,6 +1276,136 @@
 			path = Parameter;
 			sourceTree = "<group>";
 		};
+		9A69E8771A308F1400859CB0 /* Bar0 */ = {
+			isa = PBXGroup;
+			children = (
+				9A69E8781A308F1400859CB0 /* Bar0ViewController.h */,
+				9A69E8791A308F1400859CB0 /* Bar0ViewController.m */,
+				9A69E87A1A308F1400859CB0 /* Bar0ViewControllerContainerView.h */,
+				9A69E87B1A308F1400859CB0 /* Bar0ViewControllerContainerView.m */,
+				9A69E87C1A308F1400859CB0 /* Bar0ViewControllerView.h */,
+				9A69E87D1A308F1400859CB0 /* Bar0ViewControllerView.m */,
+			);
+			path = Bar0;
+			sourceTree = "<group>";
+		};
+		9A69E87E1A308F1400859CB0 /* Bar1 */ = {
+			isa = PBXGroup;
+			children = (
+				9A69E87F1A308F1400859CB0 /* Bar1ViewController.h */,
+				9A69E8801A308F1400859CB0 /* Bar1ViewController.m */,
+				9A69E8811A308F1400859CB0 /* Bar1ViewControllerContainerView.h */,
+				9A69E8821A308F1400859CB0 /* Bar1ViewControllerContainerView.m */,
+				9A69E8831A308F1400859CB0 /* Bar1ViewControllerView.h */,
+				9A69E8841A308F1400859CB0 /* Bar1ViewControllerView.m */,
+			);
+			path = Bar1;
+			sourceTree = "<group>";
+		};
+		9A69E8851A308F1400859CB0 /* Bar2 */ = {
+			isa = PBXGroup;
+			children = (
+				9A69E8861A308F1400859CB0 /* Bar2ViewController.h */,
+				9A69E8871A308F1400859CB0 /* Bar2ViewController.m */,
+				9A69E8881A308F1400859CB0 /* Bar2ViewControllerContainerView.h */,
+				9A69E8891A308F1400859CB0 /* Bar2ViewControllerContainerView.m */,
+				9A69E88A1A308F1400859CB0 /* Bar2ViewControllerView.h */,
+				9A69E88B1A308F1400859CB0 /* Bar2ViewControllerView.m */,
+			);
+			path = Bar2;
+			sourceTree = "<group>";
+		};
+		9A69E88C1A308F1400859CB0 /* Bar3 */ = {
+			isa = PBXGroup;
+			children = (
+				9A69E88D1A308F1400859CB0 /* Bar3ViewController.h */,
+				9A69E88E1A308F1400859CB0 /* Bar3ViewController.m */,
+				9A69E88F1A308F1400859CB0 /* Bar3ViewControllerContainerView.h */,
+				9A69E8901A308F1400859CB0 /* Bar3ViewControllerContainerView.m */,
+				9A69E8911A308F1400859CB0 /* Bar3ViewControllerView.h */,
+				9A69E8921A308F1400859CB0 /* Bar3ViewControllerView.m */,
+			);
+			path = Bar3;
+			sourceTree = "<group>";
+		};
+		9A69E8931A308F1400859CB0 /* Bar4 */ = {
+			isa = PBXGroup;
+			children = (
+				9A69E8941A308F1400859CB0 /* Bar4ViewController.h */,
+				9A69E8951A308F1400859CB0 /* Bar4ViewController.m */,
+				9A69E8961A308F1400859CB0 /* Bar4ViewControllerContainerView.h */,
+				9A69E8971A308F1400859CB0 /* Bar4ViewControllerContainerView.m */,
+				9A69E8981A308F1400859CB0 /* Bar4ViewControllerView.h */,
+				9A69E8991A308F1400859CB0 /* Bar4ViewControllerView.m */,
+			);
+			path = Bar4;
+			sourceTree = "<group>";
+		};
+		9A69E89A1A308F1400859CB0 /* Bar5 */ = {
+			isa = PBXGroup;
+			children = (
+				9A69E89B1A308F1400859CB0 /* Bar5ViewController.h */,
+				9A69E89C1A308F1400859CB0 /* Bar5ViewController.m */,
+				9A69E89D1A308F1400859CB0 /* Bar5ViewControllerContainerView.h */,
+				9A69E89E1A308F1400859CB0 /* Bar5ViewControllerContainerView.m */,
+				9A69E89F1A308F1400859CB0 /* Bar5ViewControllerView.h */,
+				9A69E8A01A308F1400859CB0 /* Bar5ViewControllerView.m */,
+			);
+			path = Bar5;
+			sourceTree = "<group>";
+		};
+		9A69E8A11A308F1400859CB0 /* Bar6 */ = {
+			isa = PBXGroup;
+			children = (
+				9A69E8A21A308F1400859CB0 /* Bar6ViewController.h */,
+				9A69E8A31A308F1400859CB0 /* Bar6ViewController.m */,
+				9A69E8A41A308F1400859CB0 /* Bar6ViewControllerContainerView.h */,
+				9A69E8A51A308F1400859CB0 /* Bar6ViewControllerContainerView.m */,
+				9A69E8A61A308F1400859CB0 /* Bar6ViewControllerView.h */,
+				9A69E8A71A308F1400859CB0 /* Bar6ViewControllerView.m */,
+			);
+			path = Bar6;
+			sourceTree = "<group>";
+		};
+		9A69E8A81A308F1400859CB0 /* Bar7 */ = {
+			isa = PBXGroup;
+			children = (
+				9A69E8A91A308F1400859CB0 /* Bar7ViewController.h */,
+				9A69E8AA1A308F1400859CB0 /* Bar7ViewController.m */,
+				9A69E8AB1A308F1400859CB0 /* Bar7ViewControllerContainerView.h */,
+				9A69E8AC1A308F1400859CB0 /* Bar7ViewControllerContainerView.m */,
+				9A69E8AD1A308F1400859CB0 /* Bar7ViewControllerView.h */,
+				9A69E8AE1A308F1400859CB0 /* Bar7ViewControllerView.m */,
+			);
+			path = Bar7;
+			sourceTree = "<group>";
+		};
+		9A69E8AF1A308F1400859CB0 /* Bar8 */ = {
+			isa = PBXGroup;
+			children = (
+				9A69E8B01A308F1400859CB0 /* Bar8ViewController.h */,
+				9A69E8B11A308F1400859CB0 /* Bar8ViewController.m */,
+				9A69E8B21A308F1400859CB0 /* Bar8ViewControllerContainerView.h */,
+				9A69E8B31A308F1400859CB0 /* Bar8ViewControllerContainerView.m */,
+				9A69E8B41A308F1400859CB0 /* Bar8ViewControllerView.h */,
+				9A69E8B51A308F1400859CB0 /* Bar8ViewControllerView.m */,
+			);
+			path = Bar8;
+			sourceTree = "<group>";
+		};
+		9A69E8B61A308F1400859CB0 /* Bar9 */ = {
+			isa = PBXGroup;
+			children = (
+				9A69E8B71A308F1400859CB0 /* Bar9ViewController.h */,
+				9A69E8B81A308F1400859CB0 /* Bar9ViewController.m */,
+				9A69E8B91A308F1400859CB0 /* Bar9ViewControllerContainerView.h */,
+				9A69E8BA1A308F1400859CB0 /* Bar9ViewControllerContainerView.m */,
+				9A69E8BB1A308F1400859CB0 /* Bar9ViewControllerView.h */,
+				9A69E8BC1A308F1400859CB0 /* Bar9ViewControllerView.m */,
+			);
+			path = Bar9;
+			sourceTree = "<group>";
+		};
 		9A9C66FF19AD6C80007D3248 = {
 			isa = PBXGroup;
 			children = (
@@ -1308,18 +1469,20 @@
 			isa = PBXGroup;
 			children = (
 				9AB3B7491A3042EB00ED8C45 /* BarBase */,
-				9AB3B6F61A300C7D00ED8C45 /* Bar0 */,
-				9AB3B6FB1A300C7D00ED8C45 /* Bar1 */,
-				9AB3B7051A300C7D00ED8C45 /* Bar2 */,
-				9AB3B70A1A300C7D00ED8C45 /* Bar3 */,
-				9AB3B70F1A300C7D00ED8C45 /* Bar4 */,
-				9AB3B7141A300C7D00ED8C45 /* Bar5 */,
-				9AB3B7191A300C7D00ED8C45 /* Bar6 */,
-				9AB3B71E1A300C7D00ED8C45 /* Bar7 */,
-				9AB3B7231A300C7D00ED8C45 /* Bar8 */,
-				9AB3B7281A300C7D00ED8C45 /* Bar9 */,
+				9A69E8771A308F1400859CB0 /* Bar0 */,
+				9A69E87E1A308F1400859CB0 /* Bar1 */,
+				9A69E8851A308F1400859CB0 /* Bar2 */,
+				9A69E88C1A308F1400859CB0 /* Bar3 */,
+				9A69E8931A308F1400859CB0 /* Bar4 */,
+				9A69E89A1A308F1400859CB0 /* Bar5 */,
+				9A69E8A11A308F1400859CB0 /* Bar6 */,
+				9A69E8A81A308F1400859CB0 /* Bar7 */,
+				9A69E8AF1A308F1400859CB0 /* Bar8 */,
+				9A69E8B61A308F1400859CB0 /* Bar9 */,
 				9AB3B6EF1A300A6F00ED8C45 /* MeasureBarContainerViewController.h */,
 				9AB3B6F01A300A6F00ED8C45 /* MeasureBarContainerViewController.m */,
+				9A69E86E1A3086F000859CB0 /* MeasureBarContainerView.h */,
+				9A69E86F1A3086F000859CB0 /* MeasureBarContainerView.m */,
 			);
 			path = Bar;
 			sourceTree = "<group>";
@@ -1333,119 +1496,11 @@
 			path = Trace;
 			sourceTree = "<group>";
 		};
-		9AB3B6F61A300C7D00ED8C45 /* Bar0 */ = {
-			isa = PBXGroup;
-			children = (
-				9AB3B6F71A300C7D00ED8C45 /* Bar0ViewController.h */,
-				9AB3B6F81A300C7D00ED8C45 /* Bar0ViewController.m */,
-				9AB3B6F91A300C7D00ED8C45 /* Bar0ViewControllerView.h */,
-				9AB3B6FA1A300C7D00ED8C45 /* Bar0ViewControllerView.m */,
-			);
-			path = Bar0;
-			sourceTree = "<group>";
-		};
-		9AB3B6FB1A300C7D00ED8C45 /* Bar1 */ = {
-			isa = PBXGroup;
-			children = (
-				9AB3B7011A300C7D00ED8C45 /* Bar1ViewController.h */,
-				9AB3B7021A300C7D00ED8C45 /* Bar1ViewController.m */,
-				9AB3B7031A300C7D00ED8C45 /* Bar1ViewControllerView.h */,
-				9AB3B7041A300C7D00ED8C45 /* Bar1ViewControllerView.m */,
-			);
-			path = Bar1;
-			sourceTree = "<group>";
-		};
-		9AB3B7051A300C7D00ED8C45 /* Bar2 */ = {
-			isa = PBXGroup;
-			children = (
-				9AB3B7061A300C7D00ED8C45 /* Bar2ViewController.h */,
-				9AB3B7071A300C7D00ED8C45 /* Bar2ViewController.m */,
-				9AB3B7081A300C7D00ED8C45 /* Bar2ViewControllerView.h */,
-				9AB3B7091A300C7D00ED8C45 /* Bar2ViewControllerView.m */,
-			);
-			path = Bar2;
-			sourceTree = "<group>";
-		};
-		9AB3B70A1A300C7D00ED8C45 /* Bar3 */ = {
-			isa = PBXGroup;
-			children = (
-				9AB3B70B1A300C7D00ED8C45 /* Bar3ViewController.h */,
-				9AB3B70C1A300C7D00ED8C45 /* Bar3ViewController.m */,
-				9AB3B70D1A300C7D00ED8C45 /* Bar3ViewControllerView.h */,
-				9AB3B70E1A300C7D00ED8C45 /* Bar3ViewControllerView.m */,
-			);
-			path = Bar3;
-			sourceTree = "<group>";
-		};
-		9AB3B70F1A300C7D00ED8C45 /* Bar4 */ = {
-			isa = PBXGroup;
-			children = (
-				9AB3B7101A300C7D00ED8C45 /* Bar4ViewController.h */,
-				9AB3B7111A300C7D00ED8C45 /* Bar4ViewController.m */,
-				9AB3B7121A300C7D00ED8C45 /* Bar4ViewControllerView.h */,
-				9AB3B7131A300C7D00ED8C45 /* Bar4ViewControllerView.m */,
-			);
-			path = Bar4;
-			sourceTree = "<group>";
-		};
-		9AB3B7141A300C7D00ED8C45 /* Bar5 */ = {
-			isa = PBXGroup;
-			children = (
-				9AB3B7151A300C7D00ED8C45 /* Bar5ViewController.h */,
-				9AB3B7161A300C7D00ED8C45 /* Bar5ViewController.m */,
-				9AB3B7171A300C7D00ED8C45 /* Bar5ViewControllerView.h */,
-				9AB3B7181A300C7D00ED8C45 /* Bar5ViewControllerView.m */,
-			);
-			path = Bar5;
-			sourceTree = "<group>";
-		};
-		9AB3B7191A300C7D00ED8C45 /* Bar6 */ = {
-			isa = PBXGroup;
-			children = (
-				9AB3B71A1A300C7D00ED8C45 /* Bar6ViewController.h */,
-				9AB3B71B1A300C7D00ED8C45 /* Bar6ViewController.m */,
-				9AB3B71C1A300C7D00ED8C45 /* Bar6ViewControllerView.h */,
-				9AB3B71D1A300C7D00ED8C45 /* Bar6ViewControllerView.m */,
-			);
-			path = Bar6;
-			sourceTree = "<group>";
-		};
-		9AB3B71E1A300C7D00ED8C45 /* Bar7 */ = {
-			isa = PBXGroup;
-			children = (
-				9AB3B71F1A300C7D00ED8C45 /* Bar7ViewController.h */,
-				9AB3B7201A300C7D00ED8C45 /* Bar7ViewController.m */,
-				9AB3B7211A300C7D00ED8C45 /* Bar7ViewControllerView.h */,
-				9AB3B7221A300C7D00ED8C45 /* Bar7ViewControllerView.m */,
-			);
-			path = Bar7;
-			sourceTree = "<group>";
-		};
-		9AB3B7231A300C7D00ED8C45 /* Bar8 */ = {
-			isa = PBXGroup;
-			children = (
-				9AB3B7241A300C7D00ED8C45 /* Bar8ViewController.h */,
-				9AB3B7251A300C7D00ED8C45 /* Bar8ViewController.m */,
-				9AB3B7261A300C7D00ED8C45 /* Bar8ViewControllerView.h */,
-				9AB3B7271A300C7D00ED8C45 /* Bar8ViewControllerView.m */,
-			);
-			path = Bar8;
-			sourceTree = "<group>";
-		};
-		9AB3B7281A300C7D00ED8C45 /* Bar9 */ = {
-			isa = PBXGroup;
-			children = (
-				9AB3B7291A300C7D00ED8C45 /* Bar9ViewController.h */,
-				9AB3B72A1A300C7D00ED8C45 /* Bar9ViewController.m */,
-				9AB3B72B1A300C7D00ED8C45 /* Bar9ViewControllerView.h */,
-				9AB3B72C1A300C7D00ED8C45 /* Bar9ViewControllerView.m */,
-			);
-			path = Bar9;
-			sourceTree = "<group>";
-		};
 		9AB3B7491A3042EB00ED8C45 /* BarBase */ = {
 			isa = PBXGroup;
 			children = (
+				9A69E8711A308C9000859CB0 /* BarViewControllerContainerViewBase.h */,
+				9A69E8721A308C9000859CB0 /* BarViewControllerContainerViewBase.m */,
 				9AB3B74A1A3042EB00ED8C45 /* BarViewControllerBase.h */,
 				9AB3B74B1A3042EB00ED8C45 /* BarViewControllerBase.m */,
 				9AB3B74C1A3042EB00ED8C45 /* BarViewControllerViewBase.h */,
@@ -1639,16 +1694,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A69E8D01A308F1400859CB0 /* Bar6ViewControllerContainerView.m in Sources */,
 				9A23C11A1A2719AC0069971A /* MsgContainerViewController.m in Sources */,
 				9A23C1311A2719AC0069971A /* UIView+Screenshot.m in Sources */,
 				9A23C1121A2719AC0069971A /* SoftMenuTableViewController.m in Sources */,
 				9A23C1271A2719AC0069971A /* GPUImageFramebufferCache.m in Sources */,
-				9AB3B7321A300C7D00ED8C45 /* Bar1ViewControllerView.m in Sources */,
 				9A9C671419AD6C81007D3248 /* MSA.xcdatamodeld in Sources */,
 				9A23C1241A2719AC0069971A /* GPUImageFilter.m in Sources */,
 				9A23C1151A2719AC0069971A /* MsgDetailNavigationViewController.m in Sources */,
 				9A6616CF1A2943C500D3E2CA /* WindowBase.m in Sources */,
+				9A69E8D21A308F1400859CB0 /* Bar7ViewController.m in Sources */,
 				9A23C0F61A2719AC0069971A /* UISoftPanel.m in Sources */,
+				9A69E8731A308C9000859CB0 /* BarViewControllerContainerViewBase.m in Sources */,
 				9A23C0F71A2719AC0069971A /* BlurViewController.m in Sources */,
 				9A23C0FE1A2719AC0069971A /* MeasureSelect2ndTableViewController.m in Sources */,
 				9A23C12D1A2719AC0069971A /* GPUImagePicture.m in Sources */,
@@ -1658,24 +1715,21 @@
 				9A23C0FA1A2719AC0069971A /* DisplayContainerViewController.m in Sources */,
 				9A23C0CA1A2719AC0069971A /* TimeParameter.m in Sources */,
 				9A3FECCB1A2F3D8900B9801C /* Bar8TableViewController.m in Sources */,
-				9AB3B73C1A300C7D00ED8C45 /* Bar6ViewControllerView.m in Sources */,
+				9A69E8D31A308F1400859CB0 /* Bar7ViewControllerContainerView.m in Sources */,
 				9A23C0FF1A2719AC0069971A /* MeasureSelectNavigationViewController.m in Sources */,
-				9AB3B7311A300C7D00ED8C45 /* Bar1ViewController.m in Sources */,
 				9A23C1101A2719AC0069971A /* SoftMenuContainerViewController.m in Sources */,
 				9A23C1171A2719AC0069971A /* MsgMasterNavigationViewController.m in Sources */,
-				9AB3B7371A300C7D00ED8C45 /* Bar4ViewController.m in Sources */,
-				9AB3B73E1A300C7D00ED8C45 /* Bar7ViewControllerView.m in Sources */,
 				9A23C10F1A2719AC0069971A /* SoftMenuNumericTableViewCell.m in Sources */,
 				9A09020C1A2ACE6B00EEBDE2 /* ParamDictBase.m in Sources */,
-				9AB3B73D1A300C7D00ED8C45 /* Bar7ViewController.m in Sources */,
-				9AB3B7331A300C7D00ED8C45 /* Bar2ViewController.m in Sources */,
 				9A23C11E1A2719AC0069971A /* SystemMasterNavigationViewController.m in Sources */,
 				9A23C0C31A2719AC0069971A /* FrequencyParameter.m in Sources */,
 				9A23C0C01A2719AC0069971A /* DoubleParameter.m in Sources */,
 				9A9C671119AD6C81007D3248 /* AppDelegate.m in Sources */,
+				9A69E8D11A308F1400859CB0 /* Bar6ViewControllerView.m in Sources */,
 				9A23C11B1A2719AC0069971A /* SystemDetailContainerViewController.m in Sources */,
 				9A23C1301A2719AC0069971A /* GPUImageTwoPassTextureSamplingFilter.m in Sources */,
 				9A6616CE1A2943C500D3E2CA /* ViewBase.m in Sources */,
+				9A69E8CB1A308F1400859CB0 /* Bar4ViewControllerView.m in Sources */,
 				9A23C17B1A2719B10069971A /* Bar7TableViewController.m in Sources */,
 				9A23C1791A2719B10069971A /* Bar5TableViewController.m in Sources */,
 				9AB3B74F1A3042EB00ED8C45 /* BarViewControllerViewBase.m in Sources */,
@@ -1683,33 +1737,38 @@
 				9A23C1291A2719AC0069971A /* GPUImageiOSBlurFilter.m in Sources */,
 				9A23C1781A2719B10069971A /* Bar4TableViewController.m in Sources */,
 				9AEFB94C1A285DAD00E2CBFD /* ModeManager.m in Sources */,
+				9A69E8C11A308F1400859CB0 /* Bar1ViewControllerContainerView.m in Sources */,
+				9A69E8CE1A308F1400859CB0 /* Bar5ViewControllerView.m in Sources */,
 				9A23C17E1A2719B10069971A /* BarPopupMenuTableViewController.m in Sources */,
 				9A23C0C51A2719AC0069971A /* IntParameter.m in Sources */,
-				9AB3B73B1A300C7D00ED8C45 /* Bar6ViewController.m in Sources */,
+				9A69E8C81A308F1400859CB0 /* Bar3ViewControllerView.m in Sources */,
+				9A69E8C71A308F1400859CB0 /* Bar3ViewControllerContainerView.m in Sources */,
+				9A69E8CF1A308F1400859CB0 /* Bar6ViewController.m in Sources */,
 				9A23C0BB1A2719AC0069971A /* ShareSettings.m in Sources */,
 				9AEFB94D1A285DAD00E2CBFD /* ParameterManager.m in Sources */,
-				9AB3B7381A300C7D00ED8C45 /* Bar4ViewControllerView.m in Sources */,
+				9A69E8D41A308F1400859CB0 /* Bar7ViewControllerView.m in Sources */,
 				9AEFB9501A286C9400E2CBFD /* Mode.m in Sources */,
-				9AB3B7341A300C7D00ED8C45 /* Bar2ViewControllerView.m in Sources */,
 				9A23C0F21A2719AC0069971A /* UISoftKey.m in Sources */,
 				9A23C0C71A2719AC0069971A /* Parameter.m in Sources */,
-				9AB3B72D1A300C7D00ED8C45 /* Bar0ViewController.m in Sources */,
 				9A23C16F1A2719B10069971A /* SpecMeasBarParams.m in Sources */,
 				9A23C1711A2719B10069971A /* WaveParams.m in Sources */,
-				9AB3B7351A300C7D00ED8C45 /* Bar3ViewController.m in Sources */,
 				9A23C0F11A2719AC0069971A /* UIKeyView.m in Sources */,
 				9AB3B6F51A300A6F00ED8C45 /* DisplayTracesContainerViewController.m in Sources */,
 				9A23C12B1A2719AC0069971A /* GPUImageMovieWriter.m in Sources */,
 				9A23C10E1A2719AC0069971A /* SoftMenuNumericBooleanTableViewCell.m in Sources */,
 				9A23C0C41A2719AC0069971A /* ImmediateParameter.m in Sources */,
 				9A23C10A1A2719AC0069971A /* SoftMenuLeftLabelResultBranchTableViewCell.m in Sources */,
+				9A69E8CA1A308F1400859CB0 /* Bar4ViewControllerContainerView.m in Sources */,
+				9A69E8701A3086F000859CB0 /* MeasureBarContainerView.m in Sources */,
 				9A23C1161A2719AC0069971A /* MsgDetailTableViewController.m in Sources */,
 				9A23C1261A2719AC0069971A /* GPUImageFramebuffer.m in Sources */,
+				9A69E8CD1A308F1400859CB0 /* Bar5ViewControllerContainerView.m in Sources */,
 				9AB3B74E1A3042EB00ED8C45 /* BarViewControllerBase.m in Sources */,
 				9A23C0C11A2719AC0069971A /* EnumMemberInfo.m in Sources */,
 				9A23C0C91A2719AC0069971A /* StringParameter.m in Sources */,
-				9A23C1821A2719B10069971A /* MeasureBarContainerView.m in Sources */,
+				9A69E8D81A308F1400859CB0 /* Bar9ViewController.m in Sources */,
 				9A23C1021A2719AC0069971A /* PresetMenuDarkGrayGreen2LinesTableViewCell.m in Sources */,
+				9A69E8BF1A308F1400859CB0 /* Bar0ViewControllerView.m in Sources */,
 				9A23C11D1A2719AC0069971A /* SystemDetailTableViewController.m in Sources */,
 				9A23C17C1A2719B10069971A /* BarPopupMenuContainerViewController.m in Sources */,
 				9A23C10B1A2719AC0069971A /* SoftMenuLeftLabelTableViewCell.m in Sources */,
@@ -1722,49 +1781,53 @@
 				9A23C17D1A2719B10069971A /* BarPopupMenuNavigationViewController.m in Sources */,
 				9A23C17A1A2719B10069971A /* Bar6TableViewController.m in Sources */,
 				9A23C0F31A2719AC0069971A /* UISoftKeyEnum.m in Sources */,
-				9AB3B7401A300C7D00ED8C45 /* Bar8ViewControllerView.m in Sources */,
+				9A69E8D51A308F1400859CB0 /* Bar8ViewController.m in Sources */,
 				9A23C1221A2719AC0069971A /* GLProgram.m in Sources */,
 				9A23C1801A2719B10069971A /* Bar0OneLineYellowTableViewCell.m in Sources */,
 				9A23C1181A2719AC0069971A /* MsgMasterTableViewController.m in Sources */,
-				9AB3B7361A300C7D00ED8C45 /* Bar3ViewControllerView.m in Sources */,
 				9A6616D21A2943C500D3E2CA /* ModeParamDictBase.m in Sources */,
 				9A6616CD1A2943C500D3E2CA /* ModeBase.m in Sources */,
 				9A23C1251A2719AC0069971A /* GPUImageFilterGroup.m in Sources */,
 				9A23C1751A2719B10069971A /* Bar1TableViewController.m in Sources */,
+				9A69E8CC1A308F1400859CB0 /* Bar5ViewController.m in Sources */,
 				9A23C1761A2719B10069971A /* Bar2TableViewController.m in Sources */,
 				9A23C1081A2719AC0069971A /* SoftMenuBooleanTableViewCell.m in Sources */,
+				9A69E8C41A308F1400859CB0 /* Bar2ViewControllerContainerView.m in Sources */,
+				9A69E8BE1A308F1400859CB0 /* Bar0ViewControllerContainerView.m in Sources */,
 				9A9C670E19AD6C81007D3248 /* main.m in Sources */,
+				9A69E8C51A308F1400859CB0 /* Bar2ViewControllerView.m in Sources */,
+				9A69E8C91A308F1400859CB0 /* Bar4ViewController.m in Sources */,
+				9A69E8D91A308F1400859CB0 /* Bar9ViewControllerContainerView.m in Sources */,
 				9A23C0BC1A2719AC0069971A /* MeasureBarDetail.m in Sources */,
 				9A23C0C81A2719AC0069971A /* RelativeAmplitudeParameter.m in Sources */,
 				9A23C0BE1A2719AC0069971A /* AutoManParameter.m in Sources */,
 				9A23C11F1A2719AC0069971A /* SystemMasterTableViewController.m in Sources */,
 				9A23C1771A2719B10069971A /* Bar3TableViewController.m in Sources */,
+				9A69E8DA1A308F1400859CB0 /* Bar9ViewControllerView.m in Sources */,
 				9A23C1111A2719AC0069971A /* SoftMenuNavigationViewController.m in Sources */,
 				9A23C0FC1A2719AC0069971A /* MainContainerViewController.m in Sources */,
 				9AB3B6F41A300A6F00ED8C45 /* MeasureBarContainerViewController.m in Sources */,
 				9A6616D01A2943C500D3E2CA /* MeasBarParamDictBase.m in Sources */,
-				9AB3B7421A300C7D00ED8C45 /* Bar9ViewControllerView.m in Sources */,
 				9A23C1231A2719AC0069971A /* GPUImageContext.m in Sources */,
 				9A23C11C1A2719AC0069971A /* SystemDetailNavigationViewController.m in Sources */,
 				9A23C0BF1A2719AC0069971A /* BooleanParameter.m in Sources */,
-				9AB3B72E1A300C7D00ED8C45 /* Bar0ViewControllerView.m in Sources */,
+				9A69E8C01A308F1400859CB0 /* Bar1ViewController.m in Sources */,
+				9A69E8C21A308F1400859CB0 /* Bar1ViewControllerView.m in Sources */,
 				9A6616D11A2943C500D3E2CA /* MeasParamDictBase.m in Sources */,
-				9AB3B7391A300C7D00ED8C45 /* Bar5ViewController.m in Sources */,
 				9A23C12F1A2719AC0069971A /* GPUImageTwoPassFilter.m in Sources */,
 				9A23C12E1A2719AC0069971A /* GPUImageSaturationFilter.m in Sources */,
 				9A6616CC1A2943C500D3E2CA /* MeasureBase.m in Sources */,
+				9A69E8BD1A308F1400859CB0 /* Bar0ViewController.m in Sources */,
 				9A23C1731A2719B10069971A /* ModeParams.m in Sources */,
 				9A23C1051A2719AC0069971A /* PresetMenuWhiteGreenTableViewCell.m in Sources */,
 				9A23C0BD1A2719AC0069971A /* AmplitudeParameter.m in Sources */,
 				9A23C1281A2719AC0069971A /* GPUImageGaussianBlurFilter.m in Sources */,
 				9A23C0F51A2719AC0069971A /* UISoftMenu.m in Sources */,
 				9A23C0FB1A2719AC0069971A /* MainContainerView.m in Sources */,
-				9AB3B73A1A300C7D00ED8C45 /* Bar5ViewControllerView.m in Sources */,
+				9A69E8C61A308F1400859CB0 /* Bar3ViewController.m in Sources */,
 				9A23C1031A2719AC0069971A /* PresetMenuDarkGrayWhiteTableViewCell.m in Sources */,
 				9A23C0F01A2719AC0069971A /* UIKeyMeasure.m in Sources */,
 				9A23C1041A2719AC0069971A /* PresetMenuGreenWhiteTableViewCell.m in Sources */,
-				9AB3B73F1A300C7D00ED8C45 /* Bar8ViewController.m in Sources */,
-				9AB3B7411A300C7D00ED8C45 /* Bar9ViewController.m in Sources */,
 				9A23C0FD1A2719AC0069971A /* AddInstrumentContainerViewController.m in Sources */,
 				9A23C1061A2719AC0069971A /* PresetMenuContainerViewController.m in Sources */,
 				9A23C12A1A2719AC0069971A /* GPUImageLuminanceRangeFilter.m in Sources */,
@@ -1779,7 +1842,10 @@
 				9A23C1811A2719B10069971A /* Bar0SingleContinousTableViewCell.m in Sources */,
 				9A23C0C61A2719AC0069971A /* OnOffParameter.m in Sources */,
 				9A3FECCC1A2F3D8900B9801C /* Bar9TableViewController.m in Sources */,
+				9A69E8D71A308F1400859CB0 /* Bar8ViewControllerView.m in Sources */,
 				9A23C1091A2719AC0069971A /* SoftMenuLeftLabelResultBooleanBranchTableViewCell.m in Sources */,
+				9A69E8C31A308F1400859CB0 /* Bar2ViewController.m in Sources */,
+				9A69E8D61A308F1400859CB0 /* Bar8ViewControllerContainerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

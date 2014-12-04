@@ -15,5 +15,4 @@
 
 @implementation Bar6ViewController
 
-
 @end

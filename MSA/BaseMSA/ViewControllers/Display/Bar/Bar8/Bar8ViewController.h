@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "BarViewControllerBase.h"
 
+@class Bar8ViewControllerContainerView;
+
 @interface Bar8ViewController : BarViewControllerBase
+
+@property (nonatomic) IBOutlet Bar8ViewControllerContainerView *barViewCV;
 
 @end

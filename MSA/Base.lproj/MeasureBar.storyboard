@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJF-Pj-cMM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJF-Pj-cMM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Measure Bar Container View Controller-->
@@ -108,11 +108,15 @@
                         <viewControllerLayoutGuide type="top" id="yX3-E7-ydN"/>
                         <viewControllerLayoutGuide type="bottom" id="p8f-gB-Vnd"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gt1-pV-Hwk">
+                    <view key="view" contentMode="scaleToFill" id="gt1-pV-Hwk" customClass="Bar0ViewControllerContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="barViewCV" destination="gt1-pV-Hwk" id="mI8-YC-xQA"/>
+                        <outlet property="view" destination="gt1-pV-Hwk" id="t3B-zz-WnR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUw-6Q-5nE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,11 +130,14 @@
                         <viewControllerLayoutGuide type="top" id="rYr-th-64f"/>
                         <viewControllerLayoutGuide type="bottom" id="H3q-YP-5KF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="eFv-OL-H0E">
+                    <view key="view" contentMode="scaleToFill" id="eFv-OL-H0E" customClass="Bar1ViewControllerContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="barViewCV" destination="eFv-OL-H0E" id="QeV-B3-KOv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="toK-Mn-osQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,11 +151,14 @@
                         <viewControllerLayoutGuide type="top" id="bcy-Yh-5qW"/>
                         <viewControllerLayoutGuide type="bottom" id="6Sl-9V-46B"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OpU-SP-PFn">
+                    <view key="view" contentMode="scaleToFill" id="OpU-SP-PFn" customClass="Bar2ViewControllerContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="barViewCV" destination="OpU-SP-PFn" id="eZe-38-bak"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1S-Wb-EgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,11 +172,14 @@
                         <viewControllerLayoutGuide type="top" id="jUs-yL-QzK"/>
                         <viewControllerLayoutGuide type="bottom" id="8w1-wo-ka5"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Tjb-sV-kLG">
+                    <view key="view" contentMode="scaleToFill" id="Tjb-sV-kLG" customClass="Bar3ViewControllerContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="barViewCV" destination="Tjb-sV-kLG" id="CbO-dY-oeu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypY-7K-OeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,11 +193,14 @@
                         <viewControllerLayoutGuide type="top" id="kbn-pk-m3u"/>
                         <viewControllerLayoutGuide type="bottom" id="zXW-jy-ujk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Uzp-fX-b3d">
+                    <view key="view" contentMode="scaleToFill" id="Uzp-fX-b3d" customClass="Bar4ViewControllerContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="barViewCV" destination="Uzp-fX-b3d" id="WoF-L9-xbQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50s-1y-A8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -198,11 +214,14 @@
                         <viewControllerLayoutGuide type="top" id="FF8-ud-eHX"/>
                         <viewControllerLayoutGuide type="bottom" id="z89-cl-MKe"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qX1-Ry-z87">
+                    <view key="view" contentMode="scaleToFill" id="qX1-Ry-z87" customClass="Bar5ViewControllerContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="barViewCV" destination="qX1-Ry-z87" id="Gwx-yV-beb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tw1-sB-R9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,11 +235,14 @@
                         <viewControllerLayoutGuide type="top" id="vYe-c7-erK"/>
                         <viewControllerLayoutGuide type="bottom" id="bjf-g9-YgV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EoK-90-TbP">
+                    <view key="view" contentMode="scaleToFill" id="EoK-90-TbP" customClass="Bar6ViewControllerContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="barViewCV" destination="EoK-90-TbP" id="hTt-f7-2N6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQF-0O-JyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -234,11 +256,14 @@
                         <viewControllerLayoutGuide type="top" id="mOw-uD-cdQ"/>
                         <viewControllerLayoutGuide type="bottom" id="GTN-tA-VwS"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="X1e-QU-kLw">
+                    <view key="view" contentMode="scaleToFill" id="X1e-QU-kLw" customClass="Bar7ViewControllerContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="barViewCV" destination="X1e-QU-kLw" id="PUb-ej-7iM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OgU-Sw-3Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -252,11 +277,14 @@
                         <viewControllerLayoutGuide type="top" id="Ppu-x5-Nkq"/>
                         <viewControllerLayoutGuide type="bottom" id="zmS-YU-2k1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="l62-eY-FOl">
+                    <view key="view" contentMode="scaleToFill" id="l62-eY-FOl" customClass="Bar8ViewControllerContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="barViewCV" destination="l62-eY-FOl" id="XkI-fC-PBi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyL-uA-tHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,11 +298,14 @@
                         <viewControllerLayoutGuide type="top" id="O9J-2K-abG"/>
                         <viewControllerLayoutGuide type="bottom" id="RoZ-kx-WLU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="S8a-wM-5lZ">
+                    <view key="view" contentMode="scaleToFill" id="S8a-wM-5lZ" customClass="Bar9ViewControllerContainerView">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="barViewCV" destination="S8a-wM-5lZ" id="fJ1-5l-jvI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mdp-D8-s4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

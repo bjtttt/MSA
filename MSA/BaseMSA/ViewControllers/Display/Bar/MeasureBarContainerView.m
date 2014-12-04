@@ -15,6 +15,7 @@
 
 @implementation MeasureBarContainerView
 
+/*
 -(UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
     self.sendNotification = !self.sendNotification;
@@ -49,5 +50,6 @@
 
     return [super hitTest:point withEvent:event];
 }
+*/
 
 @end

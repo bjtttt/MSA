@@ -1,5 +1,5 @@
 //
-//  BarViewControllerViewBase.h
+//  BarViewControllerContainerViewBase.h
 //  MSA
 //
 //  Created by GUO Zhitao on 29/10/14.
@@ -10,7 +10,7 @@
 
 @class ShareSettings;
 
-@interface BarViewControllerViewBase : UIView
+@interface BarViewControllerContainerViewBase : UIView
 
 @property (nonatomic) ShareSettings *shareSettings;
 
