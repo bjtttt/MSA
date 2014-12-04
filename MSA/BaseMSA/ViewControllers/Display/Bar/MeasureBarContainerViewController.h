@@ -11,16 +11,16 @@
 #import "MeasureBarContainerProtocol.h"
 
 @class DisplayContainerViewController;
-@class Bar0TableViewController;
-@class Bar1TableViewController;
-@class Bar2TableViewController;
-@class Bar3TableViewController;
-@class Bar4TableViewController;
-@class Bar5TableViewController;
-@class Bar6TableViewController;
-@class Bar7TableViewController;
-@class Bar8TableViewController;
-@class Bar9TableViewController;
+@class Bar0ViewController;
+@class Bar1ViewController;
+@class Bar2ViewController;
+@class Bar3ViewController;
+@class Bar4ViewController;
+@class Bar5ViewController;
+@class Bar6ViewController;
+@class Bar7ViewController;
+@class Bar8ViewController;
+@class Bar9ViewController;
 
 @class MeasureBarContainerView;
 @class BarPopupMenuContainerViewController;
@@ -45,22 +45,21 @@
 
 @property (strong, nonatomic) NSMutableArray *barVs;
 
-@property (weak, nonatomic) IBOutlet Bar0TableViewController *bar0VC;
-@property (weak, nonatomic) IBOutlet Bar1TableViewController *bar1VC;
-@property (weak, nonatomic) IBOutlet Bar2TableViewController *bar2VC;
-@property (weak, nonatomic) IBOutlet Bar3TableViewController *bar3VC;
-@property (weak, nonatomic) IBOutlet Bar4TableViewController *bar4VC;
-@property (weak, nonatomic) IBOutlet Bar5TableViewController *bar5VC;
-@property (weak, nonatomic) IBOutlet Bar6TableViewController *bar6VC;
-@property (weak, nonatomic) IBOutlet Bar7TableViewController *bar7VC;
-@property (weak, nonatomic) IBOutlet Bar8TableViewController *bar8VC;
-@property (weak, nonatomic) IBOutlet Bar9TableViewController *bar9VC;
+@property (weak, nonatomic) IBOutlet Bar0ViewController *bar0VC;
+@property (weak, nonatomic) IBOutlet Bar1ViewController *bar1VC;
+@property (weak, nonatomic) IBOutlet Bar2ViewController *bar2VC;
+@property (weak, nonatomic) IBOutlet Bar3ViewController *bar3VC;
+@property (weak, nonatomic) IBOutlet Bar4ViewController *bar4VC;
+@property (weak, nonatomic) IBOutlet Bar5ViewController *bar5VC;
+@property (weak, nonatomic) IBOutlet Bar6ViewController *bar6VC;
+@property (weak, nonatomic) IBOutlet Bar7ViewController *bar7VC;
+@property (weak, nonatomic) IBOutlet Bar8ViewController *bar8VC;
+@property (weak, nonatomic) IBOutlet Bar9ViewController *bar9VC;
 
 @property (strong, nonatomic) NSMutableArray *barVCs;
 
 @property (nonatomic) CGFloat frameWidth;
 @property (nonatomic) CGFloat frameHeight;
-
 @property (nonatomic) CGFloat previousFrameWidth;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;

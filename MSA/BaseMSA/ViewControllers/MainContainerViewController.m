@@ -94,7 +94,8 @@
     self.shareSettings.currentInstrument = [[NSMutableString alloc] initWithString:@""];
     self.shareSettings.currentInstrumentStatus = INST_DISC;
     
-    self.shareSettings.modeStoryboard = self.modeStoryboard;
+    self.shareSettings.appModeStoryboard = _appModeStoryboard;
+    self.shareSettings.mbarStoryboard = _mbarStoryboard;
     
     //self.shareSettings.dataParameters = [[NSDictionary alloc] init];
     //self.shareSettings.parManager = [[ParameterManager alloc] init];
@@ -120,9 +121,9 @@
     _shareSettings.modeManager = _modeManager;
     [_modeManager initMode];
     
-    UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
-    self.shareSettings.modeStoryboard = modeUIS;
-    MeasureBarContainerViewController *mbarCVC = (MeasureBarContainerViewController *)[modeUIS instantiateViewControllerWithIdentifier:@"measureBarCVC"];
+    //UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
+    //self.shareSettings.modeStoryboard = modeUIS;
+    MeasureBarContainerViewController *mbarCVC = (MeasureBarContainerViewController *)[self.shareSettings.mbarStoryboard instantiateViewControllerWithIdentifier:@"measureBarCVC"];
     NSAssert([mbarCVC isKindOfClass:[MeasureBarContainerViewController class]], @"mbarCVC should be MeasureBarContainerViewController.");
     mbarCVC.frameWidth = self.frameWidth;
     mbarCVC.frameHeight = BAR_HEIGHT;

@@ -20,10 +20,10 @@
     // Override point for customization after application launch.
     
     MainContainerViewController *mainVC = (MainContainerViewController *)self.window.rootViewController;
-    UIStoryboard *modeStoryboard = [UIStoryboard storyboardWithName:@"Mode" bundle:[NSBundle mainBundle]];
-    mainVC.modeStoryboard = modeStoryboard;
-    //UIStoryboard *measBarStoryboard = [UIStoryboard storyboardWithName:@"MeasureBar" bundle:[NSBundle mainBundle]];
-    //mainVC.measBarStoryboard = measBarStoryboard;
+    UIStoryboard *appModeStoryboard = [UIStoryboard storyboardWithName:@"AppMode" bundle:[NSBundle mainBundle]];
+    mainVC.appModeStoryboard = appModeStoryboard;
+    UIStoryboard *measBarStoryboard = [UIStoryboard storyboardWithName:@"MeasureBar" bundle:[NSBundle mainBundle]];
+    mainVC.mbarStoryboard = measBarStoryboard;
     
     return YES;
 }

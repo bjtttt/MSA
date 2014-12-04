@@ -44,7 +44,8 @@
 
 @property (strong, nonatomic) MeasureBarContainerViewController *barCVC;
 
-@property (weak, nonatomic) UIStoryboard *modeStoryboard;
+@property (weak, nonatomic) UIStoryboard *appModeStoryboard;
+@property (weak, nonatomic) UIStoryboard *mbarStoryboard;
 //@property (weak, nonatomic) UIStoryboard *measBarStoryboard;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;

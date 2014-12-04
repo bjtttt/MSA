@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZJF-Pj-cMM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+    </dependencies>
+    <scenes>
+        <!--Measure Bar Container View Controller-->
+        <scene sceneID="8fB-4k-ZSg">
+            <objects>
+                <viewController storyboardIdentifier="measureBarCVC" automaticallyAdjustsScrollViewInsets="NO" id="ZJF-Pj-cMM" customClass="MeasureBarContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3l4-6C-XM3"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lce-Qn-m6S"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kIl-NV-POs" customClass="MeasureBarContainerView">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ho6-xa-8wo" userLabel="Measure Bar 0 Container View">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                                <connections>
+                                    <segue destination="qUH-oC-hIb" kind="embed" identifier="embedSegueToBar0VC" id="z78-nt-UOm"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NRB-as-DYH" userLabel="Measure Bar 1 Container View">
+                                <rect key="frame" x="100" y="0.0" width="100" height="120"/>
+                                <connections>
+                                    <segue destination="sJI-6R-KcQ" kind="embed" identifier="embedSegueToBar1VC" id="ZE4-tZ-oNf"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qgv-Yy-LFc" userLabel="Measure Bar 2 Container View">
+                                <rect key="frame" x="200" y="0.0" width="100" height="120"/>
+                                <connections>
+                                    <segue destination="8UX-i9-joF" kind="embed" identifier="embedSegueToBar2VC" id="Z5A-eM-2Zj"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mRq-B8-UhR" userLabel="Measure Bar 3 Container View">
+                                <rect key="frame" x="299" y="0.0" width="100" height="120"/>
+                                <connections>
+                                    <segue destination="M2C-XT-PhC" kind="embed" identifier="embedSegueToBar3VC" id="XEk-M8-0fG"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3es-ZX-Aaa" userLabel="Measure Bar 4 Container View">
+                                <rect key="frame" x="399" y="0.0" width="100" height="120"/>
+                                <connections>
+                                    <segue destination="4Bu-2P-9pb" kind="embed" identifier="embedSegueToBar4VC" id="SJa-uY-K4p"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CNr-1T-lVt" userLabel="Measure Bar 5 Container View">
+                                <rect key="frame" x="499" y="0.0" width="100" height="120"/>
+                                <connections>
+                                    <segue destination="IgH-hG-oba" kind="embed" identifier="embedSegueToBar5VC" id="par-k2-vOh"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1nQ-IQ-0Yg" userLabel="Measure Bar 6 Container View">
+                                <rect key="frame" x="599" y="0.0" width="100" height="120"/>
+                                <connections>
+                                    <segue destination="jvC-QH-TVE" kind="embed" identifier="embedSegueToBar6VC" id="o46-BT-Woy"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gob-Cu-Dtp" userLabel="Measure Bar 7 Container View">
+                                <rect key="frame" x="699" y="0.0" width="100" height="120"/>
+                                <connections>
+                                    <segue destination="Ine-0g-ZIA" kind="embed" identifier="embedSegueToBar7VC" id="jdG-nR-j8t"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MUM-Zx-3It" userLabel="Measure Bar 8 Container View">
+                                <rect key="frame" x="799" y="0.0" width="100" height="120"/>
+                                <connections>
+                                    <segue destination="ToY-fG-hLU" kind="embed" identifier="embedSegueToBar8VC" id="Kxm-Nv-yBJ"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="llr-3F-Cx2" userLabel="Measure Bar 9 Container View">
+                                <rect key="frame" x="899" y="0.0" width="100" height="120"/>
+                                <connections>
+                                    <segue destination="xCy-U1-7y4" kind="embed" identifier="embedSegueToBar9VC" id="Tbb-6c-FvG"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="120"/>
+                    <connections>
+                        <outlet property="bar0V" destination="ho6-xa-8wo" id="HQk-Ii-uUA"/>
+                        <outlet property="bar1V" destination="NRB-as-DYH" id="AMH-uS-kg6"/>
+                        <outlet property="bar2V" destination="qgv-Yy-LFc" id="6K7-Yh-OMD"/>
+                        <outlet property="bar3V" destination="mRq-B8-UhR" id="kvt-w4-dqz"/>
+                        <outlet property="bar4V" destination="3es-ZX-Aaa" id="FLu-aW-dMO"/>
+                        <outlet property="bar5V" destination="CNr-1T-lVt" id="sgu-9Q-VSU"/>
+                        <outlet property="bar6V" destination="1nQ-IQ-0Yg" id="4sz-vx-AqX"/>
+                        <outlet property="bar7V" destination="Gob-Cu-Dtp" id="Qub-4t-sE3"/>
+                        <outlet property="bar8V" destination="MUM-Zx-3It" id="8Uh-on-RZv"/>
+                        <outlet property="bar9V" destination="llr-3F-Cx2" id="Ryv-N6-vYi"/>
+                        <outlet property="barCV" destination="kIl-NV-POs" id="hRl-9e-lBb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEy-PU-pi1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1388" y="-1128.9999999999998"/>
+        </scene>
+        <!--Bar 0 View Controller-->
+        <scene sceneID="R2I-Ql-bBC">
+            <objects>
+                <viewController id="qUH-oC-hIb" userLabel="Bar 0 View Controller" customClass="Bar0ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yX3-E7-ydN"/>
+                        <viewControllerLayoutGuide type="bottom" id="p8f-gB-Vnd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gt1-pV-Hwk">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUw-6Q-5nE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="-1395"/>
+        </scene>
+        <!--Bar 1 View Controller-->
+        <scene sceneID="XHH-Dc-Kfd">
+            <objects>
+                <viewController id="sJI-6R-KcQ" userLabel="Bar 1 View Controller" customClass="Bar1ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rYr-th-64f"/>
+                        <viewControllerLayoutGuide type="bottom" id="H3q-YP-5KF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eFv-OL-H0E">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="toK-Mn-osQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112" y="-1395"/>
+        </scene>
+        <!--Bar 2 View Controller-->
+        <scene sceneID="RYA-VJ-QOi">
+            <objects>
+                <viewController id="8UX-i9-joF" userLabel="Bar 2 View Controller" customClass="Bar2ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bcy-Yh-5qW"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Sl-9V-46B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OpU-SP-PFn">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1S-Wb-EgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1316" y="-1395"/>
+        </scene>
+        <!--Bar 3 View Controller-->
+        <scene sceneID="khY-eQ-G3U">
+            <objects>
+                <viewController id="M2C-XT-PhC" userLabel="Bar 3 View Controller" customClass="Bar3ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jUs-yL-QzK"/>
+                        <viewControllerLayoutGuide type="bottom" id="8w1-wo-ka5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tjb-sV-kLG">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ypY-7K-OeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1526" y="-1395"/>
+        </scene>
+        <!--Bar 4 View Controller-->
+        <scene sceneID="PWN-6a-ey2">
+            <objects>
+                <viewController id="4Bu-2P-9pb" userLabel="Bar 4 View Controller" customClass="Bar4ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kbn-pk-m3u"/>
+                        <viewControllerLayoutGuide type="bottom" id="zXW-jy-ujk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uzp-fX-b3d">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50s-1y-A8s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="-1395"/>
+        </scene>
+        <!--Bar 5 View Controller-->
+        <scene sceneID="g5o-ko-CHm">
+            <objects>
+                <viewController id="IgH-hG-oba" userLabel="Bar 5 View Controller" customClass="Bar5ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FF8-ud-eHX"/>
+                        <viewControllerLayoutGuide type="bottom" id="z89-cl-MKe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qX1-Ry-z87">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tw1-sB-R9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="-831"/>
+        </scene>
+        <!--Bar 6 View Controller-->
+        <scene sceneID="Fll-tf-eH6">
+            <objects>
+                <viewController id="jvC-QH-TVE" userLabel="Bar 6 View Controller" customClass="Bar6ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vYe-c7-erK"/>
+                        <viewControllerLayoutGuide type="bottom" id="bjf-g9-YgV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EoK-90-TbP">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jQF-0O-JyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112" y="-831"/>
+        </scene>
+        <!--Bar 7 View Controller-->
+        <scene sceneID="ut2-yR-xoT">
+            <objects>
+                <viewController id="Ine-0g-ZIA" userLabel="Bar 7 View Controller" customClass="Bar7ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mOw-uD-cdQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="GTN-tA-VwS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X1e-QU-kLw">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OgU-Sw-3Jh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1316" y="-839"/>
+        </scene>
+        <!--Bar 8 View Controller-->
+        <scene sceneID="LqT-zp-z0P">
+            <objects>
+                <viewController id="ToY-fG-hLU" userLabel="Bar 8 View Controller" customClass="Bar8ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ppu-x5-Nkq"/>
+                        <viewControllerLayoutGuide type="bottom" id="zmS-YU-2k1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l62-eY-FOl">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vyL-uA-tHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1526" y="-839"/>
+        </scene>
+        <!--Bar 9 View Controller-->
+        <scene sceneID="tMI-SE-LRw">
+            <objects>
+                <viewController id="xCy-U1-7y4" userLabel="Bar 9 View Controller" customClass="Bar9ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O9J-2K-abG"/>
+                        <viewControllerLayoutGuide type="bottom" id="RoZ-kx-WLU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S8a-wM-5lZ">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mdp-D8-s4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="-839"/>
+        </scene>
+    </scenes>
+</document>

@@ -123,7 +123,8 @@ typedef NS_ENUM(int, ParamDictType) {
 //Should beremoved
 @property (nonatomic) NSMutableArray *measureView;
 
-@property (weak, nonatomic) UIStoryboard *modeStoryboard;
+@property (weak, nonatomic) UIStoryboard *appModeStoryboard;
+@property (weak, nonatomic) UIStoryboard *mbarStoryboard;
 @property (weak, nonatomic) MeasureBarContainerViewController *barCVC;
 
 @property (nonatomic) GPUImageiOSBlurFilter *blurFilter;

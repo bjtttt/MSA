@@ -11,16 +11,16 @@
 #import "MainContainerViewController.h"
 #import "DisplayContainerViewController.h"
 #import "MeasureBarContainerViewController.h"
-#import "Bar0TableViewController.h"
-#import "Bar1TableViewController.h"
-#import "Bar2TableViewController.h"
-#import "Bar3TableViewController.h"
-#import "Bar4TableViewController.h"
-#import "Bar5TableViewController.h"
-#import "Bar6TableViewController.h"
-#import "Bar7TableViewController.h"
-#import "Bar8TableViewController.h"
-#import "Bar9TableViewController.h"
+#import "Bar0ViewController.h"
+#import "Bar1ViewController.h"
+#import "Bar2ViewController.h"
+#import "Bar3ViewController.h"
+#import "Bar4ViewController.h"
+#import "Bar5ViewController.h"
+#import "Bar6ViewController.h"
+#import "Bar7ViewController.h"
+#import "Bar8ViewController.h"
+#import "Bar9ViewController.h"
 #import "MeasureBarProtocol.h"
 #import "MeasureBarContainerView.h"
 #import "ModeManager.h"
@@ -38,7 +38,7 @@
 {
     [super loadView];
     
-    self.barVs = [[NSMutableArray alloc] initWithObjects:self.bar0V, self.bar1V, self.bar2V, self.bar3V, self.bar4V, self.bar5V, self.bar6V, nil];//, self.bar7V, nil];
+    self.barVs = [[NSMutableArray alloc] initWithObjects:self.bar0V, self.bar1V, self.bar2V, self.bar3V, self.bar4V, self.bar5V, self.bar6V, self.bar7V, self.bar8V, self.bar9V, nil];
     
     for(UIView *bv in self.barVs)
     {
@@ -69,68 +69,66 @@
         self.barCV.shareSettings = self.shareSettings;
     
     self.previousFrameWidth = self.frameWidth;
-
-    //self.view.backgroundColor = [UIColor colorWithRed:77.0f/255.0f green:77.0f/255.0f blue:77.0f/255.0f alpha:1.0f];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"embedSegueToBar0VC"])
     {
-        self.bar0VC = (Bar0TableViewController *)segue.destinationViewController;
+        self.bar0VC = (Bar0ViewController *)segue.destinationViewController;
         self.bar0VC.shareSettings = self.shareSettings;
         self.bar0VC.measureBarCVC = self;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar1VC"])
     {
-        self.bar1VC = (Bar1TableViewController *)segue.destinationViewController;
+        self.bar1VC = (Bar1ViewController *)segue.destinationViewController;
         self.bar1VC.shareSettings = self.shareSettings;
         self.bar1VC.measureBarCVC = self;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar2VC"])
     {
-        self.bar2VC = (Bar2TableViewController *)segue.destinationViewController;
+        self.bar2VC = (Bar2ViewController *)segue.destinationViewController;
         self.bar2VC.shareSettings = self.shareSettings;
         self.bar2VC.measureBarCVC = self;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar3VC"])
     {
-        self.bar3VC = (Bar3TableViewController *)segue.destinationViewController;
+        self.bar3VC = (Bar3ViewController *)segue.destinationViewController;
         self.bar3VC.shareSettings = self.shareSettings;
         self.bar3VC.measureBarCVC = self;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar4VC"])
     {
-        self.bar4VC = (Bar4TableViewController *)segue.destinationViewController;
+        self.bar4VC = (Bar4ViewController *)segue.destinationViewController;
         self.bar4VC.shareSettings = self.shareSettings;
         self.bar4VC.measureBarCVC = self;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar5VC"])
     {
-        self.bar5VC = (Bar5TableViewController *)segue.destinationViewController;
+        self.bar5VC = (Bar5ViewController *)segue.destinationViewController;
         self.bar5VC.shareSettings = self.shareSettings;
         self.bar5VC.measureBarCVC = self;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar6VC"])
     {
-        self.bar6VC = (Bar6TableViewController *)segue.destinationViewController;
+        self.bar6VC = (Bar6ViewController *)segue.destinationViewController;
         self.bar6VC.shareSettings = self.shareSettings;
         self.bar6VC.measureBarCVC = self;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar7VC"])
     {
-        self.bar7VC = (Bar7TableViewController *)segue.destinationViewController;
+        self.bar7VC = (Bar7ViewController *)segue.destinationViewController;
         self.bar7VC.shareSettings = self.shareSettings;
         self.bar7VC.measureBarCVC = self;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar8VC"])
     {
-        self.bar8VC = (Bar8TableViewController *)segue.destinationViewController;
+        self.bar8VC = (Bar8ViewController *)segue.destinationViewController;
         self.bar8VC.shareSettings = self.shareSettings;
         self.bar8VC.measureBarCVC = self;
     }
     if([segue.identifier isEqualToString:@"embedSegueToBar9VC"])
     {
-        self.bar9VC = (Bar9TableViewController *)segue.destinationViewController;
+        self.bar9VC = (Bar9ViewController *)segue.destinationViewController;
         self.bar9VC.shareSettings = self.shareSettings;
         self.bar9VC.measureBarCVC = self;
     }
@@ -152,8 +150,6 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    //[self setMeasureBarAccordingToFrame];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -186,7 +182,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (BOOL) prefersStatusBarHidden {
+-(BOOL)prefersStatusBarHidden {
     return YES;
 }
 
@@ -200,7 +196,8 @@
     for(int i=0;i<count; i++)
     {
         UIView *view = (UIView *)_barVs[i];
-        UIViewController<MeasureBarProtocol> *vc = (UIViewController<MeasureBarProtocol> *)_barVCs[i];
+        //UIViewController<MeasureBarProtocol> *vc = (UIViewController<MeasureBarProtocol> *)_barVCs[i];
+        BarViewControllerBase *vc = (BarViewControllerBase *)_barVCs[i];
         
         if(_shareSettings.menuDisplayed == YES)
         {
@@ -224,16 +221,6 @@
         vc.frameHeight = BAR_HEIGHT;
         
         prevWidth = prevWidth + barWidth;
-    }
-    
-    for(int i=count;i<MAX_MEAS_BAR_COUNT;i++)
-    {
-        UIView *view = (UIView *)_barVs[i];
-        UIViewController<MeasureBarProtocol> *vc = (UIViewController<MeasureBarProtocol> *)_barVCs[i];
-
-        view.frame = CGRectMake(0, 0, 0, 0);
-        vc.frameWidth = 0;
-        vc.frameHeight = 0;
     }
 }
 

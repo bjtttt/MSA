@@ -332,14 +332,14 @@
 -(void)initMeasBarDetail
 {
     self.mbarDetail = [[MeasureBarDetail alloc] init];
+    self.mbarDetail.mbarCount = 10;
     self.mbarDetail.useRatio = true;
-    self.mbarDetail.mbarCount = 7;
-    self.mbarDetail.mbarWidths = [@[@1.0, @1.0, @1.0, @1.0, @1.0, @1.0, @2.0] mutableCopy];
-    self.mbarDetail.mbarSmallWidths = [@[@1.0, @1.0, @1.0, @1.0, @1.0, @1.0, @2.0] mutableCopy];
+    self.mbarDetail.mbarWidths = [@[@1.0, @1.0, @1.0, @1.0, @1.0, @1.0, @2.0, @0.0, @0.0, @0.0] mutableCopy];
+    self.mbarDetail.mbarSmallWidths = [@[@1.0, @1.0, @1.0, @1.0, @1.0, @1.0, @2.0, @0.0, @0.0, @0.0] mutableCopy];
     self.mbarDetail.totalWidth = 8.0f;
     self.mbarDetail.totalSmallWidth = 8.0f;
-    self.mbarDetail.popupMenuHeights = [@[@200.0, @200.0, @200.0, @200.0, @200.0, @200.0, @200.0] mutableCopy];
-    self.mbarDetail.popupMenuWidths = [@[@150.0, @150.0, @150.0, @150.0, @150.0, @150.0, @150.0] mutableCopy];
+    self.mbarDetail.popupMenuHeights = [@[@200.0, @200.0, @200.0, @200.0, @200.0, @200.0, @200.0, @0.0, @0.0, @0.0] mutableCopy];
+    self.mbarDetail.popupMenuWidths = [@[@150.0, @150.0, @150.0, @150.0, @150.0, @150.0, @150.0, @0.0, @0.0, @0.0] mutableCopy];
 }
 
 @end
