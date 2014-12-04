@@ -252,7 +252,7 @@
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    [self layoutVC:NO];
+    [self layoutVC:NO withMeasBar:YES];
 }
 
 -(BOOL)prefersStatusBarHidden {
@@ -278,6 +278,11 @@
 }
 
 - (void)layoutVC:(BOOL)animated
+{
+    [self layoutVC:animated withMeasBar:NO];
+}
+
+- (void)layoutVC:(BOOL)animated withMeasBar:(bool)changeMeasBarWidth
 {
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
@@ -436,7 +441,8 @@
             self.displayCVC.barCVC.frameWidth = self.frameWidth - MENU_WIDTH;
             
             self.barCVC.frameWidth = self.frameWidth - MENU_WIDTH;
-            [self.barCVC adjustMeasureBarWidth:YES];
+            if(changeMeasBarWidth == YES)
+                [self.barCVC adjustMeasureBarWidth:YES];
             
             //[self.menuCVC.softMenuCVC setSoftMenuFrame];
             
@@ -456,7 +462,8 @@
             self.displayCVC.barCVC.frameWidth = self.frameWidth;
             
             self.barCVC.frameWidth = self.frameWidth;
-            [self.barCVC adjustMeasureBarWidth:YES];
+            if(changeMeasBarWidth == YES)
+                [self.barCVC adjustMeasureBarWidth:YES];
 
             layoutBlock = ^(void)
             {

@@ -225,13 +225,6 @@
 }
 
 -(void)adjustMeasureBarWidth:(BOOL)animated {
-    //if(self.previousFrameWidth == self.frameWidth)
-    //    return;
-    if(_shareSettings.menuDisplayed == YES && self.previousFrameWidth > self.frameWidth)
-        return;
-    if(_shareSettings.menuDisplayed == NO && self.previousFrameWidth < self.frameWidth)
-        return;
-    
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
     
