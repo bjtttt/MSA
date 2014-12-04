@@ -73,6 +73,13 @@ typedef NS_ENUM(int, ParamDictType) {
     MBAR_DICT
 };
 
+typedef NS_ENUM(int, TouchAreaType)
+{
+    TAT_MEAS_BAR = 0,
+    TAT_MEAS_BAR_POPUP,
+    TAT_OTHERS
+};
+
 #define LIGHT_CORNER_RADIUS 3.0f
 #define NORMAL_CORNER_RADIUS 5.0f
 #define HEAVY_CORNER_RADIUS 10.0f
