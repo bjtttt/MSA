@@ -75,9 +75,24 @@ typedef NS_ENUM(int, ParamDictType) {
 
 typedef NS_ENUM(int, TouchAreaType)
 {
-    TAT_MEAS_BAR = 0,
+    TAT_NONE = 0,
+    TAT_MEAS_BAR,
     TAT_MEAS_BAR_POPUP,
     TAT_OTHERS
+};
+
+typedef NS_ENUM(int, UIDisplayType)
+{
+    UIDT_NORMAL = 0,        // Startup
+    UIDT_NORMAL_BARPOPUP,
+    UIDT_NORMAL_INPUT,
+    UIDT_NORMAL_BARPOPUP_INPUT,
+    UIDT_MENU,
+    UIDT_MENU_BARPOPUP,
+    UIDT_MENU_INPUT,
+    UIDT_MENU_BARPOPUP_INPUT,
+    UIDT_MENU_PRESET,
+    UIDT_CONNSEL
 };
 
 #define LIGHT_CORNER_RADIUS 3.0f
@@ -108,6 +123,10 @@ typedef NS_ENUM(int, TouchAreaType)
 @property (nonatomic) bool menuTapped;
 @property (nonatomic) bool measureTapped;
 
+@property (nonatomic) UIDisplayType prevDispType;
+@property (nonatomic) UIDisplayType curDispType;
+
+@property (nonatomic) TouchAreaType touchAreaType;
 @property (nonatomic) bool navPresetMenuButtonAreaTapped;
 @property (nonatomic) bool presetMenuAreaTapped;
 @property (nonatomic) bool barPopupMenuAreaTapped;

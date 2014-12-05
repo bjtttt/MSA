@@ -72,30 +72,33 @@
     //NSLog(@"ContainerViewController - loadView");
     
     [super loadView];
-        
-    self.frameWidth = self.view.frame.size.width;
-    self.frameHeight = self.view.frame.size.height;
+    
+    _frameWidth = self.view.frame.size.width;
+    _frameHeight = self.view.frame.size.height;
 
-    self.shareSettings = [[ShareSettings alloc] init];
-    self.shareSettings.menuTapped=NO;
-    self.shareSettings.measureTapped=NO;
+    _shareSettings = [[ShareSettings alloc] init];
+    _shareSettings.menuTapped=NO;
+    _shareSettings.measureTapped=NO;
     //self.shareSettings.barTapped=NO;
-    self.shareSettings.menuDisplayed=NO;
-    self.shareSettings.measureDisplayed=NO;
-    self.shareSettings.barPopupMenuDisplayed=NO;
+    _shareSettings.menuDisplayed=NO;
+    _shareSettings.measureDisplayed=NO;
+    _shareSettings.barPopupMenuDisplayed=NO;
     
-    self.shareSettings.barTappedIndex = -1;
-    self.shareSettings.currentBarPopupMenuIndex = -1;
-    self.shareSettings.previousBarPopupMenuIndex = -1;
+    _shareSettings.barTappedIndex = -1;
+    _shareSettings.currentBarPopupMenuIndex = -1;
+    _shareSettings.previousBarPopupMenuIndex = -1;
 
-    self.shareSettings.barPopupMenuAreaTapped=NO;
-    self.shareSettings.navPresetMenuButtonAreaTapped=NO;
+    _shareSettings.barPopupMenuAreaTapped=NO;
+    _shareSettings.navPresetMenuButtonAreaTapped=NO;
 
-    self.shareSettings.currentInstrument = [[NSMutableString alloc] initWithString:@""];
-    self.shareSettings.currentInstrumentStatus = INST_DISC;
+    _shareSettings.currentInstrument = [[NSMutableString alloc] initWithString:@""];
+    _shareSettings.currentInstrumentStatus = INST_DISC;
     
-    self.shareSettings.appModeStoryboard = _appModeStoryboard;
-    self.shareSettings.mbarStoryboard = _mbarStoryboard;
+    _shareSettings.appModeStoryboard = _appModeStoryboard;
+    _shareSettings.mbarStoryboard = _mbarStoryboard;
+    
+    _shareSettings.prevDispType = UIDT_NORMAL;
+    _shareSettings.curDispType = UIDT_NORMAL;
     
     //self.shareSettings.dataParameters = [[NSDictionary alloc] init];
     //self.shareSettings.parManager = [[ParameterManager alloc] init];
@@ -123,30 +126,30 @@
     
     //UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
     //self.shareSettings.modeStoryboard = modeUIS;
-    MeasureBarContainerViewController *mbarCVC = (MeasureBarContainerViewController *)[self.shareSettings.mbarStoryboard instantiateViewControllerWithIdentifier:@"measureBarCVC"];
+    MeasureBarContainerViewController *mbarCVC = (MeasureBarContainerViewController *)[_shareSettings.mbarStoryboard instantiateViewControllerWithIdentifier:@"measureBarCVC"];
     NSAssert([mbarCVC isKindOfClass:[MeasureBarContainerViewController class]], @"mbarCVC should be MeasureBarContainerViewController.");
     mbarCVC.frameWidth = self.frameWidth;
     mbarCVC.frameHeight = BAR_HEIGHT;
-    mbarCVC.shareSettings = self.shareSettings;
-    mbarCVC.displayCVC = self.displayCVC;
-    self.shareSettings.barCVC = mbarCVC;
-    self.barCVC = mbarCVC;
+    mbarCVC.shareSettings = _shareSettings;
+    mbarCVC.displayCVC = _displayCVC;
+    _shareSettings.barCVC = mbarCVC;
+    _barCVC = mbarCVC;
     ((MainContainerView *)self.mainView).shareSettings = self.shareSettings;
     
     // Border Radius
     //[self.menuView.layer setCornerRadius:LIGHT_CORNER_RADIUS];
-    [self.menuView.layer setMasksToBounds:YES];
+    [_menuView.layer setMasksToBounds:YES];
     //[self.menuView setClipsToBounds:YES];
     // Border
-    [self.menuView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [self.menuView.layer setBorderWidth:NORMAL_BORDER_WIDTH];
+    [_menuView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+    [_menuView.layer setBorderWidth:NORMAL_BORDER_WIDTH];
     // Background
     //[self.menuView.layer setBackgroundColor:[UIColor darkGrayColor].CGColor];
         
     [self setMeasureViewStyle];
     [self setBarPopupMenuViewStyle];
     
-    self.mainView.sendNotification = YES;
+    _mainView.sendNotification = YES;
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -163,6 +166,8 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barTappedIndex) name:@"barTappedIndex" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barPopupMenuAreaTapped) name:@"barPopupMenuAreaTapped" object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(curDispTypeChanged) name:@"curDispType" object:nil];
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
@@ -175,6 +180,8 @@
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barTappedIndex" object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barPopupMenuAreaTapped" object:nil];
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"curDispType" object:nil];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -275,6 +282,32 @@
 
 - (void)barPopupMenuAreaTapped {
     [self layoutVC:YES];
+}
+
+-(void)curDispTypeChanged
+{
+    switch(_shareSettings.curDispType)
+    {
+        default:
+        case UIDT_NORMAL:
+        {
+            switch(_shareSettings.prevDispType)
+            {
+                default:
+                case UIDT_NORMAL:
+                {
+                    return;
+                }
+                    break;
+                case UIDT_NORMAL_INPUT:
+                {
+                    
+                }
+                    break;
+            }
+        }
+            break;
+    }
 }
 
 - (void)layoutVC:(BOOL)animated
