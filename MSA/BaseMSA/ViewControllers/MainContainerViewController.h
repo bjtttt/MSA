@@ -21,6 +21,7 @@
 @class BarPopupMenuContainerViewController;
 @class ParameterManager;
 @class ModeManager;
+@class InputContainerViewCOntroller;
 
 @interface MainContainerViewController : UIViewController
 
@@ -42,6 +43,7 @@
 @property (weak, nonatomic) IBOutlet MeasureContainerViewController *measureCVC;
 @property (weak, nonatomic) IBOutlet BlurViewController *blurVC;
 @property (weak, nonatomic) IBOutlet BarPopupMenuContainerViewController *barPopupMenuCVC;
+@property (weak, nonatomic) IBOutlet InputContainerViewCOntroller *inputCVC;
 
 @property (strong, nonatomic) MeasureBarContainerViewController *barCVC;
 

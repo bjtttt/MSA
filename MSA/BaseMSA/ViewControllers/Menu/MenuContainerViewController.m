@@ -97,11 +97,26 @@
     //[self showHidePresetMenu:self.presetViewVisible animated:YES];
 }
 
-- (void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated {
-    [self showHidePresetMenu:showPresetMenu animated:animated inTime:0.1];
+//- (void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated {
+//    [self showHidePresetMenu:showPresetMenu animated:animated inTime:0.1];
+//}
+
+-(void)showHidePresetMenu:(BOOL)show
+{
+    if(show == YES)
+    {
+        _softMenuV.frame = CGRectMake(_frameWidth, NAVBAR_HEIGHT, _frameWidth, _frameHeight-NAVBAR_HEIGHT);
+        _presetMenuV.frame = CGRectMake(0, NAVBAR_HEIGHT, _frameWidth, _frameHeight-NAVBAR_HEIGHT);
+    }
+    else
+    {
+        _softMenuV.frame = CGRectMake(0, NAVBAR_HEIGHT, _frameWidth, _frameHeight-NAVBAR_HEIGHT);
+        _presetMenuV.frame = CGRectMake(_frameWidth, NAVBAR_HEIGHT, _frameWidth, _frameHeight-NAVBAR_HEIGHT);
+    }
 }
 
-- (void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated inTime:(CGFloat)inTime {
+/*
+-(void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated inTime:(CGFloat)inTime {
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
     
@@ -142,5 +157,6 @@
           self.softMenuV.frame.origin.x, self.softMenuV.frame.origin.y, self.softMenuV.frame.size.width, self.softMenuV.frame.size.height,
           self.presetMenuV.frame.origin.x, self.presetMenuV.frame.origin.y, self.presetMenuV.frame.size.width, self.presetMenuV.frame.size.height);
 }
+*/
 
 @end

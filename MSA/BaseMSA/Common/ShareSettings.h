@@ -78,6 +78,7 @@ typedef NS_ENUM(int, TouchAreaType)
     TAT_NONE = 0,
     TAT_MEAS_BAR,
     TAT_MEAS_BAR_POPUP,
+    TAT_MEAS_BAR_POPUP_INPUT,
     TAT_OTHERS
 };
 
@@ -108,7 +109,9 @@ typedef NS_ENUM(int, UIDisplayType)
 #define BAR_HEIGHT 120.0f
 #define NAVBAR_HEIGHT 44.0f
 #define ADDINSTRUMENT_HEIGHT 75.0f
-#define MAX_MEAS_BAR_COUNT 10
+//#define MAX_MEAS_BAR_COUNT 10
+#define INPUT_WIDTH 150.0f
+#define INPUT_HEIGHT 200.0f
 
 #define DEBUG_OUTPUT YES
 
@@ -127,6 +130,9 @@ typedef NS_ENUM(int, UIDisplayType)
 @property (nonatomic) UIDisplayType curDispType;
 
 @property (nonatomic) TouchAreaType touchAreaType;
+@property (nonatomic) int curBarIndex;
+@property (nonatomic) int prevBarIndex;
+
 @property (nonatomic) bool navPresetMenuButtonAreaTapped;
 @property (nonatomic) bool presetMenuAreaTapped;
 @property (nonatomic) bool barPopupMenuAreaTapped;

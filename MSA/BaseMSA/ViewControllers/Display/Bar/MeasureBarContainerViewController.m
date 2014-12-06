@@ -187,7 +187,7 @@
 }
 
 // This method is not completed.
--(void) setBarsStartAndWidthAccordingTo:(CGFloat)width
+-(void) setBarsStartAndWidth:(CGFloat)width
 {
     CGFloat prevWidth = 0.0;
     CGFloat barWidth = 0.0;

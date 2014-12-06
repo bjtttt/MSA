@@ -22,6 +22,7 @@
 #import "MainContainerView.h"
 #import "SoftMenuContainerViewController.h"
 #import "PresetMenuContainerViewController.h"
+#import "MeasureBarDetail.h"
 
 @interface MainContainerViewController ()
 
@@ -289,8 +290,8 @@
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
     
-    UIImage *img = nil;
-    UIImage *blurImg = nil;
+    //UIImage *img = nil;
+    //UIImage *blurImg = nil;
     
     bool animated = YES;
 
@@ -826,7 +827,6 @@
                 default:
                 case UIDT_NORMAL:
                 {
-                    return;
                 }
                     break;
                 case UIDT_NORMAL_INPUT:
@@ -892,6 +892,50 @@
         layoutBlock();
         completionBlock(YES);
     }
+}
+
+-(void)setDisplayMeasBarPopupMenu:(bool)show forWidth:(float)width
+{
+    float barPopMenuPos = [_shareSettings.modeManager.curMeasure
+                           measureBarPopupMenuPosition:_shareSettings.curBarIndex forWidth:width];
+    if(show == YES)
+        _barPopupMenuView.frame = CGRectMake(barPopMenuPos, NAVBAR_HEIGHT+BAR_HEIGHT, [_shareSettings.modeManager.curMBarDetail.popupMenuWidths[_shareSettings.curBarIndex] floatValue], [_shareSettings.modeManager.curMBarDetail.popupMenuHeights[_shareSettings.curBarIndex] floatValue]);
+    else
+        _barPopupMenuView.frame = CGRectMake(barPopMenuPos, NAVBAR_HEIGHT+BAR_HEIGHT, 0, 0);
+}
+
+-(void)setDisplayMeasBar:(bool)show forWidth:(float)width
+{
+    [_barCVC setBarsStartAndWidth:width];
+}
+
+-(void)setDisplayMenu:(bool)show
+{
+    if(show ==YES)
+        _menuView.frame = CGRectMake(_frameWidth-MENU_WIDTH, 0, MENU_WIDTH, _frameHeight);
+    else
+        _menuView.frame = CGRectMake(_frameWidth, 0, MENU_WIDTH, _frameHeight);
+}
+
+-(void)setDisplayPresetMenu:(bool)show
+{
+    [_menuCVC showHidePresetMenu:show];
+}
+
+-(void)setDisplayConnSel:(bool)show
+{
+    if(show == YES)
+        _measureView.frame = CGRectMake((_frameWidth-MEAS_WIDTH)/2, (_frameHeight-MEAS_HEIGHT)/2, MEAS_WIDTH, MEAS_HEIGHT);
+    else
+        _measureView.frame = CGRectMake(-MEAS_WIDTH-VC_MARGIN, (_frameHeight-MEAS_HEIGHT)/2, MEAS_WIDTH, MEAS_HEIGHT);
+}
+
+-(void)setDisplayInput:(bool)show atPosition:(CGPoint)point// withSize:(CGSize *)size
+{
+    if(show == YES)
+        _inputView.frame = CGRectMake(point.x, point.y, INPUT_WIDTH, INPUT_HEIGHT);
+    else
+        _inputView.frame = CGRectMake(point.x, point.y, 0, 0);
 }
 
 - (void)layoutVC:(BOOL)animated

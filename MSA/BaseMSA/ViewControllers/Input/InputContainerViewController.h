@@ -1,5 +1,5 @@
 //
-//  InputViewController.h
+//  InputContainerViewController.h
 //  MSA
 //
 //  Created by guozhitao on 10/2/14.
@@ -11,7 +11,7 @@
 @class ShareSettings;
 @class MainContainerViewController;
 
-@interface InputViewController : UIViewController
+@interface InputContainerViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet MainContainerViewController *mainCVC;
 

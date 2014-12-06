@@ -24,9 +24,11 @@
 @property (weak, nonatomic) IBOutlet SoftMenuContainerViewController *softMenuCVC;
 @property (weak, nonatomic) IBOutlet MainContainerViewController *mainCVC;
 
-- (IBAction)showPresetMenu:(id)sender;
-- (void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated;
-- (void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated inTime:(CGFloat)inTime;
+-(IBAction)showPresetMenu:(id)sender;
+
+-(void)showHidePresetMenu:(BOOL)show;
+//-(void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated;
+//-(void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated inTime:(CGFloat)inTime;
 
 //@property (nonatomic) double navBarHeight;
 @property (nonatomic) double frameWidth;

@@ -65,7 +65,7 @@
 @property (strong, nonatomic) ShareSettings * shareSettings;
 
 -(void)adjustMeasureBarWidth:(BOOL)animated;
--(void)setBarsStartAndWidthAccordingTo:(CGFloat)width;
+-(void)setBarsStartAndWidth:(CGFloat)width;
 
 -(void)setBarPopupMenuViewController:(BarPopupMenuContainerViewController *)barPopupMenuCVC;
 
