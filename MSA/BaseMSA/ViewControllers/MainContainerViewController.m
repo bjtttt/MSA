@@ -16,7 +16,6 @@
 #import "MenuContainerViewController.h"
 #import "MeasureContainerViewController.h"
 #import "MeasureBarContainerViewController.h"
-#import "BlurViewController.h"
 #import "BarPopupMenuContainerViewController.h"
 #import "UIView+Screenshot.h"
 #import "MainContainerView.h"
@@ -34,9 +33,20 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-
+    
     //if(self.mainView.barCV == nil)
     //    self.mainView.barCV = self.displayCVC.barV;
+    
+    //_mainView.frame = CGRectMake(0, 0, _frameWidth, _frameHeight);
+}
+
+-(void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    _mainView.frame = CGRectMake(0, 0, _frameWidth, _frameHeight);
+    
+    [self curDispTypeChanged];
 }
 
 /*
@@ -72,7 +82,7 @@
 }
 */
 
--(void) loadView {
+-(void)loadView {
     [super loadView];
     
     _frameWidth = self.view.frame.size.width;
@@ -163,6 +173,8 @@
 
 -(void)curDispTypeChanged
 {
+    //_mainView.frame = CGRectMake(0, 0, _frameWidth, _frameHeight);
+
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
     
@@ -179,6 +191,20 @@
             switch(_shareSettings.prevDispType)
             {
                 case UIDT_NONE:
+                {
+                    animated = NO;
+                    layoutBlock = ^(void)
+                    {
+                        [self setDisplayConnSel:NO];
+                        [self setDisplayMenu:NO];
+                        [self setDisplayInput:NO atPosition:CGPointMake(0.0f, 0.0f)];
+                        [self setDisplayPresetMenu:NO];
+                        [self setDisplayMeasBar:_frameWidth];
+                        [self setDisplayMeasBarPopupMenu:NO forWidth:_frameWidth];
+                    };
+                    completionBlock = ^(BOOL finished){
+                    };
+                }
                     break;
                 default:
                 case UIDT_NORMAL:
@@ -788,7 +814,7 @@
         _barPopupMenuView.frame = CGRectMake(barPopMenuPos, NAVBAR_HEIGHT+BAR_HEIGHT, 0, 0);
 }
 
--(void)setDisplayMeasBar:(bool)show forWidth:(float)width
+-(void)setDisplayMeasBar:(float)width
 {
     [_barCVC setBarsStartAndWidth:width];
 }

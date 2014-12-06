@@ -24,9 +24,9 @@
 
 -(instancetype)init
 {
-    if(self=[super init])
+    if(self = [super init])
     {
-        _curDispType = UIDT_NONE;
+        _prevDispType = UIDT_NONE;
         _curDispType = UIDT_NORMAL;
     }
     
