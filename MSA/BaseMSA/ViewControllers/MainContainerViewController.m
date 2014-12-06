@@ -286,6 +286,14 @@
 
 -(void)curDispTypeChanged
 {
+    void (^layoutBlock)(void);
+    void (^completionBlock)(BOOL finished);
+    
+    UIImage *img = nil;
+    UIImage *blurImg = nil;
+    
+    bool animated = YES;
+
     switch(_shareSettings.curDispType)
     {
         default:
@@ -304,9 +312,585 @@
                     
                 }
                     break;
+                case UIDT_NORMAL_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_PRESET:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_CONNSEL:
+                {
+                    
+                }
+                    break;
             }
         }
             break;
+        case UIDT_NORMAL_INPUT:
+        {
+            switch(_shareSettings.prevDispType)
+            {
+                default:
+                case UIDT_NORMAL:
+                {
+                    return;
+                }
+                    break;
+                case UIDT_NORMAL_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_PRESET:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_CONNSEL:
+                {
+                    
+                }
+                    break;
+            }
+        }
+            break;
+        case UIDT_NORMAL_BARPOPUP:
+        {
+            switch(_shareSettings.prevDispType)
+            {
+                default:
+                case UIDT_NORMAL:
+                {
+                    return;
+                }
+                    break;
+                case UIDT_NORMAL_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_PRESET:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_CONNSEL:
+                {
+                    
+                }
+                    break;
+            }
+        }
+            break;
+        case UIDT_NORMAL_BARPOPUP_INPUT:
+        {
+            switch(_shareSettings.prevDispType)
+            {
+                default:
+                case UIDT_NORMAL:
+                {
+                    return;
+                }
+                    break;
+                case UIDT_NORMAL_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_PRESET:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_CONNSEL:
+                {
+                    
+                }
+                    break;
+            }
+        }
+            break;
+        case UIDT_MENU:
+        {
+            switch(_shareSettings.prevDispType)
+            {
+                default:
+                case UIDT_NORMAL:
+                {
+                    return;
+                }
+                    break;
+                case UIDT_NORMAL_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_PRESET:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_CONNSEL:
+                {
+                    
+                }
+                    break;
+            }
+        }
+            break;
+        case UIDT_MENU_PRESET:
+        {
+            switch(_shareSettings.prevDispType)
+            {
+                default:
+                case UIDT_NORMAL:
+                {
+                    return;
+                }
+                    break;
+                case UIDT_NORMAL_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_PRESET:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_CONNSEL:
+                {
+                    
+                }
+                    break;
+            }
+        }
+            break;
+        case UIDT_MENU_INPUT:
+        {
+            switch(_shareSettings.prevDispType)
+            {
+                default:
+                case UIDT_NORMAL:
+                {
+                    return;
+                }
+                    break;
+                case UIDT_NORMAL_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_PRESET:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_CONNSEL:
+                {
+                    
+                }
+                    break;
+            }
+        }
+            break;
+        case UIDT_MENU_BARPOPUP:
+        {
+            switch(_shareSettings.prevDispType)
+            {
+                default:
+                case UIDT_NORMAL:
+                {
+                    return;
+                }
+                    break;
+                case UIDT_NORMAL_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_PRESET:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_CONNSEL:
+                {
+                    
+                }
+                    break;
+            }
+        }
+            break;
+        case UIDT_MENU_BARPOPUP_INPUT:
+        {
+            switch(_shareSettings.prevDispType)
+            {
+                default:
+                case UIDT_NORMAL:
+                {
+                    return;
+                }
+                    break;
+                case UIDT_NORMAL_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_PRESET:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_CONNSEL:
+                {
+                    
+                }
+                    break;
+            }
+        }
+            break;
+        case UIDT_CONNSEL:
+        {
+            switch(_shareSettings.prevDispType)
+            {
+                default:
+                case UIDT_NORMAL:
+                {
+                    return;
+                }
+                    break;
+                case UIDT_NORMAL_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_NORMAL_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_PRESET:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP:
+                {
+                    
+                }
+                    break;
+                case UIDT_MENU_BARPOPUP_INPUT:
+                {
+                    
+                }
+                    break;
+                case UIDT_CONNSEL:
+                {
+                    
+                }
+                    break;
+            }
+        }
+            break;
+    }
+
+    if (animated)
+    {
+        [UIView animateWithDuration:0.1
+         //delay:0
+         //options:UIViewAnimationOptionLayoutSubviews
+                         animations:layoutBlock
+                         completion:completionBlock];
+    }
+    else
+    {
+        layoutBlock();
+        completionBlock(YES);
     }
 }
 

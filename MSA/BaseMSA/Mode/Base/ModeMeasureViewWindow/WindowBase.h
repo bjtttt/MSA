@@ -16,6 +16,6 @@
 @property (nonatomic) NSString *windowName;
 @property (nonatomic) ShareSettings *shareSettings;
 
--(id)initWithConfig:(ShareSettings *)ss;
+-(instancetype)initWithConfig:(ShareSettings *)ss NS_DESIGNATED_INITIALIZER;
 
 @end

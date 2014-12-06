@@ -45,7 +45,7 @@ static NSString *measureSelectCell2ndTable_Id = @"measureSelectCell2ndTable";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {    
     NSInteger row = [indexPath row];
-    UIKeyView *view = [self.views objectAtIndex:row];
+    UIKeyView *view = (self.views)[row];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:measureSelectCell2ndTable_Id forIndexPath:indexPath];
     if(view.enabled == YES)
@@ -61,7 +61,7 @@ static NSString *measureSelectCell2ndTable_Id = @"measureSelectCell2ndTable";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = [indexPath row];
-    UIKeyView *view = [self.views objectAtIndex:row];
+    UIKeyView *view = (self.views)[row];
     if(view.enabled == NO)
     {
         NSMutableString *msg = [[NSMutableString alloc] init];

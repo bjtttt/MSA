@@ -67,7 +67,7 @@ static NSString *measureSelectCellTable_MultiView_Id = @"measureSelectCellTable_
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = [indexPath row];
-    UIKeyMeasure *meas = [self.shareSettings.measureView objectAtIndex:row];
+    UIKeyMeasure *meas = (self.shareSettings.measureView)[row];
     NSMutableArray *views = meas.views;
     NSUInteger viewCount = [views count];
     UITableViewCell *cell;
@@ -91,7 +91,7 @@ static NSString *measureSelectCellTable_MultiView_Id = @"measureSelectCellTable_
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = [indexPath row];
-    UIKeyMeasure *meas = [self.shareSettings.measureView objectAtIndex:row];
+    UIKeyMeasure *meas = (self.shareSettings.measureView)[row];
     if(meas.enabled == NO)
     {
         NSMutableString *msg = [[NSMutableString alloc] init];
@@ -113,7 +113,7 @@ static NSString *measureSelectCellTable_MultiView_Id = @"measureSelectCellTable_
     {
         MeasureSelect2ndTableViewController *measureSelect2ndTVC = (MeasureSelect2ndTableViewController *)segue.destinationViewController;
         NSInteger selectedIndex = [[self.tableView indexPathForSelectedRow] row];
-        UIKeyMeasure *meas = [self.shareSettings.measureView objectAtIndex:selectedIndex];
+        UIKeyMeasure *meas = (self.shareSettings.measureView)[selectedIndex];
         measureSelect2ndTVC.views = meas.views;
         self.navigationItem.title = meas.name;
         //self.measureSelectNavBar.backBarButtonItem.title = meas.name;

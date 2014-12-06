@@ -28,14 +28,14 @@
 
 @implementation UISoftKey
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"UISoftKey::init" format:@"Call UISoftKey::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super init])
     {
@@ -93,7 +93,7 @@
 -(NSNumber *)valueNumber
 {
     if(self.softKeyType == KEY_ENUM_ITEM)
-        return [NSNumber numberWithInt:self.enumMemberInfo.value];
+        return @(self.enumMemberInfo.value);
     
     switch(self.connectParam.valueType)
     {
@@ -101,17 +101,17 @@
             [NSException raise:@"UISoftKey::valueString" format:@"SoftKey(\"%@\") - Type(%d) : Parameter (\"%@\") has no number value.", self.label, _softKeyType, _connectParam.key];
             return nil;
         case VAL_AMP:
-            return [NSNumber numberWithDouble:((AmplitudeParameter *)self.connectParam).value];
+            return @(((AmplitudeParameter *)self.connectParam).value);
         case VAL_RELAMP:
-            return [NSNumber numberWithDouble:((RelativeAmplitudeParameter *)self.connectParam).value];
+            return @(((RelativeAmplitudeParameter *)self.connectParam).value);
         case VAL_FREQ:
-            return [NSNumber numberWithDouble:((FrequencyParameter *)self.connectParam).value];
+            return @(((FrequencyParameter *)self.connectParam).value);
         case VAL_TIME:
-            return [NSNumber numberWithDouble:((TimeParameter *)self.connectParam).value];
+            return @(((TimeParameter *)self.connectParam).value);
         case VAL_DOUBLE:
-            return [NSNumber numberWithDouble:((DoubleParameter *)self.connectParam).value];
+            return @(((DoubleParameter *)self.connectParam).value);
         case VAL_INT:
-            return [NSNumber numberWithLong:((IntParameter *)self.connectParam).value];
+            return @(((IntParameter *)self.connectParam).value);
     }
 }
 

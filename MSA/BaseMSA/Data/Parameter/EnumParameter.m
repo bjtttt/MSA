@@ -17,18 +17,21 @@
 
 @implementation EnumParameter
 
-- (id) init
+- (instancetype) init
 {
     [NSException raise:@"EnumParameter::init" format:@"EnumParameter can only use initWithKey:withEnumDefinition:[withDefaultValue:]withConfig:"];
-    
-    if(self = [super init])
-    {
-    }
-    
-    return self;
+
+    return nil;
 }
 
-- (id) initWithKey:(NSString *)key withEnumDefinition:(NSMutableArray *)enumDefinition withDefaultValue:(int)defaultValue withConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
+{
+    [NSException raise:@"EnumParameter::init" format:@"EnumParameter can only use initWithKey:withEnumDefinition:[withDefaultValue:]withConfig:"];
+
+    return nil;
+}
+
+- (instancetype) initWithKey:(NSString *)key withEnumDefinition:(NSMutableArray *)enumDefinition withDefaultValue:(int)defaultValue withConfig:(ShareSettings *)ss
 {
     if(key == nil)
     {
@@ -74,7 +77,7 @@
     return self;
 }
 
--(id)initWithKey:(NSString *)key withEnumDefinition:(NSMutableArray *)enumDefinition withConfig:(ShareSettings *)ss
+-(instancetype)initWithKey:(NSString *)key withEnumDefinition:(NSMutableArray *)enumDefinition withConfig:(ShareSettings *)ss
 {
     if(key == nil)
     {

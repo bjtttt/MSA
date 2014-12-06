@@ -15,14 +15,14 @@
 
 @implementation ImmediateParameter
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"ImmediateParameter::init" format:@"Call ImmediateParameter::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super initWithConfig:ss])
     {

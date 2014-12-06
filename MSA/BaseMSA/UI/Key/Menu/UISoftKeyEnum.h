@@ -27,7 +27,7 @@
 -(UISoftKeyEnumItem *)addEnumItem:(int)value label:(NSString *)label labelShort:(NSString *)labelShort;
 -(UISoftKeyEnumItem *)findEnumItemByValue:(int)value;
 
--(id)initWithConfig:(ShareSettings *)ss;
+-(instancetype)initWithConfig:(ShareSettings *)ss NS_DESIGNATED_INITIALIZER;
 
 @end
 

@@ -18,14 +18,14 @@
 
 @implementation UISoftKeyEnum
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"UISoftKeyEnum::init" format:@"Call UISoftKeyEnum::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super init])
     {
@@ -62,7 +62,7 @@
     int count=(int)_itemArray.count;
     for(int index=0;index<count;index++)
     {
-        UISoftKeyEnumItem *item=(UISoftKeyEnumItem *)[self.itemArray objectAtIndex:index];
+        UISoftKeyEnumItem *item=(UISoftKeyEnumItem *)(self.itemArray)[index];
         if(item.value==value)
             return item;
     }

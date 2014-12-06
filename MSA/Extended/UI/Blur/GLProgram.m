@@ -34,7 +34,7 @@ typedef void (*GLLogFunction) (GLuint program,
 
 @synthesize initialized = _initialized;
 
-- (id)initWithVertexShaderString:(NSString *)vShaderString 
+- (instancetype)initWithVertexShaderString:(NSString *)vShaderString 
             fragmentShaderString:(NSString *)fShaderString;
 {
     if ((self = [super init])) 
@@ -63,7 +63,7 @@ typedef void (*GLLogFunction) (GLuint program,
     return self;
 }
 
-- (id)initWithVertexShaderString:(NSString *)vShaderString 
+- (instancetype)initWithVertexShaderString:(NSString *)vShaderString 
           fragmentShaderFilename:(NSString *)fShaderFilename;
 {
     NSString *fragShaderPathname = [[NSBundle mainBundle] pathForResource:fShaderFilename ofType:@"fsh"];
@@ -76,7 +76,7 @@ typedef void (*GLLogFunction) (GLuint program,
     return self;
 }
 
-- (id)initWithVertexShaderFilename:(NSString *)vShaderFilename 
+- (instancetype)initWithVertexShaderFilename:(NSString *)vShaderFilename 
             fragmentShaderFilename:(NSString *)fShaderFilename;
 {
     NSString *vertShaderPathname = [[NSBundle mainBundle] pathForResource:vShaderFilename ofType:@"vsh"];

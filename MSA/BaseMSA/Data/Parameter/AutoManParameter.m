@@ -17,14 +17,14 @@
 
 @implementation AutoManParameter
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"AutoManParameter::init" format:@"Call AutoManParameter::initWithConfig: instead"];
     
     return nil;
 }
 
-- (id) initWithConfig:(ShareSettings *)ss
+- (instancetype) initWithConfig:(ShareSettings *)ss
 {
     if(self = [super initWithConfig:ss])
     {

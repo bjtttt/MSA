@@ -333,24 +333,24 @@
     if(dbFreq > 1.0e9)
     {
         dbFreq = dbFreq / 1.0e9;
-        msv = [[[NSNumber numberWithDouble:dbFreq] stringValue] mutableCopy];
+        msv = [[@(dbFreq) stringValue] mutableCopy];
         [msv appendString:@" G"];
     }
     else if(dbFreq > 1.0e6)
     {
         dbFreq = dbFreq / 1.0e6;
-        msv = [[[NSNumber numberWithDouble:dbFreq] stringValue] mutableCopy];
+        msv = [[@(dbFreq) stringValue] mutableCopy];
         [msv appendString:@" M"];
     }
     else if(dbFreq > 1.0e3)
     {
         dbFreq = dbFreq / 1.0e3;
-        msv = [[[NSNumber numberWithDouble:dbFreq] stringValue] mutableCopy];
+        msv = [[@(dbFreq) stringValue] mutableCopy];
         [msv appendString:@" k"];
     }
     else
     {
-        msv = [[[NSNumber numberWithDouble:dbFreq] stringValue] mutableCopy];
+        msv = [[@(dbFreq) stringValue] mutableCopy];
         [msv appendString:@" "];
     }
 
@@ -372,35 +372,35 @@
     if(dbTime > 1.0e3)
     {
         dbTime = dbTime / 1.0e3;
-        msv = [[[NSNumber numberWithDouble:dbTime] stringValue] mutableCopy];
+        msv = [[@(dbTime) stringValue] mutableCopy];
         [msv appendString:@" k"];
     }
     else if(dbTime > 1.0)
     {
-        msv = [[[NSNumber numberWithDouble:dbTime] stringValue] mutableCopy];
+        msv = [[@(dbTime) stringValue] mutableCopy];
         [msv appendString:@" "];
     }
     else if(dbTime > 1.0e-3)
     {
         dbTime = dbTime * 1.0e3;
-        msv = [[[NSNumber numberWithDouble:dbTime] stringValue] mutableCopy];
+        msv = [[@(dbTime) stringValue] mutableCopy];
         [msv appendString:@" m"];
     }
     else if(dbTime > 1.0e-6)
     {
         dbTime = dbTime * 1.0e6;
-        msv = [[[NSNumber numberWithDouble:dbTime] stringValue] mutableCopy];
+        msv = [[@(dbTime) stringValue] mutableCopy];
         [msv appendString:@" u"];
     }
     else if(dbTime > 1.0e-9)
     {
         dbTime = dbTime * 1.0e9;
-        msv = [[[NSNumber numberWithDouble:dbTime] stringValue] mutableCopy];
+        msv = [[@(dbTime) stringValue] mutableCopy];
         [msv appendString:@" n"];
     }
     else
     {
-        msv = [[[NSNumber numberWithDouble:dbTime] stringValue] mutableCopy];
+        msv = [[@(dbTime) stringValue] mutableCopy];
         [msv appendString:@" "];
     }
 

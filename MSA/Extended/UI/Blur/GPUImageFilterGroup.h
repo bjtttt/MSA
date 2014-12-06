@@ -14,6 +14,6 @@
 // Filter management
 - (void)addFilter:(GPUImageOutput<GPUImageInput> *)newFilter;
 - (GPUImageOutput<GPUImageInput> *)filterAtIndex:(NSUInteger)filterIndex;
-- (NSUInteger)filterCount;
+@property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger filterCount;
 
 @end

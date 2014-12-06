@@ -16,14 +16,14 @@
 
 @implementation ParameterManager
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"ParameterManager::init" format:@"Call ParameterManager::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if ((self = [super init]))
     {

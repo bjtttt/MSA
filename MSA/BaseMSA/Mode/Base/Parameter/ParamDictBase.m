@@ -16,14 +16,14 @@
 
 @implementation ParamDictBase
 
--(id) init {
+-(instancetype) init {
     
     [NSException raise:@"MeasBarParamDictBase::init" format:@"Call MeasBarParamDictBase::initWithConfig: instead"];
     
     return nil;
 }
 
--(id) initWithConfig:(ShareSettings *)ss
+-(instancetype) initWithConfig:(ShareSettings *)ss
 {
     if ((self = [super init]))
     {

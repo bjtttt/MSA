@@ -17,14 +17,14 @@
 
 @implementation StringParameter
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"StringParameter::init" format:@"Call StringParameter::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super initWithConfig:ss])
     {

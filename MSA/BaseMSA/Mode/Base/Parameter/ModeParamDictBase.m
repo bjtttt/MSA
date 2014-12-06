@@ -18,14 +18,14 @@
 
 @implementation ModeParamDictBase
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"ModeParamDictBase::init" format:@"Call ModeParamDictBase::initWithConfig: instead"];
     
     return nil;
 }
 
--(id) initWithConfig:(ShareSettings *)ss
+-(instancetype) initWithConfig:(ShareSettings *)ss
 {
     if ((self = [super initWithConfig:ss]))
     {
@@ -76,7 +76,7 @@
     if(key.length <= 0)
         [NSException raise:@"ModeParamDictBase::addParameter:forKey:" format:@"Cannot insert empty key into mode(\"%@\") mode parameter dictionary.", self.mode.modeName];
     
-    Parameter *parInDict = (Parameter *)[self.parDict objectForKey:key];
+    Parameter *parInDict = (Parameter *)(self.parDict)[key];
     if(parInDict != nil)
         [NSException raise:@"ModeParamDictBase::addParameter:forKey:" format:@"Cannot insert parameter(\"%@\") with the same key(\"%@\") into mode(\"%@\") mode parameter dictionary.", par, key, self.mode.modeName];
     
@@ -92,7 +92,7 @@
     if(key.length <= 0)
         [NSException raise:@"ModeParamDictBase::getParameterBy:" format:@"Cannot use empty key for mode(\"%@\") mode parameter dictionary.", self.mode.modeName];
     
-    Parameter *parInDict = (Parameter *)[self.parDict objectForKey:key];
+    Parameter *parInDict = (Parameter *)(self.parDict)[key];
     if(parInDict == nil)
         [NSException raise:@"ModeParamDictBase::getParameterBy:" format:@"Cannot get parameter with the key(\"%@\") from mode(\"%@\") mode parameter dictionary.",  key, self.mode.modeName];
     
@@ -108,7 +108,7 @@
     if(key.length <= 0)
         [NSException raise:@"ModeParamDictBase::CheckParameterBy:" format:@"Cannot use empty key for mode(\"%@\") mode parameter dictionary.", self.mode.modeName];
     
-    Parameter *parInDict = (Parameter *)[self.parDict objectForKey:key];
+    Parameter *parInDict = (Parameter *)(self.parDict)[key];
     if(parInDict != nil)
         return YES;
     else

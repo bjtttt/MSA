@@ -7,7 +7,7 @@
 @synthesize initialFilters = _initialFilters;
 @synthesize inputFilterToIgnoreForUpdates = _inputFilterToIgnoreForUpdates;
 
-- (id)init;
+- (instancetype)init;
 {
     if (!(self = [super init]))
     {
@@ -29,7 +29,7 @@
 
 - (GPUImageOutput<GPUImageInput> *)filterAtIndex:(NSUInteger)filterIndex;
 {
-    return [filters objectAtIndex:filterIndex];
+    return filters[filterIndex];
 }
 
 - (NSUInteger)filterCount;

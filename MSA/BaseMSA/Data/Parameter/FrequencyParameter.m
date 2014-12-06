@@ -17,14 +17,14 @@
 
 @implementation FrequencyParameter
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"FrequencyParameter::init" format:@"Call FrequencyParameter::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super initWithConfig:ss])
     {

@@ -10,6 +10,6 @@
 
 @interface UIView (Screenshot)
 
--(UIImage *)convertViewToImage;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UIImage *convertViewToImage;
 
 @end

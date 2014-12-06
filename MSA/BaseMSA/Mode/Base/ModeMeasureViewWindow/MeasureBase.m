@@ -18,14 +18,14 @@
 
 @implementation MeasureBase
 
--(id) init
+-(instancetype) init
 {    
     [NSException raise:@"MeasureBase::init" format:@"Call MeasureBase::initWithConfig: instead"];
     
     return nil;
 }
 
--(id) initWithConfig:(ShareSettings *)ss {
+-(instancetype) initWithConfig:(ShareSettings *)ss {
     if ((self = [super init]))
     {
         _shareSettings = ss;

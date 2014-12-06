@@ -16,7 +16,7 @@
 
 @implementation EnumMemberInfo
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"EnumParameter::init:" format:@"EnumParameter can only use initWithEnumMemberInfo:display:displayShort:"];
     
@@ -27,7 +27,7 @@
     return self;
 }
 
-- (id) initWithEnumMemberInfo:(int)value withLabel:(NSString *)label withLabelShort:(NSString *)labelShort
+- (instancetype) initWithEnumMemberInfo:(int)value withLabel:(NSString *)label withLabelShort:(NSString *)labelShort
 {
     if(self = [super init])
     {

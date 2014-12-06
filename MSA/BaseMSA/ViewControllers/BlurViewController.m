@@ -7,7 +7,6 @@
 //
 
 #import "ShareSettings.h"
-#import "MainContainerViewController.h"
 #import "BlurViewController.h"
 
 @interface BlurViewController ()

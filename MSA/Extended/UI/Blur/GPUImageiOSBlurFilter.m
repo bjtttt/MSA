@@ -12,7 +12,7 @@
 #pragma mark -
 #pragma mark Initialization and teardown
 
-- (id)init;
+- (instancetype)init;
 {
     if (!(self = [super init]))
     {
@@ -34,7 +34,7 @@
     [saturationFilter addTarget:blurFilter];
     [blurFilter addTarget:luminanceRangeFilter];
     
-    self.initialFilters = [NSArray arrayWithObject:saturationFilter];
+    self.initialFilters = @[saturationFilter];
     self.terminalFilter = luminanceRangeFilter;
     
     self.blurRadiusInPixels = 12.0;

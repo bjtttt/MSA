@@ -36,19 +36,19 @@
 -(void)initMeasureView;
 -(void)initMeasBarDetail;
 
--(UISoftPanel *)setupMeasureBar0Menu;
--(UISoftPanel *)setupMeasureBar1Menu;
--(UISoftPanel *)setupMeasureBar2Menu;
--(UISoftPanel *)setupMeasureBar3Menu;
--(UISoftPanel *)setupMeasureBar4Menu;
--(UISoftPanel *)setupMeasureBar5Menu;
--(UISoftPanel *)setupMeasureBar6Menu;
--(UISoftPanel *)setupMeasureBar7Menu;
--(UISoftPanel *)setupMeasureBar8Menu;
--(UISoftPanel *)setupMeasureBar9Menu;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UISoftPanel *setupMeasureBar0Menu;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UISoftPanel *setupMeasureBar1Menu;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UISoftPanel *setupMeasureBar2Menu;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UISoftPanel *setupMeasureBar3Menu;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UISoftPanel *setupMeasureBar4Menu;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UISoftPanel *setupMeasureBar5Menu;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UISoftPanel *setupMeasureBar6Menu;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UISoftPanel *setupMeasureBar7Menu;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UISoftPanel *setupMeasureBar8Menu;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UISoftPanel *setupMeasureBar9Menu;
 
 -(CGFloat)measureBarPopupMenuPosition:(NSInteger)index forWidth:(CGFloat)width;
 
--(id)initWithConfig:(ShareSettings *)ss;
+-(instancetype)initWithConfig:(ShareSettings *)ss NS_DESIGNATED_INITIALIZER;
 
 @end

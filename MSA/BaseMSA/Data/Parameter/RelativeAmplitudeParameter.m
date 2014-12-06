@@ -17,14 +17,14 @@
 
 @implementation RelativeAmplitudeParameter
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"RelativeAmplitudeParameter::init" format:@"Call RelativeAmplitudeParameter::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super initWithConfig:ss])
     {

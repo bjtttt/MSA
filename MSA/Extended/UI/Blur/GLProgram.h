@@ -24,19 +24,19 @@
 
 @property(readwrite, nonatomic) BOOL initialized;
 
-- (id)initWithVertexShaderString:(NSString *)vShaderString 
-            fragmentShaderString:(NSString *)fShaderString;
-- (id)initWithVertexShaderString:(NSString *)vShaderString 
+- (instancetype)initWithVertexShaderString:(NSString *)vShaderString 
+            fragmentShaderString:(NSString *)fShaderString NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithVertexShaderString:(NSString *)vShaderString 
           fragmentShaderFilename:(NSString *)fShaderFilename;
-- (id)initWithVertexShaderFilename:(NSString *)vShaderFilename 
+- (instancetype)initWithVertexShaderFilename:(NSString *)vShaderFilename 
             fragmentShaderFilename:(NSString *)fShaderFilename;
 - (void)addAttribute:(NSString *)attributeName;
 - (GLuint)attributeIndex:(NSString *)attributeName;
 - (GLuint)uniformIndex:(NSString *)uniformName;
-- (BOOL)link;
+@property (NS_NONATOMIC_IOSONLY, readonly) BOOL link;
 - (void)use;
-- (NSString *)vertexShaderLog;
-- (NSString *)fragmentShaderLog;
-- (NSString *)programLog;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *vertexShaderLog;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *fragmentShaderLog;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString *programLog;
 - (void)validate;
 @end

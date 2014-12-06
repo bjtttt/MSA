@@ -23,7 +23,7 @@
 
 static void *openGLESContextQueueKey;
 
-- (id)init;
+- (instancetype)init;
 {
     if (!(self = [super init]))
     {
@@ -150,7 +150,7 @@ static void *openGLESContextQueueKey;
     // Cache extensions for later quick reference, since this won't change for a given device
     dispatch_once(&pred, ^{
         [GPUImageContext useImageProcessingContext];
-        NSString *extensionsString = [NSString stringWithCString:(const char *)glGetString(GL_EXTENSIONS) encoding:NSASCIIStringEncoding];
+        NSString *extensionsString = @((const char *)glGetString(GL_EXTENSIONS));
         extensionNames = [extensionsString componentsSeparatedByString:@" "];
     });
 
@@ -215,12 +215,12 @@ static void *openGLESContextQueueKey;
 - (GLProgram *)programForVertexShaderString:(NSString *)vertexShaderString fragmentShaderString:(NSString *)fragmentShaderString;
 {
     NSString *lookupKeyForShaderProgram = [NSString stringWithFormat:@"V: %@ - F: %@", vertexShaderString, fragmentShaderString];
-    GLProgram *programFromCache = [shaderProgramCache objectForKey:lookupKeyForShaderProgram];
+    GLProgram *programFromCache = shaderProgramCache[lookupKeyForShaderProgram];
 
     if (programFromCache == nil)
     {
         programFromCache = [[GLProgram alloc] initWithVertexShaderString:vertexShaderString fragmentShaderString:fragmentShaderString];
-        [shaderProgramCache setObject:programFromCache forKey:lookupKeyForShaderProgram];
+        shaderProgramCache[lookupKeyForShaderProgram] = programFromCache;
 //        [shaderProgramUsageHistory addObject:lookupKeyForShaderProgram];
 //        if ([shaderProgramUsageHistory count] >= MAXSHADERPROGRAMSALLOWEDINCACHE)
 //        {

@@ -152,6 +152,7 @@
 		9A6616D01A2943C500D3E2CA /* MeasBarParamDictBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616C71A2943C500D3E2CA /* MeasBarParamDictBase.m */; };
 		9A6616D11A2943C500D3E2CA /* MeasParamDictBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616C91A2943C500D3E2CA /* MeasParamDictBase.m */; };
 		9A6616D21A2943C500D3E2CA /* ModeParamDictBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6616CB1A2943C500D3E2CA /* ModeParamDictBase.m */; };
+		9A6772361A328D320092EA43 /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A6772351A328D320092EA43 /* InputViewController.m */; };
 		9A69E8701A3086F000859CB0 /* MeasureBarContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E86F1A3086F000859CB0 /* MeasureBarContainerView.m */; };
 		9A69E8731A308C9000859CB0 /* BarViewControllerContainerViewBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8721A308C9000859CB0 /* BarViewControllerContainerViewBase.m */; };
 		9A69E8BD1A308F1400859CB0 /* Bar0ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A69E8791A308F1400859CB0 /* Bar0ViewController.m */; };
@@ -469,6 +470,8 @@
 		9A6616C91A2943C500D3E2CA /* MeasParamDictBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasParamDictBase.m; sourceTree = "<group>"; };
 		9A6616CA1A2943C500D3E2CA /* ModeParamDictBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModeParamDictBase.h; sourceTree = "<group>"; };
 		9A6616CB1A2943C500D3E2CA /* ModeParamDictBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModeParamDictBase.m; sourceTree = "<group>"; };
+		9A6772341A328D320092EA43 /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputViewController.h; sourceTree = "<group>"; };
+		9A6772351A328D320092EA43 /* InputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputViewController.m; sourceTree = "<group>"; };
 		9A69E86E1A3086F000859CB0 /* MeasureBarContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeasureBarContainerView.h; sourceTree = "<group>"; };
 		9A69E86F1A3086F000859CB0 /* MeasureBarContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeasureBarContainerView.m; sourceTree = "<group>"; };
 		9A69E8711A308C9000859CB0 /* BarViewControllerContainerViewBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarViewControllerContainerViewBase.h; sourceTree = "<group>"; };
@@ -794,6 +797,7 @@
 		9A23C0311A2719AC0069971A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9A6772331A328D320092EA43 /* Input */,
 				9A23C0321A2719AC0069971A /* BlurViewController.h */,
 				9A23C0331A2719AC0069971A /* BlurViewController.m */,
 				9A23C0341A2719AC0069971A /* Display */,
@@ -1274,6 +1278,15 @@
 				9A6616CB1A2943C500D3E2CA /* ModeParamDictBase.m */,
 			);
 			path = Parameter;
+			sourceTree = "<group>";
+		};
+		9A6772331A328D320092EA43 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				9A6772341A328D320092EA43 /* InputViewController.h */,
+				9A6772351A328D320092EA43 /* InputViewController.m */,
+			);
+			path = Input;
 			sourceTree = "<group>";
 		};
 		9A69E8771A308F1400859CB0 /* Bar0 */ = {
@@ -1836,6 +1849,7 @@
 				9A23C1211A2719AC0069971A /* SystemContainerViewController.m in Sources */,
 				9AFD9F1F1A2EC42D00BD660E /* MenuContainerView.m in Sources */,
 				9A23C10C1A2719AC0069971A /* SoftMenuMidLabelBranchTableViewCell.m in Sources */,
+				9A6772361A328D320092EA43 /* InputViewController.m in Sources */,
 				9A23C1011A2719AC0069971A /* MeasureContainerViewController.m in Sources */,
 				9A23C1071A2719AC0069971A /* PresetMenuTableViewController.m in Sources */,
 				9A23C1001A2719AC0069971A /* MeasureSelectTableViewController.m in Sources */,

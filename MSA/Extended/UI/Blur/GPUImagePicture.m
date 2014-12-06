@@ -5,7 +5,7 @@
 #pragma mark -
 #pragma mark Initialization and teardown
 
-- (id)initWithURL:(NSURL *)url;
+- (instancetype)initWithURL:(NSURL *)url;
 {
     NSData *imageData = [[NSData alloc] initWithContentsOfURL:url];
     
@@ -17,7 +17,7 @@
     return self;
 }
 
-- (id)initWithData:(NSData *)imageData;
+- (instancetype)initWithData:(NSData *)imageData;
 {
     UIImage *inputImage = [[UIImage alloc] initWithData:imageData];
     
@@ -29,7 +29,7 @@
     return self;
 }
 
-- (id)initWithImage:(UIImage *)newImageSource;
+- (instancetype)initWithImage:(UIImage *)newImageSource;
 {
     if (!(self = [self initWithImage:newImageSource smoothlyScaleOutput:NO]))
     {
@@ -39,7 +39,7 @@
     return self;
 }
 
-- (id)initWithCGImage:(CGImageRef)newImageSource;
+- (instancetype)initWithCGImage:(CGImageRef)newImageSource;
 {
     if (!(self = [self initWithCGImage:newImageSource smoothlyScaleOutput:NO]))
     {
@@ -48,12 +48,12 @@
     return self;
 }
 
-- (id)initWithImage:(UIImage *)newImageSource smoothlyScaleOutput:(BOOL)smoothlyScaleOutput;
+- (instancetype)initWithImage:(UIImage *)newImageSource smoothlyScaleOutput:(BOOL)smoothlyScaleOutput;
 {
     return [self initWithCGImage:[newImageSource CGImage] smoothlyScaleOutput:smoothlyScaleOutput];
 }
 
-- (id)initWithCGImage:(CGImageRef)newImageSource smoothlyScaleOutput:(BOOL)smoothlyScaleOutput;
+- (instancetype)initWithCGImage:(CGImageRef)newImageSource smoothlyScaleOutput:(BOOL)smoothlyScaleOutput;
 {
     if (!(self = [super init]))
     {
@@ -258,7 +258,7 @@
         for (id<GPUImageInput> currentTarget in targets)
         {
             NSInteger indexOfObject = [targets indexOfObject:currentTarget];
-            NSInteger textureIndexOfTarget = [[targetTextureIndices objectAtIndex:indexOfObject] integerValue];
+            NSInteger textureIndexOfTarget = [targetTextureIndices[indexOfObject] integerValue];
             
             [currentTarget setCurrentlyReceivingMonochromeInput:NO];
             [currentTarget setInputSize:pixelSizeOfImage atIndex:textureIndexOfTarget];

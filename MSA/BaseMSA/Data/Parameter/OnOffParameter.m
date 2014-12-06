@@ -15,14 +15,14 @@
 
 @implementation OnOffParameter
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"OnOffParameter::init" format:@"Call OnOffParameter::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super initWithConfig:ss])
     {

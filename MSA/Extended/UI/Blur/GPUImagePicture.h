@@ -11,15 +11,15 @@
 }
 
 // Initialization and teardown
-- (id)initWithURL:(NSURL *)url;
-- (id)initWithImage:(UIImage *)newImageSource;
-- (id)initWithCGImage:(CGImageRef)newImageSource;
-- (id)initWithImage:(UIImage *)newImageSource smoothlyScaleOutput:(BOOL)smoothlyScaleOutput;
-- (id)initWithCGImage:(CGImageRef)newImageSource smoothlyScaleOutput:(BOOL)smoothlyScaleOutput;
+- (instancetype)initWithURL:(NSURL *)url;
+- (instancetype)initWithImage:(UIImage *)newImageSource;
+- (instancetype)initWithCGImage:(CGImageRef)newImageSource;
+- (instancetype)initWithImage:(UIImage *)newImageSource smoothlyScaleOutput:(BOOL)smoothlyScaleOutput;
+- (instancetype)initWithCGImage:(CGImageRef)newImageSource smoothlyScaleOutput:(BOOL)smoothlyScaleOutput NS_DESIGNATED_INITIALIZER;
 
 // Image rendering
 - (void)processImage;
-- (CGSize)outputImageSize;
+@property (NS_NONATOMIC_IOSONLY, readonly) CGSize outputImageSize;
 
 /**
  * Process image with all targets and filters asynchronously

@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UIView *systemView;
 @property (weak, nonatomic) IBOutlet UIView *blurView;
 @property (weak, nonatomic) IBOutlet UIView *barPopupMenuView;
+@property (weak, nonatomic) IBOutlet UIView *inputView;
 
 @property (strong, nonatomic) IBOutlet MainContainerView *mainView;
 

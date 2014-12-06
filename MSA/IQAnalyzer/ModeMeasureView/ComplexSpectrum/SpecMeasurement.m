@@ -26,14 +26,14 @@
 
 @implementation SpecMeasurement
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"SpecMeasurement::init" format:@"Call SpecMeasurement::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if ((self = [super initWithConfig:ss]))
     {

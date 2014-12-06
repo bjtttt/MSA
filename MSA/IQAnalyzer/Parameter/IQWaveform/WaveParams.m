@@ -16,14 +16,14 @@
 
 @implementation WaveParams
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"WaveParams::init" format:@"Call WaveParams::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if ((self = [super initWithConfig:ss]))
     {

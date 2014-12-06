@@ -32,14 +32,14 @@
 
 @implementation SpecMeasBarParams
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"SpecMeasBarParams::init" format:@"Call SpecMeasBarParams::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if ((self = [super initWithConfig:ss]))
     {

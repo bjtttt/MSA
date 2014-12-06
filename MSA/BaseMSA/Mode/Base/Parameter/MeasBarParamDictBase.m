@@ -18,14 +18,14 @@
 
 @implementation MeasBarParamDictBase
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"MeasBarParamDictBase::init" format:@"Call MeasBarParamDictBase::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if ((self = [super initWithConfig:ss]))
     {
@@ -120,7 +120,7 @@
     if(key.length <= 0)
         [NSException raise:@"MeasBarParamDictBase::addParameter:forKey:" format:@"Cannot insert empty key into meas(\"%@\") meas parameter dictionary.", self.measure.measureName];
    
-    Parameter *parInDict = (Parameter *)[self.parDict objectForKey:key];
+    Parameter *parInDict = (Parameter *)(self.parDict)[key];
     if(parInDict != nil)
         [NSException raise:@"MeasBarParamDictBase::addParameter:forKey:" format:@"Cannot insert parameter(\"%@\") with the same key(\"%@\") into meas(\"%@\") meas parameter dictionary.", par, key, self.measure.measureName];
     
@@ -136,7 +136,7 @@
     if(key.length <= 0)
         [NSException raise:@"MeasBarParamDictBase::getParameterBy:" format:@"Cannot use empty key for meas(\"%@\") meas parameter dictionary.", self.measure.measureName];
     
-    Parameter *parInDict = (Parameter *)[self.parDict objectForKey:key];
+    Parameter *parInDict = (Parameter *)(self.parDict)[key];
     if(parInDict == nil)
         [NSException raise:@"MeasBarParamDictBase::getParameterBy:" format:@"Cannot get parameter with the key(\"%@\") from meas(\"%@\") meas parameter dictionary.",  key, self.measure.measureName];
 
@@ -152,7 +152,7 @@
     if(key.length <= 0)
         [NSException raise:@"MeasBarParamDictBase::checkParameterBy:" format:@"Cannot use empty key for meas(\"%@\") meas parameter dictionary.", self.measure.measureName];
 
-    Parameter *parInDict = (Parameter *)[self.parDict objectForKey:key];
+    Parameter *parInDict = (Parameter *)(self.parDict)[key];
     if(parInDict != nil)
         return YES;
     else

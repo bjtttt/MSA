@@ -61,13 +61,13 @@ void reportAvailableMemoryForGPUImage(NSString *tag);
 
 /// @name Managing targets
 - (void)setInputFramebufferForTarget:(id<GPUImageInput>)target atIndex:(NSInteger)inputTextureIndex;
-- (GPUImageFramebuffer *)framebufferForOutput;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) GPUImageFramebuffer *framebufferForOutput;
 - (void)removeOutputFramebuffer;
 - (void)notifyTargetsAboutNewOutputTexture;
 
 /** Returns an array of the current targets.
  */
-- (NSArray*)targets;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSArray *targets;
 
 /** Adds a target to receive notifications when new frames are available.
  
@@ -105,16 +105,16 @@ void reportAvailableMemoryForGPUImage(NSString *tag);
 /// @name Still image processing
 
 - (void)useNextFrameForImageCapture;
-- (CGImageRef)newCGImageFromCurrentlyProcessedOutput;
-- (CGImageRef)newCGImageByFilteringCGImage:(CGImageRef)imageToFilter;
+@property (NS_NONATOMIC_IOSONLY, readonly) CGImageRef newCGImageFromCurrentlyProcessedOutput CF_RETURNS_RETAINED;
+- (CGImageRef)newCGImageByFilteringCGImage:(CGImageRef)imageToFilter CF_RETURNS_RETAINED;
 
 // Platform-specific image output methods
 // If you're trying to use these methods, remember that you need to set -useNextFrameForImageCapture before running -processImage or running video and calling any of these methods, or you will get a nil image
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
-- (UIImage *)imageFromCurrentFramebuffer;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UIImage *imageFromCurrentFramebuffer;
 - (UIImage *)imageFromCurrentFramebufferWithOrientation:(UIImageOrientation)imageOrientation;
 - (UIImage *)imageByFilteringImage:(UIImage *)imageToFilter;
-- (CGImageRef)newCGImageByFilteringImage:(UIImage *)imageToFilter;
+- (CGImageRef)newCGImageByFilteringImage:(UIImage *)imageToFilter CF_RETURNS_RETAINED;
 #else
 - (NSImage *)imageFromCurrentFramebuffer;
 - (NSImage *)imageFromCurrentFramebufferWithOrientation:(UIImageOrientation)imageOrientation;
@@ -122,6 +122,6 @@ void reportAvailableMemoryForGPUImage(NSString *tag);
 - (CGImageRef)newCGImageByFilteringImage:(NSImage *)imageToFilter;
 #endif
 
-- (BOOL)providesMonochromeOutput;
+@property (NS_NONATOMIC_IOSONLY, readonly) BOOL providesMonochromeOutput;
 
 @end

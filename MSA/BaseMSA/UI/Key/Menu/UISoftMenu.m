@@ -16,14 +16,14 @@
 
 @implementation UISoftMenu
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"UISoftMenu::init" format:@"Call UISoftMenu::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super init])
     {

@@ -18,14 +18,14 @@
 
 @implementation BooleanParameter
 
--(id) init
+-(instancetype) init
 {    
     [NSException raise:@"BooleanParameter::init" format:@"Call BooleanParameter::initWithConfig: instead"];
     
     return nil;
 }
 
-- (id) initWithConfig:(ShareSettings *)ss
+- (instancetype) initWithConfig:(ShareSettings *)ss
 {
     if(self = [super initWithConfig:ss])
     {

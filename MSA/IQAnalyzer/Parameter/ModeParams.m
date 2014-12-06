@@ -18,14 +18,14 @@
 
 @implementation ModeParams
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"ModeParams::init" format:@"Call ModeParams::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if ((self = [super initWithConfig:ss]))
     {

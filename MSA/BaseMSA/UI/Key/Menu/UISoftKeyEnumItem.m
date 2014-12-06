@@ -15,14 +15,14 @@
 
 @implementation UISoftKeyEnumItem
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"UISoftKeyEnumItem::init" format:@"Call UISoftKeyEnumItem::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super init])
     {

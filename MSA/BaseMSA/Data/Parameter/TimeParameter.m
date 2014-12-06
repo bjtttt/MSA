@@ -17,14 +17,14 @@
 
 @implementation TimeParameter
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"TimeParameter::init" format:@"Call TimeParameter::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super initWithConfig:ss])
     {

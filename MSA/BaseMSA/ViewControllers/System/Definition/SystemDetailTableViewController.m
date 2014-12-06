@@ -20,7 +20,7 @@
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"MSAList" ofType:@"plist"];
     NSDictionary *msaInfo = [NSDictionary dictionaryWithContentsOfFile:path];
-    self.systems = [msaInfo objectForKey:@"systems"];
+    self.systems = msaInfo[@"systems"];
 
     self.tableView.tableFooterView=[[UIView alloc] initWithFrame:CGRectZero];
     

@@ -1,5 +1,5 @@
 //
-//  BlurViewController.h
+//  InputViewController.h
 //  MSA
 //
 //  Created by guozhitao on 10/2/14.
@@ -11,7 +11,7 @@
 @class ShareSettings;
 @class MainContainerViewController;
 
-@interface BlurViewController : UIViewController
+@interface InputViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet MainContainerViewController *mainCVC;
 
@@ -19,7 +19,5 @@
 @property (nonatomic) double frameHeight;
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
-
-@property (weak, nonatomic) IBOutlet UIImageView *blurImage;
 
 @end

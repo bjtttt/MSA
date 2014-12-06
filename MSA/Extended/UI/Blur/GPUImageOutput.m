@@ -117,7 +117,7 @@ void reportAvailableMemoryForGPUImage(NSString *tag)
 #pragma mark -
 #pragma mark Initialization and teardown
 
-- (id)init; 
+- (instancetype)init; 
 {
 	if (!(self = [super init]))
     {
@@ -170,7 +170,7 @@ void reportAvailableMemoryForGPUImage(NSString *tag)
     for (id<GPUImageInput> currentTarget in targets)
     {
         NSInteger indexOfObject = [targets indexOfObject:currentTarget];
-        NSInteger textureIndex = [[targetTextureIndices objectAtIndex:indexOfObject] integerValue];
+        NSInteger textureIndex = [targetTextureIndices[indexOfObject] integerValue];
         
         [self setInputFramebufferForTarget:currentTarget atIndex:textureIndex];
     }
@@ -203,7 +203,7 @@ void reportAvailableMemoryForGPUImage(NSString *tag)
     runSynchronouslyOnVideoProcessingQueue(^{
         [self setInputFramebufferForTarget:newTarget atIndex:textureLocation];
         [targets addObject:newTarget];
-        [targetTextureIndices addObject:[NSNumber numberWithInteger:textureLocation]];
+        [targetTextureIndices addObject:@(textureLocation)];
         
         allTargetsWantMonochromeData = allTargetsWantMonochromeData && [newTarget wantsMonochromeInput];
     });
@@ -224,7 +224,7 @@ void reportAvailableMemoryForGPUImage(NSString *tag)
     cachedMaximumOutputSize = CGSizeZero;
     
     NSInteger indexOfObject = [targets indexOfObject:targetToRemove];
-    NSInteger textureIndexOfTarget = [[targetTextureIndices objectAtIndex:indexOfObject] integerValue];
+    NSInteger textureIndexOfTarget = [targetTextureIndices[indexOfObject] integerValue];
 
     runSynchronouslyOnVideoProcessingQueue(^{
         [targetToRemove setInputSize:CGSizeZero atIndex:textureIndexOfTarget];
@@ -243,7 +243,7 @@ void reportAvailableMemoryForGPUImage(NSString *tag)
         for (id<GPUImageInput> targetToRemove in targets)
         {
             NSInteger indexOfObject = [targets indexOfObject:targetToRemove];
-            NSInteger textureIndexOfTarget = [[targetTextureIndices objectAtIndex:indexOfObject] integerValue];
+            NSInteger textureIndexOfTarget = [targetTextureIndices[indexOfObject] integerValue];
             
             [targetToRemove setInputSize:CGSizeZero atIndex:textureIndexOfTarget];
             [targetToRemove setInputRotation:kGPUImageNoRotation atIndex:textureIndexOfTarget];

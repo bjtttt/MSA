@@ -16,14 +16,14 @@
 
 @implementation UISoftPanel
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"UISoftPanel::init" format:@"Call UISoftPanel::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if(self = [super init])
     {

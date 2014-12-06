@@ -31,7 +31,7 @@ static NSString *presetMenuCellTable_White_Green_Id = @"PresetMenuTVC_White_Gree
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"MSAList" ofType:@"plist"];
     NSDictionary *msaInfo = [NSDictionary dictionaryWithContentsOfFile:path];
-    self.preset = [msaInfo objectForKey:@"preset"];//[0];
+    self.preset = msaInfo[@"preset"];//[0];
     //self.presetUser = [msaInfo objectForKey:@"preset"][1];
     //self.presetAllModes = [msaInfo objectForKey:@"preset"][2];
 

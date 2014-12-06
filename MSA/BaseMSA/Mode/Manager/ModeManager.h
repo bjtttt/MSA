@@ -25,6 +25,6 @@
 
 -(void)initMode;
 
--(id)initWithConfig:(ShareSettings *)ss;
+-(instancetype)initWithConfig:(ShareSettings *)ss NS_DESIGNATED_INITIALIZER;
 
 @end

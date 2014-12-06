@@ -18,14 +18,14 @@
 
 @implementation SpecParams
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"SpecParams::init" format:@"Call SpecParams::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if ((self = [super initWithConfig:ss]))
     {

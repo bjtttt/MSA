@@ -20,14 +20,14 @@
 
 @implementation ModeBase
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"ModeBase::init" format:@"Call ModeBase::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if ((self = [super init]))
     {

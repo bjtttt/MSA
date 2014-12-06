@@ -31,9 +31,9 @@ typedef struct GPUTextureOptions {
 @property(readonly) BOOL missingFramebuffer;
 
 // Initialization and teardown
-- (id)initWithSize:(CGSize)framebufferSize;
-- (id)initWithSize:(CGSize)framebufferSize textureOptions:(GPUTextureOptions)fboTextureOptions onlyTexture:(BOOL)onlyGenerateTexture;
-- (id)initWithSize:(CGSize)framebufferSize overriddenTexture:(GLuint)inputTexture;
+- (instancetype)initWithSize:(CGSize)framebufferSize;
+- (instancetype)initWithSize:(CGSize)framebufferSize textureOptions:(GPUTextureOptions)fboTextureOptions onlyTexture:(BOOL)onlyGenerateTexture NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithSize:(CGSize)framebufferSize overriddenTexture:(GLuint)inputTexture NS_DESIGNATED_INITIALIZER;
 
 // Usage
 - (void)activateFramebuffer;
@@ -46,13 +46,13 @@ typedef struct GPUTextureOptions {
 - (void)enableReferenceCounting;
 
 // Image capture
-- (CGImageRef)newCGImageFromFramebufferContents;
+@property (NS_NONATOMIC_IOSONLY, readonly) CGImageRef newCGImageFromFramebufferContents CF_RETURNS_RETAINED;
 - (void)restoreRenderTarget;
 
 // Raw data bytes
 - (void)lockForReading;
 - (void)unlockAfterReading;
-- (NSUInteger)bytesPerRow;
-- (GLubyte *)byteBuffer;
+@property (NS_NONATOMIC_IOSONLY, readonly) NSUInteger bytesPerRow;
+@property (NS_NONATOMIC_IOSONLY, readonly) GLubyte *byteBuffer;
 
 @end

@@ -15,14 +15,14 @@
 
 @implementation ViewBase
 
--(id)init
+-(instancetype)init
 {
     [NSException raise:@"ViewBase::init" format:@"Call ViewBase::initWithConfig: instead"];
     
     return nil;
 }
 
--(id)initWithConfig:(ShareSettings *)ss
+-(instancetype)initWithConfig:(ShareSettings *)ss
 {
     if ((self = [super init]))
     {

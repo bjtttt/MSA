@@ -15,7 +15,7 @@
 @property (nonatomic) NSString *label;
 @property (nonatomic) NSString *labelShort;
 
--(id)initWithEnumMemberInfo:(int)value withLabel:(NSString *)label withLabelShort:(NSString *)labelShort;
+-(instancetype)initWithEnumMemberInfo:(int)value withLabel:(NSString *)label withLabelShort:(NSString *)labelShort NS_DESIGNATED_INITIALIZER;
 
 @end
 
