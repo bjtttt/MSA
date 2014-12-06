@@ -35,8 +35,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    if(self.mainView.barCV == nil)
-        self.mainView.barCV = self.displayCVC.barV;
+    //if(self.mainView.barCV == nil)
+    //    self.mainView.barCV = self.displayCVC.barV;
 }
 
 /*
@@ -73,97 +73,10 @@
 */
 
 -(void) loadView {
-    //NSLog(@"ContainerViewController - loadView");
-    
     [super loadView];
     
     _frameWidth = self.view.frame.size.width;
     _frameHeight = self.view.frame.size.height;
-
-    //_shareSettings = [[ShareSettings alloc] init];
-    /*
-    _shareSettings.menuTapped=NO;
-    _shareSettings.measureTapped=NO;
-    //self.shareSettings.barTapped=NO;
-    _shareSettings.menuDisplayed=NO;
-    _shareSettings.measureDisplayed=NO;
-    _shareSettings.barPopupMenuDisplayed=NO;
-    
-    _shareSettings.barTappedIndex = -1;
-    _shareSettings.currentBarPopupMenuIndex = -1;
-    _shareSettings.previousBarPopupMenuIndex = -1;
-
-    _shareSettings.barPopupMenuAreaTapped=NO;
-    _shareSettings.navPresetMenuButtonAreaTapped=NO;
-    */
-
-    //_shareSettings.currentInstrument = [[NSMutableString alloc] initWithString:@""];
-    //_shareSettings.currentInstrumentStatus = INST_DISC;
-    
-    //_shareSettings.appModeStoryboard = _appModeStoryboard;
-    //_shareSettings.mbarStoryboard = _mbarStoryboard;
-    
-    //_shareSettings.prevDispType = UIDT_NORMAL;
-    //_shareSettings.curDispType = UIDT_NORMAL;
-    
-    //self.shareSettings.dataParameters = [[NSDictionary alloc] init];
-    //self.shareSettings.parManager = [[ParameterManager alloc] init];
-        
-    //[self.shareSettings initMeasureView];
-    //[self.shareSettings initMeasureBar];
-    //[self.shareSettings initSoftMenuSystem];
-    
-    //if(_parManager != nil)
-    //    [NSException raise:@"MainContainerViewController::loadView" format:@"ParameterManager is NOT nil"];
-    
-    //_parManager = [[ParameterManager alloc] initWithConfig:self.shareSettings];
-    //_parManager.shareSettings = _shareSettings;
-    //_shareSettings.parManager = _parManager;
-    //[_parManager parseParameter];
-    //[_parManager registerParameterChangedEvent];
-
-    //if(_modeManager != nil)
-    //    [NSException raise:@"MainContainerViewController::loadView" format:@"ModeManager is NOT nil"];
-
-    //_modeManager = [[ModeManager alloc] initWithConfig:self.shareSettings];
-    //_modeManager.shareSettings = _shareSettings;
-    //_shareSettings.modeManager = _modeManager;
-    //[_modeManager initMode];
-    
-    //UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
-    //self.shareSettings.modeStoryboard = modeUIS;
-    /*
-    MeasureBarContainerViewController *mbarCVC = (MeasureBarContainerViewController *)[_shareSettings.mbarStoryboard instantiateViewControllerWithIdentifier:@"measureBarCVC"];
-    NSAssert([mbarCVC isKindOfClass:[MeasureBarContainerViewController class]], @"mbarCVC should be MeasureBarContainerViewController.");
-    mbarCVC.frameWidth = self.frameWidth;
-    mbarCVC.frameHeight = BAR_HEIGHT;
-    mbarCVC.shareSettings = _shareSettings;
-    mbarCVC.displayCVC = _displayCVC;
-    _shareSettings.barCVC = mbarCVC;
-    _barCVC = mbarCVC;
-    */
-    //((MainContainerView *)self.mainView).shareSettings = self.shareSettings;
-    
-    /*
-    // Border Radius
-    //[self.menuView.layer setCornerRadius:LIGHT_CORNER_RADIUS];
-    [_menuView.layer setMasksToBounds:YES];
-    //[self.menuView setClipsToBounds:YES];
-    // Border
-    [_menuView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [_menuView.layer setBorderWidth:NORMAL_BORDER_WIDTH];
-    // Background
-    //[self.menuView.layer setBackgroundColor:[UIColor darkGrayColor].CGColor];
-    */
-    
-    //[self setMeasureViewStyle];
-    //[self setBarPopupMenuViewStyle];
-    
-    //_mainView.sendNotification = YES;
-}
-
--(void) viewWillAppear:(BOOL)animated{
-    //[self layoutVC:[self getMSALayout] animated:NO];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -171,28 +84,16 @@
 
     [super viewDidAppear:animated];
     
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuTapped) name:@"menuTapped" object:nil];
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(measureTapped) name:@"measureTapped" object:nil];
-    
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barTappedIndex) name:@"barTappedIndex" object:nil];
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barPopupMenuAreaTapped) name:@"barPopupMenuAreaTapped" object:nil];
-
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(curDispTypeChanged) name:@"curDispType" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(curDispTypeChanged) name:@"curDispType" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(curDispTypeChanged) name:@"curBarIndex" object:nil];
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
-    //NSLog(@"ContainerViewController - viewDidDisappear");
 
     [super viewDidDisappear:animated];
     
-    //[[NSNotificationCenter defaultCenter] removeObserver:self name:@"menuTapped" object:nil];
-    //[[NSNotificationCenter defaultCenter] removeObserver:self name:@"measureTapped" object:nil];
-    
-    //[[NSNotificationCenter defaultCenter] removeObserver:self name:@"barTappedIndex" object:nil];
-    //[[NSNotificationCenter defaultCenter] removeObserver:self name:@"barPopupMenuAreaTapped" object:nil];
-
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"curDispType" object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"curBarIndex" object:nil];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -206,8 +107,6 @@
         
         self.displayCVC.frameWidth = self.frameWidth;
         self.displayCVC.frameHeight = self.frameHeight;
-
-        //self.mainView.barCV = self.displayCVC.barV;
     }
     if([segue.identifier isEqualToString:@"embedSegueToMenuVC"])
     {
@@ -217,9 +116,6 @@
         
         self.menuCVC.frameWidth = MENU_WIDTH;
         self.menuCVC.frameHeight = self.frameHeight;
-
-        //self.menuView.frame = CGRectMake(self.menuView.frame.origin.x, self.menuView.frame.origin.y, MENU_WIDTH, self.frameHeight);
-        //self.menuCVC.softMenuV.frame = CGRectMake(self.menuCVC.softMenuV.frame.origin.x, self.menuCVC.softMenuV.frame.origin.y, MENU_WIDTH, self.frameHeight);
     }
     if([segue.identifier isEqualToString:@"embedSegueToMeasureVC"])
     {
@@ -244,17 +140,6 @@
         
         ((MainContainerView *)self.mainView).barPopupMenuV = self.barPopupMenuCVC.view;
     }
-    /*
-    if([segue.identifier isEqualToString:@"embedSegueToBlurVC"])
-    {
-        self.blurVC = (BlurViewController *)segue.destinationViewController;
-        self.blurVC.shareSettings = self.shareSettings;
-        self.blurVC.mainCVC = self;
-        
-        self.blurVC.frameWidth = self.frameWidth;
-        self.blurVC.frameHeight = self.frameHeight;
-    }
-    */
     if([segue.identifier isEqualToString:@"embedSegueToInputVC"])
     {
         _inputCVC = (InputContainerViewController *)segue.destinationViewController;
@@ -271,65 +156,33 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-
-    //[self.menuCVC showHidePresetMenu:YES];
-    //[self layoutVC:[self getMSALayout] animated:NO];
-}
-
--(void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    
-    //[self layoutVC:NO withMeasBar:YES];
-}
 
 -(BOOL)prefersStatusBarHidden {
     return YES;
 }
-
-/*
-- (void)menuTapped {
-    self.shareSettings.menuDisplayed = !self.shareSettings.menuDisplayed;
-    [self layoutVC:YES];
-}
-
-- (void)measureTapped {
-    self.shareSettings.measureDisplayed = !self.shareSettings.measureDisplayed;
-    [self layoutVC:YES];
-}
-
--(void)barTappedIndex {
-    [self layoutVC:YES];
-}
-
-- (void)barPopupMenuAreaTapped {
-    [self layoutVC:YES];
-}
-*/
 
 -(void)curDispTypeChanged
 {
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
     
-    //UIImage *img = nil;
-    //UIImage *blurImg = nil;
-    
     bool animated = YES;
 
     switch(_shareSettings.curDispType)
     {
         default:
+        case UIDT_NONE:
+            [NSException raise:@"MainContainerViewController::curDispTypeChanged" format:@"Current display type cannot be UIDT_NONE"];
+            break;
         case UIDT_NORMAL:
         {
             switch(_shareSettings.prevDispType)
             {
+                case UIDT_NONE:
+                    break;
                 default:
                 case UIDT_NORMAL:
-                {
                     return;
-                }
                     break;
                 case UIDT_NORMAL_INPUT:
                 {
@@ -383,16 +236,17 @@
         {
             switch(_shareSettings.prevDispType)
             {
-                default:
+                case UIDT_NONE:
+                    [NSException raise:@"MainContainerViewController::curDispTypeChanged" format:@"Previous display type cannot be UIDT_NONE when current display type is UIDT_NORMAL_INPUT"];
+                    break;
                 case UIDT_NORMAL:
                 {
                     return;
                 }
                     break;
+                default:
                 case UIDT_NORMAL_INPUT:
-                {
-                    
-                }
+                    return;
                     break;
                 case UIDT_NORMAL_BARPOPUP:
                 {
@@ -441,7 +295,9 @@
         {
             switch(_shareSettings.prevDispType)
             {
-                default:
+                case UIDT_NONE:
+                    [NSException raise:@"MainContainerViewController::curDispTypeChanged" format:@"Previous display type cannot be UIDT_NONE when current display type is UIDT_NORMAL_BARPOPUP"];
+                    break;
                 case UIDT_NORMAL:
                 {
                     return;
@@ -452,10 +308,9 @@
                     
                 }
                     break;
+                default:
                 case UIDT_NORMAL_BARPOPUP:
-                {
-                    
-                }
+                    return;
                     break;
                 case UIDT_NORMAL_BARPOPUP_INPUT:
                 {
@@ -499,10 +354,11 @@
         {
             switch(_shareSettings.prevDispType)
             {
-                default:
+                case UIDT_NONE:
+                    [NSException raise:@"MainContainerViewController::curDispTypeChanged" format:@"Previous display type cannot be UIDT_NONE when current display type is UIDT_NORMAL_BARPOPUP_INPUT"];
+                    break;
                 case UIDT_NORMAL:
                 {
-                    //set;
                 }
                     break;
                 case UIDT_NORMAL_INPUT:
@@ -515,10 +371,9 @@
                     
                 }
                     break;
+                default:
                 case UIDT_NORMAL_BARPOPUP_INPUT:
-                {
-                    
-                }
+                    return;
                     break;
                 case UIDT_MENU:
                 {
@@ -557,7 +412,9 @@
         {
             switch(_shareSettings.prevDispType)
             {
-                default:
+                case UIDT_NONE:
+                    [NSException raise:@"MainContainerViewController::curDispTypeChanged" format:@"Previous display type cannot be UIDT_NONE when current display type is UIDT_MENU"];
+                    break;
                 case UIDT_NORMAL:
                 {
                     return;
@@ -578,10 +435,9 @@
                     
                 }
                     break;
+                default:
                 case UIDT_MENU:
-                {
-                    
-                }
+                    return;
                     break;
                 case UIDT_MENU_PRESET:
                 {
@@ -615,7 +471,9 @@
         {
             switch(_shareSettings.prevDispType)
             {
-                default:
+                case UIDT_NONE:
+                    [NSException raise:@"MainContainerViewController::curDispTypeChanged" format:@"Previous display type cannot be UIDT_NONE when current display type is UIDT_MENU_PRESET"];
+                    break;
                 case UIDT_NORMAL:
                 {
                     return;
@@ -641,10 +499,9 @@
                     
                 }
                     break;
+                default:
                 case UIDT_MENU_PRESET:
-                {
-                    
-                }
+                    return;
                     break;
                 case UIDT_MENU_INPUT:
                 {
@@ -673,7 +530,9 @@
         {
             switch(_shareSettings.prevDispType)
             {
-                default:
+                case UIDT_NONE:
+                    [NSException raise:@"MainContainerViewController::curDispTypeChanged" format:@"Previous display type cannot be UIDT_NONE when current display type is UIDT_MENU_INPUT"];
+                    break;
                 case UIDT_NORMAL:
                 {
                     return;
@@ -704,10 +563,9 @@
                     
                 }
                     break;
+                default:
                 case UIDT_MENU_INPUT:
-                {
-                    
-                }
+                    return;
                     break;
                 case UIDT_MENU_BARPOPUP:
                 {
@@ -731,7 +589,9 @@
         {
             switch(_shareSettings.prevDispType)
             {
-                default:
+                case UIDT_NONE:
+                    [NSException raise:@"MainContainerViewController::curDispTypeChanged" format:@"Previous display type cannot be UIDT_NONE when current display type is UIDT_MENU_BARPOPUP"];
+                    break;
                 case UIDT_NORMAL:
                 {
                     return;
@@ -767,10 +627,9 @@
                     
                 }
                     break;
+                default:
                 case UIDT_MENU_BARPOPUP:
-                {
-                    
-                }
+                    return;
                     break;
                 case UIDT_MENU_BARPOPUP_INPUT:
                 {
@@ -789,7 +648,9 @@
         {
             switch(_shareSettings.prevDispType)
             {
-                default:
+                case UIDT_NONE:
+                    [NSException raise:@"MainContainerViewController::curDispTypeChanged" format:@"Previous display type cannot be UIDT_NONE when current display type is UIDT_MENU_BARPOPUP_INPUT"];
+                    break;
                 case UIDT_NORMAL:
                 {
                     return;
@@ -830,10 +691,9 @@
                     
                 }
                     break;
+                default:
                 case UIDT_MENU_BARPOPUP_INPUT:
-                {
-                    
-                }
+                    return;
                     break;
                 case UIDT_CONNSEL:
                 {
@@ -847,7 +707,9 @@
         {
             switch(_shareSettings.prevDispType)
             {
-                default:
+                case UIDT_NONE:
+                    [NSException raise:@"MainContainerViewController::curDispTypeChanged" format:@"Previous display type cannot be UIDT_NONE when current display type is UIDT_CONNSEL"];
+                    break;
                 case UIDT_NORMAL:
                 {
                 }
@@ -892,10 +754,9 @@
                     
                 }
                     break;
+                default:
                 case UIDT_CONNSEL:
-                {
-                    
-                }
+                    return;
                     break;
             }
         }
