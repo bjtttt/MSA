@@ -67,7 +67,6 @@
 		9A23C0F41A2719AC0069971A /* UISoftKeyEnumItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C02C1A2719AC0069971A /* UISoftKeyEnumItem.m */; };
 		9A23C0F51A2719AC0069971A /* UISoftMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C02E1A2719AC0069971A /* UISoftMenu.m */; };
 		9A23C0F61A2719AC0069971A /* UISoftPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C0301A2719AC0069971A /* UISoftPanel.m */; };
-		9A23C0F71A2719AC0069971A /* BlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C0331A2719AC0069971A /* BlurViewController.m */; };
 		9A23C0FA1A2719AC0069971A /* DisplayContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C03B1A2719AC0069971A /* DisplayContainerViewController.m */; };
 		9A23C0FB1A2719AC0069971A /* MainContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C03D1A2719AC0069971A /* MainContainerView.m */; };
 		9A23C0FC1A2719AC0069971A /* MainContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23C03F1A2719AC0069971A /* MainContainerViewController.m */; };
@@ -300,8 +299,6 @@
 		9A23C02E1A2719AC0069971A /* UISoftMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISoftMenu.m; sourceTree = "<group>"; };
 		9A23C02F1A2719AC0069971A /* UISoftPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISoftPanel.h; sourceTree = "<group>"; };
 		9A23C0301A2719AC0069971A /* UISoftPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISoftPanel.m; sourceTree = "<group>"; };
-		9A23C0321A2719AC0069971A /* BlurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurViewController.h; sourceTree = "<group>"; };
-		9A23C0331A2719AC0069971A /* BlurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurViewController.m; sourceTree = "<group>"; };
 		9A23C03A1A2719AC0069971A /* DisplayContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayContainerViewController.h; sourceTree = "<group>"; };
 		9A23C03B1A2719AC0069971A /* DisplayContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayContainerViewController.m; sourceTree = "<group>"; };
 		9A23C03C1A2719AC0069971A /* MainContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainContainerView.h; sourceTree = "<group>"; };
@@ -801,8 +798,6 @@
 			isa = PBXGroup;
 			children = (
 				9A6772331A328D320092EA43 /* Input */,
-				9A23C0321A2719AC0069971A /* BlurViewController.h */,
-				9A23C0331A2719AC0069971A /* BlurViewController.m */,
 				9A23C0341A2719AC0069971A /* Display */,
 				9A23C03C1A2719AC0069971A /* MainContainerView.h */,
 				9A23C03D1A2719AC0069971A /* MainContainerView.m */,
@@ -1724,7 +1719,6 @@
 				9A69E8D21A308F1400859CB0 /* Bar7ViewController.m in Sources */,
 				9A23C0F61A2719AC0069971A /* UISoftPanel.m in Sources */,
 				9A69E8731A308C9000859CB0 /* BarViewControllerContainerViewBase.m in Sources */,
-				9A23C0F71A2719AC0069971A /* BlurViewController.m in Sources */,
 				9A23C0FE1A2719AC0069971A /* MeasureSelect2ndTableViewController.m in Sources */,
 				9A23C12D1A2719AC0069971A /* GPUImagePicture.m in Sources */,
 				9A23C0C21A2719AC0069971A /* EnumParameter.m in Sources */,

@@ -29,12 +29,6 @@
                                     <segue destination="mRs-zk-5eL" kind="embed" identifier="embedSegueToMenuVC" id="Myk-9C-kep"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMo-M9-Qwt" userLabel="Blur View">
-                                <rect key="frame" x="0.0" y="200" width="400" height="400"/>
-                                <connections>
-                                    <segue destination="Z0v-YZ-ZRy" kind="embed" identifier="embedSegueToBlurVC" id="YIe-Z6-lIM"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="shz-m0-FnC" userLabel="Measure View">
                                 <rect key="frame" x="0.0" y="0.0" width="350" height="600"/>
                                 <connections>
@@ -59,7 +53,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="barPopupMenuView" destination="Pg0-Tj-Oce" id="tgA-ev-Gl3"/>
-                        <outlet property="blurView" destination="rMo-M9-Qwt" id="4b7-Nw-iTQ"/>
                         <outlet property="displayView" destination="vId-ub-NnX" id="ujP-uw-bQ7"/>
                         <outlet property="inputView" destination="zw0-P8-y6A" id="O7k-9F-WEG"/>
                         <outlet property="mainView" destination="ex4-JV-8sr" id="YVJ-6a-4e0"/>
@@ -2191,33 +2184,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R1C-62-CSF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-585" y="-444"/>
-        </scene>
-        <!--Blur View Controller-->
-        <scene sceneID="1or-BJ-eB7">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Z0v-YZ-ZRy" customClass="BlurViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2Lu-YK-PaL"/>
-                        <viewControllerLayoutGuide type="bottom" id="DQV-ZT-Kch"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="epr-SI-AbR">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n0l-Mh-ukg">
-                                <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                    <connections>
-                        <outlet property="blurImage" destination="n0l-Mh-ukg" id="4eQ-CM-9gQ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U7H-GW-v2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-387" y="29"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="Xr6-x0-7v3">
