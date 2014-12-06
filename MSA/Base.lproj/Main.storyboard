@@ -50,7 +50,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zw0-P8-y6A">
                                 <rect key="frame" x="0.0" y="350" width="250" height="250"/>
                                 <connections>
-                                    <segue destination="GSL-2q-Efu" kind="embed" id="D3H-bG-ZHZ"/>
+                                    <segue destination="GSL-2q-Efu" kind="embed" identifier="embedSegueToInputVC" id="D3H-bG-ZHZ"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -2174,10 +2174,10 @@
             </objects>
             <point key="canvasLocation" x="57" y="-21"/>
         </scene>
-        <!--Input View Controller-->
+        <!--Input Container View Controller-->
         <scene sceneID="ai2-PH-aF3">
             <objects>
-                <viewController id="GSL-2q-Efu" customClass="InputViewController" sceneMemberID="viewController">
+                <viewController id="GSL-2q-Efu" customClass="InputContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QZk-W1-UJH"/>
                         <viewControllerLayoutGuide type="bottom" id="moa-rY-8KH"/>

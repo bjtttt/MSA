@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "MeasureSelectTableViewController.h"
 #import "MeasureSelect2ndTableViewController.h"
-#import "UIKeyView.h"
+#import "ViewBase.h"
 
 @interface MeasureSelect2ndTableViewController()
 
@@ -39,25 +39,22 @@ static NSString *measureSelectCell2ndTable_Id = @"measureSelectCell2ndTable";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.views count];
+    return [_views count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {    
     NSInteger row = [indexPath row];
-    UIKeyView *view = (self.views)[row];
+    NSArray *keys = [[_views allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+    ViewBase *view = _views[keys[row]];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:measureSelectCell2ndTable_Id forIndexPath:indexPath];
-    if(view.enabled == YES)
-        [cell.textLabel setTextColor:[UIColor blackColor]];
-    else
-        [cell.textLabel setTextColor:[UIColor lightGrayColor]];
-    
-    cell.textLabel.text = view.name;
+    cell.textLabel.text = view.viewName;
     
     return cell;
 }
 
+/*
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = [indexPath row];
@@ -76,5 +73,6 @@ static NSString *measureSelectCell2ndTable_Id = @"measureSelectCell2ndTable";
         [alertView show];
     }
 }
+*/
 
 @end

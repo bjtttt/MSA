@@ -43,7 +43,7 @@
 
     //UIStoryboardSegue *modeUISS = [UIStoryboardSegue segueWithIdentifier:@"embedSegueToBarVC" source:self.barV. destination:<#(UIViewController *)#> performHandler:<#^(void)performHandler#>];
     
-    [self.barV addSubview:self.shareSettings.barCVC.view];
+    //[self.barV addSubview:self.shareSettings.barCVC.view];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -109,20 +109,20 @@
 - (IBAction)showHideMenu:(id)sender {
     [self hidePresetMenu];
 
-    self.shareSettings.menuTapped=!self.shareSettings.menuTapped;
-    if(self.shareSettings.menuTapped)
-        [self.showHideMenuButton setImage:[UIImage imageNamed:@"HideMenu.png"] forState:UIControlStateNormal];
-    else
-        [self.showHideMenuButton setImage:[UIImage imageNamed:@"ShowMenu.png"] forState:UIControlStateNormal];
+    //self.shareSettings.menuTapped=!self.shareSettings.menuTapped;
+    //if(self.shareSettings.menuTapped)
+    //    [self.showHideMenuButton setImage:[UIImage imageNamed:@"HideMenu.png"] forState:UIControlStateNormal];
+    //else
+    //    [self.showHideMenuButton setImage:[UIImage imageNamed:@"ShowMenu.png"] forState:UIControlStateNormal];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"menuTapped" object:nil];
+    //[[NSNotificationCenter defaultCenter] postNotificationName:@"menuTapped" object:nil];
 }
 
 - (IBAction)showMeasureView:(id)sender {
     //UIImage *screen = [self imageByRenderingView];
     
-    self.shareSettings.measureTapped=!self.shareSettings.measureTapped;
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"measureTapped" object:nil];
+    //self.shareSettings.measureTapped=!self.shareSettings.measureTapped;
+    //[[NSNotificationCenter defaultCenter] postNotificationName:@"measureTapped" object:nil];
     
     /*
     UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"nav"];
@@ -162,8 +162,8 @@
 
 -(void)hidePresetMenu
 {
-    self.mainCVC.menuCVC.presetViewVisible = NO;
-    [self.mainCVC.menuCVC showHidePresetMenu:self.mainCVC.menuCVC.presetViewVisible animated:YES];
+    //self.mainCVC.menuCVC.presetViewVisible = NO;
+    //[self.mainCVC.menuCVC showHidePresetMenu:self.mainCVC.menuCVC.presetViewVisible animated:YES];
 }
 
 /*

@@ -23,6 +23,7 @@
 #import "SoftMenuContainerViewController.h"
 #import "PresetMenuContainerViewController.h"
 #import "MeasureBarDetail.h"
+#import "InputContainerViewController.h"
 
 @interface MainContainerViewController ()
 
@@ -38,6 +39,7 @@
         self.mainView.barCV = self.displayCVC.barV;
 }
 
+/*
 -(void)setMeasureViewStyle
 {
     // Measure View Border Radius
@@ -68,6 +70,7 @@
     [self.barPopupMenuView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
     [self.barPopupMenuView.layer setBorderWidth:NORMAL_BORDER_WIDTH];
 }
+*/
 
 -(void) loadView {
     //NSLog(@"ContainerViewController - loadView");
@@ -77,7 +80,7 @@
     _frameWidth = self.view.frame.size.width;
     _frameHeight = self.view.frame.size.height;
 
-    _shareSettings = [[ShareSettings alloc] init];
+    //_shareSettings = [[ShareSettings alloc] init];
     /*
     _shareSettings.menuTapped=NO;
     _shareSettings.measureTapped=NO;
@@ -129,6 +132,7 @@
     
     //UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
     //self.shareSettings.modeStoryboard = modeUIS;
+    /*
     MeasureBarContainerViewController *mbarCVC = (MeasureBarContainerViewController *)[_shareSettings.mbarStoryboard instantiateViewControllerWithIdentifier:@"measureBarCVC"];
     NSAssert([mbarCVC isKindOfClass:[MeasureBarContainerViewController class]], @"mbarCVC should be MeasureBarContainerViewController.");
     mbarCVC.frameWidth = self.frameWidth;
@@ -137,8 +141,10 @@
     mbarCVC.displayCVC = _displayCVC;
     _shareSettings.barCVC = mbarCVC;
     _barCVC = mbarCVC;
-    ((MainContainerView *)self.mainView).shareSettings = self.shareSettings;
+    */
+    //((MainContainerView *)self.mainView).shareSettings = self.shareSettings;
     
+    /*
     // Border Radius
     //[self.menuView.layer setCornerRadius:LIGHT_CORNER_RADIUS];
     [_menuView.layer setMasksToBounds:YES];
@@ -148,11 +154,12 @@
     [_menuView.layer setBorderWidth:NORMAL_BORDER_WIDTH];
     // Background
     //[self.menuView.layer setBackgroundColor:[UIColor darkGrayColor].CGColor];
-        
-    [self setMeasureViewStyle];
-    [self setBarPopupMenuViewStyle];
+    */
     
-    _mainView.sendNotification = YES;
+    //[self setMeasureViewStyle];
+    //[self setBarPopupMenuViewStyle];
+    
+    //_mainView.sendNotification = YES;
 }
 
 -(void) viewWillAppear:(BOOL)animated{
@@ -164,12 +171,13 @@
 
     [super viewDidAppear:animated];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuTapped) name:@"menuTapped" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(measureTapped) name:@"measureTapped" object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuTapped) name:@"menuTapped" object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(measureTapped) name:@"measureTapped" object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barTappedIndex) name:@"barTappedIndex" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barPopupMenuAreaTapped) name:@"barPopupMenuAreaTapped" object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barTappedIndex) name:@"barTappedIndex" object:nil];
+    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(barPopupMenuAreaTapped) name:@"barPopupMenuAreaTapped" object:nil];
 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(curDispTypeChanged) name:@"curDispType" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(curDispTypeChanged) name:@"curDispType" object:nil];
 }
 
@@ -178,11 +186,11 @@
 
     [super viewDidDisappear:animated];
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"menuTapped" object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"measureTapped" object:nil];
+    //[[NSNotificationCenter defaultCenter] removeObserver:self name:@"menuTapped" object:nil];
+    //[[NSNotificationCenter defaultCenter] removeObserver:self name:@"measureTapped" object:nil];
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barTappedIndex" object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"barPopupMenuAreaTapped" object:nil];
+    //[[NSNotificationCenter defaultCenter] removeObserver:self name:@"barTappedIndex" object:nil];
+    //[[NSNotificationCenter defaultCenter] removeObserver:self name:@"barPopupMenuAreaTapped" object:nil];
 
     [[NSNotificationCenter defaultCenter] removeObserver:self name:@"curDispType" object:nil];
 }
@@ -236,6 +244,7 @@
         
         ((MainContainerView *)self.mainView).barPopupMenuV = self.barPopupMenuCVC.view;
     }
+    /*
     if([segue.identifier isEqualToString:@"embedSegueToBlurVC"])
     {
         self.blurVC = (BlurViewController *)segue.destinationViewController;
@@ -244,6 +253,16 @@
         
         self.blurVC.frameWidth = self.frameWidth;
         self.blurVC.frameHeight = self.frameHeight;
+    }
+    */
+    if([segue.identifier isEqualToString:@"embedSegueToInputVC"])
+    {
+        _inputCVC = (InputContainerViewController *)segue.destinationViewController;
+        _inputCVC.shareSettings = _shareSettings;
+        _inputCVC.mainCVC = self;
+        
+        _inputCVC.frameWidth = INPUT_WIDTH;
+        _inputCVC.frameHeight = INPUT_HEIGHT;
     }
 }
 
@@ -262,13 +281,14 @@
 -(void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    [self layoutVC:NO withMeasBar:YES];
+    //[self layoutVC:NO withMeasBar:YES];
 }
 
 -(BOOL)prefersStatusBarHidden {
     return YES;
 }
 
+/*
 - (void)menuTapped {
     self.shareSettings.menuDisplayed = !self.shareSettings.menuDisplayed;
     [self layoutVC:YES];
@@ -286,6 +306,7 @@
 - (void)barPopupMenuAreaTapped {
     [self layoutVC:YES];
 }
+*/
 
 -(void)curDispTypeChanged
 {
@@ -481,7 +502,7 @@
                 default:
                 case UIDT_NORMAL:
                 {
-                    set;
+                    //set;
                 }
                     break;
                 case UIDT_NORMAL_INPUT:

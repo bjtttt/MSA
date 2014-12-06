@@ -75,8 +75,8 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    self.presetViewVisible = NO;
-    [self showHidePresetMenu:self.presetViewVisible animated:NO];
+    //self.presetViewVisible = NO;
+    //[self showHidePresetMenu:self.presetViewVisible animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {

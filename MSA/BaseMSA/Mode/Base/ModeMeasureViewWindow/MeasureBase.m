@@ -107,7 +107,9 @@
     
     if(self.mbarDetail.useRatio == YES)
     {
-        if(self.shareSettings.menuDisplayed == YES)
+        if(_shareSettings.curDispType == UIDT_MENU || _shareSettings.curDispType == UIDT_MENU_BARPOPUP ||
+           _shareSettings.curDispType == UIDT_MENU_BARPOPUP_INPUT || _shareSettings.curDispType == UIDT_MENU_INPUT ||
+           _shareSettings.curDispType == UIDT_MENU_PRESET)
             return width * [self.mbarDetail.mbarSmallWidths[index] floatValue] / self.mbarDetail.totalSmallWidth;
         else
             return width * [self.mbarDetail.mbarWidths[index] floatValue] / self.mbarDetail.totalWidth;
@@ -117,7 +119,9 @@
         CGFloat xPos = 0.0;
         for (NSInteger i=0;i<index;i++)
         {
-            if(self.shareSettings.menuDisplayed == YES)
+            if(_shareSettings.curDispType == UIDT_MENU || _shareSettings.curDispType == UIDT_MENU_BARPOPUP ||
+               _shareSettings.curDispType == UIDT_MENU_BARPOPUP_INPUT || _shareSettings.curDispType == UIDT_MENU_INPUT ||
+               _shareSettings.curDispType == UIDT_MENU_PRESET)
                 xPos = xPos + [self.mbarDetail.mbarSmallWidths[i] floatValue];
             else
                 xPos = xPos + [self.mbarDetail.mbarWidths[i] floatValue];

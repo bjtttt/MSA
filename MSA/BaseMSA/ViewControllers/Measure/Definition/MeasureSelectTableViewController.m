@@ -12,6 +12,10 @@
 #import "MeasureSelectNavigationViewController.h"
 #import "UIKeyMeasure.h"
 #import "UIKeyView.h"
+#import "ModeManager.h"
+#import "Mode.h"
+#import "ModeBase.h"
+#import "MeasureBase.h"
 
 @interface MeasureSelectTableViewController()
 
@@ -61,33 +65,27 @@ static NSString *measureSelectCellTable_MultiView_Id = @"measureSelectCellTable_
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.shareSettings.measureView count];
+    return [_shareSettings.modeManager.mode.measureDict count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = [indexPath row];
-    UIKeyMeasure *meas = (self.shareSettings.measureView)[row];
-    NSMutableArray *views = meas.views;
+    NSArray *keys = [[_shareSettings.modeManager.mode.measureDict allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+    MeasureBase *meas = (_shareSettings.modeManager.mode.measureDict)[keys[row]];
+    NSMutableDictionary *views = meas.viewDict;
     NSUInteger viewCount = [views count];
     UITableViewCell *cell;
     if(viewCount > 0)
-    {
         cell = [tableView dequeueReusableCellWithIdentifier:measureSelectCellTable_MultiView_Id forIndexPath:indexPath];
-    }
     else
-    {
         cell = [tableView dequeueReusableCellWithIdentifier:measureSelectCellTable_SingleView_Id forIndexPath:indexPath];
-    }
-    if(meas.enabled == YES)
-        [cell.textLabel setTextColor:[UIColor blackColor]];
-    else
-        [cell.textLabel setTextColor:[UIColor lightGrayColor]];
-    [cell.textLabel setText:meas.name];
+    [cell.textLabel setText:meas.measureName];
     
     return cell;
 }
 
+/*
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = [indexPath row];
@@ -106,6 +104,7 @@ static NSString *measureSelectCellTable_MultiView_Id = @"measureSelectCellTable_
         [alertView show];
     }
 }
+*/
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -113,9 +112,10 @@ static NSString *measureSelectCellTable_MultiView_Id = @"measureSelectCellTable_
     {
         MeasureSelect2ndTableViewController *measureSelect2ndTVC = (MeasureSelect2ndTableViewController *)segue.destinationViewController;
         NSInteger selectedIndex = [[self.tableView indexPathForSelectedRow] row];
-        UIKeyMeasure *meas = (self.shareSettings.measureView)[selectedIndex];
-        measureSelect2ndTVC.views = meas.views;
-        self.navigationItem.title = meas.name;
+        NSArray *keys = [[_shareSettings.modeManager.mode.measureDict allKeys] sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
+        MeasureBase *meas = (_shareSettings.modeManager.mode.measureDict)[keys[selectedIndex]];
+        measureSelect2ndTVC.views = meas.viewDict;
+        self.navigationItem.title = meas.measureName;
         //self.measureSelectNavBar.backBarButtonItem.title = meas.name;
         //UINavigationController *nav = self.navigationController;
         //measureSelect2ndTVC.title = @"Views";//meas.name;

@@ -160,7 +160,7 @@ typedef NS_ENUM(int, UIDisplayType)
 
 @property (weak, nonatomic) UIStoryboard *appModeStoryboard;
 @property (weak, nonatomic) UIStoryboard *mbarStoryboard;
-@property (weak, nonatomic) MeasureBarContainerViewController *barCVC;
+//@property (weak, nonatomic) MeasureBarContainerViewController *barCVC;
 
 //@property (nonatomic) GPUImageiOSBlurFilter *blurFilter;
 
@@ -170,8 +170,8 @@ typedef NS_ENUM(int, UIDisplayType)
 @property (nonatomic) ParameterManager *parManager;
 @property (nonatomic) ModeManager *modeManager;
 
--(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum;
--(UIImage *)blurryImage:(UIImage *)image;
+//-(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum;
+//-(UIImage *)blurryImage:(UIImage *)image;
 
 -(void)valueTouching:(Parameter *)param;
 -(void)valueChanging:(Parameter *)param;

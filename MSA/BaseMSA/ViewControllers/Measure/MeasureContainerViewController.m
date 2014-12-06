@@ -58,13 +58,13 @@
 }
 
 - (IBAction)okMeasure:(id)sender {
-    self.shareSettings.measureTapped = !self.shareSettings.measureTapped;
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"measureTapped" object:nil];
+    //self.shareSettings.measureTapped = !self.shareSettings.measureTapped;
+    //[[NSNotificationCenter defaultCenter] postNotificationName:@"measureTapped" object:nil];
 }
 
 - (IBAction)cancelMeasure:(id)sender {
-    self.shareSettings.measureTapped = !self.shareSettings.measureTapped;
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"measureTapped" object:nil];
+    //self.shareSettings.measureTapped = !self.shareSettings.measureTapped;
+    //[[NSNotificationCenter defaultCenter] postNotificationName:@"measureTapped" object:nil];
 }
 
 @end

@@ -199,7 +199,9 @@
         //UIViewController<MeasureBarProtocol> *vc = (UIViewController<MeasureBarProtocol> *)_barVCs[i];
         BarViewControllerBase *vc = (BarViewControllerBase *)_barVCs[i];
         
-        if(_shareSettings.menuDisplayed == YES)
+        if(_shareSettings.curDispType == UIDT_MENU || _shareSettings.curDispType == UIDT_MENU_BARPOPUP ||
+           _shareSettings.curDispType == UIDT_MENU_BARPOPUP_INPUT || _shareSettings.curDispType == UIDT_MENU_INPUT ||
+           _shareSettings.curDispType == UIDT_MENU_PRESET)
         {
             CGFloat fv = [(NSNumber *)_shareSettings.modeManager.curMBarDetail.mbarSmallWidths[i] floatValue];
             if(_shareSettings.modeManager.curMBarDetail.useRatio == YES)

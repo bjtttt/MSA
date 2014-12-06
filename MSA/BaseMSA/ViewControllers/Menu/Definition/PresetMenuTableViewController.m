@@ -143,6 +143,7 @@ static NSString *presetMenuCellTable_White_Green_Id = @"PresetMenuTVC_White_Gree
     return cell;
 }
 
+/*
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.presetMenuCVC.menuCVC.presetViewVisible = !self.presetMenuCVC.menuCVC.presetViewVisible;
@@ -153,6 +154,7 @@ static NSString *presetMenuCellTable_White_Green_Id = @"PresetMenuTVC_White_Gree
     //NSString *messageType = self.statuses[indexPath.row];
     //self.systMasterNVC.systSplitVC.systDetailCVC.systDetailNVC.systDetailTVC.currentSystem = (SYSTType)indexPath.row;
 }
+*/
 
 //-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 //{

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
 
-@interface MenuContainerView : UIView
+@interface MenuContainerView : UIVisualEffectView
 
 //@property (weak, nonatomic) UIView *barPopupMenuV;
 //@property (weak, nonatomic) UIView *barCV;

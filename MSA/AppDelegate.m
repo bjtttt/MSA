@@ -11,6 +11,8 @@
 #import "ShareSettings.h"
 #import "ParameterManager.h"
 #import "ModeManager.h"
+#import "MeasureBarContainerViewController.h"
+#import "DisplayContainerViewController.h"
 
 @interface AppDelegate ()
 
@@ -39,6 +41,10 @@
     shareSettings.appModeStoryboard = appModeStoryboard;
     UIStoryboard *measBarStoryboard = [UIStoryboard storyboardWithName:@"MeasureBar" bundle:[NSBundle mainBundle]];
     shareSettings.mbarStoryboard = measBarStoryboard;
+
+    MeasureBarContainerViewController *mbarCVC = (MeasureBarContainerViewController *)[measBarStoryboard instantiateViewControllerWithIdentifier:@"measureBarCVC"];
+    mainVC.barCVC = mbarCVC;    
+    [mainVC.displayCVC.barV addSubview:mbarCVC.view];
     
     return YES;
 }

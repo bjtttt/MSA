@@ -33,6 +33,7 @@
     return self;
 }
 
+/*
 -(UIImage *)screenShot:(UIViewController *) uiVC saveInAlbum:(BOOL)saveInAlbum {
     NSLog(@"Screeen UIViewController View Bounds X %f, Y %f, Width %f, Height %f", uiVC.view.bounds.origin.x, uiVC.view.bounds.origin.y, uiVC.view.bounds.size.width, uiVC.view.bounds.size.height);
 
@@ -67,7 +68,8 @@
     
     return blurredImage;
 }
-
+*/
+ 
 /* Should be removed
 - (void) initMeasureView
 {

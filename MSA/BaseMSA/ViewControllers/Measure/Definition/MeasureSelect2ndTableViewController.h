@@ -22,6 +22,6 @@
 
 @property (weak, nonatomic) ShareSettings *shareSettings;
 
-@property (strong, nonatomic) NSMutableArray *views;
+@property (strong, nonatomic) NSMutableDictionary *views;
 
 @end
