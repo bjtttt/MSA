@@ -78,6 +78,7 @@
     _frameHeight = self.view.frame.size.height;
 
     _shareSettings = [[ShareSettings alloc] init];
+    /*
     _shareSettings.menuTapped=NO;
     _shareSettings.measureTapped=NO;
     //self.shareSettings.barTapped=NO;
@@ -91,15 +92,16 @@
 
     _shareSettings.barPopupMenuAreaTapped=NO;
     _shareSettings.navPresetMenuButtonAreaTapped=NO;
+    */
 
-    _shareSettings.currentInstrument = [[NSMutableString alloc] initWithString:@""];
-    _shareSettings.currentInstrumentStatus = INST_DISC;
+    //_shareSettings.currentInstrument = [[NSMutableString alloc] initWithString:@""];
+    //_shareSettings.currentInstrumentStatus = INST_DISC;
     
-    _shareSettings.appModeStoryboard = _appModeStoryboard;
-    _shareSettings.mbarStoryboard = _mbarStoryboard;
+    //_shareSettings.appModeStoryboard = _appModeStoryboard;
+    //_shareSettings.mbarStoryboard = _mbarStoryboard;
     
-    _shareSettings.prevDispType = UIDT_NORMAL;
-    _shareSettings.curDispType = UIDT_NORMAL;
+    //_shareSettings.prevDispType = UIDT_NORMAL;
+    //_shareSettings.curDispType = UIDT_NORMAL;
     
     //self.shareSettings.dataParameters = [[NSDictionary alloc] init];
     //self.shareSettings.parManager = [[ParameterManager alloc] init];
@@ -108,22 +110,22 @@
     //[self.shareSettings initMeasureBar];
     //[self.shareSettings initSoftMenuSystem];
     
-    if(_parManager != nil)
-        [NSException raise:@"MainContainerViewController::loadView" format:@"ParameterManager is NOT nil"];
+    //if(_parManager != nil)
+    //    [NSException raise:@"MainContainerViewController::loadView" format:@"ParameterManager is NOT nil"];
     
-    _parManager = [[ParameterManager alloc] initWithConfig:self.shareSettings];
-    _parManager.shareSettings = _shareSettings;
-    _shareSettings.parManager = _parManager;
-    [_parManager parseParameter];
-    [_parManager registerParameterChangedEvent];
+    //_parManager = [[ParameterManager alloc] initWithConfig:self.shareSettings];
+    //_parManager.shareSettings = _shareSettings;
+    //_shareSettings.parManager = _parManager;
+    //[_parManager parseParameter];
+    //[_parManager registerParameterChangedEvent];
 
-    if(_modeManager != nil)
-        [NSException raise:@"MainContainerViewController::loadView" format:@"ModeManager is NOT nil"];
+    //if(_modeManager != nil)
+    //    [NSException raise:@"MainContainerViewController::loadView" format:@"ModeManager is NOT nil"];
 
-    _modeManager = [[ModeManager alloc] initWithConfig:self.shareSettings];
-    _modeManager.shareSettings = _shareSettings;
-    _shareSettings.modeManager = _modeManager;
-    [_modeManager initMode];
+    //_modeManager = [[ModeManager alloc] initWithConfig:self.shareSettings];
+    //_modeManager.shareSettings = _shareSettings;
+    //_shareSettings.modeManager = _modeManager;
+    //[_modeManager initMode];
     
     //UIStoryboard *modeUIS = [UIStoryboard storyboardWithName:@"Mode" bundle:nil];
     //self.shareSettings.modeStoryboard = modeUIS;
@@ -479,7 +481,7 @@
                 default:
                 case UIDT_NORMAL:
                 {
-                    return;
+                    set;
                 }
                     break;
                 case UIDT_NORMAL_INPUT:
@@ -938,6 +940,7 @@
         _inputView.frame = CGRectMake(point.x, point.y, 0, 0);
 }
 
+/*
 - (void)layoutVC:(BOOL)animated
 {
     [self layoutVC:animated withMeasBar:NO];
@@ -1000,13 +1003,11 @@
         }
         else
         {
-            /*
-            if(self.shareSettings.menuDisplayed == YES)
-            {
-                self.menuCVC.presetViewVisible = NO;
-                [self.menuCVC showHidePresetMenu:NO animated:YES];
-            }
-            */
+            //if(self.shareSettings.menuDisplayed == YES)
+            //{
+            //    self.menuCVC.presetViewVisible = NO;
+            //    [self.menuCVC showHidePresetMenu:NO animated:YES];
+            //}
 
             if (self.shareSettings.currentBarPopupMenuIndex == -1)
             {
@@ -1173,5 +1174,6 @@
         [self.blurVC.blurImage setImage:blurImg];
     }
 }
+*/
 
 @end

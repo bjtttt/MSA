@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "MainContainerViewController.h"
+#import "ShareSettings.h"
+#import "ParameterManager.h"
+#import "ModeManager.h"
 
 @interface AppDelegate ()
 
@@ -19,11 +22,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    ShareSettings *shareSettings = [[ShareSettings alloc] init];
+    
+    ParameterManager *parManager = [[ParameterManager alloc] initWithConfig:shareSettings];
+    shareSettings.parManager = parManager;
+    [parManager parseParameter];
+    [parManager registerParameterChangedEvent];
+
+    ModeManager *modeManager = [[ModeManager alloc] initWithConfig:shareSettings];
+    shareSettings.modeManager = modeManager;
+    [modeManager initMode];
+
     MainContainerViewController *mainVC = (MainContainerViewController *)self.window.rootViewController;
+    mainVC.shareSettings = shareSettings;
     UIStoryboard *appModeStoryboard = [UIStoryboard storyboardWithName:@"AppMode" bundle:[NSBundle mainBundle]];
-    mainVC.appModeStoryboard = appModeStoryboard;
+    shareSettings.appModeStoryboard = appModeStoryboard;
     UIStoryboard *measBarStoryboard = [UIStoryboard storyboardWithName:@"MeasureBar" bundle:[NSBundle mainBundle]];
-    mainVC.mbarStoryboard = measBarStoryboard;
+    shareSettings.mbarStoryboard = measBarStoryboard;
     
     return YES;
 }

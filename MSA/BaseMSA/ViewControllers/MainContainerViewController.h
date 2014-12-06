@@ -47,13 +47,13 @@
 
 @property (strong, nonatomic) MeasureBarContainerViewController *barCVC;
 
-@property (weak, nonatomic) UIStoryboard *appModeStoryboard;
-@property (weak, nonatomic) UIStoryboard *mbarStoryboard;
+//@property (weak, nonatomic) UIStoryboard *appModeStoryboard;
+//@property (weak, nonatomic) UIStoryboard *mbarStoryboard;
 //@property (weak, nonatomic) UIStoryboard *measBarStoryboard;
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
-@property (strong, nonatomic) ParameterManager * parManager;
-@property (strong, nonatomic) ModeManager * modeManager;
+//@property (strong, nonatomic) ParameterManager * parManager;
+//@property (strong, nonatomic) ModeManager * modeManager;
 
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;

@@ -84,6 +84,7 @@ typedef NS_ENUM(int, TouchAreaType)
 
 typedef NS_ENUM(int, UIDisplayType)
 {
+    UIDT_NONE = -1,
     UIDT_NORMAL = 0,        // Startup
     UIDT_NORMAL_BARPOPUP,
     UIDT_NORMAL_INPUT,
@@ -115,16 +116,16 @@ typedef NS_ENUM(int, UIDisplayType)
 
 #define DEBUG_OUTPUT YES
 
-@class GPUImageiOSBlurFilter;
+//@class GPUImageiOSBlurFilter;
 @class MeasureBarContainerViewController;
-@class UISoftMenu;
+//@class UISoftMenu;
 @class ParameterManager;
 @class ModeManager;
 
 @interface ShareSettings : NSObject
 
-@property (nonatomic) bool menuTapped;
-@property (nonatomic) bool measureTapped;
+//@property (nonatomic) bool menuTapped;
+//@property (nonatomic) bool measureTapped;
 
 @property (nonatomic) UIDisplayType prevDispType;
 @property (nonatomic) UIDisplayType curDispType;
@@ -133,6 +134,7 @@ typedef NS_ENUM(int, UIDisplayType)
 @property (nonatomic) int curBarIndex;
 @property (nonatomic) int prevBarIndex;
 
+/*
 @property (nonatomic) bool navPresetMenuButtonAreaTapped;
 @property (nonatomic) bool presetMenuAreaTapped;
 @property (nonatomic) bool barPopupMenuAreaTapped;
@@ -148,21 +150,22 @@ typedef NS_ENUM(int, UIDisplayType)
 @property (nonatomic) CGRect barCGRect;
 @property (nonatomic) CGRect navBarPresetMenuButtonCGRect;
 @property (nonatomic) CGRect presetMenuCGRect;
+*/
 
 @property (nonatomic) InstrumentStatus currentInstrumentStatus;
-@property (nonatomic) NSMutableString *currentInstrument;
+//@property (nonatomic) NSMutableString *currentInstrument;
 
 //Should beremoved
-@property (nonatomic) NSMutableArray *measureView;
+//@property (nonatomic) NSMutableArray *measureView;
 
 @property (weak, nonatomic) UIStoryboard *appModeStoryboard;
 @property (weak, nonatomic) UIStoryboard *mbarStoryboard;
 @property (weak, nonatomic) MeasureBarContainerViewController *barCVC;
 
-@property (nonatomic) GPUImageiOSBlurFilter *blurFilter;
+//@property (nonatomic) GPUImageiOSBlurFilter *blurFilter;
 
 //Should beremoved
-@property (nonatomic) NSMutableDictionary *softMenuDict;
+//@property (nonatomic) NSMutableDictionary *softMenuDict;
 
 @property (nonatomic) ParameterManager *parManager;
 @property (nonatomic) ModeManager *modeManager;
