@@ -148,20 +148,17 @@
     self.bar9VC.barPopupMenuCVC = self.barPopupMenuCVC;
 }  
 
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    //[self setMeasureBarAccordingToFrame];
-}
-
--(void)viewWillLayoutSubviews{
-    [super viewWillLayoutSubviews];
-    
-    //[self setMeasureBarAccordingToFrame];
+    /*
+    if(self.previousFrameWidth != self.frameWidth)
+    {
+        [self setBarsStartAndWidth:_frameWidth];
+        
+        _previousFrameWidth = _frameWidth;
+    }
+    */
 }
 
 - (void)viewDidLayoutSubviews {
@@ -169,12 +166,10 @@
     
     if(self.previousFrameWidth != self.frameWidth)
     {
-        [self adjustMeasureBarWidth:YES];
+        [self setBarsStartAndWidth:_frameWidth];
     
-        self.previousFrameWidth = self.frameWidth;
+        _previousFrameWidth = _frameWidth;
     }
-    else
-        [self setBarsStartAndWidthAccordingTo:self.frameWidth];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -186,14 +181,13 @@
     return YES;
 }
 
-// This method is not completed.
--(void) setBarsStartAndWidth:(CGFloat)width
+-(void)setBarsStartAndWidth:(CGFloat)width
 {
     CGFloat prevWidth = 0.0;
     CGFloat barWidth = 0.0;
 
     int count = _shareSettings.modeManager.curMBarDetail.mbarCount;
-    for(int i=0;i<count; i++)
+    for(int i = 0; i < count; i++)
     {
         UIView *view = (UIView *)_barVs[i];
         //UIViewController<MeasureBarProtocol> *vc = (UIViewController<MeasureBarProtocol> *)_barVCs[i];
@@ -223,34 +217,6 @@
         vc.frameHeight = BAR_HEIGHT;
         
         prevWidth = prevWidth + barWidth;
-    }
-}
-
--(void)adjustMeasureBarWidth:(BOOL)animated {
-    void (^layoutBlock)(void);
-    void (^completionBlock)(BOOL finished);
-    
-    [self setBarsStartAndWidthAccordingTo:self.previousFrameWidth];
-
-    layoutBlock = ^(void)
-    {
-        [self setBarsStartAndWidthAccordingTo:self.frameWidth];
-    };
-    completionBlock = ^(BOOL finished){
-    };
-    
-    if (animated)
-    {
-        [UIView animateWithDuration:0.1
-         //delay:0
-         //options:UIViewAnimationOptionLayoutSubviews
-                         animations:layoutBlock
-                         completion:completionBlock];
-    }
-    else
-    {
-        layoutBlock();
-        completionBlock(YES);
     }
 }
 

@@ -804,6 +804,8 @@
         layoutBlock();
         completionBlock(YES);
     }
+    
+    [self outputViewInfo];
 }
 
 -(void)setDisplayMeasBarPopupMenu:(bool)show forWidth:(float)width
@@ -848,6 +850,12 @@
         _inputView.frame = CGRectMake(point.x, point.y, INPUT_WIDTH, INPUT_HEIGHT);
     else
         _inputView.frame = CGRectMake(point.x, point.y, 0, 0);
+}
+
+-(void)outputViewInfo
+{
+    NSLog(@"\nDEBUG ----------------------------------------------");
+    NSLog(@"Main View : x = %f, y = %f, width = %f, height = %f", _mainView.frame.origin.x, _mainView.frame.origin.y, _mainView.frame.size.width, _mainView.frame.size.height);
 }
 
 /*

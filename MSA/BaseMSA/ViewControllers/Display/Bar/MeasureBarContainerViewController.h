@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ShareSettings.h"
-#import "MeasureBarContainerProtocol.h"
+//#import "MeasureBarContainerProtocol.h"
 
 @class DisplayContainerViewController;
 @class Bar0ViewController;
@@ -25,7 +25,7 @@
 @class MeasureBarContainerView;
 @class BarPopupMenuContainerViewController;
 
-@interface MeasureBarContainerViewController : UIViewController <MeasureBarContainerProtocol>
+@interface MeasureBarContainerViewController : UIViewController //<MeasureBarContainerProtocol>
 
 @property (weak, nonatomic) IBOutlet DisplayContainerViewController *displayCVC;
 @property (weak, nonatomic) IBOutlet BarPopupMenuContainerViewController *barPopupMenuCVC;
@@ -64,7 +64,7 @@
 
 @property (strong, nonatomic) ShareSettings * shareSettings;
 
--(void)adjustMeasureBarWidth:(BOOL)animated;
+//-(void)adjustMeasureBarWidth:(BOOL)animated;
 -(void)setBarsStartAndWidth:(CGFloat)width;
 
 -(void)setBarPopupMenuViewController:(BarPopupMenuContainerViewController *)barPopupMenuCVC;
