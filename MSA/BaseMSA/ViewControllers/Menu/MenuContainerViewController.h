@@ -26,11 +26,8 @@
 
 -(IBAction)showPresetMenu:(id)sender;
 
--(void)showHidePresetMenu:(BOOL)show;
-//-(void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated;
-//-(void)showHidePresetMenu:(BOOL)showPresetMenu animated:(BOOL)animated inTime:(CGFloat)inTime;
+-(void)showHidePresetMenu:(bool)show;
 
-//@property (nonatomic) double navBarHeight;
 @property (nonatomic) double frameWidth;
 @property (nonatomic) double frameHeight;
 

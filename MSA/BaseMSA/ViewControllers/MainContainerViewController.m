@@ -38,13 +38,15 @@
     //    self.mainView.barCV = self.displayCVC.barV;
     
     //_mainView.frame = CGRectMake(0, 0, _frameWidth, _frameHeight);
+    
+    //[self curDispTypeChanged];
 }
 
 -(void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
     
-    _mainView.frame = CGRectMake(0, 0, _frameWidth, _frameHeight);
+    //_mainView.frame = CGRectMake(0, 0, _frameWidth, _frameHeight);
     
     [self curDispTypeChanged];
 }
@@ -197,7 +199,7 @@
                     {
                         [self setDisplayConnSel:NO];
                         [self setDisplayMenu:NO];
-                        [self setDisplayInput:NO atPosition:CGPointMake(0.0f, 0.0f)];
+                        [self setDisplayInput:NO atPosition:CGPointMake(100.0f, 100.0f)];
                         [self setDisplayPresetMenu:NO];
                         [self setDisplayMeasBar:_frameWidth];
                         [self setDisplayMeasBarPopupMenu:NO forWidth:_frameWidth];

@@ -97,38 +97,28 @@
 
 -(CGFloat)measureBarPopupMenuPosition:(NSInteger)index forWidth:(CGFloat)width
 {
-    if(index <= 0 && index >= self.mbarDetail.mbarCount)
+    if(index < 0 && index >= self.mbarDetail.mbarCount)
         [NSException raise:@"MeasureBase::measureBarPopupMenuPosition:forWidth:" format:@"Index is %d.", index];
     if(width < 0.0)
         [NSException raise:@"MeasureBase::measureBarPopupMenuPosition:forWidth:" format:@"Width is %f.", width];
     
-    if(index == -1)
-        index = 0;
-    
-    if(self.mbarDetail.useRatio == YES)
+    CGFloat xPos = 0.0;
+    for (NSInteger i=0;i<index;i++)
     {
         if(_shareSettings.curDispType == UIDT_MENU || _shareSettings.curDispType == UIDT_MENU_BARPOPUP ||
            _shareSettings.curDispType == UIDT_MENU_BARPOPUP_INPUT || _shareSettings.curDispType == UIDT_MENU_INPUT ||
            _shareSettings.curDispType == UIDT_MENU_PRESET)
-            return width * [self.mbarDetail.mbarSmallWidths[index] floatValue] / self.mbarDetail.totalSmallWidth;
+            xPos = xPos + [self.mbarDetail.mbarSmallWidths[i] floatValue];
         else
-            return width * [self.mbarDetail.mbarWidths[index] floatValue] / self.mbarDetail.totalWidth;
+            xPos = xPos + [self.mbarDetail.mbarWidths[i] floatValue];
+    }
+
+    if(self.mbarDetail.useRatio == YES)
+    {
+        return width * xPos / self.mbarDetail.totalWidth;
     }
     else
-    {
-        CGFloat xPos = 0.0;
-        for (NSInteger i=0;i<index;i++)
-        {
-            if(_shareSettings.curDispType == UIDT_MENU || _shareSettings.curDispType == UIDT_MENU_BARPOPUP ||
-               _shareSettings.curDispType == UIDT_MENU_BARPOPUP_INPUT || _shareSettings.curDispType == UIDT_MENU_INPUT ||
-               _shareSettings.curDispType == UIDT_MENU_PRESET)
-                xPos = xPos + [self.mbarDetail.mbarSmallWidths[i] floatValue];
-            else
-                xPos = xPos + [self.mbarDetail.mbarWidths[i] floatValue];
-        }
-        
         return xPos;
-    }
 }
 
 -(UISoftPanel *)setupMeasureBar0Menu

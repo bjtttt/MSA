@@ -101,7 +101,7 @@
 //    [self showHidePresetMenu:showPresetMenu animated:animated inTime:0.1];
 //}
 
--(void)showHidePresetMenu:(BOOL)show
+-(void)showHidePresetMenu:(bool)show
 {
     if(show == YES)
     {
