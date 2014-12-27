@@ -17,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vId-ub-NnX" userLabel="Display View">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <connections>
-                                    <segue destination="v87-Ye-quc" kind="embed" identifier="embedSegueToDisplayVC" id="DEa-8a-VGH"/>
-                                </connections>
-                            </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X7O-d3-lWv" userLabel="Menu View">
                                 <rect key="frame" x="450" y="0.0" width="150" height="600"/>
                                 <connections>
@@ -47,12 +41,18 @@
                                     <segue destination="GSL-2q-Efu" kind="embed" identifier="embedSegueToInputVC" id="D3H-bG-ZHZ"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vId-ub-NnX" userLabel="Display View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="v87-Ye-quc" kind="embed" identifier="embedSegueToDisplayVC" id="DEa-8a-VGH"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="barPopupMenuView" destination="Pg0-Tj-Oce" id="tgA-ev-Gl3"/>
+                        <outlet property="barPopupMenuView" destination="Pg0-Tj-Oce" id="85H-lb-Q3a"/>
                         <outlet property="displayView" destination="vId-ub-NnX" id="ujP-uw-bQ7"/>
                         <outlet property="inputView" destination="zw0-P8-y6A" id="O7k-9F-WEG"/>
                         <outlet property="mainView" destination="ex4-JV-8sr" id="YVJ-6a-4e0"/>
@@ -183,7 +183,6 @@
                             </navigationBar>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="maI-nf-qEV" userLabel="Display Container View">
                                 <rect key="frame" x="0.0" y="163" width="600" height="393"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ewP-be-Wb1" userLabel="Measure Bar Container View">
                                 <rect key="frame" x="0.0" y="44" width="600" height="120"/>
@@ -538,7 +537,6 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="msgV" destination="RH0-zU-zpf" id="wbi-cM-lzh"/>

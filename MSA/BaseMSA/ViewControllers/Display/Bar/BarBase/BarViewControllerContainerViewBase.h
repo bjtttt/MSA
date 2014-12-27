@@ -10,7 +10,7 @@
 
 @class ShareSettings;
 
-@interface BarViewControllerContainerViewBase : UIVisualEffectView
+@interface BarViewControllerContainerViewBase : UIView//UIVisualEffectView
 
 @property (nonatomic) ShareSettings *shareSettings;
 

@@ -113,7 +113,7 @@
         self.barCVC.barPopupMenuCVC = self.barPopupMenuCVC;
         [self.barCVC setBarPopupMenuViewController:self.barPopupMenuCVC];
         
-        ((MainContainerView *)self.mainView).barPopupMenuV = self.barPopupMenuCVC.view;
+        //((MainContainerView *)self.mainView).barPopupMenuV = self.barPopupMenuCVC.view;
     }
     if([segue.identifier isEqualToString:@"embedSegueToInputVC"])
     {
@@ -816,6 +816,7 @@
 {
     NSLog(@"\nDEBUG ----------------------------------------------");
     NSLog(@"Main View : x = %f, y = %f, width = %f, height = %f", _mainView.frame.origin.x, _mainView.frame.origin.y, _mainView.frame.size.width, _mainView.frame.size.height);
+    NSLog(@"Meas Bar Popup Menu Position:\nx = %f\ny = %f\nwidth = %f\nheight = %f", _barPopupMenuView.frame.origin.x, _barPopupMenuView.frame.origin.y, _barPopupMenuView.frame.size.width, _barPopupMenuView.frame.size.height);
 }
 
 @end
