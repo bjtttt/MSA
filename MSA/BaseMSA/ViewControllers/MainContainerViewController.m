@@ -168,15 +168,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 -(BOOL)prefersStatusBarHidden {
     return YES;
 }
 
 -(void)curDispTypeChanged
 {
-    //_mainView.frame = CGRectMake(0, 0, _frameWidth, _frameHeight);
-
     void (^layoutBlock)(void);
     void (^completionBlock)(BOOL finished);
     
